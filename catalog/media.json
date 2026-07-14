@@ -1,0 +1,20 @@
+[
+  { "id": "T280", "name": "Image carousel", "category": "Media",
+    "file": "pages/media.html", "anchor": "#T280",
+    "description": "Single-slide carousel with prev / next arrows and dot indicators." },
+  { "id": "T281", "name": "Figure with caption", "category": "Media",
+    "file": "pages/media.html", "anchor": "#T281",
+    "description": "Image block with a number tag and a typeset caption for docs and case studies." },
+  { "id": "T282", "name": "Video background hero", "category": "Media",
+    "file": "pages/media.html", "anchor": "#T282",
+    "description": "Full-bleed hero with a looping video or gradient behind a darkening scrim and headline." },
+  { "id": "T283", "name": "Alternating feature row", "category": "Media",
+    "file": "pages/media.html", "anchor": "#T283",
+    "description": "Classic zig-zag with image and copy swapping sides down the page." },
+  { "id": "T284", "name": "Team / people grid", "category": "Media",
+    "file": "pages/media.html", "anchor": "#T284",
+    "description": "Grid of people cards with avatar, name, role, and social links." },
+  { "id": "T285", "name": "Responsive embed", "category": "Media",
+    "file": "pages/media.html", "anchor": "#T285",
+    "description": "Fixed-ratio container for video, maps, or iframes that scales cleanly at any width." }
+]

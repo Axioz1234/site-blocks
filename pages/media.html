@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media — TBlocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+</head>
+<body>
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <h1>Media <span class="tb-range">T280&ndash;T285</span></h1>
+    <p class="tb-sub">Blocks built around imagery and arrangement — carousels, captioned figures, video heroes, alternating feature rows, team grids, and responsive embeds.</p>
+  </header>
+  <main class="tb-main">
+
+    <article class="tb-pattern" id="T280" data-tid="T280">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T280</span>
+        <div>
+          <h2>Image carousel</h2>
+          <p>A single-slide carousel with prev / next arrows and dot indicators. Click to advance.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="med-carousel" id="med-carousel">
+          <div class="med-track" id="med-track">
+            <div class="med-slide" style="background:linear-gradient(135deg,#1a1206,#3a1e05)">
+              <span class="med-slide-mark">A/</span>
+              <span class="med-slide-cap">Entrance reveal</span>
+            </div>
+            <div class="med-slide" style="background:linear-gradient(135deg,#0a0f1a,#131a2a)">
+              <span class="med-slide-mark">B/</span>
+              <span class="med-slide-cap">Scroll parallax</span>
+            </div>
+            <div class="med-slide" style="background:linear-gradient(135deg,#1a0a14,#2a0f1e)">
+              <span class="med-slide-mark">C/</span>
+              <span class="med-slide-cap">Typewriter hero</span>
+            </div>
+          </div>
+          <button class="med-arrow prev" id="med-prev" aria-label="Previous">‹</button>
+          <button class="med-arrow next" id="med-next" aria-label="Next">›</button>
+          <div class="med-dots" id="med-dots">
+            <button class="med-dot is-active" data-dot="0" aria-label="Slide 1"></button>
+            <button class="med-dot" data-dot="1" aria-label="Slide 2"></button>
+            <button class="med-dot" data-dot="2" aria-label="Slide 3"></button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T281" data-tid="T281">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T281</span>
+        <div>
+          <h2>Figure with caption</h2>
+          <p>An image block with a number tag and a typeset caption — for docs, articles, and case studies.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <figure class="med-figure">
+          <div class="med-fig-img" style="background:linear-gradient(135deg,#0b1410,#11261b)"><span>A/</span></div>
+          <figcaption class="med-fig-cap"><span class="med-fig-tag">Fig 1</span> A fade-up reveal sequenced across a three-card grid, staggered by 80ms.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T282" data-tid="T282">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T282</span>
+        <div>
+          <h2>Video background hero</h2>
+          <p>A full-bleed hero with a looping video (or gradient) behind a darkening scrim and the headline.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="med-vhero">
+          <div class="med-vhero-bg" aria-hidden="true"></div>
+          <span class="med-vhero-play">▶</span>
+          <div class="med-vhero-content">
+            <span class="med-vhero-eyebrow">// SHOWREEL</span>
+            <p class="med-vhero-h1">Motion that loads instantly</p>
+            <button class="med-vhero-cta">Watch the reel</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T283" data-tid="T283">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T283</span>
+        <div>
+          <h2>Alternating feature row</h2>
+          <p>The classic zig-zag — image and copy swapping sides down the page to keep a rhythm.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="med-zig">
+          <div class="med-zig-row">
+            <div class="med-zig-img" style="background:linear-gradient(135deg,#1a1206,#3a1e05)"><span>A/</span></div>
+            <div class="med-zig-text">
+              <span class="med-zig-eyebrow">// CSS-FIRST</span>
+              <h4>No runtime unless you ask</h4>
+              <p>Entry, reveal, and transition motion renders from CSS — shipped in a static build with zero hydration cost.</p>
+            </div>
+          </div>
+          <div class="med-zig-row reverse">
+            <div class="med-zig-img" style="background:linear-gradient(135deg,#0a0f1a,#131a2a)"><span>B/</span></div>
+            <div class="med-zig-text">
+              <span class="med-zig-eyebrow">// ISLANDS-AWARE</span>
+              <h4>Opt in where it matters</h4>
+              <p>Gesture and physics-driven effects load only on the island that needs them — never site-wide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T284" data-tid="T284">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T284</span>
+        <div>
+          <h2>Team / people grid</h2>
+          <p>A grid of people cards with avatar, name, role, and social links — for about and careers pages.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="med-team">
+          <div class="med-person">
+            <span class="med-person-av" style="background:linear-gradient(135deg,#ff7f1f,#b8480a)">AT</span>
+            <span class="med-person-name">Ada Turner</span>
+            <span class="med-person-role">Maintainer</span>
+            <div class="med-person-links"><a href="#">GH</a><a href="#">X</a></div>
+          </div>
+          <div class="med-person">
+            <span class="med-person-av" style="background:linear-gradient(135deg,#3b82f6,#1e40af)">JM</span>
+            <span class="med-person-name">Jules Moreau</span>
+            <span class="med-person-role">DX &amp; docs</span>
+            <div class="med-person-links"><a href="#">GH</a><a href="#">X</a></div>
+          </div>
+          <div class="med-person">
+            <span class="med-person-av" style="background:linear-gradient(135deg,#a855f7,#6b21a8)">SD</span>
+            <span class="med-person-name">Sam Diaz</span>
+            <span class="med-person-role">Motion design</span>
+            <div class="med-person-links"><a href="#">GH</a><a href="#">X</a></div>
+          </div>
+          <div class="med-person">
+            <span class="med-person-av" style="background:linear-gradient(135deg,#10b981,#065f46)">RK</span>
+            <span class="med-person-name">Rae Kim</span>
+            <span class="med-person-role">Performance</span>
+            <div class="med-person-links"><a href="#">GH</a><a href="#">X</a></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T285" data-tid="T285">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T285</span>
+        <div>
+          <h2>Responsive embed</h2>
+          <p>A fixed-ratio container for video, maps, or iframes that scales cleanly at any width.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="med-embed">
+          <div class="med-embed-frame">
+            <span class="med-embed-icon">▶</span>
+            <span class="med-embed-ratio">16 : 9 — embed placeholder</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <style>
+    /* 01 — Carousel */
+    .med-carousel { position:relative; border:1px solid var(--border); border-radius:6px; overflow:hidden; }
+    .med-track { display:flex; transition:transform .35s ease; }
+    .med-slide { position:relative; flex:0 0 100%; aspect-ratio:21/9; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+    .med-slide-mark { font-family:'Bai Jamjuree',sans-serif; font-size:40px; font-weight:700; color:rgba(255,255,255,.2); }
+    .med-slide-cap { font-family:'JetBrains Mono',monospace; font-size:13px; color:rgba(255,255,255,.7); }
+    .med-arrow { position:absolute; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; cursor:pointer; background:rgba(0,0,0,.5); color:#fff; border:1px solid rgba(255,255,255,.2); font-size:18px; line-height:1; }
+    .med-arrow.prev { left:10px; } .med-arrow.next { right:10px; }
+    .med-arrow:hover { background:#ff7f1f; border-color:#ff7f1f; }
+    .med-dots { position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:7px; }
+    .med-dot { width:8px; height:8px; border-radius:50%; border:none; cursor:pointer; background:rgba(255,255,255,.35); padding:0; }
+    .med-dot.is-active { background:#ff7f1f; }
+
+    /* 02 — Figure */
+    .med-figure { margin:0; max-width:520px; }
+    .med-fig-img { aspect-ratio:16/9; border-radius:6px; display:flex; align-items:center; justify-content:center; }
+    .med-fig-img span { font-family:'Bai Jamjuree',sans-serif; font-size:32px; font-weight:700; color:rgba(255,255,255,.2); }
+    .med-fig-cap { font-family:'Inter',sans-serif; font-size:13px; line-height:1.5; color:var(--text-3); margin-top:10px; }
+    .med-fig-tag { font-family:'JetBrains Mono',monospace; font-size:11px; color:#ff7f1f; margin-right:6px; }
+
+    /* 03 — Video hero */
+    .med-vhero { position:relative; border-radius:6px; overflow:hidden; min-height:240px; display:flex; align-items:center; }
+    .med-vhero-bg { position:absolute; inset:0; background:linear-gradient(135deg,#2a1505,#0a0a0a 70%); }
+    .med-vhero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.7),rgba(0,0,0,.2)); }
+    .med-vhero-play { position:absolute; top:14px; right:18px; width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); display:flex; align-items:center; justify-content:center; color:#fff; font-size:14px; }
+    .med-vhero-content { position:relative; z-index:1; padding:28px; }
+    .med-vhero-eyebrow { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.08em; color:#ff7f1f; }
+    .med-vhero-h1 { font-family:'Bai Jamjuree',sans-serif; font-size:clamp(22px,3vw,30px); font-weight:600; color:#fff; margin:10px 0 16px; }
+    .med-vhero-cta { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; cursor:pointer; color:var(--bg); background:#ff7f1f; border:none; border-radius:4px; padding:11px 20px; }
+
+    /* 04 — Zig-zag */
+    .med-zig { display:flex; flex-direction:column; gap:18px; }
+    .med-zig-row { display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:center; }
+    .med-zig-row.reverse .med-zig-img { order:2; }
+    .med-zig-img { aspect-ratio:16/10; border-radius:6px; display:flex; align-items:center; justify-content:center; }
+    .med-zig-img span { font-family:'Bai Jamjuree',sans-serif; font-size:30px; font-weight:700; color:rgba(255,255,255,.2); }
+    .med-zig-eyebrow { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.08em; color:#ff7f1f; }
+    .med-zig-text h4 { font-family:'Bai Jamjuree',sans-serif; font-size:19px; font-weight:600; color:var(--text); margin:8px 0 8px; }
+    .med-zig-text p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.6; color:var(--text-3); margin:0; }
+
+    /* 05 — Team */
+    .med-team { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+    .med-person { display:flex; flex-direction:column; align-items:center; text-align:center; gap:5px; padding:18px 12px; border:1px solid var(--border); border-radius:6px; background:var(--bg-card); }
+    .med-person-av { width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Bai Jamjuree',sans-serif; font-size:18px; font-weight:600; color:#fff; margin-bottom:4px; }
+    .med-person-name { font-family:'Bai Jamjuree',sans-serif; font-size:15px; font-weight:600; color:var(--text); }
+    .med-person-role { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-4); }
+    .med-person-links { display:flex; gap:10px; margin-top:6px; }
+    .med-person-links a { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-3); text-decoration:none; }
+    .med-person-links a:hover { color:#ff7f1f; }
+
+    /* 06 — Embed */
+    .med-embed { max-width:520px; }
+    .med-embed-frame { position:relative; aspect-ratio:16/9; border:1px solid var(--border-2); border-radius:6px; background:var(--bg-card); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+    .med-embed-icon { width:48px; height:48px; border-radius:50%; background:var(--bg-2); border:1px solid var(--border-2); display:flex; align-items:center; justify-content:center; color:#ff7f1f; font-size:16px; }
+    .med-embed-ratio { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-4); }
+
+    @media (max-width: 1024px) { .med-team { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width: 768px) {
+      .med-zig-row { grid-template-columns:1fr; }
+      .med-zig-row.reverse .med-zig-img { order:0; }
+    }
+  </style>
+  <script>
+    (function () {
+      // 01 — Carousel
+      const track = document.getElementById('med-track');
+      if (track) {
+        const total = track.children.length;
+        let idx = 0;
+        const dots = document.querySelectorAll('#med-dots .med-dot');
+        const go = function (i) {
+          idx = (i + total) % total;
+          track.style.transform = 'translateX(-' + idx * 100 + '%)';
+          dots.forEach(function (d, di) { d.classList.toggle('is-active', di === idx); });
+        };
+        const prev = document.getElementById('med-prev');
+        const next = document.getElementById('med-next');
+        if (prev) prev.addEventListener('click', function () { go(idx - 1); });
+        if (next) next.addEventListener('click', function () { go(idx + 1); });
+        dots.forEach(function (d) { d.addEventListener('click', function () { go(parseInt(d.getAttribute('data-dot'), 10)); }); });
+      }
+    })();
+  </script>
+</body>
+</html>

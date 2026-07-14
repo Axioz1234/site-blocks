@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elements — TBlocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+</head>
+<body>
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <h1>Elements <span class="tb-range">T010&ndash;T016</span></h1>
+    <p class="tb-sub">The reusable UI elements — buttons, labels, badges, pills, pulse indicator, accordion, and the base card.</p>
+  </header>
+  <main class="tb-main">
+
+    <article class="tb-pattern" id="T010" data-tid="T010">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T010</span>
+        <div>
+          <h2>Buttons</h2>
+          <p>Primary (orange fill), secondary (outline), and the nav install pill.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sg-spec-demo">
+          <span class="demo-btn-primary">INSTALL VIA NPM</span>
+          <span class="demo-btn-secondary">VIEW DOCS</span>
+          <span class="demo-install">INSTALL</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T011" data-tid="T011">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T011</span>
+        <div>
+          <h2>Eyebrow label</h2>
+          <p>Monospace, uppercase, orange, prefixed with <code>//</code>. Opens nearly every section.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sg-spec-demo"><span class="eyebrow" style="margin:0;">// HOW IT WORKS</span></div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T012" data-tid="T012">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T012</span>
+        <div>
+          <h2>Badges &amp; tags</h2>
+          <p>The NEW badge (sidebar/components), pill tag chips (blog/showcase), and numbered index.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sg-spec-demo">
+          <span class="demo-new">NEW</span>
+          <span class="demo-tag">PERFORMANCE</span>
+          <span class="demo-tag">SaaS</span>
+          <span class="demo-num">01</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T013" data-tid="T013">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T013</span>
+        <div>
+          <h2>Status pills</h2>
+          <p>Colour-coded states used on the changelog and roadmap.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sg-spec-demo">
+          <span class="demo-pill add">Added</span>
+          <span class="demo-pill change">Changed</span>
+          <span class="demo-pill fix">Fixed</span>
+          <span class="demo-pill ship">Shipped</span>
+          <span class="demo-pill prog">In Progress</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T014" data-tid="T014">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T014</span>
+        <div>
+          <h2>Status pulse</h2>
+          <p>The live pulsing indicator from <code>@astroanimate/core/Loader</code>.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sg-spec-demo">
+          <span class="demo-status">// SYSTEM ONLINE</span>
+          <span class="tb-pulse" style="--pulse-color:#4ADE80; --pulse-size:24px;"></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T015" data-tid="T015">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T015</span>
+        <div>
+          <h2>Accordion</h2>
+          <p>Native disclosure with an animated +/&minus; marker. Used on the FAQ.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sg-spec-demo full">
+          <details class="demo-acc">
+            <summary><span>Does AstroAnimate ship JavaScript?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
+            <p>Not by default — CSS-first components add zero runtime JS. Only opt-in components load JavaScript.</p>
+          </details>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T016" data-tid="T016">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T016</span>
+        <div>
+          <h2>Card</h2>
+          <p>The base surface: hairline border, near-black fill, orange border + lift on hover.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sg-spec-demo full">
+          <div class="demo-card">
+            <span class="demo-num">02</span>
+            <h4>CSS-first by default</h4>
+            <p>Core animations render from CSS with no client runtime unless you opt in.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <style>
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: #ff7f1f;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+    }
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88em;
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: #ff9d52;
+    }
+
+    /* ELEMENT SPECS */
+    .sg-spec-demo { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+    .sg-spec-demo.full { display: block; }
+
+    .demo-btn-primary, .demo-btn-secondary, .demo-install {
+      font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 0.04em; padding: 13px 24px;
+    }
+    .demo-btn-primary { background: #ff7f1f; color: var(--bg); font-weight: 600; }
+    .demo-btn-secondary { color: var(--text); border: 1px solid var(--border-2); }
+    .demo-install { background: #ff7f1f; color: var(--text); font-weight: 600; }
+
+    .demo-new { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.05em; color: var(--bg-2); background: #ff7f1f; padding: 2px 5px; border-radius: 3px; }
+    .demo-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #ff7f1f; border: 1px solid var(--border-2); padding: 4px 10px; border-radius: 999px; }
+    .demo-num { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ff7f1f; border: 1px solid var(--border-3); width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; }
+
+    .demo-pill { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 9px; border-radius: 3px; }
+    .demo-pill.add { color: #4ade80; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.3); }
+    .demo-pill.change { color: #ff7f1f; background: rgba(255,127,31,0.1); border: 1px solid rgba(255,127,31,0.3); }
+    .demo-pill.fix { color: var(--text-3); background: var(--bg-3); border: 1px solid var(--border-2); }
+    .demo-pill.ship { color: #4ade80; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.3); }
+    .demo-pill.prog { color: #ff7f1f; background: rgba(255,127,31,0.1); border: 1px solid rgba(255,127,31,0.3); }
+
+    .demo-status { font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.06em; color: #4ade80; }
+
+    .demo-acc { border: 1px solid var(--border); background: var(--bg-2); max-width: 560px; }
+    .demo-acc summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; list-style: none; padding: 16px 18px; }
+    .demo-acc summary::-webkit-details-marker { display: none; }
+    .demo-acc summary span:first-child { font-family: 'Inter', sans-serif; font-size: 15.5px; font-weight: 500; color: var(--text); }
+    .demo-acc-mark { position: relative; width: 14px; height: 14px; flex-shrink: 0; }
+    .demo-acc-mark::before, .demo-acc-mark::after { content: ''; position: absolute; background: #ff7f1f; transition: transform 0.2s ease, opacity 0.2s ease; }
+    .demo-acc-mark::before { top: 6px; left: 0; width: 14px; height: 2px; }
+    .demo-acc-mark::after { left: 6px; top: 0; width: 2px; height: 14px; }
+    .demo-acc[open] .demo-acc-mark::after { transform: scaleY(0); opacity: 0; }
+    .demo-acc p { font-family: 'Inter', sans-serif; font-size: 14.5px; line-height: 1.7; color: var(--text-3); margin: 0; padding: 0 18px 18px; }
+
+    .demo-card { border: 1px solid var(--border); background: var(--bg); padding: 26px; max-width: 360px; transition: border-color 0.2s ease, transform 0.2s ease; }
+    .demo-card:hover { border-color: #ff7f1f; transform: translateY(-3px); }
+    .demo-card h4 { font-family: 'Bai Jamjuree', sans-serif; font-size: 18px; font-weight: 600; color: var(--text); margin: 14px 0 8px; }
+    .demo-card p { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0; }
+    .demo-card .demo-num { display: inline-flex; }
+
+    /* Loader replacement */
+    .tb-pulse{display:inline-block;width:var(--pulse-size,24px);height:var(--pulse-size,24px);border-radius:50%;background:var(--pulse-color,#4ADE80);animation:tbPulse 1.6s ease-in-out infinite;}
+    @keyframes tbPulse{0%,100%{transform:scale(.7);opacity:.5}50%{transform:scale(1);opacity:1}}
+  </style>
+</body>
+</html>

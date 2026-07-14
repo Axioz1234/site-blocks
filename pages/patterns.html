@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patterns — TBlocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+</head>
+<body>
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <h1>Patterns <span class="tb-range">T070&ndash;T078</span></h1>
+    <p class="tb-sub">Interactive components &amp; patterns — pricing, dialogs, gallery lightbox, tabs, file tree, toggles, FAQ, contact form, breadcrumbs.</p>
+  </header>
+  <main class="tb-main">
+
+    <article class="tb-pattern" id="T070" data-tid="T070">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T070</span>
+        <div>
+          <h2>Pricing</h2>
+          <p>Three-tier pricing with a highlighted recommended plan, feature lists, and CTAs.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pr-grid">
+          <div class="pr-card">
+            <span class="pr-name">Core</span>
+            <div class="pr-amt">$0<span>/forever</span></div>
+            <p class="pr-desc">Open source, MIT licensed.</p>
+            <ul class="pr-feats"><li>All CSS-first components</li><li>TypeScript types</li><li>Community support</li></ul>
+            <span class="pr-cta sec">Get started</span>
+          </div>
+          <div class="pr-card feat">
+            <span class="pr-badge">POPULAR</span>
+            <span class="pr-name">Pro</span>
+            <div class="pr-amt">$12<span>/mo</span></div>
+            <p class="pr-desc">For production sites &amp; teams.</p>
+            <ul class="pr-feats"><li>Everything in Core</li><li>Premium UI components</li><li>Priority support</li><li>Figma kit</li></ul>
+            <span class="pr-cta pri">Choose Pro</span>
+          </div>
+          <div class="pr-card">
+            <span class="pr-name">Team</span>
+            <div class="pr-amt">$49<span>/mo</span></div>
+            <p class="pr-desc">For agencies &amp; studios.</p>
+            <ul class="pr-feats"><li>Everything in Pro</li><li>Up to 10 seats</li><li>Shared license</li></ul>
+            <span class="pr-cta sec">Contact sales</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T071" data-tid="T071">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T071</span>
+        <div>
+          <h2>Popup promo</h2>
+          <p>A modal promotion built on the native <code>&lt;dialog&gt;</code> element — opens over a dimmed backdrop, closes on the ✕ or a backdrop click.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <button class="demo-trigger" id="sg-promo-open">Show promo popup</button>
+        <dialog class="promo-dialog" id="sg-promo">
+          <div class="promo-card">
+            <button class="promo-close" id="sg-promo-close" aria-label="Close">✕</button>
+            <span class="pv-eyebrow">// LIMITED TIME</span>
+            <h4>Get 30% off Pro</h4>
+            <p>Upgrade this week and lock in launch pricing — forever.</p>
+            <button class="demo-trigger" id="sg-promo-cta">Claim the offer</button>
+          </div>
+        </dialog>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T072" data-tid="T072">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T072</span>
+        <div>
+          <h2>Gallery</h2>
+          <p>A responsive thumbnail grid with hover captions. Click any tile to open it in a lightbox.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="gal-grid">
+          <button class="gal-item" style="--g:linear-gradient(135deg,#1a1206,#3a1e05)" data-label="Hero reveal"><span class="gal-cap">Hero reveal</span></button>
+          <button class="gal-item" style="--g:linear-gradient(135deg,#0a0f1a,#131a2a)" data-label="Scroll fade"><span class="gal-cap">Scroll fade</span></button>
+          <button class="gal-item" style="--g:linear-gradient(135deg,#1a0a14,#2a0f1e)" data-label="Typewriter"><span class="gal-cap">Typewriter</span></button>
+          <button class="gal-item" style="--g:linear-gradient(135deg,#0b1410,#11261b)" data-label="Count up"><span class="gal-cap">Count up</span></button>
+          <button class="gal-item" style="--g:linear-gradient(135deg,#160a0a,#2a1305)" data-label="Parallax"><span class="gal-cap">Parallax</span></button>
+          <button class="gal-item" style="--g:linear-gradient(135deg,#0a0a16,#15132a)" data-label="Glass card"><span class="gal-cap">Glass card</span></button>
+        </div>
+        <dialog class="lb" id="sg-lb">
+          <button class="lb-close" id="sg-lb-close" aria-label="Close">✕</button>
+          <div class="lb-img" id="sg-lb-img"></div>
+          <span class="lb-cap" id="sg-lb-cap"></span>
+        </dialog>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T073" data-tid="T073">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T073</span>
+        <div>
+          <h2>Tabs</h2>
+          <p>Tabbed panels that swap content in place. Click a tab to switch.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="tabs-demo" data-tabs>
+          <div class="tabs-bar" role="tablist">
+            <button class="tab on" data-tab="0">Overview</button>
+            <button class="tab" data-tab="1">Install</button>
+            <button class="tab" data-tab="2">API</button>
+          </div>
+          <div class="tab-panel on" data-panel="0">AstroAnimate adds CSS-first motion to Astro components — no runtime JS unless you opt in.</div>
+          <div class="tab-panel" data-panel="1">Run <code>npm install @astroanimate/core</code>, then import a component by its subpath.</div>
+          <div class="tab-panel" data-panel="2">Every component is fully typed. Props control timing, easing, delay, and direction.</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T074" data-tid="T074">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T074</span>
+        <div>
+          <h2>Folders</h2>
+          <p>A collapsible file tree built from nested <code>&lt;details&gt;</code> — folders expand and collapse, no JavaScript.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="folders">
+          <details open>
+            <summary>src</summary>
+            <div class="folder-children">
+              <details open>
+                <summary>components</summary>
+                <div class="folder-children">
+                  <div class="file">NavBar.astro</div>
+                  <div class="file">Footer.astro</div>
+                  <div class="file">DocsLayout.astro</div>
+                </div>
+              </details>
+              <details>
+                <summary>pages</summary>
+                <div class="folder-children">
+                  <div class="file">index.astro</div>
+                  <div class="file">styleguide.astro</div>
+                </div>
+              </details>
+              <div class="file">global.css</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T075" data-tid="T075">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T075</span>
+        <div>
+          <h2>Toggle content</h2>
+          <p>A switch that reveals or hides a block of content. CSS-only, using <code>:has()</code>.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="tg-wrap">
+          <label class="tg-switch">
+            <input type="checkbox" />
+            <span class="tg-track"></span>
+            <span class="tg-text">Show advanced details</span>
+          </label>
+          <div class="tg-content">
+            Advanced options are only shown when the toggle is on — handy for progressive
+            disclosure in settings, filters, or long forms.
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T076" data-tid="T076">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T076</span>
+        <div>
+          <h2>FAQ — expanded by default</h2>
+          <p>The accordion pattern with every item open on load (set the <code>open</code> attribute). Collapse any you don&rsquo;t need.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pv-narrow">
+          <details class="demo-acc" open>
+            <summary><span>Does AstroAnimate ship JavaScript?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
+            <p>Not by default — CSS-first components add zero runtime JS. Only opt-in components load JavaScript.</p>
+          </details>
+          <details class="demo-acc" open style="margin-top:10px;">
+            <summary><span>Is it free to use?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
+            <p>Yes — MIT licensed and free for commercial and open-source projects.</p>
+          </details>
+          <details class="demo-acc" open style="margin-top:10px;">
+            <summary><span>Does it respect reduced motion?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
+            <p>Yes, automatically — animations are minimised when prefers-reduced-motion is set.</p>
+          </details>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T077" data-tid="T077">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T077</span>
+        <div>
+          <h2>Contact form</h2>
+          <p>A labelled form with focus states and a demo submit (no backend attached).</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <form class="sg-form" data-sg-form>
+          <div class="sg-field"><label for="sg-name">Name</label><input id="sg-name" type="text" placeholder="Ada Lovelace" required /></div>
+          <div class="sg-field"><label for="sg-email">Email</label><input id="sg-email" type="email" placeholder="you@example.com" required /></div>
+          <div class="sg-field"><label for="sg-msg">Message</label><textarea id="sg-msg" rows="3" placeholder="Tell us what's on your mind…" required></textarea></div>
+          <button type="submit">SEND MESSAGE</button>
+          <p class="sg-form-note" hidden>Demo only — no backend attached.</p>
+        </form>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T078" data-tid="T078">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T078</span>
+        <div>
+          <h2>Breadcrumbs</h2>
+          <p>A path trail showing the visitor&rsquo;s location, with the current page un-linked.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a><span class="sep">/</span>
+          <a href="/docs">Docs</a><span class="sep">/</span>
+          <a href="/docs/all-components/">Components</a><span class="sep">/</span>
+          <span class="current" aria-current="page">TypewriterText</span>
+        </nav>
+      </div>
+    </article>
+
+  </main>
+  <style>
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88em;
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: #ff9d52;
+    }
+
+    .pv-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #ff7f1f; display: block; margin-bottom: 8px; }
+    .pv-narrow { max-width: 380px; }
+
+    .demo-acc { border: 1px solid var(--border); background: var(--bg-2); max-width: 560px; }
+    .demo-acc summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; list-style: none; padding: 16px 18px; }
+    .demo-acc summary::-webkit-details-marker { display: none; }
+    .demo-acc summary span:first-child { font-family: 'Inter', sans-serif; font-size: 15.5px; font-weight: 500; color: var(--text); }
+    .demo-acc-mark { position: relative; width: 14px; height: 14px; flex-shrink: 0; }
+    .demo-acc-mark::before, .demo-acc-mark::after { content: ''; position: absolute; background: #ff7f1f; transition: transform 0.2s ease, opacity 0.2s ease; }
+    .demo-acc-mark::before { top: 6px; left: 0; width: 14px; height: 2px; }
+    .demo-acc-mark::after { left: 6px; top: 0; width: 2px; height: 14px; }
+    .demo-acc[open] .demo-acc-mark::after { transform: scaleY(0); opacity: 0; }
+    .demo-acc p { font-family: 'Inter', sans-serif; font-size: 14.5px; line-height: 1.7; color: var(--text-3); margin: 0; padding: 0 18px 18px; }
+
+    /* ===== COMPONENTS & PATTERNS ===== */
+    .demo-trigger { font-family: 'JetBrains Mono', monospace; font-size: 12px; background: #ff7f1f; color: var(--bg); font-weight: 600; border: none; padding: 11px 18px; cursor: pointer; transition: background 0.2s ease; }
+    .demo-trigger:hover { background: #ff924a; }
+
+    /* Pricing */
+    .pr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+    .pr-card { border: 1px solid var(--border); background: var(--bg); padding: 24px; position: relative; }
+    .pr-card.feat { border-color: #ff7f1f; }
+    .pr-badge { position: absolute; top: -10px; right: 16px; font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.06em; color: var(--bg); background: #ff7f1f; padding: 3px 8px; border-radius: 3px; }
+    .pr-name { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); }
+    .pr-amt { font-family: 'Bai Jamjuree', sans-serif; font-size: 34px; font-weight: 600; color: var(--text); margin: 8px 0 4px; }
+    .pr-amt span { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; color: var(--text-4); }
+    .pr-desc { font-family: 'Inter', sans-serif; font-size: 13.5px; color: var(--text-3); margin: 0 0 16px; }
+    .pr-feats { list-style: none; margin: 0 0 20px; padding: 0; }
+    .pr-feats li { font-family: 'Inter', sans-serif; font-size: 13.5px; color: var(--text-2); padding: 6px 0 6px 22px; position: relative; }
+    .pr-feats li::before { content: '✓'; position: absolute; left: 0; color: #ff7f1f; font-size: 12px; }
+    .pr-cta { display: block; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 11px; cursor: pointer; }
+    .pr-cta.pri { background: #ff7f1f; color: var(--bg); font-weight: 600; }
+    .pr-cta.sec { border: 1px solid var(--border-2); color: var(--text); }
+
+    /* Popup promo */
+    .promo-dialog { border: none; padding: 0; background: transparent; max-width: 380px; }
+    .promo-dialog::backdrop { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); }
+    .promo-card { position: relative; background: var(--bg-2); border: 1px solid #ff7f1f; padding: 34px 28px 30px; text-align: center; }
+    .promo-card h4 { font-family: 'Bai Jamjuree', sans-serif; font-size: 24px; font-weight: 600; color: var(--text); margin: 10px 0 8px; }
+    .promo-card p { font-family: 'Inter', sans-serif; font-size: 14.5px; line-height: 1.6; color: var(--text-3); margin: 0 0 22px; }
+    .promo-card .pv-eyebrow { text-align: center; }
+    .promo-close { position: absolute; top: 10px; right: 12px; background: none; border: none; color: var(--text-4); font-size: 16px; cursor: pointer; line-height: 1; }
+    .promo-close:hover { color: var(--text); }
+
+    /* Gallery + lightbox */
+    .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .gal-item { position: relative; aspect-ratio: 4 / 3; border: 1px solid var(--border); background: var(--g); cursor: pointer; overflow: hidden; padding: 0; }
+    .gal-item::after { content: ''; position: absolute; inset: 0; background: transparent; transition: background 0.2s ease; }
+    .gal-item:hover::after { background: rgba(255, 127, 31, 0.12); }
+    .gal-cap { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text); background: linear-gradient(transparent, rgba(0, 0, 0, 0.75)); padding: 20px 10px 8px; text-align: left; opacity: 0; transform: translateY(4px); transition: opacity 0.2s ease, transform 0.2s ease; }
+    .gal-item:hover .gal-cap { opacity: 1; transform: none; }
+    .lb { position: relative; border: none; padding: 0; background: transparent; max-width: 520px; width: 90vw; }
+    .lb::backdrop { background: rgba(0, 0, 0, 0.8); }
+    .lb-img { aspect-ratio: 16 / 9; border: 1px solid var(--border-2); }
+    .lb-cap { display: block; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-2); padding: 12px 4px; text-align: center; }
+    .lb-close { position: absolute; top: 8px; right: 10px; background: none; border: none; color: var(--text); font-size: 18px; cursor: pointer; z-index: 2; line-height: 1; }
+
+    /* Tabs */
+    .tabs-demo .tabs-bar { display: flex; gap: 4px; border-bottom: 1px solid var(--border); }
+    .tabs-demo .tab { font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 9px 16px; background: none; border: none; border-bottom: 2px solid transparent; color: var(--text-3); cursor: pointer; transition: color 0.15s ease, border-color 0.15s ease; }
+    .tabs-demo .tab:hover { color: var(--text); }
+    .tabs-demo .tab.on { color: #ff7f1f; border-bottom-color: #ff7f1f; }
+    .tabs-demo .tab-panel { display: none; padding: 18px 2px 2px; font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-2); }
+    .tabs-demo .tab-panel.on { display: block; }
+
+    /* Folders */
+    .folders { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+    .folders summary { display: flex; align-items: center; gap: 8px; cursor: pointer; list-style: none; padding: 5px 0; color: var(--text-2); }
+    .folders summary::-webkit-details-marker { display: none; }
+    .folders summary::before { content: '▸'; color: #ff7f1f; font-size: 10px; transition: transform 0.15s ease; }
+    .folders details[open] > summary::before { transform: rotate(90deg); }
+    .folder-children { padding-left: 16px; border-left: 1px solid var(--border); margin-left: 5px; }
+    .folders .file { display: flex; align-items: center; gap: 8px; padding: 5px 0; color: var(--text-3); }
+    .folders .file::before { content: '—'; color: var(--border-3); font-size: 10px; }
+
+    /* Toggle content */
+    .tg-switch { display: inline-flex; align-items: center; gap: 12px; cursor: pointer; }
+    .tg-switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .tg-track { position: relative; width: 42px; height: 24px; border-radius: 999px; background: var(--border-2); transition: background 0.2s ease; flex-shrink: 0; }
+    .tg-track::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: var(--text-3); transition: transform 0.2s ease, background 0.2s ease; }
+    .tg-switch input:checked + .tg-track { background: rgba(255, 127, 31, 0.35); }
+    .tg-switch input:checked + .tg-track::after { transform: translateX(18px); background: #ff7f1f; }
+    .tg-text { font-family: 'Inter', sans-serif; font-size: 14.5px; color: var(--text); }
+    .tg-content { display: none; margin-top: 16px; padding: 16px 18px; border: 1px solid var(--border); border-left: 2px solid #ff7f1f; background: var(--bg); font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.65; color: var(--text-3); max-width: 60ch; }
+    .tg-wrap:has(input:checked) .tg-content { display: block; }
+
+    /* Contact form */
+    .sg-form { display: flex; flex-direction: column; gap: 14px; max-width: 480px; }
+    .sg-field { display: flex; flex-direction: column; gap: 6px; }
+    .sg-field label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); }
+    .sg-form input, .sg-form textarea { background: var(--bg); border: 1px solid var(--border-2); color: var(--text); padding: 11px 13px; font-family: 'Inter', sans-serif; font-size: 14px; box-sizing: border-box; width: 100%; transition: border-color 0.2s ease; }
+    .sg-form input::placeholder, .sg-form textarea::placeholder { color: var(--text-4); }
+    .sg-form input:focus, .sg-form textarea:focus { outline: none; border-color: #ff7f1f; }
+    .sg-form textarea { resize: vertical; min-height: 80px; }
+    .sg-form button { background: #ff7f1f; color: var(--bg); border: none; padding: 12px 20px; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 13px; letter-spacing: 0.04em; cursor: pointer; width: fit-content; transition: opacity 0.2s ease; }
+    .sg-form button:hover { opacity: 0.88; }
+    .sg-form button:disabled { background: var(--border); color: #4ade80; cursor: default; opacity: 1; }
+    .sg-form-note { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-3); margin: 0; padding: 10px 12px; border: 1px solid var(--border-2); border-left: 2px solid #4ade80; background: var(--bg); }
+
+    /* Breadcrumbs */
+    .breadcrumbs { display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 13px; flex-wrap: wrap; }
+    .breadcrumbs a { color: var(--text-3); text-decoration: none; transition: color 0.15s ease; }
+    .breadcrumbs a:hover { color: #ff7f1f; }
+    .breadcrumbs .sep { color: var(--border-2); }
+    .breadcrumbs .current { color: var(--text); }
+
+    @media (max-width: 768px) {
+      .pr-grid { grid-template-columns: 1fr; }
+      .gal-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <script>
+    (function () {
+      // Contact form demo submit
+      document.querySelectorAll('[data-sg-form]').forEach((form) => {
+        if (form.dataset.bound === '1') return;
+        form.dataset.bound = '1';
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const note = form.querySelector('.sg-form-note');
+          const button = form.querySelector('button');
+          if (note) note.hidden = false;
+          if (button) {
+            button.textContent = 'SENT ✓';
+            button.disabled = true;
+          }
+        });
+      });
+
+      // Tabs
+      document.querySelectorAll('[data-tabs]').forEach((root) => {
+        root.querySelectorAll('.tab').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const i = btn.getAttribute('data-tab');
+            root.querySelectorAll('.tab').forEach((b) => b.classList.toggle('on', b === btn));
+            root.querySelectorAll('.tab-panel').forEach((p) => p.classList.toggle('on', p.getAttribute('data-panel') === i));
+          });
+        });
+      });
+      // Promo dialog
+      const promo = document.getElementById('sg-promo');
+      document.getElementById('sg-promo-open')?.addEventListener('click', () => promo.showModal());
+      document.getElementById('sg-promo-close')?.addEventListener('click', () => promo.close());
+      document.getElementById('sg-promo-cta')?.addEventListener('click', () => promo.close());
+      promo?.addEventListener('click', (e) => { if (e.target === promo) promo.close(); });
+      // Gallery lightbox
+      const lb = document.getElementById('sg-lb');
+      const lbImg = document.getElementById('sg-lb-img');
+      const lbCap = document.getElementById('sg-lb-cap');
+      document.querySelectorAll('.gal-item').forEach((it) => {
+        it.addEventListener('click', () => {
+          if (lbImg) lbImg.style.background = getComputedStyle(it).getPropertyValue('--g');
+          if (lbCap) lbCap.textContent = it.getAttribute('data-label') || '';
+          lb?.showModal();
+        });
+      });
+      document.getElementById('sg-lb-close')?.addEventListener('click', () => lb.close());
+      lb?.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
+    })();
+  </script>
+</body>
+</html>

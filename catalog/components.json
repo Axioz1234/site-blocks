@@ -1,0 +1,8 @@
+[
+  { "id": "T030", "name": "TypewriterText + copy card", "category": "Library components",
+    "file": "pages/components.html", "anchor": "#T030",
+    "description": "Terminal-style code card with orange accent bar, npm command, and a copy-to-clipboard button." },
+  { "id": "T031", "name": "Loader (pulse)", "category": "Library components",
+    "file": "pages/components.html", "anchor": "#T031",
+    "description": "Pulsing loader dots in green and orange, static equivalent of @astroanimate/core/Loader." }
+]

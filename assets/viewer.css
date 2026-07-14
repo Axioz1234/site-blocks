@@ -1,0 +1,95 @@
+/* TBlocks viewer chrome — shared by index.html and all pages/ */
+.tb-header {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px 24px 8px;
+}
+.tb-back {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+  text-decoration: none;
+}
+.tb-back:hover { color: #ff7f1f; }
+.tb-header h1 {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 18px 0 6px;
+}
+.tb-range {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ff7f1f;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.tb-sub { color: var(--text-3); margin: 0; max-width: 640px; }
+.tb-main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 24px 96px;
+}
+.tb-pattern {
+  border: 1px solid var(--border-2);
+  background: var(--bg-2);
+  margin-top: 40px;
+  scroll-margin-top: 24px;
+}
+.tb-pattern-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border);
+}
+.tb-pattern-head h2 {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+.tb-pattern-head p { font-size: 14px; color: var(--text-3); margin: 0; }
+.tb-tid {
+  flex: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #ff7f1f;
+  border: 1px solid #ff7f1f;
+  padding: 4px 10px;
+  margin-top: 1px;
+}
+.tb-demo { padding: 28px 22px; overflow-x: auto; }
+
+/* index.html catalog table */
+.tb-cat { margin-top: 48px; }
+.tb-cat h2 {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 22px;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+.tb-cat > p { color: var(--text-3); font-size: 14px; margin: 0 0 16px; }
+.tb-table { width: 100%; border-collapse: collapse; }
+.tb-table td {
+  border-top: 1px solid var(--border);
+  padding: 10px 12px 10px 0;
+  font-size: 14px;
+  color: var(--text-2);
+  vertical-align: top;
+}
+.tb-table td:first-child { width: 70px; }
+.tb-table a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: #ff7f1f;
+  text-decoration: none;
+}
+.tb-table a:hover { text-decoration: underline; }
+.tb-table .tb-name { color: var(--text); font-weight: 500; white-space: nowrap; padding-right: 18px; }

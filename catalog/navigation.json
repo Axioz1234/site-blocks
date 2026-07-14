@@ -1,0 +1,23 @@
+[
+  { "id": "T180", "name": "Mega menu", "category": "Navigation",
+    "file": "pages/navigation.html", "anchor": "#T180",
+    "description": "A wide multi-column dropdown for sites with deep navigation, with a CountUp featured card." },
+  { "id": "T181", "name": "Pagination", "category": "Navigation",
+    "file": "pages/navigation.html", "anchor": "#T181",
+    "description": "Numbered page controls with previous / next, an active page, and a truncation gap." },
+  { "id": "T182", "name": "Stepper / wizard progress", "category": "Navigation",
+    "file": "pages/navigation.html", "anchor": "#T182",
+    "description": "A horizontal step indicator for multi-step flows — completed, current, and upcoming states." },
+  { "id": "T183", "name": "Segmented control", "category": "Navigation",
+    "file": "pages/navigation.html", "anchor": "#T183",
+    "description": "A compact pill toggle for switching between a few mutually exclusive views." },
+  { "id": "T184", "name": "Back-to-top button", "category": "Navigation",
+    "file": "pages/navigation.html", "anchor": "#T184",
+    "description": "A floating control that appears once the user scrolls down, then jumps them back up." },
+  { "id": "T185", "name": "Sticky action bar", "category": "Navigation",
+    "file": "pages/navigation.html", "anchor": "#T185",
+    "description": "A persistent bottom bar pairing a summary with the primary call to action, pinned while content scrolls." },
+  { "id": "T186", "name": "Actions menu", "category": "Navigation",
+    "file": "pages/navigation.html", "anchor": "#T186",
+    "description": "A kebab / overflow menu that reveals contextual actions on click." }
+]

@@ -1,0 +1,903 @@
+{
+  "name": "tblocks",
+  "description": "T-numbered library of dark-theme website sections and UI patterns. Look up an ID, open its file, copy the markup inside .tb-demo plus the page <style> rules it uses, plus assets/base.css tokens.",
+  "count": 112,
+  "patterns": [
+    {
+      "id": "T001",
+      "name": "Colour palette",
+      "category": "Foundations",
+      "file": "pages/foundations.html",
+      "anchor": "#T001",
+      "description": "Swatch groups for accent, surfaces, borders, text, and status colours with names, values, and usage notes."
+    },
+    {
+      "id": "T002",
+      "name": "Font families",
+      "category": "Foundations",
+      "file": "pages/foundations.html",
+      "anchor": "#T002",
+      "description": "Three-family type system: Bai Jamjuree headings, Inter body, JetBrains Mono eyebrows/code/meta."
+    },
+    {
+      "id": "T003",
+      "name": "Type scale",
+      "category": "Foundations",
+      "file": "pages/foundations.html",
+      "anchor": "#T003",
+      "description": "Bordered scale table showing H1-H3 heading sizes, 17px/1.7 body copy, and the monospace eyebrow label."
+    },
+    {
+      "id": "T010",
+      "name": "Buttons",
+      "category": "Elements",
+      "file": "pages/elements.html",
+      "anchor": "#T010",
+      "description": "Primary (orange fill), secondary (outline), and the nav install pill."
+    },
+    {
+      "id": "T011",
+      "name": "Eyebrow label",
+      "category": "Elements",
+      "file": "pages/elements.html",
+      "anchor": "#T011",
+      "description": "Monospace, uppercase, orange section label prefixed with //."
+    },
+    {
+      "id": "T012",
+      "name": "Badges & tags",
+      "category": "Elements",
+      "file": "pages/elements.html",
+      "anchor": "#T012",
+      "description": "NEW badge, rounded pill tag chips, and the bordered numbered index box."
+    },
+    {
+      "id": "T013",
+      "name": "Status pills",
+      "category": "Elements",
+      "file": "pages/elements.html",
+      "anchor": "#T013",
+      "description": "Colour-coded state pills (Added, Changed, Fixed, Shipped, In Progress) for changelog and roadmap."
+    },
+    {
+      "id": "T014",
+      "name": "Status pulse",
+      "category": "Elements",
+      "file": "pages/elements.html",
+      "anchor": "#T014",
+      "description": "// SYSTEM ONLINE label with a pulsing green indicator dot."
+    },
+    {
+      "id": "T015",
+      "name": "Accordion",
+      "category": "Elements",
+      "file": "pages/elements.html",
+      "anchor": "#T015",
+      "description": "Native details/summary disclosure with an animated +/- marker, as used on the FAQ."
+    },
+    {
+      "id": "T016",
+      "name": "Card",
+      "category": "Elements",
+      "file": "pages/elements.html",
+      "anchor": "#T016",
+      "description": "Base card surface: hairline border, near-black fill, orange border and lift on hover."
+    },
+    {
+      "id": "T030",
+      "name": "TypewriterText + copy card",
+      "category": "Library components",
+      "file": "pages/components.html",
+      "anchor": "#T030",
+      "description": "Terminal-style code card with orange accent bar, npm command, and a copy-to-clipboard button."
+    },
+    {
+      "id": "T031",
+      "name": "Loader (pulse)",
+      "category": "Library components",
+      "file": "pages/components.html",
+      "anchor": "#T031",
+      "description": "Pulsing loader dots in green and orange, static equivalent of @astroanimate/core/Loader."
+    },
+    {
+      "id": "T040",
+      "name": "Sticky Nav Bar",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T040",
+      "description": "Top navigation with logo, version dropdown, links, social icons, INSTALL button, and a mobile hamburger."
+    },
+    {
+      "id": "T041",
+      "name": "Split Hero",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T041",
+      "description": "Two-column homepage hero: status pill, headline, feature list, CTAs on the left; badges + code card on the right; glow video behind."
+    },
+    {
+      "id": "T042",
+      "name": "Page Hero",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T042",
+      "description": "Eyebrow + headline + lead paragraph over a star-field. The standard top of every interior page."
+    },
+    {
+      "id": "T043",
+      "name": "Status Pill",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T043",
+      "description": "\"// SYSTEM ONLINE\" label with a pulsing green Loader. Signals a live state."
+    },
+    {
+      "id": "T044",
+      "name": "Code Block Card",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T044",
+      "description": "Terminal-style card with an orange accent bar, a typewriter command, and a copy button."
+    },
+    {
+      "id": "T045",
+      "name": "How It Works",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T045",
+      "description": "Bordered container with corner accents, an embedded demo video, and a 3-up numbered steps grid."
+    },
+    {
+      "id": "T046",
+      "name": "Comparison Table",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T046",
+      "description": "Feature-by-feature table contrasting AstroAnimate with alternatives, using check / cross / warn icons."
+    },
+    {
+      "id": "T047",
+      "name": "Performance / Architecture Grids",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T047",
+      "description": "Icon + stat + caption cards laid out on a hairline grid."
+    },
+    {
+      "id": "T048",
+      "name": "Use-case & Doc-structure Tabs",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T048",
+      "description": "Tabbed panels that swap content in place to show different scenarios."
+    },
+    {
+      "id": "T049",
+      "name": "Open-source Panel",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T049",
+      "description": "Two-column block: prose on the left, a stacked key/value badge column (LICENSE, SIZE, RUNTIME) on the right."
+    },
+    {
+      "id": "T050",
+      "name": "Principle / Feature Grid",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T050",
+      "description": "Numbered cards (01–06) on a hairline grid describing values or features."
+    },
+    {
+      "id": "T051",
+      "name": "Docs Layout",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T051",
+      "description": "Three-column app shell: collapsible grouped sidebar, centered reading column, right \"in this page\" TOC."
+    },
+    {
+      "id": "T052",
+      "name": "Right TOC (scroll-spy)",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T052",
+      "description": "\"IN THIS PAGE\" rail that highlights the active heading as you scroll."
+    },
+    {
+      "id": "T053",
+      "name": "Component Card Grid",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T053",
+      "description": "Catalog of components grouped by category, each card with name, NEW badge, description, and subpath import."
+    },
+    {
+      "id": "T054",
+      "name": "Blog Listing",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T054",
+      "description": "A featured post + side cards, a category filter with search, and a dash-separated post list."
+    },
+    {
+      "id": "T055",
+      "name": "Article Layout",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T055",
+      "description": "Article header with cover image and author, a sticky table of contents, and a prose body with code blocks, callouts, and comparison tables."
+    },
+    {
+      "id": "T056",
+      "name": "FAQ Accordion",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T056",
+      "description": "Questions grouped by category, each a native disclosure with an animated +/− marker."
+    },
+    {
+      "id": "T057",
+      "name": "Showcase Grid",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T057",
+      "description": "Cards with a gradient placeholder thumbnail, tags, name, description, and a visit link."
+    },
+    {
+      "id": "T058",
+      "name": "Changelog Timeline",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T058",
+      "description": "Vertical timeline with version dots and Added / Changed / Fixed change tags per release."
+    },
+    {
+      "id": "T059",
+      "name": "Roadmap Columns",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T059",
+      "description": "Status-grouped columns (Shipped, In Progress, Planned, Exploring) of feature cards with status pills."
+    },
+    {
+      "id": "T060",
+      "name": "Support Channels",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T060",
+      "description": "Grid of channel cards plus a numbered \"good bug report\" checklist and quick links."
+    },
+    {
+      "id": "T061",
+      "name": "Contact Form",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T061",
+      "description": "Demo form (no backend) beside a column of contact-method cards."
+    },
+    {
+      "id": "T062",
+      "name": "Final CTA Block",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T062",
+      "description": "Centered eyebrow + headline + button pair over a star-field, closing a page."
+    },
+    {
+      "id": "T063",
+      "name": "Footer",
+      "category": "Sections",
+      "file": "pages/sections.html",
+      "anchor": "#T063",
+      "description": "Five-column footer with newsletter signup and a bottom bar showing a live UTC clock."
+    },
+    {
+      "id": "T070",
+      "name": "Pricing",
+      "category": "Patterns",
+      "file": "pages/patterns.html",
+      "anchor": "#T070",
+      "description": "Three-tier pricing with a highlighted recommended plan, feature lists, and CTAs."
+    },
+    {
+      "id": "T071",
+      "name": "Popup promo",
+      "category": "Patterns",
+      "file": "pages/patterns.html",
+      "anchor": "#T071",
+      "description": "A modal promotion built on the native <dialog> element — opens over a dimmed backdrop, closes on the ✕ or a backdrop click."
+    },
+    {
+      "id": "T072",
+      "name": "Gallery",
+      "category": "Patterns",
+      "file": "pages/patterns.html",
+      "anchor": "#T072",
+      "description": "A responsive thumbnail grid with hover captions. Click any tile to open it in a lightbox."
+    },
+    {
+      "id": "T073",
+      "name": "Tabs",
+      "category": "Patterns",
+      "file": "pages/patterns.html",
+      "anchor": "#T073",
+      "description": "Tabbed panels that swap content in place. Click a tab to switch."
+    },
+    {
+      "id": "T074",
+      "name": "Folders",
+      "category": "Patterns",
+      "file": "pages/patterns.html",
+      "anchor": "#T074",
+      "description": "A collapsible file tree built from nested <details> — folders expand and collapse, no JavaScript."
+    },
+    {
+      "id": "T075",
+      "name": "Toggle content",
+      "category": "Patterns",
+      "file": "pages/patterns.html",
+      "anchor": "#T075",
+      "description": "A switch that reveals or hides a block of content. CSS-only, using :has()."
+    },
+    {
+      "id": "T076",
+      "name": "FAQ — expanded by default",
+      "category": "Patterns",
+      "file": "pages/patterns.html",
+      "anchor": "#T076",
+      "description": "The accordion pattern with every item open on load (open attribute set). Collapse any you don't need."
+    },
+    {
+      "id": "T077",
+      "name": "Contact form",
+      "category": "Patterns",
+      "file": "pages/patterns.html",
+      "anchor": "#T077",
+      "description": "A labelled form with focus states and a demo submit (no backend attached)."
+    },
+    {
+      "id": "T078",
+      "name": "Breadcrumbs",
+      "category": "Patterns",
+      "file": "pages/patterns.html",
+      "anchor": "#T078",
+      "description": "A path trail showing the visitor's location, with the current page un-linked."
+    },
+    {
+      "id": "T100",
+      "name": "Bento grid",
+      "category": "Animation",
+      "file": "pages/animation.html",
+      "anchor": "#T100",
+      "description": "Asymmetric mosaic of feature tiles with varying spans, subtle gradients, and a hover lift — pure CSS."
+    },
+    {
+      "id": "T101",
+      "name": "Infinite marquee",
+      "category": "Animation",
+      "file": "pages/animation.html",
+      "anchor": "#T101",
+      "description": "Seamlessly looping chip track from a duplicated row and one CSS keyframe; pauses on hover, frozen for reduced-motion."
+    },
+    {
+      "id": "T102",
+      "name": "Statement / word reveal",
+      "category": "Animation",
+      "file": "pages/animation.html",
+      "anchor": "#T102",
+      "description": "Display sentence whose words fade and rise in sequence via staggered CSS delays, with a JS replay button."
+    },
+    {
+      "id": "T103",
+      "name": "Animated stat counters",
+      "category": "Animation",
+      "file": "pages/animation.html",
+      "anchor": "#T103",
+      "description": "Three figures that count up on first scroll into view via IntersectionObserver; final values live in the markup."
+    },
+    {
+      "id": "T104",
+      "name": "Sticky scroll-story",
+      "category": "Animation",
+      "file": "pages/animation.html",
+      "anchor": "#T104",
+      "description": "Two-column block with a pinned visual card that crossfades as a scroll-spy highlights the active step."
+    },
+    {
+      "id": "T105",
+      "name": "Before / after slider",
+      "category": "Animation",
+      "file": "pages/animation.html",
+      "anchor": "#T105",
+      "description": "Two stacked panels split by a draggable divider; a range input drives a CSS variable clip, keyboard-accessible."
+    },
+    {
+      "id": "T106",
+      "name": "Hover-reveal work list",
+      "category": "Animation",
+      "file": "pages/animation.html",
+      "anchor": "#T106",
+      "description": "Large project rows that highlight on hover while a gradient thumbnail follows the cursor; degrades without JS."
+    },
+    {
+      "id": "T120",
+      "name": "Command palette (⌘K)",
+      "category": "Dev tools",
+      "file": "pages/devtools.html",
+      "anchor": "#T120",
+      "description": "Native dialog overlay opened by button or ⌘K/Ctrl+K with live-filtered grouped results."
+    },
+    {
+      "id": "T121",
+      "name": "Callout / admonition boxes",
+      "category": "Dev tools",
+      "file": "pages/devtools.html",
+      "anchor": "#T121",
+      "description": "Four tinted variants — Note, Tip, Warning, Danger — with left accent rail, icon, and label. Pure CSS."
+    },
+    {
+      "id": "T122",
+      "name": "API reference block",
+      "category": "Dev tools",
+      "file": "pages/devtools.html",
+      "anchor": "#T122",
+      "description": "Method pill, monospace path, params table, and cURL/JSON tabs that switch on click."
+    },
+    {
+      "id": "T123",
+      "name": "Integration grid",
+      "category": "Dev tools",
+      "file": "pages/devtools.html",
+      "anchor": "#T123",
+      "description": "Filter chips above a grid of integration tiles, shown or hidden live by data-category."
+    },
+    {
+      "id": "T124",
+      "name": "Announcement bar",
+      "category": "Dev tools",
+      "file": "pages/devtools.html",
+      "anchor": "#T124",
+      "description": "Faux top banner with message, inline link, and ✕ dismiss with demo reset link."
+    },
+    {
+      "id": "T125",
+      "name": "Theme switcher",
+      "category": "Dev tools",
+      "file": "pages/devtools.html",
+      "anchor": "#T125",
+      "description": "Segmented System/Light/Dark control that restyles only the sample card below."
+    },
+    {
+      "id": "T126",
+      "name": "“Was this helpful?”",
+      "category": "Dev tools",
+      "file": "pages/devtools.html",
+      "anchor": "#T126",
+      "description": "Small docs-footer feedback card that swaps to a thank-you state on vote."
+    },
+    {
+      "id": "T140",
+      "name": "Logo cloud / \"trusted by\" strip",
+      "category": "Social proof",
+      "file": "pages/social.html",
+      "anchor": "#T140",
+      "description": "A muted row of company wordmarks under a small label. Marquees slowly and pauses on hover."
+    },
+    {
+      "id": "T141",
+      "name": "Testimonial wall",
+      "category": "Social proof",
+      "file": "pages/social.html",
+      "anchor": "#T141",
+      "description": "A multi-column masonry of quote cards — quote, initials avatar, name and role. Static."
+    },
+    {
+      "id": "T142",
+      "name": "Quote slider",
+      "category": "Social proof",
+      "file": "pages/social.html",
+      "anchor": "#T142",
+      "description": "One large rotating testimonial. Prev / next buttons and dots advance it; it also auto-advances every 6s."
+    },
+    {
+      "id": "T143",
+      "name": "Newsletter / waitlist capture",
+      "category": "Social proof",
+      "file": "pages/social.html",
+      "anchor": "#T143",
+      "description": "An inline email capture that swaps to a success state on submit; also opens in a native <dialog>."
+    },
+    {
+      "id": "T144",
+      "name": "Video demo modal",
+      "category": "Social proof",
+      "file": "pages/social.html",
+      "anchor": "#T144",
+      "description": "A 16:9 thumbnail with a circular play button that opens a placeholder video frame in a native <dialog>."
+    },
+    {
+      "id": "T145",
+      "name": "Customer case-study cards",
+      "category": "Social proof",
+      "file": "pages/social.html",
+      "anchor": "#T145",
+      "description": "A three-up grid — wordmark, a headline metric, a one-line summary, an industry chip, and a read-story link."
+    },
+    {
+      "id": "T146",
+      "name": "Trust / guarantee bar",
+      "category": "Social proof",
+      "file": "pages/social.html",
+      "anchor": "#T146",
+      "description": "A row of four icon + label reassurances, the kind that sits just beside a final CTA. Static."
+    },
+    {
+      "id": "T160",
+      "name": "Author byline + bio card",
+      "category": "Content",
+      "file": "pages/content.html",
+      "anchor": "#T160",
+      "description": "A compact byline strip at the top of a post and a fuller author bio card to close it out."
+    },
+    {
+      "id": "T161",
+      "name": "Related articles",
+      "category": "Content",
+      "file": "pages/content.html",
+      "anchor": "#T161",
+      "description": "A \"Read next\" grid surfacing three more posts by category, title, and read time."
+    },
+    {
+      "id": "T162",
+      "name": "Reading-progress bar",
+      "category": "Content",
+      "file": "pages/content.html",
+      "anchor": "#T162",
+      "description": "A progress bar pinned to the top of a scroll container that fills as you read inside the box."
+    },
+    {
+      "id": "T163",
+      "name": "Tag / category filter",
+      "category": "Content",
+      "file": "pages/content.html",
+      "anchor": "#T163",
+      "description": "A chip row that live-filters the post list below by category."
+    },
+    {
+      "id": "T164",
+      "name": "Trending / most-popular list",
+      "category": "Content",
+      "file": "pages/content.html",
+      "anchor": "#T164",
+      "description": "A ranked list with oversized numerals and an optional view-count meta line."
+    },
+    {
+      "id": "T165",
+      "name": "Series / chapter nav",
+      "category": "Content",
+      "file": "pages/content.html",
+      "anchor": "#T165",
+      "description": "A \"Part 2 of 5\" bar with titled previous/next arrows and a thin progress indicator."
+    },
+    {
+      "id": "T166",
+      "name": "Pull quote",
+      "category": "Content",
+      "file": "pages/content.html",
+      "anchor": "#T166",
+      "description": "An oversized, offset quote block with a large quotation mark, accent rule, and attribution."
+    },
+    {
+      "id": "T180",
+      "name": "Mega menu",
+      "category": "Navigation",
+      "file": "pages/navigation.html",
+      "anchor": "#T180",
+      "description": "A wide multi-column dropdown for sites with deep navigation, with a CountUp featured card."
+    },
+    {
+      "id": "T181",
+      "name": "Pagination",
+      "category": "Navigation",
+      "file": "pages/navigation.html",
+      "anchor": "#T181",
+      "description": "Numbered page controls with previous / next, an active page, and a truncation gap."
+    },
+    {
+      "id": "T182",
+      "name": "Stepper / wizard progress",
+      "category": "Navigation",
+      "file": "pages/navigation.html",
+      "anchor": "#T182",
+      "description": "A horizontal step indicator for multi-step flows — completed, current, and upcoming states."
+    },
+    {
+      "id": "T183",
+      "name": "Segmented control",
+      "category": "Navigation",
+      "file": "pages/navigation.html",
+      "anchor": "#T183",
+      "description": "A compact pill toggle for switching between a few mutually exclusive views."
+    },
+    {
+      "id": "T184",
+      "name": "Back-to-top button",
+      "category": "Navigation",
+      "file": "pages/navigation.html",
+      "anchor": "#T184",
+      "description": "A floating control that appears once the user scrolls down, then jumps them back up."
+    },
+    {
+      "id": "T185",
+      "name": "Sticky action bar",
+      "category": "Navigation",
+      "file": "pages/navigation.html",
+      "anchor": "#T185",
+      "description": "A persistent bottom bar pairing a summary with the primary call to action, pinned while content scrolls."
+    },
+    {
+      "id": "T186",
+      "name": "Actions menu",
+      "category": "Navigation",
+      "file": "pages/navigation.html",
+      "anchor": "#T186",
+      "description": "A kebab / overflow menu that reveals contextual actions on click."
+    },
+    {
+      "id": "T200",
+      "name": "Input field library",
+      "category": "Forms",
+      "file": "pages/forms.html",
+      "anchor": "#T200",
+      "description": "Text, select, and textarea with label, helper text, and the default / focus / error / disabled states."
+    },
+    {
+      "id": "T201",
+      "name": "Choice controls",
+      "category": "Forms",
+      "file": "pages/forms.html",
+      "anchor": "#T201",
+      "description": "Checkboxes, radio group, and an on/off switch — the three ways to capture a boolean or a pick."
+    },
+    {
+      "id": "T202",
+      "name": "Range & number",
+      "category": "Forms",
+      "file": "pages/forms.html",
+      "anchor": "#T202",
+      "description": "A slider with a live value read-out and a stepper number input with − / + controls."
+    },
+    {
+      "id": "T203",
+      "name": "Search with autocomplete",
+      "category": "Forms",
+      "file": "pages/forms.html",
+      "anchor": "#T203",
+      "description": "A search input that filters a suggestion list as you type."
+    },
+    {
+      "id": "T204",
+      "name": "Multi-step form",
+      "category": "Forms",
+      "file": "pages/forms.html",
+      "anchor": "#T204",
+      "description": "A wizard that advances through panels with Back / Next, keeping the rest hidden."
+    },
+    {
+      "id": "T205",
+      "name": "File upload / dropzone",
+      "category": "Forms",
+      "file": "pages/forms.html",
+      "anchor": "#T205",
+      "description": "A drag-and-drop target with a browse fallback and a list of selected files."
+    },
+    {
+      "id": "T206",
+      "name": "Cookie consent",
+      "category": "Forms",
+      "file": "pages/forms.html",
+      "anchor": "#T206",
+      "description": "A consent banner with accept / reject and a link to preferences."
+    },
+    {
+      "id": "T220",
+      "name": "Toast notifications",
+      "category": "Feedback",
+      "file": "pages/feedback.html",
+      "anchor": "#T220",
+      "description": "Transient messages that stack in a corner and auto-dismiss."
+    },
+    {
+      "id": "T221",
+      "name": "Alert banners",
+      "category": "Feedback",
+      "file": "pages/feedback.html",
+      "anchor": "#T221",
+      "description": "Inline status messages in four intents — info, success, warning, and error."
+    },
+    {
+      "id": "T222",
+      "name": "Tooltip",
+      "category": "Feedback",
+      "file": "pages/feedback.html",
+      "anchor": "#T222",
+      "description": "A small label that appears on hover or focus to explain a control."
+    },
+    {
+      "id": "T223",
+      "name": "Empty state",
+      "category": "Feedback",
+      "file": "pages/feedback.html",
+      "anchor": "#T223",
+      "description": "Placeholder for no-data views — an icon, a line of guidance, and an action."
+    },
+    {
+      "id": "T224",
+      "name": "Skeleton loader",
+      "category": "Feedback",
+      "file": "pages/feedback.html",
+      "anchor": "#T224",
+      "description": "Shimmering placeholders that mirror the shape of content while it loads."
+    },
+    {
+      "id": "T225",
+      "name": "Spinners & progress",
+      "category": "Feedback",
+      "file": "pages/feedback.html",
+      "anchor": "#T225",
+      "description": "An indeterminate spinner, a determinate bar, and a circular progress ring."
+    },
+    {
+      "id": "T226",
+      "name": "Confirmation dialog",
+      "category": "Feedback",
+      "file": "pages/feedback.html",
+      "anchor": "#T226",
+      "description": "A focused modal that asks the user to confirm a destructive action."
+    },
+    {
+      "id": "T240",
+      "name": "KPI / metric cards",
+      "category": "Data",
+      "file": "pages/data.html",
+      "anchor": "#T240",
+      "description": "Dashboard stat tiles with a label, a big number, and a trend delta coloured by direction."
+    },
+    {
+      "id": "T241",
+      "name": "Sortable data table",
+      "category": "Data",
+      "file": "pages/data.html",
+      "anchor": "#T241",
+      "description": "A zebra-striped table with sortable headers. Click a column header to re-sort."
+    },
+    {
+      "id": "T242",
+      "name": "Pricing billing toggle",
+      "category": "Data",
+      "file": "pages/data.html",
+      "anchor": "#T242",
+      "description": "A monthly / annual switch that swaps the displayed prices in place."
+    },
+    {
+      "id": "T243",
+      "name": "Spec / definition list",
+      "category": "Data",
+      "file": "pages/data.html",
+      "anchor": "#T243",
+      "description": "A two-column key/value sheet for technical specs, metadata, or property tables."
+    },
+    {
+      "id": "T244",
+      "name": "Horizontal bar chart",
+      "category": "Data",
+      "file": "pages/data.html",
+      "anchor": "#T244",
+      "description": "A lightweight, CSS-only comparison chart — labelled rows with proportional fills."
+    },
+    {
+      "id": "T245",
+      "name": "Activity feed / timeline",
+      "category": "Data",
+      "file": "pages/data.html",
+      "anchor": "#T245",
+      "description": "A vertical, dotted timeline of recent events with a relative timestamp and a type tag."
+    },
+    {
+      "id": "T260",
+      "name": "Product card",
+      "category": "Commerce",
+      "file": "pages/commerce.html",
+      "anchor": "#T260",
+      "description": "A shoppable card with image, badge, title, rating, price (with strike-through), and add-to-cart."
+    },
+    {
+      "id": "T261",
+      "name": "Star rating & review",
+      "category": "Commerce",
+      "file": "pages/commerce.html",
+      "anchor": "#T261",
+      "description": "An aggregate rating summary with a distribution breakdown beside an individual review card."
+    },
+    {
+      "id": "T262",
+      "name": "Cart / order summary",
+      "category": "Commerce",
+      "file": "pages/commerce.html",
+      "anchor": "#T262",
+      "description": "A checkout-side summary: line items, a promo field, the totals breakdown, and the pay button."
+    },
+    {
+      "id": "T263",
+      "name": "Filter sidebar",
+      "category": "Commerce",
+      "file": "pages/commerce.html",
+      "anchor": "#T263",
+      "description": "A faceted filter rail — category checkboxes, a price range, and active filter chips you can clear."
+    },
+    {
+      "id": "T264",
+      "name": "Countdown timer",
+      "category": "Commerce",
+      "file": "pages/commerce.html",
+      "anchor": "#T264",
+      "description": "An urgency timer for sales and launches, ticking down in days / hours / minutes / seconds."
+    },
+    {
+      "id": "T265",
+      "name": "Avatar group & social proof",
+      "category": "Commerce",
+      "file": "pages/commerce.html",
+      "anchor": "#T265",
+      "description": "Stacked, overlapping avatars with an overflow count — the \"join 2,000+ others\" cue."
+    },
+    {
+      "id": "T280",
+      "name": "Image carousel",
+      "category": "Media",
+      "file": "pages/media.html",
+      "anchor": "#T280",
+      "description": "Single-slide carousel with prev / next arrows and dot indicators."
+    },
+    {
+      "id": "T281",
+      "name": "Figure with caption",
+      "category": "Media",
+      "file": "pages/media.html",
+      "anchor": "#T281",
+      "description": "Image block with a number tag and a typeset caption for docs and case studies."
+    },
+    {
+      "id": "T282",
+      "name": "Video background hero",
+      "category": "Media",
+      "file": "pages/media.html",
+      "anchor": "#T282",
+      "description": "Full-bleed hero with a looping video or gradient behind a darkening scrim and headline."
+    },
+    {
+      "id": "T283",
+      "name": "Alternating feature row",
+      "category": "Media",
+      "file": "pages/media.html",
+      "anchor": "#T283",
+      "description": "Classic zig-zag with image and copy swapping sides down the page."
+    },
+    {
+      "id": "T284",
+      "name": "Team / people grid",
+      "category": "Media",
+      "file": "pages/media.html",
+      "anchor": "#T284",
+      "description": "Grid of people cards with avatar, name, role, and social links."
+    },
+    {
+      "id": "T285",
+      "name": "Responsive embed",
+      "category": "Media",
+      "file": "pages/media.html",
+      "anchor": "#T285",
+      "description": "Fixed-ratio container for video, maps, or iframes that scales cleanly at any width."
+    }
+  ]
+}

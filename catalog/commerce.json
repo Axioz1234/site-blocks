@@ -1,0 +1,20 @@
+[
+  { "id": "T260", "name": "Product card", "category": "Commerce",
+    "file": "pages/commerce.html", "anchor": "#T260",
+    "description": "A shoppable card with image, badge, title, rating, price (with strike-through), and add-to-cart." },
+  { "id": "T261", "name": "Star rating & review", "category": "Commerce",
+    "file": "pages/commerce.html", "anchor": "#T261",
+    "description": "An aggregate rating summary with a distribution breakdown beside an individual review card." },
+  { "id": "T262", "name": "Cart / order summary", "category": "Commerce",
+    "file": "pages/commerce.html", "anchor": "#T262",
+    "description": "A checkout-side summary: line items, a promo field, the totals breakdown, and the pay button." },
+  { "id": "T263", "name": "Filter sidebar", "category": "Commerce",
+    "file": "pages/commerce.html", "anchor": "#T263",
+    "description": "A faceted filter rail — category checkboxes, a price range, and active filter chips you can clear." },
+  { "id": "T264", "name": "Countdown timer", "category": "Commerce",
+    "file": "pages/commerce.html", "anchor": "#T264",
+    "description": "An urgency timer for sales and launches, ticking down in days / hours / minutes / seconds." },
+  { "id": "T265", "name": "Avatar group & social proof", "category": "Commerce",
+    "file": "pages/commerce.html", "anchor": "#T265",
+    "description": "Stacked, overlapping avatars with an overflow count — the \"join 2,000+ others\" cue." }
+]

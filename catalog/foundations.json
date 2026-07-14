@@ -1,0 +1,11 @@
+[
+  { "id": "T001", "name": "Colour palette", "category": "Foundations",
+    "file": "pages/foundations.html", "anchor": "#T001",
+    "description": "Swatch groups for accent, surfaces, borders, text, and status colours with names, values, and usage notes." },
+  { "id": "T002", "name": "Font families", "category": "Foundations",
+    "file": "pages/foundations.html", "anchor": "#T002",
+    "description": "Three-family type system: Bai Jamjuree headings, Inter body, JetBrains Mono eyebrows/code/meta." },
+  { "id": "T003", "name": "Type scale", "category": "Foundations",
+    "file": "pages/foundations.html", "anchor": "#T003",
+    "description": "Bordered scale table showing H1-H3 heading sizes, 17px/1.7 body copy, and the monospace eyebrow label." }
+]

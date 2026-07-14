@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animation — TBlocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+</head>
+<body>
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <h1>Animation <span class="tb-range">T100&ndash;T106</span></h1>
+    <p class="tb-sub">Seven motion patterns — CSS-first where possible, with JavaScript added only where it earns its place. Each respects reduced-motion and degrades cleanly without script.</p>
+  </header>
+  <main class="tb-main">
+
+    <article class="tb-pattern" id="T100" data-tid="T100">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T100</span>
+        <div>
+          <h2>Bento grid</h2>
+          <p>An asymmetric mosaic of feature tiles with varying column and row spans, each carrying a subtle gradient and a lift on hover. Pure CSS — no JavaScript.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">CSS ONLY</span>
+          <div class="ani-bento">
+            <div class="ani-tile ani-t-a" style="--g:linear-gradient(135deg,#1a1206,#2a1505)">
+              <span class="ani-tile-k">CORE</span>
+              <span class="ani-tile-l">CSS-first engine</span>
+            </div>
+            <div class="ani-tile ani-t-b" style="--g:linear-gradient(135deg,#0a0f1a,#131a2a)">
+              <span class="ani-tile-k">ISLANDS</span>
+              <span class="ani-tile-l">Hydration-aware</span>
+            </div>
+            <div class="ani-tile ani-t-c" style="--g:linear-gradient(135deg,#0b1410,#11261b)">
+              <span class="ani-tile-k">A11Y</span>
+              <span class="ani-tile-l">Reduced-motion safe</span>
+            </div>
+            <div class="ani-tile ani-t-d" style="--g:linear-gradient(135deg,#1a0a14,#2a0f1e)">
+              <span class="ani-tile-k">TRANSITIONS</span>
+              <span class="ani-tile-l">View Transitions ready</span>
+            </div>
+            <div class="ani-tile ani-t-e" style="--g:linear-gradient(135deg,#160a0a,#2a1305)">
+              <span class="ani-tile-k">SIZE</span>
+              <span class="ani-tile-l">~5KB, tree-shakable</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T101" data-tid="T101">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T101</span>
+        <div>
+          <h2>Infinite marquee</h2>
+          <p>A seamlessly looping track of component names built from a duplicated row and a single CSS keyframe. Hover anywhere to pause. CSS-only, and frozen for reduced-motion.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">CSS ONLY</span>
+          <div class="ani-marquee" aria-hidden="true">
+            <div class="ani-marquee-track">
+              <span class="ani-chip">FadeInText</span>
+              <span class="ani-chip">ScaleIn</span>
+              <span class="ani-chip">TypewriterText</span>
+              <span class="ani-chip">CountUp</span>
+              <span class="ani-chip">RevealImage</span>
+              <span class="ani-chip">SlideUp</span>
+              <span class="ani-chip">BlurIn</span>
+              <span class="ani-chip">StaggerList</span>
+              <span class="ani-chip">Parallax</span>
+              <span class="ani-chip">FlipCard</span>
+              <span class="ani-chip">GlowPulse</span>
+              <span class="ani-chip">FadeInText</span>
+              <span class="ani-chip">ScaleIn</span>
+              <span class="ani-chip">TypewriterText</span>
+              <span class="ani-chip">CountUp</span>
+              <span class="ani-chip">RevealImage</span>
+              <span class="ani-chip">SlideUp</span>
+              <span class="ani-chip">BlurIn</span>
+              <span class="ani-chip">StaggerList</span>
+              <span class="ani-chip">Parallax</span>
+              <span class="ani-chip">FlipCard</span>
+              <span class="ani-chip">GlowPulse</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T102" data-tid="T102">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T102</span>
+        <div>
+          <h2>Statement / word reveal</h2>
+          <p>A display sentence where each word fades and rises in sequence using staggered CSS animation delays. Replay restarts the sequence; reduced-motion shows the words instantly.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">CSS + JS</span>
+          <p class="ani-statement" id="ani-statement">
+            <span class="ani-word" style="--i:0"><span>Motion</span></span>
+            <span class="ani-word" style="--i:1"><span>that</span></span>
+            <span class="ani-word" style="--i:2"><span>fits</span></span>
+            <span class="ani-word" style="--i:3"><span>the</span></span>
+            <span class="ani-word" style="--i:4"><span>way</span></span>
+            <span class="ani-word" style="--i:5"><span>Astro</span></span>
+            <span class="ani-word" style="--i:6"><span>already</span></span>
+            <span class="ani-word" style="--i:7"><span>works.</span></span>
+          </p>
+          <button class="ani-replay" id="ani-replay" type="button">↺ Replay</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T103" data-tid="T103">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T103</span>
+        <div>
+          <h2>Animated stat counters</h2>
+          <p>Three figures that count up the first time the band scrolls into view, driven by IntersectionObserver. The final value lives in the markup, so it reads correctly with JavaScript disabled.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">CSS + JS</span>
+          <div class="ani-stats" id="ani-stats">
+            <div class="ani-stat">
+              <b class="ani-stat-num" data-ani-target="100" data-ani-prefix="" data-ani-suffix="">100</b>
+              <span class="ani-stat-label">Lighthouse performance</span>
+            </div>
+            <div class="ani-stat">
+              <b class="ani-stat-num" data-ani-target="12" data-ani-prefix="" data-ani-suffix="K+">12K+</b>
+              <span class="ani-stat-label">Projects animated</span>
+            </div>
+            <div class="ani-stat">
+              <b class="ani-stat-num" data-ani-target="5" data-ani-prefix="~" data-ani-suffix="KB">~5KB</b>
+              <span class="ani-stat-label">Core, gzipped</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T104" data-tid="T104">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T104</span>
+        <div>
+          <h2>Sticky scroll-story</h2>
+          <p>A two-column block: the left visual stays pinned while the right column scrolls through steps. A scroll-spy (IntersectionObserver) highlights the active step and crossfades the pinned card to match.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">CSS + JS</span>
+          <div class="ani-story" id="ani-story">
+            <div class="ani-story-sticky">
+              <div class="ani-story-card">
+                <div class="ani-story-visual on" data-ani-visual="0">
+                  <span class="ani-visual-n">01</span>
+                  <span class="ani-visual-t">Install the core</span>
+                </div>
+                <div class="ani-story-visual" data-ani-visual="1">
+                  <span class="ani-visual-n">02</span>
+                  <span class="ani-visual-t">Import a component</span>
+                </div>
+                <div class="ani-story-visual" data-ani-visual="2">
+                  <span class="ani-visual-n">03</span>
+                  <span class="ani-visual-t">Apply and ship</span>
+                </div>
+              </div>
+            </div>
+            <div class="ani-story-steps">
+              <div class="ani-story-step on" data-ani-step="0">
+                <span class="ani-step-n">01</span>
+                <h4>Install the core</h4>
+                <p>Add @astroanimate/core — zero runtime JS ships until you opt in to an engine.</p>
+              </div>
+              <div class="ani-story-step" data-ani-step="1">
+                <span class="ani-step-n">02</span>
+                <h4>Import a component</h4>
+                <p>Pull in a component by its subpath. Everything is fully typed out of the box.</p>
+              </div>
+              <div class="ani-story-step" data-ani-step="2">
+                <span class="ani-step-n">03</span>
+                <h4>Apply and ship</h4>
+                <p>Drop it into your markup. Motion renders from CSS in fully static builds.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T105" data-tid="T105">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T105</span>
+        <div>
+          <h2>Before / after slider</h2>
+          <p>Two stacked panels with a draggable divider. A range input drives a CSS variable that clips the top panel, so the control stays keyboard-accessible while the handle tracks the split.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">CSS + JS</span>
+          <div class="ani-ba" id="ani-ba" style="--ani-ba:50">
+            <div class="ani-ba-panel ani-ba-after">
+              <span class="ani-ba-tag">AFTER</span>
+            </div>
+            <div class="ani-ba-panel ani-ba-before">
+              <span class="ani-ba-tag">BEFORE</span>
+            </div>
+            <div class="ani-ba-divider"><span class="ani-ba-handle">⟷</span></div>
+            <input
+              class="ani-ba-range"
+              id="ani-ba-range"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              aria-label="Reveal the after panel"
+            />
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T106" data-tid="T106">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T106</span>
+        <div>
+          <h2>Hover-reveal work list</h2>
+          <p>A list of large project rows. Hovering a row scales and colours it, and floats a gradient thumbnail that follows the cursor. Without JavaScript the rows still highlight — the thumbnail simply stays hidden.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">CSS + JS</span>
+          <div class="ani-work" id="ani-work">
+            <ul class="ani-work-list">
+              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,#1a1206,#3a1e05)">
+                <span class="ani-work-name">Nova Portfolio</span>
+                <span class="ani-work-tag">Hero reveal</span>
+              </li>
+              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,#0a0f1a,#131a2a)">
+                <span class="ani-work-name">Driftwave SaaS</span>
+                <span class="ani-work-tag">Scroll fade</span>
+              </li>
+              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,#1a0a14,#2a0f1e)">
+                <span class="ani-work-name">Ember Docs</span>
+                <span class="ani-work-tag">Typewriter</span>
+              </li>
+              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,#0b1410,#11261b)">
+                <span class="ani-work-name">Verdant Store</span>
+                <span class="ani-work-tag">Count up</span>
+              </li>
+            </ul>
+            <div class="ani-work-thumb" id="ani-work-thumb" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <style>
+    /* ===== WRAPPER (verbatim per spec) ===== */
+    .sgx-section { padding: 64px var(--side-padding); border-bottom: 1px solid var(--border-2); background: var(--bg-2); }
+    .sgx-eyebrow { font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; color:#ff7f1f; text-transform:uppercase; margin:0 0 16px; }
+    .sgx-h2 { font-family:'Bai Jamjuree',sans-serif; font-size:clamp(26px,3.5vw,38px); font-weight:600; color:var(--text); margin:0 0 14px; }
+    .sgx-desc { font-family:'Inter',sans-serif; font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 36px; max-width:64ch; }
+    .sgx-block { padding:32px 0; border-top:1px solid var(--border); }
+    .sgx-block:first-of-type { border-top:none; padding-top:8px; }
+    .sgx-block-head { display:flex; gap:16px; align-items:flex-start; margin-bottom:18px; }
+    .sgx-num { font-family:'JetBrains Mono',monospace; font-size:13px; color:#ff7f1f; flex-shrink:0; padding-top:3px; }
+    .sgx-meta { flex:1; min-width:0; }
+    .sgx-meta h3 { font-family:'Bai Jamjuree',sans-serif; font-size:19px; font-weight:600; color:var(--text); margin:0 0 6px; }
+    .sgx-meta p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:var(--text-3); margin:0; max-width:72ch; }
+    .sgx-preview { position:relative; border:1px solid var(--border); border-radius:4px; background:var(--bg-card); padding:30px 24px 24px; overflow:hidden; }
+    .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:var(--border-3); }
+
+    /* ===== 01 BENTO GRID ===== */
+    .ani-bento {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 80px;
+      gap: 10px;
+    }
+    .ani-tile {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--g), var(--bg);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 4px;
+      overflow: hidden;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .ani-tile::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(120% 120% at 80% 0%, rgba(255, 127, 31, 0.10), transparent 60%);
+      pointer-events: none;
+    }
+    .ani-tile:hover { border-color: #ff7f1f; transform: translateY(-4px); }
+    .ani-tile-k { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #ff7f1f; position: relative; z-index: 1; }
+    .ani-tile-l { font-family: 'Bai Jamjuree', sans-serif; font-size: 14px; font-weight: 600; color: var(--text); position: relative; z-index: 1; }
+    .ani-t-a { grid-column: span 2; grid-row: span 2; }
+    .ani-t-b { grid-column: span 2; }
+    .ani-t-c { grid-column: span 1; grid-row: span 2; }
+    .ani-t-d { grid-column: span 1; }
+    .ani-t-e { grid-column: span 2; }
+
+    /* ===== 02 INFINITE MARQUEE ===== */
+    .ani-marquee {
+      position: relative;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, transparent, var(--bg-black) 8%, var(--bg-black) 92%, transparent);
+      mask-image: linear-gradient(90deg, transparent, var(--bg-black) 8%, var(--bg-black) 92%, transparent);
+    }
+    .ani-marquee-track {
+      display: flex;
+      gap: 12px;
+      width: max-content;
+    }
+    .ani-chip {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--text-2);
+      border: 1px solid var(--border-2);
+      border-radius: 999px;
+      padding: 8px 16px;
+      white-space: nowrap;
+      background: var(--bg);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .ani-marquee-track { animation: ani-scroll 26s linear infinite; }
+      .ani-marquee:hover .ani-marquee-track { animation-play-state: paused; }
+      @keyframes ani-scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+    }
+
+    /* ===== 03 STATEMENT / WORD REVEAL ===== */
+    .ani-statement {
+      font-family: 'Bai Jamjuree', sans-serif;
+      font-size: clamp(24px, 4vw, 40px);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text);
+      margin: 0 0 22px;
+      max-width: 18ch;
+    }
+    .ani-word { display: inline-block; overflow: hidden; }
+    .ani-word > span { display: inline-block; }
+    @media (prefers-reduced-motion: no-preference) {
+      .ani-word > span {
+        opacity: 0;
+        transform: translateY(105%);
+        animation: ani-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: calc(var(--i) * 90ms);
+      }
+      .ani-statement.ani-replaying .ani-word > span { animation: none; }
+      @keyframes ani-rise {
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+    .ani-replay {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #ff7f1f;
+      background: none;
+      border: 1px solid var(--border-2);
+      border-radius: 3px;
+      padding: 8px 14px;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+    .ani-replay:hover { border-color: #ff7f1f; }
+
+    /* ===== 04 STAT COUNTERS ===== */
+    .ani-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .ani-stat { background: var(--bg); padding: 24px 18px; text-align: center; }
+    .ani-stat-num {
+      display: block;
+      font-family: 'Bai Jamjuree', sans-serif;
+      font-size: clamp(30px, 5vw, 46px);
+      font-weight: 600;
+      color: #ff7f1f;
+      line-height: 1;
+      margin-bottom: 10px;
+      font-variant-numeric: tabular-nums;
+    }
+    .ani-stat-label { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-3); }
+
+    /* ===== 05 STICKY SCROLL-STORY ===== */
+    .ani-story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-height: 360px;
+      overflow-y: auto;
+      position: relative;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-2) transparent;
+    }
+    .ani-story::-webkit-scrollbar { width: 8px; }
+    .ani-story::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 4px; }
+    .ani-story-sticky { position: sticky; top: 0; align-self: start; height: 0; }
+    .ani-story-card {
+      position: relative;
+      height: 220px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--bg-3);
+      overflow: hidden;
+    }
+    .ani-story-visual {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      opacity: 0;
+      transform: scale(1.04);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+      background: radial-gradient(120% 120% at 50% 0%, rgba(255, 127, 31, 0.12), transparent 60%), var(--bg);
+    }
+    .ani-story-visual.on { opacity: 1; transform: none; }
+    .ani-visual-n { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ff7f1f; }
+    .ani-visual-t { font-family: 'Bai Jamjuree', sans-serif; font-size: 20px; font-weight: 600; color: var(--text); }
+    .ani-story-steps { display: flex; flex-direction: column; }
+    .ani-story-step {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 16px 18px;
+      border-left: 2px solid var(--border);
+      opacity: 0.4;
+      transition: opacity 0.3s ease, border-color 0.3s ease;
+    }
+    .ani-story-step.on { opacity: 1; border-left-color: #ff7f1f; }
+    .ani-step-n { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #ff7f1f; }
+    .ani-story-step h4 { font-family: 'Bai Jamjuree', sans-serif; font-size: 18px; font-weight: 600; color: var(--text); margin: 8px 0 8px; }
+    .ani-story-step p { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0; }
+
+    /* ===== 06 BEFORE / AFTER SLIDER ===== */
+    .ani-ba {
+      position: relative;
+      height: 200px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      --pos: calc(var(--ani-ba) * 1%);
+    }
+    .ani-ba-panel { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+    .ani-ba-after { background: radial-gradient(130% 130% at 80% 20%, rgba(255, 127, 31, 0.25), transparent 55%), linear-gradient(135deg, #1a1206, #2a1505); }
+    .ani-ba-before {
+      background: linear-gradient(135deg, var(--bg-3), var(--bg-3));
+      clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+    }
+    .ani-ba-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      padding: 6px 14px;
+      background: rgba(0, 0, 0, 0.35);
+    }
+    .ani-ba-divider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--pos);
+      width: 2px;
+      background: #ff7f1f;
+      transform: translateX(-1px);
+      pointer-events: none;
+    }
+    .ani-ba-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #ff7f1f;
+      color: var(--bg);
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ani-ba-range {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      opacity: 0;
+      cursor: ew-resize;
+    }
+
+    /* ===== 07 HOVER-REVEAL WORK LIST ===== */
+    .ani-work { position: relative; }
+    .ani-work-list { list-style: none; margin: 0; padding: 0; }
+    .ani-work-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 6px;
+      border-top: 1px solid var(--border);
+      cursor: pointer;
+      transition: padding-left 0.2s ease, color 0.2s ease;
+    }
+    .ani-work-row:first-child { border-top: none; }
+    .ani-work-name {
+      font-family: 'Bai Jamjuree', sans-serif;
+      font-size: clamp(20px, 3.5vw, 30px);
+      font-weight: 600;
+      color: var(--text-4);
+      transition: color 0.2s ease;
+    }
+    .ani-work-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: var(--border-3); transition: color 0.2s ease; }
+    .ani-work-row:hover { padding-left: 16px; }
+    .ani-work-row:hover .ani-work-name { color: var(--text); }
+    .ani-work-row:hover .ani-work-tag { color: #ff7f1f; }
+    .ani-work-thumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 96px;
+      border: 1px solid var(--border-2);
+      border-radius: 4px;
+      transform: translate(-50%, -50%) scale(0.85);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 3;
+    }
+    .ani-work-thumb.on { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .ani-story { grid-template-columns: 1fr; }
+      .ani-story-sticky { display: none; }
+      .ani-story-step { min-height: 0; padding: 18px; opacity: 1; }
+    }
+    @media (max-width: 768px) {
+      .ani-bento { grid-template-columns: repeat(2, 1fr); }
+      .ani-t-a, .ani-t-b, .ani-t-c, .ani-t-d, .ani-t-e { grid-column: span 1; grid-row: span 1; }
+      .ani-stats { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ani-work-thumb { display: none; }
+    }
+  </style>
+  <script>
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* T102 — Word reveal replay */
+      const statement = document.getElementById('ani-statement');
+      const replay = document.getElementById('ani-replay');
+      if (statement && replay) {
+        replay.addEventListener('click', function () {
+          statement.classList.add('ani-replaying');
+          // force reflow so the animation restarts
+          void statement.offsetWidth;
+          statement.classList.remove('ani-replaying');
+        });
+      }
+
+      /* T103 — Stat counters (count up once in view) */
+      const statsWrap = document.getElementById('ani-stats');
+      if (statsWrap) {
+        const nums = Array.prototype.slice.call(statsWrap.querySelectorAll('.ani-stat-num'));
+        const run = function () {
+          nums.forEach(function (el) {
+            const target = parseFloat(el.getAttribute('data-ani-target')) || 0;
+            const prefix = el.getAttribute('data-ani-prefix') || '';
+            const suffix = el.getAttribute('data-ani-suffix') || '';
+            if (reduce) { el.textContent = prefix + target + suffix; return; }
+            const dur = 1100;
+            const start = performance.now();
+            const tick = function (now) {
+              const p = Math.min((now - start) / dur, 1);
+              const eased = 1 - Math.pow(1 - p, 3);
+              el.textContent = prefix + Math.round(target * eased) + suffix;
+              if (p < 1) requestAnimationFrame(tick);
+            };
+            el.textContent = prefix + '0' + suffix;
+            requestAnimationFrame(tick);
+          });
+        };
+        if (!('IntersectionObserver' in window)) {
+          run();
+        } else {
+          const io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) { run(); io.disconnect(); }
+            });
+          }, { threshold: 0.4 });
+          io.observe(statsWrap);
+        }
+      }
+
+      /* T104 — Sticky scroll-story spy */
+      const story = document.getElementById('ani-story');
+      if (story && 'IntersectionObserver' in window) {
+        const stepEls = Array.prototype.slice.call(story.querySelectorAll('.ani-story-step'));
+        const visuals = Array.prototype.slice.call(story.querySelectorAll('.ani-story-visual'));
+        const setActive = function (idx) {
+          stepEls.forEach(function (s) {
+            s.classList.toggle('on', s.getAttribute('data-ani-step') === String(idx));
+          });
+          visuals.forEach(function (v) {
+            v.classList.toggle('on', v.getAttribute('data-ani-visual') === String(idx));
+          });
+        };
+        const io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) setActive(e.target.getAttribute('data-ani-step'));
+          });
+        }, { root: story, rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+        stepEls.forEach(function (s) { io.observe(s); });
+      }
+
+      /* T105 — Before/after slider */
+      const ba = document.getElementById('ani-ba');
+      const baRange = document.getElementById('ani-ba-range');
+      if (ba && baRange) {
+        const sync = function () { ba.style.setProperty('--ani-ba', baRange.value); };
+        baRange.addEventListener('input', sync);
+        sync();
+      }
+
+      /* T106 — Hover-reveal work list */
+      const work = document.getElementById('ani-work');
+      const thumb = document.getElementById('ani-work-thumb');
+      if (work && thumb && !reduce) {
+        const rows = Array.prototype.slice.call(work.querySelectorAll('.ani-work-row'));
+        const move = function (e) {
+          const rect = work.getBoundingClientRect();
+          thumb.style.left = (e.clientX - rect.left) + 'px';
+          thumb.style.top = (e.clientY - rect.top) + 'px';
+        };
+        rows.forEach(function (row) {
+          row.addEventListener('mouseenter', function () {
+            thumb.style.background = row.getAttribute('data-ani-grad') || '';
+            thumb.classList.add('on');
+          });
+          row.addEventListener('mousemove', move);
+          row.addEventListener('mouseleave', function () {
+            thumb.classList.remove('on');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

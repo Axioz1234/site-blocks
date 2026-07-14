@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dev tools — TBlocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+</head>
+<body>
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <h1>Dev tools <span class="tb-range">T120&ndash;T126</span></h1>
+    <p class="tb-sub">Command palette, callouts, API reference, integrations, and the small feedback affordances that make docs feel alive.</p>
+  </header>
+  <main class="tb-main">
+
+    <article class="tb-pattern" id="T120" data-tid="T120">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T120</span>
+        <div>
+          <h2>Command palette (⌘K)</h2>
+          <p>A native <code>&lt;dialog&gt;</code> overlay opened by button or ⌘K / Ctrl+K. Typing filters the grouped result list live; Escape or a backdrop click closes it.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <button class="dev-kbtn" id="dev-cmdk-open">
+            <span class="dev-kbtn-icon" aria-hidden="true">⌕</span>
+            <span>Press</span>
+            <kbd class="dev-kbd">⌘K</kbd>
+            <span>to search</span>
+          </button>
+
+          <dialog class="dev-cmdk" id="dev-cmdk">
+            <div class="dev-cmdk-card">
+              <div class="dev-cmdk-search">
+                <span class="dev-cmdk-glass" aria-hidden="true">⌕</span>
+                <input id="dev-cmdk-input" type="text" placeholder="Search pages, components, actions…" autocomplete="off" />
+                <kbd class="dev-kbd dev-kbd-sm">ESC</kbd>
+              </div>
+              <div class="dev-cmdk-results" id="dev-cmdk-results">
+                <div class="dev-cmdk-group" data-dev-group>
+                  <span class="dev-cmdk-grouplabel">Pages</span>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="installation">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">◉</span>
+                    <span class="dev-cmdk-rowlabel">Installation</span>
+                    <span class="dev-cmdk-rowhint">docs</span>
+                    <kbd class="dev-kbd dev-kbd-sm">G I</kbd>
+                  </button>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="all components">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">◉</span>
+                    <span class="dev-cmdk-rowlabel">All Components</span>
+                    <span class="dev-cmdk-rowhint">docs</span>
+                    <kbd class="dev-kbd dev-kbd-sm">G C</kbd>
+                  </button>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="changelog">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">◉</span>
+                    <span class="dev-cmdk-rowlabel">Changelog</span>
+                    <span class="dev-cmdk-rowhint">page</span>
+                    <kbd class="dev-kbd dev-kbd-sm">G L</kbd>
+                  </button>
+                </div>
+                <div class="dev-cmdk-group" data-dev-group>
+                  <span class="dev-cmdk-grouplabel">Components</span>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="typewritertext">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">◆</span>
+                    <span class="dev-cmdk-rowlabel">TypewriterText</span>
+                    <span class="dev-cmdk-rowhint">core</span>
+                    <kbd class="dev-kbd dev-kbd-sm">↵</kbd>
+                  </button>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="fadeintext">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">◆</span>
+                    <span class="dev-cmdk-rowlabel">FadeInText</span>
+                    <span class="dev-cmdk-rowhint">core</span>
+                    <kbd class="dev-kbd dev-kbd-sm">↵</kbd>
+                  </button>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="countup">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">◆</span>
+                    <span class="dev-cmdk-rowlabel">CountUp</span>
+                    <span class="dev-cmdk-rowhint">core</span>
+                    <kbd class="dev-kbd dev-kbd-sm">↵</kbd>
+                  </button>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="loader">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">◆</span>
+                    <span class="dev-cmdk-rowlabel">Loader</span>
+                    <span class="dev-cmdk-rowhint">core</span>
+                    <kbd class="dev-kbd dev-kbd-sm">↵</kbd>
+                  </button>
+                </div>
+                <div class="dev-cmdk-group" data-dev-group>
+                  <span class="dev-cmdk-grouplabel">Actions</span>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="copy install command">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">⚡</span>
+                    <span class="dev-cmdk-rowlabel">Copy install command</span>
+                    <span class="dev-cmdk-rowhint">action</span>
+                    <kbd class="dev-kbd dev-kbd-sm">⌘ C</kbd>
+                  </button>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="toggle theme">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">⚡</span>
+                    <span class="dev-cmdk-rowlabel">Toggle theme</span>
+                    <span class="dev-cmdk-rowhint">action</span>
+                    <kbd class="dev-kbd dev-kbd-sm">T</kbd>
+                  </button>
+                </div>
+                <p class="dev-cmdk-empty" id="dev-cmdk-empty" hidden>No results.</p>
+              </div>
+              <div class="dev-cmdk-foot">
+                <span><kbd class="dev-kbd dev-kbd-sm">↑</kbd><kbd class="dev-kbd dev-kbd-sm">↓</kbd> navigate</span>
+                <span><kbd class="dev-kbd dev-kbd-sm">↵</kbd> select</span>
+                <span><kbd class="dev-kbd dev-kbd-sm">esc</kbd> close</span>
+              </div>
+            </div>
+          </dialog>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T121" data-tid="T121">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T121</span>
+        <div>
+          <h2>Callout / admonition boxes</h2>
+          <p>Four tinted variants — Note, Tip, Warning, Danger — each with a left accent rail, an icon, a bold label, and a single body line. Pure CSS.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">EXAMPLE</span>
+          <div class="dev-callouts">
+            <div class="dev-callout dev-note">
+              <span class="dev-callout-icon" aria-hidden="true">ℹ</span>
+              <div><strong>Note</strong><p>Components are imported by subpath — one import per component.</p></div>
+            </div>
+            <div class="dev-callout dev-tip">
+              <span class="dev-callout-icon" aria-hidden="true">✓</span>
+              <div><strong>Tip</strong><p>CSS-first components ship zero runtime JS, so they render on static markup.</p></div>
+            </div>
+            <div class="dev-callout dev-warn">
+              <span class="dev-callout-icon" aria-hidden="true">▲</span>
+              <div><strong>Warning</strong><p>Named (barrel) imports from the package root are not supported.</p></div>
+            </div>
+            <div class="dev-callout dev-danger">
+              <span class="dev-callout-icon" aria-hidden="true">✕</span>
+              <div><strong>Danger</strong><p>Removing a client directive from an opt-in island disables its motion entirely.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T122" data-tid="T122">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T122</span>
+        <div>
+          <h2>API reference block</h2>
+          <p>A method pill plus monospace path, a description, a params table, and a request/response area with cURL / JSON tabs that switch on click.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <div class="dev-api">
+            <div class="dev-api-endpoint">
+              <span class="dev-method">GET</span>
+              <code class="dev-path">/api/v1/components/typewriter-text</code>
+            </div>
+            <p class="dev-api-desc">Returns the prop schema and defaults for the <code>TypewriterText</code> component.</p>
+
+            <div class="dev-table-wrap">
+              <table class="dev-table">
+                <thead>
+                  <tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>text</code></td>
+                    <td><span class="dev-type">string</span></td>
+                    <td><span class="dev-req-yes">yes</span></td>
+                    <td>The string to animate in.</td>
+                  </tr>
+                  <tr>
+                    <td><code>speed</code></td>
+                    <td><span class="dev-type">number</span></td>
+                    <td><span class="dev-req-no">no</span></td>
+                    <td>Characters per second. Defaults to 30.</td>
+                  </tr>
+                  <tr>
+                    <td><code>delay</code></td>
+                    <td><span class="dev-type">number</span></td>
+                    <td><span class="dev-req-no">no</span></td>
+                    <td>Milliseconds before the animation starts.</td>
+                  </tr>
+                  <tr>
+                    <td><code>cursor</code></td>
+                    <td><span class="dev-type">boolean</span></td>
+                    <td><span class="dev-req-no">no</span></td>
+                    <td>Show the blinking caret. Defaults to true.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="dev-api-io" data-dev-apitabs>
+              <div class="dev-api-tabs" role="tablist">
+                <button class="dev-api-tab is-on" data-dev-apitab="curl">cURL</button>
+                <button class="dev-api-tab" data-dev-apitab="json">JSON response</button>
+              </div>
+              <div class="dev-api-panel is-on" data-dev-apipanel="curl">
+<pre><code>curl https://api.astroanimate.dev/v1/components/typewriter-text \
+  -H "Authorization: Bearer $AA_TOKEN"</code></pre>
+              </div>
+              <div class="dev-api-panel" data-dev-apipanel="json">
+<pre><code>{
+  "name": "TypewriterText",
+  "props": {
+    "text":   { "type": "string",  "required": true },
+    "speed":  { "type": "number",  "default": 30 },
+    "cursor": { "type": "boolean", "default": true }
+  }
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T123" data-tid="T123">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T123</span>
+        <div>
+          <h2>Integration grid</h2>
+          <p>Filter chips above a grid of integration tiles. Selecting a chip shows or hides tiles live by <code>data-category</code>.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <div class="dev-integ" data-dev-integ>
+            <div class="dev-chips" role="tablist">
+              <button class="dev-chip is-on" data-dev-filter="All">All</button>
+              <button class="dev-chip" data-dev-filter="Frameworks">Frameworks</button>
+              <button class="dev-chip" data-dev-filter="Tooling">Tooling</button>
+              <button class="dev-chip" data-dev-filter="Platform">Platform</button>
+            </div>
+            <div class="dev-integ-grid">
+              <div class="dev-tile" data-dev-category="Frameworks">
+                <span class="dev-tile-mark" aria-hidden="true">R</span>
+                <span class="dev-tile-name">React</span>
+                <span class="dev-tile-cat">Frameworks</span>
+              </div>
+              <div class="dev-tile" data-dev-category="Frameworks">
+                <span class="dev-tile-mark" aria-hidden="true">V</span>
+                <span class="dev-tile-name">Vue</span>
+                <span class="dev-tile-cat">Frameworks</span>
+              </div>
+              <div class="dev-tile" data-dev-category="Frameworks">
+                <span class="dev-tile-mark" aria-hidden="true">S</span>
+                <span class="dev-tile-name">Svelte</span>
+                <span class="dev-tile-cat">Frameworks</span>
+              </div>
+              <div class="dev-tile" data-dev-category="Frameworks">
+                <span class="dev-tile-mark" aria-hidden="true">N</span>
+                <span class="dev-tile-name">Next.js</span>
+                <span class="dev-tile-cat">Frameworks</span>
+              </div>
+              <div class="dev-tile" data-dev-category="Tooling">
+                <span class="dev-tile-mark" aria-hidden="true">Vi</span>
+                <span class="dev-tile-name">Vite</span>
+                <span class="dev-tile-cat">Tooling</span>
+              </div>
+              <div class="dev-tile" data-dev-category="Tooling">
+                <span class="dev-tile-mark" aria-hidden="true">No</span>
+                <span class="dev-tile-name">Node</span>
+                <span class="dev-tile-cat">Tooling</span>
+              </div>
+              <div class="dev-tile" data-dev-category="Tooling">
+                <span class="dev-tile-mark" aria-hidden="true">Tw</span>
+                <span class="dev-tile-name">Tailwind</span>
+                <span class="dev-tile-cat">Tooling</span>
+              </div>
+              <div class="dev-tile" data-dev-category="Platform">
+                <span class="dev-tile-mark" aria-hidden="true">Gh</span>
+                <span class="dev-tile-name">GitHub</span>
+                <span class="dev-tile-cat">Platform</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T124" data-tid="T124">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T124</span>
+        <div>
+          <h2>Announcement bar</h2>
+          <p>A faux top banner with a short message, an inline link, and a ✕ dismiss. Dismissing hides the bar and reveals a small reset link for the demo.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <div class="dev-announce-frame">
+            <div class="dev-announce" id="dev-announce">
+              <span class="dev-announce-dot" aria-hidden="true"></span>
+              <span>v0.1.2 is out — CountUp and scroll triggers have landed.</span>
+              <a href="/changelog" class="dev-announce-link">Read the changelog →</a>
+              <button class="dev-announce-x" id="dev-announce-x" aria-label="Dismiss announcement">✕</button>
+            </div>
+            <button class="dev-announce-reset" id="dev-announce-reset" hidden>dismissed — reset</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T125" data-tid="T125">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T125</span>
+        <div>
+          <h2>Theme switcher</h2>
+          <p>A segmented control — System / Light / Dark. Toggling it restyles only the sample card below, not the page.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <div class="dev-theme" data-dev-theme>
+            <div class="dev-seg" role="tablist">
+              <button class="dev-seg-btn" data-dev-themeval="system">System</button>
+              <button class="dev-seg-btn" data-dev-themeval="light">Light</button>
+              <button class="dev-seg-btn is-on" data-dev-themeval="dark">Dark</button>
+            </div>
+            <div class="dev-sample dev-sample-dark" id="dev-sample">
+              <span class="dev-sample-eyebrow">// PREVIEW</span>
+              <p class="dev-sample-title">Animate Astro fast</p>
+              <p class="dev-sample-body">This card previews the selected theme. The rest of the site stays untouched.</p>
+              <span class="dev-sample-btn">Get started</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T126" data-tid="T126">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T126</span>
+        <div>
+          <h2>&ldquo;Was this helpful?&rdquo;</h2>
+          <p>A small docs-footer card. Clicking 👍 or 👎 swaps the card to a thank-you state.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <div class="dev-helpful" id="dev-helpful">
+            <div class="dev-helpful-ask" id="dev-helpful-ask">
+              <span class="dev-helpful-prompt">Was this page helpful?</span>
+              <div class="dev-helpful-btns">
+                <button class="dev-helpful-btn" data-dev-vote="up" aria-label="Yes, helpful">👍 Yes</button>
+                <button class="dev-helpful-btn" data-dev-vote="down" aria-label="No, not helpful">👎 No</button>
+              </div>
+            </div>
+            <div class="dev-helpful-done" id="dev-helpful-done" hidden>
+              <span class="dev-helpful-check" aria-hidden="true">✓</span>
+              <span>Thanks for the feedback.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <style>
+    /* ===== WRAPPER (verbatim per spec) ===== */
+    .sgx-section { padding: 64px var(--side-padding); border-bottom: 1px solid var(--border-2); background: var(--bg); }
+    .sgx-eyebrow { font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; color:#ff7f1f; text-transform:uppercase; margin:0 0 16px; }
+    .sgx-h2 { font-family:'Bai Jamjuree',sans-serif; font-size:clamp(26px,3.5vw,38px); font-weight:600; color:var(--text); margin:0 0 14px; }
+    .sgx-desc { font-family:'Inter',sans-serif; font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 36px; max-width:64ch; }
+    .sgx-block { padding:32px 0; border-top:1px solid var(--border); }
+    .sgx-block:first-of-type { border-top:none; padding-top:8px; }
+    .sgx-block-head { display:flex; gap:16px; align-items:flex-start; margin-bottom:18px; }
+    .sgx-num { font-family:'JetBrains Mono',monospace; font-size:13px; color:#ff7f1f; flex-shrink:0; padding-top:3px; }
+    .sgx-meta { flex:1; min-width:0; }
+    .sgx-meta h3 { font-family:'Bai Jamjuree',sans-serif; font-size:19px; font-weight:600; color:var(--text); margin:0 0 6px; }
+    .sgx-meta p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:var(--text-3); margin:0; max-width:72ch; }
+    .sgx-preview { position:relative; border:1px solid var(--border); border-radius:4px; background:var(--bg-3); padding:30px 24px 24px; overflow:hidden; }
+    .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:var(--border-3); }
+
+    /* shared bits */
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88em;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: #ff9d52;
+    }
+    .dev-kbd {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-2);
+      background: var(--bg-2);
+      border: 1px solid var(--border-2);
+      border-radius: 4px;
+      padding: 2px 7px;
+      line-height: 1;
+    }
+    .dev-kbd-sm { font-size: 10px; padding: 2px 5px; color: var(--text-3); }
+
+    /* ===== 01 COMMAND PALETTE ===== */
+    .dev-kbtn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text-3);
+      background: var(--bg-card); border: 1px solid var(--border-2); border-radius: 6px;
+      padding: 10px 14px; cursor: pointer;
+      transition: border-color .2s ease, color .2s ease;
+    }
+    .dev-kbtn:hover { border-color: #ff7f1f; color: var(--text); }
+    .dev-kbtn-icon { color: #ff7f1f; font-size: 15px; }
+
+    .dev-cmdk {
+      width: min(540px, 92vw); max-width: 540px; padding: 0; border: none;
+      background: transparent; color: inherit; margin: 12vh auto auto;
+    }
+    .dev-cmdk::backdrop { background: rgba(0,0,0,.6); backdrop-filter: blur(2px); }
+    .dev-cmdk-card {
+      background: var(--bg-2); border: 1px solid var(--border-2); border-radius: 10px;
+      overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.6);
+    }
+    .dev-cmdk-search {
+      display: flex; align-items: center; gap: 10px;
+      padding: 14px 16px; border-bottom: 1px solid var(--border);
+    }
+    .dev-cmdk-glass { color: var(--text-4); font-size: 16px; }
+    .dev-cmdk-search input {
+      flex: 1; min-width: 0; background: transparent; border: none; outline: none;
+      font-family: 'Inter', sans-serif; font-size: 15px; color: var(--text);
+    }
+    .dev-cmdk-search input::placeholder { color: var(--text-4); }
+    .dev-cmdk-results { max-height: 320px; overflow-y: auto; padding: 8px; }
+    .dev-cmdk-group { margin-bottom: 6px; }
+    .dev-cmdk-grouplabel {
+      display: block; font-family: 'JetBrains Mono', monospace; font-size: 10px;
+      letter-spacing: .1em; text-transform: uppercase; color: var(--text-4);
+      padding: 8px 10px 4px;
+    }
+    .dev-cmdk-row {
+      display: flex; align-items: center; gap: 12px; width: 100%; text-align: left;
+      background: transparent; border: none; border-radius: 6px; cursor: pointer;
+      padding: 9px 10px; transition: background .15s ease;
+    }
+    .dev-cmdk-row:hover, .dev-cmdk-row:focus-visible {
+      background: var(--bg-3); outline: none;
+    }
+    .dev-cmdk-rowicon {
+      width: 22px; height: 22px; flex-shrink: 0; display: grid; place-items: center;
+      font-size: 11px; color: #ff7f1f; background: var(--bg-card);
+      border: 1px solid var(--border); border-radius: 5px;
+    }
+    .dev-cmdk-rowlabel { flex: 1; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text); }
+    .dev-cmdk-rowhint { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-4); }
+    .dev-cmdk-empty { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text-4); text-align: center; padding: 24px; margin: 0; }
+    .dev-cmdk-foot {
+      display: flex; gap: 18px; padding: 10px 16px; border-top: 1px solid var(--border);
+      background: var(--bg-card); font-family: 'Inter', sans-serif; font-size: 11px; color: var(--text-4);
+    }
+    .dev-cmdk-foot kbd { margin-right: 2px; }
+
+    /* ===== 02 CALLOUTS ===== */
+    .dev-callouts { display: flex; flex-direction: column; gap: 14px; }
+    .dev-callout {
+      display: flex; gap: 12px; align-items: flex-start;
+      border: 1px solid var(--border); border-left-width: 3px;
+      border-radius: 4px; padding: 14px 16px;
+    }
+    .dev-callout-icon {
+      flex-shrink: 0; width: 22px; height: 22px; display: grid; place-items: center;
+      border-radius: 50%; font-size: 12px; margin-top: 1px;
+    }
+    .dev-callout strong {
+      display: block; font-family: 'Bai Jamjuree', sans-serif; font-size: 14px;
+      font-weight: 600; color: var(--text); margin-bottom: 3px;
+    }
+    .dev-callout p { font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.55; color: var(--text-2); margin: 0; }
+    .dev-note   { border-left-color: var(--text-3); background: rgba(100,116,139,.08); }
+    .dev-note   .dev-callout-icon { color: var(--text-2); background: rgba(100,116,139,.18); }
+    .dev-tip    { border-left-color: #4ade80; background: rgba(74,222,128,.08); }
+    .dev-tip    .dev-callout-icon { color: #4ade80; background: rgba(74,222,128,.16); }
+    .dev-warn   { border-left-color: #ff7f1f; background: rgba(255,127,31,.08); }
+    .dev-warn   .dev-callout-icon { color: #ff7f1f; background: rgba(255,127,31,.16); }
+    .dev-danger { border-left-color: #ef4444; background: rgba(239,68,68,.08); }
+    .dev-danger .dev-callout-icon { color: #ef4444; background: rgba(239,68,68,.16); }
+
+    /* ===== 03 API REFERENCE ===== */
+    .dev-api-endpoint { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+    .dev-method {
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600;
+      letter-spacing: .05em; color: #4ade80; background: rgba(74,222,128,.12);
+      border: 1px solid rgba(74,222,128,.35); border-radius: 4px; padding: 4px 10px;
+    }
+    .dev-path { font-size: 14px; background: var(--bg-card); border-color: var(--border); color: var(--text-2); }
+    .dev-api-desc { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0 0 18px; }
+    .dev-table-wrap { border: 1px solid var(--border); border-radius: 6px; overflow-x: auto; margin-bottom: 20px; }
+    .dev-table { width: 100%; border-collapse: collapse; min-width: 460px; }
+    .dev-table th {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--text-4); text-align: left; font-weight: 500;
+      padding: 10px 14px; border-bottom: 1px solid var(--border); background: var(--bg-card);
+    }
+    .dev-table td {
+      font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-2);
+      padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top;
+    }
+    .dev-table tr:last-child td { border-bottom: none; }
+    .dev-type { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #ff9d52; }
+    .dev-req-yes { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #4ade80; }
+    .dev-req-no  { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-4); }
+
+    .dev-api-io { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .dev-api-tabs { display: flex; border-bottom: 1px solid var(--border); background: var(--bg-card); }
+    .dev-api-tab {
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-3);
+      background: transparent; border: none; border-bottom: 2px solid transparent;
+      padding: 10px 16px; cursor: pointer; transition: color .2s ease, border-color .2s ease;
+    }
+    .dev-api-tab:hover { color: var(--text); }
+    .dev-api-tab.is-on { color: #ff7f1f; border-bottom-color: #ff7f1f; }
+    .dev-api-panel { display: none; }
+    .dev-api-panel.is-on { display: block; }
+    .dev-api-panel pre {
+      margin: 0; padding: 16px; overflow-x: auto; background: var(--bg-card);
+    }
+    .dev-api-panel pre code {
+      background: none; border: none; padding: 0; color: var(--text-2);
+      font-family: 'JetBrains Mono', monospace; font-size: 12.5px; line-height: 1.6;
+    }
+
+    /* ===== 04 INTEGRATION GRID ===== */
+    .dev-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .dev-chip {
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-3);
+      background: var(--bg-card); border: 1px solid var(--border-2); border-radius: 999px;
+      padding: 6px 14px; cursor: pointer; transition: all .2s ease;
+    }
+    .dev-chip:hover { color: var(--text); border-color: var(--border-3); }
+    .dev-chip.is-on { color: var(--bg); background: #ff7f1f; border-color: #ff7f1f; }
+    .dev-integ-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .dev-tile {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+      border: 1px solid var(--border); border-radius: 6px; background: var(--bg-card);
+      padding: 16px; transition: border-color .2s ease, transform .2s ease;
+    }
+    .dev-tile:hover { border-color: #ff7f1f; transform: translateY(-2px); }
+    .dev-tile-mark {
+      width: 34px; height: 34px; display: grid; place-items: center;
+      font-family: 'Bai Jamjuree', sans-serif; font-size: 14px; font-weight: 600;
+      color: #ff7f1f; background: var(--bg-3); border: 1px solid var(--border); border-radius: 6px;
+    }
+    .dev-tile-name { font-family: 'Bai Jamjuree', sans-serif; font-size: 15px; font-weight: 600; color: var(--text); }
+    .dev-tile-cat { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-4); }
+
+    /* ===== 05 ANNOUNCEMENT BAR ===== */
+    .dev-announce-frame {
+      border: 1px dashed var(--border-2); border-radius: 6px; padding: 14px;
+      min-height: 70px; display: flex; align-items: center; justify-content: center;
+    }
+    .dev-announce {
+      display: flex; align-items: center; gap: 12px; width: 100%;
+      background: linear-gradient(90deg, rgba(255,127,31,.10), rgba(255,127,31,.03));
+      border: 1px solid rgba(255,127,31,.3); border-radius: 6px;
+      padding: 10px 14px; font-family: 'Inter', sans-serif; font-size: 13.5px; color: var(--text-2);
+    }
+    .dev-announce-dot {
+      width: 8px; height: 8px; flex-shrink: 0; border-radius: 50%;
+      background: #ff7f1f; box-shadow: 0 0 0 4px rgba(255,127,31,.18);
+    }
+    .dev-announce-link { color: #ff7f1f; text-decoration: none; font-weight: 500; white-space: nowrap; }
+    .dev-announce-link:hover { text-decoration: underline; }
+    .dev-announce-x {
+      margin-left: auto; flex-shrink: 0; background: transparent; border: none;
+      color: var(--text-3); font-size: 14px; cursor: pointer; padding: 4px 6px; line-height: 1;
+      border-radius: 4px; transition: color .2s ease, background .2s ease;
+    }
+    .dev-announce-x:hover { color: var(--text); background: rgba(255,255,255,.06); }
+    .dev-announce-reset {
+      background: transparent; border: none; cursor: pointer;
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-4);
+      text-decoration: underline; padding: 4px;
+    }
+    .dev-announce-reset:hover { color: #ff7f1f; }
+
+    /* ===== 06 THEME SWITCHER ===== */
+    .dev-seg {
+      display: inline-flex; gap: 2px; background: var(--bg-card);
+      border: 1px solid var(--border-2); border-radius: 8px; padding: 3px; margin-bottom: 20px;
+    }
+    .dev-seg-btn {
+      font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-3);
+      background: transparent; border: none; border-radius: 6px;
+      padding: 7px 16px; cursor: pointer; transition: all .2s ease;
+    }
+    .dev-seg-btn:hover { color: var(--text); }
+    .dev-seg-btn.is-on { color: var(--text); background: var(--border); }
+    .dev-sample {
+      border-radius: 8px; padding: 22px; max-width: 380px;
+      border: 1px solid; transition: background .2s ease, border-color .2s ease, color .2s ease;
+    }
+    .dev-sample-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .08em; color: #ff7f1f; display: block; margin-bottom: 10px; }
+    .dev-sample-title { font-family: 'Bai Jamjuree', sans-serif; font-size: 20px; font-weight: 600; margin: 0 0 8px; }
+    .dev-sample-body { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.55; margin: 0 0 16px; }
+    .dev-sample-btn {
+      display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 12px;
+      color: var(--bg); background: #ff7f1f; border-radius: 5px; padding: 8px 16px;
+    }
+    .dev-sample-dark { background: var(--bg-3); border-color: var(--border); }
+    .dev-sample-dark .dev-sample-title { color: var(--text); }
+    .dev-sample-dark .dev-sample-body { color: var(--text-3); }
+    .dev-sample-light { background: var(--text); border-color: var(--text-2); }
+    .dev-sample-light .dev-sample-title { color: var(--bg-2); }
+    .dev-sample-light .dev-sample-body { color: var(--border-2); }
+
+    /* ===== 07 WAS THIS HELPFUL ===== */
+    .dev-helpful {
+      border: 1px solid var(--border); border-radius: 8px; background: var(--bg-card);
+      padding: 18px 20px; max-width: 420px;
+    }
+    .dev-helpful-ask { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .dev-helpful-prompt { font-family: 'Bai Jamjuree', sans-serif; font-size: 15px; font-weight: 600; color: var(--text); }
+    .dev-helpful-btns { display: flex; gap: 8px; }
+    .dev-helpful-btn {
+      font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-2);
+      background: var(--bg-3); border: 1px solid var(--border-2); border-radius: 6px;
+      padding: 7px 14px; cursor: pointer; transition: border-color .2s ease, color .2s ease;
+    }
+    .dev-helpful-btn:hover { border-color: #ff7f1f; color: var(--text); }
+    .dev-helpful-done { display: flex; align-items: center; gap: 10px; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text-2); }
+    .dev-helpful-check {
+      width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%;
+      background: rgba(74,222,128,.16); color: #4ade80; font-size: 13px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .dev-integ-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .dev-integ-grid { grid-template-columns: repeat(2, 1fr); }
+      .dev-cmdk-foot { gap: 12px; flex-wrap: wrap; }
+      .dev-helpful-ask { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+  <script>
+    (function () {
+      const $ = (id) => document.getElementById(id);
+
+      // T120 — Command palette
+      const cmdk = $('dev-cmdk');
+      const cmdkInput = $('dev-cmdk-input');
+      const cmdkEmpty = $('dev-cmdk-empty');
+      const rows = document.querySelectorAll('[data-dev-row]');
+      const groups = document.querySelectorAll('[data-dev-group]');
+
+      function openCmdk() {
+        if (!cmdk || cmdk.open) return;
+        cmdk.showModal();
+        if (cmdkInput) { cmdkInput.value = ''; filterCmdk(''); setTimeout(() => cmdkInput.focus(), 20); }
+      }
+      function filterCmdk(q) {
+        const term = q.trim().toLowerCase();
+        let any = false;
+        rows.forEach((r) => {
+          const match = !term || (r.getAttribute('data-dev-label') || '').includes(term);
+          r.hidden = !match;
+          if (match) any = true;
+        });
+        groups.forEach((g) => {
+          const visible = g.querySelectorAll('[data-dev-row]:not([hidden])').length;
+          g.hidden = visible === 0;
+        });
+        if (cmdkEmpty) cmdkEmpty.hidden = any;
+      }
+      $('dev-cmdk-open')?.addEventListener('click', openCmdk);
+      cmdkInput?.addEventListener('input', (e) => filterCmdk(e.target.value));
+      cmdk?.addEventListener('click', (e) => { if (e.target === cmdk) cmdk.close(); });
+      document.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) {
+          e.preventDefault();
+          if (cmdk && cmdk.open) cmdk.close(); else openCmdk();
+        }
+      });
+
+      // T122 — API tabs
+      document.querySelectorAll('[data-dev-apitabs]').forEach((wrap) => {
+        wrap.querySelectorAll('[data-dev-apitab]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const key = btn.getAttribute('data-dev-apitab');
+            wrap.querySelectorAll('[data-dev-apitab]').forEach((b) => b.classList.toggle('is-on', b === btn));
+            wrap.querySelectorAll('[data-dev-apipanel]').forEach((p) =>
+              p.classList.toggle('is-on', p.getAttribute('data-dev-apipanel') === key));
+          });
+        });
+      });
+
+      // T123 — Integration filter
+      const integ = document.querySelector('[data-dev-integ]');
+      if (integ) {
+        const tiles = integ.querySelectorAll('[data-dev-category]');
+        integ.querySelectorAll('[data-dev-filter]').forEach((chip) => {
+          chip.addEventListener('click', () => {
+            const f = chip.getAttribute('data-dev-filter');
+            integ.querySelectorAll('[data-dev-filter]').forEach((c) => c.classList.toggle('is-on', c === chip));
+            tiles.forEach((t) => { t.hidden = !(f === 'All' || t.getAttribute('data-dev-category') === f); });
+          });
+        });
+      }
+
+      // T124 — Announcement bar
+      const announce = $('dev-announce');
+      const announceReset = $('dev-announce-reset');
+      $('dev-announce-x')?.addEventListener('click', () => {
+        if (announce) announce.hidden = true;
+        if (announceReset) announceReset.hidden = false;
+      });
+      announceReset?.addEventListener('click', () => {
+        if (announce) announce.hidden = false;
+        if (announceReset) announceReset.hidden = true;
+      });
+
+      // T125 — Theme switcher
+      const theme = document.querySelector('[data-dev-theme]');
+      const sample = $('dev-sample');
+      if (theme && sample) {
+        theme.querySelectorAll('[data-dev-themeval]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const val = btn.getAttribute('data-dev-themeval');
+            theme.querySelectorAll('[data-dev-themeval]').forEach((b) => b.classList.toggle('is-on', b === btn));
+            const light = val === 'light' || (val === 'system' &&
+              window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
+            sample.classList.toggle('dev-sample-light', light);
+            sample.classList.toggle('dev-sample-dark', !light);
+          });
+        });
+      }
+
+      // T126 — Was this helpful
+      const helpful = $('dev-helpful');
+      if (helpful) {
+        helpful.querySelectorAll('[data-dev-vote]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            $('dev-helpful-ask').hidden = true;
+            $('dev-helpful-done').hidden = false;
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

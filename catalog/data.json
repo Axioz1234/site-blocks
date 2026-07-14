@@ -1,0 +1,20 @@
+[
+  { "id": "T240", "name": "KPI / metric cards", "category": "Data",
+    "file": "pages/data.html", "anchor": "#T240",
+    "description": "Dashboard stat tiles with a label, a big number, and a trend delta coloured by direction." },
+  { "id": "T241", "name": "Sortable data table", "category": "Data",
+    "file": "pages/data.html", "anchor": "#T241",
+    "description": "A zebra-striped table with sortable headers. Click a column header to re-sort." },
+  { "id": "T242", "name": "Pricing billing toggle", "category": "Data",
+    "file": "pages/data.html", "anchor": "#T242",
+    "description": "A monthly / annual switch that swaps the displayed prices in place." },
+  { "id": "T243", "name": "Spec / definition list", "category": "Data",
+    "file": "pages/data.html", "anchor": "#T243",
+    "description": "A two-column key/value sheet for technical specs, metadata, or property tables." },
+  { "id": "T244", "name": "Horizontal bar chart", "category": "Data",
+    "file": "pages/data.html", "anchor": "#T244",
+    "description": "A lightweight, CSS-only comparison chart — labelled rows with proportional fills." },
+  { "id": "T245", "name": "Activity feed / timeline", "category": "Data",
+    "file": "pages/data.html", "anchor": "#T245",
+    "description": "A vertical, dotted timeline of recent events with a relative timestamp and a type tag." }
+]

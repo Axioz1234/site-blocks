@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foundations — TBlocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+</head>
+<body>
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <h1>Foundations <span class="tb-range">T001&ndash;T003</span></h1>
+    <p class="tb-sub">Colour and type foundations — the palette, font families, and type scale behind every pattern.</p>
+  </header>
+  <main class="tb-main">
+
+    <article class="tb-pattern" id="T001" data-tid="T001">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T001</span>
+        <div>
+          <h2>Colour palette</h2>
+          <p>Orange is a structural accent only. Surfaces stay near-black; text steps down through four greys.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Accent</span>
+          <div class="sg-swatches">
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:#ff7f1f"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Orange</span>
+                <span class="sg-chip-hex">#ff7f1f</span>
+                <span class="sg-chip-note">Primary accent — CTAs, links, highlights</span>
+              </div>
+            </div>
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:#ff924a"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Orange Hover</span>
+                <span class="sg-chip-hex">#ff924a</span>
+                <span class="sg-chip-note">Button hover</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Surfaces</span>
+          <div class="sg-swatches">
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:var(--bg)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Page</span>
+                <span class="sg-chip-hex">var(--bg)</span>
+                <span class="sg-chip-note">Base background / heroes</span>
+              </div>
+            </div>
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:var(--bg-2)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Section</span>
+                <span class="sg-chip-hex">var(--bg-2)</span>
+                <span class="sg-chip-note">Alternating sections</span>
+              </div>
+            </div>
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:var(--bg-3)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Card</span>
+                <span class="sg-chip-hex">var(--bg-3)</span>
+                <span class="sg-chip-note">Card / hover surface</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Borders</span>
+          <div class="sg-swatches">
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:var(--border)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Hairline</span>
+                <span class="sg-chip-hex">var(--border)</span>
+                <span class="sg-chip-note">Subtle dividers / guide lines</span>
+              </div>
+            </div>
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:var(--border-2)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Border</span>
+                <span class="sg-chip-hex">var(--border-2)</span>
+                <span class="sg-chip-note">Default borders</span>
+              </div>
+            </div>
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:var(--border-3)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Muted</span>
+                <span class="sg-chip-hex">var(--border-3)</span>
+                <span class="sg-chip-note">Circle nodes / num boxes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Text</span>
+          <div class="sg-swatches">
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:var(--text)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Heading</span>
+                <span class="sg-chip-hex">var(--text)</span>
+                <span class="sg-chip-note">Headings / strong</span>
+              </div>
+            </div>
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:var(--text-2)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Body</span>
+                <span class="sg-chip-hex">var(--text-2)</span>
+                <span class="sg-chip-note">Body copy</span>
+              </div>
+            </div>
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:var(--text-3)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Muted</span>
+                <span class="sg-chip-hex">var(--text-3)</span>
+                <span class="sg-chip-note">Secondary text</span>
+              </div>
+            </div>
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:var(--text-4)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Faint</span>
+                <span class="sg-chip-hex">var(--text-4)</span>
+                <span class="sg-chip-note">Meta / placeholders</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Status</span>
+          <div class="sg-swatches">
+            <div class="sg-swatch">
+              <div class="sg-chip" style="background:#4ade80"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">Green</span>
+                <span class="sg-chip-hex">#4ade80</span>
+                <span class="sg-chip-note">System online / success / "Added"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T002" data-tid="T002">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T002</span>
+        <div>
+          <h2>Font families</h2>
+          <p>Three families with fixed roles: Bai Jamjuree for headings, Inter for body copy, JetBrains Mono for eyebrows, code, and meta.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sg-type-families">
+          <div class="sg-type-fam">
+            <span class="sg-type-tag">Bai Jamjuree</span>
+            <p class="sg-type-role">Headings</p>
+            <p style="font-family:'Bai Jamjuree',sans-serif;font-size:34px;font-weight:600;color:var(--text);margin:0;">Animate Astro fast</p>
+          </div>
+          <div class="sg-type-fam">
+            <span class="sg-type-tag">Inter</span>
+            <p class="sg-type-role">Body</p>
+            <p style="font-family:'Inter',sans-serif;font-size:17px;line-height:1.7;color:var(--text-2);margin:0;">The quick brown fox jumps over the lazy dog.</p>
+          </div>
+          <div class="sg-type-fam">
+            <span class="sg-type-tag">JetBrains Mono</span>
+            <p class="sg-type-role">Eyebrows / code / meta</p>
+            <p style="font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--text-3);margin:0;">npm install @astroanimate/core</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T003" data-tid="T003">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T003</span>
+        <div>
+          <h2>Type scale</h2>
+          <p>Heading sizes H1&ndash;H3, 17px/1.7 body copy, and the monospace eyebrow label.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sg-type-scale">
+          <div class="sg-scale-row"><span class="sg-scale-key">H1</span><span style="font-family:'Bai Jamjuree';font-size:48px;font-weight:600;color:var(--text);">Heading one</span></div>
+          <div class="sg-scale-row"><span class="sg-scale-key">H2</span><span style="font-family:'Bai Jamjuree';font-size:32px;font-weight:600;color:var(--text);">Heading two</span></div>
+          <div class="sg-scale-row"><span class="sg-scale-key">H3</span><span style="font-family:'Bai Jamjuree';font-size:21px;font-weight:600;color:var(--text);">Heading three</span></div>
+          <div class="sg-scale-row"><span class="sg-scale-key">Body</span><span style="font-family:'Inter';font-size:17px;color:var(--text-2);">Body copy at 17px / 1.7 line-height.</span></div>
+          <div class="sg-scale-row"><span class="sg-scale-key">Eyebrow</span><span class="eyebrow" style="margin:0;">// SECTION LABEL</span></div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <style>
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: #ff7f1f;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+    }
+
+    /* PALETTE */
+    .sg-pal-group { margin-bottom: 28px; }
+    .sg-pal-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--text-4);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .sg-swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .sg-swatch {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      padding: 12px;
+    }
+    .sg-chip { width: 44px; height: 44px; flex-shrink: 0; border: 1px solid var(--border); border-radius: 3px; }
+    .sg-chip-meta { display: flex; flex-direction: column; min-width: 0; }
+    .sg-chip-name { font-family: 'Bai Jamjuree', sans-serif; font-size: 14px; color: var(--text); }
+    .sg-chip-hex { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #ff7f1f; }
+    .sg-chip-note { font-family: 'Inter', sans-serif; font-size: 11.5px; color: var(--text-4); line-height: 1.4; margin-top: 2px; }
+
+    /* TYPE */
+    .sg-type-families { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 36px; }
+    .sg-type-fam { border: 1px solid var(--border); background: var(--bg-2); padding: 24px; }
+    .sg-type-tag { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #ff7f1f; }
+    .sg-type-role { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-4); margin: 4px 0 18px; }
+    .sg-type-scale { border: 1px solid var(--border); }
+    .sg-scale-row { display: flex; align-items: baseline; gap: 24px; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+    .sg-scale-row:last-child { border-bottom: none; }
+    .sg-scale-key { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-4); width: 64px; flex-shrink: 0; }
+
+    @media (max-width: 1024px) {
+      .sg-swatches { grid-template-columns: repeat(2, 1fr); }
+      .sg-type-families { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .sg-swatches { grid-template-columns: 1fr; }
+    }
+  </style>
+</body>
+</html>

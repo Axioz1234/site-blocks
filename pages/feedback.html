@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback — TBlocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+</head>
+<body>
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <h1>Feedback <span class="tb-range">T220&ndash;T226</span></h1>
+    <p class="tb-sub">How the interface talks back — transient toasts, inline alerts, tooltips, and the placeholders shown while content is empty or loading.</p>
+  </header>
+  <main class="tb-main">
+
+    <article class="tb-pattern" id="T220" data-tid="T220">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T220</span>
+        <div>
+          <h2>Toast notifications</h2>
+          <p>Transient messages that stack in a corner and auto-dismiss. Click to fire one.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <button class="fbk-trigger" id="fbk-toast-btn">Show toast</button>
+          <div class="fbk-toast-stack" id="fbk-toast-stack" aria-live="polite"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T221" data-tid="T221">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T221</span>
+        <div>
+          <h2>Alert banners</h2>
+          <p>Inline status messages in four intents — info, success, warning, and error.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">EXAMPLE</span>
+          <div class="fbk-alerts">
+            <div class="fbk-alert info"><span class="fbk-alert-ico">ℹ</span><p><b>Heads up.</b> A new version of the docs is available.</p></div>
+            <div class="fbk-alert ok"><span class="fbk-alert-ico">✓</span><p><b>Saved.</b> Your changes are live.</p></div>
+            <div class="fbk-alert warn"><span class="fbk-alert-ico">!</span><p><b>Careful.</b> This action can&rsquo;t be undone.</p></div>
+            <div class="fbk-alert err"><span class="fbk-alert-ico">✕</span><p><b>Failed.</b> Couldn&rsquo;t reach the server — try again.</p></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T222" data-tid="T222">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T222</span>
+        <div>
+          <h2>Tooltip</h2>
+          <p>A small label that appears on hover or focus to explain a control. Hover the items.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <div class="fbk-tips">
+            <span class="fbk-tip" tabindex="0">Hover me<span class="fbk-tip-bubble">CSS-first, zero runtime JS</span></span>
+            <span class="fbk-tip" tabindex="0">What&rsquo;s this?<span class="fbk-tip-bubble">Respects prefers-reduced-motion</span></span>
+            <span class="fbk-tip fbk-tip-icon" tabindex="0">?<span class="fbk-tip-bubble">Imported by subpath, fully typed</span></span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T223" data-tid="T223">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T223</span>
+        <div>
+          <h2>Empty state</h2>
+          <p>The placeholder shown when there&rsquo;s no data yet — an icon, a line of guidance, and an action.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">EXAMPLE</span>
+          <div class="fbk-empty">
+            <span class="fbk-empty-ico">◌</span>
+            <p class="fbk-empty-title">No projects yet</p>
+            <p class="fbk-empty-sub">Create your first project to start animating.</p>
+            <button class="fbk-trigger">New project</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T224" data-tid="T224">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T224</span>
+        <div>
+          <h2>Skeleton loader</h2>
+          <p>Shimmering placeholders that mirror the shape of content while it loads.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">EXAMPLE</span>
+          <div class="fbk-skel-card">
+            <div class="fbk-skel fbk-skel-thumb"></div>
+            <div class="fbk-skel-body">
+              <div class="fbk-skel fbk-skel-line w70"></div>
+              <div class="fbk-skel fbk-skel-line w90"></div>
+              <div class="fbk-skel fbk-skel-line w50"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T225" data-tid="T225">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T225</span>
+        <div>
+          <h2>Spinners &amp; progress</h2>
+          <p>An indeterminate spinner, a determinate bar, and a circular ring for loading states.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">EXAMPLE</span>
+          <div class="fbk-loaders">
+            <div class="fbk-loader-cell"><span class="fbk-spinner"></span><span class="fbk-loader-cap">Spinner</span></div>
+            <div class="fbk-loader-cell">
+              <div class="fbk-bar"><span style="width:64%"></span></div>
+              <span class="fbk-loader-cap">64% — determinate</span>
+            </div>
+            <div class="fbk-loader-cell">
+              <div class="fbk-ring" style="--p:72"><span>72%</span></div>
+              <span class="fbk-loader-cap">Ring</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T226" data-tid="T226">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T226</span>
+        <div>
+          <h2>Confirmation dialog</h2>
+          <p>A focused modal that asks the user to confirm a destructive action. Click to open it.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <button class="fbk-trigger fbk-trigger-danger" id="fbk-confirm-open">Delete project…</button>
+          <dialog class="fbk-confirm" id="fbk-confirm">
+            <h4>Delete &ldquo;Nova Portfolio&rdquo;?</h4>
+            <p>This permanently removes the project and all its assets. This can&rsquo;t be undone.</p>
+            <div class="fbk-confirm-actions">
+              <button class="fbk-btn-sec" id="fbk-confirm-cancel">Cancel</button>
+              <button class="fbk-btn-danger" id="fbk-confirm-ok">Delete</button>
+            </div>
+          </dialog>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <style>
+    /* Compatibility: source-site variable not defined in assets/base.css */
+    :root { --bg-card: #060606; }
+
+    .sgx-section { padding: 64px var(--side-padding); border-bottom: 1px solid var(--border-2); background: var(--bg-2); }
+    .sgx-eyebrow { font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; color:#ff7f1f; text-transform:uppercase; margin:0 0 16px; }
+    .sgx-h2 { font-family:'Bai Jamjuree',sans-serif; font-size:clamp(26px,3.5vw,38px); font-weight:600; color:var(--text); margin:0 0 14px; }
+    .sgx-desc { font-family:'Inter',sans-serif; font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 36px; max-width:64ch; }
+    .sgx-block { padding:32px 0; border-top:1px solid var(--border); }
+    .sgx-block:first-of-type { border-top:none; padding-top:8px; }
+    .sgx-block-head { display:flex; gap:16px; align-items:flex-start; margin-bottom:18px; }
+    .sgx-num { font-family:'JetBrains Mono',monospace; font-size:13px; color:#ff7f1f; flex-shrink:0; padding-top:3px; }
+    .sgx-meta { flex:1; min-width:0; }
+    .sgx-meta h3 { font-family:'Bai Jamjuree',sans-serif; font-size:19px; font-weight:600; color:var(--text); margin:0 0 6px; }
+    .sgx-meta p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:var(--text-3); margin:0; max-width:72ch; }
+    .sgx-preview { position:relative; border:1px solid var(--border); border-radius:4px; background:var(--bg-3); padding:30px 24px 24px; overflow:hidden; }
+    .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:var(--border-3); }
+
+    /* shared trigger */
+    .fbk-trigger { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; cursor:pointer; color:var(--bg); background:#ff7f1f; border:none; border-radius:4px; padding:10px 18px; }
+    .fbk-trigger-danger { background:#f87171; }
+
+    /* 01 — Toasts */
+    .fbk-toast-stack { display:flex; flex-direction:column; gap:10px; margin-top:18px; max-width:340px; }
+    .fbk-toast { display:flex; align-items:center; gap:10px; padding:12px 14px; border:1px solid var(--border-2); border-left:3px solid #4ade80; border-radius:4px; background:var(--bg-2); font-family:'Inter',sans-serif; font-size:14px; color:var(--text); opacity:0; transform:translateX(12px); transition:opacity .25s ease, transform .25s ease; }
+    .fbk-toast.is-in { opacity:1; transform:translateX(0); }
+    .fbk-toast-ico { color:#4ade80; font-weight:700; }
+
+    /* 02 — Alerts */
+    .fbk-alerts { display:flex; flex-direction:column; gap:12px; }
+    .fbk-alert { display:flex; gap:12px; align-items:flex-start; padding:13px 15px; border:1px solid var(--border-2); border-radius:4px; background:var(--bg-card); }
+    .fbk-alert p { font-family:'Inter',sans-serif; font-size:14px; color:var(--text-2); margin:0; }
+    .fbk-alert b { color:var(--text); }
+    .fbk-alert-ico { flex-shrink:0; width:22px; height:22px; display:flex; align-items:center; justify-content:center; border-radius:50%; font-size:12px; font-weight:700; color:var(--bg); }
+    .fbk-alert.info { border-left:3px solid #60a5fa; } .fbk-alert.info .fbk-alert-ico { background:#60a5fa; }
+    .fbk-alert.ok { border-left:3px solid #4ade80; } .fbk-alert.ok .fbk-alert-ico { background:#4ade80; }
+    .fbk-alert.warn { border-left:3px solid #fbbf24; } .fbk-alert.warn .fbk-alert-ico { background:#fbbf24; }
+    .fbk-alert.err { border-left:3px solid #f87171; } .fbk-alert.err .fbk-alert-ico { background:#f87171; }
+
+    /* 03 — Tooltip */
+    .fbk-tips { display:flex; gap:24px; flex-wrap:wrap; padding:14px 0; }
+    .fbk-tip { position:relative; font-family:'Inter',sans-serif; font-size:14px; color:var(--text-2); border-bottom:1px dashed var(--border-3); cursor:help; outline:none; }
+    .fbk-tip-icon { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; border:1px solid var(--border-3); border-bottom-style:solid; font-size:12px; color:var(--text-3); }
+    .fbk-tip-bubble { position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%) translateY(4px); white-space:nowrap; background:var(--text); color:var(--bg); font-family:'JetBrains Mono',monospace; font-size:11px; padding:6px 10px; border-radius:4px; opacity:0; pointer-events:none; transition:opacity .18s ease, transform .18s ease; z-index:5; }
+    .fbk-tip-bubble::after { content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%); border:5px solid transparent; border-top-color:var(--text); }
+    .fbk-tip:hover .fbk-tip-bubble, .fbk-tip:focus .fbk-tip-bubble { opacity:1; transform:translateX(-50%) translateY(0); }
+
+    /* 04 — Empty state */
+    .fbk-empty { display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px; padding:36px 20px; border:1px dashed var(--border-2); border-radius:6px; background:var(--bg-card); }
+    .fbk-empty-ico { font-size:40px; color:var(--border-3); line-height:1; }
+    .fbk-empty-title { font-family:'Bai Jamjuree',sans-serif; font-size:17px; font-weight:600; color:var(--text); margin:6px 0 0; }
+    .fbk-empty-sub { font-family:'Inter',sans-serif; font-size:14px; color:var(--text-3); margin:0 0 8px; }
+
+    /* 05 — Skeleton */
+    .fbk-skel-card { display:flex; gap:16px; padding:16px; border:1px solid var(--border); border-radius:6px; background:var(--bg-card); max-width:440px; }
+    .fbk-skel-body { flex:1; display:flex; flex-direction:column; gap:10px; justify-content:center; }
+    .fbk-skel { background:linear-gradient(90deg, var(--bg-3) 25%, var(--border) 37%, var(--bg-3) 63%); background-size:400% 100%; animation:fbk-shimmer 1.4s ease infinite; border-radius:4px; }
+    .fbk-skel-thumb { width:80px; height:80px; flex-shrink:0; }
+    .fbk-skel-line { height:12px; }
+    .fbk-skel-line.w90 { width:90%; } .fbk-skel-line.w70 { width:70%; } .fbk-skel-line.w50 { width:50%; }
+    @keyframes fbk-shimmer { 0% { background-position:100% 0; } 100% { background-position:-100% 0; } }
+
+    /* 06 — Loaders */
+    .fbk-loaders { display:flex; gap:40px; flex-wrap:wrap; align-items:flex-start; }
+    .fbk-loader-cell { display:flex; flex-direction:column; align-items:center; gap:12px; }
+    .fbk-loader-cap { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-4); }
+    .fbk-spinner { width:30px; height:30px; border-radius:50%; border:3px solid var(--border-2); border-top-color:#ff7f1f; animation:fbk-spin .8s linear infinite; }
+    @keyframes fbk-spin { to { transform:rotate(360deg); } }
+    .fbk-bar { width:180px; height:6px; background:var(--border); border-radius:999px; overflow:hidden; }
+    .fbk-bar span { display:block; height:100%; background:#ff7f1f; }
+    .fbk-ring { position:relative; width:64px; height:64px; border-radius:50%; background:conic-gradient(#ff7f1f calc(var(--p) * 1%), var(--border) 0); display:flex; align-items:center; justify-content:center; }
+    .fbk-ring::before { content:''; position:absolute; inset:7px; border-radius:50%; background:var(--bg-3); }
+    .fbk-ring span { position:relative; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text); }
+
+    /* 07 — Confirm */
+    .fbk-confirm { border:1px solid var(--border-2); border-radius:8px; background:var(--bg-2); color:var(--text); padding:24px; max-width:380px; width:90%; }
+    .fbk-confirm::backdrop { background:rgba(0,0,0,.6); }
+    .fbk-confirm h4 { font-family:'Bai Jamjuree',sans-serif; font-size:18px; font-weight:600; margin:0 0 8px; color:var(--text); }
+    .fbk-confirm p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.6; color:var(--text-3); margin:0 0 20px; }
+    .fbk-confirm-actions { display:flex; justify-content:flex-end; gap:10px; }
+    .fbk-btn-sec { font-family:'JetBrains Mono',monospace; font-size:13px; cursor:pointer; color:var(--text-2); background:transparent; border:1px solid var(--border-2); border-radius:4px; padding:9px 16px; }
+    .fbk-btn-danger { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; cursor:pointer; color:#fff; background:#f87171; border:none; border-radius:4px; padding:9px 16px; }
+
+    @media (max-width: 768px) {
+      .fbk-loaders { gap:28px; }
+    }
+  </style>
+  <script>
+    (function () {
+      // T220 — Toasts
+      var stack = document.getElementById('fbk-toast-stack');
+      var msgs = ['Component copied to clipboard', 'Settings saved', 'Build finished in 1.2s', 'Link copied'];
+      var n = 0;
+      var toastBtn = document.getElementById('fbk-toast-btn');
+      if (toastBtn && stack) {
+        toastBtn.addEventListener('click', function () {
+          var t = document.createElement('div');
+          t.className = 'fbk-toast';
+          t.innerHTML = '<span class="fbk-toast-ico">✓</span><span>' + msgs[n % msgs.length] + '</span>';
+          n++;
+          stack.appendChild(t);
+          requestAnimationFrame(function () { t.classList.add('is-in'); });
+          setTimeout(function () { t.classList.remove('is-in'); setTimeout(function () { t.remove(); }, 250); }, 2600);
+        });
+      }
+
+      // T226 — Confirm dialog
+      var dlg = document.getElementById('fbk-confirm');
+      var openBtn = document.getElementById('fbk-confirm-open');
+      var cancelBtn = document.getElementById('fbk-confirm-cancel');
+      var okBtn = document.getElementById('fbk-confirm-ok');
+      if (openBtn && dlg) { openBtn.addEventListener('click', function () { dlg.showModal(); }); }
+      if (cancelBtn && dlg) { cancelBtn.addEventListener('click', function () { dlg.close(); }); }
+      if (okBtn && dlg) { okBtn.addEventListener('click', function () { dlg.close(); }); }
+      if (dlg) { dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); }); }
+    })();
+  </script>
+</body>
+</html>

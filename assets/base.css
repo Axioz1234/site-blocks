@@ -1,0 +1,234 @@
+/* ============================================================
+   TBlocks — base.css
+   Design foundations extracted from the AstroAnimate clone
+   (src/styles/global.css + src/layouts/Layout.astro).
+   Values verified against the end-of-file minified override
+   bundle — the :root tokens below are NOT overridden there.
+   ============================================================ */
+
+/* ---- 1. Web fonts (same families/weights as Layout.astro) ---- */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ---- 2. Design tokens (dark theme) ---- */
+:root {
+    --bg: #050505;
+    --bg-black: #000000;
+    --bg-2: #0a0a0a;
+    --bg-3: #0b0d10;
+    --bg-card: #060606;
+
+    --text: #f9fafb;
+    --text-2: #cbd5e1;
+    --text-3: #9ca3af;
+    --text-4: #7b828f; /* lifted from #6b7280 to clear WCAG AA 4.5:1 on dark bg */
+
+    --border: #1f2937;
+    --border-2: #374151;
+    --border-3: #4b5563;
+
+    /* Accent orange. The source hardcodes #ff7f1f (hover #e66a15,
+       deep #E85D04, light #ff9d52); token added for convenience. */
+    --accent: #ff7f1f;
+
+    /* Horizontal page gutter used throughout the source components */
+    --side-padding: 220px;
+}
+
+@media (max-width: 1400px) { :root { --side-padding: 120px; } }
+@media (max-width: 1200px) { :root { --side-padding: 80px; } }
+@media (max-width: 1024px) { :root { --side-padding: 40px; } }
+@media (max-width: 768px)  { :root { --side-padding: 24px; } }
+@media (max-width: 480px)  { :root { --side-padding: 16px; } }
+
+/* ---- 3. Reset + base element styles ---- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Keep the hidden attribute working even when a class sets display */
+[hidden] {
+    display: none !important;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: var(--bg-black);
+    color: var(--text);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 16px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88em;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #ff9d52;
+}
+
+/* ---- 4. Shared utility classes ---- */
+
+/* Eyebrow label — mono, uppercase, accent orange (styleguide.astro) */
+.eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: #ff7f1f;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+}
+
+/* Buttons (global.css; hex values match the minified override bundle) */
+.btn-primary {
+    background: #ff7f1f;
+    border: none;
+    padding: 0 28px;
+    height: 54px;
+    color: var(--text);
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background: #e66a15;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--text);
+    padding: 0 28px;
+    height: 54px;
+    color: var(--text);
+    font-weight: 400;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    color: var(--text);
+    border-color: var(--text-3);
+}
+
+.btn-primary-cta {
+    background: #ff7f1f;
+    border: 1px solid #ff7f1f;
+    color: var(--text);
+    padding: 18px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    cursor: pointer;
+    min-width: 0;
+    text-decoration: none;
+}
+
+.btn-primary-cta:hover {
+    background: #e85d04;
+}
+
+.btn-secondary-cta {
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    color: var(--text-3);
+    padding: 18px 32px;
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    min-width: 0;
+    text-decoration: none;
+}
+
+.btn-secondary-cta:hover {
+    border-color: var(--text-3);
+    color: var(--text);
+}
+
+/* ---- 5. Starfield background effect (from the minified bundle) ----
+   Usage: <div class="star-field" aria-hidden="true"></div> inside a
+   position:relative container. Optional .hero-stars / .footer-stars
+   modifiers fade the field toward the bottom / top edge. */
+.star-field {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 1;
+    --star-speed-primary: 28s;
+    --star-speed-secondary: 42s;
+}
+
+.star-field::before,
+.star-field::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    border-radius: 999px;
+    background: transparent;
+    box-shadow: 3vw 7vh #f9fafb8c, 8vw 19vh #94a3b8a6, 14vw 4vh #f9fafb59, 18vw 36vh #f9fafb8c, 24vw 12vh #94a3b899, 29vw 58vh #f9fafb73, 34vw 24vh #f9fafbb3, 39vw 74vh #94a3b873, 44vw 9vh #f9fafb66, 48vw 48vh #94a3b8bf, 53vw 16vh #f9fafb99, 58vw 66vh #f9fafb6b, 63vw 29vh #94a3b88c, 69vw 5vh #f9fafb80, 73vw 41vh #f9fafbb3, 78vw 83vh #94a3b873, 84vw 17vh #f9fafb80, 89vw 54vh #f9fafba6, 94vw 31vh #94a3b88c, 98vw 72vh #f9fafb59, 6vw 86vh #f9fafba6, 12vw 63vh #94a3b88c, 21vw 79vh #f9fafb61, 31vw 43vh #f9fafb94, 42vw 91vh #94a3b880, 51vw 36vh #f9fafb66, 61vw 88vh #f9fafb9e, 71vw 22vh #94a3b873, 81vw 68vh #f9fafb94, 92vw 93vh #f9fafb73;
+    animation: star-drift var(--star-speed-primary) linear infinite;
+}
+
+.star-field::after {
+    width: 1px;
+    height: 1px;
+    opacity: 0.8;
+    box-shadow: 2vw 41vh #f9fafb73, 7vw 28vh #f9fafbb3, 11vw 52vh #94a3b899, 16vw 89vh #f9fafb73, 22vw 6vh #f9fafba6, 27vw 31vh #94a3b880, 33vw 84vh #f9fafbb3, 37vw 14vh #f9fafb66, 43vw 62vh #94a3b899, 47vw 3vh #f9fafb8c, 55vw 77vh #f9fafb73, 59vw 21vh #94a3b8a6, 66vw 57vh #f9fafb80, 72vw 11vh #f9fafb66, 76vw 34vh #94a3b894, 82vw 49vh #f9fafbb3, 86vw 8vh #f9fafb6b, 91vw 76vh #94a3b880, 96vw 46vh #f9fafbad, 99vw 15vh #f9fafb66;
+    animation-duration: var(--star-speed-secondary);
+}
+
+.hero-stars {
+    opacity: 0.42;
+    mask-image: linear-gradient(to bottom, var(--bg-black) 0%, transparent 78%);
+}
+
+.footer-stars {
+    opacity: 0.32;
+    mask-image: linear-gradient(to top, var(--bg-black) 0%, transparent 80%);
+}
+
+@keyframes star-drift {
+    0%  { transform: translateZ(0); }
+    to  { transform: translate3d(8px, 6px, 0); }
+}

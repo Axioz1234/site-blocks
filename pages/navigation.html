@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navigation — TBlocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+</head>
+<body>
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <h1>Navigation <span class="tb-range">T180&ndash;T186</span></h1>
+    <p class="tb-sub">How a visitor moves through a site and knows where they are — menus, paging, multi-step progress, and the small controls that switch views in place.</p>
+  </header>
+  <main class="tb-main">
+
+    <article class="tb-pattern" id="T180" data-tid="T180">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T180</span>
+        <div>
+          <h2>Mega menu</h2>
+          <p>A wide multi-column dropdown for sites with deep navigation. Click the trigger to open it.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview is-overflow">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <div class="nvg-mega" id="nvg-mega">
+            <button class="nvg-mega-trigger" id="nvg-mega-btn" aria-expanded="false">Products <span class="nvg-caret">▾</span></button>
+            <div class="nvg-mega-panel" id="nvg-mega-panel" hidden>
+              <div class="nvg-mega-col">
+                <span class="nvg-mega-label">By type</span>
+                <a href="#">Entrance animations</a>
+                <a href="#">Scroll reveals</a>
+                <a href="#">Text effects</a>
+              </div>
+              <div class="nvg-mega-col">
+                <span class="nvg-mega-label">By framework</span>
+                <a href="#">Astro</a>
+                <a href="#">React islands</a>
+                <a href="#">Svelte islands</a>
+              </div>
+              <div class="nvg-mega-col nvg-mega-feature">
+                <span class="nvg-mega-label">Featured</span>
+                <a href="#" class="nvg-mega-card">
+                  <b class="nvg-mega-count" id="nvg-mega-count" data-to="48200" data-suffix="+">0+</b>
+                  <span>CountUp — weekly installs, counts up each time the menu opens</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T181" data-tid="T181">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T181</span>
+        <div>
+          <h2>Pagination</h2>
+          <p>Numbered page controls with previous / next, an active page, and a truncation gap.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <nav class="nvg-pager" id="nvg-pager" aria-label="Pagination">
+            <button class="nvg-page nvg-page-arrow" data-dir="prev">&larr;</button>
+            <button class="nvg-page is-active" data-page="1">1</button>
+            <button class="nvg-page" data-page="2">2</button>
+            <button class="nvg-page" data-page="3">3</button>
+            <button class="nvg-page" data-page="4">4</button>
+            <button class="nvg-page" data-page="5">5</button>
+            <span class="nvg-page-gap">…</span>
+            <button class="nvg-page" data-page="24">24</button>
+            <button class="nvg-page nvg-page-arrow" data-dir="next">&rarr;</button>
+          </nav>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T182" data-tid="T182">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T182</span>
+        <div>
+          <h2>Stepper / wizard progress</h2>
+          <p>A horizontal step indicator for multi-step flows — completed, current, and upcoming states.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">EXAMPLE</span>
+          <ol class="nvg-stepper">
+            <li class="nvg-step is-done">
+              <span class="nvg-step-dot">✓</span>
+              <span class="nvg-step-label">Account</span>
+            </li>
+            <li class="nvg-step is-current">
+              <span class="nvg-step-dot">2</span>
+              <span class="nvg-step-label">Project</span>
+            </li>
+            <li class="nvg-step">
+              <span class="nvg-step-dot">3</span>
+              <span class="nvg-step-label">Plan</span>
+            </li>
+            <li class="nvg-step">
+              <span class="nvg-step-dot">4</span>
+              <span class="nvg-step-label">Review</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T183" data-tid="T183">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T183</span>
+        <div>
+          <h2>Segmented control</h2>
+          <p>A compact pill toggle for switching between a few mutually exclusive views. Click a segment.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <div class="nvg-seg" id="nvg-seg" role="tablist">
+            <button class="nvg-seg-btn is-active" data-seg="0">Preview</button>
+            <button class="nvg-seg-btn" data-seg="1">Code</button>
+            <button class="nvg-seg-btn" data-seg="2">Docs</button>
+          </div>
+          <div class="nvg-seg-panel" data-seg-panel="0">Rendered preview of the component.</div>
+          <div class="nvg-seg-panel" data-seg-panel="1" hidden>The source code, copy-ready.</div>
+          <div class="nvg-seg-panel" data-seg-panel="2" hidden>Props, defaults, and usage notes.</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T184" data-tid="T184">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T184</span>
+        <div>
+          <h2>Back-to-top button</h2>
+          <p>A floating control that appears once the user scrolls down, then jumps them back up. Scroll the box.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <div class="nvg-toptest" id="nvg-toptest">
+            <p>Scroll down inside this box…</p>
+            <p>The button fades in after you pass the first screen of content.</p>
+            <p>It anchors to the bottom-right of the scroll container.</p>
+            <p>Keep scrolling — almost there.</p>
+            <p>This is the end. Click the ↑ button to return to the top.</p>
+            <button class="nvg-top" id="nvg-top" aria-label="Back to top">↑</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T185" data-tid="T185">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T185</span>
+        <div>
+          <h2>Sticky action bar</h2>
+          <p>A persistent bottom bar (common on mobile) pairing a summary with the primary call to action. Click activate, then scroll the page area — it stays pinned to the bottom.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <button class="nvg-sticky-toggle" id="nvg-sticky-toggle">Activate sticky bar</button>
+          <div class="nvg-sticky-stage" id="nvg-sticky-stage">
+            <p>This panel mimics a page. The action bar below sits fixed to the bottom of this frame…</p>
+            <p>…so it stays in view while the content behind it scrolls. Common for pricing pages, carts, and mobile CTAs.</p>
+            <p>Scroll down — the bar doesn&rsquo;t move with the text.</p>
+            <p>It only takes over the bottom edge, never the whole screen.</p>
+            <p>Tap the ✕ on the bar to dismiss it.</p>
+            <div class="nvg-stickybar" id="nvg-stickybar">
+              <div class="nvg-stickybar-info">
+                <span class="nvg-stickybar-title">Pro plan</span>
+                <span class="nvg-stickybar-sub">$12/mo · cancel anytime</span>
+              </div>
+              <button class="nvg-stickybar-cta">Start free trial</button>
+              <button class="nvg-stickybar-close" id="nvg-stickybar-close" aria-label="Dismiss">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T186" data-tid="T186">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T186</span>
+        <div>
+          <h2>Actions menu</h2>
+          <p>A kebab / overflow menu that reveals contextual actions. Click the ⋯ to toggle it.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview is-overflow">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <div class="nvg-menu" id="nvg-menu">
+            <button class="nvg-menu-trigger" id="nvg-menu-btn" aria-label="More actions" aria-expanded="false">⋯</button>
+            <div class="nvg-menu-list" id="nvg-menu-list" hidden>
+              <a href="#">Edit</a>
+              <a href="#">Duplicate</a>
+              <a href="#">Move to…</a>
+              <span class="nvg-menu-sep"></span>
+              <a href="#" class="nvg-menu-danger">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <style>
+    .sgx-section { padding: 64px var(--side-padding); border-bottom: 1px solid var(--border-2); background: var(--bg-2); }
+    .sgx-eyebrow { font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; color:#ff7f1f; text-transform:uppercase; margin:0 0 16px; }
+    .sgx-h2 { font-family:'Bai Jamjuree',sans-serif; font-size:clamp(26px,3.5vw,38px); font-weight:600; color:var(--text); margin:0 0 14px; }
+    .sgx-desc { font-family:'Inter',sans-serif; font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 36px; max-width:64ch; }
+    .sgx-block { padding:32px 0; border-top:1px solid var(--border); }
+    .sgx-block:first-of-type { border-top:none; padding-top:8px; }
+    .sgx-block-head { display:flex; gap:16px; align-items:flex-start; margin-bottom:18px; }
+    .sgx-num { font-family:'JetBrains Mono',monospace; font-size:13px; color:#ff7f1f; flex-shrink:0; padding-top:3px; }
+    .sgx-meta { flex:1; min-width:0; }
+    .sgx-meta h3 { font-family:'Bai Jamjuree',sans-serif; font-size:19px; font-weight:600; color:var(--text); margin:0 0 6px; }
+    .sgx-meta p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:var(--text-3); margin:0; max-width:72ch; }
+    .sgx-preview { position:relative; border:1px solid var(--border); border-radius:4px; background:var(--bg-3); padding:30px 24px 24px; overflow:hidden; }
+    .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:var(--border-3); }
+    /* previews that contain a dropdown need room to show it */
+    .sgx-preview.is-overflow { overflow:visible; min-height:250px; }
+
+    /* 01 — Mega menu */
+    .nvg-mega { position:relative; display:inline-block; }
+    .nvg-mega-trigger {
+      font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--text);
+      background:var(--bg-card); border:1px solid var(--border-2); border-radius:4px;
+      padding:9px 16px; cursor:pointer; display:inline-flex; align-items:center; gap:8px;
+    }
+    .nvg-mega-trigger:hover { border-color:#ff7f1f; }
+    .nvg-caret { color:#ff7f1f; font-size:10px; }
+    .nvg-mega-panel {
+      position:absolute; top:calc(100% + 8px); left:0; z-index:5;
+      display:grid; grid-template-columns:repeat(3,minmax(150px,1fr)); gap:20px;
+      background:var(--bg-2); border:1px solid var(--border-2); border-radius:6px;
+      padding:18px; min-width:480px; box-shadow:0 16px 40px rgba(0,0,0,.4);
+    }
+    .nvg-mega-col { display:flex; flex-direction:column; gap:8px; }
+    .nvg-mega-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-4); margin-bottom:4px; }
+    .nvg-mega-col a { font-family:'Inter',sans-serif; font-size:14px; color:var(--text-2); text-decoration:none; }
+    .nvg-mega-col a:hover { color:#ff7f1f; }
+    .nvg-mega-card { border:1px solid var(--border); border-radius:4px; padding:12px; display:flex; flex-direction:column; gap:4px; text-decoration:none; }
+    .nvg-mega-card:hover { border-color:#ff7f1f; }
+    .nvg-mega-card b { font-family:'Bai Jamjuree',sans-serif; color:var(--text); }
+    .nvg-mega-card span { font-size:12px; color:var(--text-3); }
+    .nvg-mega-count { font-family:'Bai Jamjuree',sans-serif; font-size:28px; font-weight:700; color:#ff7f1f !important; line-height:1.1; font-variant-numeric:tabular-nums; }
+
+    /* 02 — Pagination */
+    .nvg-pager { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+    .nvg-page {
+      font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--text-3);
+      min-width:36px; height:36px; padding:0 8px; cursor:pointer;
+      background:var(--bg-card); border:1px solid var(--border); border-radius:4px;
+      transition:border-color .15s ease, color .15s ease;
+    }
+    .nvg-page:hover { border-color:#ff7f1f; color:#ff7f1f; }
+    .nvg-page.is-active { background:#ff7f1f; border-color:#ff7f1f; color:var(--bg); font-weight:600; }
+    .nvg-page-arrow { color:var(--text-2); }
+    .nvg-page-gap { font-family:'JetBrains Mono',monospace; color:var(--text-4); padding:0 4px; }
+
+    /* 03 — Stepper */
+    .nvg-stepper { list-style:none; margin:0; padding:0; display:flex; align-items:center; }
+    .nvg-step { display:flex; align-items:center; gap:10px; flex:1; min-width:0; }
+    .nvg-step:not(:last-child)::after { content:''; flex:1; height:1px; background:var(--border-2); margin:0 12px; }
+    .nvg-step.is-done:not(:last-child)::after { background:#ff7f1f; }
+    .nvg-step-dot {
+      display:flex; align-items:center; justify-content:center; flex-shrink:0;
+      width:30px; height:30px; border-radius:50%;
+      font-family:'JetBrains Mono',monospace; font-size:13px;
+      background:var(--bg-card); border:1px solid var(--border-2); color:var(--text-3);
+    }
+    .nvg-step.is-done .nvg-step-dot { background:#ff7f1f; border-color:#ff7f1f; color:var(--bg); }
+    .nvg-step.is-current .nvg-step-dot { border-color:#ff7f1f; color:#ff7f1f; }
+    .nvg-step-label { font-family:'Inter',sans-serif; font-size:13px; color:var(--text-3); white-space:nowrap; }
+    .nvg-step.is-current .nvg-step-label, .nvg-step.is-done .nvg-step-label { color:var(--text); }
+
+    /* 04 — Segmented control */
+    .nvg-seg { display:inline-flex; background:var(--bg-card); border:1px solid var(--border-2); border-radius:6px; padding:3px; gap:2px; margin-bottom:16px; }
+    .nvg-seg-btn {
+      font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-3);
+      background:transparent; border:none; border-radius:4px; padding:7px 16px; cursor:pointer;
+    }
+    .nvg-seg-btn.is-active { background:#ff7f1f; color:var(--bg); font-weight:600; }
+    .nvg-seg-panel { font-family:'Inter',sans-serif; font-size:14px; color:var(--text-2); padding:6px 2px; }
+
+    /* 05 — Back-to-top */
+    .nvg-toptest {
+      position:relative; height:200px; overflow:auto; padding:18px;
+      border:1px solid var(--border); border-radius:4px; background:var(--bg-card);
+      font-family:'Inter',sans-serif; font-size:14px; line-height:1.7; color:var(--text-2);
+    }
+    .nvg-toptest p { margin:0 0 60px; }
+    .nvg-top {
+      position:sticky; bottom:8px; left:100%; margin-left:-44px; float:right;
+      width:36px; height:36px; border-radius:50%; cursor:pointer;
+      background:#ff7f1f; color:var(--bg); border:none; font-size:16px; font-weight:700;
+      opacity:0; transform:translateY(6px); transition:opacity .2s ease, transform .2s ease;
+    }
+    .nvg-top.is-shown { opacity:1; transform:translateY(0); }
+
+    /* 06 — Sticky action bar */
+    .nvg-sticky-toggle {
+      font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; cursor:pointer;
+      color:var(--bg); background:#ff7f1f; border:none; border-radius:4px; padding:10px 18px; margin-bottom:14px;
+    }
+    .nvg-sticky-toggle.is-on { color:var(--text-2); background:transparent; border:1px solid var(--border-2); }
+    .nvg-sticky-stage {
+      position:relative; height:220px; overflow:auto;
+      border:1px solid var(--border); border-radius:6px; background:var(--bg-card);
+      padding:18px 18px 70px;
+      font-family:'Inter',sans-serif; font-size:14px; line-height:1.7; color:var(--text-2);
+    }
+    .nvg-sticky-stage p { margin:0 0 40px; }
+    .nvg-stickybar {
+      position:sticky; bottom:10px; margin:0 10px;
+      display:flex; align-items:center; gap:16px;
+      background:var(--bg-2); border:1px solid var(--border-2); border-radius:6px;
+      padding:12px 14px; box-shadow:0 -6px 24px rgba(0,0,0,.35);
+      opacity:0; transform:translateY(14px); pointer-events:none; transition:opacity .25s ease, transform .25s ease;
+    }
+    .nvg-sticky-stage.is-active .nvg-stickybar { opacity:1; transform:translateY(0); pointer-events:auto; }
+    .nvg-stickybar-info { display:flex; flex-direction:column; gap:2px; min-width:0; margin-right:auto; }
+    .nvg-stickybar-title { font-family:'Bai Jamjuree',sans-serif; font-size:15px; font-weight:600; color:var(--text); }
+    .nvg-stickybar-sub { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-3); }
+    .nvg-stickybar-cta {
+      font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; cursor:pointer;
+      color:var(--bg); background:#ff7f1f; border:none; border-radius:4px; padding:11px 18px; white-space:nowrap;
+    }
+    .nvg-stickybar-close { background:none; border:none; color:var(--text-4); cursor:pointer; font-size:14px; line-height:1; }
+    .nvg-stickybar-close:hover { color:#ff7f1f; }
+
+    /* 07 — Actions menu */
+    .nvg-menu { position:relative; display:inline-block; }
+    .nvg-menu-trigger {
+      width:36px; height:36px; cursor:pointer; font-size:18px; line-height:1;
+      background:var(--bg-card); border:1px solid var(--border-2); border-radius:4px; color:var(--text-2);
+    }
+    .nvg-menu-trigger:hover { border-color:#ff7f1f; color:#ff7f1f; }
+    .nvg-menu-list {
+      position:absolute; top:calc(100% + 6px); left:0; z-index:5; min-width:170px;
+      display:flex; flex-direction:column; padding:6px;
+      background:var(--bg-2); border:1px solid var(--border-2); border-radius:6px; box-shadow:0 12px 30px rgba(0,0,0,.4);
+    }
+    .nvg-menu-list a { font-family:'Inter',sans-serif; font-size:14px; color:var(--text-2); text-decoration:none; padding:8px 10px; border-radius:4px; }
+    .nvg-menu-list a:hover { background:var(--bg-3); color:var(--text); }
+    .nvg-menu-sep { height:1px; background:var(--border); margin:6px 4px; }
+    .nvg-menu-danger { color:#f87171 !important; }
+
+    @media (max-width: 768px) {
+      .nvg-mega-panel { grid-template-columns:1fr; min-width:280px; }
+      .nvg-step-label { display:none; }
+    }
+  </style>
+  <script>
+    (function () {
+      // 01 — Mega menu (+ CountUp in the featured card)
+      const megaBtn = document.getElementById('nvg-mega-btn');
+      const megaPanel = document.getElementById('nvg-mega-panel');
+      const megaCount = document.getElementById('nvg-mega-count');
+      let countRaf = null;
+      const runCountUp = function (el) {
+        if (!el) return;
+        if (countRaf) cancelAnimationFrame(countRaf);
+        const to = parseInt(el.getAttribute('data-to'), 10) || 0;
+        const suffix = el.getAttribute('data-suffix') || '';
+        const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduce) { el.textContent = to.toLocaleString() + suffix; return; }
+        const duration = 1400;
+        let startTs = null;
+        const tick = function (ts) {
+          if (startTs === null) startTs = ts;
+          const p = Math.min((ts - startTs) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+          el.textContent = Math.round(to * eased).toLocaleString() + suffix;
+          if (p < 1) countRaf = requestAnimationFrame(tick);
+        };
+        countRaf = requestAnimationFrame(tick);
+      };
+      if (megaBtn && megaPanel) {
+        megaBtn.addEventListener('click', function () {
+          const open = megaPanel.hidden;
+          megaPanel.hidden = !open;
+          megaBtn.setAttribute('aria-expanded', String(open));
+          if (open) runCountUp(megaCount);
+        });
+      }
+
+      // 02 — Pagination
+      const pager = document.getElementById('nvg-pager');
+      if (pager) {
+        pager.addEventListener('click', function (e) {
+          const btn = e.target.closest('[data-page]');
+          if (!btn) return;
+          pager.querySelectorAll('.nvg-page').forEach(function (p) { p.classList.toggle('is-active', p === btn); });
+        });
+      }
+
+      // 04 — Segmented control
+      const seg = document.getElementById('nvg-seg');
+      if (seg) {
+        seg.addEventListener('click', function (e) {
+          const btn = e.target.closest('[data-seg]');
+          if (!btn) return;
+          const i = btn.getAttribute('data-seg');
+          seg.querySelectorAll('.nvg-seg-btn').forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+          document.querySelectorAll('[data-seg-panel]').forEach(function (p) { p.hidden = p.getAttribute('data-seg-panel') !== i; });
+        });
+      }
+
+      // 05 — Back-to-top
+      const box = document.getElementById('nvg-toptest');
+      const topBtn = document.getElementById('nvg-top');
+      if (box && topBtn) {
+        box.addEventListener('scroll', function () {
+          topBtn.classList.toggle('is-shown', box.scrollTop > 60);
+        }, { passive: true });
+        topBtn.addEventListener('click', function () { box.scrollTo({ top: 0, behavior: 'smooth' }); });
+      }
+
+      // 06 — Sticky action bar
+      const stickyToggle = document.getElementById('nvg-sticky-toggle');
+      const stickyStage = document.getElementById('nvg-sticky-stage');
+      if (stickyToggle && stickyStage) {
+        stickyToggle.addEventListener('click', function () {
+          const on = stickyStage.classList.toggle('is-active');
+          stickyToggle.classList.toggle('is-on', on);
+          stickyToggle.textContent = on ? 'Hide sticky bar' : 'Activate sticky bar';
+        });
+        const stickyClose = document.getElementById('nvg-stickybar-close');
+        if (stickyClose) {
+          stickyClose.addEventListener('click', function () {
+            stickyStage.classList.remove('is-active');
+            stickyToggle.classList.remove('is-on');
+            stickyToggle.textContent = 'Activate sticky bar';
+          });
+        }
+      }
+
+      // 07 — Actions menu
+      const menuBtn = document.getElementById('nvg-menu-btn');
+      const menuList = document.getElementById('nvg-menu-list');
+      if (menuBtn && menuList) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const open = menuList.hidden;
+          menuList.hidden = !open;
+          menuBtn.setAttribute('aria-expanded', String(open));
+        });
+        document.addEventListener('click', function () { menuList.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); });
+      }
+    })();
+  </script>
+</body>
+</html>

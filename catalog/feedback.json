@@ -1,0 +1,23 @@
+[
+  { "id": "T220", "name": "Toast notifications", "category": "Feedback",
+    "file": "pages/feedback.html", "anchor": "#T220",
+    "description": "Transient messages that stack in a corner and auto-dismiss." },
+  { "id": "T221", "name": "Alert banners", "category": "Feedback",
+    "file": "pages/feedback.html", "anchor": "#T221",
+    "description": "Inline status messages in four intents — info, success, warning, and error." },
+  { "id": "T222", "name": "Tooltip", "category": "Feedback",
+    "file": "pages/feedback.html", "anchor": "#T222",
+    "description": "A small label that appears on hover or focus to explain a control." },
+  { "id": "T223", "name": "Empty state", "category": "Feedback",
+    "file": "pages/feedback.html", "anchor": "#T223",
+    "description": "Placeholder for no-data views — an icon, a line of guidance, and an action." },
+  { "id": "T224", "name": "Skeleton loader", "category": "Feedback",
+    "file": "pages/feedback.html", "anchor": "#T224",
+    "description": "Shimmering placeholders that mirror the shape of content while it loads." },
+  { "id": "T225", "name": "Spinners & progress", "category": "Feedback",
+    "file": "pages/feedback.html", "anchor": "#T225",
+    "description": "An indeterminate spinner, a determinate bar, and a circular progress ring." },
+  { "id": "T226", "name": "Confirmation dialog", "category": "Feedback",
+    "file": "pages/feedback.html", "anchor": "#T226",
+    "description": "A focused modal that asks the user to confirm a destructive action." }
+]

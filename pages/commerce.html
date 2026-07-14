@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Commerce — TBlocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+</head>
+<body>
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <h1>Commerce <span class="tb-range">T260&ndash;T265</span></h1>
+    <p class="tb-sub">The retail building blocks — product cards, ratings and reviews, cart summaries, faceted filters, urgency timers, and avatar groups.</p>
+  </header>
+  <main class="tb-main">
+
+    <article class="tb-pattern" id="T260" data-tid="T260">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T260</span>
+        <div>
+          <h2>Product card</h2>
+          <p>A shoppable card with image, badge, title, rating, price (with strike-through), and add-to-cart.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="shp-products">
+          <div class="shp-card">
+            <div class="shp-thumb" style="background:linear-gradient(135deg,#1a1206,#3a1e05)">
+              <span class="shp-badge sale">SALE</span>
+              <span class="shp-thumb-mark">A/</span>
+            </div>
+            <div class="shp-body">
+              <span class="shp-name">Motion Pro Kit</span>
+              <span class="shp-stars" aria-label="4.5 of 5">★★★★<span class="shp-star-half">★</span></span>
+              <div class="shp-price-row">
+                <span class="shp-price">$39</span>
+                <span class="shp-old">$59</span>
+              </div>
+              <button class="shp-add">Add to cart</button>
+            </div>
+          </div>
+          <div class="shp-card">
+            <div class="shp-thumb" style="background:linear-gradient(135deg,#0a0f1a,#131a2a)">
+              <span class="shp-badge">NEW</span>
+              <span class="shp-thumb-mark">A/</span>
+            </div>
+            <div class="shp-body">
+              <span class="shp-name">Figma UI Pack</span>
+              <span class="shp-stars" aria-label="4.5 of 5">★★★★<span class="shp-star-half">★</span></span>
+              <div class="shp-price-row">
+                <span class="shp-price">$24</span>
+              </div>
+              <button class="shp-add">Add to cart</button>
+            </div>
+          </div>
+          <div class="shp-card">
+            <div class="shp-thumb" style="background:linear-gradient(135deg,#1a0a14,#2a0f1e)">
+              <span class="shp-thumb-mark">A/</span>
+            </div>
+            <div class="shp-body">
+              <span class="shp-name">Template Bundle</span>
+              <span class="shp-stars" aria-label="4.5 of 5">★★★★<span class="shp-star-half">★</span></span>
+              <div class="shp-price-row">
+                <span class="shp-price">$79</span>
+                <span class="shp-old">$120</span>
+              </div>
+              <button class="shp-add">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T261" data-tid="T261">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T261</span>
+        <div>
+          <h2>Star rating &amp; review</h2>
+          <p>An aggregate rating summary with a distribution breakdown beside an individual review card.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="shp-reviews">
+          <div class="shp-rating-summary">
+            <span class="shp-rating-num">4.6</span>
+            <span class="shp-stars shp-stars-lg">★★★★<span class="shp-star-half">★</span></span>
+            <span class="shp-rating-count">328 reviews</span>
+            <div class="shp-dist">
+              <div class="shp-dist-row"><span>5</span><div class="shp-dist-track"><span style="width:72%"></span></div></div>
+              <div class="shp-dist-row"><span>4</span><div class="shp-dist-track"><span style="width:18%"></span></div></div>
+              <div class="shp-dist-row"><span>3</span><div class="shp-dist-track"><span style="width:6%"></span></div></div>
+              <div class="shp-dist-row"><span>2</span><div class="shp-dist-track"><span style="width:3%"></span></div></div>
+              <div class="shp-dist-row"><span>1</span><div class="shp-dist-track"><span style="width:1%"></span></div></div>
+            </div>
+          </div>
+          <div class="shp-review">
+            <div class="shp-review-head">
+              <span class="shp-review-av">JM</span>
+              <div><span class="shp-review-name">Jordan M.</span><span class="shp-stars">★★★★★</span></div>
+              <span class="shp-review-verified">✓ Verified</span>
+            </div>
+            <p class="shp-review-text">&ldquo;Dropped the kit into an Astro site and shipped the same day. Zero runtime JS and the motion feels great.&rdquo;</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T262" data-tid="T262">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T262</span>
+        <div>
+          <h2>Cart / order summary</h2>
+          <p>A checkout-side summary: line items, a promo field, the totals breakdown, and the pay button.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="shp-cart">
+          <span class="shp-cart-title">Order summary</span>
+          <div class="shp-cart-row">
+            <span class="shp-cart-qty">1×</span>
+            <span class="shp-cart-name">Motion Pro Kit</span>
+            <span class="shp-cart-amt">$39</span>
+          </div>
+          <div class="shp-cart-row">
+            <span class="shp-cart-qty">2×</span>
+            <span class="shp-cart-name">Figma UI Pack</span>
+            <span class="shp-cart-amt">$48</span>
+          </div>
+          <div class="shp-cart-promo"><input type="text" placeholder="Promo code" /><button>Apply</button></div>
+          <div class="shp-cart-totals">
+            <div class="shp-cart-line"><span>Subtotal</span><span>$87</span></div>
+            <div class="shp-cart-line"><span>Tax</span><span>$0</span></div>
+            <div class="shp-cart-line total"><span>Total</span><span>$87</span></div>
+          </div>
+          <button class="shp-checkout">Checkout</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T263" data-tid="T263">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T263</span>
+        <div>
+          <h2>Filter sidebar</h2>
+          <p>A faceted filter rail — category checkboxes, a price range, and active filter chips you can clear.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="shp-filters">
+          <div class="shp-filter-group">
+            <span class="shp-filter-label">Category</span>
+            <label class="shp-fcheck"><input type="checkbox" checked /> <span>Templates</span><span class="shp-fcount">42</span></label>
+            <label class="shp-fcheck"><input type="checkbox" /> <span>UI Kits</span><span class="shp-fcount">18</span></label>
+            <label class="shp-fcheck"><input type="checkbox" /> <span>Plugins</span><span class="shp-fcount">7</span></label>
+          </div>
+          <div class="shp-filter-group">
+            <span class="shp-filter-label">Max price</span>
+            <input type="range" min="0" max="200" value="80" class="shp-frange" />
+            <div class="shp-fprice"><span>$0</span><span>$80</span></div>
+          </div>
+          <div class="shp-filter-group">
+            <span class="shp-filter-label">Active</span>
+            <div class="shp-fchips">
+              <span class="shp-fchip">Templates ✕</span>
+              <span class="shp-fchip">Under $80 ✕</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T264" data-tid="T264">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T264</span>
+        <div>
+          <h2>Countdown timer</h2>
+          <p>An urgency timer for sales and launches, ticking down in days / hours / minutes / seconds.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="shp-countdown">
+          <span class="shp-cd-label">Launch sale ends in</span>
+          <div class="shp-cd-units" id="shp-countdown">
+            <div class="shp-cd-unit"><span class="shp-cd-num" data-cd="d">02</span><span class="shp-cd-cap">days</span></div>
+            <div class="shp-cd-unit"><span class="shp-cd-num" data-cd="h">06</span><span class="shp-cd-cap">hrs</span></div>
+            <div class="shp-cd-unit"><span class="shp-cd-num" data-cd="m">45</span><span class="shp-cd-cap">min</span></div>
+            <div class="shp-cd-unit"><span class="shp-cd-num" data-cd="s">12</span><span class="shp-cd-cap">sec</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T265" data-tid="T265">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T265</span>
+        <div>
+          <h2>Avatar group &amp; social proof</h2>
+          <p>Stacked, overlapping avatars with an overflow count — the &ldquo;join 2,000+ others&rdquo; cue.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="shp-social">
+          <div class="shp-avatars">
+            <span class="shp-av" style="background:linear-gradient(135deg,#ff7f1f,#b8480a)">AT</span>
+            <span class="shp-av" style="background:linear-gradient(135deg,#3b82f6,#1e40af)">JM</span>
+            <span class="shp-av" style="background:linear-gradient(135deg,#a855f7,#6b21a8)">SD</span>
+            <span class="shp-av" style="background:linear-gradient(135deg,#10b981,#065f46)">RK</span>
+            <span class="shp-av shp-av-more">+2k</span>
+          </div>
+          <p class="shp-social-text"><b>2,000+ developers</b> ship motion with AstroAnimate.</p>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <style>
+    .sgx-section { padding: 64px var(--side-padding); border-bottom: 1px solid var(--border-2); background: var(--bg-2); }
+    .sgx-eyebrow { font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; color:#ff7f1f; text-transform:uppercase; margin:0 0 16px; }
+    .sgx-h2 { font-family:'Bai Jamjuree',sans-serif; font-size:clamp(26px,3.5vw,38px); font-weight:600; color:var(--text); margin:0 0 14px; }
+    .sgx-desc { font-family:'Inter',sans-serif; font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 36px; max-width:64ch; }
+    .sgx-block { padding:32px 0; border-top:1px solid var(--border); }
+    .sgx-block:first-of-type { border-top:none; padding-top:8px; }
+    .sgx-block-head { display:flex; gap:16px; align-items:flex-start; margin-bottom:18px; }
+    .sgx-num { font-family:'JetBrains Mono',monospace; font-size:13px; color:#ff7f1f; flex-shrink:0; padding-top:3px; }
+    .sgx-meta { flex:1; min-width:0; }
+    .sgx-meta h3 { font-family:'Bai Jamjuree',sans-serif; font-size:19px; font-weight:600; color:var(--text); margin:0 0 6px; }
+    .sgx-meta p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:var(--text-3); margin:0; max-width:72ch; }
+    .sgx-preview { position:relative; border:1px solid var(--border); border-radius:4px; background:var(--bg-3); padding:30px 24px 24px; overflow:hidden; }
+    .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:var(--border-3); }
+
+    /* shared stars */
+    .shp-stars { color:#ff7f1f; font-size:13px; letter-spacing:1px; position:relative; }
+    .shp-stars-lg { font-size:18px; }
+    .shp-star-half { color:var(--border-2); }
+
+    /* 01 — Product card */
+    .shp-products { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .shp-card { border:1px solid var(--border); border-radius:6px; background:var(--bg-card); overflow:hidden; transition:border-color .2s ease, transform .2s ease; }
+    .shp-card:hover { border-color:#ff7f1f; transform:translateY(-2px); }
+    .shp-thumb { position:relative; aspect-ratio:16/10; display:flex; align-items:center; justify-content:center; }
+    .shp-thumb-mark { font-family:'Bai Jamjuree',sans-serif; font-size:28px; font-weight:700; color:rgba(255,255,255,.18); }
+    .shp-badge { position:absolute; top:10px; left:10px; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--bg); background:#4ade80; border-radius:3px; padding:3px 7px; }
+    .shp-badge.sale { background:#f87171; }
+    .shp-body { display:flex; flex-direction:column; gap:7px; padding:14px; }
+    .shp-name { font-family:'Bai Jamjuree',sans-serif; font-size:15px; font-weight:600; color:var(--text); }
+    .shp-price-row { display:flex; align-items:baseline; gap:8px; }
+    .shp-price { font-family:'Bai Jamjuree',sans-serif; font-size:18px; font-weight:600; color:var(--text); }
+    .shp-old { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--text-4); text-decoration:line-through; }
+    .shp-add { margin-top:4px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; cursor:pointer; color:var(--bg); background:#ff7f1f; border:none; border-radius:4px; padding:9px; }
+    .shp-add.is-added { background:#4ade80; }
+
+    /* 02 — Reviews */
+    .shp-reviews { display:grid; grid-template-columns:240px 1fr; gap:24px; align-items:start; }
+    .shp-rating-summary { display:flex; flex-direction:column; gap:6px; }
+    .shp-rating-num { font-family:'Bai Jamjuree',sans-serif; font-size:42px; font-weight:600; color:var(--text); line-height:1; }
+    .shp-rating-count { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-4); }
+    .shp-dist { display:flex; flex-direction:column; gap:5px; margin-top:8px; }
+    .shp-dist-row { display:flex; align-items:center; gap:8px; }
+    .shp-dist-row > span { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-4); width:10px; }
+    .shp-dist-track { flex:1; height:6px; background:var(--border); border-radius:999px; overflow:hidden; }
+    .shp-dist-track span { display:block; height:100%; background:#ff7f1f; }
+    .shp-review { border:1px solid var(--border); border-radius:6px; background:var(--bg-card); padding:16px; }
+    .shp-review-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+    .shp-review-av { width:36px; height:36px; border-radius:50%; background:var(--bg-2); border:1px solid var(--border-2); display:flex; align-items:center; justify-content:center; font-family:'Bai Jamjuree',sans-serif; font-size:13px; font-weight:600; color:#ff7f1f; }
+    .shp-review-name { display:block; font-family:'Bai Jamjuree',sans-serif; font-size:14px; font-weight:600; color:var(--text); }
+    .shp-review-verified { margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:11px; color:#4ade80; }
+    .shp-review-text { font-family:'Inter',sans-serif; font-size:14px; line-height:1.6; color:var(--text-2); margin:0; }
+
+    /* 03 — Cart */
+    .shp-cart { max-width:380px; border:1px solid var(--border); border-radius:6px; background:var(--bg-card); padding:18px; }
+    .shp-cart-title { font-family:'Bai Jamjuree',sans-serif; font-size:16px; font-weight:600; color:var(--text); display:block; margin-bottom:14px; }
+    .shp-cart-row { display:flex; align-items:center; gap:10px; padding:8px 0; font-family:'Inter',sans-serif; font-size:14px; }
+    .shp-cart-qty { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-4); }
+    .shp-cart-name { flex:1; color:var(--text-2); }
+    .shp-cart-amt { color:var(--text); font-variant-numeric:tabular-nums; }
+    .shp-cart-promo { display:flex; gap:8px; margin:14px 0; }
+    .shp-cart-promo input { flex:1; font-family:'Inter',sans-serif; font-size:13px; color:var(--text); background:var(--bg); border:1px solid var(--border-2); border-radius:4px; padding:9px 10px; }
+    .shp-cart-promo input:focus { outline:none; border-color:#ff7f1f; }
+    .shp-cart-promo button { font-family:'JetBrains Mono',monospace; font-size:12px; cursor:pointer; color:var(--text-2); background:transparent; border:1px solid var(--border-2); border-radius:4px; padding:0 14px; }
+    .shp-cart-totals { border-top:1px solid var(--border); padding-top:12px; display:flex; flex-direction:column; gap:7px; }
+    .shp-cart-line { display:flex; justify-content:space-between; font-family:'Inter',sans-serif; font-size:13px; color:var(--text-3); }
+    .shp-cart-line.total { font-family:'Bai Jamjuree',sans-serif; font-size:16px; font-weight:600; color:var(--text); margin-top:4px; }
+    .shp-checkout { width:100%; margin-top:14px; font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; cursor:pointer; color:var(--bg); background:#ff7f1f; border:none; border-radius:4px; padding:12px; }
+
+    /* 04 — Filters */
+    .shp-filters { max-width:280px; display:flex; flex-direction:column; gap:22px; border:1px solid var(--border); border-radius:6px; background:var(--bg-card); padding:18px; }
+    .shp-filter-group { display:flex; flex-direction:column; gap:10px; }
+    .shp-filter-label { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--text-4); }
+    .shp-fcheck { display:flex; align-items:center; gap:9px; font-family:'Inter',sans-serif; font-size:14px; color:var(--text-2); cursor:pointer; }
+    .shp-fcheck input { accent-color:#ff7f1f; width:16px; height:16px; }
+    .shp-fcount { margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-4); }
+    .shp-frange { width:100%; accent-color:#ff7f1f; }
+    .shp-fprice { display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-3); }
+    .shp-fchips { display:flex; flex-wrap:wrap; gap:8px; }
+    .shp-fchip { font-family:'JetBrains Mono',monospace; font-size:11px; color:#ff7f1f; border:1px solid #ff7f1f; border-radius:999px; padding:4px 10px; cursor:pointer; }
+
+    /* 05 — Countdown */
+    .shp-countdown { display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; }
+    .shp-cd-label { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--text-3); }
+    .shp-cd-units { display:flex; gap:12px; }
+    .shp-cd-unit { display:flex; flex-direction:column; align-items:center; gap:6px; min-width:64px; padding:14px 10px; border:1px solid var(--border-2); border-radius:6px; background:var(--bg-card); }
+    .shp-cd-num { font-family:'Bai Jamjuree',sans-serif; font-size:30px; font-weight:600; color:#ff7f1f; line-height:1; font-variant-numeric:tabular-nums; }
+    .shp-cd-cap { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--text-4); }
+
+    /* 06 — Avatar group */
+    .shp-social { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+    .shp-avatars { display:flex; }
+    .shp-av { width:38px; height:38px; border-radius:50%; border:2px solid var(--bg-3); margin-left:-10px; display:flex; align-items:center; justify-content:center; font-family:'Bai Jamjuree',sans-serif; font-size:12px; font-weight:600; color:#fff; }
+    .shp-av:first-child { margin-left:0; }
+    .shp-av-more { background:var(--bg-2) !important; color:var(--text-2) !important; border-color:var(--border-2); }
+    .shp-social-text { font-family:'Inter',sans-serif; font-size:14px; color:var(--text-3); margin:0; }
+    .shp-social-text b { color:var(--text); }
+
+    @media (max-width: 1024px) { .shp-products { grid-template-columns:repeat(2,1fr); } .shp-reviews { grid-template-columns:1fr; } }
+    @media (max-width: 768px) { .shp-products { grid-template-columns:1fr; } }
+  </style>
+  <script>
+    (function () {
+      // T260 — Add to cart feedback
+      document.querySelectorAll('.shp-add').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (btn.classList.contains('is-added')) return;
+          const t = btn.textContent;
+          btn.textContent = 'Added ✓';
+          btn.classList.add('is-added');
+          setTimeout(function () { btn.textContent = t; btn.classList.remove('is-added'); }, 1400);
+        });
+      });
+
+      // T264 — Countdown (counts down from the rendered values, display-only)
+      const cd = document.getElementById('shp-countdown');
+      if (cd) {
+        const get = function (u) { return parseInt(cd.querySelector('[data-cd="' + u + '"]').textContent, 10); };
+        const set = function (u, v) { cd.querySelector('[data-cd="' + u + '"]').textContent = String(v).padStart(2, '0'); };
+        setInterval(function () {
+          let d = get('d'), h = get('h'), m = get('m'), s = get('s');
+          s--;
+          if (s < 0) { s = 59; m--; }
+          if (m < 0) { m = 59; h--; }
+          if (h < 0) { h = 23; d--; }
+          if (d < 0) { d = 0; h = 0; m = 0; s = 0; }
+          set('d', d); set('h', h); set('m', m); set('s', s);
+        }, 1000);
+      }
+    })();
+  </script>
+</body>
+</html>

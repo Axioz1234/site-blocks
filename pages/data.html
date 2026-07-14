@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data — TBlocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+</head>
+<body>
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <h1>Data <span class="tb-range">T240&ndash;T245</span></h1>
+    <p class="tb-sub">Ways to show numbers and structured records — metric cards, sortable tables, spec sheets, billing toggles, simple charts, and activity feeds.</p>
+  </header>
+  <main class="tb-main">
+
+    <article class="tb-pattern" id="T240" data-tid="T240">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T240</span>
+        <div>
+          <h2>KPI / metric cards</h2>
+          <p>Dashboard stat tiles with a label, a big number, and a trend delta coloured by direction.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">EXAMPLE</span>
+          <div class="dta-kpis">
+            <div class="dta-kpi">
+              <span class="dta-kpi-label">Weekly installs</span>
+              <span class="dta-kpi-value">48.2k</span>
+              <span class="dta-kpi-delta up">▲ +12.4%</span>
+            </div>
+            <div class="dta-kpi">
+              <span class="dta-kpi-label">Avg. bundle size</span>
+              <span class="dta-kpi-value">4.9 KB</span>
+              <span class="dta-kpi-delta up">▲ −0.3 KB</span>
+            </div>
+            <div class="dta-kpi">
+              <span class="dta-kpi-label">Open issues</span>
+              <span class="dta-kpi-value">23</span>
+              <span class="dta-kpi-delta down">▼ +5</span>
+            </div>
+            <div class="dta-kpi">
+              <span class="dta-kpi-label">Lighthouse</span>
+              <span class="dta-kpi-value">100</span>
+              <span class="dta-kpi-delta up">▲ 0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T241" data-tid="T241">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T241</span>
+        <div>
+          <h2>Sortable data table</h2>
+          <p>A zebra-striped table with sortable headers. Click a column header to re-sort.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <table class="dta-table" id="dta-table">
+            <thead>
+              <tr>
+                <th data-sort="name">Component <span class="dta-sort">↕</span></th>
+                <th data-sort="downloads" class="num">Downloads <span class="dta-sort">↕</span></th>
+                <th data-sort="size" class="num">Size (KB) <span class="dta-sort">↕</span></th>
+                <th>Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-name="TypewriterText" data-downloads="18420" data-size="1.2">
+                <td>TypewriterText</td>
+                <td class="num">18,420</td>
+                <td class="num">1.2</td>
+                <td class="dta-muted">Jun 18</td>
+              </tr>
+              <tr data-name="CountUp" data-downloads="12880" data-size="0.9">
+                <td>CountUp</td>
+                <td class="num">12,880</td>
+                <td class="num">0.9</td>
+                <td class="dta-muted">Jun 21</td>
+              </tr>
+              <tr data-name="ScrollReveal" data-downloads="9560" data-size="1.6">
+                <td>ScrollReveal</td>
+                <td class="num">9,560</td>
+                <td class="num">1.6</td>
+                <td class="dta-muted">Jun 12</td>
+              </tr>
+              <tr data-name="GlassCard" data-downloads="6240" data-size="2.1">
+                <td>GlassCard</td>
+                <td class="num">6,240</td>
+                <td class="num">2.1</td>
+                <td class="dta-muted">May 30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T242" data-tid="T242">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T242</span>
+        <div>
+          <h2>Pricing billing toggle</h2>
+          <p>A monthly / annual switch that swaps the displayed prices in place. Toggle it.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">INTERACTIVE</span>
+          <div class="dta-billing">
+            <span class="dta-bill-opt is-active" id="dta-bill-m">Monthly</span>
+            <button class="dta-bill-switch" id="dta-bill-switch" aria-label="Toggle billing"><span class="dta-bill-knob"></span></button>
+            <span class="dta-bill-opt" id="dta-bill-y">Annual <span class="dta-bill-save">−20%</span></span>
+          </div>
+          <div class="dta-bill-cards">
+            <div class="dta-bill-card"><span class="dta-bill-name">Pro</span><span class="dta-bill-price" data-m="$12" data-y="$115">$12</span><span class="dta-bill-per" data-m="/month" data-y="/year">/month</span></div>
+            <div class="dta-bill-card"><span class="dta-bill-name">Team</span><span class="dta-bill-price" data-m="$49" data-y="$470">$49</span><span class="dta-bill-per" data-m="/month" data-y="/year">/month</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T243" data-tid="T243">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T243</span>
+        <div>
+          <h2>Spec / definition list</h2>
+          <p>A two-column key/value sheet for technical specs, metadata, or property tables.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">EXAMPLE</span>
+          <dl class="dta-specs">
+            <div class="dta-spec-row"><dt>Runtime JS</dt><dd>0 KB (CSS-first core)</dd></div>
+            <div class="dta-spec-row"><dt>Dependencies</dt><dd>None</dd></div>
+            <div class="dta-spec-row"><dt>License</dt><dd>MIT</dd></div>
+            <div class="dta-spec-row"><dt>Framework</dt><dd>Astro 4+</dd></div>
+            <div class="dta-spec-row"><dt>TypeScript</dt><dd>First-class, fully typed</dd></div>
+          </dl>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T244" data-tid="T244">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T244</span>
+        <div>
+          <h2>Horizontal bar chart</h2>
+          <p>A lightweight, CSS-only comparison chart — labelled rows with proportional fills.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">EXAMPLE</span>
+          <div class="dta-bars">
+            <div class="dta-bar-row">
+              <span class="dta-bar-label">Astro</span>
+              <div class="dta-bar-track"><span class="dta-bar-fill" style="width:92%"></span></div>
+              <span class="dta-bar-val">92%</span>
+            </div>
+            <div class="dta-bar-row">
+              <span class="dta-bar-label">React</span>
+              <div class="dta-bar-track"><span class="dta-bar-fill" style="width:64%"></span></div>
+              <span class="dta-bar-val">64%</span>
+            </div>
+            <div class="dta-bar-row">
+              <span class="dta-bar-label">Svelte</span>
+              <div class="dta-bar-track"><span class="dta-bar-fill" style="width:41%"></span></div>
+              <span class="dta-bar-val">41%</span>
+            </div>
+            <div class="dta-bar-row">
+              <span class="dta-bar-label">Vue</span>
+              <div class="dta-bar-track"><span class="dta-bar-fill" style="width:28%"></span></div>
+              <span class="dta-bar-val">28%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T245" data-tid="T245">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T245</span>
+        <div>
+          <h2>Activity feed / timeline</h2>
+          <p>A vertical, dotted timeline of recent events with a relative timestamp and a type tag.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="sgx-preview">
+          <span class="sgx-preview-tag">EXAMPLE</span>
+          <ol class="dta-feed">
+            <li class="dta-feed-row">
+              <span class="dta-feed-dot"></span>
+              <div class="dta-feed-body">
+                <span class="dta-feed-text">Released v0.1.2 with CountUp</span>
+                <span class="dta-feed-meta"><span class="dta-feed-tag">Release</span><span class="dta-feed-time">2h ago</span></span>
+              </div>
+            </li>
+            <li class="dta-feed-row">
+              <span class="dta-feed-dot"></span>
+              <div class="dta-feed-body">
+                <span class="dta-feed-text">Merged easing-presets PR #142</span>
+                <span class="dta-feed-meta"><span class="dta-feed-tag">Merge</span><span class="dta-feed-time">Yesterday</span></span>
+              </div>
+            </li>
+            <li class="dta-feed-row">
+              <span class="dta-feed-dot"></span>
+              <div class="dta-feed-body">
+                <span class="dta-feed-text">Opened discussion on scroll triggers</span>
+                <span class="dta-feed-meta"><span class="dta-feed-tag">Discuss</span><span class="dta-feed-time">3 days ago</span></span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <style>
+    .sgx-section { padding: 64px var(--side-padding); border-bottom: 1px solid var(--border-2); background: var(--bg); }
+    .sgx-eyebrow { font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; color:#ff7f1f; text-transform:uppercase; margin:0 0 16px; }
+    .sgx-h2 { font-family:'Bai Jamjuree',sans-serif; font-size:clamp(26px,3.5vw,38px); font-weight:600; color:var(--text); margin:0 0 14px; }
+    .sgx-desc { font-family:'Inter',sans-serif; font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 36px; max-width:64ch; }
+    .sgx-block { padding:32px 0; border-top:1px solid var(--border); }
+    .sgx-block:first-of-type { border-top:none; padding-top:8px; }
+    .sgx-block-head { display:flex; gap:16px; align-items:flex-start; margin-bottom:18px; }
+    .sgx-num { font-family:'JetBrains Mono',monospace; font-size:13px; color:#ff7f1f; flex-shrink:0; padding-top:3px; }
+    .sgx-meta { flex:1; min-width:0; }
+    .sgx-meta h3 { font-family:'Bai Jamjuree',sans-serif; font-size:19px; font-weight:600; color:var(--text); margin:0 0 6px; }
+    .sgx-meta p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:var(--text-3); margin:0; max-width:72ch; }
+    .sgx-preview { position:relative; border:1px solid var(--border); border-radius:4px; background:var(--bg-3); padding:30px 24px 24px; overflow:hidden; }
+    .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:var(--border-3); }
+
+    /* 01 — KPI */
+    .dta-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+    .dta-kpi { display:flex; flex-direction:column; gap:8px; padding:16px; border:1px solid var(--border); border-radius:6px; background:var(--bg-card); }
+    .dta-kpi-label { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--text-4); }
+    .dta-kpi-value { font-family:'Bai Jamjuree',sans-serif; font-size:28px; font-weight:600; color:var(--text); line-height:1; }
+    .dta-kpi-delta { font-family:'JetBrains Mono',monospace; font-size:12px; }
+    .dta-kpi-delta.up { color:#4ade80; } .dta-kpi-delta.down { color:#f87171; }
+
+    /* 02 — Table */
+    .dta-table { width:100%; min-width:0; border-collapse:collapse; font-family:'Inter',sans-serif; }
+    .dta-table th, .dta-table td { border:none; border-bottom:1px solid var(--border); background:none; }
+    .dta-table th { text-align:left; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--text-3); padding:10px 12px; border-bottom:1px solid var(--border-2); cursor:pointer; white-space:nowrap; }
+    .dta-table th:hover { color:#ff7f1f; }
+    .dta-sort { color:var(--border-3); font-size:10px; }
+    .dta-table td { font-size:14px; color:var(--text-2); padding:11px 12px; }
+    .dta-table tbody tr:nth-child(odd) td { background:var(--bg-card); }
+    .dta-table th.num, .dta-table td.num { text-align:right; font-variant-numeric:tabular-nums; }
+    .dta-muted { color:var(--text-4); font-family:'JetBrains Mono',monospace; font-size:12px; }
+
+    /* 03 — Billing */
+    .dta-billing { display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+    .dta-bill-opt { font-family:'Inter',sans-serif; font-size:14px; color:var(--text-4); display:flex; align-items:center; gap:6px; }
+    .dta-bill-opt.is-active { color:var(--text); font-weight:600; }
+    .dta-bill-save { font-family:'JetBrains Mono',monospace; font-size:10px; color:#4ade80; border:1px solid #4ade80; border-radius:999px; padding:1px 6px; }
+    .dta-bill-switch { width:46px; height:26px; border-radius:999px; background:var(--border-2); border:none; cursor:pointer; position:relative; transition:background .2s ease; }
+    .dta-bill-switch.is-on { background:#ff7f1f; }
+    .dta-bill-knob { position:absolute; top:3px; left:3px; width:20px; height:20px; border-radius:50%; background:#fff; transition:transform .2s ease; }
+    .dta-bill-switch.is-on .dta-bill-knob { transform:translateX(20px); }
+    .dta-bill-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; max-width:420px; }
+    .dta-bill-card { display:flex; flex-direction:column; gap:2px; padding:16px; border:1px solid var(--border); border-radius:6px; background:var(--bg-card); }
+    .dta-bill-name { font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; color:var(--text-4); }
+    .dta-bill-price { font-family:'Bai Jamjuree',sans-serif; font-size:30px; font-weight:600; color:var(--text); }
+    .dta-bill-per { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-4); }
+
+    /* 04 — Specs */
+    .dta-specs { margin:0; }
+    .dta-spec-row { display:grid; grid-template-columns:200px 1fr; gap:16px; padding:11px 4px; border-bottom:1px solid var(--border); }
+    .dta-spec-row:last-child { border-bottom:none; }
+    .dta-spec-row dt { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--text-4); margin:0; }
+    .dta-spec-row dd { font-family:'Inter',sans-serif; font-size:14px; color:var(--text); margin:0; }
+
+    /* 05 — Bars */
+    .dta-bars { display:flex; flex-direction:column; gap:14px; }
+    .dta-bar-row { display:grid; grid-template-columns:80px 1fr 44px; align-items:center; gap:14px; }
+    .dta-bar-label { font-family:'Inter',sans-serif; font-size:14px; color:var(--text-2); }
+    .dta-bar-track { height:10px; background:var(--border); border-radius:999px; overflow:hidden; }
+    .dta-bar-fill { display:block; height:100%; background:#ff7f1f; border-radius:999px; }
+    .dta-bar-val { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-3); text-align:right; }
+
+    /* 06 — Feed */
+    .dta-feed { list-style:none; margin:0; padding:0; }
+    .dta-feed-row { position:relative; display:flex; gap:16px; padding:0 0 22px 4px; }
+    .dta-feed-row::before { content:''; position:absolute; left:8px; top:14px; bottom:-4px; width:1px; background:var(--border-2); }
+    .dta-feed-row:last-child { padding-bottom:0; }
+    .dta-feed-row:last-child::before { display:none; }
+    .dta-feed-dot { position:relative; z-index:1; flex-shrink:0; width:11px; height:11px; margin-top:4px; border-radius:50%; background:var(--bg-3); border:2px solid #ff7f1f; }
+    .dta-feed-body { display:flex; flex-direction:column; gap:5px; }
+    .dta-feed-text { font-family:'Inter',sans-serif; font-size:14px; color:var(--text); }
+    .dta-feed-meta { display:flex; align-items:center; gap:10px; }
+    .dta-feed-tag { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:#ff7f1f; border:1px solid var(--border-2); border-radius:999px; padding:2px 8px; }
+    .dta-feed-time { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-4); }
+
+    @media (max-width: 1024px) { .dta-kpis { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width: 768px) {
+      .dta-spec-row { grid-template-columns:1fr; gap:4px; }
+      .dta-bill-cards { grid-template-columns:1fr; }
+      .dta-bar-row { grid-template-columns:64px 1fr 40px; gap:10px; }
+    }
+  </style>
+  <script>
+    (function () {
+      // T241 — Sortable table
+      const table = document.getElementById('dta-table');
+      if (table) {
+        const tbody = table.querySelector('tbody');
+        let dir = 1, lastKey = null;
+        table.querySelectorAll('th[data-sort]').forEach(function (th) {
+          th.addEventListener('click', function () {
+            const key = th.getAttribute('data-sort');
+            dir = key === lastKey ? -dir : 1;
+            lastKey = key;
+            const rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+            rows.sort(function (a, b) {
+              let av = a.getAttribute('data-' + key), bv = b.getAttribute('data-' + key);
+              if (key !== 'name') { av = parseFloat(av); bv = parseFloat(bv); return (av - bv) * dir; }
+              return av.localeCompare(bv) * dir;
+            });
+            rows.forEach(function (r) { tbody.appendChild(r); });
+          });
+        });
+      }
+
+      // T242 — Billing toggle
+      const sw = document.getElementById('dta-bill-switch');
+      if (sw) {
+        let annual = false;
+        const m = document.getElementById('dta-bill-m'), y = document.getElementById('dta-bill-y');
+        sw.addEventListener('click', function () {
+          annual = !annual;
+          sw.classList.toggle('is-on', annual);
+          m.classList.toggle('is-active', !annual);
+          y.classList.toggle('is-active', annual);
+          document.querySelectorAll('.dta-bill-price, .dta-bill-per').forEach(function (el) {
+            el.textContent = el.getAttribute(annual ? 'data-y' : 'data-m');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

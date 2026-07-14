@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TBlocks — T-numbered section &amp; pattern library</title>
+  <link rel="stylesheet" href="assets/base.css">
+  <link rel="stylesheet" href="assets/viewer.css">
+  <style>
+    .tb-jump { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; }
+    .tb-jump a { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .06em; color: var(--text-3); text-decoration: none; text-transform: uppercase; }
+    .tb-jump a:hover { color: #ff7f1f; }
+    .tb-cat { scroll-margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <header class="tb-header">
+    <p class="eyebrow">// TBLOCKS</p>
+    <h1>Section &amp; pattern library <span class="tb-range">112 blocks</span></h1>
+    <p class="tb-sub">Every pattern has a unique T-number. Tell an AI &ldquo;use T041&rdquo; and point it at
+      <code>catalog.json</code> — it maps the ID to a file, anchor, and description. Each page under
+      <code>pages/</code> is self-contained HTML you can open locally.</p>
+    <nav class="tb-jump">
+      <a href="#foundations">Foundations</a>
+      <a href="#elements">Elements</a>
+      <a href="#components">Library components</a>
+      <a href="#sections">Sections</a>
+      <a href="#patterns">Patterns</a>
+      <a href="#animation">Animation</a>
+      <a href="#devtools">Dev tools</a>
+      <a href="#social">Social proof</a>
+      <a href="#content">Content</a>
+      <a href="#navigation">Navigation</a>
+      <a href="#forms">Forms</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#data">Data</a>
+      <a href="#commerce">Commerce</a>
+      <a href="#media">Media</a>
+    </nav>
+  </header>
+  <main class="tb-main">
+    <section class="tb-cat" id="foundations">
+      <h2>Foundations <span class="tb-range">T001&ndash;T003</span></h2>
+      <p>Colour palette and typography — the design tokens everything else uses. &middot; <a href="pages/foundations.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/foundations.html#T001">T001</a></td><td class="tb-name">Colour palette</td><td>Swatch groups for accent, surfaces, borders, text, and status colours with names, values, and usage notes.</td></tr>
+        <tr><td><a href="pages/foundations.html#T002">T002</a></td><td class="tb-name">Font families</td><td>Three-family type system: Bai Jamjuree headings, Inter body, JetBrains Mono eyebrows/code/meta.</td></tr>
+        <tr><td><a href="pages/foundations.html#T003">T003</a></td><td class="tb-name">Type scale</td><td>Bordered scale table showing H1-H3 heading sizes, 17px/1.7 body copy, and the monospace eyebrow label.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="elements">
+      <h2>Elements <span class="tb-range">T010&ndash;T016</span></h2>
+      <p>Small UI atoms: buttons, badges, pills, accordions, cards. &middot; <a href="pages/elements.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/elements.html#T010">T010</a></td><td class="tb-name">Buttons</td><td>Primary (orange fill), secondary (outline), and the nav install pill.</td></tr>
+        <tr><td><a href="pages/elements.html#T011">T011</a></td><td class="tb-name">Eyebrow label</td><td>Monospace, uppercase, orange section label prefixed with //.</td></tr>
+        <tr><td><a href="pages/elements.html#T012">T012</a></td><td class="tb-name">Badges &amp; tags</td><td>NEW badge, rounded pill tag chips, and the bordered numbered index box.</td></tr>
+        <tr><td><a href="pages/elements.html#T013">T013</a></td><td class="tb-name">Status pills</td><td>Colour-coded state pills (Added, Changed, Fixed, Shipped, In Progress) for changelog and roadmap.</td></tr>
+        <tr><td><a href="pages/elements.html#T014">T014</a></td><td class="tb-name">Status pulse</td><td>// SYSTEM ONLINE label with a pulsing green indicator dot.</td></tr>
+        <tr><td><a href="pages/elements.html#T015">T015</a></td><td class="tb-name">Accordion</td><td>Native details/summary disclosure with an animated +/- marker, as used on the FAQ.</td></tr>
+        <tr><td><a href="pages/elements.html#T016">T016</a></td><td class="tb-name">Card</td><td>Base card surface: hairline border, near-black fill, orange border and lift on hover.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="components">
+      <h2>Library components <span class="tb-range">T030&ndash;T031</span></h2>
+      <p>Static equivalents of the animation-library components used on the site. &middot; <a href="pages/components.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/components.html#T030">T030</a></td><td class="tb-name">TypewriterText + copy card</td><td>Terminal-style code card with orange accent bar, npm command, and a copy-to-clipboard button.</td></tr>
+        <tr><td><a href="pages/components.html#T031">T031</a></td><td class="tb-name">Loader (pulse)</td><td>Pulsing loader dots in green and orange, static equivalent of @astroanimate/core/Loader.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="sections">
+      <h2>Sections <span class="tb-range">T040&ndash;T063</span></h2>
+      <p>The 24 named page sections — heroes, tables, grids, footer — as mini previews. &middot; <a href="pages/sections.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/sections.html#T040">T040</a></td><td class="tb-name">Sticky Nav Bar</td><td>Top navigation with logo, version dropdown, links, social icons, INSTALL button, and a mobile hamburger.</td></tr>
+        <tr><td><a href="pages/sections.html#T041">T041</a></td><td class="tb-name">Split Hero</td><td>Two-column homepage hero: status pill, headline, feature list, CTAs on the left; badges + code card on the right; glow video behind.</td></tr>
+        <tr><td><a href="pages/sections.html#T042">T042</a></td><td class="tb-name">Page Hero</td><td>Eyebrow + headline + lead paragraph over a star-field. The standard top of every interior page.</td></tr>
+        <tr><td><a href="pages/sections.html#T043">T043</a></td><td class="tb-name">Status Pill</td><td>"// SYSTEM ONLINE" label with a pulsing green Loader. Signals a live state.</td></tr>
+        <tr><td><a href="pages/sections.html#T044">T044</a></td><td class="tb-name">Code Block Card</td><td>Terminal-style card with an orange accent bar, a typewriter command, and a copy button.</td></tr>
+        <tr><td><a href="pages/sections.html#T045">T045</a></td><td class="tb-name">How It Works</td><td>Bordered container with corner accents, an embedded demo video, and a 3-up numbered steps grid.</td></tr>
+        <tr><td><a href="pages/sections.html#T046">T046</a></td><td class="tb-name">Comparison Table</td><td>Feature-by-feature table contrasting AstroAnimate with alternatives, using check / cross / warn icons.</td></tr>
+        <tr><td><a href="pages/sections.html#T047">T047</a></td><td class="tb-name">Performance / Architecture Grids</td><td>Icon + stat + caption cards laid out on a hairline grid.</td></tr>
+        <tr><td><a href="pages/sections.html#T048">T048</a></td><td class="tb-name">Use-case &amp; Doc-structure Tabs</td><td>Tabbed panels that swap content in place to show different scenarios.</td></tr>
+        <tr><td><a href="pages/sections.html#T049">T049</a></td><td class="tb-name">Open-source Panel</td><td>Two-column block: prose on the left, a stacked key/value badge column (LICENSE, SIZE, RUNTIME) on the right.</td></tr>
+        <tr><td><a href="pages/sections.html#T050">T050</a></td><td class="tb-name">Principle / Feature Grid</td><td>Numbered cards (01–06) on a hairline grid describing values or features.</td></tr>
+        <tr><td><a href="pages/sections.html#T051">T051</a></td><td class="tb-name">Docs Layout</td><td>Three-column app shell: collapsible grouped sidebar, centered reading column, right "in this page" TOC.</td></tr>
+        <tr><td><a href="pages/sections.html#T052">T052</a></td><td class="tb-name">Right TOC (scroll-spy)</td><td>"IN THIS PAGE" rail that highlights the active heading as you scroll.</td></tr>
+        <tr><td><a href="pages/sections.html#T053">T053</a></td><td class="tb-name">Component Card Grid</td><td>Catalog of components grouped by category, each card with name, NEW badge, description, and subpath import.</td></tr>
+        <tr><td><a href="pages/sections.html#T054">T054</a></td><td class="tb-name">Blog Listing</td><td>A featured post + side cards, a category filter with search, and a dash-separated post list.</td></tr>
+        <tr><td><a href="pages/sections.html#T055">T055</a></td><td class="tb-name">Article Layout</td><td>Article header with cover image and author, a sticky table of contents, and a prose body with code blocks, callouts, and comparison tables.</td></tr>
+        <tr><td><a href="pages/sections.html#T056">T056</a></td><td class="tb-name">FAQ Accordion</td><td>Questions grouped by category, each a native disclosure with an animated +/− marker.</td></tr>
+        <tr><td><a href="pages/sections.html#T057">T057</a></td><td class="tb-name">Showcase Grid</td><td>Cards with a gradient placeholder thumbnail, tags, name, description, and a visit link.</td></tr>
+        <tr><td><a href="pages/sections.html#T058">T058</a></td><td class="tb-name">Changelog Timeline</td><td>Vertical timeline with version dots and Added / Changed / Fixed change tags per release.</td></tr>
+        <tr><td><a href="pages/sections.html#T059">T059</a></td><td class="tb-name">Roadmap Columns</td><td>Status-grouped columns (Shipped, In Progress, Planned, Exploring) of feature cards with status pills.</td></tr>
+        <tr><td><a href="pages/sections.html#T060">T060</a></td><td class="tb-name">Support Channels</td><td>Grid of channel cards plus a numbered "good bug report" checklist and quick links.</td></tr>
+        <tr><td><a href="pages/sections.html#T061">T061</a></td><td class="tb-name">Contact Form</td><td>Demo form (no backend) beside a column of contact-method cards.</td></tr>
+        <tr><td><a href="pages/sections.html#T062">T062</a></td><td class="tb-name">Final CTA Block</td><td>Centered eyebrow + headline + button pair over a star-field, closing a page.</td></tr>
+        <tr><td><a href="pages/sections.html#T063">T063</a></td><td class="tb-name">Footer</td><td>Five-column footer with newsletter signup and a bottom bar showing a live UTC clock.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="patterns">
+      <h2>Patterns <span class="tb-range">T070&ndash;T078</span></h2>
+      <p>Composite components and interaction patterns. &middot; <a href="pages/patterns.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/patterns.html#T070">T070</a></td><td class="tb-name">Pricing</td><td>Three-tier pricing with a highlighted recommended plan, feature lists, and CTAs.</td></tr>
+        <tr><td><a href="pages/patterns.html#T071">T071</a></td><td class="tb-name">Popup promo</td><td>A modal promotion built on the native &lt;dialog&gt; element — opens over a dimmed backdrop, closes on the ✕ or a backdrop click.</td></tr>
+        <tr><td><a href="pages/patterns.html#T072">T072</a></td><td class="tb-name">Gallery</td><td>A responsive thumbnail grid with hover captions. Click any tile to open it in a lightbox.</td></tr>
+        <tr><td><a href="pages/patterns.html#T073">T073</a></td><td class="tb-name">Tabs</td><td>Tabbed panels that swap content in place. Click a tab to switch.</td></tr>
+        <tr><td><a href="pages/patterns.html#T074">T074</a></td><td class="tb-name">Folders</td><td>A collapsible file tree built from nested &lt;details&gt; — folders expand and collapse, no JavaScript.</td></tr>
+        <tr><td><a href="pages/patterns.html#T075">T075</a></td><td class="tb-name">Toggle content</td><td>A switch that reveals or hides a block of content. CSS-only, using :has().</td></tr>
+        <tr><td><a href="pages/patterns.html#T076">T076</a></td><td class="tb-name">FAQ — expanded by default</td><td>The accordion pattern with every item open on load (open attribute set). Collapse any you don't need.</td></tr>
+        <tr><td><a href="pages/patterns.html#T077">T077</a></td><td class="tb-name">Contact form</td><td>A labelled form with focus states and a demo submit (no backend attached).</td></tr>
+        <tr><td><a href="pages/patterns.html#T078">T078</a></td><td class="tb-name">Breadcrumbs</td><td>A path trail showing the visitor's location, with the current page un-linked.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="animation">
+      <h2>Animation <span class="tb-range">T100&ndash;T106</span></h2>
+      <p>Motion demos: reveals, marquees, counters, transitions. &middot; <a href="pages/animation.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/animation.html#T100">T100</a></td><td class="tb-name">Bento grid</td><td>Asymmetric mosaic of feature tiles with varying spans, subtle gradients, and a hover lift — pure CSS.</td></tr>
+        <tr><td><a href="pages/animation.html#T101">T101</a></td><td class="tb-name">Infinite marquee</td><td>Seamlessly looping chip track from a duplicated row and one CSS keyframe; pauses on hover, frozen for reduced-motion.</td></tr>
+        <tr><td><a href="pages/animation.html#T102">T102</a></td><td class="tb-name">Statement / word reveal</td><td>Display sentence whose words fade and rise in sequence via staggered CSS delays, with a JS replay button.</td></tr>
+        <tr><td><a href="pages/animation.html#T103">T103</a></td><td class="tb-name">Animated stat counters</td><td>Three figures that count up on first scroll into view via IntersectionObserver; final values live in the markup.</td></tr>
+        <tr><td><a href="pages/animation.html#T104">T104</a></td><td class="tb-name">Sticky scroll-story</td><td>Two-column block with a pinned visual card that crossfades as a scroll-spy highlights the active step.</td></tr>
+        <tr><td><a href="pages/animation.html#T105">T105</a></td><td class="tb-name">Before / after slider</td><td>Two stacked panels split by a draggable divider; a range input drives a CSS variable clip, keyboard-accessible.</td></tr>
+        <tr><td><a href="pages/animation.html#T106">T106</a></td><td class="tb-name">Hover-reveal work list</td><td>Large project rows that highlight on hover while a gradient thumbnail follows the cursor; degrades without JS.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="devtools">
+      <h2>Dev tools <span class="tb-range">T120&ndash;T126</span></h2>
+      <p>Terminal, code, diff, and log-style UI. &middot; <a href="pages/devtools.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/devtools.html#T120">T120</a></td><td class="tb-name">Command palette (⌘K)</td><td>Native dialog overlay opened by button or ⌘K/Ctrl+K with live-filtered grouped results.</td></tr>
+        <tr><td><a href="pages/devtools.html#T121">T121</a></td><td class="tb-name">Callout / admonition boxes</td><td>Four tinted variants — Note, Tip, Warning, Danger — with left accent rail, icon, and label. Pure CSS.</td></tr>
+        <tr><td><a href="pages/devtools.html#T122">T122</a></td><td class="tb-name">API reference block</td><td>Method pill, monospace path, params table, and cURL/JSON tabs that switch on click.</td></tr>
+        <tr><td><a href="pages/devtools.html#T123">T123</a></td><td class="tb-name">Integration grid</td><td>Filter chips above a grid of integration tiles, shown or hidden live by data-category.</td></tr>
+        <tr><td><a href="pages/devtools.html#T124">T124</a></td><td class="tb-name">Announcement bar</td><td>Faux top banner with message, inline link, and ✕ dismiss with demo reset link.</td></tr>
+        <tr><td><a href="pages/devtools.html#T125">T125</a></td><td class="tb-name">Theme switcher</td><td>Segmented System/Light/Dark control that restyles only the sample card below.</td></tr>
+        <tr><td><a href="pages/devtools.html#T126">T126</a></td><td class="tb-name">“Was this helpful?”</td><td>Small docs-footer feedback card that swaps to a thank-you state on vote.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="social">
+      <h2>Social proof <span class="tb-range">T140&ndash;T146</span></h2>
+      <p>Testimonials, logos, ratings, community blocks. &middot; <a href="pages/social.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/social.html#T140">T140</a></td><td class="tb-name">Logo cloud / "trusted by" strip</td><td>A muted row of company wordmarks under a small label. Marquees slowly and pauses on hover.</td></tr>
+        <tr><td><a href="pages/social.html#T141">T141</a></td><td class="tb-name">Testimonial wall</td><td>A multi-column masonry of quote cards — quote, initials avatar, name and role. Static.</td></tr>
+        <tr><td><a href="pages/social.html#T142">T142</a></td><td class="tb-name">Quote slider</td><td>One large rotating testimonial. Prev / next buttons and dots advance it; it also auto-advances every 6s.</td></tr>
+        <tr><td><a href="pages/social.html#T143">T143</a></td><td class="tb-name">Newsletter / waitlist capture</td><td>An inline email capture that swaps to a success state on submit; also opens in a native &lt;dialog&gt;.</td></tr>
+        <tr><td><a href="pages/social.html#T144">T144</a></td><td class="tb-name">Video demo modal</td><td>A 16:9 thumbnail with a circular play button that opens a placeholder video frame in a native &lt;dialog&gt;.</td></tr>
+        <tr><td><a href="pages/social.html#T145">T145</a></td><td class="tb-name">Customer case-study cards</td><td>A three-up grid — wordmark, a headline metric, a one-line summary, an industry chip, and a read-story link.</td></tr>
+        <tr><td><a href="pages/social.html#T146">T146</a></td><td class="tb-name">Trust / guarantee bar</td><td>A row of four icon + label reassurances, the kind that sits just beside a final CTA. Static.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="content">
+      <h2>Content <span class="tb-range">T160&ndash;T166</span></h2>
+      <p>Prose, callouts, article and editorial layouts. &middot; <a href="pages/content.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/content.html#T160">T160</a></td><td class="tb-name">Author byline + bio card</td><td>A compact byline strip at the top of a post and a fuller author bio card to close it out.</td></tr>
+        <tr><td><a href="pages/content.html#T161">T161</a></td><td class="tb-name">Related articles</td><td>A "Read next" grid surfacing three more posts by category, title, and read time.</td></tr>
+        <tr><td><a href="pages/content.html#T162">T162</a></td><td class="tb-name">Reading-progress bar</td><td>A progress bar pinned to the top of a scroll container that fills as you read inside the box.</td></tr>
+        <tr><td><a href="pages/content.html#T163">T163</a></td><td class="tb-name">Tag / category filter</td><td>A chip row that live-filters the post list below by category.</td></tr>
+        <tr><td><a href="pages/content.html#T164">T164</a></td><td class="tb-name">Trending / most-popular list</td><td>A ranked list with oversized numerals and an optional view-count meta line.</td></tr>
+        <tr><td><a href="pages/content.html#T165">T165</a></td><td class="tb-name">Series / chapter nav</td><td>A "Part 2 of 5" bar with titled previous/next arrows and a thin progress indicator.</td></tr>
+        <tr><td><a href="pages/content.html#T166">T166</a></td><td class="tb-name">Pull quote</td><td>An oversized, offset quote block with a large quotation mark, accent rule, and attribution.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="navigation">
+      <h2>Navigation <span class="tb-range">T180&ndash;T186</span></h2>
+      <p>Navbars, sidebars, tabs, breadcrumbs, pagination. &middot; <a href="pages/navigation.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/navigation.html#T180">T180</a></td><td class="tb-name">Mega menu</td><td>A wide multi-column dropdown for sites with deep navigation, with a CountUp featured card.</td></tr>
+        <tr><td><a href="pages/navigation.html#T181">T181</a></td><td class="tb-name">Pagination</td><td>Numbered page controls with previous / next, an active page, and a truncation gap.</td></tr>
+        <tr><td><a href="pages/navigation.html#T182">T182</a></td><td class="tb-name">Stepper / wizard progress</td><td>A horizontal step indicator for multi-step flows — completed, current, and upcoming states.</td></tr>
+        <tr><td><a href="pages/navigation.html#T183">T183</a></td><td class="tb-name">Segmented control</td><td>A compact pill toggle for switching between a few mutually exclusive views.</td></tr>
+        <tr><td><a href="pages/navigation.html#T184">T184</a></td><td class="tb-name">Back-to-top button</td><td>A floating control that appears once the user scrolls down, then jumps them back up.</td></tr>
+        <tr><td><a href="pages/navigation.html#T185">T185</a></td><td class="tb-name">Sticky action bar</td><td>A persistent bottom bar pairing a summary with the primary call to action, pinned while content scrolls.</td></tr>
+        <tr><td><a href="pages/navigation.html#T186">T186</a></td><td class="tb-name">Actions menu</td><td>A kebab / overflow menu that reveals contextual actions on click.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="forms">
+      <h2>Forms <span class="tb-range">T200&ndash;T206</span></h2>
+      <p>Inputs, choice controls, wizards, uploads, consent. &middot; <a href="pages/forms.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/forms.html#T200">T200</a></td><td class="tb-name">Input field library</td><td>Text, select, and textarea with label, helper text, and the default / focus / error / disabled states.</td></tr>
+        <tr><td><a href="pages/forms.html#T201">T201</a></td><td class="tb-name">Choice controls</td><td>Checkboxes, radio group, and an on/off switch — the three ways to capture a boolean or a pick.</td></tr>
+        <tr><td><a href="pages/forms.html#T202">T202</a></td><td class="tb-name">Range &amp; number</td><td>A slider with a live value read-out and a stepper number input with − / + controls.</td></tr>
+        <tr><td><a href="pages/forms.html#T203">T203</a></td><td class="tb-name">Search with autocomplete</td><td>A search input that filters a suggestion list as you type.</td></tr>
+        <tr><td><a href="pages/forms.html#T204">T204</a></td><td class="tb-name">Multi-step form</td><td>A wizard that advances through panels with Back / Next, keeping the rest hidden.</td></tr>
+        <tr><td><a href="pages/forms.html#T205">T205</a></td><td class="tb-name">File upload / dropzone</td><td>A drag-and-drop target with a browse fallback and a list of selected files.</td></tr>
+        <tr><td><a href="pages/forms.html#T206">T206</a></td><td class="tb-name">Cookie consent</td><td>A consent banner with accept / reject and a link to preferences.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="feedback">
+      <h2>Feedback <span class="tb-range">T220&ndash;T226</span></h2>
+      <p>Alerts, toasts, progress, empty states. &middot; <a href="pages/feedback.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/feedback.html#T220">T220</a></td><td class="tb-name">Toast notifications</td><td>Transient messages that stack in a corner and auto-dismiss.</td></tr>
+        <tr><td><a href="pages/feedback.html#T221">T221</a></td><td class="tb-name">Alert banners</td><td>Inline status messages in four intents — info, success, warning, and error.</td></tr>
+        <tr><td><a href="pages/feedback.html#T222">T222</a></td><td class="tb-name">Tooltip</td><td>A small label that appears on hover or focus to explain a control.</td></tr>
+        <tr><td><a href="pages/feedback.html#T223">T223</a></td><td class="tb-name">Empty state</td><td>Placeholder for no-data views — an icon, a line of guidance, and an action.</td></tr>
+        <tr><td><a href="pages/feedback.html#T224">T224</a></td><td class="tb-name">Skeleton loader</td><td>Shimmering placeholders that mirror the shape of content while it loads.</td></tr>
+        <tr><td><a href="pages/feedback.html#T225">T225</a></td><td class="tb-name">Spinners &amp; progress</td><td>An indeterminate spinner, a determinate bar, and a circular progress ring.</td></tr>
+        <tr><td><a href="pages/feedback.html#T226">T226</a></td><td class="tb-name">Confirmation dialog</td><td>A focused modal that asks the user to confirm a destructive action.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="data">
+      <h2>Data <span class="tb-range">T240&ndash;T245</span></h2>
+      <p>Tables, stats, charts-in-CSS, key/value displays. &middot; <a href="pages/data.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/data.html#T240">T240</a></td><td class="tb-name">KPI / metric cards</td><td>Dashboard stat tiles with a label, a big number, and a trend delta coloured by direction.</td></tr>
+        <tr><td><a href="pages/data.html#T241">T241</a></td><td class="tb-name">Sortable data table</td><td>A zebra-striped table with sortable headers. Click a column header to re-sort.</td></tr>
+        <tr><td><a href="pages/data.html#T242">T242</a></td><td class="tb-name">Pricing billing toggle</td><td>A monthly / annual switch that swaps the displayed prices in place.</td></tr>
+        <tr><td><a href="pages/data.html#T243">T243</a></td><td class="tb-name">Spec / definition list</td><td>A two-column key/value sheet for technical specs, metadata, or property tables.</td></tr>
+        <tr><td><a href="pages/data.html#T244">T244</a></td><td class="tb-name">Horizontal bar chart</td><td>A lightweight, CSS-only comparison chart — labelled rows with proportional fills.</td></tr>
+        <tr><td><a href="pages/data.html#T245">T245</a></td><td class="tb-name">Activity feed / timeline</td><td>A vertical, dotted timeline of recent events with a relative timestamp and a type tag.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="commerce">
+      <h2>Commerce <span class="tb-range">T260&ndash;T265</span></h2>
+      <p>Pricing, product cards, carts, checkout patterns. &middot; <a href="pages/commerce.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/commerce.html#T260">T260</a></td><td class="tb-name">Product card</td><td>A shoppable card with image, badge, title, rating, price (with strike-through), and add-to-cart.</td></tr>
+        <tr><td><a href="pages/commerce.html#T261">T261</a></td><td class="tb-name">Star rating &amp; review</td><td>An aggregate rating summary with a distribution breakdown beside an individual review card.</td></tr>
+        <tr><td><a href="pages/commerce.html#T262">T262</a></td><td class="tb-name">Cart / order summary</td><td>A checkout-side summary: line items, a promo field, the totals breakdown, and the pay button.</td></tr>
+        <tr><td><a href="pages/commerce.html#T263">T263</a></td><td class="tb-name">Filter sidebar</td><td>A faceted filter rail — category checkboxes, a price range, and active filter chips you can clear.</td></tr>
+        <tr><td><a href="pages/commerce.html#T264">T264</a></td><td class="tb-name">Countdown timer</td><td>An urgency timer for sales and launches, ticking down in days / hours / minutes / seconds.</td></tr>
+        <tr><td><a href="pages/commerce.html#T265">T265</a></td><td class="tb-name">Avatar group &amp; social proof</td><td>Stacked, overlapping avatars with an overflow count — the "join 2,000+ others" cue.</td></tr>
+      </table>
+    </section>
+
+    <section class="tb-cat" id="media">
+      <h2>Media <span class="tb-range">T280&ndash;T285</span></h2>
+      <p>Image, video, and gallery patterns. &middot; <a href="pages/media.html" style="color:#ff7f1f;">View page &rarr;</a></p>
+      <table class="tb-table">
+        <tr><td><a href="pages/media.html#T280">T280</a></td><td class="tb-name">Image carousel</td><td>Single-slide carousel with prev / next arrows and dot indicators.</td></tr>
+        <tr><td><a href="pages/media.html#T281">T281</a></td><td class="tb-name">Figure with caption</td><td>Image block with a number tag and a typeset caption for docs and case studies.</td></tr>
+        <tr><td><a href="pages/media.html#T282">T282</a></td><td class="tb-name">Video background hero</td><td>Full-bleed hero with a looping video or gradient behind a darkening scrim and headline.</td></tr>
+        <tr><td><a href="pages/media.html#T283">T283</a></td><td class="tb-name">Alternating feature row</td><td>Classic zig-zag with image and copy swapping sides down the page.</td></tr>
+        <tr><td><a href="pages/media.html#T284">T284</a></td><td class="tb-name">Team / people grid</td><td>Grid of people cards with avatar, name, role, and social links.</td></tr>
+        <tr><td><a href="pages/media.html#T285">T285</a></td><td class="tb-name">Responsive embed</td><td>Fixed-ratio container for video, maps, or iframes that scales cleanly at any width.</td></tr>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

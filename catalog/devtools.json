@@ -1,0 +1,23 @@
+[
+  { "id": "T120", "name": "Command palette (⌘K)", "category": "Dev tools",
+    "file": "pages/devtools.html", "anchor": "#T120",
+    "description": "Native dialog overlay opened by button or ⌘K/Ctrl+K with live-filtered grouped results." },
+  { "id": "T121", "name": "Callout / admonition boxes", "category": "Dev tools",
+    "file": "pages/devtools.html", "anchor": "#T121",
+    "description": "Four tinted variants — Note, Tip, Warning, Danger — with left accent rail, icon, and label. Pure CSS." },
+  { "id": "T122", "name": "API reference block", "category": "Dev tools",
+    "file": "pages/devtools.html", "anchor": "#T122",
+    "description": "Method pill, monospace path, params table, and cURL/JSON tabs that switch on click." },
+  { "id": "T123", "name": "Integration grid", "category": "Dev tools",
+    "file": "pages/devtools.html", "anchor": "#T123",
+    "description": "Filter chips above a grid of integration tiles, shown or hidden live by data-category." },
+  { "id": "T124", "name": "Announcement bar", "category": "Dev tools",
+    "file": "pages/devtools.html", "anchor": "#T124",
+    "description": "Faux top banner with message, inline link, and ✕ dismiss with demo reset link." },
+  { "id": "T125", "name": "Theme switcher", "category": "Dev tools",
+    "file": "pages/devtools.html", "anchor": "#T125",
+    "description": "Segmented System/Light/Dark control that restyles only the sample card below." },
+  { "id": "T126", "name": "“Was this helpful?”", "category": "Dev tools",
+    "file": "pages/devtools.html", "anchor": "#T126",
+    "description": "Small docs-footer feedback card that swaps to a thank-you state on vote." }
+]

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Content — TBlocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+</head>
+<body>
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <h1>Content <span class="tb-range">T160&ndash;T166</span></h1>
+    <p class="tb-sub">Blog &amp; content section patterns — bylines, related reading, progress, filtering, and pull quotes that make up an article and its surrounding blog index.</p>
+  </header>
+  <main class="tb-main">
+
+    <article class="tb-pattern" id="T160" data-tid="T160">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T160</span>
+        <div>
+          <h2>Author byline + bio card</h2>
+          <p>A compact byline strip at the top of a post and a fuller author bio card to close it out.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="con-byline">
+          <span class="con-avatar" aria-hidden="true">AT</span>
+          <div class="con-byline-meta">
+            <span class="con-byline-name">AstroAnimate Team</span>
+            <span class="con-byline-sub">
+              <span>Jun 18, 2026</span>
+              <span class="con-dot">·</span>
+              <span>7 min read</span>
+              <span class="con-dot">·</span>
+              <span class="con-chip">PERFORMANCE</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="con-bio">
+          <span class="con-avatar con-avatar-lg" aria-hidden="true">AT</span>
+          <div class="con-bio-body">
+            <span class="con-bio-name">AstroAnimate Team</span>
+            <span class="con-bio-role">Core maintainers · Animation &amp; DX</span>
+            <p class="con-bio-text">
+              We build the CSS-first animation toolkit for Astro and write about keeping motion cheap,
+              accessible, and out of the hydration budget.
+            </p>
+            <div class="con-bio-actions">
+              <span class="con-follow">Follow</span>
+              <a href="#" class="con-social">GitHub</a>
+              <a href="#" class="con-social">X</a>
+              <a href="#" class="con-social">RSS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T161" data-tid="T161">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T161</span>
+        <div>
+          <h2>Related articles</h2>
+          <p>A &ldquo;Read next&rdquo; grid surfacing three more posts by category, title, and read time.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <p class="con-readnext-label">Read next</p>
+        <div class="con-related-grid">
+          <a href="#" class="con-related-card">
+            <span class="con-chip">PERFORMANCE</span>
+            <span class="con-related-title">Why we built AstroAnimate CSS-first</span>
+            <span class="con-related-read">6 min read</span>
+          </a>
+          <a href="#" class="con-related-card">
+            <span class="con-chip">GUIDE</span>
+            <span class="con-related-title">View Transitions + AstroAnimate: smoother page changes</span>
+            <span class="con-related-read">8 min read</span>
+          </a>
+          <a href="#" class="con-related-card">
+            <span class="con-chip">ACCESSIBILITY</span>
+            <span class="con-related-title">Designing micro-interactions that respect reduced motion</span>
+            <span class="con-related-read">5 min read</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T162" data-tid="T162">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T162</span>
+        <div>
+          <h2>Reading-progress bar</h2>
+          <p>A progress bar pinned to the top of a scroll container that fills as you read inside the box.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="con-progress-wrap">
+          <div class="con-progress-track" aria-hidden="true">
+            <div class="con-progress-fill" id="con-progress-fill"></div>
+          </div>
+          <div class="con-scrollbox" id="con-scrollbox">
+            <p>Scroll this box to watch the bar fill. The progress is measured against this container&rsquo;s scroll position — not the window&rsquo;s.</p>
+            <p>Astro&rsquo;s whole pitch is shipping less JavaScript. So the moment you reach for animation, there&rsquo;s a tension: most motion libraries assume a hydrated, client-rendered tree.</p>
+            <p>The fix is to express the common cases — entry, reveal, and transition animations — in CSS and the Web Animations API, which run on statically rendered markup. No directive, no island, no runtime.</p>
+            <p>A typewriter heading or a fade-up on a hero doesn&rsquo;t need a framework. With AstroAnimate it&rsquo;s a single subpath import and a component — and it renders in a fully static build.</p>
+            <p>Some effects really do need a runtime — spring physics, gesture tracking, timeline orchestration. Those belong on an island, and only there.</p>
+            <p>The mental model: CSS-first for presentation motion, islands for interaction. Most sites are 90% the former.</p>
+            <p>Whatever approach you choose, honour prefers-reduced-motion. AstroAnimate does this automatically — when a visitor opts out, motion is minimised.</p>
+            <p>Motion and Astro&rsquo;s performance goals aren&rsquo;t at odds — as long as you let CSS do the ordinary work and save hydration for the parts that are genuinely interactive.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T163" data-tid="T163">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T163</span>
+        <div>
+          <h2>Tag / category filter</h2>
+          <p>A chip row that live-filters the post list below by category. Click a chip to filter.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="con-filter-chips" id="con-filter-chips">
+          <button class="con-fchip is-active" data-con-filter="all">All</button>
+          <button class="con-fchip" data-con-filter="performance">Performance</button>
+          <button class="con-fchip" data-con-filter="guide">Guide</button>
+          <button class="con-fchip" data-con-filter="release">Release</button>
+          <button class="con-fchip" data-con-filter="accessibility">Accessibility</button>
+        </div>
+        <ul class="con-filter-list" id="con-filter-list">
+          <li class="con-filter-row" data-con-tag="performance">
+            <span class="con-frow-title">Animating Astro Islands without hurting hydration</span>
+            <span class="con-frow-meta">
+              <span class="con-chip">PERFORMANCE</span>
+              <span class="con-frow-read">7 min</span>
+            </span>
+          </li>
+          <li class="con-filter-row" data-con-tag="guide">
+            <span class="con-frow-title">A field guide to scroll-triggered reveals</span>
+            <span class="con-frow-meta">
+              <span class="con-chip">GUIDE</span>
+              <span class="con-frow-read">9 min</span>
+            </span>
+          </li>
+          <li class="con-filter-row" data-con-tag="release">
+            <span class="con-frow-title">AstroAnimate 0.1.2 — CountUp &amp; easing presets</span>
+            <span class="con-frow-meta">
+              <span class="con-chip">RELEASE</span>
+              <span class="con-frow-read">3 min</span>
+            </span>
+          </li>
+          <li class="con-filter-row" data-con-tag="accessibility">
+            <span class="con-frow-title">prefers-reduced-motion, done properly</span>
+            <span class="con-frow-meta">
+              <span class="con-chip">ACCESSIBILITY</span>
+              <span class="con-frow-read">5 min</span>
+            </span>
+          </li>
+          <li class="con-filter-row" data-con-tag="performance">
+            <span class="con-frow-title">Measuring animation cost in a static build</span>
+            <span class="con-frow-meta">
+              <span class="con-chip">PERFORMANCE</span>
+              <span class="con-frow-read">6 min</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T164" data-tid="T164">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T164</span>
+        <div>
+          <h2>Trending / most-popular list</h2>
+          <p>A ranked list with oversized numerals and an optional view-count meta line.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <ol class="con-trending">
+          <li class="con-trend-row">
+            <span class="con-rank">01</span>
+            <span class="con-trend-body">
+              <a href="#" class="con-trend-title">Why CSS-first beats a runtime for 90% of motion</a>
+              <span class="con-trend-views">12.4k views</span>
+            </span>
+          </li>
+          <li class="con-trend-row">
+            <span class="con-rank">02</span>
+            <span class="con-trend-body">
+              <a href="#" class="con-trend-title">The hydration tax nobody talks about</a>
+              <span class="con-trend-views">9.1k views</span>
+            </span>
+          </li>
+          <li class="con-trend-row">
+            <span class="con-rank">03</span>
+            <span class="con-trend-body">
+              <a href="#" class="con-trend-title">Building a typewriter heading with zero JS</a>
+              <span class="con-trend-views">7.8k views</span>
+            </span>
+          </li>
+          <li class="con-trend-row">
+            <span class="con-rank">04</span>
+            <span class="con-trend-body">
+              <a href="#" class="con-trend-title">Easing curves that actually feel good</a>
+              <span class="con-trend-views">6.2k views</span>
+            </span>
+          </li>
+          <li class="con-trend-row">
+            <span class="con-rank">05</span>
+            <span class="con-trend-body">
+              <a href="#" class="con-trend-title">Page transitions without a framework</a>
+              <span class="con-trend-views">5.5k views</span>
+            </span>
+          </li>
+        </ol>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T165" data-tid="T165">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T165</span>
+        <div>
+          <h2>Series / chapter nav</h2>
+          <p>A &ldquo;Part 2 of 5&rdquo; bar with titled previous/next arrows and a thin progress indicator.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="con-series">
+          <div class="con-series-top">
+            <span class="con-series-label">Series · Motion in Astro</span>
+            <span class="con-series-count">Part 2 of 5</span>
+          </div>
+          <div class="con-series-prog" aria-hidden="true"><span style="width:40%"></span></div>
+          <div class="con-series-nav">
+            <a href="#" class="con-series-link prev">
+              <span class="con-series-dir">&larr; Previous</span>
+              <span class="con-series-title">Why we built AstroAnimate CSS-first</span>
+            </a>
+            <a href="#" class="con-series-link next">
+              <span class="con-series-dir">Next &rarr;</span>
+              <span class="con-series-title">Scroll-triggered reveals, step by step</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tb-pattern" id="T166" data-tid="T166">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T166</span>
+        <div>
+          <h2>Pull quote</h2>
+          <p>An oversized, offset quote block with a large quotation mark, accent rule, and attribution.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <figure class="con-pullquote">
+          <span class="con-pq-mark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="con-pq-text">
+            If an animation can be expressed in CSS, expressing it in JavaScript is a tax you pay on every page load.
+          </blockquote>
+          <figcaption class="con-pq-attr">AstroAnimate Team · Animating Astro Islands</figcaption>
+        </figure>
+      </div>
+    </article>
+
+  </main>
+  <style>
+    .sgx-section { padding: 64px var(--side-padding); border-bottom: 1px solid var(--border-2); background: var(--bg); }
+    .sgx-eyebrow { font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; color:#ff7f1f; text-transform:uppercase; margin:0 0 16px; }
+    .sgx-h2 { font-family:'Bai Jamjuree',sans-serif; font-size:clamp(26px,3.5vw,38px); font-weight:600; color:var(--text); margin:0 0 14px; }
+    .sgx-desc { font-family:'Inter',sans-serif; font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 36px; max-width:64ch; }
+    .sgx-block { padding:32px 0; border-top:1px solid var(--border); }
+    .sgx-block:first-of-type { border-top:none; padding-top:8px; }
+    .sgx-block-head { display:flex; gap:16px; align-items:flex-start; margin-bottom:18px; }
+    .sgx-num { font-family:'JetBrains Mono',monospace; font-size:13px; color:#ff7f1f; flex-shrink:0; padding-top:3px; }
+    .sgx-meta { flex:1; min-width:0; }
+    .sgx-meta h3 { font-family:'Bai Jamjuree',sans-serif; font-size:19px; font-weight:600; color:var(--text); margin:0 0 6px; }
+    .sgx-meta p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:var(--text-3); margin:0; max-width:72ch; }
+    .sgx-preview { position:relative; border:1px solid var(--border); border-radius:4px; background:var(--bg-3); padding:30px 24px 24px; overflow:hidden; }
+    .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:var(--border-3); }
+
+    /* Shared atoms */
+    .con-chip {
+      font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.08em;
+      color:#ff7f1f; border:1px solid var(--border-2); border-radius:999px;
+      padding:3px 9px; text-transform:uppercase; white-space:nowrap;
+    }
+    .con-avatar {
+      display:flex; align-items:center; justify-content:center; flex-shrink:0;
+      width:40px; height:40px; border-radius:50%;
+      background:var(--bg-2); border:1px solid var(--border-2);
+      font-family:'Bai Jamjuree',sans-serif; font-size:14px; font-weight:600;
+      color:#ff7f1f; letter-spacing:.02em;
+    }
+    .con-avatar-lg { width:56px; height:56px; font-size:18px; }
+    .con-dot { color:var(--border-2); }
+
+    /* 01 — Byline + bio */
+    .con-byline { display:flex; align-items:center; gap:14px; }
+    .con-byline-meta { display:flex; flex-direction:column; gap:4px; min-width:0; }
+    .con-byline-name { font-family:'Bai Jamjuree',sans-serif; font-size:15px; font-weight:600; color:var(--text); }
+    .con-byline-sub {
+      display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+      font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-3);
+    }
+    .con-bio {
+      display:flex; gap:16px; margin-top:24px; padding-top:24px;
+      border-top:1px solid var(--border);
+    }
+    .con-bio-body { display:flex; flex-direction:column; min-width:0; }
+    .con-bio-name { font-family:'Bai Jamjuree',sans-serif; font-size:16px; font-weight:600; color:var(--text); }
+    .con-bio-role { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-4); margin-top:2px; }
+    .con-bio-text { font-family:'Inter',sans-serif; font-size:14px; line-height:1.6; color:var(--text-2); margin:10px 0 14px; max-width:60ch; }
+    .con-bio-actions { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+    .con-follow {
+      font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600;
+      color:var(--bg); background:#ff7f1f; border-radius:3px; padding:6px 14px;
+      text-transform:uppercase; letter-spacing:.04em;
+    }
+    .con-social {
+      font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-3);
+      text-decoration:none; transition:color .15s ease;
+    }
+    .con-social:hover { color:#ff7f1f; }
+
+    /* 02 — Related articles */
+    .con-readnext-label { font-family:'Bai Jamjuree',sans-serif; font-size:15px; font-weight:600; color:var(--text); margin:0 0 16px; }
+    .con-related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .con-related-card {
+      display:flex; flex-direction:column; gap:10px; align-items:flex-start;
+      border:1px solid var(--border); background:var(--bg-card); border-radius:4px;
+      padding:16px; text-decoration:none;
+      transition:border-color .2s ease, transform .2s ease;
+    }
+    .con-related-card:hover { border-color:#ff7f1f; transform:translateY(-2px); }
+    .con-related-title { font-family:'Bai Jamjuree',sans-serif; font-size:15px; font-weight:600; color:var(--text); line-height:1.35; }
+    .con-related-read { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-4); margin-top:auto; }
+
+    /* 03 — Reading progress */
+    .con-progress-wrap {
+      position:relative; border:1px solid var(--border); border-radius:4px;
+      background:var(--bg-card); overflow:hidden;
+    }
+    .con-progress-track { position:absolute; top:0; left:0; right:0; height:4px; background:var(--border); z-index:2; }
+    .con-progress-fill { height:100%; width:0; background:#ff7f1f; transition:width .05s linear; }
+    .con-scrollbox {
+      height:260px; overflow:auto; padding:20px 18px;
+      font-family:'Inter',sans-serif; font-size:14px; line-height:1.7; color:var(--text-2);
+    }
+    .con-scrollbox p { margin:0 0 16px; }
+    .con-scrollbox p:first-child { color:var(--text); }
+    .con-scrollbox::-webkit-scrollbar { width:8px; }
+    .con-scrollbox::-webkit-scrollbar-thumb { background:var(--border-2); border-radius:4px; }
+
+    /* 04 — Tag filter */
+    .con-filter-chips { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+    .con-fchip {
+      font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-3);
+      background:transparent; border:1px solid var(--border-2); border-radius:999px;
+      padding:6px 14px; cursor:pointer; transition:border-color .2s ease, color .2s ease, background .2s ease;
+    }
+    .con-fchip:hover { border-color:#ff7f1f; color:#ff7f1f; }
+    .con-fchip.is-active { background:#ff7f1f; border-color:#ff7f1f; color:var(--bg); font-weight:600; }
+    .con-filter-list { list-style:none; margin:0; padding:0; }
+    .con-filter-row {
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      padding:14px 4px; border-bottom:1px solid var(--border);
+    }
+    .con-filter-row:last-child { border-bottom:none; }
+    .con-frow-title { font-family:'Bai Jamjuree',sans-serif; font-size:15px; font-weight:600; color:var(--text); min-width:0; }
+    .con-frow-meta { display:flex; align-items:center; gap:12px; flex-shrink:0; }
+    .con-frow-read { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-4); }
+
+    /* 05 — Trending */
+    .con-trending { list-style:none; margin:0; padding:0; }
+    .con-trend-row {
+      display:flex; align-items:center; gap:18px;
+      padding:14px 4px; border-bottom:1px solid var(--border);
+    }
+    .con-trend-row:last-child { border-bottom:none; }
+    .con-rank {
+      font-family:'Bai Jamjuree',sans-serif; font-size:30px; font-weight:600;
+      color:var(--border-2); line-height:1; flex-shrink:0; width:48px;
+    }
+    .con-trend-body { display:flex; flex-direction:column; gap:3px; min-width:0; }
+    .con-trend-title {
+      font-family:'Bai Jamjuree',sans-serif; font-size:15px; font-weight:600;
+      color:var(--text); text-decoration:none; transition:color .15s ease;
+    }
+    .con-trend-title:hover { color:#ff7f1f; }
+    .con-trend-views { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-4); }
+
+    /* 06 — Series / chapter nav */
+    .con-series { border:1px solid var(--border); background:var(--bg-card); border-radius:4px; padding:18px; }
+    .con-series-top { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .con-series-label { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-3); }
+    .con-series-count { font-family:'JetBrains Mono',monospace; font-size:12px; color:#ff7f1f; }
+    .con-series-prog { height:3px; background:var(--border); border-radius:999px; margin:12px 0 16px; overflow:hidden; }
+    .con-series-prog span { display:block; height:100%; background:#ff7f1f; }
+    .con-series-nav { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .con-series-link {
+      display:flex; flex-direction:column; gap:5px; text-decoration:none;
+      border:1px solid var(--border); border-radius:4px; padding:12px 14px;
+      transition:border-color .2s ease;
+    }
+    .con-series-link.next { text-align:right; align-items:flex-end; }
+    .con-series-link:hover { border-color:#ff7f1f; }
+    .con-series-dir { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-4); }
+    .con-series-title { font-family:'Bai Jamjuree',sans-serif; font-size:14px; font-weight:600; color:var(--text); line-height:1.35; }
+
+    /* 07 — Pull quote */
+    .con-pullquote {
+      position:relative; margin:8px 0 8px 12px; padding:8px 0 8px 28px;
+      border-left:3px solid #ff7f1f;
+    }
+    .con-pq-mark {
+      position:absolute; top:-18px; left:8px;
+      font-family:'Bai Jamjuree',sans-serif; font-size:80px; line-height:1;
+      color:#ff7f1f; opacity:.18; pointer-events:none;
+    }
+    .con-pq-text {
+      position:relative; margin:0;
+      font-family:'Bai Jamjuree',sans-serif; font-size:clamp(20px,2.6vw,28px);
+      font-weight:600; line-height:1.4; color:var(--text);
+    }
+    .con-pq-attr {
+      display:block; margin-top:16px;
+      font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-3);
+    }
+
+    @media (max-width: 1024px) {
+      .con-related-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      .con-related-grid { grid-template-columns:1fr; }
+      .con-series-nav { grid-template-columns:1fr; }
+      .con-series-link.next { text-align:left; align-items:flex-start; }
+      .con-filter-row { flex-direction:column; align-items:flex-start; gap:8px; }
+      .con-frow-meta { justify-content:flex-start; }
+    }
+  </style>
+  <script>
+    (function () {
+      // T162 — Reading-progress bar (scoped to its own scroll box)
+      const box = document.getElementById('con-scrollbox');
+      const fill = document.getElementById('con-progress-fill');
+      if (box && fill) {
+        const update = function () {
+          const max = box.scrollHeight - box.clientHeight;
+          const pct = max > 0 ? (box.scrollTop / max) * 100 : 0;
+          fill.style.width = pct + '%';
+        };
+        box.addEventListener('scroll', update, { passive: true });
+        update();
+      }
+
+      // T163 — Tag / category filter
+      const chips = document.getElementById('con-filter-chips');
+      const list = document.getElementById('con-filter-list');
+      if (chips && list) {
+        chips.addEventListener('click', function (e) {
+          const btn = e.target.closest('[data-con-filter]');
+          if (!btn) return;
+          const filter = btn.getAttribute('data-con-filter');
+          chips.querySelectorAll('.con-fchip').forEach(function (c) {
+            c.classList.toggle('is-active', c === btn);
+          });
+          list.querySelectorAll('.con-filter-row').forEach(function (row) {
+            const tag = row.getAttribute('data-con-tag');
+            row.hidden = !(filter === 'all' || filter === tag);
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
