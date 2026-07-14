@@ -1,4 +1,4 @@
-# TBlocks
+# Site Blocks
 
 A **T-numbered library of dark-theme website sections and UI patterns** — 112 blocks
 across 15 categories, each with a unique ID (`T001`–`T285`) so you can tell a human
@@ -31,7 +31,7 @@ It lists every block with its T-number and links into the category pages under
 
 A typical instruction to an AI in another repo:
 
-> Clone https://github.com/Axioz1234/tblocks (or read it locally). Build the
+> Clone https://github.com/Axioz1234/site-blocks (or read it locally). Build the
 > pricing section using **T260** and the FAQ using **T056**, restyled to this
 > project's brand colours.
 

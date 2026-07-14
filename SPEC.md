@@ -1,6 +1,6 @@
-# TBlocks — extraction & page spec
+# Site Blocks — extraction & page spec
 
-TBlocks is a T-numbered library of dark-theme website sections and UI patterns,
+Site Blocks is a T-numbered library of dark-theme website sections and UI patterns,
 extracted from the AstroAnimate site clone at `C:\Projects\Astro Animate Website Copy`.
 Each pattern gets a unique ID (T001–T299) so humans and AIs can reference it exactly
 ("build the hero using T041").
@@ -13,13 +13,13 @@ Each pattern gets a unique ID (T001–T299) so humans and AIs can reference it e
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{Category} — TBlocks</title>
+  <title>{Category} — Site Blocks</title>
   <link rel="stylesheet" href="../assets/base.css">
   <link rel="stylesheet" href="../assets/viewer.css">
 </head>
 <body>
   <header class="tb-header">
-    <a class="tb-back" href="../index.html">&larr; TBlocks index</a>
+    <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
     <h1>{Category} <span class="tb-range">{Txxx}&ndash;{Tyyy}</span></h1>
     <p class="tb-sub">{one-line category description}</p>
   </header>

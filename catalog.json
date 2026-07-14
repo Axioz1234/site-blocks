@@ -1,5 +1,5 @@
 {
-  "name": "tblocks",
+  "name": "site-blocks",
   "description": "T-numbered library of dark-theme website sections and UI patterns. Look up an ID, open its file, copy the markup inside .tb-demo plus the page <style> rules it uses, plus assets/base.css tokens.",
   "count": 112,
   "patterns": [
