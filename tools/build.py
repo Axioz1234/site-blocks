@@ -31,7 +31,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from compile_page import scope_css, wrap_script, SCOPE_RUNTIME
+from compile_page import scope_css, wrap_script, verify_scoped, SCOPE_RUNTIME
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 START = '<!-- BUILD:START -->'

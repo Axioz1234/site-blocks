@@ -87,23 +87,66 @@ def _split_top_level(css):
     return out
 
 
+def _split_comments(prelude):
+    """Separate leading comments from the selector they document.
+
+    A rule's prelude carries any comment written above it. Comments contain
+    commas and braces, so splitting the raw prelude on commas shreds the comment
+    into fake selectors and loses the real one. Pull them out first, and re-emit
+    them so the documentation survives the compile.
+    """
+    comments = []
+
+    def take(m):
+        comments.append(m.group(0))
+        return ' '
+
+    selector = re.sub(r'/\*.*?\*/', take, prelude, flags=re.S)
+    return comments, selector.strip()
+
+
+# :root / html / body, plus anything attached directly to it such as
+# [data-theme="moonrite"], :not(...), .a or #b.
+_ROOT_HEAD = re.compile(
+    r'^(?::root|html|body)'
+    r'(?:\[[^\]]*\]|:{1,2}[a-zA-Z-]+(?:\([^()]*\))?|\.[\w-]+|#[\w-]+)*')
+
+
 def _prefix_selector_list(selectors, scope):
     parts = []
     for sel in selectors.split(','):
         s = sel.strip()
         if not s:
             continue
-        if s.startswith(':root'):
-            # A page-local custom property block. Bind it to the scope so the
-            # override stays inside this category instead of going global.
-            parts.append(scope + s[len(':root'):])
-        elif s.split()[0] in ('html', 'body'):
-            parts.append(scope + s[len(s.split()[0]):])
-        elif s.startswith('@'):
+        if s.startswith('@'):
             parts.append(s)
+            continue
+        m = _ROOT_HEAD.match(s)
+        if m:
+            head = m.group(0)
+            rest = s[len(head):].strip()
+            bare = head in (':root', 'html', 'body')
+            if rest:
+                # The condition belongs on the root element, not on the scope:
+                # data-theme lives on <html>, so :root[data-theme="x"] .y has to
+                # become :root[data-theme="x"] .scope .y. Merging the two into
+                # .scope[data-theme="x"] would silently never match.
+                parts.append('%s %s %s' % (head, scope, rest))
+            elif bare:
+                # A page-local custom property block, or the page ground.
+                # Localise it to the scope.
+                parts.append(scope)
+            else:
+                parts.append('%s %s' % (head, scope))
         else:
             parts.append('%s %s' % (scope, s))
-    return ', '.join(parts)
+    out = ', '.join(parts)
+    # A comment reaching this function means the caller did not strip it, and
+    # the comma split has just shredded it into fake selectors. That silently
+    # drops the real rule, so fail loudly instead of emitting broken CSS.
+    if '/*' in out or '*/' in out:
+        raise ValueError('comment leaked into a selector list: %s' % out[:120])
+    return out
 
 
 def scope_css(css, scope, kf_prefix):
@@ -115,7 +158,9 @@ def scope_css(css, scope, kf_prefix):
     def render(constructs, indent=''):
         chunks = []
         for prelude, body in constructs:
-            pre = prelude.strip()
+            comments, pre = _split_comments(prelude)
+            if comments:
+                chunks.extend(c.strip() for c in comments)
             if body is None:
                 if pre:
                     chunks.append(pre)
@@ -203,3 +248,40 @@ def wrap_script(js, root_id):
         '  var document = window.__sbScopedDoc(__sbRoot);\n'
         '%s\n'
         '})(window.document.getElementById(%r));' % (js.rstrip(), root_id))
+
+
+def verify_scoped(css, scope):
+    """Return selectors that escaped the scope.
+
+    Cheap insurance against a parser slip. A comment sitting above a rule was
+    once comma-split into fake selectors, which silently dropped the real one,
+    so every compiled selector is re-checked: it must start with the scope, or
+    with a root condition that has the scope inside it.
+    """
+    bad = []
+
+    def walk(constructs):
+        for prelude, body in constructs:
+            if body is None:
+                continue
+            _c, pre = _split_comments(prelude)
+            low = pre.lower()
+            if low.startswith('@keyframes') or low.startswith('@-webkit-keyframes'):
+                continue
+            if low.startswith('@media') or low.startswith('@supports') \
+                    or low.startswith('@container') or low.startswith('@layer'):
+                walk(_split_top_level(body))
+                continue
+            if low.startswith('@'):
+                continue
+            for sel in pre.split(','):
+                s = sel.strip()
+                if not s:
+                    continue
+                if '/*' in s or '*/' in s:
+                    bad.append('comment leaked into a selector: %s' % s[:70])
+                elif not (s.startswith(scope) or (scope + ' ') in s):
+                    bad.append(s[:70])
+
+    walk(_split_top_level(css))
+    return bad

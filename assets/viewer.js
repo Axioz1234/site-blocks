@@ -148,9 +148,23 @@
     document.body.insertBefore(bar, header);
   }
 
+  /* ---- 3. Deep links ----
+     Offscreen blocks use content-visibility, so their height is an estimate
+     until they render. A #T320 in the URL therefore lands short on first load.
+     Re-run the jump once layout has settled. In-page clicks are unaffected. */
+  function jumpToHash() {
+    if (!window.location.hash) return;
+    var el = document.getElementById(window.location.hash.slice(1));
+    if (el) el.scrollIntoView();
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
+  window.addEventListener('load', function () {
+    jumpToHash();
+    window.setTimeout(jumpToHash, 120);
+  });
 })();
