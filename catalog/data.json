@@ -4,8 +4,9 @@
     "name": "KPI / metric cards",
     "category": "Data",
     "set": "core",
-    "file": "pages/data.html",
+    "page": "index.html",
     "anchor": "#T240",
+    "source": "pages/data.html",
     "description": "Dashboard stat tiles with a label, a big number, and a trend delta coloured by direction."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Sortable data table",
     "category": "Data",
     "set": "core",
-    "file": "pages/data.html",
+    "page": "index.html",
     "anchor": "#T241",
+    "source": "pages/data.html",
     "description": "A zebra-striped table with sortable headers. Click a column header to re-sort."
   },
   {
@@ -22,8 +24,9 @@
     "name": "Pricing billing toggle",
     "category": "Data",
     "set": "core",
-    "file": "pages/data.html",
+    "page": "index.html",
     "anchor": "#T242",
+    "source": "pages/data.html",
     "description": "A monthly / annual switch that swaps the displayed prices in place."
   },
   {
@@ -31,8 +34,9 @@
     "name": "Spec / definition list",
     "category": "Data",
     "set": "core",
-    "file": "pages/data.html",
+    "page": "index.html",
     "anchor": "#T243",
+    "source": "pages/data.html",
     "description": "A two-column key/value sheet for technical specs, metadata, or property tables."
   },
   {
@@ -40,8 +44,9 @@
     "name": "Horizontal bar chart",
     "category": "Data",
     "set": "core",
-    "file": "pages/data.html",
+    "page": "index.html",
     "anchor": "#T244",
+    "source": "pages/data.html",
     "description": "A lightweight, CSS-only comparison chart: labelled rows with proportional fills."
   },
   {
@@ -49,8 +54,9 @@
     "name": "Activity feed / timeline",
     "category": "Data",
     "set": "core",
-    "file": "pages/data.html",
+    "page": "index.html",
     "anchor": "#T245",
+    "source": "pages/data.html",
     "description": "A vertical, dotted timeline of recent events with a relative timestamp and a type tag."
   }
 ]

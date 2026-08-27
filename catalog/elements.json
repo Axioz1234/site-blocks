@@ -4,8 +4,9 @@
     "name": "Buttons",
     "category": "Elements",
     "set": "core",
-    "file": "pages/elements.html",
+    "page": "index.html",
     "anchor": "#T010",
+    "source": "pages/elements.html",
     "description": "Primary (accent fill), secondary (outline), and the nav install pill."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Eyebrow label",
     "category": "Elements",
     "set": "core",
-    "file": "pages/elements.html",
+    "page": "index.html",
     "anchor": "#T011",
+    "source": "pages/elements.html",
     "description": "Tracked, uppercase, accent-coloured section label prefixed with //."
   },
   {
@@ -22,8 +24,9 @@
     "name": "Badges & tags",
     "category": "Elements",
     "set": "core",
-    "file": "pages/elements.html",
+    "page": "index.html",
     "anchor": "#T012",
+    "source": "pages/elements.html",
     "description": "NEW badge, rounded pill tag chips, and the bordered numbered index box."
   },
   {
@@ -31,8 +34,9 @@
     "name": "Status pills",
     "category": "Elements",
     "set": "core",
-    "file": "pages/elements.html",
+    "page": "index.html",
     "anchor": "#T013",
+    "source": "pages/elements.html",
     "description": "Colour-coded state pills (Added, Changed, Fixed, Shipped, In Progress) for changelog and roadmap."
   },
   {
@@ -40,8 +44,9 @@
     "name": "Status pulse",
     "category": "Elements",
     "set": "core",
-    "file": "pages/elements.html",
+    "page": "index.html",
     "anchor": "#T014",
+    "source": "pages/elements.html",
     "description": "// SYSTEM ONLINE label with a pulsing green indicator dot."
   },
   {
@@ -49,8 +54,9 @@
     "name": "Accordion",
     "category": "Elements",
     "set": "core",
-    "file": "pages/elements.html",
+    "page": "index.html",
     "anchor": "#T015",
+    "source": "pages/elements.html",
     "description": "Native details/summary disclosure with an animated +/- marker, as used on the FAQ."
   },
   {
@@ -58,8 +64,9 @@
     "name": "Card",
     "category": "Elements",
     "set": "core",
-    "file": "pages/elements.html",
+    "page": "index.html",
     "anchor": "#T016",
+    "source": "pages/elements.html",
     "description": "Base card surface: hairline border, recessed fill, accent border and a lift on hover."
   }
 ]

@@ -4,8 +4,9 @@
     "name": "Pricing",
     "category": "Patterns",
     "set": "core",
-    "file": "pages/patterns.html",
+    "page": "index.html",
     "anchor": "#T070",
+    "source": "pages/patterns.html",
     "description": "Three-tier pricing with a highlighted recommended plan, feature lists, and CTAs."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Popup promo",
     "category": "Patterns",
     "set": "core",
-    "file": "pages/patterns.html",
+    "page": "index.html",
     "anchor": "#T071",
+    "source": "pages/patterns.html",
     "description": "A modal promotion built on the native <dialog> element. It opens over a dimmed backdrop and closes on the ✕ or a backdrop click."
   },
   {
@@ -22,8 +24,9 @@
     "name": "Gallery",
     "category": "Patterns",
     "set": "core",
-    "file": "pages/patterns.html",
+    "page": "index.html",
     "anchor": "#T072",
+    "source": "pages/patterns.html",
     "description": "A responsive thumbnail grid with hover captions. Click any tile to open it in a lightbox."
   },
   {
@@ -31,8 +34,9 @@
     "name": "Tabs",
     "category": "Patterns",
     "set": "core",
-    "file": "pages/patterns.html",
+    "page": "index.html",
     "anchor": "#T073",
+    "source": "pages/patterns.html",
     "description": "Tabbed panels that swap content in place. Click a tab to switch."
   },
   {
@@ -40,8 +44,9 @@
     "name": "Folders",
     "category": "Patterns",
     "set": "core",
-    "file": "pages/patterns.html",
+    "page": "index.html",
     "anchor": "#T074",
+    "source": "pages/patterns.html",
     "description": "A collapsible file tree built from nested <details>. Folders expand and collapse with no JavaScript."
   },
   {
@@ -49,8 +54,9 @@
     "name": "Toggle content",
     "category": "Patterns",
     "set": "core",
-    "file": "pages/patterns.html",
+    "page": "index.html",
     "anchor": "#T075",
+    "source": "pages/patterns.html",
     "description": "A switch that reveals or hides a block of content. CSS-only, using :has()."
   },
   {
@@ -58,8 +64,9 @@
     "name": "FAQ, expanded by default",
     "category": "Patterns",
     "set": "core",
-    "file": "pages/patterns.html",
+    "page": "index.html",
     "anchor": "#T076",
+    "source": "pages/patterns.html",
     "description": "The accordion pattern with every item open on load (open attribute set). Collapse any you don't need."
   },
   {
@@ -67,8 +74,9 @@
     "name": "Contact form",
     "category": "Patterns",
     "set": "core",
-    "file": "pages/patterns.html",
+    "page": "index.html",
     "anchor": "#T077",
+    "source": "pages/patterns.html",
     "description": "A labelled form with focus states and a demo submit (no backend attached)."
   },
   {
@@ -76,8 +84,9 @@
     "name": "Breadcrumbs",
     "category": "Patterns",
     "set": "core",
-    "file": "pages/patterns.html",
+    "page": "index.html",
     "anchor": "#T078",
+    "source": "pages/patterns.html",
     "description": "A path trail showing the visitor's location, with the current page un-linked."
   }
 ]

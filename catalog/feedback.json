@@ -4,8 +4,9 @@
     "name": "Toast notifications",
     "category": "Feedback",
     "set": "core",
-    "file": "pages/feedback.html",
+    "page": "index.html",
     "anchor": "#T220",
+    "source": "pages/feedback.html",
     "description": "Transient messages that stack in a corner and auto-dismiss."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Alert banners",
     "category": "Feedback",
     "set": "core",
-    "file": "pages/feedback.html",
+    "page": "index.html",
     "anchor": "#T221",
+    "source": "pages/feedback.html",
     "description": "Inline status messages in four intents: info, success, warning, and error."
   },
   {
@@ -22,8 +24,9 @@
     "name": "Tooltip",
     "category": "Feedback",
     "set": "core",
-    "file": "pages/feedback.html",
+    "page": "index.html",
     "anchor": "#T222",
+    "source": "pages/feedback.html",
     "description": "A small label that appears on hover or focus to explain a control."
   },
   {
@@ -31,8 +34,9 @@
     "name": "Empty state",
     "category": "Feedback",
     "set": "core",
-    "file": "pages/feedback.html",
+    "page": "index.html",
     "anchor": "#T223",
+    "source": "pages/feedback.html",
     "description": "Placeholder for no-data views: an icon, a line of guidance, and an action."
   },
   {
@@ -40,8 +44,9 @@
     "name": "Skeleton loader",
     "category": "Feedback",
     "set": "core",
-    "file": "pages/feedback.html",
+    "page": "index.html",
     "anchor": "#T224",
+    "source": "pages/feedback.html",
     "description": "Shimmering placeholders that mirror the shape of content while it loads."
   },
   {
@@ -49,8 +54,9 @@
     "name": "Spinners & progress",
     "category": "Feedback",
     "set": "core",
-    "file": "pages/feedback.html",
+    "page": "index.html",
     "anchor": "#T225",
+    "source": "pages/feedback.html",
     "description": "An indeterminate spinner, a determinate bar, and a circular progress ring."
   },
   {
@@ -58,8 +64,9 @@
     "name": "Confirmation dialog",
     "category": "Feedback",
     "set": "core",
-    "file": "pages/feedback.html",
+    "page": "index.html",
     "anchor": "#T226",
+    "source": "pages/feedback.html",
     "description": "A focused modal that asks the user to confirm a destructive action."
   }
 ]

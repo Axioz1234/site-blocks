@@ -116,7 +116,45 @@ plus `--heading-weight` `--heading-tracking` `--heading-transform`
 `--radius-sm` · `--radius` · `--radius-card` · `--radius-pill` · `--line-weight`.
 Use `--line-weight` in every `border:` shorthand, never a literal `1px`.
 
-## 3. Page skeleton
+## 3. How the library is assembled
+
+The library is **browsed as one page**, `index.html`, and **authored as one file
+per category** under `pages/`. `tools/build.py` compiles the sources into the page.
+
+Never hand-edit `index.html`, `catalog.json`, or anything between the
+`<!-- BUILD:START -->` and `<!-- BUILD:END -->` markers. Edit a source page, then:
+
+```bash
+python tools/build.py && python tools/check.py
+```
+
+`check.py` fails if `index.html` is stale against the catalog, so a forgotten build
+cannot ship.
+
+### Why the compile scopes everything
+
+The source pages were written independently, so merging them naively breaks them:
+44 class names are shared and some carry different rules (`.sgx-preview` differs
+between categories), 11 scripts query generic state classes such as `.is-active`,
+and `@keyframes tbPulse` is declared in three pages. The compiler therefore wraps
+each category in `.src-<slug>` and isolates it:
+
+- **CSS** every selector is prefixed with the scope, `:root` blocks are remapped
+  onto it, `@keyframes` are renamed and their references rewritten. A class scope
+  rather than an id keeps the specificity bump at 10, so `base.css` theme
+  overrides still win where they should.
+- **JS** each script runs with `document` shadowed by a proxy scoped to that
+  category's subtree. Lookups cannot escape it; everything else forwards to the
+  real document.
+
+This means **you do not have to worry about collisions when authoring**. Write a
+page as if it were standalone. Prefixing your classes is still good manners, and
+still required for anything you expect someone to copy out, but a collision will
+not break the compiled page.
+
+See `tools/compile_page.py`.
+
+## 4. Page skeleton
 
 Every file in `pages/` uses exactly this.
 
@@ -171,7 +209,7 @@ classic script so the theme lands before first paint.
 Anything prefixed `tb-` is viewer chrome, styled by `assets/viewer.css`. Never
 style a `tb-` class from a page, and never use a `tb-` prefix for a block class.
 
-## 4. Constraints
+## 5. Constraints
 
 1. **Works from `file://`.** Relative paths only. No `fetch()`, no ES modules, no
    CDN scripts, no icon fonts. Google Fonts, loaded from `base.css`, is the one
@@ -191,17 +229,22 @@ style a `tb-` class from a page, and never use a `tb-` prefix for a block class.
    explanation, a full stop between independent clauses, commas around an aside.
    En dashes in genuine numeric ranges (`$40–$60`) are correct and stay.
 
-## 5. Catalog
+## 6. Catalog
 
 Each category owns a fragment at `catalog/{slug}.json`, an array in T order:
 
 ```json
 [
   { "id": "T300", "name": "Collection hero", "category": "Catalogue",
-    "set": "ecommerce", "file": "pages/ecom-catalogue.html", "anchor": "#T300",
+    "set": "ecommerce", "page": "index.html", "anchor": "#T300",
+    "source": "pages/ecom-catalogue.html",
     "description": "One line saying what it is and when to reach for it." }
 ]
 ```
+
+`page` + `anchor` is where a human looks at the block. `source` is the authoring
+file it is compiled from, which is the easier one to lift code out of because its
+CSS and JS are unscoped there.
 
 `catalog/_categories.json` holds the category order, titles, blurbs and set
 membership. `catalog.json` and the body of `index.html` are **generated**:
@@ -216,24 +259,25 @@ Never hand-edit `catalog.json`, or the region of `index.html` between the
 Descriptions must be theme-neutral. Write "accent fill", not "orange fill": the
 same block is navy in the other theme.
 
-## 6. Adding a block
+## 7. Adding a block
 
 1. Pick the next free T-number in that category's range.
-2. Add the `tb-pattern` article to the page, in T order.
+2. Add the `tb-pattern` article to the **source page**, in T order.
 3. Add its CSS to that page's `<style>`, using the page prefix and tokens only.
 4. Add its entry to `catalog/{slug}.json`.
 5. `python tools/build.py && python tools/check.py`.
-6. Look at it in both themes before committing.
+6. Look at it in `index.html` in both themes before committing.
 
-## 7. Adding a category
+## 8. Adding a category
 
 1. Claim a T range that does not collide (see the map in `README.md`).
 2. Create `pages/{slug}.html` from the skeleton above.
 3. Create `catalog/{slug}.json`.
-4. Add an entry to `catalog/_categories.json` with its `set`.
+4. Add an entry to `catalog/_categories.json` with its `set`. The compiler picks
+   the new category up from there and gives it its own `.src-{slug}` scope.
 5. `python tools/build.py && python tools/check.py`.
 
-## 8. Adding a theme
+## 9. Adding a theme
 
 1. Copy the `[data-theme="moonrite"]` block in `assets/base.css`, rename the
    attribute value, and re-point **every** token in it. A token you forget falls
@@ -243,7 +287,7 @@ same block is navy in the other theme.
    values. Clearing 4.5:1 is not inherited from another theme.
 4. Page through both sets and look at every block.
 
-## 9. Extraction rules (for packaging a new source design)
+## 10. Extraction rules (for packaging a new source design)
 
 1. **Faithful extraction, then tokenise.** Keep class names, markup structure and
    layout exactly as in the source. You are packaging, not redesigning. The only

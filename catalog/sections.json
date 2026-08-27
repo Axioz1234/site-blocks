@@ -4,8 +4,9 @@
     "name": "Sticky Nav Bar",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T040",
+    "source": "pages/sections.html",
     "description": "Top navigation with logo, version dropdown, links, social icons, INSTALL button, and a mobile hamburger."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Split Hero",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T041",
+    "source": "pages/sections.html",
     "description": "Two-column homepage hero: status pill, headline, feature list, CTAs on the left; badges + code card on the right; glow video behind."
   },
   {
@@ -22,8 +24,9 @@
     "name": "Page Hero",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T042",
+    "source": "pages/sections.html",
     "description": "Eyebrow + headline + lead paragraph over a star-field. The standard top of every interior page."
   },
   {
@@ -31,8 +34,9 @@
     "name": "Status Pill",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T043",
+    "source": "pages/sections.html",
     "description": "\"// SYSTEM ONLINE\" label with a pulsing green Loader. Signals a live state."
   },
   {
@@ -40,8 +44,9 @@
     "name": "Code Block Card",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T044",
+    "source": "pages/sections.html",
     "description": "Terminal-style card with an accent bar, a typewriter command, and a copy button."
   },
   {
@@ -49,8 +54,9 @@
     "name": "How It Works",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T045",
+    "source": "pages/sections.html",
     "description": "Bordered container with corner accents, an embedded demo video, and a 3-up numbered steps grid."
   },
   {
@@ -58,8 +64,9 @@
     "name": "Comparison Table",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T046",
+    "source": "pages/sections.html",
     "description": "Feature-by-feature table contrasting AstroAnimate with alternatives, using check / cross / warn icons."
   },
   {
@@ -67,8 +74,9 @@
     "name": "Performance / Architecture Grids",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T047",
+    "source": "pages/sections.html",
     "description": "Icon + stat + caption cards laid out on a hairline grid."
   },
   {
@@ -76,8 +84,9 @@
     "name": "Use-case & Doc-structure Tabs",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T048",
+    "source": "pages/sections.html",
     "description": "Tabbed panels that swap content in place to show different scenarios."
   },
   {
@@ -85,8 +94,9 @@
     "name": "Open-source Panel",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T049",
+    "source": "pages/sections.html",
     "description": "Two-column block: prose on the left, a stacked key/value badge column (LICENSE, SIZE, RUNTIME) on the right."
   },
   {
@@ -94,8 +104,9 @@
     "name": "Principle / Feature Grid",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T050",
+    "source": "pages/sections.html",
     "description": "Numbered cards (01–06) on a hairline grid describing values or features."
   },
   {
@@ -103,8 +114,9 @@
     "name": "Docs Layout",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T051",
+    "source": "pages/sections.html",
     "description": "Three-column app shell: collapsible grouped sidebar, centered reading column, right \"in this page\" TOC."
   },
   {
@@ -112,8 +124,9 @@
     "name": "Right TOC (scroll-spy)",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T052",
+    "source": "pages/sections.html",
     "description": "\"IN THIS PAGE\" rail that highlights the active heading as you scroll."
   },
   {
@@ -121,8 +134,9 @@
     "name": "Component Card Grid",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T053",
+    "source": "pages/sections.html",
     "description": "Catalog of components grouped by category, each card with name, NEW badge, description, and subpath import."
   },
   {
@@ -130,8 +144,9 @@
     "name": "Blog Listing",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T054",
+    "source": "pages/sections.html",
     "description": "A featured post + side cards, a category filter with search, and a dash-separated post list."
   },
   {
@@ -139,8 +154,9 @@
     "name": "Article Layout",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T055",
+    "source": "pages/sections.html",
     "description": "Article header with cover image and author, a sticky table of contents, and a prose body with code blocks, callouts, and comparison tables."
   },
   {
@@ -148,8 +164,9 @@
     "name": "FAQ Accordion",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T056",
+    "source": "pages/sections.html",
     "description": "Questions grouped by category, each a native disclosure with an animated +/− marker."
   },
   {
@@ -157,8 +174,9 @@
     "name": "Showcase Grid",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T057",
+    "source": "pages/sections.html",
     "description": "Cards with a gradient placeholder thumbnail, tags, name, description, and a visit link."
   },
   {
@@ -166,8 +184,9 @@
     "name": "Changelog Timeline",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T058",
+    "source": "pages/sections.html",
     "description": "Vertical timeline with version dots and Added / Changed / Fixed change tags per release."
   },
   {
@@ -175,8 +194,9 @@
     "name": "Roadmap Columns",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T059",
+    "source": "pages/sections.html",
     "description": "Status-grouped columns (Shipped, In Progress, Planned, Exploring) of feature cards with status pills."
   },
   {
@@ -184,8 +204,9 @@
     "name": "Support Channels",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T060",
+    "source": "pages/sections.html",
     "description": "Grid of channel cards plus a numbered \"good bug report\" checklist and quick links."
   },
   {
@@ -193,8 +214,9 @@
     "name": "Contact Form",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T061",
+    "source": "pages/sections.html",
     "description": "Demo form (no backend) beside a column of contact-method cards."
   },
   {
@@ -202,8 +224,9 @@
     "name": "Final CTA Block",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T062",
+    "source": "pages/sections.html",
     "description": "Centered eyebrow + headline + button pair over a star-field, closing a page."
   },
   {
@@ -211,8 +234,9 @@
     "name": "Footer",
     "category": "Sections",
     "set": "core",
-    "file": "pages/sections.html",
+    "page": "index.html",
     "anchor": "#T063",
+    "source": "pages/sections.html",
     "description": "Five-column footer with newsletter signup and a bottom bar showing a live UTC clock."
   }
 ]

@@ -4,8 +4,9 @@
     "name": "Logo cloud / \"trusted by\" strip",
     "category": "Social proof",
     "set": "core",
-    "file": "pages/social.html",
+    "page": "index.html",
     "anchor": "#T140",
+    "source": "pages/social.html",
     "description": "A muted row of company wordmarks under a small label. Marquees slowly and pauses on hover."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Testimonial wall",
     "category": "Social proof",
     "set": "core",
-    "file": "pages/social.html",
+    "page": "index.html",
     "anchor": "#T141",
+    "source": "pages/social.html",
     "description": "A multi-column masonry of quote cards: quote, initials avatar, name and role. Static."
   },
   {
@@ -22,8 +24,9 @@
     "name": "Quote slider",
     "category": "Social proof",
     "set": "core",
-    "file": "pages/social.html",
+    "page": "index.html",
     "anchor": "#T142",
+    "source": "pages/social.html",
     "description": "One large rotating testimonial. Prev / next buttons and dots advance it; it also auto-advances every 6s."
   },
   {
@@ -31,8 +34,9 @@
     "name": "Newsletter / waitlist capture",
     "category": "Social proof",
     "set": "core",
-    "file": "pages/social.html",
+    "page": "index.html",
     "anchor": "#T143",
+    "source": "pages/social.html",
     "description": "An inline email capture that swaps to a success state on submit; also opens in a native <dialog>."
   },
   {
@@ -40,8 +44,9 @@
     "name": "Video demo modal",
     "category": "Social proof",
     "set": "core",
-    "file": "pages/social.html",
+    "page": "index.html",
     "anchor": "#T144",
+    "source": "pages/social.html",
     "description": "A 16:9 thumbnail with a circular play button that opens a placeholder video frame in a native <dialog>."
   },
   {
@@ -49,8 +54,9 @@
     "name": "Customer case-study cards",
     "category": "Social proof",
     "set": "core",
-    "file": "pages/social.html",
+    "page": "index.html",
     "anchor": "#T145",
+    "source": "pages/social.html",
     "description": "A three-up grid: wordmark, a headline metric, a one-line summary, an industry chip, and a read-story link."
   },
   {
@@ -58,8 +64,9 @@
     "name": "Trust / guarantee bar",
     "category": "Social proof",
     "set": "core",
-    "file": "pages/social.html",
+    "page": "index.html",
     "anchor": "#T146",
+    "source": "pages/social.html",
     "description": "A row of four icon + label reassurances, the kind that sits just beside a final CTA. Static."
   }
 ]

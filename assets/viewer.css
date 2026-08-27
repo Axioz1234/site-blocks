@@ -185,3 +185,52 @@
   margin: 0 0 6px;
 }
 .tb-setrule p { color: var(--text-3); font-size: 14px; margin: 0; max-width: 640px; }
+
+/* ---- Single-page structure ----
+   The library is one document: the block list first, then every block below it. */
+.tb-blocksrule {
+  margin: 96px 0 0;
+  padding-top: 32px;
+  border-top: var(--line-weight) solid var(--border-3);
+  scroll-margin-top: 72px;
+}
+.tb-blocksrule h2 { font-family: var(--font-display); font-size: 30px; margin: 0 0 6px; }
+.tb-blocksrule p { color: var(--text-3); font-size: 14px; margin: 0; max-width: 640px; }
+
+.tb-src { margin-top: 64px; }
+.tb-srchead {
+  position: sticky;
+  top: 53px;
+  z-index: 20;
+  background: var(--bg-black);
+  padding: 14px 0 12px;
+  border-bottom: var(--line-weight) solid var(--border-2);
+  margin-bottom: 8px;
+}
+.tb-srchead h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin: 0 0 2px;
+  scroll-margin-top: 120px;
+}
+.tb-srchead p { color: var(--text-3); font-size: 13px; margin: 0; max-width: 720px; }
+.tb-tolist {
+  position: absolute;
+  right: 0;
+  top: 16px;
+  font-family: var(--font-eyebrow);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-4);
+}
+.tb-tolist:hover { color: var(--accent); }
+@media (max-width: 640px) { .tb-tolist { display: none; } }
+
+/* 177 live blocks in one document, several of them animating. Skipping the
+   offscreen ones keeps scrolling smooth; `auto` still lets find-in-page and
+   fragment links reach them. */
+.tb-src .tb-pattern {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 640px;
+}

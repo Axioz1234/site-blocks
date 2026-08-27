@@ -4,8 +4,9 @@
     "name": "Author byline + bio card",
     "category": "Content",
     "set": "core",
-    "file": "pages/content.html",
+    "page": "index.html",
     "anchor": "#T160",
+    "source": "pages/content.html",
     "description": "A compact byline strip at the top of a post and a fuller author bio card to close it out."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Related articles",
     "category": "Content",
     "set": "core",
-    "file": "pages/content.html",
+    "page": "index.html",
     "anchor": "#T161",
+    "source": "pages/content.html",
     "description": "A \"Read next\" grid surfacing three more posts by category, title, and read time."
   },
   {
@@ -22,8 +24,9 @@
     "name": "Reading-progress bar",
     "category": "Content",
     "set": "core",
-    "file": "pages/content.html",
+    "page": "index.html",
     "anchor": "#T162",
+    "source": "pages/content.html",
     "description": "A progress bar pinned to the top of a scroll container that fills as you read inside the box."
   },
   {
@@ -31,8 +34,9 @@
     "name": "Tag / category filter",
     "category": "Content",
     "set": "core",
-    "file": "pages/content.html",
+    "page": "index.html",
     "anchor": "#T163",
+    "source": "pages/content.html",
     "description": "A chip row that live-filters the post list below by category."
   },
   {
@@ -40,8 +44,9 @@
     "name": "Trending / most-popular list",
     "category": "Content",
     "set": "core",
-    "file": "pages/content.html",
+    "page": "index.html",
     "anchor": "#T164",
+    "source": "pages/content.html",
     "description": "A ranked list with oversized numerals and an optional view-count meta line."
   },
   {
@@ -49,8 +54,9 @@
     "name": "Series / chapter nav",
     "category": "Content",
     "set": "core",
-    "file": "pages/content.html",
+    "page": "index.html",
     "anchor": "#T165",
+    "source": "pages/content.html",
     "description": "A \"Part 2 of 5\" bar with titled previous/next arrows and a thin progress indicator."
   },
   {
@@ -58,8 +64,9 @@
     "name": "Pull quote",
     "category": "Content",
     "set": "core",
-    "file": "pages/content.html",
+    "page": "index.html",
     "anchor": "#T166",
+    "source": "pages/content.html",
     "description": "An oversized, offset quote block with a large quotation mark, accent rule, and attribution."
   }
 ]

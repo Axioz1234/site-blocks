@@ -4,8 +4,9 @@
     "name": "TypewriterText + copy card",
     "category": "Library components",
     "set": "core",
-    "file": "pages/components.html",
+    "page": "index.html",
     "anchor": "#T030",
+    "source": "pages/components.html",
     "description": "Terminal-style code card with an accent bar, an npm command, and a copy-to-clipboard button."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Loader (pulse)",
     "category": "Library components",
     "set": "core",
-    "file": "pages/components.html",
+    "page": "index.html",
     "anchor": "#T031",
+    "source": "pages/components.html",
     "description": "Pulsing loader dots in the success and accent colours, a static equivalent of @astroanimate/core/Loader."
   }
 ]

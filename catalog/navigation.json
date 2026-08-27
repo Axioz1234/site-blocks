@@ -4,8 +4,9 @@
     "name": "Mega menu",
     "category": "Navigation",
     "set": "core",
-    "file": "pages/navigation.html",
+    "page": "index.html",
     "anchor": "#T180",
+    "source": "pages/navigation.html",
     "description": "A wide multi-column dropdown for sites with deep navigation, with a CountUp featured card."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Pagination",
     "category": "Navigation",
     "set": "core",
-    "file": "pages/navigation.html",
+    "page": "index.html",
     "anchor": "#T181",
+    "source": "pages/navigation.html",
     "description": "Numbered page controls with previous / next, an active page, and a truncation gap."
   },
   {
@@ -22,8 +24,9 @@
     "name": "Stepper / wizard progress",
     "category": "Navigation",
     "set": "core",
-    "file": "pages/navigation.html",
+    "page": "index.html",
     "anchor": "#T182",
+    "source": "pages/navigation.html",
     "description": "A horizontal step indicator for multi-step flows, with completed, current, and upcoming states."
   },
   {
@@ -31,8 +34,9 @@
     "name": "Segmented control",
     "category": "Navigation",
     "set": "core",
-    "file": "pages/navigation.html",
+    "page": "index.html",
     "anchor": "#T183",
+    "source": "pages/navigation.html",
     "description": "A compact pill toggle for switching between a few mutually exclusive views."
   },
   {
@@ -40,8 +44,9 @@
     "name": "Back-to-top button",
     "category": "Navigation",
     "set": "core",
-    "file": "pages/navigation.html",
+    "page": "index.html",
     "anchor": "#T184",
+    "source": "pages/navigation.html",
     "description": "A floating control that appears once the user scrolls down, then jumps them back up."
   },
   {
@@ -49,8 +54,9 @@
     "name": "Sticky action bar",
     "category": "Navigation",
     "set": "core",
-    "file": "pages/navigation.html",
+    "page": "index.html",
     "anchor": "#T185",
+    "source": "pages/navigation.html",
     "description": "A persistent bottom bar pairing a summary with the primary call to action, pinned while content scrolls."
   },
   {
@@ -58,8 +64,9 @@
     "name": "Actions menu",
     "category": "Navigation",
     "set": "core",
-    "file": "pages/navigation.html",
+    "page": "index.html",
     "anchor": "#T186",
+    "source": "pages/navigation.html",
     "description": "A kebab / overflow menu that reveals contextual actions on click."
   }
 ]

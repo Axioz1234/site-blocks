@@ -4,8 +4,9 @@
     "name": "Product card",
     "category": "Commerce",
     "set": "ecommerce",
-    "file": "pages/commerce.html",
+    "page": "index.html",
     "anchor": "#T260",
+    "source": "pages/commerce.html",
     "description": "A shoppable card with image, badge, title, rating, price (with strike-through), and add-to-cart."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Star rating & review",
     "category": "Commerce",
     "set": "ecommerce",
-    "file": "pages/commerce.html",
+    "page": "index.html",
     "anchor": "#T261",
+    "source": "pages/commerce.html",
     "description": "An aggregate rating summary with a distribution breakdown beside an individual review card."
   },
   {
@@ -22,8 +24,9 @@
     "name": "Cart / order summary",
     "category": "Commerce",
     "set": "ecommerce",
-    "file": "pages/commerce.html",
+    "page": "index.html",
     "anchor": "#T262",
+    "source": "pages/commerce.html",
     "description": "A checkout-side summary: line items, a promo field, the totals breakdown, and the pay button."
   },
   {
@@ -31,8 +34,9 @@
     "name": "Filter sidebar",
     "category": "Commerce",
     "set": "ecommerce",
-    "file": "pages/commerce.html",
+    "page": "index.html",
     "anchor": "#T263",
+    "source": "pages/commerce.html",
     "description": "A faceted filter rail: category checkboxes, a price range, and active filter chips you can clear."
   },
   {
@@ -40,8 +44,9 @@
     "name": "Countdown timer",
     "category": "Commerce",
     "set": "ecommerce",
-    "file": "pages/commerce.html",
+    "page": "index.html",
     "anchor": "#T264",
+    "source": "pages/commerce.html",
     "description": "An urgency timer for sales and launches, ticking down in days / hours / minutes / seconds."
   },
   {
@@ -49,8 +54,9 @@
     "name": "Avatar group & social proof",
     "category": "Commerce",
     "set": "ecommerce",
-    "file": "pages/commerce.html",
+    "page": "index.html",
     "anchor": "#T265",
+    "source": "pages/commerce.html",
     "description": "Stacked, overlapping avatars with an overflow count, the \"join 2,000+ others\" cue."
   }
 ]

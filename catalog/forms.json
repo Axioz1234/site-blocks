@@ -4,8 +4,9 @@
     "name": "Input field library",
     "category": "Forms",
     "set": "core",
-    "file": "pages/forms.html",
+    "page": "index.html",
     "anchor": "#T200",
+    "source": "pages/forms.html",
     "description": "Text, select, and textarea with label, helper text, and the default / focus / error / disabled states."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Choice controls",
     "category": "Forms",
     "set": "core",
-    "file": "pages/forms.html",
+    "page": "index.html",
     "anchor": "#T201",
+    "source": "pages/forms.html",
     "description": "Checkboxes, a radio group, and an on/off switch: the three ways to capture a boolean or a pick."
   },
   {
@@ -22,8 +24,9 @@
     "name": "Range & number",
     "category": "Forms",
     "set": "core",
-    "file": "pages/forms.html",
+    "page": "index.html",
     "anchor": "#T202",
+    "source": "pages/forms.html",
     "description": "A slider with a live value read-out and a stepper number input with − / + controls."
   },
   {
@@ -31,8 +34,9 @@
     "name": "Search with autocomplete",
     "category": "Forms",
     "set": "core",
-    "file": "pages/forms.html",
+    "page": "index.html",
     "anchor": "#T203",
+    "source": "pages/forms.html",
     "description": "A search input that filters a suggestion list as you type."
   },
   {
@@ -40,8 +44,9 @@
     "name": "Multi-step form",
     "category": "Forms",
     "set": "core",
-    "file": "pages/forms.html",
+    "page": "index.html",
     "anchor": "#T204",
+    "source": "pages/forms.html",
     "description": "A wizard that advances through panels with Back / Next, keeping the rest hidden."
   },
   {
@@ -49,8 +54,9 @@
     "name": "File upload / dropzone",
     "category": "Forms",
     "set": "core",
-    "file": "pages/forms.html",
+    "page": "index.html",
     "anchor": "#T205",
+    "source": "pages/forms.html",
     "description": "A drag-and-drop target with a browse fallback and a list of selected files."
   },
   {
@@ -58,8 +64,9 @@
     "name": "Cookie consent",
     "category": "Forms",
     "set": "core",
-    "file": "pages/forms.html",
+    "page": "index.html",
     "anchor": "#T206",
+    "source": "pages/forms.html",
     "description": "A consent banner with accept / reject and a link to preferences."
   }
 ]

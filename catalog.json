@@ -1,6 +1,6 @@
 {
   "name": "site-blocks",
-  "description": "T-numbered library of website sections and UI patterns in two themes. Look up an ID, open its file, copy the markup inside .tb-demo plus the page <style> rules it uses, and bring the tokens from assets/base.css.",
+  "description": "T-numbered library of website sections and UI patterns in two themes, all on one page. Look up an ID, open index.html at its anchor, and copy the markup inside that block's .tb-demo wrapper plus the tokens from assets/base.css. The \"source\" field is the authoring file the block is compiled from, which carries its CSS and JS unscoped and is the easier one to lift from.",
   "themes": [
     "dark",
     "moonrite"
@@ -9,6 +9,7 @@
     "core": "The original AstroAnimate-derived library.",
     "ecommerce": "The retail set: catalogue, product, checkout, merchandising, account."
   },
+  "page": "index.html",
   "count": 177,
   "countBySet": {
     "core": 106,
@@ -20,8 +21,9 @@
       "name": "Colour palette",
       "category": "Foundations",
       "set": "core",
-      "file": "pages/foundations.html",
+      "page": "index.html",
       "anchor": "#T001",
+      "source": "pages/foundations.html",
       "description": "Every design token as a live swatch, named, with its role and both theme values, so you can see what a block is allowed to use."
     },
     {
@@ -29,8 +31,9 @@
       "name": "Font families",
       "category": "Foundations",
       "set": "core",
-      "file": "pages/foundations.html",
+      "page": "index.html",
       "anchor": "#T002",
+      "source": "pages/foundations.html",
       "description": "The three type roles (display, body, mono) rendered in whichever theme is active, with both themes' families named."
     },
     {
@@ -38,8 +41,9 @@
       "name": "Type scale",
       "category": "Foundations",
       "set": "core",
-      "file": "pages/foundations.html",
+      "page": "index.html",
       "anchor": "#T003",
+      "source": "pages/foundations.html",
       "description": "Bordered scale table showing the H1 to H3 heading sizes, the body measure, and the tracked eyebrow label."
     },
     {
@@ -47,8 +51,9 @@
       "name": "Buttons",
       "category": "Elements",
       "set": "core",
-      "file": "pages/elements.html",
+      "page": "index.html",
       "anchor": "#T010",
+      "source": "pages/elements.html",
       "description": "Primary (accent fill), secondary (outline), and the nav install pill."
     },
     {
@@ -56,8 +61,9 @@
       "name": "Eyebrow label",
       "category": "Elements",
       "set": "core",
-      "file": "pages/elements.html",
+      "page": "index.html",
       "anchor": "#T011",
+      "source": "pages/elements.html",
       "description": "Tracked, uppercase, accent-coloured section label prefixed with //."
     },
     {
@@ -65,8 +71,9 @@
       "name": "Badges & tags",
       "category": "Elements",
       "set": "core",
-      "file": "pages/elements.html",
+      "page": "index.html",
       "anchor": "#T012",
+      "source": "pages/elements.html",
       "description": "NEW badge, rounded pill tag chips, and the bordered numbered index box."
     },
     {
@@ -74,8 +81,9 @@
       "name": "Status pills",
       "category": "Elements",
       "set": "core",
-      "file": "pages/elements.html",
+      "page": "index.html",
       "anchor": "#T013",
+      "source": "pages/elements.html",
       "description": "Colour-coded state pills (Added, Changed, Fixed, Shipped, In Progress) for changelog and roadmap."
     },
     {
@@ -83,8 +91,9 @@
       "name": "Status pulse",
       "category": "Elements",
       "set": "core",
-      "file": "pages/elements.html",
+      "page": "index.html",
       "anchor": "#T014",
+      "source": "pages/elements.html",
       "description": "// SYSTEM ONLINE label with a pulsing green indicator dot."
     },
     {
@@ -92,8 +101,9 @@
       "name": "Accordion",
       "category": "Elements",
       "set": "core",
-      "file": "pages/elements.html",
+      "page": "index.html",
       "anchor": "#T015",
+      "source": "pages/elements.html",
       "description": "Native details/summary disclosure with an animated +/- marker, as used on the FAQ."
     },
     {
@@ -101,8 +111,9 @@
       "name": "Card",
       "category": "Elements",
       "set": "core",
-      "file": "pages/elements.html",
+      "page": "index.html",
       "anchor": "#T016",
+      "source": "pages/elements.html",
       "description": "Base card surface: hairline border, recessed fill, accent border and a lift on hover."
     },
     {
@@ -110,8 +121,9 @@
       "name": "TypewriterText + copy card",
       "category": "Library components",
       "set": "core",
-      "file": "pages/components.html",
+      "page": "index.html",
       "anchor": "#T030",
+      "source": "pages/components.html",
       "description": "Terminal-style code card with an accent bar, an npm command, and a copy-to-clipboard button."
     },
     {
@@ -119,8 +131,9 @@
       "name": "Loader (pulse)",
       "category": "Library components",
       "set": "core",
-      "file": "pages/components.html",
+      "page": "index.html",
       "anchor": "#T031",
+      "source": "pages/components.html",
       "description": "Pulsing loader dots in the success and accent colours, a static equivalent of @astroanimate/core/Loader."
     },
     {
@@ -128,8 +141,9 @@
       "name": "Sticky Nav Bar",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T040",
+      "source": "pages/sections.html",
       "description": "Top navigation with logo, version dropdown, links, social icons, INSTALL button, and a mobile hamburger."
     },
     {
@@ -137,8 +151,9 @@
       "name": "Split Hero",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T041",
+      "source": "pages/sections.html",
       "description": "Two-column homepage hero: status pill, headline, feature list, CTAs on the left; badges + code card on the right; glow video behind."
     },
     {
@@ -146,8 +161,9 @@
       "name": "Page Hero",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T042",
+      "source": "pages/sections.html",
       "description": "Eyebrow + headline + lead paragraph over a star-field. The standard top of every interior page."
     },
     {
@@ -155,8 +171,9 @@
       "name": "Status Pill",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T043",
+      "source": "pages/sections.html",
       "description": "\"// SYSTEM ONLINE\" label with a pulsing green Loader. Signals a live state."
     },
     {
@@ -164,8 +181,9 @@
       "name": "Code Block Card",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T044",
+      "source": "pages/sections.html",
       "description": "Terminal-style card with an accent bar, a typewriter command, and a copy button."
     },
     {
@@ -173,8 +191,9 @@
       "name": "How It Works",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T045",
+      "source": "pages/sections.html",
       "description": "Bordered container with corner accents, an embedded demo video, and a 3-up numbered steps grid."
     },
     {
@@ -182,8 +201,9 @@
       "name": "Comparison Table",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T046",
+      "source": "pages/sections.html",
       "description": "Feature-by-feature table contrasting AstroAnimate with alternatives, using check / cross / warn icons."
     },
     {
@@ -191,8 +211,9 @@
       "name": "Performance / Architecture Grids",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T047",
+      "source": "pages/sections.html",
       "description": "Icon + stat + caption cards laid out on a hairline grid."
     },
     {
@@ -200,8 +221,9 @@
       "name": "Use-case & Doc-structure Tabs",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T048",
+      "source": "pages/sections.html",
       "description": "Tabbed panels that swap content in place to show different scenarios."
     },
     {
@@ -209,8 +231,9 @@
       "name": "Open-source Panel",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T049",
+      "source": "pages/sections.html",
       "description": "Two-column block: prose on the left, a stacked key/value badge column (LICENSE, SIZE, RUNTIME) on the right."
     },
     {
@@ -218,8 +241,9 @@
       "name": "Principle / Feature Grid",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T050",
+      "source": "pages/sections.html",
       "description": "Numbered cards (01–06) on a hairline grid describing values or features."
     },
     {
@@ -227,8 +251,9 @@
       "name": "Docs Layout",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T051",
+      "source": "pages/sections.html",
       "description": "Three-column app shell: collapsible grouped sidebar, centered reading column, right \"in this page\" TOC."
     },
     {
@@ -236,8 +261,9 @@
       "name": "Right TOC (scroll-spy)",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T052",
+      "source": "pages/sections.html",
       "description": "\"IN THIS PAGE\" rail that highlights the active heading as you scroll."
     },
     {
@@ -245,8 +271,9 @@
       "name": "Component Card Grid",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T053",
+      "source": "pages/sections.html",
       "description": "Catalog of components grouped by category, each card with name, NEW badge, description, and subpath import."
     },
     {
@@ -254,8 +281,9 @@
       "name": "Blog Listing",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T054",
+      "source": "pages/sections.html",
       "description": "A featured post + side cards, a category filter with search, and a dash-separated post list."
     },
     {
@@ -263,8 +291,9 @@
       "name": "Article Layout",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T055",
+      "source": "pages/sections.html",
       "description": "Article header with cover image and author, a sticky table of contents, and a prose body with code blocks, callouts, and comparison tables."
     },
     {
@@ -272,8 +301,9 @@
       "name": "FAQ Accordion",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T056",
+      "source": "pages/sections.html",
       "description": "Questions grouped by category, each a native disclosure with an animated +/− marker."
     },
     {
@@ -281,8 +311,9 @@
       "name": "Showcase Grid",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T057",
+      "source": "pages/sections.html",
       "description": "Cards with a gradient placeholder thumbnail, tags, name, description, and a visit link."
     },
     {
@@ -290,8 +321,9 @@
       "name": "Changelog Timeline",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T058",
+      "source": "pages/sections.html",
       "description": "Vertical timeline with version dots and Added / Changed / Fixed change tags per release."
     },
     {
@@ -299,8 +331,9 @@
       "name": "Roadmap Columns",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T059",
+      "source": "pages/sections.html",
       "description": "Status-grouped columns (Shipped, In Progress, Planned, Exploring) of feature cards with status pills."
     },
     {
@@ -308,8 +341,9 @@
       "name": "Support Channels",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T060",
+      "source": "pages/sections.html",
       "description": "Grid of channel cards plus a numbered \"good bug report\" checklist and quick links."
     },
     {
@@ -317,8 +351,9 @@
       "name": "Contact Form",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T061",
+      "source": "pages/sections.html",
       "description": "Demo form (no backend) beside a column of contact-method cards."
     },
     {
@@ -326,8 +361,9 @@
       "name": "Final CTA Block",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T062",
+      "source": "pages/sections.html",
       "description": "Centered eyebrow + headline + button pair over a star-field, closing a page."
     },
     {
@@ -335,8 +371,9 @@
       "name": "Footer",
       "category": "Sections",
       "set": "core",
-      "file": "pages/sections.html",
+      "page": "index.html",
       "anchor": "#T063",
+      "source": "pages/sections.html",
       "description": "Five-column footer with newsletter signup and a bottom bar showing a live UTC clock."
     },
     {
@@ -344,8 +381,9 @@
       "name": "Pricing",
       "category": "Patterns",
       "set": "core",
-      "file": "pages/patterns.html",
+      "page": "index.html",
       "anchor": "#T070",
+      "source": "pages/patterns.html",
       "description": "Three-tier pricing with a highlighted recommended plan, feature lists, and CTAs."
     },
     {
@@ -353,8 +391,9 @@
       "name": "Popup promo",
       "category": "Patterns",
       "set": "core",
-      "file": "pages/patterns.html",
+      "page": "index.html",
       "anchor": "#T071",
+      "source": "pages/patterns.html",
       "description": "A modal promotion built on the native <dialog> element. It opens over a dimmed backdrop and closes on the ✕ or a backdrop click."
     },
     {
@@ -362,8 +401,9 @@
       "name": "Gallery",
       "category": "Patterns",
       "set": "core",
-      "file": "pages/patterns.html",
+      "page": "index.html",
       "anchor": "#T072",
+      "source": "pages/patterns.html",
       "description": "A responsive thumbnail grid with hover captions. Click any tile to open it in a lightbox."
     },
     {
@@ -371,8 +411,9 @@
       "name": "Tabs",
       "category": "Patterns",
       "set": "core",
-      "file": "pages/patterns.html",
+      "page": "index.html",
       "anchor": "#T073",
+      "source": "pages/patterns.html",
       "description": "Tabbed panels that swap content in place. Click a tab to switch."
     },
     {
@@ -380,8 +421,9 @@
       "name": "Folders",
       "category": "Patterns",
       "set": "core",
-      "file": "pages/patterns.html",
+      "page": "index.html",
       "anchor": "#T074",
+      "source": "pages/patterns.html",
       "description": "A collapsible file tree built from nested <details>. Folders expand and collapse with no JavaScript."
     },
     {
@@ -389,8 +431,9 @@
       "name": "Toggle content",
       "category": "Patterns",
       "set": "core",
-      "file": "pages/patterns.html",
+      "page": "index.html",
       "anchor": "#T075",
+      "source": "pages/patterns.html",
       "description": "A switch that reveals or hides a block of content. CSS-only, using :has()."
     },
     {
@@ -398,8 +441,9 @@
       "name": "FAQ, expanded by default",
       "category": "Patterns",
       "set": "core",
-      "file": "pages/patterns.html",
+      "page": "index.html",
       "anchor": "#T076",
+      "source": "pages/patterns.html",
       "description": "The accordion pattern with every item open on load (open attribute set). Collapse any you don't need."
     },
     {
@@ -407,8 +451,9 @@
       "name": "Contact form",
       "category": "Patterns",
       "set": "core",
-      "file": "pages/patterns.html",
+      "page": "index.html",
       "anchor": "#T077",
+      "source": "pages/patterns.html",
       "description": "A labelled form with focus states and a demo submit (no backend attached)."
     },
     {
@@ -416,8 +461,9 @@
       "name": "Breadcrumbs",
       "category": "Patterns",
       "set": "core",
-      "file": "pages/patterns.html",
+      "page": "index.html",
       "anchor": "#T078",
+      "source": "pages/patterns.html",
       "description": "A path trail showing the visitor's location, with the current page un-linked."
     },
     {
@@ -425,8 +471,9 @@
       "name": "Bento grid",
       "category": "Animation",
       "set": "core",
-      "file": "pages/animation.html",
+      "page": "index.html",
       "anchor": "#T100",
+      "source": "pages/animation.html",
       "description": "Asymmetric mosaic of feature tiles with varying spans, subtle gradients, and a hover lift, in pure CSS."
     },
     {
@@ -434,8 +481,9 @@
       "name": "Infinite marquee",
       "category": "Animation",
       "set": "core",
-      "file": "pages/animation.html",
+      "page": "index.html",
       "anchor": "#T101",
+      "source": "pages/animation.html",
       "description": "Seamlessly looping chip track from a duplicated row and one CSS keyframe; pauses on hover, frozen for reduced-motion."
     },
     {
@@ -443,8 +491,9 @@
       "name": "Statement / word reveal",
       "category": "Animation",
       "set": "core",
-      "file": "pages/animation.html",
+      "page": "index.html",
       "anchor": "#T102",
+      "source": "pages/animation.html",
       "description": "Display sentence whose words fade and rise in sequence via staggered CSS delays, with a JS replay button."
     },
     {
@@ -452,8 +501,9 @@
       "name": "Animated stat counters",
       "category": "Animation",
       "set": "core",
-      "file": "pages/animation.html",
+      "page": "index.html",
       "anchor": "#T103",
+      "source": "pages/animation.html",
       "description": "Three figures that count up on first scroll into view via IntersectionObserver; final values live in the markup."
     },
     {
@@ -461,8 +511,9 @@
       "name": "Sticky scroll-story",
       "category": "Animation",
       "set": "core",
-      "file": "pages/animation.html",
+      "page": "index.html",
       "anchor": "#T104",
+      "source": "pages/animation.html",
       "description": "Two-column block with a pinned visual card that crossfades as a scroll-spy highlights the active step."
     },
     {
@@ -470,8 +521,9 @@
       "name": "Before / after slider",
       "category": "Animation",
       "set": "core",
-      "file": "pages/animation.html",
+      "page": "index.html",
       "anchor": "#T105",
+      "source": "pages/animation.html",
       "description": "Two stacked panels split by a draggable divider; a range input drives a CSS variable clip, keyboard-accessible."
     },
     {
@@ -479,8 +531,9 @@
       "name": "Hover-reveal work list",
       "category": "Animation",
       "set": "core",
-      "file": "pages/animation.html",
+      "page": "index.html",
       "anchor": "#T106",
+      "source": "pages/animation.html",
       "description": "Large project rows that highlight on hover while a gradient thumbnail follows the cursor; degrades without JS."
     },
     {
@@ -488,8 +541,9 @@
       "name": "Command palette (⌘K)",
       "category": "Dev tools",
       "set": "core",
-      "file": "pages/devtools.html",
+      "page": "index.html",
       "anchor": "#T120",
+      "source": "pages/devtools.html",
       "description": "Native dialog overlay opened by button or ⌘K/Ctrl+K with live-filtered grouped results."
     },
     {
@@ -497,8 +551,9 @@
       "name": "Callout / admonition boxes",
       "category": "Dev tools",
       "set": "core",
-      "file": "pages/devtools.html",
+      "page": "index.html",
       "anchor": "#T121",
+      "source": "pages/devtools.html",
       "description": "Four tinted variants (Note, Tip, Warning, Danger) with a left accent rail, an icon, and a label. Pure CSS."
     },
     {
@@ -506,8 +561,9 @@
       "name": "API reference block",
       "category": "Dev tools",
       "set": "core",
-      "file": "pages/devtools.html",
+      "page": "index.html",
       "anchor": "#T122",
+      "source": "pages/devtools.html",
       "description": "Method pill, monospace path, params table, and cURL/JSON tabs that switch on click."
     },
     {
@@ -515,8 +571,9 @@
       "name": "Integration grid",
       "category": "Dev tools",
       "set": "core",
-      "file": "pages/devtools.html",
+      "page": "index.html",
       "anchor": "#T123",
+      "source": "pages/devtools.html",
       "description": "Filter chips above a grid of integration tiles, shown or hidden live by data-category."
     },
     {
@@ -524,8 +581,9 @@
       "name": "Announcement bar",
       "category": "Dev tools",
       "set": "core",
-      "file": "pages/devtools.html",
+      "page": "index.html",
       "anchor": "#T124",
+      "source": "pages/devtools.html",
       "description": "Faux top banner with message, inline link, and ✕ dismiss with demo reset link."
     },
     {
@@ -533,8 +591,9 @@
       "name": "Theme switcher",
       "category": "Dev tools",
       "set": "core",
-      "file": "pages/devtools.html",
+      "page": "index.html",
       "anchor": "#T125",
+      "source": "pages/devtools.html",
       "description": "Segmented System/Light/Dark control that restyles only the sample card below."
     },
     {
@@ -542,8 +601,9 @@
       "name": "“Was this helpful?”",
       "category": "Dev tools",
       "set": "core",
-      "file": "pages/devtools.html",
+      "page": "index.html",
       "anchor": "#T126",
+      "source": "pages/devtools.html",
       "description": "Small docs-footer feedback card that swaps to a thank-you state on vote."
     },
     {
@@ -551,8 +611,9 @@
       "name": "Logo cloud / \"trusted by\" strip",
       "category": "Social proof",
       "set": "core",
-      "file": "pages/social.html",
+      "page": "index.html",
       "anchor": "#T140",
+      "source": "pages/social.html",
       "description": "A muted row of company wordmarks under a small label. Marquees slowly and pauses on hover."
     },
     {
@@ -560,8 +621,9 @@
       "name": "Testimonial wall",
       "category": "Social proof",
       "set": "core",
-      "file": "pages/social.html",
+      "page": "index.html",
       "anchor": "#T141",
+      "source": "pages/social.html",
       "description": "A multi-column masonry of quote cards: quote, initials avatar, name and role. Static."
     },
     {
@@ -569,8 +631,9 @@
       "name": "Quote slider",
       "category": "Social proof",
       "set": "core",
-      "file": "pages/social.html",
+      "page": "index.html",
       "anchor": "#T142",
+      "source": "pages/social.html",
       "description": "One large rotating testimonial. Prev / next buttons and dots advance it; it also auto-advances every 6s."
     },
     {
@@ -578,8 +641,9 @@
       "name": "Newsletter / waitlist capture",
       "category": "Social proof",
       "set": "core",
-      "file": "pages/social.html",
+      "page": "index.html",
       "anchor": "#T143",
+      "source": "pages/social.html",
       "description": "An inline email capture that swaps to a success state on submit; also opens in a native <dialog>."
     },
     {
@@ -587,8 +651,9 @@
       "name": "Video demo modal",
       "category": "Social proof",
       "set": "core",
-      "file": "pages/social.html",
+      "page": "index.html",
       "anchor": "#T144",
+      "source": "pages/social.html",
       "description": "A 16:9 thumbnail with a circular play button that opens a placeholder video frame in a native <dialog>."
     },
     {
@@ -596,8 +661,9 @@
       "name": "Customer case-study cards",
       "category": "Social proof",
       "set": "core",
-      "file": "pages/social.html",
+      "page": "index.html",
       "anchor": "#T145",
+      "source": "pages/social.html",
       "description": "A three-up grid: wordmark, a headline metric, a one-line summary, an industry chip, and a read-story link."
     },
     {
@@ -605,8 +671,9 @@
       "name": "Trust / guarantee bar",
       "category": "Social proof",
       "set": "core",
-      "file": "pages/social.html",
+      "page": "index.html",
       "anchor": "#T146",
+      "source": "pages/social.html",
       "description": "A row of four icon + label reassurances, the kind that sits just beside a final CTA. Static."
     },
     {
@@ -614,8 +681,9 @@
       "name": "Author byline + bio card",
       "category": "Content",
       "set": "core",
-      "file": "pages/content.html",
+      "page": "index.html",
       "anchor": "#T160",
+      "source": "pages/content.html",
       "description": "A compact byline strip at the top of a post and a fuller author bio card to close it out."
     },
     {
@@ -623,8 +691,9 @@
       "name": "Related articles",
       "category": "Content",
       "set": "core",
-      "file": "pages/content.html",
+      "page": "index.html",
       "anchor": "#T161",
+      "source": "pages/content.html",
       "description": "A \"Read next\" grid surfacing three more posts by category, title, and read time."
     },
     {
@@ -632,8 +701,9 @@
       "name": "Reading-progress bar",
       "category": "Content",
       "set": "core",
-      "file": "pages/content.html",
+      "page": "index.html",
       "anchor": "#T162",
+      "source": "pages/content.html",
       "description": "A progress bar pinned to the top of a scroll container that fills as you read inside the box."
     },
     {
@@ -641,8 +711,9 @@
       "name": "Tag / category filter",
       "category": "Content",
       "set": "core",
-      "file": "pages/content.html",
+      "page": "index.html",
       "anchor": "#T163",
+      "source": "pages/content.html",
       "description": "A chip row that live-filters the post list below by category."
     },
     {
@@ -650,8 +721,9 @@
       "name": "Trending / most-popular list",
       "category": "Content",
       "set": "core",
-      "file": "pages/content.html",
+      "page": "index.html",
       "anchor": "#T164",
+      "source": "pages/content.html",
       "description": "A ranked list with oversized numerals and an optional view-count meta line."
     },
     {
@@ -659,8 +731,9 @@
       "name": "Series / chapter nav",
       "category": "Content",
       "set": "core",
-      "file": "pages/content.html",
+      "page": "index.html",
       "anchor": "#T165",
+      "source": "pages/content.html",
       "description": "A \"Part 2 of 5\" bar with titled previous/next arrows and a thin progress indicator."
     },
     {
@@ -668,8 +741,9 @@
       "name": "Pull quote",
       "category": "Content",
       "set": "core",
-      "file": "pages/content.html",
+      "page": "index.html",
       "anchor": "#T166",
+      "source": "pages/content.html",
       "description": "An oversized, offset quote block with a large quotation mark, accent rule, and attribution."
     },
     {
@@ -677,8 +751,9 @@
       "name": "Mega menu",
       "category": "Navigation",
       "set": "core",
-      "file": "pages/navigation.html",
+      "page": "index.html",
       "anchor": "#T180",
+      "source": "pages/navigation.html",
       "description": "A wide multi-column dropdown for sites with deep navigation, with a CountUp featured card."
     },
     {
@@ -686,8 +761,9 @@
       "name": "Pagination",
       "category": "Navigation",
       "set": "core",
-      "file": "pages/navigation.html",
+      "page": "index.html",
       "anchor": "#T181",
+      "source": "pages/navigation.html",
       "description": "Numbered page controls with previous / next, an active page, and a truncation gap."
     },
     {
@@ -695,8 +771,9 @@
       "name": "Stepper / wizard progress",
       "category": "Navigation",
       "set": "core",
-      "file": "pages/navigation.html",
+      "page": "index.html",
       "anchor": "#T182",
+      "source": "pages/navigation.html",
       "description": "A horizontal step indicator for multi-step flows, with completed, current, and upcoming states."
     },
     {
@@ -704,8 +781,9 @@
       "name": "Segmented control",
       "category": "Navigation",
       "set": "core",
-      "file": "pages/navigation.html",
+      "page": "index.html",
       "anchor": "#T183",
+      "source": "pages/navigation.html",
       "description": "A compact pill toggle for switching between a few mutually exclusive views."
     },
     {
@@ -713,8 +791,9 @@
       "name": "Back-to-top button",
       "category": "Navigation",
       "set": "core",
-      "file": "pages/navigation.html",
+      "page": "index.html",
       "anchor": "#T184",
+      "source": "pages/navigation.html",
       "description": "A floating control that appears once the user scrolls down, then jumps them back up."
     },
     {
@@ -722,8 +801,9 @@
       "name": "Sticky action bar",
       "category": "Navigation",
       "set": "core",
-      "file": "pages/navigation.html",
+      "page": "index.html",
       "anchor": "#T185",
+      "source": "pages/navigation.html",
       "description": "A persistent bottom bar pairing a summary with the primary call to action, pinned while content scrolls."
     },
     {
@@ -731,8 +811,9 @@
       "name": "Actions menu",
       "category": "Navigation",
       "set": "core",
-      "file": "pages/navigation.html",
+      "page": "index.html",
       "anchor": "#T186",
+      "source": "pages/navigation.html",
       "description": "A kebab / overflow menu that reveals contextual actions on click."
     },
     {
@@ -740,8 +821,9 @@
       "name": "Input field library",
       "category": "Forms",
       "set": "core",
-      "file": "pages/forms.html",
+      "page": "index.html",
       "anchor": "#T200",
+      "source": "pages/forms.html",
       "description": "Text, select, and textarea with label, helper text, and the default / focus / error / disabled states."
     },
     {
@@ -749,8 +831,9 @@
       "name": "Choice controls",
       "category": "Forms",
       "set": "core",
-      "file": "pages/forms.html",
+      "page": "index.html",
       "anchor": "#T201",
+      "source": "pages/forms.html",
       "description": "Checkboxes, a radio group, and an on/off switch: the three ways to capture a boolean or a pick."
     },
     {
@@ -758,8 +841,9 @@
       "name": "Range & number",
       "category": "Forms",
       "set": "core",
-      "file": "pages/forms.html",
+      "page": "index.html",
       "anchor": "#T202",
+      "source": "pages/forms.html",
       "description": "A slider with a live value read-out and a stepper number input with − / + controls."
     },
     {
@@ -767,8 +851,9 @@
       "name": "Search with autocomplete",
       "category": "Forms",
       "set": "core",
-      "file": "pages/forms.html",
+      "page": "index.html",
       "anchor": "#T203",
+      "source": "pages/forms.html",
       "description": "A search input that filters a suggestion list as you type."
     },
     {
@@ -776,8 +861,9 @@
       "name": "Multi-step form",
       "category": "Forms",
       "set": "core",
-      "file": "pages/forms.html",
+      "page": "index.html",
       "anchor": "#T204",
+      "source": "pages/forms.html",
       "description": "A wizard that advances through panels with Back / Next, keeping the rest hidden."
     },
     {
@@ -785,8 +871,9 @@
       "name": "File upload / dropzone",
       "category": "Forms",
       "set": "core",
-      "file": "pages/forms.html",
+      "page": "index.html",
       "anchor": "#T205",
+      "source": "pages/forms.html",
       "description": "A drag-and-drop target with a browse fallback and a list of selected files."
     },
     {
@@ -794,8 +881,9 @@
       "name": "Cookie consent",
       "category": "Forms",
       "set": "core",
-      "file": "pages/forms.html",
+      "page": "index.html",
       "anchor": "#T206",
+      "source": "pages/forms.html",
       "description": "A consent banner with accept / reject and a link to preferences."
     },
     {
@@ -803,8 +891,9 @@
       "name": "Toast notifications",
       "category": "Feedback",
       "set": "core",
-      "file": "pages/feedback.html",
+      "page": "index.html",
       "anchor": "#T220",
+      "source": "pages/feedback.html",
       "description": "Transient messages that stack in a corner and auto-dismiss."
     },
     {
@@ -812,8 +901,9 @@
       "name": "Alert banners",
       "category": "Feedback",
       "set": "core",
-      "file": "pages/feedback.html",
+      "page": "index.html",
       "anchor": "#T221",
+      "source": "pages/feedback.html",
       "description": "Inline status messages in four intents: info, success, warning, and error."
     },
     {
@@ -821,8 +911,9 @@
       "name": "Tooltip",
       "category": "Feedback",
       "set": "core",
-      "file": "pages/feedback.html",
+      "page": "index.html",
       "anchor": "#T222",
+      "source": "pages/feedback.html",
       "description": "A small label that appears on hover or focus to explain a control."
     },
     {
@@ -830,8 +921,9 @@
       "name": "Empty state",
       "category": "Feedback",
       "set": "core",
-      "file": "pages/feedback.html",
+      "page": "index.html",
       "anchor": "#T223",
+      "source": "pages/feedback.html",
       "description": "Placeholder for no-data views: an icon, a line of guidance, and an action."
     },
     {
@@ -839,8 +931,9 @@
       "name": "Skeleton loader",
       "category": "Feedback",
       "set": "core",
-      "file": "pages/feedback.html",
+      "page": "index.html",
       "anchor": "#T224",
+      "source": "pages/feedback.html",
       "description": "Shimmering placeholders that mirror the shape of content while it loads."
     },
     {
@@ -848,8 +941,9 @@
       "name": "Spinners & progress",
       "category": "Feedback",
       "set": "core",
-      "file": "pages/feedback.html",
+      "page": "index.html",
       "anchor": "#T225",
+      "source": "pages/feedback.html",
       "description": "An indeterminate spinner, a determinate bar, and a circular progress ring."
     },
     {
@@ -857,8 +951,9 @@
       "name": "Confirmation dialog",
       "category": "Feedback",
       "set": "core",
-      "file": "pages/feedback.html",
+      "page": "index.html",
       "anchor": "#T226",
+      "source": "pages/feedback.html",
       "description": "A focused modal that asks the user to confirm a destructive action."
     },
     {
@@ -866,8 +961,9 @@
       "name": "KPI / metric cards",
       "category": "Data",
       "set": "core",
-      "file": "pages/data.html",
+      "page": "index.html",
       "anchor": "#T240",
+      "source": "pages/data.html",
       "description": "Dashboard stat tiles with a label, a big number, and a trend delta coloured by direction."
     },
     {
@@ -875,8 +971,9 @@
       "name": "Sortable data table",
       "category": "Data",
       "set": "core",
-      "file": "pages/data.html",
+      "page": "index.html",
       "anchor": "#T241",
+      "source": "pages/data.html",
       "description": "A zebra-striped table with sortable headers. Click a column header to re-sort."
     },
     {
@@ -884,8 +981,9 @@
       "name": "Pricing billing toggle",
       "category": "Data",
       "set": "core",
-      "file": "pages/data.html",
+      "page": "index.html",
       "anchor": "#T242",
+      "source": "pages/data.html",
       "description": "A monthly / annual switch that swaps the displayed prices in place."
     },
     {
@@ -893,8 +991,9 @@
       "name": "Spec / definition list",
       "category": "Data",
       "set": "core",
-      "file": "pages/data.html",
+      "page": "index.html",
       "anchor": "#T243",
+      "source": "pages/data.html",
       "description": "A two-column key/value sheet for technical specs, metadata, or property tables."
     },
     {
@@ -902,8 +1001,9 @@
       "name": "Horizontal bar chart",
       "category": "Data",
       "set": "core",
-      "file": "pages/data.html",
+      "page": "index.html",
       "anchor": "#T244",
+      "source": "pages/data.html",
       "description": "A lightweight, CSS-only comparison chart: labelled rows with proportional fills."
     },
     {
@@ -911,8 +1011,9 @@
       "name": "Activity feed / timeline",
       "category": "Data",
       "set": "core",
-      "file": "pages/data.html",
+      "page": "index.html",
       "anchor": "#T245",
+      "source": "pages/data.html",
       "description": "A vertical, dotted timeline of recent events with a relative timestamp and a type tag."
     },
     {
@@ -920,8 +1021,9 @@
       "name": "Image carousel",
       "category": "Media",
       "set": "core",
-      "file": "pages/media.html",
+      "page": "index.html",
       "anchor": "#T280",
+      "source": "pages/media.html",
       "description": "Single-slide carousel with prev / next arrows and dot indicators."
     },
     {
@@ -929,8 +1031,9 @@
       "name": "Figure with caption",
       "category": "Media",
       "set": "core",
-      "file": "pages/media.html",
+      "page": "index.html",
       "anchor": "#T281",
+      "source": "pages/media.html",
       "description": "Image block with a number tag and a typeset caption for docs and case studies."
     },
     {
@@ -938,8 +1041,9 @@
       "name": "Video background hero",
       "category": "Media",
       "set": "core",
-      "file": "pages/media.html",
+      "page": "index.html",
       "anchor": "#T282",
+      "source": "pages/media.html",
       "description": "Full-bleed hero with a looping video or gradient behind a darkening scrim and headline."
     },
     {
@@ -947,8 +1051,9 @@
       "name": "Alternating feature row",
       "category": "Media",
       "set": "core",
-      "file": "pages/media.html",
+      "page": "index.html",
       "anchor": "#T283",
+      "source": "pages/media.html",
       "description": "Classic zig-zag with image and copy swapping sides down the page."
     },
     {
@@ -956,8 +1061,9 @@
       "name": "Team / people grid",
       "category": "Media",
       "set": "core",
-      "file": "pages/media.html",
+      "page": "index.html",
       "anchor": "#T284",
+      "source": "pages/media.html",
       "description": "Grid of people cards with avatar, name, role, and social links."
     },
     {
@@ -965,8 +1071,9 @@
       "name": "Responsive embed",
       "category": "Media",
       "set": "core",
-      "file": "pages/media.html",
+      "page": "index.html",
       "anchor": "#T285",
+      "source": "pages/media.html",
       "description": "Fixed-ratio container for video, maps, or iframes that scales cleanly at any width."
     },
     {
@@ -974,8 +1081,9 @@
       "name": "Product card",
       "category": "Commerce",
       "set": "ecommerce",
-      "file": "pages/commerce.html",
+      "page": "index.html",
       "anchor": "#T260",
+      "source": "pages/commerce.html",
       "description": "A shoppable card with image, badge, title, rating, price (with strike-through), and add-to-cart."
     },
     {
@@ -983,8 +1091,9 @@
       "name": "Star rating & review",
       "category": "Commerce",
       "set": "ecommerce",
-      "file": "pages/commerce.html",
+      "page": "index.html",
       "anchor": "#T261",
+      "source": "pages/commerce.html",
       "description": "An aggregate rating summary with a distribution breakdown beside an individual review card."
     },
     {
@@ -992,8 +1101,9 @@
       "name": "Cart / order summary",
       "category": "Commerce",
       "set": "ecommerce",
-      "file": "pages/commerce.html",
+      "page": "index.html",
       "anchor": "#T262",
+      "source": "pages/commerce.html",
       "description": "A checkout-side summary: line items, a promo field, the totals breakdown, and the pay button."
     },
     {
@@ -1001,8 +1111,9 @@
       "name": "Filter sidebar",
       "category": "Commerce",
       "set": "ecommerce",
-      "file": "pages/commerce.html",
+      "page": "index.html",
       "anchor": "#T263",
+      "source": "pages/commerce.html",
       "description": "A faceted filter rail: category checkboxes, a price range, and active filter chips you can clear."
     },
     {
@@ -1010,8 +1121,9 @@
       "name": "Countdown timer",
       "category": "Commerce",
       "set": "ecommerce",
-      "file": "pages/commerce.html",
+      "page": "index.html",
       "anchor": "#T264",
+      "source": "pages/commerce.html",
       "description": "An urgency timer for sales and launches, ticking down in days / hours / minutes / seconds."
     },
     {
@@ -1019,8 +1131,9 @@
       "name": "Avatar group & social proof",
       "category": "Commerce",
       "set": "ecommerce",
-      "file": "pages/commerce.html",
+      "page": "index.html",
       "anchor": "#T265",
+      "source": "pages/commerce.html",
       "description": "Stacked, overlapping avatars with an overflow count, the \"join 2,000+ others\" cue."
     },
     {
@@ -1028,8 +1141,9 @@
       "name": "Collection hero",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T300",
+      "source": "pages/ecom-catalogue.html",
       "description": "The top of a category page: breadcrumb, collection title, item count and a short intro, over a tinted band."
     },
     {
@@ -1037,8 +1151,9 @@
       "name": "Product grid",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T301",
+      "source": "pages/ecom-catalogue.html",
       "description": "A responsive 4-up grid of product cards that drops to 2-up on a tablet and 1-up on a phone."
     },
     {
@@ -1046,8 +1161,9 @@
       "name": "Product card states",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T302",
+      "source": "pages/ecom-catalogue.html",
       "description": "The four states one card has to cover side by side: default, on sale with a strike-through RRP and discount badge, sold out, and low stock. T260 on pages/commerce.html is the original single product card."
     },
     {
@@ -1055,8 +1171,9 @@
       "name": "Product list row",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T303",
+      "source": "pages/ecom-catalogue.html",
       "description": "The horizontal alternative to a card, for list-view toggles and search results: thumb left, details centre, price and CTA right."
     },
     {
@@ -1064,8 +1181,9 @@
       "name": "Sort and result bar",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T304",
+      "source": "pages/ecom-catalogue.html",
       "description": "The strip above the grid: result count, a sort select, and a grid or list view toggle."
     },
     {
@@ -1073,8 +1191,9 @@
       "name": "Filter rail",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T305",
+      "source": "pages/ecom-catalogue.html",
       "description": "The desktop faceted sidebar: collapsible details groups, checkbox facets with counts, colour swatches, a price min and max pair, and a clear-all."
     },
     {
@@ -1082,8 +1201,9 @@
       "name": "Filter drawer",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T306",
+      "source": "pages/ecom-catalogue.html",
       "description": "The mobile equivalent of the rail on a native dialog: a trigger with a count, a slide-in panel, then apply or clear."
     },
     {
@@ -1091,8 +1211,9 @@
       "name": "Active filter chips",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T307",
+      "source": "pages/ecom-catalogue.html",
       "description": "A row of removable chips showing what is narrowing the results, each with its own remove control, plus a clear-all."
     },
     {
@@ -1100,8 +1221,9 @@
       "name": "Quick view modal",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T308",
+      "source": "pages/ecom-catalogue.html",
       "description": "A dialog with product image, title, price, variant row, quantity stepper and add-to-cart, opened from a card overlay button."
     },
     {
@@ -1109,8 +1231,9 @@
       "name": "Load more and pagination",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T309",
+      "source": "pages/ecom-catalogue.html",
       "description": "Both ways to reach page two: a load-more button with a showing 24 of 96 progress line, and a numbered pagination row beneath it."
     },
     {
@@ -1118,8 +1241,9 @@
       "name": "Empty results state",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T310",
+      "source": "pages/ecom-catalogue.html",
       "description": "The no-results panel: icon, headline, explanation, the filters worth removing, and a browse-all CTA."
     },
     {
@@ -1127,8 +1251,9 @@
       "name": "Category tiles",
       "category": "Catalogue",
       "set": "ecommerce",
-      "file": "pages/ecom-catalogue.html",
+      "page": "index.html",
       "anchor": "#T311",
+      "source": "pages/ecom-catalogue.html",
       "description": "A grid of collection tiles on a wash background with a label and an item count, for a shop landing page."
     },
     {
@@ -1136,8 +1261,9 @@
       "name": "Product gallery",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T320",
+      "source": "pages/ecom-product.html",
       "description": "A main image with a thumbnail rail, a zoom affordance and an image counter, where clicking a thumb swaps the main image."
     },
     {
@@ -1145,8 +1271,9 @@
       "name": "Buy box",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T321",
+      "source": "pages/ecom-product.html",
       "description": "The full right-hand column: eyebrow, title, star rating with a review link, price, short description, add to cart, and a save action."
     },
     {
@@ -1154,8 +1281,9 @@
       "name": "Variant selector",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T322",
+      "source": "pages/ecom-product.html",
       "description": "Colour swatches and size pills as keyboard operable radio groups, with selected, unavailable and sold out states kept distinct."
     },
     {
@@ -1163,8 +1291,9 @@
       "name": "Quantity stepper",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T323",
+      "source": "pages/ecom-product.html",
       "description": "Minus and plus either side of a number input, floored at 1 and capped at the order limit, with a disabled state at each bound."
     },
     {
@@ -1172,8 +1301,9 @@
       "name": "Price block",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T324",
+      "source": "pages/ecom-product.html",
       "description": "Every price presentation in one block: single, sale against RRP with a percent off badge, per unit, from price, and instalments."
     },
     {
@@ -1181,8 +1311,9 @@
       "name": "Stock and urgency",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T325",
+      "source": "pages/ecom-product.html",
       "description": "The availability cues: in stock, low stock with a count and a bar, sold out with a notify action, and a live viewing count."
     },
     {
@@ -1190,8 +1321,9 @@
       "name": "Delivery estimator",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T326",
+      "source": "pages/ecom-product.html",
       "description": "A postcode check that returns a delivery window and a shipping cost, with both a result state and an error state."
     },
     {
@@ -1199,8 +1331,9 @@
       "name": "Sticky add to cart bar",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T327",
+      "source": "pages/ecom-product.html",
       "description": "The bar that slides in once the buy box scrolls away, carrying thumb, title, variant summary, price and an add button."
     },
     {
@@ -1208,8 +1341,9 @@
       "name": "Product accordion",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T328",
+      "source": "pages/ecom-product.html",
       "description": "Description, specifications, shipping and returns as native details disclosures with an animated chevron marker."
     },
     {
@@ -1217,8 +1351,9 @@
       "name": "Guarantee row",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T329",
+      "source": "pages/ecom-product.html",
       "description": "A four up row of icon, label and one line of reassurance for shipping, returns, warranty and secure payment."
     },
     {
@@ -1226,8 +1361,9 @@
       "name": "Bundle and save",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T330",
+      "source": "pages/ecom-product.html",
       "description": "Three products bought together at a combined price, with a checkbox per item that recalculates the total, the saving and the button."
     },
     {
@@ -1235,8 +1371,9 @@
       "name": "Cross sell rail",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T331",
+      "source": "pages/ecom-product.html",
       "description": "A horizontally scrollable goes well with rail of compact product cards, each carrying a quick add button."
     },
     {
@@ -1244,8 +1381,9 @@
       "name": "Specification table",
       "category": "Product page",
       "set": "ecommerce",
-      "file": "pages/ecom-product.html",
+      "page": "index.html",
       "anchor": "#T332",
+      "source": "pages/ecom-product.html",
       "description": "A two column specification table with a size guide link that opens a dialog holding the measurements table."
     },
     {
@@ -1253,8 +1391,9 @@
       "name": "Cart drawer",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T340",
+      "source": "pages/ecom-checkout.html",
       "description": "A slide-over cart panel with a close button, line items, subtotal, free-shipping progress, and the view-cart and checkout actions."
     },
     {
@@ -1262,8 +1401,9 @@
       "name": "Cart line item",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T341",
+      "source": "pages/ecom-checkout.html",
       "description": "One cart row: thumb, title, variant summary, quantity stepper, line total, remove, plus the saved-for-later variant."
     },
     {
@@ -1271,8 +1411,9 @@
       "name": "Empty cart",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T342",
+      "source": "pages/ecom-checkout.html",
       "description": "The zero state with icon, headline, a line of copy, a browse CTA, and a recently-viewed suggestion row."
     },
     {
@@ -1280,8 +1421,9 @@
       "name": "Cart page",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T343",
+      "source": "pages/ecom-checkout.html",
       "description": "The full two-column cart: editable line items on the left, a sticky order summary card on the right."
     },
     {
@@ -1289,8 +1431,9 @@
       "name": "Discount code",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T344",
+      "source": "pages/ecom-checkout.html",
       "description": "A code field with an apply button in three states: idle, applied as a removable chip with the saving shown, and rejected with an inline error."
     },
     {
@@ -1298,8 +1441,9 @@
       "name": "Free shipping progress",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T345",
+      "source": "pages/ecom-checkout.html",
       "description": "A progress bar counting a subtotal toward the free-shipping threshold, with its unlocked state."
     },
     {
@@ -1307,8 +1451,9 @@
       "name": "Checkout stepper",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T346",
+      "source": "pages/ecom-checkout.html",
       "description": "A four-step progress indicator for cart, details, shipping and payment, with complete, current and upcoming states."
     },
     {
@@ -1316,8 +1461,9 @@
       "name": "Contact and delivery form",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T347",
+      "source": "pages/ecom-checkout.html",
       "description": "Email, phone and a full Australian address block with a state select and four-digit postcode, showing the valid and invalid states."
     },
     {
@@ -1325,8 +1471,9 @@
       "name": "Shipping method selector",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T348",
+      "source": "pages/ecom-checkout.html",
       "description": "Radio cards carrying method name, delivery window and price, including a free option, a selected state and a disabled one."
     },
     {
@@ -1334,8 +1481,9 @@
       "name": "Payment section",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T349",
+      "source": "pages/ecom-checkout.html",
       "description": "A payment method radio group for card, PayPal and Afterpay, where the card fields reveal for the card option, with a security note."
     },
     {
@@ -1343,8 +1491,9 @@
       "name": "Express checkout row",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T350",
+      "source": "pages/ecom-checkout.html",
       "description": "A row of express wallet buttons above the divider that hands off to the full checkout form."
     },
     {
@@ -1352,8 +1501,9 @@
       "name": "Order review",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T351",
+      "source": "pages/ecom-checkout.html",
       "description": "The final confirm panel: every earlier step collapsed with edit links, the totals breakdown, terms consent, and the place-order button."
     },
     {
@@ -1361,8 +1511,9 @@
       "name": "Order confirmation",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T352",
+      "source": "pages/ecom-checkout.html",
       "description": "The success state with order number, itemised recap, delivery address, estimated arrival, and next-step actions."
     },
     {
@@ -1370,8 +1521,9 @@
       "name": "Order tracking",
       "category": "Cart & checkout",
       "set": "ecommerce",
-      "file": "pages/ecom-checkout.html",
+      "page": "index.html",
       "anchor": "#T353",
+      "source": "pages/ecom-checkout.html",
       "description": "A vertical timeline from placed to delivered, carrying the tracking number and marking the parcel's current position."
     },
     {
@@ -1379,8 +1531,9 @@
       "name": "Announcement bar",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T360",
+      "source": "pages/ecom-merch.html",
       "description": "A full-width top strip carrying one shipping or offer message, with an optional link and a dismiss button."
     },
     {
@@ -1388,8 +1541,9 @@
       "name": "Promo banner",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T361",
+      "source": "pages/ecom-merch.html",
       "description": "A larger dismissible in-page banner: headline, supporting line and one call to action on a wash background."
     },
     {
@@ -1397,8 +1551,9 @@
       "name": "Countdown offer strip",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T362",
+      "source": "pages/ecom-merch.html",
       "description": "An offer message wired to a live ticking countdown in days, hours, minutes and seconds, plus its expired state."
     },
     {
@@ -1406,8 +1561,9 @@
       "name": "Value proposition strip",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T363",
+      "source": "pages/ecom-merch.html",
       "description": "A four-up icon row for the promises a store repeats sitewide: delivery, returns, payment and support."
     },
     {
@@ -1415,8 +1571,9 @@
       "name": "Review summary",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T364",
+      "source": "pages/ecom-merch.html",
       "description": "Average score, star row, total count and a five-bar distribution with percentages, beside a write-a-review call to action."
     },
     {
@@ -1424,8 +1581,9 @@
       "name": "Review list",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T365",
+      "source": "pages/ecom-merch.html",
       "description": "Individual reviews with author, verified-buyer badge, date, rating, title, body, purchased variant, customer photos and a helpful counter."
     },
     {
@@ -1433,8 +1591,9 @@
       "name": "Write a review form",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T366",
+      "source": "pages/ecom-merch.html",
       "description": "A keyboard-operable star input built from radios, with title, body, a photo upload control and a consent checkbox."
     },
     {
@@ -1442,8 +1601,9 @@
       "name": "Customer photo gallery",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T367",
+      "source": "pages/ecom-merch.html",
       "description": "A user-generated photo grid where each tile shows a customer handle and a shop-this-look tag, opening in a dialog lightbox."
     },
     {
@@ -1451,8 +1611,9 @@
       "name": "Trust and payment row",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T368",
+      "source": "pages/ecom-merch.html",
       "description": "Accepted payment methods drawn as neutral wordmark labels, beside the security and business reassurances."
     },
     {
@@ -1460,8 +1621,9 @@
       "name": "Gift options",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T369",
+      "source": "pages/ecom-merch.html",
       "description": "A gift-wrap toggle with its price, a gift message with a character counter, and a hide-prices-on-the-packing-slip checkbox."
     },
     {
@@ -1469,8 +1631,9 @@
       "name": "Back in stock",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T370",
+      "source": "pages/ecom-merch.html",
       "description": "An out-of-stock notice with an email capture, its success state, and a line explaining what the alert does."
     },
     {
@@ -1478,8 +1641,9 @@
       "name": "Newsletter capture with incentive",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T371",
+      "source": "pages/ecom-merch.html",
       "description": "An offer headline, email field and consent line, swapping to a success state that reveals a discount code with a copy button."
     },
     {
@@ -1487,8 +1651,9 @@
       "name": "Recently viewed rail",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T372",
+      "source": "pages/ecom-merch.html",
       "description": "A compact horizontally scrollable rail of previously viewed products, with a clear-history action and an empty state."
     },
     {
@@ -1496,8 +1661,9 @@
       "name": "Editorial band",
       "category": "Merchandising & trust",
       "set": "ecommerce",
-      "file": "pages/ecom-merch.html",
+      "page": "index.html",
       "anchor": "#T373",
+      "source": "pages/ecom-merch.html",
       "description": "A lookbook band for a story-led store: large image wash, eyebrow, headline, paragraph and a shop-the-story call to action."
     },
     {
@@ -1505,8 +1671,9 @@
       "name": "Account shell",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T380",
+      "source": "pages/ecom-account.html",
       "description": "The signed-in frame: a section nav, a greeting header and a content pane, collapsing to a horizontal scroll nav on narrow widths."
     },
     {
@@ -1514,8 +1681,9 @@
       "name": "Order history",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T381",
+      "source": "pages/ecom-account.html",
       "description": "Past orders as rows with order number, date, item thumbs, a status pill, the total and per-order actions."
     },
     {
@@ -1523,8 +1691,9 @@
       "name": "Order detail",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T382",
+      "source": "pages/ecom-account.html",
       "description": "One order opened out: status, itemised lines, delivery address, payment summary, totals, and invoice, reorder and support actions."
     },
     {
@@ -1532,8 +1701,9 @@
       "name": "Return request",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T383",
+      "source": "pages/ecom-account.html",
       "description": "A returns flow with per-item reasons, a refund or exchange choice, a comments field and a live summary of the refund."
     },
     {
@@ -1541,8 +1711,9 @@
       "name": "Wishlist",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T384",
+      "source": "pages/ecom-account.html",
       "description": "Saved products with price, an availability line, move to cart and remove, plus the empty state when the last one goes."
     },
     {
@@ -1550,8 +1721,9 @@
       "name": "Address book",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T385",
+      "source": "pages/ecom-account.html",
       "description": "Saved address cards with a default badge, edit and delete on an inline confirm, and an add-address form revealed by a button."
     },
     {
@@ -1559,8 +1731,9 @@
       "name": "Payment methods",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T386",
+      "source": "pages/ecom-account.html",
       "description": "Saved card rows showing brand, masked last four, expiry, a default badge and an expired state, with an add-card form."
     },
     {
@@ -1568,8 +1741,9 @@
       "name": "Subscription manager",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T387",
+      "source": "pages/ecom-account.html",
       "description": "An active subscription with a frequency select that moves the next delivery date, plus skip, pause and cancel."
     },
     {
@@ -1577,8 +1751,9 @@
       "name": "Rewards panel",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T388",
+      "source": "pages/ecom-account.html",
       "description": "A points balance, a progress bar to the next tier, a redeem row that spends the balance, and a short points ledger."
     },
     {
@@ -1586,8 +1761,9 @@
       "name": "Sign in and register",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T389",
+      "source": "pages/ecom-account.html",
       "description": "A two-tab panel with sign in on one tab and create account on the other, a forgot-password link and a guest option."
     },
     {
@@ -1595,8 +1771,9 @@
       "name": "Password reset",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T390",
+      "source": "pages/ecom-account.html",
       "description": "The request form with its check-your-email confirmation, and a set-new-password form with a strength meter and match check."
     },
     {
@@ -1604,8 +1781,9 @@
       "name": "Guest order lookup",
       "category": "Account & post-purchase",
       "set": "ecommerce",
-      "file": "pages/ecom-account.html",
+      "page": "index.html",
       "anchor": "#T391",
+      "source": "pages/ecom-account.html",
       "description": "An order number plus email form for customers without an account, with a found result and a not-found error state."
     }
   ]

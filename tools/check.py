@@ -22,6 +22,7 @@ Checks
 """
 
 import io
+import json
 import os
 import re
 import sys
@@ -157,6 +158,29 @@ def main():
             if tok not in known_tokens and tok not in local:
                 problems.append('%s: uses %s, which neither base.css nor the page defines'
                                 % (label, tok))
+
+    # ---- 4a: index.html must be freshly compiled from the sources ----
+    # index.html is generated. If someone edits a source page and forgets to run
+    # build.py, the page everyone browses silently lags behind the catalog.
+    idx = io.open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
+    compiled = set(re.findall(r'<article class="tb-pattern" id="(T\d+)"', idx))
+    catalogued = set()
+    for frag in sorted(os.listdir(os.path.join(ROOT, 'catalog'))):
+        if not frag.endswith('.json') or frag.startswith('_'):
+            continue
+        for e in json.load(io.open(os.path.join(ROOT, 'catalog', frag), encoding='utf-8')):
+            catalogued.add(e['id'])
+    for missing in sorted(catalogued - compiled):
+        problems.append('index.html is stale: %s is in the catalog but not compiled in. '
+                        'Run python tools/build.py' % missing)
+    for extra in sorted(compiled - catalogued):
+        problems.append('index.html is stale: %s is compiled in but not in the catalog. '
+                        'Run python tools/build.py' % extra)
+    for need in ('assets/base.css', 'assets/viewer.css', 'assets/viewer.js',
+                 'tb-compiled-css', 'tb-compiled-js'):
+        if need not in idx:
+            problems.append('index.html is missing %s' % need)
+    notes.append('single page: %d blocks compiled in' % len(compiled))
 
     # ---- 4b: the palette page's static snapshot must not drift ----
     # foundations.html re-reads token values from the live stylesheet on load,

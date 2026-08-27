@@ -4,8 +4,9 @@
     "name": "Command palette (⌘K)",
     "category": "Dev tools",
     "set": "core",
-    "file": "pages/devtools.html",
+    "page": "index.html",
     "anchor": "#T120",
+    "source": "pages/devtools.html",
     "description": "Native dialog overlay opened by button or ⌘K/Ctrl+K with live-filtered grouped results."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Callout / admonition boxes",
     "category": "Dev tools",
     "set": "core",
-    "file": "pages/devtools.html",
+    "page": "index.html",
     "anchor": "#T121",
+    "source": "pages/devtools.html",
     "description": "Four tinted variants (Note, Tip, Warning, Danger) with a left accent rail, an icon, and a label. Pure CSS."
   },
   {
@@ -22,8 +24,9 @@
     "name": "API reference block",
     "category": "Dev tools",
     "set": "core",
-    "file": "pages/devtools.html",
+    "page": "index.html",
     "anchor": "#T122",
+    "source": "pages/devtools.html",
     "description": "Method pill, monospace path, params table, and cURL/JSON tabs that switch on click."
   },
   {
@@ -31,8 +34,9 @@
     "name": "Integration grid",
     "category": "Dev tools",
     "set": "core",
-    "file": "pages/devtools.html",
+    "page": "index.html",
     "anchor": "#T123",
+    "source": "pages/devtools.html",
     "description": "Filter chips above a grid of integration tiles, shown or hidden live by data-category."
   },
   {
@@ -40,8 +44,9 @@
     "name": "Announcement bar",
     "category": "Dev tools",
     "set": "core",
-    "file": "pages/devtools.html",
+    "page": "index.html",
     "anchor": "#T124",
+    "source": "pages/devtools.html",
     "description": "Faux top banner with message, inline link, and ✕ dismiss with demo reset link."
   },
   {
@@ -49,8 +54,9 @@
     "name": "Theme switcher",
     "category": "Dev tools",
     "set": "core",
-    "file": "pages/devtools.html",
+    "page": "index.html",
     "anchor": "#T125",
+    "source": "pages/devtools.html",
     "description": "Segmented System/Light/Dark control that restyles only the sample card below."
   },
   {
@@ -58,8 +64,9 @@
     "name": "“Was this helpful?”",
     "category": "Dev tools",
     "set": "core",
-    "file": "pages/devtools.html",
+    "page": "index.html",
     "anchor": "#T126",
+    "source": "pages/devtools.html",
     "description": "Small docs-footer feedback card that swaps to a thank-you state on vote."
   }
 ]

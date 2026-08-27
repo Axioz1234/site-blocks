@@ -4,8 +4,9 @@
     "name": "Colour palette",
     "category": "Foundations",
     "set": "core",
-    "file": "pages/foundations.html",
+    "page": "index.html",
     "anchor": "#T001",
+    "source": "pages/foundations.html",
     "description": "Every design token as a live swatch, named, with its role and both theme values, so you can see what a block is allowed to use."
   },
   {
@@ -13,8 +14,9 @@
     "name": "Font families",
     "category": "Foundations",
     "set": "core",
-    "file": "pages/foundations.html",
+    "page": "index.html",
     "anchor": "#T002",
+    "source": "pages/foundations.html",
     "description": "The three type roles (display, body, mono) rendered in whichever theme is active, with both themes' families named."
   },
   {
@@ -22,8 +24,9 @@
     "name": "Type scale",
     "category": "Foundations",
     "set": "core",
-    "file": "pages/foundations.html",
+    "page": "index.html",
     "anchor": "#T003",
+    "source": "pages/foundations.html",
     "description": "Bordered scale table showing the H1 to H3 heading sizes, the body measure, and the tracked eyebrow label."
   }
 ]
