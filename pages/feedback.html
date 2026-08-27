@@ -79,14 +79,14 @@
         <span class="tb-tid">T223</span>
         <div>
           <h2>Empty state</h2>
-          <p>The placeholder shown when there&rsquo;s no data yet: an icon, a line of guidance, and an action.</p>
+          <p>The placeholder shown when there&rsquo;s no data yet: a crescent moon, a line of guidance, and an action.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="sgx-preview">
           <span class="sgx-preview-tag">Example</span>
           <div class="fbk-empty">
-            <span class="fbk-empty-ico">◌</span>
+            <span class="fbk-empty-moon" aria-hidden="true"></span>
             <p class="fbk-empty-title">Your cart is empty</p>
             <p class="fbk-empty-sub">Nothing here yet. The moon can wait, but not forever.</p>
             <button class="fbk-trigger">See the deck</button>
@@ -157,6 +157,7 @@
           <span class="sgx-preview-tag">Interactive</span>
           <button class="fbk-trigger fbk-trigger-danger" id="fbk-confirm-open">Remove from cart…</button>
           <dialog class="fbk-confirm" id="fbk-confirm">
+            <span class="fbk-confirm-ico" aria-hidden="true">✕</span>
             <h4>Remove Moonrite Cards 2027?</h4>
             <p>This takes the deck out of your cart. It&rsquo;ll still be here if you change your mind.</p>
             <div class="fbk-confirm-actions">
@@ -185,69 +186,110 @@
     .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:var(--font-eyebrow); font-size:9px; letter-spacing:.1em; text-transform:var(--eyebrow-transform); color:var(--border-3); }
 
     /* shared trigger */
-    .fbk-trigger { font-family:var(--font-ui); font-size:13px; font-weight:600; cursor:pointer; color:var(--accent-ink); background:var(--accent); border:none; border-radius:var(--radius-btn); padding:10px 18px; }
+    .fbk-trigger { display:inline-flex; align-items:center; justify-content:center; min-height:48px; font-family:var(--font-ui); font-size:13px; font-weight:var(--button-weight); letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; color:var(--accent-ink); background:var(--accent); border:none; border-radius:var(--radius-btn); padding:0 24px; transition:background .2s ease, box-shadow .2s ease, transform .15s ease; }
+    .fbk-trigger:hover { background:var(--accent-hover); }
+    .fbk-trigger:active { transform:translateY(1px); }
     .fbk-trigger-danger { background:var(--err); color:var(--status-ink); }
+    .fbk-trigger-danger:hover { background:var(--err-deep); }
+    .fbk-trigger:focus-visible, .fbk-btn-sec:focus-visible, .fbk-btn-danger:focus-visible, .fbk-tip:focus-visible { outline:var(--focus-ring); outline-offset:var(--focus-offset); }
 
-    /* 01. Toasts */
-    .fbk-toast-stack { display:flex; flex-direction:column; gap:10px; margin-top:18px; max-width:340px; }
-    .fbk-toast { display:flex; align-items:center; gap:10px; padding:12px 14px; border:var(--line-weight) solid var(--border-2); border-left:3px solid var(--ok); border-radius:var(--radius-card); background:var(--bg-2); font-family:var(--font-body); font-size:14px; color:var(--text); opacity:0; transform:translateX(12px); transition:opacity .25s ease, transform .25s ease; }
+    /* 01. Toasts.
+       A designed surface: circled status icon, message, and a thin
+       progress-to-dismiss line that drains over the toast's lifetime. */
+    .fbk-toast-stack { display:flex; flex-direction:column; gap:10px; margin-top:18px; max-width:360px; }
+    .fbk-toast { position:relative; overflow:hidden; display:flex; align-items:center; gap:12px; padding:13px 16px 15px 14px; border:var(--line-weight) solid var(--border); border-left:calc(var(--line-weight) * 3) solid var(--ok); border-radius:var(--radius-sm); background:var(--bg-card); box-shadow:var(--shadow-overlay); font-family:var(--font-body); font-size:14px; color:var(--text); opacity:0; transform:translateX(16px); transition:opacity .3s ease, transform .3s ease; }
     .fbk-toast.is-in { opacity:1; transform:translateX(0); }
-    .fbk-toast-ico { color:var(--ok); font-weight:700; }
+    .fbk-toast-ico { flex-shrink:0; width:26px; height:26px; display:grid; place-items:center; border-radius:var(--radius-pill); background:var(--ok-faint); color:var(--ok); font-size:12px; font-weight:700; }
+    .fbk-toast-life { position:absolute; left:0; bottom:0; height:calc(var(--line-weight) * 2); width:100%; background:var(--ok-line); transform-origin:left; }
+    @media (prefers-reduced-motion: no-preference) {
+      .fbk-toast.is-in .fbk-toast-life { animation:fbk-life 2.6s linear forwards; }
+    }
+    @keyframes fbk-life { from { transform:scaleX(1); } to { transform:scaleX(0); } }
+    @media (prefers-reduced-motion: reduce) {
+      .fbk-toast { transition:opacity .01s linear; transform:none; }
+    }
 
-    /* 02. Alerts */
-    .fbk-alerts { display:flex; flex-direction:column; gap:12px; }
-    .fbk-alert { display:flex; gap:12px; align-items:flex-start; padding:13px 15px; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg-card); }
-    .fbk-alert p { font-family:var(--font-body); font-size:14px; color:var(--text-2); margin:0; }
-    .fbk-alert b { color:var(--text); }
-    .fbk-alert-ico { flex-shrink:0; width:22px; height:22px; display:flex; align-items:center; justify-content:center; border-radius:50%; font-size:12px; font-weight:700; color:var(--status-ink); }
-    .fbk-alert.info { border-left:3px solid var(--info); } .fbk-alert.info .fbk-alert-ico { background:var(--info); }
-    .fbk-alert.ok { border-left:3px solid var(--ok); } .fbk-alert.ok .fbk-alert-ico { background:var(--ok); }
-    .fbk-alert.warn { border-left:3px solid var(--warn); } .fbk-alert.warn .fbk-alert-ico { background:var(--warn); }
-    .fbk-alert.err { border-left:3px solid var(--err); } .fbk-alert.err .fbk-alert-ico { background:var(--err); }
+    /* 02. Alerts. The library's designed-callout standard: wash ground,
+       solid rail, circled icon, and a tracked eyebrow label per intent. */
+    .fbk-alerts { display:flex; flex-direction:column; gap:14px; }
+    .fbk-alert { display:flex; gap:14px; align-items:flex-start; padding:15px 18px 15px 16px; border-left:calc(var(--line-weight) * 3) solid var(--border); border-radius:var(--radius-sm); }
+    .fbk-alert p { font-family:var(--font-body); font-size:13.5px; line-height:1.55; color:var(--text-2); margin:0; }
+    .fbk-alert b { display:block; font-family:var(--font-eyebrow); font-size:11px; font-weight:600; letter-spacing:var(--eyebrow-tracking); text-transform:var(--eyebrow-transform); margin:3px 0 4px; }
+    .fbk-alert-ico { flex-shrink:0; width:26px; height:26px; display:grid; place-items:center; border-radius:var(--radius-pill); font-size:12px; font-weight:700; margin-top:1px; }
+    .fbk-alert.info { border-left-color:var(--info); background:var(--info-wash); } .fbk-alert.info b { color:var(--info); } .fbk-alert.info .fbk-alert-ico { color:var(--info); background:var(--info-faint); }
+    .fbk-alert.ok { border-left-color:var(--ok); background:var(--ok-wash); } .fbk-alert.ok b { color:var(--ok); } .fbk-alert.ok .fbk-alert-ico { color:var(--ok); background:var(--ok-faint); }
+    .fbk-alert.warn { border-left-color:var(--warn); background:var(--warn-wash); } .fbk-alert.warn b { color:var(--warn); } .fbk-alert.warn .fbk-alert-ico { color:var(--warn); background:var(--warn-faint); }
+    .fbk-alert.err { border-left-color:var(--err); background:var(--err-wash); } .fbk-alert.err b { color:var(--err); } .fbk-alert.err .fbk-alert-ico { color:var(--err); background:var(--err-faint); }
 
     /* 03. Tooltip */
-    .fbk-tips { display:flex; gap:24px; flex-wrap:wrap; padding:14px 0; }
-    .fbk-tip { position:relative; font-family:var(--font-body); font-size:14px; color:var(--text-2); border-bottom:var(--line-weight) dashed var(--border-3); cursor:help; outline:none; }
-    .fbk-tip-icon { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; border:var(--line-weight) solid var(--border-3); border-bottom-style:solid; font-size:12px; color:var(--text-3); }
-    .fbk-tip-bubble { position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%) translateY(4px); white-space:nowrap; background:var(--text); color:var(--bg); font-family:var(--font-ui); font-size:11px; padding:6px 10px; border-radius:var(--radius-sm); opacity:0; pointer-events:none; transition:opacity .18s ease, transform .18s ease; z-index:5; }
-    .fbk-tip-bubble::after { content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%); border:5px solid transparent; border-top-color:var(--text); }
-    .fbk-tip:hover .fbk-tip-bubble, .fbk-tip:focus .fbk-tip-bubble { opacity:1; transform:translateX(-50%) translateY(0); }
+    .fbk-tips { display:flex; gap:28px; flex-wrap:wrap; align-items:center; padding:14px 0; }
+    .fbk-tip { position:relative; font-family:var(--font-body); font-size:14px; color:var(--text-2); border-bottom:var(--line-weight) dashed var(--border-3); padding-bottom:2px; cursor:help; }
+    .fbk-tip:hover { color:var(--text); }
+    .fbk-tip-icon { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; padding-bottom:0; border-radius:var(--radius-pill); border:var(--line-weight) solid var(--border-3); border-bottom-style:solid; font-size:12px; font-family:var(--font-ui); color:var(--text-3); transition:color .2s ease, border-color .2s ease, background .2s ease; }
+    .fbk-tip-icon:hover { color:var(--text); background:var(--accent-faint); }
+    .fbk-tip-bubble { position:absolute; bottom:calc(100% + 9px); left:0; transform:translateY(5px) scale(.97); transform-origin:bottom left; white-space:nowrap; background:var(--text); color:var(--bg); font-family:var(--font-ui); font-size:11px; letter-spacing:.02em; padding:7px 12px; border-radius:var(--radius-sm); box-shadow:var(--shadow-overlay); opacity:0; pointer-events:none; transition:opacity .18s ease, transform .18s ease; z-index:5; }
+    .fbk-tip-bubble::after { content:''; position:absolute; top:100%; left:16px; border:5px solid transparent; border-top-color:var(--text); }
+    .fbk-tip:hover .fbk-tip-bubble, .fbk-tip:focus .fbk-tip-bubble { opacity:1; transform:translateY(0) scale(1); }
+    @media (prefers-reduced-motion: reduce) { .fbk-tip-bubble { transition:opacity .01s linear; transform:none; } .fbk-tip:hover .fbk-tip-bubble, .fbk-tip:focus .fbk-tip-bubble { transform:none; } }
 
-    /* 04. Empty state */
-    .fbk-empty { display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px; padding:36px 20px; border:var(--line-weight) dashed var(--border-2); border-radius:var(--radius-card); background:var(--bg-card); }
-    .fbk-empty-ico { font-size:40px; color:var(--border-3); line-height:1; }
-    .fbk-empty-title { font-family:var(--font-display); font-size:17px; font-weight:600; color:var(--text); margin:6px 0 0; }
-    .fbk-empty-sub { font-family:var(--font-body); font-size:14px; color:var(--text-3); margin:0 0 8px; }
+    /* 04. Empty state. A composed quiet moment: a thin crescent moon
+       over display type, generous air, one pill action. */
+    .fbk-empty { display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px; padding:52px 24px 44px; border:var(--line-weight) dashed var(--border-2); border-radius:var(--radius-card); background:var(--bg-card); }
+    .fbk-empty-moon { width:44px; height:44px; border-radius:50%; box-shadow:inset -12px 4px 0 0 var(--accent-light); transform:rotate(18deg); margin-bottom:10px; }
+    @media (prefers-reduced-motion: no-preference) {
+      .fbk-empty-moon { animation:fbk-drift 7s ease-in-out infinite alternate; }
+    }
+    @keyframes fbk-drift { from { transform:rotate(18deg) translateY(0); } to { transform:rotate(14deg) translateY(-5px); } }
+    .fbk-empty-title { font-family:var(--font-display); font-size:24px; font-weight:var(--heading-weight); letter-spacing:var(--heading-tracking); color:var(--text); margin:6px 0 0; }
+    .fbk-empty-sub { font-family:var(--font-body); font-size:14px; color:var(--text-3); margin:0 0 16px; max-width:36ch; }
 
-    /* 05. Skeleton */
-    .fbk-skel-card { display:flex; gap:16px; padding:16px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); max-width:440px; }
-    .fbk-skel-body { flex:1; display:flex; flex-direction:column; gap:10px; justify-content:center; }
-    .fbk-skel { background:linear-gradient(90deg, var(--bg-3) 25%, var(--border) 37%, var(--bg-3) 63%); background-size:400% 100%; animation:fbk-shimmer 1.4s ease infinite; border-radius:var(--radius-sm); }
-    .fbk-skel-thumb { width:80px; height:80px; flex-shrink:0; }
-    .fbk-skel-line { height:12px; }
+    /* 05. Skeleton. Gentle, slow shimmer; static tint when motion is off. */
+    .fbk-skel-card { display:flex; gap:16px; padding:18px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); max-width:440px; }
+    .fbk-skel-body { flex:1; display:flex; flex-direction:column; gap:11px; justify-content:center; }
+    .fbk-skel { background:var(--track); border-radius:var(--radius-sm); }
+    @media (prefers-reduced-motion: no-preference) {
+      .fbk-skel { background:linear-gradient(100deg, var(--track) 35%, var(--border) 50%, var(--track) 65%); background-size:400% 100%; animation:fbk-shimmer 2.4s ease infinite; }
+    }
+    .fbk-skel-thumb { width:84px; height:84px; flex-shrink:0; border-radius:var(--radius); }
+    .fbk-skel-line { height:12px; border-radius:var(--radius-pill); }
     .fbk-skel-line.w90 { width:90%; } .fbk-skel-line.w70 { width:70%; } .fbk-skel-line.w50 { width:50%; }
     @keyframes fbk-shimmer { 0% { background-position:100% 0; } 100% { background-position:-100% 0; } }
 
-    /* 06. Loaders */
-    .fbk-loaders { display:flex; gap:40px; flex-wrap:wrap; align-items:flex-start; }
-    .fbk-loader-cell { display:flex; flex-direction:column; align-items:center; gap:12px; }
-    .fbk-loader-cap { font-family:var(--font-ui); font-size:11px; color:var(--text-4); }
-    .fbk-spinner { width:30px; height:30px; border-radius:50%; border:3px solid var(--border-2); border-top-color:var(--accent); animation:fbk-spin .8s linear infinite; }
+    /* 06. Loaders. Slow and even; the ring keeps a quiet track and a
+       set-in percentage label. */
+    .fbk-loaders { display:flex; gap:48px; flex-wrap:wrap; align-items:flex-start; padding:6px 0; }
+    .fbk-loader-cell { display:flex; flex-direction:column; align-items:center; gap:14px; }
+    .fbk-loader-cap { font-family:var(--font-ui); font-size:12px; color:var(--text-4); }
+    .fbk-spinner { width:32px; height:32px; border-radius:50%; border:calc(var(--line-weight) * 2) solid var(--track); border-top-color:var(--accent); }
+    @media (prefers-reduced-motion: no-preference) {
+      .fbk-spinner { animation:fbk-spin 1.2s linear infinite; }
+    }
     @keyframes fbk-spin { to { transform:rotate(360deg); } }
-    .fbk-bar { width:180px; height:6px; background:var(--border); border-radius:var(--radius-pill); overflow:hidden; }
-    .fbk-bar span { display:block; height:100%; background:var(--accent); }
-    .fbk-ring { position:relative; width:64px; height:64px; border-radius:50%; background:conic-gradient(var(--accent) calc(var(--p) * 1%), var(--border) 0); display:flex; align-items:center; justify-content:center; }
-    .fbk-ring::before { content:''; position:absolute; inset:7px; border-radius:50%; background:var(--bg-3); }
-    .fbk-ring span { position:relative; font-family:var(--font-ui); font-size:12px; color:var(--text); }
+    .fbk-bar { width:190px; height:8px; background:var(--track); border-radius:var(--radius-pill); overflow:hidden; margin-top:12px; }
+    .fbk-bar span { display:block; height:100%; background:var(--accent); border-radius:var(--radius-pill); transition:width .3s ease; }
+    .fbk-ring { position:relative; width:72px; height:72px; border-radius:50%; background:conic-gradient(var(--accent) calc(var(--p) * 1%), var(--track) 0); display:flex; align-items:center; justify-content:center; }
+    .fbk-ring::before { content:''; position:absolute; inset:6px; border-radius:50%; background:var(--bg-3); }
+    .fbk-ring span { position:relative; font-family:var(--font-ui); font-size:13px; font-weight:600; color:var(--text); }
 
-    /* 07. Confirm */
-    .fbk-confirm { border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg-2); color:var(--text); padding:24px; max-width:380px; width:90%; }
+    /* 07. Confirm. Scrim, overlay shadow, an entrance pop, and a circled
+       danger icon beside considered button states. */
+    .fbk-confirm { border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg-card); color:var(--text); padding:28px; max-width:400px; width:90%; box-shadow:var(--shadow-overlay); }
     .fbk-confirm::backdrop { background: var(--scrim); }
-    .fbk-confirm h4 { font-family:var(--font-display); font-size:18px; font-weight:600; margin:0 0 8px; color:var(--text); }
-    .fbk-confirm p { font-family:var(--font-body); font-size:14px; line-height:1.6; color:var(--text-3); margin:0 0 20px; }
+    @media (prefers-reduced-motion: no-preference) {
+      .fbk-confirm[open] { animation:fbk-pop .22s ease; }
+      .fbk-confirm[open]::backdrop { animation:fbk-fade .22s ease; }
+    }
+    @keyframes fbk-pop { from { opacity:0; transform:translateY(10px) scale(.985); } }
+    @keyframes fbk-fade { from { opacity:0; } }
+    .fbk-confirm-ico { width:34px; height:34px; display:grid; place-items:center; border-radius:var(--radius-pill); background:var(--err-faint); color:var(--err); font-size:14px; font-weight:700; margin-bottom:14px; }
+    .fbk-confirm h4 { font-family:var(--font-display); font-size:21px; font-weight:var(--heading-weight); letter-spacing:var(--heading-tracking); margin:0 0 8px; color:var(--text); }
+    .fbk-confirm p { font-family:var(--font-body); font-size:14px; line-height:1.6; color:var(--text-3); margin:0 0 22px; }
     .fbk-confirm-actions { display:flex; justify-content:flex-end; gap:10px; }
-    .fbk-btn-sec { font-family:var(--font-ui); font-size:13px; cursor:pointer; color:var(--text-2); background:transparent; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-btn); padding:9px 16px; }
-    .fbk-btn-danger { font-family:var(--font-ui); font-size:13px; font-weight:600; cursor:pointer; color:var(--status-ink); background:var(--err); border:none; border-radius:var(--radius-btn); padding:9px 16px; }
+    .fbk-btn-sec { display:inline-flex; align-items:center; min-height:48px; font-family:var(--font-ui); font-size:13px; letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; color:var(--text-2); background:transparent; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-btn); padding:0 18px; transition:color .2s ease, border-color .2s ease; }
+    .fbk-btn-sec:hover { color:var(--text); border-color:var(--text-3); }
+    .fbk-btn-danger { display:inline-flex; align-items:center; min-height:48px; font-family:var(--font-ui); font-size:13px; font-weight:var(--button-weight); letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; color:var(--status-ink); background:var(--err); border:none; border-radius:var(--radius-btn); padding:0 20px; transition:background .2s ease, transform .15s ease; }
+    .fbk-btn-danger:hover { background:var(--err-deep); }
+    .fbk-btn-danger:active { transform:translateY(1px); }
 
     @media (max-width: 768px) {
       .fbk-loaders { gap:28px; }
@@ -264,7 +306,7 @@
         toastBtn.addEventListener('click', function () {
           var t = document.createElement('div');
           t.className = 'fbk-toast';
-          t.innerHTML = '<span class="fbk-toast-ico">✓</span><span>' + msgs[n % msgs.length] + '</span>';
+          t.innerHTML = '<span class="fbk-toast-ico">✓</span><span>' + msgs[n % msgs.length] + '</span><span class="fbk-toast-life" aria-hidden="true"></span>';
           n++;
           stack.appendChild(t);
           requestAnimationFrame(function () { t.classList.add('is-in'); });

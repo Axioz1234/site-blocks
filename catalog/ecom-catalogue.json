@@ -117,6 +117,6 @@
     "page": "index.html",
     "anchor": "#T311",
     "source": "pages/ecom-catalogue.html",
-    "description": "The shop landing grid: one tile per collection on a wash background, with a label and an item count."
+    "description": "The shop landing grid: one tile per collection on a wash background, with a label, an item count and one solid accent anchor tile."
   }
 ]

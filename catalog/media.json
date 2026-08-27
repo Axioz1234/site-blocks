@@ -17,7 +17,7 @@
     "page": "index.html",
     "anchor": "#T281",
     "source": "pages/media.html",
-    "description": "Image block with a number tag and a typeset caption for docs and case studies."
+    "description": "Art-framed image block with a number tag and a typeset caption for docs and case studies."
   },
   {
     "id": "T282",
@@ -27,7 +27,7 @@
     "page": "index.html",
     "anchor": "#T282",
     "source": "pages/media.html",
-    "description": "Full-bleed hero with a looping video or gradient behind a darkening scrim and headline."
+    "description": "Full-bleed hero with a looping video or gradient behind a scrim, display type, and a play affordance."
   },
   {
     "id": "T283",
@@ -37,7 +37,7 @@
     "page": "index.html",
     "anchor": "#T283",
     "source": "pages/media.html",
-    "description": "Classic zig-zag with image and copy swapping sides down the page."
+    "description": "Classic zig-zag with image and copy swapping sides on alternating tint bands."
   },
   {
     "id": "T284",

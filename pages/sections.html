@@ -28,9 +28,9 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-nav">
-            <div class="pv-row"><span class="pv-logo">Moonrite</span><span class="pv-dim">2027 deck ▾</span></div>
-            <div class="pv-navlinks"><span class="on">Shop</span><span>How it works</span><span>Moon dates</span><span>About</span></div>
-            <span class="pv-bp">Get the deck</span>
+            <div class="pv-row"><span class="pv-navmoon" aria-hidden="true"></span><span class="pv-logo">Moonrite</span><button type="button" class="pv-navyear">2027 deck ▾</button></div>
+            <nav class="pv-navlinks" aria-label="Preview navigation"><a class="on" href="#T040">Shop</a><a href="#T040">How it works</a><a href="#T040">Moon dates</a><a href="#T040">About</a></nav>
+            <button type="button" class="pv-bp">Get the deck</button>
           </div>
         </div>
       </div>
@@ -48,13 +48,18 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-hero">
-            <div>
-              <span class="pv-status">Shipping now ●</span>
-              <p class="pv-h1">Write it. Burn it. Release it.</p>
+            <div class="pv-hero-copy">
+              <span class="pv-statuspill"><span class="pv-livedot" aria-hidden="true"></span>Shipping now</span>
+              <p class="pv-h1 pv-hero-h">Write it. Burn it. Release it.</p>
               <p class="pv-sub">One card a month</p>
-              <div class="pv-btns"><span class="pv-bp">Get the 2027 deck</span><span class="pv-bs">See how it works</span></div>
+              <div class="pv-btns"><button type="button" class="pv-bp">Get the 2027 deck</button><button type="button" class="pv-bs">See how it works</button></div>
             </div>
-            <div class="pv-codecard"><span class="pv-dim">This month's card</span><div><span class="pv-orange">●</span> The Pinnacles, WA</div><div>Full Moon · 17 August 2027</div></div>
+            <div class="pv-monthcard">
+              <span class="pv-moon pv-monthcard-moon" aria-hidden="true"></span>
+              <span class="pv-monthcard-label">This month's card</span>
+              <div class="pv-monthcard-name">The Pinnacles, WA</div>
+              <div class="pv-monthcard-date">Full Moon · 17 August 2027</div>
+            </div>
           </div>
         </div>
       </div>
@@ -72,9 +77,13 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-pagehero">
-            <span class="pv-eyebrow">About</span>
-            <p class="pv-h1">Twelve landmarks. Twelve moons.</p>
-            <p class="pv-lead">One card for each full moon of 2027, over a place you know.</p>
+            <div class="star-field hero-stars" aria-hidden="true"></div>
+            <span class="pv-moon pv-pagehero-moon" aria-hidden="true"></span>
+            <div class="pv-pagehero-inner">
+              <span class="pv-eyebrow">About</span>
+              <p class="pv-h1 pv-pagehero-h">Twelve landmarks. Twelve moons.</p>
+              <p class="pv-lead">One card for each full moon of 2027, over a place you know.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -92,8 +101,7 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-center">
-            <span class="pv-status">Shipping now</span>
-            <span class="tb-pulse" style="--pulse-color:var(--ok); --pulse-size:22px;"></span>
+            <span class="pv-statuspill"><span class="tb-pulse" style="--pulse-color:var(--ok); --pulse-size:10px;"></span>Shipping now</span>
           </div>
         </div>
       </div>
@@ -110,7 +118,11 @@
       <div class="tb-demo">
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
-          <div class="pv-narrow"><div class="tb-codecard"><span class="tb-codecard-label">January's card</span><code>More slow mornings, less scrolling.</code><button class="tb-codecard-copy" onclick="navigator.clipboard.writeText('More slow mornings, less scrolling.')">Copy</button></div></div>
+          <div class="pv-narrow"><div class="tb-codecard">
+            <span class="tb-codecard-label">January's card</span>
+            <button class="tb-codecard-copy" onclick="navigator.clipboard.writeText('More slow mornings, less scrolling.')">Copy</button>
+            <div class="pv-writearea"><code id="pv-typeline">More slow mornings, less scrolling.</code></div>
+          </div></div>
         </div>
       </div>
     </article>
@@ -127,7 +139,7 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-hiw">
-            <div class="pv-video"><span>▶ the ritual on film</span></div>
+            <div class="pv-video"><span class="pv-play" aria-hidden="true">▶</span><span class="pv-video-label">the ritual on film</span></div>
             <div class="pv-steps">
               <div class="pv-step"><span class="demo-num">01</span><b>Write it</b></div>
               <div class="pv-step"><span class="demo-num">02</span><b>Burn or tear it</b></div>
@@ -149,11 +161,13 @@
       <div class="tb-demo">
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
-          <table class="pv-table">
-            <tr><th>The habit</th><th>Moonrite</th><th>A resolutions list</th></tr>
-            <tr><td>One card a month</td><td class="ok">✓</td><td class="no">✕</td></tr>
-            <tr><td>Fine to miss a month</td><td class="ok">✓</td><td class="warn">~</td></tr>
-          </table>
+          <div class="pv-tablewrap">
+            <table class="pv-table">
+              <tr><th scope="col">The habit</th><th scope="col">Moonrite</th><th scope="col">A resolutions list</th></tr>
+              <tr><td>One card a month</td><td class="ok">✓</td><td class="no">✕</td></tr>
+              <tr><td>Fine to miss a month</td><td class="ok">✓</td><td class="warn">~</td></tr>
+            </table>
+          </div>
         </div>
       </div>
     </article>
@@ -190,8 +204,12 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-tabs">
-            <div class="pv-tabbar"><span class="on">On your own</span><span>As a gift</span><span>With friends</span></div>
-            <div class="pv-tabpanel">Write one card on the full moon, then release it your way.</div>
+            <div class="pv-tabbar" id="pv-tabbar" role="tablist">
+              <button type="button" class="on" role="tab" aria-selected="true" data-pv-panel="Write one card on the full moon, then release it your way.">On your own</button>
+              <button type="button" role="tab" aria-selected="false" data-pv-panel="Boxed and ready to give. The how-to card walks them through their first moon, so there is nothing to explain.">As a gift</button>
+              <button type="button" role="tab" aria-selected="false" data-pv-panel="Everyone writes their own card, then you release together. Fire or no fire, both count.">With friends</button>
+            </div>
+            <div class="pv-tabpanel" id="pv-tabpanel">Write one card on the full moon, then release it your way.</div>
           </div>
         </div>
       </div>
@@ -269,11 +287,27 @@
       <div class="tb-demo">
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
-          <div class="pv-toc">
-            <span class="pv-tiny">On this page</span>
-            <a class="on">Before you write</a>
-            <a>The ritual</a>
-            <a>Fire safety</a>
+          <div class="pv-tocwrap">
+            <div class="pv-toc" id="pv-toc">
+              <span class="pv-tiny">On this page</span>
+              <a class="on" href="#pv-sec-0" data-pv-toc="0">Before you write</a>
+              <a href="#pv-sec-1" data-pv-toc="1">The ritual</a>
+              <a href="#pv-sec-2" data-pv-toc="2">Fire safety</a>
+            </div>
+            <div class="pv-tocbox" id="pv-tocbox" tabindex="0">
+              <section id="pv-sec-0" data-pv-sec="0">
+                <b>Before you write</b>
+                <p>Find ten quiet minutes on the night of the full moon. Check the locations index for your month's landmark, put the kettle on, and settle in. Scroll this box and watch the rail follow.</p>
+              </section>
+              <section id="pv-sec-1" data-pv-sec="1">
+                <b>The ritual</b>
+                <p>Write what you are ready to let go of on the card's writable side. One line or the whole space, both count. Then choose your release: burn it or tear it up.</p>
+              </section>
+              <section id="pv-sec-2" data-pv-sec="2">
+                <b>Fire safety</b>
+                <p>Burning is optional and for adults. If unsure, or if burning paper is not permitted, do not light it. Tear the card instead.</p>
+              </section>
+            </div>
           </div>
         </div>
       </div>
@@ -291,8 +325,8 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-ccgrid">
-            <div class="pv-cc"><div class="pv-cc-top">January</div><span class="pv-code">Byron Bay Lighthouse, NSW</span></div>
-            <div class="pv-cc"><div class="pv-cc-top">February <span class="demo-new">Up next</span></div><span class="pv-code">Whitehaven Beach, QLD</span></div>
+            <div class="pv-cc"><div class="pv-cc-top">January</div><span class="pv-cc-land">Byron Bay Lighthouse, NSW</span></div>
+            <div class="pv-cc"><div class="pv-cc-top">February <span class="demo-new">Up next</span></div><span class="pv-cc-land">Whitehaven Beach, QLD</span></div>
           </div>
         </div>
       </div>
@@ -310,7 +344,7 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-blog">
-            <div class="pv-feat"><span class="demo-tag">Landmarks</span><b>Byron Bay Lighthouse, January's card…</b><span class="pv-orange">Read more →</span></div>
+            <div class="pv-feat"><span class="demo-tag">Landmarks</span><b>Byron Bay Lighthouse, January's card…</b><a class="pv-readmore" href="#T054">Read more →</a></div>
             <div class="pv-postrow"><div class="pv-postcard"><b>Why burning is optional</b></div><div class="pv-postcard"><b>Moon dates for 2027</b></div></div>
           </div>
         </div>
@@ -369,8 +403,8 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-scgrid">
-            <div class="pv-sc"><div class="pv-thumb" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))"><span>☾</span></div><b>Byron Bay Lighthouse</b></div>
-            <div class="pv-sc"><div class="pv-thumb" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))"><span>☾</span></div><b>Whitehaven Beach</b></div>
+            <div class="pv-sc"><div class="pv-thumb" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))"><span aria-hidden="true">☾</span></div><b>Byron Bay Lighthouse</b></div>
+            <div class="pv-sc"><div class="pv-thumb" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))"><span aria-hidden="true">☾</span></div><b>Whitehaven Beach</b></div>
           </div>
         </div>
       </div>
@@ -388,8 +422,8 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-cl">
-            <div class="pv-cl-row"><span class="pv-cl-dot"></span><span class="pv-ver2">22 Jan</span><span class="demo-pill add">Summer</span><span class="pv-prose">Byron Bay Lighthouse, NSW</span></div>
-            <div class="pv-cl-row"><span class="pv-cl-dot"></span><span class="pv-ver2">21 Apr</span><span class="demo-pill change">Autumn</span><span class="pv-prose">Uluru, NT</span></div>
+            <div class="pv-cl-row"><span class="pv-cl-dot" aria-hidden="true"></span><span class="pv-ver2">22 Jan</span><span class="demo-pill add">Summer</span><span class="pv-prose">Byron Bay Lighthouse, NSW</span></div>
+            <div class="pv-cl-row"><span class="pv-cl-dot" aria-hidden="true"></span><span class="pv-ver2">21 Apr</span><span class="demo-pill change">Autumn</span><span class="pv-prose">Uluru, NT</span></div>
           </div>
         </div>
       </div>
@@ -426,8 +460,8 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-supgrid">
-            <div class="pv-sup"><span class="pv-tiny">Email</span><b>Email Amy</b><span class="pv-orange">Write →</span></div>
-            <div class="pv-sup"><span class="pv-tiny">Instagram</span><b>@moonritecards</b><span class="pv-orange">Follow →</span></div>
+            <div class="pv-sup"><span class="pv-tiny">Email</span><b>Email Amy</b><a class="pv-golink" href="#T060">Write →</a></div>
+            <div class="pv-sup"><span class="pv-tiny">Instagram</span><b>@moonritecards</b><a class="pv-golink" href="#T060">Follow →</a></div>
           </div>
         </div>
       </div>
@@ -446,11 +480,13 @@
           <span class="sg-preview-tag">Example</span>
           <div class="pv-contact">
             <div class="pv-form">
-              <span class="pv-tiny">Email</span><div class="pv-input"></div>
-              <span class="pv-tiny">Message</span><div class="pv-input tall"></div>
-              <span class="pv-bp">Send message</span>
+              <label class="pv-tiny" for="pv-c-email">Email</label>
+              <input class="pv-input" id="pv-c-email" type="email" autocomplete="off">
+              <label class="pv-tiny" for="pv-c-msg">Message</label>
+              <textarea class="pv-input tall" id="pv-c-msg"></textarea>
+              <button type="button" class="pv-bp">Send message</button>
             </div>
-            <div class="pv-methodcard"><b>Instagram</b><span class="pv-code">@moonritecards</span></div>
+            <div class="pv-methodcard"><b>Instagram</b><span class="pv-handle">@moonritecards</span></div>
           </div>
         </div>
       </div>
@@ -468,9 +504,13 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-cta">
-            <span class="pv-eyebrow">The 2027 deck</span>
-            <b class="pv-h1">Ready when you are</b>
-            <div class="pv-btns"><span class="pv-bp">Get the deck</span><span class="pv-bs">How it works</span></div>
+            <div class="star-field footer-stars" aria-hidden="true"></div>
+            <span class="pv-cta-moon" aria-hidden="true"></span>
+            <div class="pv-cta-inner">
+              <span class="pv-eyebrow">The 2027 deck</span>
+              <b class="pv-h1 pv-cta-h">Ready when you are</b>
+              <div class="pv-btns"><button type="button" class="pv-bp">Get the deck</button><button type="button" class="pv-bs">How it works</button></div>
+            </div>
           </div>
         </div>
       </div>
@@ -488,12 +528,13 @@
         <div class="sg-preview">
           <span class="sg-preview-tag">Example</span>
           <div class="pv-footer">
+            <div class="star-field footer-stars" aria-hidden="true"></div>
             <div class="pv-footcols">
               <span class="pv-logo">Moonrite</span>
-              <div><span class="pv-tiny">Shop</span><span class="pv-dim">The deck</span><span class="pv-dim">Gift wrap</span></div>
-              <div><span class="pv-tiny">Learn</span><span class="pv-dim">How it works</span><span class="pv-dim">Moon dates</span></div>
+              <div><span class="pv-tiny">Shop</span><a class="pv-flink" href="#T063">The deck</a><a class="pv-flink" href="#T063">Gift wrap</a></div>
+              <div><span class="pv-tiny">Learn</span><a class="pv-flink" href="#T063">How it works</a><a class="pv-flink" href="#T063">Moon dates</a></div>
             </div>
-            <div class="pv-footbar"><span class="pv-dim">© 2026 Moonrite</span><span class="pv-status">Next full moon · 22 Jan ●</span></div>
+            <div class="pv-footbar"><span class="pv-footcopy">© 2026 Moonrite</span><span class="pv-nextmoon">Next full moon · 22 Jan<span class="pv-livedot" aria-hidden="true"></span></span></div>
           </div>
         </div>
       </div>
@@ -519,156 +560,301 @@
     .sg-section.alt .sg-preview { background: var(--bg-3); }
     .sg-preview-tag { position: absolute; top: 8px; right: 10px; font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 0.1em; text-transform: var(--eyebrow-transform); color: var(--border-3); }
 
-    .pv-h1 { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text); margin: 0 0 4px; }
-    .pv-sub { font-family: var(--font-display); font-size: 15px; color: var(--accent); margin: 0 0 12px; }
+    /* ---- shared preview type ---- */
+    .pv-h1 { font-family: var(--font-display); font-size: 20px; font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); color: var(--text); margin: 0 0 4px; }
+    .pv-sub { font-family: var(--font-display); font-size: 15px; color: var(--accent); margin: 0 0 14px; }
     .pv-lead { font-family: var(--font-body); font-size: 13.5px; color: var(--text-3); margin: 0; }
     .pv-eyebrow { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 0.08em; text-transform: var(--eyebrow-transform); color: var(--accent); display: block; margin-bottom: 8px; }
     /* The code-comment prefix is theme chrome: Dark paints it, Moonrite gets a
        clean label. Never typed into the copy. */
     .pv-eyebrow::before { content: var(--eyebrow-prefix); }
-    .pv-status { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 0.05em; text-transform: var(--eyebrow-transform); color: var(--ok); }
-    .pv-status::before { content: var(--eyebrow-prefix); }
     .pv-dim { font-family: var(--font-ui); font-size: 11px; color: var(--text-4); }
     .pv-orange { color: var(--accent); }
     .pv-prose { font-family: var(--font-body); font-size: 13px; color: var(--text-2); margin: 0; }
     .pv-tiny { font-family: var(--font-eyebrow); font-size: 9.5px; letter-spacing: 0.06em; text-transform: var(--eyebrow-transform); color: var(--text-4); }
-    .pv-code { font-family: var(--font-mono); font-size: 11px; color: var(--accent-light); word-break: break-all; }
-    /* Moonrite's --accent-light is the yellow band colour, which does not carry
-       text on a white ground. The subpath label takes the accent there, exactly as
-       base.css does for inline code. */
-    :root[data-theme="moonrite"] .pv-code { color: var(--accent); }
-    .pv-bp, .pv-bs { font-family: var(--font-ui); font-size: 11px; padding: 7px 12px; display: inline-block; text-transform: var(--button-transform); border-radius: var(--radius-btn); }
-    .pv-bp { background: var(--accent); color: var(--accent-ink); font-weight: 600; }
-    .pv-bs { border: var(--line-weight) solid var(--border-2); color: var(--text); }
-    .pv-btns { display: flex; gap: 8px; }
 
-    .pv-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; border: var(--line-weight) solid var(--border); padding: 10px 14px; background: var(--bg); }
-    .pv-row { display: flex; align-items: center; gap: 8px; }
-    .pv-logo { font-family: var(--font-display); font-weight: 700; color: var(--accent); }
-    .pv-navlinks { display: flex; gap: 14px; font-family: var(--font-ui); font-size: 10px; text-transform: var(--eyebrow-transform); color: var(--text-3); }
-    .pv-navlinks .on { color: var(--accent); }
+    /* ---- shared preview buttons: real buttons, hover + focus finished ---- */
+    .pv-bp, .pv-bs {
+      font-family: var(--font-ui); font-size: 11px; letter-spacing: var(--button-tracking);
+      text-transform: var(--button-transform); border-radius: var(--radius-btn);
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 18px; min-height: 38px; cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .pv-bp { background: var(--accent); color: var(--accent-ink); font-weight: 600; border: var(--line-weight) solid var(--accent); }
+    .pv-bp:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+    .pv-bs { background: none; border: var(--line-weight) solid var(--border-2); color: var(--text); font-weight: var(--button-weight); }
+    .pv-bs:hover { border-color: var(--text-3); }
+    .pv-btns { display: flex; gap: 10px; flex-wrap: wrap; }
 
-    .pv-hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; align-items: center; }
-    .pv-codecard { border: var(--line-weight) solid var(--border); border-left: 3px solid var(--accent); padding: 12px; font-family: var(--font-mono); font-size: 11px; color: var(--text-2); background: var(--bg); }
-    .pv-codecard div { margin-top: 6px; }
+    /* ---- moon motif: a small full-moon disc in the accent-light token ---- */
+    .pv-moon { display: inline-block; width: 22px; height: 22px; border-radius: var(--radius-pill); background: radial-gradient(circle at 34% 30%, color-mix(in srgb, var(--accent-light) 72%, var(--bg)) 0%, var(--accent-light) 68%); }
+    .pv-livedot { display: inline-block; width: 7px; height: 7px; border-radius: var(--radius-pill); background: var(--ok); flex-shrink: 0; }
 
-    .pv-center { display: flex; align-items: center; gap: 12px; }
-    .pv-narrow { max-width: 380px; }
+    /* ---- status pill (T041, T043) ---- */
+    .pv-statuspill { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border: var(--line-weight) solid var(--border); border-radius: var(--radius-pill); background: var(--bg); font-family: var(--font-eyebrow); font-size: 10.5px; letter-spacing: 0.06em; text-transform: var(--eyebrow-transform); color: var(--text-2); }
 
-    .pv-video { border: var(--line-weight) solid var(--border); background: var(--bg-3); height: 70px; display: flex; align-items: center; justify-content: center; color: var(--text-4); font-family: var(--font-ui); font-size: 12px; margin-bottom: 12px; }
-    .pv-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: var(--line-weight) solid var(--border); }
-    .pv-step { background: var(--bg); padding: 12px; display: flex; flex-direction: column; gap: 8px; font-family: var(--font-display); font-size: 13px; color: var(--text); }
-    .pv-step .demo-num { display: inline-flex; }
+    /* ---- T040 nav ---- */
+    .pv-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; border: var(--line-weight) solid var(--border); border-radius: var(--radius); padding: 10px 16px; background: var(--bg); }
+    .pv-row { display: flex; align-items: center; gap: 10px; }
+    .pv-logo { font-family: var(--font-display); font-weight: 600; font-size: 17px; color: var(--accent); }
+    .pv-navmoon { width: 10px; height: 10px; border-radius: var(--radius-pill); background: var(--accent-light); flex-shrink: 0; }
+    .pv-navyear { background: none; border: none; font-family: var(--font-ui); font-size: 11px; color: var(--text-4); cursor: pointer; padding: 6px 8px; border-radius: var(--radius-sm); transition: color 0.2s ease, background 0.2s ease; }
+    .pv-navyear:hover { color: var(--text); background: var(--bg-2); }
+    .pv-navlinks { display: flex; gap: 16px; }
+    .pv-navlinks a { position: relative; font-family: var(--font-ui); font-size: 10px; text-transform: var(--eyebrow-transform); letter-spacing: 0.04em; color: var(--text-3); text-decoration: none; padding: 8px 2px; transition: color 0.2s ease; }
+    .pv-navlinks a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 3px; height: var(--line-weight); background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.2s ease; }
+    .pv-navlinks a:hover { color: var(--text); }
+    .pv-navlinks a:hover::after, .pv-navlinks a.on::after { transform: scaleX(1); }
+    .pv-navlinks a.on { color: var(--accent); }
 
-    .pv-table { width: 100%; border-collapse: collapse; font-family: var(--font-body); font-size: 12px; }
-    .pv-table th, .pv-table td { border: var(--line-weight) solid var(--border); padding: 8px 10px; text-align: left; color: var(--text-2); }
-    .pv-table th { color: var(--text-3); font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.05em; }
+    /* ---- T041 split hero ---- */
+    .pv-hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 26px; align-items: center; background: var(--bg-2); border-radius: var(--radius-card); padding: 28px 26px; }
+    .pv-hero-h { font-size: 29px; line-height: 1.12; margin: 12px 0 6px; }
+    .pv-monthcard { position: relative; border: var(--line-weight) solid var(--accent-line); border-radius: var(--radius-card); background: var(--accent-wash); padding: 18px 20px 20px; }
+    .pv-monthcard-moon { position: absolute; top: 16px; right: 16px; }
+    .pv-monthcard-label { font-family: var(--font-eyebrow); font-size: 9.5px; letter-spacing: 0.08em; text-transform: var(--eyebrow-transform); color: var(--text-4); }
+    .pv-monthcard-name { font-family: var(--font-display); font-size: 16px; color: var(--text); margin-top: 10px; }
+    .pv-monthcard-date { font-family: var(--font-ui); font-size: 10.5px; color: var(--text-3); margin-top: 4px; }
+
+    /* ---- T042 page hero ---- */
+    .pv-pagehero { position: relative; overflow: hidden; background: var(--bg-2); border-radius: var(--radius-card); padding: 34px 30px; }
+    .pv-pagehero-inner { position: relative; z-index: 1; max-width: 46ch; }
+    .pv-pagehero-h { font-size: 26px; line-height: 1.15; margin-bottom: 8px; }
+    .pv-pagehero-moon { display: none; position: absolute; top: 22px; right: 30px; width: 64px; height: 64px; box-shadow: 0 0 0 12px color-mix(in srgb, var(--accent-light) 18%, transparent); }
+    :root[data-theme="moonrite"] .pv-pagehero-moon { display: inline-block; }
+
+    /* ---- T044 the physical card ---- */
+    .tb-codecard { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px 12px; border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); background: var(--bg-3); padding: 16px 20px 20px 24px; overflow: hidden; }
+    .tb-codecard::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--accent); }
+    .tb-codecard-label { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: .1em; text-transform: var(--eyebrow-transform); color: var(--text-4); }
+    .tb-codecard-copy { background: none; border: var(--line-weight) solid var(--border-2); color: var(--text-3); font-family: var(--font-ui); font-size: 11px; padding: 7px 14px; min-height: 32px; cursor: pointer; text-transform: var(--button-transform); letter-spacing: var(--button-tracking); border-radius: var(--radius-btn); transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
+    .tb-codecard-copy:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+    .pv-writearea { grid-column: 1 / -1; min-height: 84px; padding-top: 2px; background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, color-mix(in srgb, var(--text) 22%, transparent) 27px, color-mix(in srgb, var(--text) 22%, transparent) 28px); }
+    .pv-writearea code { display: inline; background: none; border: none; padding: 0; border-radius: 0; font-family: var(--font-mono); font-size: 13.5px; line-height: 28px; color: var(--text-2); }
+    :root[data-theme="moonrite"] .pv-writearea code { font-family: var(--font-display); font-size: 15px; }
+    #pv-typeline.typing::after { content: ''; display: inline-block; width: var(--line-weight); height: 1em; background: var(--accent); margin-left: 3px; vertical-align: -2px; }
+
+    /* ---- T045 how it works ---- */
+    .pv-hiw { position: relative; border: var(--line-weight) solid var(--border); padding: 18px; background: var(--bg); }
+    /* Corner accents are a Dark hard-edge trait; Moonrite rounds the shell instead. */
+    .pv-hiw::before, .pv-hiw::after { content: ''; position: absolute; width: 14px; height: 14px; border: calc(var(--line-weight) * 2) solid var(--accent); }
+    .pv-hiw::before { top: calc(var(--line-weight) * -1); left: calc(var(--line-weight) * -1); border-right: none; border-bottom: none; }
+    .pv-hiw::after { bottom: calc(var(--line-weight) * -1); right: calc(var(--line-weight) * -1); border-left: none; border-top: none; }
+    :root[data-theme="moonrite"] .pv-hiw { border-radius: var(--radius-card); }
+    :root[data-theme="moonrite"] .pv-hiw::before, :root[data-theme="moonrite"] .pv-hiw::after { display: none; }
+    .pv-video { position: relative; border-radius: var(--radius); background: linear-gradient(135deg, var(--wash-2a), var(--wash-2b)); height: 96px; display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 14px; cursor: pointer; }
+    .pv-play { width: 34px; height: 34px; border-radius: var(--radius-pill); background: var(--bg); color: var(--accent); display: inline-flex; align-items: center; justify-content: center; font-size: 12px; padding-left: 3px; transition: transform 0.2s ease; }
+    .pv-video:hover .pv-play { transform: scale(1.1); }
+    .pv-video-label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.04em; color: var(--text); background: color-mix(in srgb, var(--bg) 80%, transparent); padding: 5px 12px; border-radius: var(--radius-pill); }
+    .pv-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: var(--line-weight) solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .pv-step { background: var(--bg); padding: 16px 14px; display: flex; flex-direction: column; gap: 10px; font-family: var(--font-display); font-size: 13.5px; color: var(--text); }
+    .pv-step .demo-num { display: inline-flex; border-radius: var(--radius-pill); border-color: var(--accent-line); }
+
+    /* ---- T046 comparison table ---- */
+    .pv-tablewrap { border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); overflow: hidden; max-width: 560px; }
+    .pv-table { width: 100%; border-collapse: collapse; font-family: var(--font-body); font-size: 12.5px; }
+    .pv-table th { background: var(--accent); color: var(--accent-ink); font-family: var(--font-ui); font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: var(--eyebrow-transform); padding: 10px 14px; text-align: left; border: none; }
+    .pv-table td { border-top: var(--line-weight) solid var(--border); padding: 10px 14px; text-align: left; color: var(--text-2); transition: background 0.15s ease; }
+    .pv-table td + td { border-left: var(--line-weight) solid var(--border); }
+    .pv-table th:nth-child(2), .pv-table td:nth-child(2) { text-align: center; }
+    .pv-table td:nth-child(2) { background: var(--accent-faint); font-weight: 600; }
+    .pv-table td:nth-child(3) { text-align: center; }
+    .pv-table tr:hover td { background: var(--bg-2); }
     .pv-table .ok { color: var(--ok); }
-    .pv-table .no { color: var(--err-deep); }
-    .pv-table .warn { color: var(--accent); }
+    .pv-table .no { color: var(--err); }
+    .pv-table .warn { color: var(--warn); }
 
-    .pv-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: var(--line-weight) solid var(--border); }
-    .pv-stat { background: var(--bg); padding: 14px; text-align: center; }
-    .pv-stat b { display: block; font-family: var(--font-display); font-size: 22px; color: var(--accent); }
-    .pv-stat span { font-family: var(--font-body); font-size: 11px; color: var(--text-3); }
+    /* ---- T047 stats ---- */
+    .pv-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); overflow: hidden; }
+    .pv-stat { background: var(--bg); padding: 20px 14px 18px; text-align: center; }
+    .pv-stat b { display: block; font-family: var(--font-display); font-size: 32px; font-weight: var(--heading-weight); line-height: 1.1; color: var(--accent); }
+    .pv-stat span { font-family: var(--font-body); font-size: 11.5px; color: var(--text-3); display: inline-block; margin-top: 4px; }
 
-    .pv-tabbar { display: flex; gap: 6px; }
-    .pv-tabbar span { font-family: var(--font-ui); font-size: 11px; padding: 6px 12px; border: var(--line-weight) solid var(--border); color: var(--text-3); }
-    .pv-tabbar .on { color: var(--accent); border-color: var(--accent); }
-    .pv-tabpanel { border: var(--line-weight) solid var(--border); border-top: none; padding: 14px; font-family: var(--font-body); font-size: 12.5px; color: var(--text-2); }
+    /* ---- T048 tabs (mechanics owned by the script below; do not rename ids) ---- */
+    .pv-tabs { max-width: 560px; }
+    .pv-tabbar { display: flex; gap: 6px; padding: 5px; background: var(--bg-2); border: var(--line-weight) solid var(--border); border-radius: var(--radius-btn); width: fit-content; margin-bottom: 12px; }
+    .pv-tabbar button { font-family: var(--font-ui); font-size: 11px; letter-spacing: var(--button-tracking); text-transform: var(--button-transform); padding: 9px 16px; min-height: 38px; border: none; color: var(--text-3); background: none; cursor: pointer; border-radius: var(--radius-btn); transition: background 0.2s ease, color 0.2s ease; }
+    .pv-tabbar button:hover { color: var(--text); background: color-mix(in srgb, var(--accent) 10%, transparent); }
+    .pv-tabbar button.on, .pv-tabbar button[aria-selected="true"] { color: var(--accent-ink); background: var(--accent); }
+    .pv-tabbar button.on:hover, .pv-tabbar button[aria-selected="true"]:hover { background: var(--accent); }
+    .pv-tabpanel { border: var(--line-weight) solid var(--border); border-radius: var(--radius); padding: 16px 18px; min-height: 66px; font-family: var(--font-body); font-size: 12.5px; line-height: 1.6; color: var(--text-2); background: var(--bg); }
 
-    .pv-os { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; align-items: center; }
-    .pv-ostext { font-family: var(--font-body); font-size: 13px; color: var(--text-2); margin: 0; }
-    .pv-osbadges { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: var(--line-weight) solid var(--border); }
-    .pv-osbadges div { background: var(--bg); padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; }
-    .pv-osbadges span { font-family: var(--font-ui); font-size: 10px; text-transform: var(--eyebrow-transform); color: var(--text-3); }
+    /* ---- T049 about panel ---- */
+    .pv-os { display: grid; grid-template-columns: 1.35fr 1fr; gap: 26px; align-items: center; }
+    .pv-ostext { font-family: var(--font-display); font-size: 19px; font-weight: var(--heading-weight); line-height: 1.45; color: var(--text); margin: 0; }
+    .pv-osbadges { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: var(--line-weight) solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .pv-osbadges div { background: var(--bg); padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .pv-osbadges span { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.05em; text-transform: var(--eyebrow-transform); color: var(--text-3); }
     .pv-osbadges b { font-family: var(--font-ui); font-size: 12px; color: var(--text); }
 
-    .pv-pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: var(--line-weight) solid var(--border); }
-    .pv-pcard { background: var(--bg); padding: 14px; }
+    /* ---- T050 principle grid ---- */
+    .pv-pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); overflow: hidden; }
+    .pv-pcard { background: var(--bg); padding: 18px; }
     .pv-pcard .demo-num { display: inline-flex; }
-    .pv-pcard b { display: block; font-family: var(--font-display); font-size: 14px; color: var(--text); margin: 8px 0 4px; }
-    .pv-pcard p { font-family: var(--font-body); font-size: 11.5px; color: var(--text-3); margin: 0; }
+    .pv-pcard b { display: block; font-family: var(--font-display); font-size: 15px; color: var(--text); margin: 10px 0 5px; }
+    .pv-pcard p { font-family: var(--font-body); font-size: 12px; line-height: 1.55; color: var(--text-3); margin: 0; }
 
-    .pv-docs { display: grid; grid-template-columns: 92px 1fr 84px; gap: 10px; }
-    .pv-docs > div { display: flex; flex-direction: column; gap: 6px; }
-    .pv-docs-side { border-right: var(--line-weight) solid var(--border); padding-right: 8px; }
-    .pv-docs-toc { border-left: var(--line-weight) solid var(--border); padding-left: 8px; }
-    .pv-bar { height: 7px; background: var(--border); border-radius: var(--radius-sm); display: block; }
-    .pv-bar.on { background: var(--accent); }
+    /* ---- T051 guide skeleton ---- */
+    .pv-docs { display: grid; grid-template-columns: 100px 1fr 92px; gap: 16px; }
+    .pv-docs > div { display: flex; flex-direction: column; gap: 8px; }
+    .pv-docs-side { background: var(--bg-2); border-radius: var(--radius); padding: 12px; }
+    .pv-docs-main { padding-top: 4px; }
+    .pv-docs-toc { border-left: var(--line-weight) solid var(--border); padding-left: 12px; }
+    .pv-bar { height: 8px; background: var(--track); border-radius: var(--radius-pill); display: block; }
+    /* The side panel sits on --bg-2, where --track all but vanishes. */
+    .pv-docs-side .pv-bar { background: var(--border); }
     .pv-bar.dim { background: var(--border-2); }
-    .pv-bar.title { height: 11px; background: var(--border-3); }
+    .pv-bar.on { background: var(--accent); }
+    .pv-bar.title { height: 12px; background: var(--border-3); border-radius: var(--radius-sm); margin-bottom: 4px; }
     .pv-bar.w40 { width: 40%; } .pv-bar.w50 { width: 50%; } .pv-bar.w55 { width: 55%; }
     .pv-bar.w60 { width: 60%; } .pv-bar.w70 { width: 70%; } .pv-bar.w80 { width: 80%; }
     .pv-bar.w85 { width: 85%; } .pv-bar.w90 { width: 90%; }
 
-    .pv-toc { display: flex; flex-direction: column; gap: 6px; max-width: 220px; }
-    .pv-toc a { font-family: var(--font-body); font-size: 12px; color: var(--text-3); border-left: var(--line-weight) solid var(--border); padding: 4px 10px; }
-    .pv-toc a.on { color: var(--accent); border-left-color: var(--accent); }
+    /* ---- T052 scroll-spy rail (mechanics owned by the script below) ---- */
+    .pv-toc { display: flex; flex-direction: column; gap: 4px; max-width: 220px; align-self: start; }
+    .pv-toc .pv-tiny { margin-bottom: 4px; }
+    .pv-toc a { font-family: var(--font-body); font-size: 12px; color: var(--text-3); border-left: calc(var(--line-weight) * 2) solid var(--border); padding: 7px 12px; text-decoration: none; cursor: pointer; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease; }
+    .pv-toc a:hover { color: var(--text); background: var(--bg-2); }
+    .pv-toc a.on { color: var(--accent); border-left-color: var(--accent); background: var(--accent-faint); }
+    .pv-tocwrap { display: grid; grid-template-columns: 170px 1fr; gap: 20px; max-width: 580px; }
+    .pv-tocbox { position: relative; height: 150px; overflow-y: auto; border: var(--line-weight) solid var(--border); border-radius: var(--radius); background: var(--bg); padding: 14px 20px 14px 16px; scrollbar-width: thin; scrollbar-color: var(--border-2) transparent; }
+    .pv-tocbox section { min-height: 96px; }
+    .pv-tocbox b { font-family: var(--font-display); font-size: 13.5px; color: var(--text); }
+    .pv-tocbox p { font-family: var(--font-body); font-size: 12px; line-height: 1.6; color: var(--text-3); margin: 4px 0 14px; }
 
+    /* ---- T053 monthly cards ---- */
     .pv-ccgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .pv-cc { border: var(--line-weight) solid var(--border); background: var(--bg); padding: 12px; }
-    .pv-cc-top { font-family: var(--font-display); font-size: 14px; color: var(--text); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-    .pv-cc .pv-code { font-size: 10px; }
+    .pv-cc { border: var(--line-weight) solid var(--border); border-radius: var(--radius); background: var(--bg); padding: 14px 16px; transition: border-color 0.2s ease; }
+    .pv-cc:hover { border-color: var(--border-2); }
+    .pv-cc-top { font-family: var(--font-display); font-size: 15px; color: var(--text); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .pv-cc-top::before { content: ''; width: 9px; height: 9px; border-radius: var(--radius-pill); background: var(--accent-light); flex-shrink: 0; }
+    .pv-cc-land { font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.06em; text-transform: var(--eyebrow-transform); color: var(--text-3); }
 
-    .pv-feat { border: var(--line-weight) solid var(--border); background: var(--bg); padding: 14px; margin-bottom: 10px; }
-    .pv-feat b { display: block; font-family: var(--font-display); font-size: 16px; color: var(--text); margin: 8px 0; }
-    .pv-feat .pv-orange { font-family: var(--font-ui); font-size: 11px; }
-    .pv-postrow { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: var(--line-weight) solid var(--border); }
-    .pv-postcard { background: var(--bg); padding: 12px; font-family: var(--font-display); font-size: 13px; color: var(--text); }
+    /* ---- T054 blog listing ---- */
+    .pv-feat { background: var(--bg-2); border-radius: var(--radius-card); padding: 16px 18px; margin-bottom: 12px; }
+    .pv-feat b { display: block; font-family: var(--font-display); font-size: 16.5px; font-weight: var(--heading-weight); color: var(--text); margin: 10px 0 8px; }
+    .pv-readmore { display: inline-block; font-family: var(--font-ui); font-size: 11px; color: var(--accent); text-decoration: none; transition: transform 0.2s ease; }
+    .pv-readmore:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .pv-feat:hover .pv-readmore { transform: translateX(3px); }
+    .pv-postrow { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: var(--line-weight) solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .pv-postcard { background: var(--bg); padding: 14px; font-family: var(--font-display); font-size: 13px; color: var(--text); transition: background 0.15s ease; cursor: pointer; }
+    .pv-postcard:hover { background: var(--bg-2); }
 
+    /* ---- T055 article ---- */
     .pv-article { max-width: 480px; }
-    .pv-meta { font-family: var(--font-ui); font-size: 10.5px; color: var(--text-4); display: block; margin: 4px 0 10px; }
-    .pv-codeline { font-family: var(--font-mono); font-size: 11px; color: var(--text-2); background: var(--bg); border: var(--line-weight) solid var(--border); border-left: 3px solid var(--accent); padding: 8px 10px; margin-top: 10px; }
+    .pv-article .pv-h1 { display: block; font-size: 20px; }
+    .pv-meta { font-family: var(--font-ui); font-size: 10.5px; letter-spacing: 0.04em; color: var(--text-4); display: block; margin: 6px 0 12px; }
+    .pv-codeline { position: relative; font-family: var(--font-mono); font-size: 11.5px; color: var(--text-2); background: var(--bg-3); border: var(--line-weight) solid var(--border); border-radius: var(--radius-sm); padding: 10px 14px 10px 20px; margin-top: 12px; overflow: hidden; }
+    .pv-codeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--accent); }
+    :root[data-theme="moonrite"] .pv-codeline { font-family: var(--font-display); font-size: 13.5px; }
 
+    /* ---- T057 landmark grid ---- */
     .pv-scgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .pv-sc { border: var(--line-weight) solid var(--border); background: var(--bg); }
+    .pv-sc { border: var(--line-weight) solid var(--border); border-radius: var(--radius); background: var(--bg); overflow: hidden; transition: border-color 0.2s ease; }
+    .pv-sc:hover { border-color: var(--border-2); }
     .pv-thumb { aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; }
-    .pv-thumb span { font-family: var(--font-display); font-weight: 700; color: color-mix(in srgb, var(--accent) 40%, transparent); }
-    .pv-sc b { display: block; padding: 10px 12px; font-family: var(--font-display); font-size: 13px; color: var(--text); }
+    .pv-thumb span { width: 38px; height: 38px; border-radius: var(--radius-pill); background: var(--bg-card); color: var(--accent); display: inline-flex; align-items: center; justify-content: center; font-size: 17px; }
+    .pv-sc b { display: block; padding: 11px 14px; font-family: var(--font-display); font-size: 13.5px; color: var(--text); }
 
-    .pv-cl { display: flex; flex-direction: column; gap: 14px; }
-    .pv-cl-row { display: flex; align-items: center; gap: 10px; position: relative; padding-left: 18px; flex-wrap: wrap; }
-    .pv-cl-dot { position: absolute; left: 0; width: 11px; height: 11px; border-radius: 50%; border: 2px solid var(--accent); background: var(--bg); }
-    .pv-ver2 { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--text); }
+    /* ---- T058 year in moons ---- */
+    .pv-cl { position: relative; display: flex; flex-direction: column; gap: 18px; padding: 4px 0; }
+    .pv-cl::before { content: ''; position: absolute; left: 6px; top: 10px; bottom: 10px; width: var(--line-weight); background: var(--border); }
+    .pv-cl-row { display: flex; align-items: center; gap: 12px; position: relative; padding-left: 28px; flex-wrap: wrap; }
+    .pv-cl-dot { position: absolute; left: 0; width: 13px; height: 13px; border-radius: var(--radius-pill); background: radial-gradient(circle at 34% 30%, color-mix(in srgb, var(--accent-light) 72%, var(--bg)) 0%, var(--accent-light) 68%); box-shadow: 0 0 0 3px var(--bg-card), 0 0 0 4px var(--accent-line); }
+    .pv-ver2 { font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--text); min-width: 48px; }
 
-    .pv-rm { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .pv-rmcol { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
-    .pv-rmcard { border: var(--line-weight) solid var(--border); background: var(--bg); padding: 10px 12px; font-family: var(--font-display); font-size: 13px; color: var(--text); width: 100%; box-sizing: border-box; }
+    /* ---- T059 calendar columns ---- */
+    .pv-rm { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .pv-rmcol { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; background: var(--bg-2); border-radius: var(--radius-card); padding: 14px; }
+    .pv-rmcard { border: var(--line-weight) solid var(--border); border-radius: var(--radius); background: var(--bg); padding: 11px 13px; font-family: var(--font-display); font-size: 13px; color: var(--text); width: 100%; box-sizing: border-box; display: flex; align-items: center; gap: 9px; }
+    .pv-rmcard::before { content: ''; width: 8px; height: 8px; border-radius: var(--radius-pill); background: var(--accent-light); flex-shrink: 0; }
 
+    /* ---- T060 support channels ---- */
     .pv-supgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .pv-sup { border: var(--line-weight) solid var(--border); background: var(--bg); padding: 14px; display: flex; flex-direction: column; gap: 6px; }
-    .pv-sup b { font-family: var(--font-display); font-size: 14px; color: var(--text); }
-    .pv-sup .pv-orange { font-family: var(--font-ui); font-size: 11px; }
+    .pv-sup { border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); background: var(--bg); padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; transition: border-color 0.2s ease; }
+    .pv-sup:hover { border-color: var(--accent-line); }
+    .pv-sup b { font-family: var(--font-display); font-size: 14.5px; color: var(--text); }
+    .pv-golink { display: inline-block; font-family: var(--font-ui); font-size: 11px; color: var(--accent); text-decoration: none; margin-top: 4px; padding: 4px 0; transition: transform 0.2s ease; }
+    .pv-sup:hover .pv-golink { transform: translateX(3px); }
+    .pv-golink:hover { text-decoration: underline; text-underline-offset: 3px; }
 
-    .pv-contact { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; align-items: start; }
-    .pv-form { display: flex; flex-direction: column; gap: 6px; }
-    .pv-input { border: var(--line-weight) solid var(--border-2); background: var(--bg); height: 24px; }
-    .pv-input.tall { height: 48px; }
-    .pv-form .pv-bp { width: fit-content; margin-top: 6px; }
-    .pv-methodcard { border: var(--line-weight) solid var(--border); background: var(--bg); padding: 12px; }
-    .pv-methodcard b { display: block; font-family: var(--font-display); font-size: 14px; color: var(--text); margin-bottom: 4px; }
+    /* ---- T061 contact ---- */
+    .pv-contact { display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px; align-items: start; }
+    .pv-form { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+    .pv-form label { margin-top: 4px; }
+    .pv-input { width: 100%; box-sizing: border-box; border: var(--line-weight) solid var(--border-2); border-radius: var(--radius); background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 13px; padding: 10px 12px; height: 40px; transition: border-color 0.2s ease; }
+    .pv-input.tall { height: 76px; resize: none; }
+    .pv-input:hover { border-color: var(--border-3); }
+    .pv-input:focus-visible { border-color: var(--accent); outline: var(--focus-ring); outline-offset: var(--focus-offset); }
+    .pv-form .pv-bp { width: fit-content; margin-top: 8px; }
+    .pv-methodcard { border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); background: var(--bg); padding: 14px 16px; }
+    .pv-methodcard b { display: block; font-family: var(--font-display); font-size: 14.5px; color: var(--text); margin-bottom: 4px; }
+    .pv-handle { font-family: var(--font-ui); font-size: 12px; color: var(--text-3); }
 
-    .pv-cta { text-align: center; padding: 12px 0; }
+    /* ---- T062 final CTA ---- */
+    .pv-cta { position: relative; overflow: hidden; text-align: center; padding: 40px 24px 36px; border-radius: var(--radius-card); background: var(--bg-2); }
+    .pv-cta-inner { position: relative; z-index: 1; }
     .pv-cta .pv-eyebrow { text-align: center; }
-    .pv-cta .pv-btns { justify-content: center; margin-top: 10px; }
+    .pv-cta-h { display: block; font-size: 26px; margin-bottom: 6px; }
+    .pv-cta .pv-btns { justify-content: center; margin-top: 16px; }
+    .pv-cta-moon { display: none; position: absolute; top: -26px; right: 8%; width: 110px; height: 110px; border-radius: var(--radius-pill); background: color-mix(in srgb, var(--accent-ink) 14%, transparent); }
+    /* Moonrite closes the page on the signature navy band with cream ink. */
+    :root[data-theme="moonrite"] .pv-cta { background: var(--accent); }
+    :root[data-theme="moonrite"] .pv-cta-moon { display: block; }
+    :root[data-theme="moonrite"] .pv-cta .pv-eyebrow { color: var(--accent-light); }
+    :root[data-theme="moonrite"] .pv-cta .pv-h1 { color: var(--accent-ink); }
+    :root[data-theme="moonrite"] .pv-cta .pv-bp { background: var(--accent-ink); border-color: var(--accent-ink); color: var(--accent); }
+    :root[data-theme="moonrite"] .pv-cta .pv-bp:hover { background: var(--bg); border-color: var(--bg); }
+    :root[data-theme="moonrite"] .pv-cta .pv-bs { border-color: var(--accent-ink); color: var(--accent-ink); }
+    :root[data-theme="moonrite"] .pv-cta .pv-bs:hover { background: color-mix(in srgb, var(--accent-ink) 14%, transparent); }
 
-    .pv-footer { border: var(--line-weight) solid var(--border); background: var(--bg); }
-    .pv-footcols { display: flex; gap: 32px; padding: 16px; }
-    .pv-footcols > div { display: flex; flex-direction: column; gap: 5px; }
-    .pv-footcols .pv-dim { font-size: 11px; }
-    .pv-footbar { display: flex; justify-content: space-between; padding: 10px 16px; border-top: var(--line-weight) solid var(--border); }
+    /* ---- T063 footer ---- */
+    .pv-footer { position: relative; overflow: hidden; border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); background: var(--bg-2); }
+    .pv-footcols { position: relative; z-index: 1; display: flex; gap: 44px; padding: 22px 22px 18px; }
+    .pv-footcols > div { display: flex; flex-direction: column; gap: 4px; }
+    .pv-footcols .pv-tiny { margin-bottom: 3px; }
+    .pv-flink { font-family: var(--font-ui); font-size: 11px; color: var(--text-4); text-decoration: none; padding: 3px 0; transition: color 0.2s ease; }
+    .pv-flink:hover { color: var(--text); }
+    .pv-footbar { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 22px; border-top: var(--line-weight) solid var(--border); }
+    .pv-footcopy { font-family: var(--font-ui); font-size: 11px; color: var(--text-4); }
+    .pv-nextmoon { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-eyebrow); font-size: 10.5px; letter-spacing: 0.06em; text-transform: var(--eyebrow-transform); color: var(--ok); }
+    /* Moonrite colour-blocks the footer in the signature navy, wildhood-style. */
+    :root[data-theme="moonrite"] .pv-footer { background: var(--accent); border-color: var(--accent); }
+    :root[data-theme="moonrite"] .pv-footer .pv-logo { color: var(--accent-ink); }
+    :root[data-theme="moonrite"] .pv-footer .pv-tiny { color: color-mix(in srgb, var(--accent-ink) 72%, transparent); }
+    :root[data-theme="moonrite"] .pv-flink { color: var(--accent-ink); }
+    :root[data-theme="moonrite"] .pv-flink:hover { color: var(--accent-light); }
+    :root[data-theme="moonrite"] .pv-footbar { border-top-color: color-mix(in srgb, var(--accent-ink) 25%, transparent); }
+    :root[data-theme="moonrite"] .pv-footcopy { color: color-mix(in srgb, var(--accent-ink) 80%, transparent); }
+    :root[data-theme="moonrite"] .pv-nextmoon { color: var(--accent-ink); }
+    :root[data-theme="moonrite"] .pv-nextmoon .pv-livedot { background: var(--accent-light); }
+
+    /* ---- shared layout helpers ---- */
+    .pv-center { display: flex; align-items: center; gap: 12px; }
+    .pv-narrow { max-width: 420px; }
 
     @media (max-width: 680px) {
-      .pv-hero, .pv-os, .pv-contact, .pv-docs { grid-template-columns: 1fr; }
-      .pv-docs-side, .pv-docs-toc { border: none; padding: 0; }
+      .pv-hero, .pv-os, .pv-contact, .pv-docs, .pv-tocwrap { grid-template-columns: 1fr; }
+      .pv-docs-toc { border: none; padding: 0; }
       .sg-block-head { flex-wrap: wrap; }
+      .pv-footcols { flex-wrap: wrap; gap: 24px; }
     }
 
+    /* ---- focus: every interactive element rings identically ---- */
+    .pv-bp:focus-visible, .pv-bs:focus-visible, .pv-navyear:focus-visible,
+    .pv-navlinks a:focus-visible, .pv-tabbar button:focus-visible,
+    .tb-codecard-copy:focus-visible, .pv-toc a:focus-visible,
+    .pv-tocbox:focus-visible, .pv-readmore:focus-visible,
+    .pv-golink:focus-visible, .pv-flink:focus-visible {
+      outline: var(--focus-ring); outline-offset: var(--focus-offset);
+    }
+    .demo-acc summary:focus-visible { outline: var(--focus-ring); outline-offset: calc(var(--focus-offset) * -1); }
+
     /* demo-* helpers referenced by the previews (from styleguide.astro) */
-    .demo-new { font-family: var(--font-ui); font-size: 9px; font-weight: 600; letter-spacing: 0.05em; text-transform: var(--eyebrow-transform); color: var(--accent-ink); background: var(--accent); padding: 2px 5px; border-radius: var(--radius-sm); }
+    .demo-new { font-family: var(--font-ui); font-size: 9px; font-weight: 600; letter-spacing: 0.05em; text-transform: var(--eyebrow-transform); color: var(--accent-ink); background: var(--accent); padding: 2px 6px; border-radius: var(--radius-sm); }
     .demo-tag { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 0.08em; text-transform: var(--eyebrow-transform); color: var(--accent); border: var(--line-weight) solid var(--border-2); padding: 4px 10px; border-radius: var(--radius-pill); }
-    .demo-num { font-family: var(--font-ui); font-size: 13px; color: var(--accent); border: var(--line-weight) solid var(--border-3); width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; }
+    .demo-num { font-family: var(--font-ui); font-size: 13px; color: var(--accent); border: var(--line-weight) solid var(--border-3); border-radius: var(--radius-sm); width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; }
 
     .demo-pill { font-family: var(--font-ui); font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 9px; border-radius: var(--radius-sm); }
     .demo-pill.add { color: var(--ok); background: color-mix(in srgb, var(--ok) 10%, transparent); border: var(--line-weight) solid color-mix(in srgb, var(--ok) 30%, transparent); }
@@ -677,8 +863,9 @@
     .demo-pill.ship { color: var(--ok); background: color-mix(in srgb, var(--ok) 10%, transparent); border: var(--line-weight) solid color-mix(in srgb, var(--ok) 30%, transparent); }
     .demo-pill.prog { color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); border: var(--line-weight) solid color-mix(in srgb, var(--accent) 30%, transparent); }
 
-    .demo-acc { border: var(--line-weight) solid var(--border); background: var(--bg-2); max-width: 560px; }
-    .demo-acc summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; list-style: none; padding: 16px 18px; }
+    .demo-acc { border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); overflow: hidden; background: var(--bg-2); max-width: 560px; }
+    .demo-acc summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; list-style: none; padding: 16px 18px; transition: background 0.2s ease; }
+    .demo-acc summary:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
     .demo-acc summary::-webkit-details-marker { display: none; }
     .demo-acc summary span:first-child { font-family: var(--font-body); font-size: 15.5px; font-weight: 500; color: var(--text); }
     .demo-acc-mark { position: relative; width: 14px; height: 14px; flex-shrink: 0; }
@@ -692,10 +879,88 @@
     .tb-pulse{display:inline-block;width:var(--pulse-size,24px);height:var(--pulse-size,24px);border-radius:50%;background:var(--pulse-color,var(--ok));animation:tbPulse 1.6s ease-in-out infinite;}
     @keyframes tbPulse{0%,100%{transform:scale(.7);opacity:.5}50%{transform:scale(1);opacity:1}}
 
-    /* Static CodeBlockCard replacement (SPEC rule 5) */
-    .tb-codecard{display:flex;align-items:center;gap:14px;border:var(--line-weight) solid var(--border-2);border-left:3px solid var(--accent);background:var(--bg-3);padding:14px 18px;font-family:var(--font-mono);font-size:14px;color:var(--text);}
-    .tb-codecard-label{font-family:var(--font-eyebrow);font-size:11px;letter-spacing:.1em;text-transform:var(--eyebrow-transform);color:var(--text-4);}
-    .tb-codecard-copy{margin-left:auto;background:none;border:var(--line-weight) solid var(--border-2);color:var(--text-3);font-family:var(--font-ui);font-size:11px;padding:4px 10px;cursor:pointer;text-transform:var(--button-transform);border-radius:var(--radius-btn);}
+    /* ---- motion: subtle, slow, and only when the visitor allows it ---- */
+    @media (prefers-reduced-motion: no-preference) {
+      .pv-hero-copy, .pv-pagehero-inner, .pv-cta-inner { animation: pvRise 0.7s ease both; }
+      .pv-monthcard { animation: pvRise 0.7s ease 0.12s both; }
+      .pv-livedot { animation: pvBreathe 2.4s ease-in-out infinite; }
+      #pv-typeline.typing::after { animation: pvCaret 0.9s step-end infinite; }
+      .pv-thumb span { animation: pvDrift 7s ease-in-out infinite alternate; }
+    }
+    @keyframes pvRise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    @keyframes pvBreathe { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
+    @keyframes pvCaret { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes pvDrift { from { transform: translateY(2px); } to { transform: translateY(-3px); } }
+    @media (prefers-reduced-motion: reduce) {
+      .tb-pulse { animation: none; }
+    }
   </style>
+  <script>
+    (function () {
+      /* T048: Ways-to-Use tabs */
+      var tabbar = document.getElementById('pv-tabbar');
+      var panel = document.getElementById('pv-tabpanel');
+      if (tabbar && panel) {
+        var tabs = Array.prototype.slice.call(tabbar.querySelectorAll('button'));
+        tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            tabs.forEach(function (other) {
+              var on = other === tab;
+              other.classList.toggle('on', on);
+              other.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            panel.textContent = tab.getAttribute('data-pv-panel') || '';
+          });
+        });
+      }
+
+      /* T052: Right TOC scroll-spy, scoped to its own scroll box */
+      var box = document.getElementById('pv-tocbox');
+      var toc = document.getElementById('pv-toc');
+      if (box && toc) {
+        var links = Array.prototype.slice.call(toc.querySelectorAll('[data-pv-toc]'));
+        var secs = Array.prototype.slice.call(box.querySelectorAll('[data-pv-sec]'));
+        var setOn = function (idx) {
+          links.forEach(function (l) {
+            l.classList.toggle('on', l.getAttribute('data-pv-toc') === String(idx));
+          });
+        };
+        box.addEventListener('scroll', function () {
+          var mid = box.scrollTop + box.clientHeight / 2;
+          var active = 0;
+          secs.forEach(function (s, i) { if (s.offsetTop <= mid) { active = i; } });
+          setOn(active);
+        });
+        links.forEach(function (l, i) {
+          l.addEventListener('click', function (e) {
+            e.preventDefault();
+            var target = secs[i];
+            if (target) { box.scrollTo({ top: target.offsetTop - 12, behavior: 'smooth' }); }
+            setOn(i);
+          });
+        });
+      }
+
+      /* T044: typewriter. The full intention is authored in the markup, so with
+         JavaScript off, or with reduced motion on, the line simply reads whole. */
+      var line = document.getElementById('pv-typeline');
+      if (line && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var full = line.textContent;
+        line.textContent = '';
+        line.classList.add('typing');
+        var i = 0;
+        var tick = function () {
+          if (i <= full.length) {
+            line.textContent = full.slice(0, i);
+            i += 1;
+            window.setTimeout(tick, 55);
+          } else {
+            window.setTimeout(function () { line.classList.remove('typing'); }, 1800);
+          }
+        };
+        window.setTimeout(tick, 700);
+      }
+    })();
+  </script>
 </body>
 </html>

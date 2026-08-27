@@ -21,30 +21,31 @@
         <span class="tb-tid">T100</span>
         <div>
           <h2>Bento grid</h2>
-          <p>An asymmetric mosaic of feature tiles with varying column and row spans, each carrying a subtle gradient and a lift on hover. Pure CSS, no JavaScript.</p>
+          <p>An asymmetric mosaic of feature tiles with varying column and row spans, anchored by one solid accent panel with a moon-disc motif, tint variation across the rest, and a lift on hover. Pure CSS, no JavaScript.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="sgx-preview">
           <span class="sgx-preview-tag">CSS ONLY</span>
           <div class="ani-bento">
-            <div class="ani-tile ani-t-a" style="--g:linear-gradient(135deg,var(--wash-1a),var(--warn-wash))">
+            <div class="ani-tile ani-t-a ani-tile-feature">
+              <span class="ani-moon" aria-hidden="true"></span>
               <span class="ani-tile-k">The ritual</span>
               <span class="ani-tile-l">Write it. Burn it. Release it.</span>
             </div>
-            <div class="ani-tile ani-t-b" style="--g:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))">
+            <div class="ani-tile ani-t-b ani-tint-blue">
               <span class="ani-tile-k">The card art</span>
               <span class="ani-tile-l">Full moons over Australian landmarks</span>
             </div>
-            <div class="ani-tile ani-t-c" style="--g:linear-gradient(135deg,var(--bg-3),var(--ok-wash))">
+            <div class="ani-tile ani-t-c ani-tint-cream">
               <span class="ani-tile-k">The moon calendar</span>
               <span class="ani-tile-l">Twelve full moons in 2027</span>
             </div>
-            <div class="ani-tile ani-t-d" style="--g:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))">
+            <div class="ani-tile ani-t-d ani-tint-deep">
               <span class="ani-tile-k">The box</span>
               <span class="ani-tile-l">Twelve cards plus spares</span>
             </div>
-            <div class="ani-tile ani-t-e" style="--g:linear-gradient(135deg,var(--err-wash),var(--warn-wash))">
+            <div class="ani-tile ani-t-e ani-tint-paper">
               <span class="ani-tile-k">The pace</span>
               <span class="ani-tile-l">One card a month, no streak to keep</span>
             </div>
@@ -110,10 +111,10 @@
             <span class="ani-word" style="--i:1"><span>moons.</span></span>
             <span class="ani-word" style="--i:2"><span>Twelve</span></span>
             <span class="ani-word" style="--i:3"><span>landmarks.</span></span>
-            <span class="ani-word" style="--i:4"><span>One</span></span>
-            <span class="ani-word" style="--i:5"><span>card</span></span>
-            <span class="ani-word" style="--i:6"><span>a</span></span>
-            <span class="ani-word" style="--i:7"><span>month.</span></span>
+            <span class="ani-word ani-word-accent" style="--i:4"><span>One</span></span>
+            <span class="ani-word ani-word-accent" style="--i:5"><span>card</span></span>
+            <span class="ani-word ani-word-accent" style="--i:6"><span>a</span></span>
+            <span class="ani-word ani-word-accent" style="--i:7"><span>month.</span></span>
           </p>
           <button class="ani-replay" id="ani-replay" type="button">↺ Replay</button>
         </div>
@@ -132,15 +133,15 @@
         <div class="sgx-preview">
           <span class="sgx-preview-tag">CSS + JS</span>
           <div class="ani-stats" id="ani-stats">
-            <div class="ani-stat">
+            <div class="ani-stat" style="--d:0">
               <b class="ani-stat-num" data-ani-target="12" data-ani-prefix="" data-ani-suffix="">12</b>
               <span class="ani-stat-label">Cards in the box</span>
             </div>
-            <div class="ani-stat">
+            <div class="ani-stat" style="--d:1">
               <b class="ani-stat-num" data-ani-target="8" data-ani-prefix="" data-ani-suffix="">8</b>
               <span class="ani-stat-label">States and territories</span>
             </div>
-            <div class="ani-stat">
+            <div class="ani-stat" style="--d:2">
               <b class="ani-stat-num" data-ani-target="1" data-ani-prefix="" data-ani-suffix="">1</b>
               <span class="ani-stat-label">Card a month, no streak to keep</span>
             </div>
@@ -162,18 +163,23 @@
           <span class="sgx-preview-tag">CSS + JS</span>
           <div class="ani-story" id="ani-story">
             <div class="ani-story-sticky">
-              <div class="ani-story-card">
-                <div class="ani-story-visual on" data-ani-visual="0">
-                  <span class="ani-visual-n">01</span>
-                  <span class="ani-visual-t">Write it</span>
-                </div>
-                <div class="ani-story-visual" data-ani-visual="1">
-                  <span class="ani-visual-n">02</span>
-                  <span class="ani-visual-t">Choose your release</span>
-                </div>
-                <div class="ani-story-visual" data-ani-visual="2">
-                  <span class="ani-visual-n">03</span>
-                  <span class="ani-visual-t">Let it go</span>
+              <div class="ani-story-stack">
+                <div class="ani-story-card">
+                  <div class="ani-story-visual on" data-ani-visual="0">
+                    <span class="ani-visual-n">01</span>
+                    <span class="ani-visual-t">Write it</span>
+                    <span class="ani-visual-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></span>
+                  </div>
+                  <div class="ani-story-visual" data-ani-visual="1">
+                    <span class="ani-visual-n">02</span>
+                    <span class="ani-visual-t">Choose your release</span>
+                    <span class="ani-visual-dots" aria-hidden="true"><i></i><i class="on"></i><i></i></span>
+                  </div>
+                  <div class="ani-story-visual" data-ani-visual="2">
+                    <span class="ani-visual-n">03</span>
+                    <span class="ani-visual-t">Let it go</span>
+                    <span class="ani-visual-dots" aria-hidden="true"><i></i><i></i><i class="on"></i></span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -212,6 +218,8 @@
           <span class="sgx-preview-tag">CSS + JS</span>
           <div class="ani-ba" id="ani-ba" style="--ani-ba:50">
             <div class="ani-ba-panel ani-ba-after">
+              <span class="ani-ba-ink" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="ani-ba-moon" aria-hidden="true"></span>
               <span class="ani-ba-tag">Written</span>
             </div>
             <div class="ani-ba-panel ani-ba-before">
@@ -289,32 +297,63 @@
     .ani-bento {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 80px;
-      gap: 10px;
+      grid-auto-rows: 92px;
+      gap: 12px;
     }
     .ani-tile {
       position: relative;
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-card);
-      background: var(--g), var(--bg);
-      padding: 14px;
+      background: var(--bg);
+      padding: 18px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      gap: 4px;
+      gap: 5px;
       overflow: hidden;
-      transition: border-color 0.2s ease, transform 0.2s ease;
+      transition: border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1), transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .ani-tile::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(120% 120% at 80% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 60%);
+      background: radial-gradient(130% 130% at 85% -10%, var(--accent-faint), transparent 55%);
       pointer-events: none;
     }
     .ani-tile:hover { border-color: var(--accent); transform: translateY(-4px); }
-    .ani-tile-k { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 0.1em; text-transform: var(--eyebrow-transform); color: var(--accent); position: relative; z-index: 1; }
-    .ani-tile-l { font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--text); position: relative; z-index: 1; }
+    .ani-tile-k { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 0.12em; text-transform: var(--eyebrow-transform); color: var(--accent); position: relative; z-index: 1; }
+    .ani-tile-l { font-family: var(--font-display); font-size: 15px; font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); color: var(--text); position: relative; z-index: 1; }
+    .ani-tint-blue  { background: var(--accent-wash); border-color: color-mix(in srgb, var(--accent) 22%, transparent); }
+    .ani-tint-cream { background: var(--bg-2); }
+    .ani-tint-deep  { background: var(--accent-wash-2); border-color: color-mix(in srgb, var(--accent) 22%, transparent); }
+    .ani-tint-paper { background: var(--bg); }
+    .ani-tile-feature { background: var(--accent); border-color: var(--accent); justify-content: flex-end; }
+    .ani-tile-feature::after { content: none; }
+    .ani-tile-feature .ani-tile-k { color: color-mix(in srgb, var(--accent-ink) 80%, transparent); }
+    .ani-tile-feature .ani-tile-l { font-size: clamp(19px, 2.4vw, 24px); line-height: 1.22; max-width: 15ch; color: var(--accent-ink); }
+    .ani-moon {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius-pill);
+      background: color-mix(in srgb, var(--accent-ink) 28%, transparent);
+      overflow: hidden;
+    }
+    .ani-moon::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-pill);
+      background: var(--accent);
+      transform: translate(-32%, -14%);
+    }
+    :root[data-theme="moonrite"] .ani-moon { background: var(--accent-light); }
+    @media (prefers-reduced-motion: no-preference) {
+      .ani-moon::after { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+      .ani-tile-feature:hover .ani-moon::after { transform: translate(-100%, -14%); }
+    }
     .ani-t-a { grid-column: span 2; grid-row: span 2; }
     .ani-t-b { grid-column: span 2; }
     .ani-t-c { grid-column: span 1; grid-row: span 2; }
@@ -332,20 +371,27 @@
       display: flex;
       gap: 12px;
       width: max-content;
+      padding: 2px 0;
     }
     .ani-chip {
       font-family: var(--font-ui);
-      font-size: 12px;
+      font-size: 12.5px;
       letter-spacing: 0.04em;
       color: var(--text-2);
-      border: var(--line-weight) solid var(--border-2);
+      border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-pill);
-      padding: 8px 16px;
+      padding: 10px 18px;
       white-space: nowrap;
       background: var(--bg);
     }
+    .ani-chip:nth-child(even) { background: var(--bg-2); }
+    .ani-chip:nth-child(4n+3) {
+      background: var(--accent-wash);
+      border-color: color-mix(in srgb, var(--accent) 24%, transparent);
+      color: var(--accent);
+    }
     @media (prefers-reduced-motion: no-preference) {
-      .ani-marquee-track { animation: ani-scroll 26s linear infinite; }
+      .ani-marquee-track { animation: ani-scroll 44s linear infinite; }
       .ani-marquee:hover .ani-marquee-track { animation-play-state: paused; }
       @keyframes ani-scroll {
         from { transform: translateX(0); }
@@ -356,62 +402,96 @@
     /* ===== 03 STATEMENT / WORD REVEAL ===== */
     .ani-statement {
       font-family: var(--font-display);
-      font-size: clamp(24px, 4vw, 40px);
-      font-weight: 600;
-      line-height: 1.2;
+      font-size: clamp(26px, 4.2vw, 44px);
+      font-weight: var(--heading-weight);
+      letter-spacing: var(--heading-tracking);
+      line-height: 1.18;
       color: var(--text);
-      margin: 0 0 22px;
+      margin: 8px 0 26px;
       max-width: 18ch;
     }
-    .ani-word { display: inline-block; overflow: hidden; }
+    .ani-word { display: inline-block; overflow: hidden; padding-bottom: 0.08em; margin-bottom: -0.08em; }
     .ani-word > span { display: inline-block; }
+    .ani-word-accent > span { color: var(--accent); }
     @media (prefers-reduced-motion: no-preference) {
       .ani-word > span {
         opacity: 0;
-        transform: translateY(105%);
-        animation: ani-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        animation-delay: calc(var(--i) * 90ms);
+        transform: translateY(108%) rotate(2deg);
+        transform-origin: 0 100%;
+        animation: ani-rise 0.9s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: calc(var(--i) * 110ms + 120ms);
       }
       .ani-statement.ani-replaying .ani-word > span { animation: none; }
       @keyframes ani-rise {
-        to { opacity: 1; transform: translateY(0); }
+        60% { opacity: 1; }
+        to { opacity: 1; transform: translateY(0) rotate(0deg); }
       }
     }
     .ani-replay {
       font-family: var(--font-ui);
       font-size: 12px;
+      letter-spacing: var(--button-tracking);
       color: var(--accent);
       background: none;
       border: var(--line-weight) solid var(--border-2);
       border-radius: var(--radius-btn);
-      padding: 8px 14px;
+      min-height: 44px;
+      padding: 10px 20px;
       cursor: pointer;
-      transition: border-color 0.2s ease;
+      transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
     }
-    .ani-replay:hover { border-color: var(--accent); }
+    .ani-replay:hover { border-color: var(--accent); background: var(--accent); color: var(--accent-ink); }
+    .ani-replay:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-offset); }
 
     /* ===== 04 STAT COUNTERS ===== */
     .ani-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
+      gap: var(--line-weight);
       background: var(--border);
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-card);
       overflow: hidden;
     }
-    .ani-stat { background: var(--bg); padding: 24px 18px; text-align: center; }
+    .ani-stat { background: var(--bg); padding: 34px 20px 28px; text-align: center; }
     .ani-stat-num {
       display: block;
       font-family: var(--font-display);
-      font-size: clamp(30px, 5vw, 46px);
-      font-weight: 600;
+      font-size: clamp(36px, 5.5vw, 54px);
+      font-weight: var(--heading-weight);
+      letter-spacing: var(--heading-tracking);
       color: var(--accent);
       line-height: 1;
-      margin-bottom: 10px;
       font-variant-numeric: tabular-nums;
     }
-    .ani-stat-label { font-family: var(--font-body); font-size: 13px; color: var(--text-3); }
+    .ani-stat-num::after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 3px;
+      margin: 14px auto 12px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-light);
+    }
+    .ani-stat-label { font-family: var(--font-body); font-size: 13.5px; line-height: 1.45; color: var(--text-3); }
+    @media (prefers-reduced-motion: no-preference) {
+      .ani-stats.on .ani-stat {
+        animation: ani-stat-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation-delay: calc(var(--d) * 140ms);
+      }
+      .ani-stats.on .ani-stat-num::after {
+        animation: ani-rule 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation-delay: calc(var(--d) * 140ms + 200ms);
+      }
+      @keyframes ani-stat-in {
+        from { opacity: 0; transform: translateY(14px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes ani-rule {
+        from { transform: scaleX(0); }
+        to { transform: scaleX(1); }
+      }
+    }
 
     /* ===== 05 STICKY SCROLL-STORY ===== */
     .ani-story {
@@ -427,13 +507,28 @@
     .ani-story::-webkit-scrollbar { width: 8px; }
     .ani-story::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: var(--radius-sm); }
     .ani-story-sticky { position: sticky; top: 0; align-self: start; height: 0; }
-    .ani-story-card {
-      position: relative;
-      height: 220px;
+    .ani-story-stack { position: relative; margin: 14px 10px 0 6px; }
+    .ani-story-stack::before,
+    .ani-story-stack::after {
+      content: '';
+      position: absolute;
+      inset: 0;
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-card);
-      background: var(--bg-3);
+      background: var(--bg-2);
+      pointer-events: none;
+    }
+    .ani-story-stack::before { transform: rotate(-2.4deg) translate(-4px, 7px); }
+    .ani-story-stack::after { transform: rotate(1.6deg) translate(4px, 3px); background: var(--bg-3); }
+    .ani-story-card {
+      position: relative;
+      z-index: 1;
+      height: 230px;
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-card);
+      background: var(--bg);
       overflow: hidden;
+      box-shadow: var(--shadow-overlay);
     }
     .ani-story-visual {
       position: absolute;
@@ -442,56 +537,120 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
       opacity: 0;
-      transform: scale(1.04);
-      transition: opacity 0.45s ease, transform 0.45s ease;
-      background: radial-gradient(120% 120% at 50% 0%, var(--accent-faint), transparent 60%), var(--bg);
+      transform: scale(1.05) translateY(10px);
+      background: radial-gradient(120% 120% at 50% -10%, var(--accent-faint), transparent 60%), var(--bg);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .ani-story-visual { transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1); }
     }
     .ani-story-visual.on { opacity: 1; transform: none; }
-    .ani-visual-n { font-family: var(--font-ui); font-size: 13px; color: var(--accent); }
-    .ani-visual-t { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text); }
+    .ani-visual-n {
+      font-family: var(--font-eyebrow);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: var(--eyebrow-transform);
+      color: var(--accent);
+      border: var(--line-weight) solid color-mix(in srgb, var(--accent) 30%, transparent);
+      border-radius: var(--radius-pill);
+      padding: 4px 12px;
+    }
+    .ani-visual-t { font-family: var(--font-display); font-size: 24px; font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); color: var(--text); }
+    .ani-visual-dots { display: flex; gap: 7px; margin-top: 6px; }
+    .ani-visual-dots i {
+      width: 8px;
+      height: 8px;
+      border-radius: var(--radius-pill);
+      border: var(--line-weight) solid var(--border-2);
+      background: transparent;
+    }
+    .ani-visual-dots i.on { background: var(--accent); border-color: var(--accent); }
     .ani-story-steps { display: flex; flex-direction: column; }
     .ani-story-step {
       min-height: 220px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 16px 18px;
+      padding: 16px 22px;
       border-left: 2px solid var(--border);
       opacity: 0.4;
       transition: opacity 0.3s ease, border-color 0.3s ease;
     }
     .ani-story-step.on { opacity: 1; border-left-color: var(--accent); }
-    .ani-step-n { font-family: var(--font-ui); font-size: 12px; color: var(--accent); }
-    .ani-story-step h4 { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--text); margin: 8px 0 8px; }
-    .ani-story-step p { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0; }
+    .ani-step-n { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 0.14em; text-transform: var(--eyebrow-transform); color: var(--accent); }
+    .ani-story-step h4 { font-family: var(--font-display); font-size: 20px; font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); color: var(--text); margin: 10px 0 8px; }
+    .ani-story-step p { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0; max-width: 40ch; }
 
     /* ===== 06 BEFORE / AFTER SLIDER ===== */
     .ani-ba {
       position: relative;
-      height: 200px;
+      height: 220px;
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-card);
       overflow: hidden;
       --pos: calc(var(--ani-ba) * 1%);
+      --rule-pitch: 26px;
     }
-    .ani-ba-panel { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
-    .ani-ba-after { background: radial-gradient(130% 130% at 80% 20%, color-mix(in srgb, var(--accent) 25%, transparent), transparent 55%), linear-gradient(135deg, var(--wash-1a), var(--warn-wash)); }
-    .ani-ba-before {
-      background: linear-gradient(135deg, var(--bg-3), var(--bg-3));
-      clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+    .ani-ba-panel {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 16px;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          transparent 0,
+          transparent calc(var(--rule-pitch) - var(--line-weight)),
+          var(--border) calc(var(--rule-pitch) - var(--line-weight)),
+          var(--border) var(--rule-pitch)
+        ),
+        var(--bg-2);
+      background-position: 0 14px, 0 0;
+    }
+    .ani-ba-after { background-color: var(--bg-3); justify-content: flex-end; }
+    .ani-ba-before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+    .ani-ba-ink {
+      position: absolute;
+      top: calc(14px + var(--rule-pitch) * 2 - 12px);
+      left: 10%;
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--rule-pitch) - 4px);
+      width: 78%;
+    }
+    .ani-ba-ink i {
+      display: block;
+      height: 4px;
+      border-radius: var(--radius-pill);
+      background: color-mix(in srgb, var(--accent) 70%, transparent);
+    }
+    .ani-ba-ink i:nth-child(1) { width: 88%; }
+    .ani-ba-ink i:nth-child(2) { width: 64%; }
+    .ani-ba-ink i:nth-child(3) { width: 76%; }
+    .ani-ba-moon {
+      position: absolute;
+      top: 20px;
+      right: 22px;
+      width: 34px;
+      height: 34px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-light);
+      box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent-light) 18%, transparent);
     }
     .ani-ba-tag {
+      position: relative;
       font-family: var(--font-eyebrow);
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.12em;
       text-transform: var(--eyebrow-transform);
       color: var(--text);
-      border: var(--line-weight) solid color-mix(in srgb, var(--text) 20%, transparent);
+      border: var(--line-weight) solid color-mix(in srgb, var(--text) 22%, transparent);
       border-radius: var(--radius-pill);
       padding: 6px 14px;
-      background: var(--scrim);
+      background: var(--bg);
     }
     .ani-ba-divider {
       position: absolute;
@@ -508,16 +667,20 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-pill);
       background: var(--accent);
-      color: var(--bg);
-      font-size: 13px;
+      color: var(--accent-ink);
+      font-size: 15px;
       display: flex;
       align-items: center;
       justify-content: center;
+      border: var(--line-weight) solid color-mix(in srgb, var(--accent-ink) 35%, transparent);
+      box-shadow: 0 4px 18px color-mix(in srgb, var(--accent-deep) 45%, transparent);
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
     }
+    .ani-ba:hover .ani-ba-handle { transform: translate(-50%, -50%) scale(1.06); }
     .ani-ba-range {
       position: absolute;
       inset: 0;
@@ -527,47 +690,77 @@
       opacity: 0;
       cursor: ew-resize;
     }
+    .ani-ba:has(.ani-ba-range:focus-visible) { outline: var(--focus-ring); outline-offset: var(--focus-offset); }
 
     /* ===== 07 HOVER-REVEAL WORK LIST ===== */
     .ani-work { position: relative; }
     .ani-work-list { list-style: none; margin: 0; padding: 0; }
     .ani-work-row {
+      position: relative;
       display: flex;
       align-items: baseline;
       justify-content: space-between;
       gap: 16px;
-      padding: 16px 6px;
+      padding: 18px 6px;
       border-top: var(--line-weight) solid var(--border);
       cursor: pointer;
-      transition: padding-left 0.2s ease, color 0.2s ease;
+      transition: padding-left 0.3s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .ani-work-row:first-child { border-top: none; }
+    .ani-work-row:last-child { border-bottom: var(--line-weight) solid var(--border); }
+    .ani-work-row::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 50%;
+      width: 9px;
+      height: 9px;
+      margin-top: -5px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-light);
+      opacity: 0;
+      transform: scale(0.4);
+      transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1), transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
     .ani-work-name {
       font-family: var(--font-display);
       font-size: clamp(20px, 3.5vw, 30px);
-      font-weight: 600;
+      font-weight: var(--heading-weight);
+      letter-spacing: var(--heading-tracking);
       color: var(--text-4);
-      transition: color 0.2s ease;
+      transition: color 0.25s ease;
     }
-    .ani-work-tag { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.06em; color: var(--border-3); transition: color 0.2s ease; }
-    .ani-work-row:hover { padding-left: 16px; }
+    .ani-work-tag { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.08em; text-transform: var(--eyebrow-transform); color: var(--text-4); transition: color 0.25s ease; }
+    .ani-work-row:hover { padding-left: 20px; }
+    .ani-work-row:hover::before { opacity: 1; transform: scale(1); }
     .ani-work-row:hover .ani-work-name { color: var(--text); }
     .ani-work-row:hover .ani-work-tag { color: var(--accent); }
     .ani-work-thumb {
       position: absolute;
       top: 0;
       left: 0;
-      width: 150px;
-      height: 96px;
+      width: 160px;
+      height: 104px;
       border: var(--line-weight) solid var(--border-2);
       border-radius: var(--radius-card);
-      transform: translate(-50%, -50%) scale(0.85);
+      transform: translate(-50%, -50%) scale(0.85) rotate(-2deg);
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.2s ease, transform 0.2s ease;
+      transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1), transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: var(--shadow-overlay);
       z-index: 3;
     }
-    .ani-work-thumb.on { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    .ani-work-thumb::after {
+      content: '';
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      width: 22px;
+      height: 22px;
+      border-radius: var(--radius-pill);
+      background: color-mix(in srgb, var(--accent-light) 85%, transparent);
+    }
+    .ani-work-thumb.on { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
@@ -606,16 +799,18 @@
       if (statsWrap) {
         const nums = Array.prototype.slice.call(statsWrap.querySelectorAll('.ani-stat-num'));
         const run = function () {
+          statsWrap.classList.add('on');
           nums.forEach(function (el) {
             const target = parseFloat(el.getAttribute('data-ani-target')) || 0;
             const prefix = el.getAttribute('data-ani-prefix') || '';
             const suffix = el.getAttribute('data-ani-suffix') || '';
             if (reduce) { el.textContent = prefix + target + suffix; return; }
-            const dur = 1100;
+            const dur = 1500;
             const start = performance.now();
             const tick = function (now) {
               const p = Math.min((now - start) / dur, 1);
-              const eased = 1 - Math.pow(1 - p, 3);
+              /* easeOutExpo: races off the line, settles gently */
+              const eased = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
               el.textContent = prefix + Math.round(target * eased) + suffix;
               if (p < 1) requestAnimationFrame(tick);
             };
@@ -656,13 +851,33 @@
         stepEls.forEach(function (s) { io.observe(s); });
       }
 
-      /* T105: Before/after slider */
+      /* T105: Before/after slider, with a damped handle that eases toward
+         the range value rather than snapping to it. Reduced-motion syncs
+         directly. */
       const ba = document.getElementById('ani-ba');
       const baRange = document.getElementById('ani-ba-range');
       if (ba && baRange) {
-        const sync = function () { ba.style.setProperty('--ani-ba', baRange.value); };
-        baRange.addEventListener('input', sync);
-        sync();
+        let cur = parseFloat(baRange.value) || 50;
+        let target = cur;
+        let raf = null;
+        const render = function () { ba.style.setProperty('--ani-ba', cur.toFixed(2)); };
+        const settle = function () {
+          cur += (target - cur) * 0.16;
+          if (Math.abs(target - cur) < 0.05) {
+            cur = target;
+            render();
+            raf = null;
+            return;
+          }
+          render();
+          raf = requestAnimationFrame(settle);
+        };
+        baRange.addEventListener('input', function () {
+          target = parseFloat(baRange.value) || 0;
+          if (reduce) { cur = target; render(); return; }
+          if (!raf) raf = requestAnimationFrame(settle);
+        });
+        render();
       }
 
       /* T106: Hover-reveal work list */
@@ -670,13 +885,28 @@
       const thumb = document.getElementById('ani-work-thumb');
       if (work && thumb && !reduce) {
         const rows = Array.prototype.slice.call(work.querySelectorAll('.ani-work-row'));
+        let tx = 0, ty = 0, cx = 0, cy = 0, following = null;
+        const render = function () { thumb.style.left = cx + 'px'; thumb.style.top = cy + 'px'; };
+        const follow = function () {
+          cx += (tx - cx) * 0.18;
+          cy += (ty - cy) * 0.18;
+          render();
+          if (Math.abs(tx - cx) < 0.3 && Math.abs(ty - cy) < 0.3) { following = null; return; }
+          following = requestAnimationFrame(follow);
+        };
         const move = function (e) {
           const rect = work.getBoundingClientRect();
-          thumb.style.left = (e.clientX - rect.left) + 'px';
-          thumb.style.top = (e.clientY - rect.top) + 'px';
+          tx = e.clientX - rect.left;
+          ty = e.clientY - rect.top;
+          if (!following) following = requestAnimationFrame(follow);
         };
         rows.forEach(function (row) {
-          row.addEventListener('mouseenter', function () {
+          row.addEventListener('mouseenter', function (e) {
+            const rect = work.getBoundingClientRect();
+            /* snap to the entry point so the thumb never flies across rows */
+            cx = tx = e.clientX - rect.left;
+            cy = ty = e.clientY - rect.top;
+            render();
             thumb.style.background = row.getAttribute('data-ani-grad') || '';
             thumb.classList.add('on');
           });

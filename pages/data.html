@@ -43,7 +43,7 @@
               <span class="dta-kpi-value">12</span>
               <span class="dta-kpi-delta down">▼ No blue moon</span>
             </div>
-            <div class="dta-kpi">
+            <div class="dta-kpi dta-kpi-anchor">
               <span class="dta-kpi-label">The deck</span>
               <span class="dta-kpi-value">$99</span>
               <span class="dta-kpi-delta up">▲ Free standard delivery</span>
@@ -297,72 +297,114 @@
     .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:var(--font-eyebrow); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--border-3); }
 
     /* 01. KPI */
-    .dta-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
-    .dta-kpi { display:flex; flex-direction:column; gap:8px; padding:16px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); }
-    .dta-kpi-label { font-family:var(--font-eyebrow); font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--text-4); }
-    .dta-kpi-value { font-family:var(--font-display); font-size:28px; font-weight:600; color:var(--text); line-height:1; }
-    .dta-kpi-delta { font-family:var(--font-ui); font-size:12px; }
-    .dta-kpi-delta.up { color:var(--ok); } .dta-kpi-delta.down { color:var(--err); }
+    .dta-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .dta-kpi { position:relative; display:flex; flex-direction:column; align-items:flex-start; gap:10px; padding:22px 20px 20px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); overflow:hidden; }
+    .dta-kpi-label { font-family:var(--font-eyebrow); font-size:11px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-4); }
+    .dta-kpi-value { font-family:var(--font-display); font-size:44px; font-weight:var(--heading-weight); letter-spacing:var(--heading-tracking); color:var(--text); line-height:1; font-variant-numeric:tabular-nums; }
+    .dta-kpi-delta { font-family:var(--font-ui); font-size:11.5px; border-radius:var(--radius-pill); padding:3px 10px; margin-top:2px; }
+    .dta-kpi-delta.up { color:var(--ok); background:var(--ok-wash); }
+    .dta-kpi-delta.down { color:var(--err); background:var(--err-wash); }
+    /* Anchor card: the one strong colour moment, with a crescent cut from two discs */
+    .dta-kpi-anchor { background:var(--accent); border-color:var(--accent); }
+    .dta-kpi-anchor .dta-kpi-label,
+    .dta-kpi-anchor .dta-kpi-value { color:var(--accent-ink); }
+    .dta-kpi-anchor .dta-kpi-delta.up { color:var(--accent-ink); background:color-mix(in srgb, var(--accent-ink) 16%, transparent); }
+    .dta-kpi-anchor::before { content:''; position:absolute; top:16px; right:16px; width:28px; height:28px; border-radius:var(--radius-pill); background:color-mix(in srgb, var(--accent-ink) 32%, transparent); }
+    .dta-kpi-anchor::after { content:''; position:absolute; top:10px; right:22px; width:28px; height:28px; border-radius:var(--radius-pill); background:var(--accent); }
 
     /* 02. Table */
-    .dta-table { width:100%; min-width:0; border-collapse:collapse; font-family:var(--font-body); }
-    .dta-table th, .dta-table td { border:none; border-bottom:var(--line-weight) solid var(--border); background:none; }
-    .dta-table th { text-align:left; font-family:var(--font-ui); font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--text-3); padding:10px 12px; border-bottom:var(--line-weight) solid var(--border-2); cursor:pointer; white-space:nowrap; }
-    .dta-table th:hover { color:var(--accent); }
-    .dta-sort { color:var(--border-3); font-size:10px; }
-    .dta-table td { font-size:14px; color:var(--text-2); padding:11px 12px; }
-    .dta-table tbody tr:nth-child(odd) td { background:var(--bg-card); }
+    .dta-table { width:100%; min-width:0; border-collapse:separate; border-spacing:0; font-family:var(--font-body); background:var(--bg-card); border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); overflow:hidden; }
+    .dta-table th, .dta-table td { border:none; background:none; }
+    .dta-table th { text-align:left; font-family:var(--font-eyebrow); font-size:11px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-2); background:var(--bg-2); padding:13px 16px; border-bottom:var(--line-weight) solid var(--border-2); white-space:nowrap; }
+    .dta-table th[data-sort] { cursor:pointer; transition:color .2s ease, background .2s ease; }
+    .dta-table th[data-sort]:hover { color:var(--accent); background:color-mix(in srgb, var(--accent) 8%, var(--bg-2)); }
+    .dta-sort { display:inline-block; margin-left:5px; color:var(--text-4); font-size:10px; }
+    .dta-table th.is-sorted { color:var(--accent); }
+    .dta-table th.is-sorted .dta-sort { font-size:0; }
+    .dta-table th.is-sorted .dta-sort::after { content:'↑'; display:inline-block; font-size:11px; color:var(--accent); transform:rotate(0deg); transition:transform .25s ease; }
+    .dta-table th.is-sorted.is-desc .dta-sort::after { transform:rotate(180deg); }
+    .dta-table td { font-size:14px; color:var(--text-2); padding:12px 16px; border-bottom:var(--line-weight) solid var(--border); transition:background .15s ease; }
+    .dta-table tbody tr:last-child td { border-bottom:none; }
+    .dta-table tbody tr:nth-child(even) td { background:color-mix(in srgb, var(--bg-2) 55%, transparent); }
+    .dta-table tbody tr:hover td { background:var(--accent-faint); }
     .dta-table th.num, .dta-table td.num { text-align:right; font-variant-numeric:tabular-nums; }
-    .dta-muted { color:var(--text-4); font-family:var(--font-ui); font-size:12px; }
+    .dta-muted { color:var(--text-4); font-family:var(--font-ui); font-size:12.5px; font-variant-numeric:tabular-nums; }
 
     /* 03. Billing */
-    .dta-billing { display:flex; align-items:center; gap:14px; margin-bottom:18px; }
-    .dta-bill-opt { font-family:var(--font-body); font-size:14px; color:var(--text-4); display:flex; align-items:center; gap:6px; }
+    .dta-billing { display:flex; align-items:center; gap:16px; margin-bottom:22px; }
+    .dta-bill-opt { font-family:var(--font-ui); font-size:13.5px; color:var(--text-4); display:flex; align-items:center; gap:8px; transition:color .2s ease; }
     .dta-bill-opt.is-active { color:var(--text); font-weight:600; }
-    .dta-bill-save { font-family:var(--font-ui); font-size:10px; color:var(--ok); border:var(--line-weight) solid var(--ok); border-radius:var(--radius-pill); padding:1px 6px; }
-    .dta-bill-switch { width:46px; height:26px; border-radius:var(--radius-pill); background:var(--border-2); border:none; cursor:pointer; position:relative; transition:background .2s ease; }
-    .dta-bill-switch.is-on { background:var(--accent); }
-    .dta-bill-knob { position:absolute; top:3px; left:3px; width:20px; height:20px; border-radius:50%; background:var(--accent-ink); transition:transform .2s ease; }
-    .dta-bill-switch.is-on .dta-bill-knob { transform:translateX(20px); }
-    .dta-bill-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; max-width:420px; }
-    .dta-bill-card { display:flex; flex-direction:column; gap:2px; padding:16px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); }
-    .dta-bill-name { font-family:var(--font-ui); font-size:11px; text-transform:uppercase; color:var(--text-4); }
-    .dta-bill-price { font-family:var(--font-display); font-size:30px; font-weight:600; color:var(--text); }
-    .dta-bill-per { font-family:var(--font-ui); font-size:12px; color:var(--text-4); }
+    .dta-bill-save { font-family:var(--font-ui); font-size:10px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--ok); background:var(--ok-wash); border-radius:var(--radius-pill); padding:2px 8px; }
+    .dta-bill-switch { flex:none; width:50px; height:28px; border-radius:var(--radius-pill); background:var(--bg-2); border:var(--line-weight) solid var(--border-2); cursor:pointer; position:relative; padding:0; transition:background .2s ease, border-color .2s ease; }
+    .dta-bill-switch:hover { border-color:var(--border-3); }
+    .dta-bill-switch:focus-visible { outline:var(--focus-ring); outline-offset:var(--focus-offset); }
+    .dta-bill-switch.is-on { background:var(--accent); border-color:var(--accent); }
+    .dta-bill-knob { position:absolute; top:50%; left:4px; width:18px; height:18px; border-radius:50%; background:var(--text-3); transform:translate(0,-50%); transition:transform .2s ease, background .2s ease; }
+    .dta-bill-switch.is-on .dta-bill-knob { transform:translate(22px,-50%); background:var(--accent-ink); }
+    .dta-bill-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; max-width:460px; }
+    .dta-bill-card { display:flex; flex-direction:column; gap:6px; padding:20px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); }
+    .dta-bill-name { font-family:var(--font-eyebrow); font-size:11px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-4); }
+    .dta-bill-price { font-family:var(--font-display); font-size:36px; font-weight:var(--heading-weight); letter-spacing:var(--heading-tracking); color:var(--text); line-height:1.1; font-variant-numeric:tabular-nums; }
+    .dta-bill-per { font-family:var(--font-ui); font-size:12.5px; color:var(--text-4); }
 
     /* 04. Specs */
-    .dta-specs { margin:0; }
-    .dta-spec-row { display:grid; grid-template-columns:200px 1fr; gap:16px; padding:11px 4px; border-bottom:var(--line-weight) solid var(--border); }
+    .dta-specs { margin:0; background:var(--bg-card); border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); padding:8px 24px; }
+    .dta-spec-row { display:grid; grid-template-columns:190px 1fr; gap:24px; padding:15px 0; border-bottom:var(--line-weight) solid var(--border); align-items:baseline; }
     .dta-spec-row:last-child { border-bottom:none; }
-    .dta-spec-row dt { font-family:var(--font-ui); font-size:13px; color:var(--text-4); margin:0; }
-    .dta-spec-row dd { font-family:var(--font-body); font-size:14px; color:var(--text); margin:0; }
+    .dta-spec-row dt { font-family:var(--font-eyebrow); font-size:11px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-4); margin:0; }
+    .dta-spec-row dd { font-family:var(--font-body); font-size:14.5px; line-height:1.55; color:var(--text); margin:0; }
 
     /* 05. Bars */
-    .dta-bars { display:flex; flex-direction:column; gap:14px; }
-    .dta-bar-row { display:grid; grid-template-columns:80px 1fr 44px; align-items:center; gap:14px; }
-    .dta-bar-label { font-family:var(--font-body); font-size:14px; color:var(--text-2); }
-    .dta-bar-track { height:10px; background:var(--border); border-radius:var(--radius-pill); overflow:hidden; }
+    .dta-bars { display:flex; flex-direction:column; gap:16px; max-width:560px; }
+    .dta-bar-row { display:grid; grid-template-columns:90px 1fr 52px; align-items:center; gap:14px; }
+    .dta-bar-label { font-family:var(--font-ui); font-size:13.5px; color:var(--text-2); }
+    .dta-bar-track { height:12px; background:var(--bg-card); border:var(--line-weight) solid var(--border); border-radius:var(--radius-pill); overflow:hidden; }
     .dta-bar-fill { display:block; height:100%; background:var(--cat-1); border-radius:var(--radius-pill); }
-    .dta-bar-val { font-family:var(--font-ui); font-size:12px; color:var(--text-3); text-align:right; }
+    .dta-bar-val { font-family:var(--font-ui); font-size:12.5px; color:var(--text-3); text-align:right; font-variant-numeric:tabular-nums; }
 
     /* 06. Feed */
-    .dta-feed { list-style:none; margin:0; padding:0; }
-    .dta-feed-row { position:relative; display:flex; gap:16px; padding:0 0 22px 4px; }
-    .dta-feed-row::before { content:''; position:absolute; left:8px; top:14px; bottom:-4px; width:var(--line-weight); background:var(--border-2); }
+    .dta-feed { list-style:none; margin:0; padding:2px; }
+    .dta-feed-row { position:relative; display:flex; gap:18px; padding:0 0 26px 2px; }
+    .dta-feed-row::before { content:''; position:absolute; left:8px; top:20px; bottom:-6px; width:var(--line-weight); background:var(--border-2); }
     .dta-feed-row:last-child { padding-bottom:0; }
     .dta-feed-row:last-child::before { display:none; }
-    .dta-feed-dot { position:relative; z-index:1; flex-shrink:0; width:11px; height:11px; margin-top:4px; border-radius:50%; background:var(--bg-3); border:2px solid var(--accent); }
-    .dta-feed-body { display:flex; flex-direction:column; gap:5px; }
-    .dta-feed-text { font-family:var(--font-body); font-size:14px; color:var(--text); }
+    .dta-feed-dot { position:relative; z-index:1; flex-shrink:0; width:14px; height:14px; margin-top:3px; border-radius:var(--radius-pill); background:var(--bg-card); border:2px solid var(--border-2); }
+    .dta-feed-row:first-child .dta-feed-dot { background:var(--accent); border-color:var(--accent); box-shadow:0 0 0 4px var(--accent-faint); }
+    .dta-feed-body { display:flex; flex-direction:column; gap:6px; }
+    .dta-feed-text { font-family:var(--font-body); font-size:14.5px; color:var(--text); }
+    .dta-feed-row:first-child .dta-feed-text { font-weight:600; }
     .dta-feed-meta { display:flex; align-items:center; gap:10px; }
-    .dta-feed-tag { font-family:var(--font-eyebrow); font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-pill); padding:2px 8px; }
-    .dta-feed-time { font-family:var(--font-ui); font-size:11px; color:var(--text-4); }
+    .dta-feed-tag { font-family:var(--font-eyebrow); font-size:10px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-3); background:var(--muted-wash); border-radius:var(--radius-pill); padding:3px 9px; }
+    .dta-feed-row:first-child .dta-feed-tag { color:var(--accent); background:var(--accent-faint); }
+    .dta-feed-time { font-family:var(--font-ui); font-size:11.5px; color:var(--text-4); font-variant-numeric:tabular-nums; }
 
     @media (max-width: 1024px) { .dta-kpis { grid-template-columns:repeat(2,1fr); } }
     @media (max-width: 768px) {
-      .dta-spec-row { grid-template-columns:1fr; gap:4px; }
+      .dta-kpi-value { font-size:36px; }
+      .dta-spec-row { grid-template-columns:1fr; gap:6px; }
+      .dta-specs { padding:8px 18px; }
       .dta-bill-cards { grid-template-columns:1fr; }
-      .dta-bar-row { grid-template-columns:64px 1fr 40px; gap:10px; }
+      .dta-bar-row { grid-template-columns:64px 1fr 44px; gap:10px; }
+    }
+
+    /* ---- motion ----
+       The bar chart grows in once and the newest feed dot breathes; with
+       reduced motion set, everything renders in its final state. */
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes dta-grow { from { width:0; } }
+      @keyframes dta-breathe {
+        0%, 100% { box-shadow:0 0 0 3px var(--accent-faint); }
+        50%      { box-shadow:0 0 0 7px var(--accent-faint); }
+      }
+      .dta-bar-fill { animation:dta-grow .9s cubic-bezier(.25,.7,.3,1) both; }
+      .dta-bar-row:nth-child(2) .dta-bar-fill { animation-delay:.08s; }
+      .dta-bar-row:nth-child(3) .dta-bar-fill { animation-delay:.16s; }
+      .dta-bar-row:nth-child(4) .dta-bar-fill { animation-delay:.24s; }
+      .dta-feed-row:first-child .dta-feed-dot { animation:dta-breathe 2.8s ease-in-out infinite; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .dta-table th, .dta-table td, .dta-bill-switch, .dta-bill-knob, .dta-bill-opt { transition:none; }
+      .dta-table th.is-sorted .dta-sort::after { transition:none; }
     }
   </style>
   <script>
@@ -384,6 +426,14 @@
               return av.localeCompare(bv) * dir;
             });
             rows.forEach(function (r) { tbody.appendChild(r); });
+            /* presentational affordance only: mark the sorted column */
+            table.querySelectorAll('th[data-sort]').forEach(function (o) {
+              o.classList.remove('is-sorted', 'is-desc');
+              o.removeAttribute('aria-sort');
+            });
+            th.classList.add('is-sorted');
+            th.classList.toggle('is-desc', dir === -1);
+            th.setAttribute('aria-sort', dir === 1 ? 'ascending' : 'descending');
           });
         });
       }

@@ -31,7 +31,7 @@
             <div class="pr-amt">$99<span>/one deck</span></div>
             <p class="pr-desc">One box, twelve full moons.</p>
             <ul class="pr-feats"><li>12 monthly cards for 2027</li><li>Australian made</li><li>Free standard delivery</li></ul>
-            <span class="pr-cta sec">Add to cart</span>
+            <button type="button" class="pr-cta sec">Add to cart</button>
           </div>
           <div class="pr-card feat">
             <span class="pr-badge">Most gifted</span>
@@ -39,14 +39,14 @@
             <div class="pr-amt">$99<span>/one deck</span></div>
             <p class="pr-desc">Same deck, sent to their door.</p>
             <ul class="pr-feats"><li>12 monthly cards for 2027</li><li>Gift wrap at checkout</li><li>Posted anywhere in Australia</li><li>Free standard delivery</li></ul>
-            <span class="pr-cta pri">Add to cart</span>
+            <button type="button" class="pr-cta pri">Add to cart</button>
           </div>
           <div class="pr-card">
             <span class="pr-name">For both of you</span>
             <div class="pr-amt">$198<span>/two decks</span></div>
             <p class="pr-desc">Two decks, one order. No discount, just maths.</p>
             <ul class="pr-feats"><li>Two of everything</li><li>Same moon, different couches</li><li>Free standard delivery</li></ul>
-            <span class="pr-cta sec">Add two to cart</span>
+            <button type="button" class="pr-cta sec">Add two to cart</button>
           </div>
         </div>
       </div>
@@ -65,6 +65,7 @@
         <dialog class="promo-dialog" id="sg-promo">
           <div class="promo-card">
             <button class="promo-close" id="sg-promo-close" aria-label="Close">✕</button>
+            <span class="promo-moon" aria-hidden="true"></span>
             <span class="pv-eyebrow">Moon mail</span>
             <h4>One email a month, near the full moon</h4>
             <p>A short note when the next card is up. No streak to keep, unsubscribe whenever.</p>
@@ -197,11 +198,11 @@
             <summary><span>Do I have to burn the card?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
             <p>No. Burning is optional and for adults only. Tearing the card up is an equally complete release, and the better choice if you're unsure or open flames aren't permitted where you are.</p>
           </details>
-          <details class="demo-acc" open style="margin-top:10px;">
+          <details class="demo-acc" open>
             <summary><span>What if I miss a month?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
             <p>Nothing happens. There's no streak to keep. The next full moon comes around either way, and the card will still be in the box.</p>
           </details>
-          <details class="demo-acc" open style="margin-top:10px;">
+          <details class="demo-acc" open>
             <summary><span>Do you ship outside Australia?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
             <p>Not yet. We deliver Australia-wide, and standard delivery is free.</p>
           </details>
@@ -219,8 +220,10 @@
       </header>
       <div class="tb-demo">
         <form class="sg-form" data-sg-form>
-          <div class="sg-field"><label for="sg-name">Name</label><input id="sg-name" type="text" placeholder="Jess Walker" required /></div>
-          <div class="sg-field"><label for="sg-email">Email</label><input id="sg-email" type="email" placeholder="you@example.com" required /></div>
+          <div class="sg-row">
+            <div class="sg-field"><label for="sg-name">Name</label><input id="sg-name" type="text" placeholder="Jess Walker" required /></div>
+            <div class="sg-field"><label for="sg-email">Email</label><input id="sg-email" type="email" placeholder="you@example.com" required /></div>
+          </div>
           <div class="sg-field"><label for="sg-msg">Message</label><textarea id="sg-msg" rows="3" placeholder="Ask us anything: your order, the ritual, the moon…" required></textarea></div>
           <button type="submit">Send message</button>
           <p class="sg-form-note" hidden>Thanks, we'll write back soon. (Demo only, no backend attached.)</p>
@@ -261,112 +264,174 @@
     .pv-eyebrow::before { content: var(--eyebrow-prefix); }
     .pv-narrow { max-width: 380px; }
 
-    .demo-acc { border: var(--line-weight) solid var(--border); background: var(--bg-2); max-width: 560px; }
-    .demo-acc summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; list-style: none; padding: 16px 18px; }
+    /* Shared focus finish: every clickable in a demo rings identically. */
+    .tb-demo button:focus-visible, .tb-demo a:focus-visible, .tb-demo summary:focus-visible {
+      outline: var(--focus-ring); outline-offset: var(--focus-offset);
+    }
+
+    /* FAQ accordion */
+    .demo-acc { border: var(--line-weight) solid var(--border); background: var(--bg-card); border-radius: var(--radius); max-width: 560px; transition: border-color 0.2s ease; }
+    .demo-acc + .demo-acc { margin-top: 10px; }
+    .demo-acc[open] { border-color: var(--accent-line); }
+    .demo-acc summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; list-style: none; padding: 15px 16px 15px 18px; min-height: 48px; box-sizing: border-box; border-radius: var(--radius); transition: background 0.15s ease; }
+    .demo-acc summary:hover { background: var(--accent-faint); }
     .demo-acc summary::-webkit-details-marker { display: none; }
     .demo-acc summary span:first-child { font-family: var(--font-body); font-size: 15.5px; font-weight: 500; color: var(--text); }
-    .demo-acc-mark { position: relative; width: 14px; height: 14px; flex-shrink: 0; }
-    .demo-acc-mark::before, .demo-acc-mark::after { content: ''; position: absolute; background: var(--accent); transition: transform 0.2s ease, opacity 0.2s ease; }
-    .demo-acc-mark::before { top: 6px; left: 0; width: 14px; height: 2px; }
-    .demo-acc-mark::after { left: 6px; top: 0; width: 2px; height: 14px; }
+    .demo-acc-mark { position: relative; width: 26px; height: 26px; flex-shrink: 0; border-radius: 50%; background: var(--accent-faint); transition: background 0.25s ease; }
+    .demo-acc-mark::before, .demo-acc-mark::after { content: ''; position: absolute; background: var(--accent); transition: transform 0.2s ease, opacity 0.2s ease, background 0.25s ease; }
+    .demo-acc-mark::before { top: 12px; left: 7px; width: 12px; height: 2px; }
+    .demo-acc-mark::after { left: 12px; top: 7px; width: 2px; height: 12px; }
+    .demo-acc[open] .demo-acc-mark { background: var(--accent); }
+    .demo-acc[open] .demo-acc-mark::before { background: var(--accent-ink); }
     .demo-acc[open] .demo-acc-mark::after { transform: scaleY(0); opacity: 0; }
-    .demo-acc p { font-family: var(--font-body); font-size: 14.5px; line-height: 1.7; color: var(--text-3); margin: 0; padding: 0 18px 18px; }
+    .demo-acc p { font-family: var(--font-body); font-size: 14.5px; line-height: 1.7; color: var(--text-3); margin: 0; padding: 0 46px 18px 18px; }
 
     /* ===== COMPONENTS & PATTERNS ===== */
-    .demo-trigger { font-family: var(--font-ui); font-size: 12px; background: var(--accent); color: var(--accent-ink); font-weight: 600; border: none; border-radius: var(--radius-btn); padding: 11px 18px; cursor: pointer; transition: background 0.2s ease; }
+    .demo-trigger { font-family: var(--font-ui); font-size: 12px; letter-spacing: var(--button-tracking); text-transform: var(--button-transform); background: var(--accent); color: var(--accent-ink); font-weight: var(--button-weight); border: none; border-radius: var(--radius-btn); padding: 13px 22px; cursor: pointer; transition: background 0.2s ease, transform 0.15s ease; }
     .demo-trigger:hover { background: var(--accent-hover); }
+    .demo-trigger:active { transform: translateY(1px); }
 
     /* Pricing */
-    .pr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
-    .pr-card { border: var(--line-weight) solid var(--border); background: var(--bg); padding: 24px; position: relative; }
-    .pr-card.feat { border-color: var(--accent); }
-    .pr-badge { position: absolute; top: -10px; right: 16px; font-family: var(--font-ui); font-size: 9px; font-weight: 600; letter-spacing: 0.06em; text-transform: var(--eyebrow-transform); color: var(--accent-ink); background: var(--accent); padding: 3px 8px; border-radius: var(--radius-sm); }
-    .pr-name { font-family: var(--font-eyebrow); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); }
-    .pr-amt { font-family: var(--font-display); font-size: 34px; font-weight: 600; color: var(--text); margin: 8px 0 4px; }
-    .pr-amt span { font-family: var(--font-body); font-size: 13px; font-weight: 400; color: var(--text-4); }
-    .pr-desc { font-family: var(--font-body); font-size: 13.5px; color: var(--text-3); margin: 0 0 16px; }
-    .pr-feats { list-style: none; margin: 0 0 20px; padding: 0; }
-    .pr-feats li { font-family: var(--font-body); font-size: 13.5px; color: var(--text-2); padding: 6px 0 6px 22px; position: relative; }
-    .pr-feats li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-size: 12px; }
-    .pr-cta { display: block; text-align: center; font-family: var(--font-ui); font-size: 12px; padding: 11px; border-radius: var(--radius-btn); cursor: pointer; }
-    .pr-cta.pri { background: var(--accent); color: var(--accent-ink); font-weight: 600; }
-    .pr-cta.sec { border: var(--line-weight) solid var(--border-2); color: var(--text); }
+    .pr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+    .pr-card { display: flex; flex-direction: column; border: var(--line-weight) solid var(--border); background: var(--bg-card); border-radius: var(--radius-card); padding: 28px 26px 26px; position: relative; transition: border-color 0.2s ease, transform 0.2s ease; }
+    .pr-card:hover { border-color: var(--border-2); transform: translateY(-3px); }
+    .pr-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); white-space: nowrap; font-family: var(--font-ui); font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: var(--eyebrow-transform); color: var(--accent-ink); background: var(--accent); padding: 5px 14px; border-radius: var(--radius-pill); }
+    .pr-name { font-family: var(--font-eyebrow); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); }
+    .pr-amt { font-family: var(--font-display); font-size: 40px; font-weight: var(--heading-weight); line-height: 1.1; color: var(--text); margin: 10px 0 4px; }
+    .pr-amt span { font-family: var(--font-body); font-size: 13px; font-weight: 400; letter-spacing: 0; color: var(--text-4); }
+    .pr-desc { font-family: var(--font-body); font-size: 13.5px; line-height: 1.55; color: var(--text-3); margin: 0 0 18px; }
+    .pr-feats { list-style: none; margin: 0 0 24px; padding: 16px 0 0; border-top: var(--line-weight) solid var(--border); flex: 1; }
+    .pr-feats li { font-family: var(--font-body); font-size: 13.5px; color: var(--text-2); padding: 6px 0 6px 27px; position: relative; }
+    .pr-feats li::before { content: '✓'; position: absolute; left: 0; top: 7px; width: 17px; height: 17px; border-radius: 50%; background: var(--accent-faint); color: var(--accent); font-size: 9px; line-height: 17px; text-align: center; }
+    .pr-cta { display: block; width: 100%; text-align: center; font-family: var(--font-ui); font-size: 12px; font-weight: var(--button-weight); letter-spacing: var(--button-tracking); text-transform: var(--button-transform); padding: 14px 16px; border-radius: var(--radius-btn); cursor: pointer; transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
+    .pr-cta.pri { background: var(--accent); color: var(--accent-ink); border: var(--line-weight) solid var(--accent); }
+    .pr-cta.pri:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+    .pr-cta.sec { background: transparent; border: var(--line-weight) solid var(--border-2); color: var(--text); }
+    .pr-cta.sec:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Featured tier. In Dark it lifts on an accent wash; in Moonrite it is
+       the navy panel with cream ink, the block's one strong colour moment. */
+    .pr-card.feat { border-color: var(--accent); background: var(--accent-wash); }
+    :root[data-theme="moonrite"] .pr-card.feat { background: var(--accent); border-color: var(--accent); }
+    :root[data-theme="moonrite"] .pr-card.feat .pr-name { color: var(--accent-light); }
+    :root[data-theme="moonrite"] .pr-card.feat .pr-amt,
+    :root[data-theme="moonrite"] .pr-card.feat .pr-feats li { color: var(--accent-ink); }
+    :root[data-theme="moonrite"] .pr-card.feat .pr-amt span,
+    :root[data-theme="moonrite"] .pr-card.feat .pr-desc { color: color-mix(in srgb, var(--accent-ink) 88%, transparent); }
+    :root[data-theme="moonrite"] .pr-card.feat .pr-feats { border-top-color: color-mix(in srgb, var(--accent-ink) 28%, transparent); }
+    :root[data-theme="moonrite"] .pr-card.feat .pr-feats li::before { background: color-mix(in srgb, var(--accent-ink) 16%, transparent); color: var(--accent-light); }
+    :root[data-theme="moonrite"] .pr-card.feat .pr-badge { background: var(--accent-light); color: var(--accent-light-ink); }
+    :root[data-theme="moonrite"] .pr-card.feat .pr-cta.pri { background: var(--accent-ink); border-color: var(--accent-ink); color: var(--accent); }
+    :root[data-theme="moonrite"] .pr-card.feat .pr-cta.pri:hover { background: var(--bg-card); border-color: var(--bg-card); }
 
     /* Popup promo */
-    .promo-dialog { border: none; padding: 0; background: transparent; max-width: 380px; }
-    .promo-dialog::backdrop { background: var(--scrim); backdrop-filter: blur(2px); }
-    .promo-card { position: relative; background: var(--bg-2); border: var(--line-weight) solid var(--accent); padding: 34px 28px 30px; text-align: center; }
-    .promo-card h4 { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--text); margin: 10px 0 8px; }
-    .promo-card p { font-family: var(--font-body); font-size: 14.5px; line-height: 1.6; color: var(--text-3); margin: 0 0 22px; }
+    .promo-dialog { border: none; padding: 0; background: transparent; max-width: 400px; width: calc(100vw - 48px); }
+    .promo-dialog::backdrop { background: var(--scrim); backdrop-filter: blur(3px); }
+    .promo-dialog[open] { animation: promo-in 0.3s ease both; }
+    .promo-dialog[open]::backdrop { animation: scrim-in 0.3s ease both; }
+    .promo-card { position: relative; background: var(--bg-card); border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-card); box-shadow: var(--shadow-overlay); padding: 40px 34px 36px; text-align: center; }
+    .promo-moon { position: relative; display: block; width: 56px; height: 56px; margin: 0 auto 20px; border-radius: 50%; background: var(--accent-light); box-shadow: 0 0 0 12px var(--accent-faint); }
+    .promo-moon::after { content: ''; position: absolute; inset: 0; border-radius: 50%; background: var(--bg-card); transform: translate(30%, -16%); }
+    .promo-card h4 { font-family: var(--font-display); font-size: 26px; font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); line-height: 1.25; color: var(--text); margin: 10px 0 10px; }
+    .promo-card p { font-family: var(--font-body); font-size: 14.5px; line-height: 1.65; color: var(--text-3); margin: 0 0 24px; }
     .promo-card .pv-eyebrow { text-align: center; }
-    .promo-close { position: absolute; top: 10px; right: 12px; background: none; border: none; color: var(--text-4); font-size: 16px; cursor: pointer; line-height: 1; }
-    .promo-close:hover { color: var(--text); }
+    .promo-close { position: absolute; top: 6px; right: 6px; width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: none; border-radius: 50%; color: var(--text-3); font-size: 15px; line-height: 1; cursor: pointer; transition: background 0.15s ease, color 0.15s ease; }
+    .promo-close:hover { background: var(--accent-faint); color: var(--text); }
+    @keyframes promo-in { from { opacity: 0; transform: translateY(14px) scale(0.97); } to { opacity: 1; transform: none; } }
+    @keyframes scrim-in { from { opacity: 0; } to { opacity: 1; } }
 
     /* Gallery + lightbox */
-    .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-    .gal-item { position: relative; aspect-ratio: 4 / 3; border: var(--line-weight) solid var(--border); background: var(--g); cursor: pointer; overflow: hidden; padding: 0; }
-    .gal-item::after { content: ''; position: absolute; inset: 0; background: transparent; transition: background 0.2s ease; }
-    .gal-item:hover::after { background: color-mix(in srgb, var(--accent) 12%, transparent); }
-    .gal-cap { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; font-family: var(--font-ui); font-size: 11px; color: var(--text); background: linear-gradient(transparent, color-mix(in srgb, var(--bg-black) 75%, transparent)); padding: 20px 10px 8px; text-align: left; opacity: 0; transform: translateY(4px); transition: opacity 0.2s ease, transform 0.2s ease; }
-    .gal-item:hover .gal-cap { opacity: 1; transform: none; }
-    .lb { position: relative; border: none; padding: 0; background: transparent; max-width: 520px; width: 90vw; }
+    .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .gal-item { position: relative; aspect-ratio: 4 / 3; border: var(--line-weight) solid var(--border); border-radius: var(--radius); background: var(--g); cursor: pointer; overflow: hidden; padding: 0; transition: border-color 0.2s ease; }
+    .gal-item:hover { border-color: var(--accent); }
+    /* Each tile carries a small rising moon, echoing the card art. */
+    .gal-item::before { content: ''; position: absolute; top: 15%; right: 15%; width: 24px; height: 24px; border-radius: 50%; background: var(--accent-light); box-shadow: 0 0 0 9px color-mix(in srgb, var(--accent-light) 16%, transparent); opacity: 0.9; transition: transform 0.3s ease; }
+    .gal-item:hover::before { transform: translateY(-4px); }
+    .gal-item::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, var(--scrim), transparent 55%); opacity: 0; transition: opacity 0.25s ease; }
+    .gal-item:hover::after, .gal-item:focus-visible::after { opacity: 1; }
+    .gal-cap { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; font-family: var(--font-ui); font-size: 11.5px; letter-spacing: 0.03em; color: var(--preview-dark-ink); padding: 22px 12px 10px; text-align: left; opacity: 0; transform: translateY(6px); transition: opacity 0.25s ease, transform 0.25s ease; }
+    .gal-item:hover .gal-cap, .gal-item:focus-visible .gal-cap { opacity: 1; transform: none; }
+    .lb { border: none; padding: 0; background: transparent; max-width: 560px; width: 90vw; }
     .lb::backdrop { background: var(--scrim); }
-    .lb-img { aspect-ratio: 16 / 9; border: var(--line-weight) solid var(--border-2); }
-    .lb-cap { display: block; font-family: var(--font-ui); font-size: 13px; color: var(--text-2); padding: 12px 4px; text-align: center; }
-    .lb-close { position: absolute; top: 8px; right: 10px; background: none; border: none; color: var(--text); font-size: 18px; cursor: pointer; z-index: 2; line-height: 1; }
+    .lb[open] { animation: promo-in 0.25s ease both; }
+    .lb[open]::backdrop { animation: scrim-in 0.25s ease both; }
+    .lb-img { position: relative; aspect-ratio: 16 / 9; border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-card); box-shadow: var(--shadow-overlay); overflow: hidden; }
+    .lb-img::after { content: ''; position: absolute; top: 16%; right: 12%; width: 46px; height: 46px; border-radius: 50%; background: var(--accent-light); box-shadow: 0 0 0 14px color-mix(in srgb, var(--accent-light) 14%, transparent); }
+    .lb-cap { display: block; width: fit-content; margin: 14px auto 0; font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em; color: var(--text); background: var(--bg-card); padding: 9px 18px; border-radius: var(--radius-pill); text-align: center; }
+    .lb-close { position: absolute; top: 8px; right: 8px; width: 44px; height: 44px; display: grid; place-items: center; background: var(--scrim); border: none; border-radius: 50%; color: var(--preview-dark-ink); font-size: 16px; line-height: 1; cursor: pointer; z-index: 2; transition: background 0.15s ease, color 0.15s ease; }
+    .lb-close:hover { background: var(--accent); color: var(--accent-ink); }
 
     /* Tabs */
-    .tabs-demo .tabs-bar { display: flex; gap: 4px; border-bottom: var(--line-weight) solid var(--border); }
-    .tabs-demo .tab { font-family: var(--font-ui); font-size: 12px; padding: 9px 16px; background: none; border: none; border-bottom: 2px solid transparent; color: var(--text-3); cursor: pointer; transition: color 0.15s ease, border-color 0.15s ease; }
+    .tabs-demo .tabs-bar { display: inline-flex; gap: 4px; padding: 5px; background: var(--bg-3); border: var(--line-weight) solid var(--border); border-radius: var(--radius-btn); }
+    .tabs-demo .tab { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.04em; padding: 10px 18px; min-height: 38px; background: transparent; border: none; border-radius: var(--radius-btn); color: var(--text-3); cursor: pointer; transition: background 0.2s ease, color 0.2s ease; }
     .tabs-demo .tab:hover { color: var(--text); }
-    .tabs-demo .tab.on { color: var(--accent); border-bottom-color: var(--accent); }
-    .tabs-demo .tab-panel { display: none; padding: 18px 2px 2px; font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-2); }
-    .tabs-demo .tab-panel.on { display: block; }
+    .tabs-demo .tab.on { background: var(--accent); color: var(--accent-ink); }
+    .tabs-demo .tab-panel { display: none; padding: 20px 4px 4px; font-family: var(--font-body); font-size: 14px; line-height: 1.65; color: var(--text-2); max-width: 62ch; }
+    .tabs-demo .tab-panel.on { display: block; animation: panel-in 0.25s ease both; }
+    @keyframes panel-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 
-    /* Folders */
-    .folders { font-family: var(--font-body); font-size: 14px; }
-    .folders summary { display: flex; align-items: center; gap: 8px; cursor: pointer; list-style: none; padding: 5px 0; color: var(--text-2); }
+    /* What's in the box: an unpacking tree. Disclosure markers are moon
+       discs: an outline (new) that fills to a full moon when opened. */
+    .folders { max-width: 520px; font-family: var(--font-body); font-size: 14px; background: var(--bg-card); border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); padding: 14px 16px 16px; }
+    .folders summary { display: flex; align-items: center; gap: 12px; cursor: pointer; list-style: none; padding: 10px 8px; min-height: 44px; box-sizing: border-box; border-radius: var(--radius-sm); color: var(--text); font-weight: 500; transition: background 0.15s ease; }
+    .folders summary:hover { background: var(--accent-faint); }
     .folders summary::-webkit-details-marker { display: none; }
-    .folders summary::before { content: '▸'; color: var(--accent); font-size: 10px; transition: transform 0.15s ease; }
-    .folders details[open] > summary::before { transform: rotate(90deg); }
-    .folder-children { padding-left: 16px; border-left: var(--line-weight) solid var(--border); margin-left: 5px; }
-    .folders .file { display: flex; align-items: center; gap: 8px; padding: 5px 0; color: var(--text-3); }
-    .folders .file::before { content: '–'; color: var(--border-3); font-size: 10px; }
+    .folders summary::before { content: ''; width: 13px; height: 13px; flex-shrink: 0; border-radius: 50%; border: var(--line-weight) solid var(--accent); background: transparent; transition: background 0.25s ease; }
+    .folders details[open] > summary::before { background: var(--accent); }
+    .folders > details > summary { font-family: var(--font-display); font-size: 19px; font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); }
+    .folder-children { margin: 2px 0 8px; padding: 6px 8px 6px 14px; border-radius: var(--radius-sm); background: var(--bg-2); }
+    .folder-children .folder-children { background: var(--accent-wash); margin-left: 8px; }
+    .folders .file { display: flex; align-items: center; gap: 12px; padding: 7px 8px; border-radius: var(--radius-sm); color: var(--text-3); }
+    .folders .file::before { content: ''; width: 7px; height: 7px; flex-shrink: 0; margin: 0 3px; border-radius: 50%; background: var(--accent-light); }
 
     /* Toggle content */
-    .tg-switch { display: inline-flex; align-items: center; gap: 12px; cursor: pointer; }
+    .tg-switch { display: inline-flex; align-items: center; gap: 12px; cursor: pointer; padding: 8px 0; min-height: 44px; box-sizing: border-box; }
     .tg-switch input { position: absolute; opacity: 0; width: 0; height: 0; }
-    .tg-track { position: relative; width: 42px; height: 24px; border-radius: var(--radius-pill); background: var(--border-2); transition: background 0.2s ease; flex-shrink: 0; }
-    .tg-track::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: var(--text-3); transition: transform 0.2s ease, background 0.2s ease; }
-    .tg-switch input:checked + .tg-track { background: color-mix(in srgb, var(--accent) 35%, transparent); }
-    .tg-switch input:checked + .tg-track::after { transform: translateX(18px); background: var(--accent); }
-    .tg-text { font-family: var(--font-body); font-size: 14.5px; color: var(--text); }
-    .tg-content { display: none; margin-top: 16px; padding: 16px 18px; border: var(--line-weight) solid var(--border); border-left: 2px solid var(--accent); background: var(--bg); font-family: var(--font-body); font-size: 14px; line-height: 1.65; color: var(--text-3); max-width: 60ch; }
-    .tg-wrap:has(input:checked) .tg-content { display: block; }
+    .tg-track { position: relative; width: 46px; height: 26px; border-radius: var(--radius-pill); background: var(--border-2); transition: background 0.2s ease; flex-shrink: 0; }
+    .tg-track::after { content: ''; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--text); transition: transform 0.2s ease, background 0.2s ease; }
+    .tg-switch input:checked + .tg-track { background: var(--accent); }
+    .tg-switch input:checked + .tg-track::after { transform: translateX(20px); background: var(--accent-ink); }
+    .tg-switch input:focus-visible + .tg-track { outline: var(--focus-ring); outline-offset: var(--focus-offset); }
+    .tg-text { font-family: var(--font-body); font-size: 14.5px; font-weight: 500; color: var(--text); }
+    .tg-content { display: none; margin-top: 14px; padding: 16px 20px; border-radius: var(--radius); background: var(--accent-wash); font-family: var(--font-body); font-size: 14px; line-height: 1.65; color: var(--text-2); max-width: 60ch; }
+    .tg-wrap:has(input:checked) .tg-content { display: block; animation: panel-in 0.25s ease both; }
 
     /* Contact form */
-    .sg-form { display: flex; flex-direction: column; gap: 14px; max-width: 480px; }
-    .sg-field { display: flex; flex-direction: column; gap: 6px; }
-    .sg-field label { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); }
-    .sg-form input, .sg-form textarea { background: var(--bg); border: var(--line-weight) solid var(--border-2); color: var(--text); padding: 11px 13px; font-family: var(--font-body); font-size: 14px; box-sizing: border-box; width: 100%; transition: border-color 0.2s ease; }
+    .sg-form { display: flex; flex-direction: column; gap: 16px; max-width: 520px; }
+    .sg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .sg-field { display: flex; flex-direction: column; gap: 7px; }
+    .sg-field label { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); }
+    .sg-form input, .sg-form textarea { background: var(--bg-card); border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-sm); color: var(--text); padding: 12px 14px; min-height: 46px; font-family: var(--font-body); font-size: 14px; box-sizing: border-box; width: 100%; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
     .sg-form input::placeholder, .sg-form textarea::placeholder { color: var(--text-4); }
-    .sg-form input:focus, .sg-form textarea:focus { outline: none; border-color: var(--accent); }
-    .sg-form textarea { resize: vertical; min-height: 80px; }
-    .sg-form button { background: var(--accent); color: var(--accent-ink); border: none; border-radius: var(--radius-btn); padding: 12px 20px; font-family: var(--font-ui); font-weight: 600; font-size: 13px; letter-spacing: 0.04em; text-transform: var(--button-transform); cursor: pointer; width: fit-content; transition: opacity 0.2s ease; }
-    .sg-form button:hover { opacity: 0.88; }
-    .sg-form button:disabled { background: var(--border); color: var(--ok); cursor: default; opacity: 1; }
-    .sg-form-note { font-family: var(--font-body); font-size: 13px; color: var(--text-3); margin: 0; padding: 10px 12px; border: var(--line-weight) solid var(--border-2); border-left: 2px solid var(--ok); background: var(--bg); }
+    .sg-form input:hover, .sg-form textarea:hover { border-color: var(--border-3); }
+    .sg-form input:focus, .sg-form textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-faint); }
+    .sg-form textarea { resize: vertical; min-height: 96px; }
+    .sg-form button { background: var(--accent); color: var(--accent-ink); border: none; border-radius: var(--radius-btn); padding: 0 26px; min-height: 48px; font-family: var(--font-ui); font-weight: var(--button-weight); font-size: 13px; letter-spacing: var(--button-tracking); text-transform: var(--button-transform); cursor: pointer; width: fit-content; transition: background 0.2s ease; }
+    .sg-form button:hover { background: var(--accent-hover); }
+    .sg-form button:disabled { background: var(--ok-wash); color: var(--ok-deep); cursor: default; }
+    .sg-form-note { font-family: var(--font-body); font-size: 13.5px; color: var(--ok-deep); margin: 0; padding: 12px 14px; border: var(--line-weight) solid var(--ok-line); border-radius: var(--radius); background: var(--ok-wash); animation: panel-in 0.25s ease both; }
 
     /* Breadcrumbs */
-    .breadcrumbs { display: flex; align-items: center; gap: 10px; font-family: var(--font-ui); font-size: 13px; flex-wrap: wrap; }
-    .breadcrumbs a { color: var(--text-3); text-decoration: none; transition: color 0.15s ease; }
-    .breadcrumbs a:hover { color: var(--accent); }
-    .breadcrumbs .sep { color: var(--border-2); }
-    .breadcrumbs .current { color: var(--text); }
+    .breadcrumbs { display: flex; align-items: center; gap: 2px; font-family: var(--font-ui); font-size: 13px; flex-wrap: wrap; }
+    .breadcrumbs a { color: var(--text-3); text-decoration: none; padding: 9px 10px; border-radius: var(--radius-sm); transition: color 0.15s ease, background 0.15s ease; }
+    .breadcrumbs a:hover { color: var(--accent); background: var(--accent-faint); }
+    .breadcrumbs .sep { color: var(--border-3); font-size: 11px; padding: 0 2px; }
+    .breadcrumbs .current { color: var(--accent); font-weight: 500; background: var(--accent-wash); padding: 9px 14px; border-radius: var(--radius-pill); margin-left: 4px; }
 
     @media (max-width: 768px) {
       .pr-grid { grid-template-columns: 1fr; }
       .gal-grid { grid-template-columns: repeat(2, 1fr); }
+      .sg-row { grid-template-columns: 1fr; }
+    }
+
+    /* Motion is a finish, never a requirement: everything above still reads
+       with it off. */
+    @media (prefers-reduced-motion: reduce) {
+      .tb-demo *, .tb-demo *::before, .tb-demo *::after,
+      .promo-dialog, .promo-dialog::backdrop, .lb, .lb::backdrop {
+        animation: none !important; transition: none !important;
+      }
+      .pr-card:hover { transform: none; }
     }
   </style>
   <script>

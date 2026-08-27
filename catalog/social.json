@@ -7,7 +7,7 @@
     "page": "index.html",
     "anchor": "#T140",
     "source": "pages/social.html",
-    "description": "A muted row of wordmarks under a small label. Marquees slowly and pauses on hover."
+    "description": "A muted row of publication wordmarks, each with its own masthead type treatment, under a small label. Marquees slowly and pauses on hover."
   },
   {
     "id": "T141",
@@ -17,7 +17,7 @@
     "page": "index.html",
     "anchor": "#T141",
     "source": "pages/social.html",
-    "description": "A multi-column masonry of quote cards: quote, initials avatar, name and town. Static."
+    "description": "A multi-column masonry of quote cards: a display quote mark, the quote, an initials avatar, name and town, with gentle tint variation. Static."
   },
   {
     "id": "T142",

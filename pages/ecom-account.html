@@ -62,6 +62,7 @@
                 <p class="acc-eyebrow">My account</p>
                 <h3 class="acc-h acc-greet-name">Good afternoon, Amelia</h3>
                 <p class="acc-greet-sub">Member since June 2026 <span class="acc-dot">&bull;</span> Two decks on the way <span class="acc-dot">&bull;</span> 2028 deck reserved</p>
+                <span class="acc-phases" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
               </div>
               <button type="button" class="acc-btn acc-btn--ghost">Sign out</button>
             </header>
@@ -154,8 +155,8 @@
               </div>
             </div>
             <div class="acc-order-actions">
-              <button type="button" class="acc-btn acc-btn--sm">View order</button>
-              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">Contact support</button>
+              <a class="acc-btn acc-btn--sm" href="#T382">View order</a>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-order-demo" data-acc-demo="Demo only: this would open a support conversation about the order.">Contact support</button>
             </div>
           </li>
 
@@ -177,9 +178,9 @@
               </div>
             </div>
             <div class="acc-order-actions">
-              <button type="button" class="acc-btn acc-btn--sm">View order</button>
-              <button type="button" class="acc-btn acc-btn--sm">Track parcel</button>
-              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">Buy again</button>
+              <a class="acc-btn acc-btn--sm" href="#T382">View order</a>
+              <a class="acc-btn acc-btn--sm" href="#T382">Track parcel</a>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-order-buy">Buy again</button>
             </div>
           </li>
 
@@ -202,9 +203,9 @@
               </div>
             </div>
             <div class="acc-order-actions">
-              <button type="button" class="acc-btn acc-btn--sm">View order</button>
-              <button type="button" class="acc-btn acc-btn--sm">Return an item</button>
-              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">Buy again</button>
+              <a class="acc-btn acc-btn--sm" href="#T382">View order</a>
+              <a class="acc-btn acc-btn--sm" href="#T383">Return an item</a>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-order-buy">Buy again</button>
             </div>
           </li>
 
@@ -226,11 +227,12 @@
               </div>
             </div>
             <div class="acc-order-actions">
-              <button type="button" class="acc-btn acc-btn--sm">View order</button>
-              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">Refund receipt</button>
+              <a class="acc-btn acc-btn--sm" href="#T382">View order</a>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-order-demo" data-acc-demo="Demo only: this would download the refund receipt as a PDF.">Refund receipt</button>
             </div>
           </li>
         </ul>
+        <p class="acc-note acc-note--info" id="acc-orders-note" role="status" hidden></p>
       </div>
     </article>
 
@@ -294,7 +296,7 @@
               <p class="acc-meta">Billing address same as delivery</p>
             </section>
 
-            <section class="acc-subcard">
+            <section class="acc-subcard acc-subcard--totals">
               <h4 class="acc-subcard-title">Totals</h4>
               <dl class="acc-totals">
                 <div class="acc-total-row"><dt>Subtotal</dt><dd>$99.00</dd></div>
@@ -437,12 +439,12 @@
       </header>
       <div class="tb-demo">
         <div class="acc-wishlist" id="acc-wishlist">
-          <article class="acc-wish acc-card">
-            <span class="acc-thumb acc-thumb--wide acc-w1" aria-hidden="true"></span>
+          <article class="acc-wish acc-wish--reserve acc-card">
+            <span class="acc-thumb acc-thumb--wide acc-thumb--moon acc-w2" aria-hidden="true"></span>
             <div class="acc-wish-body">
               <h4 class="acc-wish-name">Moonrite Cards 2028</h4>
               <span class="acc-money">Price to come</span>
-              <span class="acc-pill acc-pill--info">Reservations open</span>
+              <span class="acc-pill acc-pill--feature">Reservations open</span>
             </div>
             <div class="acc-wish-actions">
               <button type="button" class="acc-btn acc-btn--pri acc-btn--sm">Reserve mine</button>
@@ -453,7 +455,7 @@
           </article>
 
           <article class="acc-wish acc-card">
-            <span class="acc-thumb acc-thumb--wide acc-w2" aria-hidden="true"></span>
+            <span class="acc-thumb acc-thumb--wide acc-thumb--moon acc-w2" aria-hidden="true"></span>
             <div class="acc-wish-body">
               <h4 class="acc-wish-name">Moonrite Cards 2027</h4>
               <span class="acc-money">$99.00 AUD</span>
@@ -535,7 +537,7 @@
               0412 884 019
             </address>
             <div class="acc-addr-actions">
-              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-addr-edit">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 20 4-1 11-11-3-3L5 16Z"/></svg>
                 Edit
               </button>
@@ -561,7 +563,7 @@
               03 9042 7781
             </address>
             <div class="acc-addr-actions">
-              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-addr-edit">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 20 4-1 11-11-3-3L5 16Z"/></svg>
                 Edit
               </button>
@@ -587,7 +589,7 @@
               0407 226 118
             </address>
             <div class="acc-addr-actions">
-              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-addr-edit">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 20 4-1 11-11-3-3L5 16Z"/></svg>
                 Edit
               </button>
@@ -609,7 +611,7 @@
         </button>
 
         <form class="acc-addr-form acc-card" id="acc-addr-form" novalidate hidden>
-          <h4 class="acc-subcard-title">New address</h4>
+          <h4 class="acc-subcard-title" id="acc-addr-form-title">New address</h4>
           <div class="acc-form-grid">
             <div class="acc-field acc-span-2">
               <label for="acc-addr-name">Full name</label>
@@ -691,7 +693,7 @@
               <span class="acc-meta">Expires 08/29 <span class="acc-dot">&bull;</span> Amelia Brooks</span>
             </div>
             <div class="acc-cardrow-actions">
-              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost" disabled>Default</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-card-default" disabled>Default</button>
               <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-card-del">Remove</button>
             </div>
             <div class="acc-confirm" hidden>
@@ -705,7 +707,7 @@
 
           <li class="acc-cardrow acc-card">
             <span class="acc-cardicon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H5a2 2 0 0 1-2-2 2 2 0 0 1 2-2h13v4"/><path d="M3 5v12a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1"/><path d="M16 12.5h.01"/></svg>
             </span>
             <div class="acc-cardrow-body">
               <span class="acc-cardrow-top">
@@ -715,7 +717,7 @@
               <span class="acc-meta">Linked 3 May 2026 <span class="acc-dot">&bull;</span> Amelia Brooks</span>
             </div>
             <div class="acc-cardrow-actions">
-              <button type="button" class="acc-btn acc-btn--sm">Set as default</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-card-default">Set as default</button>
               <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-card-del">Remove</button>
             </div>
             <div class="acc-confirm" hidden>
@@ -740,7 +742,7 @@
               <span class="acc-meta">Expired 04/26 <span class="acc-dot">&bull;</span> Update it before your next order</span>
             </div>
             <div class="acc-cardrow-actions">
-              <button type="button" class="acc-btn acc-btn--sm">Update card</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-card-update">Update card</button>
               <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-card-del">Remove</button>
             </div>
             <div class="acc-confirm" hidden>
@@ -759,7 +761,7 @@
         </button>
 
         <form class="acc-addr-form acc-card" id="acc-card-form" novalidate hidden>
-          <h4 class="acc-subcard-title">Add a card</h4>
+          <h4 class="acc-subcard-title" id="acc-card-form-title">Add a card</h4>
           <div class="acc-form-grid">
             <div class="acc-field acc-span-2">
               <label for="acc-cc-name">Name on card</label>
@@ -1107,6 +1109,8 @@
             </div>
           </div>
 
+          <p class="acc-hintchip"><span class="acc-hintchip-tag">Demo</span> <span class="acc-hintchip-code">MR-1042</span> <span class="acc-dot">&bull;</span> <span class="acc-hintchip-code">amelia.brooks@example.com</span></p>
+
           <form class="acc-lookup-form" id="acc-lookup-form" novalidate>
             <div class="acc-field">
               <label for="acc-lookup-order">Order number</label>
@@ -1163,8 +1167,9 @@
       background: var(--bg-card);
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-card);
+      transition: border-color 0.2s ease;
     }
-    .acc-h { font-family: var(--font-display); font-weight: var(--heading-weight); color: var(--text); margin: 0; }
+    .acc-h { font-family: var(--font-display); font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); color: var(--text); margin: 0; }
     .acc-eyebrow {
       font-family: var(--font-eyebrow); font-size: 11px;
       letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
@@ -1176,20 +1181,27 @@
     .acc-money { font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
     .acc-line-name { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--text); }
     .acc-pane-copy { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0 0 14px; max-width: 62ch; }
-    .acc-link { color: var(--accent); font-family: var(--font-ui); font-size: 13px; text-decoration: underline; }
+    .acc-link { color: var(--accent); font-family: var(--font-ui); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s ease; }
+    .acc-link:hover { color: var(--accent-hover); }
 
-    /* status pills: the status colour always sits on its own wash */
+    /* Status pills: the T013 order-state system. A currentColor dot carries
+       the state, the wash carries the ground, the label stays natural case. */
     .acc-pill {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-family: var(--font-ui); font-size: 11px; font-weight: 600;
-      letter-spacing: 0.04em; text-transform: uppercase;
-      padding: 5px 11px; border-radius: var(--radius-pill);
-      border: var(--line-weight) solid transparent; white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 7px;
+      font-family: var(--font-ui); font-size: 12px; font-weight: 600;
+      letter-spacing: 0.01em;
+      padding: 5px 12px; border-radius: var(--radius-pill);
+      border: var(--line-weight) solid transparent;
+      max-width: 100%; text-align: left;
     }
-    .acc-pill--ok   { background: var(--ok-wash);   color: var(--ok);   border-color: color-mix(in srgb, var(--ok) 38%, transparent); }
-    .acc-pill--warn { background: var(--warn-wash); color: var(--warn); border-color: color-mix(in srgb, var(--warn) 38%, transparent); }
-    .acc-pill--err  { background: var(--err-wash);  color: var(--err);  border-color: color-mix(in srgb, var(--err) 38%, transparent); }
-    .acc-pill--info { background: var(--info-wash); color: var(--info); border-color: color-mix(in srgb, var(--info) 38%, transparent); }
+    .acc-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: none; }
+    .acc-pill--ok   { background: var(--ok-wash);   color: var(--ok);   border-color: var(--ok-line); }
+    .acc-pill--warn { background: var(--warn-wash); color: var(--warn); border-color: var(--warn-line); }
+    .acc-pill--err  { background: var(--err-wash);  color: var(--err);  border-color: var(--err-line); }
+    .acc-pill--info { background: var(--info-wash); color: var(--info); border-color: var(--info-line); }
+    /* The one bright state on the page: a reservation you can still claim.
+       A short label on the accent-light band colour, per the restraint rules. */
+    .acc-pill--feature { background: var(--accent-light); color: var(--accent-light-ink); border-color: transparent; }
 
     .acc-badge {
       display: inline-flex; align-items: center;
@@ -1200,6 +1212,17 @@
       border: var(--line-weight) solid var(--accent-line);
     }
 
+    /* Moon phase dots: the one small brand motif the shell carries. */
+    .acc-phases { display: inline-flex; align-items: center; gap: 7px; margin-top: 12px; }
+    .acc-phases i {
+      width: 9px; height: 9px; border-radius: 50%;
+      border: var(--line-weight) solid var(--border-2);
+      background: var(--bg-card);
+    }
+    .acc-phases i:nth-child(2) { background: linear-gradient(90deg, var(--bg-card) 50%, var(--accent-light) 50%); }
+    .acc-phases i:nth-child(3) { background: var(--accent-light); border-color: var(--accent-light); }
+    .acc-phases i:nth-child(4) { background: linear-gradient(90deg, var(--accent-light) 50%, var(--bg-card) 50%); }
+
     /* ---- buttons ---- */
     .acc-btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
@@ -1209,10 +1232,14 @@
       border-radius: var(--radius-btn, var(--radius-sm));
       border: var(--line-weight) solid var(--border-2);
       background: var(--bg-2); color: var(--text);
-      cursor: pointer; text-align: center;
+      cursor: pointer; text-align: center; text-decoration: none;
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     }
-    .acc-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
-    .acc-btn:disabled { opacity: 0.45; cursor: default; }
+    .acc-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); background: var(--accent-wash); }
+    .acc-btn:disabled {
+      background: var(--disabled-surface); color: var(--disabled-ink);
+      border-color: var(--disabled-border); cursor: not-allowed;
+    }
     .acc-btn--pri { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
     .acc-btn--pri:hover:not(:disabled) { background: var(--accent-hover); border-color: var(--accent-hover); color: var(--accent-ink); }
     .acc-btn--ghost { background: transparent; color: var(--text-2); }
@@ -1220,7 +1247,7 @@
       background: var(--err-wash); color: var(--err);
       border-color: color-mix(in srgb, var(--err) 45%, transparent);
     }
-    .acc-btn--danger:hover:not(:disabled) { border-color: var(--err); color: var(--err); }
+    .acc-btn--danger:hover:not(:disabled) { border-color: var(--err); color: var(--err); background: var(--err-wash); }
     .acc-btn--sm { padding: 0 14px; font-size: 12px; }
     .acc-btn--full { width: 100%; }
 
@@ -1231,27 +1258,25 @@
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-btn, var(--radius-sm));
       cursor: pointer;
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     }
-    .acc-iconbtn:hover { color: var(--err); border-color: color-mix(in srgb, var(--err) 45%, transparent); }
+    .acc-iconbtn:hover { color: var(--err); border-color: var(--err-line); background: var(--err-wash); }
 
     .acc-btn:focus-visible,
     .acc-iconbtn:focus-visible,
     .acc-navlink:focus-visible,
     .acc-tab:focus-visible,
-    .acc-link:focus-visible,
-    .acc-field input:focus-visible,
-    .acc-field select:focus-visible,
-    .acc-field textarea:focus-visible,
-    .acc-check input:focus-visible,
-    .acc-radio input:focus-visible {
+    .acc-link:focus-visible {
       outline: var(--focus-ring);
-      outline-offset: 2px;
+      outline-offset: var(--focus-offset);
     }
 
-    /* ---- fields ---- */
-    .acc-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    /* ---- fields: the shared field system from the forms page.
+           Eyebrow labels, 46px fields, an accent-halo focus. ---- */
+    .acc-field { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
     .acc-field > label {
-      font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.03em; color: var(--text-3);
+      font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-3);
     }
     .acc-field input[type="text"],
     .acc-field input[type="email"],
@@ -1259,41 +1284,90 @@
     .acc-field input[type="password"],
     .acc-field textarea,
     .acc-field select {
-      width: 100%; min-height: 48px;
+      width: 100%; min-height: 46px;
       font-family: var(--font-body); font-size: 14px; color: var(--text);
-      background: var(--bg-3);
+      background: var(--bg-card);
       border: var(--line-weight) solid var(--border-2);
-      border-radius: var(--radius);
-      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      padding: 11px 14px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
     .acc-field textarea { min-height: 0; resize: vertical; line-height: 1.55; }
-    .acc-field input:focus, .acc-field textarea:focus, .acc-field select:focus { outline: none; border-color: var(--accent); }
+    .acc-field input:hover:not(:disabled):not(:focus),
+    .acc-field textarea:hover:not(:focus),
+    .acc-field select:hover:not(:focus) { border-color: var(--border-3); }
+    .acc-field input:focus, .acc-field textarea:focus, .acc-field select:focus {
+      outline: none; border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-faint);
+    }
     .acc-field input::placeholder, .acc-field textarea::placeholder { color: var(--text-4); }
     .acc-select { position: relative; }
     .acc-select select { appearance: none; padding-right: 40px; cursor: pointer; }
-    .acc-select svg { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-3); pointer-events: none; }
+    .acc-select svg { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--accent); pointer-events: none; }
 
     .acc-fieldset { border: none; margin: 0 0 22px; padding: 0; }
     .acc-legend {
-      font-family: var(--font-display); font-size: 15px; font-weight: var(--heading-weight);
+      font-family: var(--font-display); font-size: 17px; font-weight: var(--heading-weight);
+      letter-spacing: var(--heading-tracking);
       color: var(--text); padding: 0; margin-bottom: 12px;
     }
+
+    /* Drawn checkboxes: the native input stays in the tree (covering the
+       label, invisible) so keyboard and forms keep working. */
     .acc-check {
-      display: flex; align-items: center; gap: 12px; cursor: pointer;
+      position: relative; display: flex; align-items: center; gap: 12px; cursor: pointer;
       font-family: var(--font-body); font-size: 14px; color: var(--text-2); min-height: 48px;
     }
-    .acc-check--inline { min-height: 44px; }
-    .acc-check input, .acc-radio input { accent-color: var(--accent); width: 18px; height: 18px; flex: none; cursor: pointer; }
+    .acc-check input {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      margin: 0; opacity: 0; cursor: pointer;
+    }
+    .acc-check::before {
+      content: ''; width: 20px; height: 20px; flex: none;
+      border-radius: var(--radius-sm);
+      border: var(--line-weight) solid var(--border-2);
+      background: var(--bg-card);
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+    .acc-check::after {
+      content: '✓'; position: absolute; left: 0; top: 50%; width: 20px; margin-top: -8px;
+      text-align: center; font-size: 12px; font-weight: 700; line-height: 16px;
+      color: var(--accent-ink); transform: scale(0); transition: transform 0.18s ease;
+    }
+    .acc-check:hover::before { border-color: var(--accent); }
+    .acc-check:has(input:checked)::before { background: var(--accent); border-color: var(--accent); }
+    .acc-check:has(input:checked)::after { transform: scale(1); }
+    .acc-check:has(input:focus-visible)::before { outline: var(--focus-ring); outline-offset: var(--focus-offset); }
+    .acc-check--inline { min-height: 48px; }
+
+    /* Drawn radio cards for the return outcome. */
     .acc-radios { display: flex; flex-direction: column; gap: 10px; }
     .acc-radio {
-      display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
-      padding: 14px; border: var(--line-weight) solid var(--border);
-      border-radius: var(--radius); background: var(--bg-2);
+      position: relative; display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
+      padding: 16px; border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius); background: var(--bg-card);
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .acc-radio input {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      margin: 0; opacity: 0; cursor: pointer;
+    }
+    .acc-radio::before {
+      content: ''; width: 20px; height: 20px; flex: none; margin-top: 1px;
+      border-radius: 50%;
+      border: var(--line-weight) solid var(--border-2);
+      background: var(--bg-card);
+      transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
     .acc-radio > span { display: flex; flex-direction: column; gap: 4px; }
     .acc-radio strong { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--text); }
-    .acc-radio input { margin-top: 3px; }
+    .acc-radio:hover { border-color: var(--accent-line); }
     .acc-radio:has(input:checked) { border-color: var(--accent); background: var(--accent-wash); }
+    .acc-radio:has(input:checked)::before {
+      border-color: var(--accent); background: var(--accent);
+      box-shadow: inset 0 0 0 4px var(--bg-card);
+    }
+    .acc-radio:has(input:focus-visible)::before { outline: var(--focus-ring); outline-offset: var(--focus-offset); }
 
     .acc-note {
       font-family: var(--font-ui); font-size: 12px; line-height: 1.55;
@@ -1329,27 +1403,28 @@
     /* ============================================================
        T380 Account shell
        ============================================================ */
-    .acc-shell { display: grid; grid-template-columns: 220px 1fr; gap: 20px; align-items: start; }
+    .acc-shell { display: grid; grid-template-columns: 224px 1fr; gap: 20px; align-items: start; }
     .acc-nav {
       display: flex; flex-direction: column; gap: 4px;
       background: var(--bg-card);
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-card);
-      padding: 10px;
+      padding: 12px;
     }
     .acc-navlink {
       display: flex; align-items: center; gap: 10px;
-      min-height: 48px; padding: 0 14px; width: 100%;
+      min-height: 48px; padding: 0 16px; width: 100%;
       font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em;
       color: var(--text-3); background: transparent;
       border: var(--line-weight) solid transparent;
-      border-radius: var(--radius); cursor: pointer; text-align: left;
+      border-radius: var(--radius-btn, var(--radius)); cursor: pointer; text-align: left;
       white-space: nowrap;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
     .acc-navlink:hover { color: var(--text); background: var(--bg-2); }
     .acc-navlink.is-active {
-      color: var(--accent); background: var(--accent-wash);
-      border-color: var(--accent-line); font-weight: 600;
+      color: var(--accent-ink); background: var(--accent);
+      border-color: var(--accent); font-weight: 600;
     }
     .acc-navlink svg { flex: none; }
 
@@ -1361,23 +1436,23 @@
     }
     .acc-greet {
       display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-      padding: 20px 22px;
+      padding: 24px;
       border-bottom: var(--line-weight) solid var(--border);
-      background: var(--bg-2);
+      background: linear-gradient(135deg, var(--bg-2), var(--bg-card));
     }
-    .acc-greet-name { font-size: 22px; margin: 0 0 4px; }
+    .acc-greet-name { font-size: 26px; margin: 0 0 4px; }
     .acc-greet-sub { font-family: var(--font-ui); font-size: 12.5px; color: var(--text-3); margin: 0; }
-    .acc-pane-body { padding: 22px; }
-    .acc-pane-title { font-size: 17px; margin: 0 0 8px; }
+    .acc-pane-body { padding: 24px; }
+    .acc-pane-title { font-size: 18px; margin: 0 0 8px; }
     .acc-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
     .acc-stat {
-      display: flex; flex-direction: column; gap: 6px;
-      padding: 14px; background: var(--bg-2);
+      display: flex; flex-direction: column; gap: 8px;
+      padding: 16px; background: var(--bg-2);
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius);
     }
     .acc-stat-label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-4); }
-    .acc-stat-value { font-family: var(--font-display); font-size: 22px; font-weight: var(--heading-weight); color: var(--text); line-height: 1.1; }
+    .acc-stat-value { font-family: var(--font-display); font-size: 27px; font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); color: var(--text); line-height: 1.1; }
     .acc-dl { margin: 0; }
     .acc-dl-row {
       display: grid; grid-template-columns: 130px 1fr; gap: 12px;
@@ -1395,13 +1470,19 @@
       background: var(--bg-card);
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-card);
-      padding: 16px 18px;
+      padding: 18px 20px;
+      overflow: hidden;
+      transition: border-color 0.2s ease;
     }
+    .acc-order:hover { border-color: var(--border-2); }
     .acc-order-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
     .acc-order-ident { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .acc-order .acc-num { font-size: 14px; }
+    /* the item band is a tinted well running edge to edge inside the card */
     .acc-order-mid {
       display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-      margin: 14px 0; padding: 14px 0;
+      margin: 14px -20px; padding: 12px 20px;
+      background: var(--bg-2);
       border-top: var(--line-weight) solid var(--border);
       border-bottom: var(--line-weight) solid var(--border);
     }
@@ -1418,12 +1499,12 @@
     /* ============================================================
        T382 Order detail
        ============================================================ */
-    .acc-detail { padding: 20px 22px; }
+    .acc-detail { padding: 22px 24px; }
     .acc-detail-head {
       display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;
       padding-bottom: 18px; border-bottom: var(--line-weight) solid var(--border);
     }
-    .acc-detail-num { font-family: var(--font-mono); font-size: 20px; letter-spacing: 0.04em; margin: 0 0 4px; }
+    .acc-detail-num { font-family: var(--font-mono); font-size: 21px; letter-spacing: 0.04em; margin: 0 0 4px; }
     .acc-detail-status { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
     .acc-lines { list-style: none; margin: 0; padding: 0; }
     .acc-line {
@@ -1451,13 +1532,34 @@
     .acc-cardbrand { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text); }
     .acc-mask { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.08em; color: var(--text-2); }
     .acc-totals { margin: 0; }
-    .acc-total-row { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; }
+    .acc-total-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 6px 0; }
     .acc-total-row dt { font-family: var(--font-ui); font-size: 13px; color: var(--text-3); margin: 0; }
     .acc-total-row dd { font-family: var(--font-ui); font-size: 13px; color: var(--text-2); margin: 0; font-variant-numeric: tabular-nums; }
     .acc-total-row--grand { border-top: var(--line-weight) solid var(--border-2); margin-top: 6px; padding-top: 10px; }
-    .acc-total-row--grand dt, .acc-total-row--grand dd { font-size: 15px; font-weight: 600; color: var(--text); }
+    .acc-total-row--grand dt { font-size: 15px; font-weight: 600; color: var(--text); }
+    .acc-total-row--grand dd {
+      font-family: var(--font-display); font-size: 19px; font-weight: var(--heading-weight);
+      letter-spacing: var(--heading-tracking); color: var(--text);
+    }
     .acc-total-row--note dt, .acc-total-row--note dd { font-size: 11.5px; color: var(--text-4); }
     .acc-detail-actions { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 16px; border-top: var(--line-weight) solid var(--border); }
+
+    /* The totals panel is where the weight belongs. In Moonrite it becomes
+       the block's one navy moment, cream ink on the signature colour; Dark
+       keeps its quiet tinted card, where a full accent panel would shout. */
+    :root[data-theme="moonrite"] .acc-subcard--totals {
+      background: var(--accent); border-color: var(--accent);
+    }
+    :root[data-theme="moonrite"] .acc-subcard--totals .acc-subcard-title,
+    :root[data-theme="moonrite"] .acc-subcard--totals .acc-total-row dt,
+    :root[data-theme="moonrite"] .acc-subcard--totals .acc-total-row dd,
+    :root[data-theme="moonrite"] .acc-subcard--totals .acc-total-row--grand dt,
+    :root[data-theme="moonrite"] .acc-subcard--totals .acc-total-row--note dt,
+    :root[data-theme="moonrite"] .acc-subcard--totals .acc-total-row--note dd { color: var(--accent-ink); }
+    :root[data-theme="moonrite"] .acc-subcard--totals .acc-total-row--grand {
+      border-top-color: color-mix(in srgb, var(--accent-ink) 35%, transparent);
+    }
+    :root[data-theme="moonrite"] .acc-subcard--totals .acc-total-row--grand dd { color: var(--accent-light); }
 
     /* ============================================================
        T383 Return request
@@ -1467,12 +1569,17 @@
     .acc-return-items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
     .acc-return-item {
       display: grid; grid-template-columns: 1fr 190px; gap: 14px; align-items: center;
-      padding: 12px 14px; background: var(--bg-card);
+      padding: 12px 16px; background: var(--bg-card);
       border: var(--line-weight) solid var(--border); border-radius: var(--radius);
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .acc-return-item:hover { border-color: var(--accent-line); }
+    .acc-return-item:has(.acc-return-tick:checked) {
+      border-color: var(--accent); background: var(--accent-wash);
     }
     .acc-return-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
-    .acc-field--inline > label { font-size: 11px; }
-    .acc-return-side { position: sticky; top: 80px; }
+    .acc-field--inline > label { font-size: 10px; }
+    .acc-return-side { position: sticky; top: 80px; background: var(--bg-2); }
     .acc-return-list { list-style: none; margin: 0 0 10px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
     .acc-return-list li {
       display: flex; justify-content: space-between; gap: 10px;
@@ -1486,15 +1593,34 @@
        ============================================================ */
     .acc-wishlist { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
     .acc-wish { display: flex; flex-direction: column; overflow: hidden; }
-    .acc-wish-body { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px 14px 10px; flex: 1; }
-    .acc-wish-name { font-family: var(--font-display); font-size: 15px; font-weight: var(--heading-weight); color: var(--text); margin: 0; }
-    .acc-wish-actions { display: flex; align-items: center; gap: 8px; padding: 0 14px 14px; }
+    .acc-wish:hover { border-color: var(--border-2); }
+    .acc-wish-body { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px 16px 10px; flex: 1; }
+    .acc-wish-name { font-family: var(--font-display); font-size: 16px; font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); color: var(--text); margin: 0; }
+    .acc-wish-actions { display: flex; align-items: center; gap: 8px; padding: 0 16px 16px; }
     .acc-wish-actions .acc-btn { flex: 1; }
+
+    /* Deck tiles carry the mini moon-card language: a small glowing disc
+       over the wash, the full moon the product is about. */
+    .acc-thumb--moon { position: relative; overflow: hidden; }
+    .acc-thumb--moon::after {
+      content: ''; position: absolute; top: 22px; right: 28px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--accent-light);
+      box-shadow:
+        0 0 0 8px color-mix(in srgb, var(--accent-light) 18%, transparent),
+        0 0 30px color-mix(in srgb, var(--accent-light) 45%, transparent);
+    }
+    /* The reservation card leads the grid with a soft accent lift. */
+    .acc-wish--reserve {
+      border-color: var(--accent-line);
+      background: linear-gradient(to bottom, var(--accent-wash), var(--bg-card) 75%);
+    }
     .acc-empty {
       display: flex; flex-direction: column; align-items: center; text-align: center;
-      gap: 10px; padding: 40px 24px; color: var(--text-3);
+      gap: 10px; padding: 44px 24px; color: var(--text-3);
+      border-style: dashed;
     }
-    .acc-empty svg { color: var(--text-4); }
+    .acc-empty svg { color: var(--accent); }
     .acc-empty-title { font-size: 18px; margin: 0; }
     .acc-empty-copy { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0; max-width: 46ch; }
     .acc-empty-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 6px; }
@@ -1503,12 +1629,14 @@
        T385 Address book
        ============================================================ */
     .acc-addresses { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
-    .acc-addr { padding: 16px 18px; display: flex; flex-direction: column; }
+    .acc-addr { padding: 18px 20px; display: flex; flex-direction: column; }
+    .acc-addr:hover { border-color: var(--border-2); }
+    .acc-addr:has(.acc-badge) { border-color: var(--accent-line); }
     .acc-addr-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
-    .acc-addr-label { font-family: var(--font-display); font-size: 15px; font-weight: var(--heading-weight); color: var(--text); margin: 0; }
+    .acc-addr-label { font-family: var(--font-display); font-size: 17px; font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); color: var(--text); margin: 0; }
     .acc-addr-actions { display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap; }
     .acc-add-toggle { margin-top: 16px; }
-    .acc-addr-form { padding: 18px; margin-top: 14px; }
+    .acc-addr-form { padding: 20px; margin-top: 14px; }
     .acc-form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
     .acc-span-2 { grid-column: 1 / -1; }
     .acc-form-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
@@ -1519,16 +1647,20 @@
     .acc-cards { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
     .acc-cardrow {
       display: grid; grid-template-columns: 44px 1fr auto;
-      align-items: center; gap: 14px; padding: 14px 16px;
+      align-items: center; gap: 14px; padding: 16px 18px;
     }
+    .acc-cardrow:hover { border-color: var(--border-2); }
+    .acc-cardrow:has(.acc-badge) { border-color: var(--accent-line); }
     .acc-cardrow .acc-confirm { grid-column: 1 / -1; }
+    /* brand mark chip: the method's mark sits on the accent wash */
     .acc-cardicon {
       display: inline-flex; align-items: center; justify-content: center;
       width: 44px; height: 44px; border-radius: var(--radius-sm);
-      background: var(--bg-3); border: var(--line-weight) solid var(--border);
-      color: var(--text-3);
+      background: var(--accent-wash); border: var(--line-weight) solid var(--accent-line);
+      color: var(--accent);
     }
-    .acc-cardrow.is-expired .acc-cardicon { color: var(--err); border-color: color-mix(in srgb, var(--err) 40%, transparent); }
+    .acc-cardrow.is-expired .acc-cardicon { color: var(--err); background: var(--err-wash); border-color: color-mix(in srgb, var(--err) 40%, transparent); }
+    .acc-cardrow.is-expired .acc-cardbrand { color: var(--text-3); }
     .acc-cardrow-body { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
     .acc-cardrow-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .acc-cardrow-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
@@ -1536,20 +1668,33 @@
     /* ============================================================
        T387 Next-year reservation
        ============================================================ */
-    .acc-sub { padding: 18px 20px; }
+    /* This is the "your 2028 deck" moment, so the panel takes the moon:
+       a soft accent-wash lift and a glowing disc on the held item's tile. */
+    .acc-sub {
+      padding: 22px 24px;
+      background: linear-gradient(135deg, var(--accent-wash), var(--bg-card) 60%);
+      border-color: var(--accent-line);
+    }
     .acc-sub-head {
       display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;
       padding-bottom: 16px; border-bottom: var(--line-weight) solid var(--border);
     }
     .acc-sub-ident { display: flex; gap: 14px; align-items: flex-start; min-width: 0; }
     .acc-sub-ident p { margin: 0 0 4px; }
-    .acc-sub-name { font-size: 17px; margin: 0 0 5px; }
+    .acc-sub-name { font-size: 19px; margin: 0 0 5px; }
+    .acc-sub .acc-thumb--lg { position: relative; overflow: hidden; }
+    .acc-sub .acc-thumb--lg::after {
+      content: ''; position: absolute; top: 10px; right: 10px;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--accent-light);
+      box-shadow: 0 0 14px color-mix(in srgb, var(--accent-light) 60%, transparent);
+    }
     .acc-sub-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 14px; margin: 18px 0;
     }
-    .acc-sub-next { display: flex; flex-direction: column; gap: 4px; }
-    .acc-sub-date { font-family: var(--font-display); font-size: 18px; font-weight: var(--heading-weight); color: var(--text); }
+    .acc-sub-next { display: flex; flex-direction: column; gap: 4px; background: var(--bg-card); }
+    .acc-sub-date { font-family: var(--font-display); font-size: 22px; font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); color: var(--text); transition: color 0.2s ease; }
     .acc-sub-next .acc-address { margin: 0 0 4px; }
     .acc-sub-actions { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 16px; border-top: var(--line-weight) solid var(--border); }
     .acc-sub.is-paused .acc-sub-date { color: var(--text-4); }
@@ -1558,20 +1703,20 @@
        T388 Rewards panel
        ============================================================ */
     .acc-rewards { display: grid; grid-template-columns: 1.35fr 1fr; gap: 16px; align-items: start; }
-    .acc-reward-main { padding: 20px; }
-    .acc-points { font-family: var(--font-display); font-size: 42px; font-weight: var(--heading-weight); color: var(--accent); line-height: 1; margin: 0 0 8px; }
+    .acc-reward-main { padding: 24px; }
+    .acc-points { font-family: var(--font-display); font-size: 46px; font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking); color: var(--accent); line-height: 1; margin: 0 0 8px; }
     .acc-points-unit { font-family: var(--font-ui); font-size: 14px; font-weight: 500; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; }
     .acc-progress { margin: 20px 0; }
     .acc-progress-top { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
     .acc-progress-label { font-family: var(--font-ui); font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-3); }
     .acc-progress-track {
       height: 10px; border-radius: var(--radius-pill); overflow: hidden;
-      background: var(--bg-3); border: var(--line-weight) solid var(--border);
+      background: var(--track); border: var(--line-weight) solid var(--border);
       margin-bottom: 8px;
     }
     .acc-progress-fill { display: block; height: 100%; background: var(--accent); border-radius: var(--radius-pill); transition: width 0.3s ease; }
     .acc-redeem { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: end; }
-    .acc-reward-ledger { padding: 20px; }
+    .acc-reward-ledger { padding: 24px; }
     .acc-ledger { list-style: none; margin: 0; padding: 0; }
     .acc-ledger-row {
       display: flex; align-items: center; justify-content: space-between; gap: 12px;
@@ -1590,14 +1735,22 @@
     .acc-auth { max-width: 460px; margin: 0 auto; overflow: hidden; }
     .acc-tabs { display: grid; grid-template-columns: 1fr 1fr; border-bottom: var(--line-weight) solid var(--border); }
     .acc-tab {
+      position: relative;
       min-height: 52px; padding: 0 16px;
       font-family: var(--font-ui); font-size: 13px; font-weight: var(--button-weight);
       letter-spacing: var(--button-tracking); text-transform: var(--button-transform);
       color: var(--text-3); background: var(--bg-2);
-      border: none; border-bottom: 2px solid transparent; cursor: pointer;
+      border: none; cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
-    .acc-tab.is-active { color: var(--accent); background: var(--bg-card); border-bottom-color: var(--accent); }
-    .acc-authpanel { display: flex; flex-direction: column; gap: 14px; padding: 22px; }
+    .acc-tab::after {
+      content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+      background: transparent; transition: background-color 0.2s ease;
+    }
+    .acc-tab:hover { color: var(--text); }
+    .acc-tab.is-active { color: var(--accent); background: var(--bg-card); }
+    .acc-tab.is-active::after { background: var(--accent); }
+    .acc-authpanel { display: flex; flex-direction: column; gap: 14px; padding: 24px; }
     .acc-auth-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
     .acc-auth-guest {
       display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
@@ -1609,10 +1762,16 @@
        T390 Password reset
        ============================================================ */
     .acc-reset { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; align-items: start; }
-    .acc-reset-col { padding: 20px; }
+    .acc-reset-col { padding: 24px; }
     .acc-reset-request, .acc-reset-new { display: flex; flex-direction: column; gap: 14px; }
-    .acc-reset-sent { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
-    .acc-reset-title { font-size: 17px; margin: 0; }
+    .acc-reset-sent {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+      padding: 18px; border-radius: var(--radius);
+      background: var(--ok-wash);
+      border: var(--line-weight) solid var(--ok-line);
+    }
+    .acc-reset-sent .acc-pane-copy { margin: 0; }
+    .acc-reset-title { font-size: 18px; margin: 0; }
     .acc-tick {
       display: inline-flex; align-items: center; justify-content: center;
       width: 42px; height: 42px; border-radius: var(--radius-pill);
@@ -1623,7 +1782,8 @@
     .acc-strength-bars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
     .acc-strength-bar {
       height: 6px; border-radius: var(--radius-pill);
-      background: var(--bg-3); border: var(--line-weight) solid var(--border);
+      background: var(--track); border: var(--line-weight) solid var(--border);
+      transition: background-color 0.25s ease, border-color 0.25s ease;
     }
     .acc-strength-bar.is-1 { background: var(--err); border-color: var(--err); }
     .acc-strength-bar.is-2 { background: var(--warn); border-color: var(--warn); }
@@ -1637,8 +1797,24 @@
     /* ============================================================
        T391 Guest order lookup
        ============================================================ */
-    .acc-lookup { padding: 22px; max-width: 620px; margin: 0 auto; }
-    .acc-lookup-intro { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 18px; }
+    .acc-lookup { padding: 24px; max-width: 620px; margin: 0 auto; }
+    .acc-lookup-intro { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 16px; }
+
+    /* the demo credentials, presented as a hint chip rather than buried prose */
+    .acc-hintchip {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+      margin: 0 0 16px; padding: 8px 12px;
+      background: var(--accent-wash);
+      border: var(--line-weight) solid var(--accent-faint);
+      border-radius: var(--radius);
+    }
+    .acc-hintchip-tag {
+      font-family: var(--font-eyebrow); font-size: 10px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 3px 9px; border-radius: var(--radius-pill);
+      background: var(--accent-light); color: var(--accent-light-ink);
+    }
+    .acc-hintchip-code { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.03em; color: var(--text-2); }
     .acc-lookup-icon {
       display: inline-flex; align-items: center; justify-content: center;
       width: 44px; height: 44px; flex: none; border-radius: var(--radius-pill);
@@ -1664,6 +1840,45 @@
     .acc-lookup-hit .acc-order-actions { margin-top: 12px; }
     .acc-lookup-hit .acc-meta { display: block; margin-top: 8px; }
     .acc-lookup-help { display: block; margin-top: 16px; }
+
+    /* ============================================================
+       Motion. One-time entrances on revealed surfaces, a gentle pulse
+       on the live in-transit dot, and a slow drift on the moon discs.
+       All of it sits behind prefers-reduced-motion, and every block
+       reads identically with motion off.
+       ============================================================ */
+    @keyframes acc-rise {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes acc-pop {
+      0%   { transform: scale(0.4); opacity: 0; }
+      70%  { transform: scale(1.08); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes acc-pulse {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.35; }
+    }
+    @keyframes acc-moondrift {
+      from { transform: translateY(0); }
+      to   { transform: translateY(3px); }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .acc-paneview,
+      .acc-authpanel,
+      .acc-note,
+      .acc-confirm,
+      .acc-addr-form,
+      .acc-reset-sent,
+      .acc-lookup-err,
+      .acc-lookup-hit,
+      .acc-empty { animation: acc-rise 0.25s ease both; }
+      .acc-tick { animation: acc-pop 0.35s ease both; }
+      .acc-detail-status .acc-pill--info::before { animation: acc-pulse 2.6s ease-in-out infinite; }
+      .acc-thumb--moon::after,
+      .acc-sub .acc-thumb--lg::after { animation: acc-moondrift 9s ease-in-out infinite alternate; }
+    }
 
     /* ============================================================
        Responsive
@@ -1834,8 +2049,8 @@
 
       /* ---- T385 and T386 reveal forms ---- */
       var revealPairs = [
-        { btn: 'acc-addr-toggle', form: 'acc-addr-form', cancel: 'acc-addr-cancel', done: 'acc-addr-saved' },
-        { btn: 'acc-card-toggle', form: 'acc-card-form', cancel: 'acc-card-cancel', done: null }
+        { btn: 'acc-addr-toggle', form: 'acc-addr-form', cancel: 'acc-addr-cancel', done: 'acc-addr-saved', title: 'acc-addr-form-title', titleText: 'New address' },
+        { btn: 'acc-card-toggle', form: 'acc-card-form', cancel: 'acc-card-cancel', done: null, title: 'acc-card-form-title', titleText: 'Add a card' }
       ];
       revealPairs.forEach(function (pair) {
         var btn = byId(pair.btn);
@@ -1843,6 +2058,8 @@
         if (!btn || !form) return;
         btn.addEventListener('click', function () {
           var open = form.hidden;
+          var title = byId(pair.title);
+          if (title && pair.titleText) title.textContent = pair.titleText;
           form.hidden = !open;
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
           if (open) {
@@ -1864,6 +2081,97 @@
             if (note) note.hidden = false;
           });
         }
+      });
+
+      /* ---- T381 Order actions ---- */
+      var ordersNote = byId('acc-orders-note');
+      $$('.acc-order-demo').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (!ordersNote) return;
+          ordersNote.hidden = false;
+          ordersNote.textContent = btn.getAttribute('data-acc-demo') || 'Demo only.';
+        });
+      });
+      $$('.acc-order-buy').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (btn.classList.contains('is-added')) return;
+          var label = btn.textContent;
+          btn.textContent = 'Added to cart';
+          btn.classList.add('is-added');
+          setTimeout(function () {
+            btn.textContent = label;
+            btn.classList.remove('is-added');
+          }, 1500);
+        });
+      });
+
+      /* ---- T385 Edit an address: reuses the address form ---- */
+      $$('.acc-addr-edit').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var form = byId('acc-addr-form');
+          var toggle = byId('acc-addr-toggle');
+          var title = byId('acc-addr-form-title');
+          var host = btn.closest('.acc-addr');
+          var label = host ? $('.acc-addr-label', host) : null;
+          if (title) title.textContent = label ? 'Edit address: ' + label.textContent.trim() : 'Edit address';
+          if (form) {
+            form.hidden = false;
+            var first = form.querySelector('input, select, textarea');
+            if (first) first.focus();
+          }
+          if (toggle) toggle.setAttribute('aria-expanded', 'true');
+        });
+      });
+
+      /* ---- T386 Set as default: moves the badge between rows ---- */
+      $$('.acc-card-default').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (btn.disabled) return;
+          $$('.acc-cardrow', byId('acc-cards')).forEach(function (row) {
+            var isThis = row.contains(btn);
+            var badge = $('.acc-badge', row);
+            var defBtn = $('.acc-card-default', row);
+            if (isThis) {
+              if (!badge) {
+                var mark = document.createElement('span');
+                mark.className = 'acc-badge';
+                mark.textContent = 'Default';
+                var top = $('.acc-cardrow-top', row);
+                if (top) top.appendChild(mark);
+              }
+              if (defBtn) {
+                defBtn.disabled = true;
+                defBtn.textContent = 'Default';
+                defBtn.classList.add('acc-btn--ghost');
+              }
+            } else {
+              if (badge) badge.remove();
+              if (defBtn) {
+                defBtn.disabled = false;
+                defBtn.textContent = 'Set as default';
+                defBtn.classList.remove('acc-btn--ghost');
+              }
+            }
+          });
+        });
+      });
+
+      /* ---- T386 Update an expired card: reuses the card form ---- */
+      $$('.acc-card-update').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var form = byId('acc-card-form');
+          var toggle = byId('acc-card-toggle');
+          var title = byId('acc-card-form-title');
+          var host = btn.closest('.acc-cardrow');
+          var brand = host ? $('.acc-cardbrand', host) : null;
+          if (title) title.textContent = brand ? 'Update the ' + brand.textContent.trim() : 'Update card';
+          if (form) {
+            form.hidden = false;
+            var first = form.querySelector('input');
+            if (first) first.focus();
+          }
+          if (toggle) toggle.setAttribute('aria-expanded', 'true');
+        });
       });
 
       /* ---- T387 Next-year reservation ---- */

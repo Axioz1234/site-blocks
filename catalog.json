@@ -54,7 +54,7 @@
       "page": "index.html",
       "anchor": "#T010",
       "source": "pages/elements.html",
-      "description": "Primary (accent fill), secondary (outline), and the nav CTA pill."
+      "description": "Primary (accent fill), secondary (outline), the nav CTA pill, and the disabled state."
     },
     {
       "id": "T011",
@@ -134,7 +134,7 @@
       "page": "index.html",
       "anchor": "#T031",
       "source": "pages/components.html",
-      "description": "Pulsing loader dots in the success and accent colours, for loading and live states."
+      "description": "Loader dots that wax and wane in sequence, in the success and accent colours, for loading and live states."
     },
     {
       "id": "T040",
@@ -474,7 +474,7 @@
       "page": "index.html",
       "anchor": "#T100",
       "source": "pages/animation.html",
-      "description": "Asymmetric mosaic of feature tiles with varying spans, subtle gradients, and a hover lift, in pure CSS."
+      "description": "Asymmetric mosaic of feature tiles anchored by one solid accent panel with a moon-disc motif, tint variation across the rest, and a hover lift, in pure CSS."
     },
     {
       "id": "T101",
@@ -564,7 +564,7 @@
       "page": "index.html",
       "anchor": "#T122",
       "source": "pages/devtools.html",
-      "description": "Month pill, card line, details table, and Front/Back tabs that switch on click."
+      "description": "Moon-disc month marker, card line, details table, and Front/Back tabs that switch on click."
     },
     {
       "id": "T123",
@@ -574,7 +574,7 @@
       "page": "index.html",
       "anchor": "#T123",
       "source": "pages/devtools.html",
-      "description": "Filter chips above twelve month tiles, shown or hidden live by data-category."
+      "description": "Filter chips above twelve miniature moon-card tiles, shown or hidden live by data-category."
     },
     {
       "id": "T124",
@@ -614,7 +614,7 @@
       "page": "index.html",
       "anchor": "#T140",
       "source": "pages/social.html",
-      "description": "A muted row of wordmarks under a small label. Marquees slowly and pauses on hover."
+      "description": "A muted row of publication wordmarks, each with its own masthead type treatment, under a small label. Marquees slowly and pauses on hover."
     },
     {
       "id": "T141",
@@ -624,7 +624,7 @@
       "page": "index.html",
       "anchor": "#T141",
       "source": "pages/social.html",
-      "description": "A multi-column masonry of quote cards: quote, initials avatar, name and town. Static."
+      "description": "A multi-column masonry of quote cards: a display quote mark, the quote, an initials avatar, name and town, with gentle tint variation. Static."
     },
     {
       "id": "T142",
@@ -734,7 +734,7 @@
       "page": "index.html",
       "anchor": "#T165",
       "source": "pages/content.html",
-      "description": "A \"Part 2 of 12\" bar with titled previous/next arrows and a thin progress indicator."
+      "description": "A \"Part 2 of 12\" bar with titled previous/next cards and a twelve-dot progress trail."
     },
     {
       "id": "T166",
@@ -744,7 +744,7 @@
       "page": "index.html",
       "anchor": "#T166",
       "source": "pages/content.html",
-      "description": "An oversized, offset quote block with a large quotation mark, accent rule, and attribution."
+      "description": "A centred editorial quote with an oversized quotation mark, accent rules, and attribution."
     },
     {
       "id": "T180",
@@ -924,7 +924,7 @@
       "page": "index.html",
       "anchor": "#T223",
       "source": "pages/feedback.html",
-      "description": "Placeholder for no-data views: an icon, a line of guidance, and an action."
+      "description": "Placeholder for no-data views: a crescent moon, a line of guidance, and an action."
     },
     {
       "id": "T224",
@@ -1034,7 +1034,7 @@
       "page": "index.html",
       "anchor": "#T281",
       "source": "pages/media.html",
-      "description": "Image block with a number tag and a typeset caption for docs and case studies."
+      "description": "Art-framed image block with a number tag and a typeset caption for docs and case studies."
     },
     {
       "id": "T282",
@@ -1044,7 +1044,7 @@
       "page": "index.html",
       "anchor": "#T282",
       "source": "pages/media.html",
-      "description": "Full-bleed hero with a looping video or gradient behind a darkening scrim and headline."
+      "description": "Full-bleed hero with a looping video or gradient behind a scrim, display type, and a play affordance."
     },
     {
       "id": "T283",
@@ -1054,7 +1054,7 @@
       "page": "index.html",
       "anchor": "#T283",
       "source": "pages/media.html",
-      "description": "Classic zig-zag with image and copy swapping sides down the page."
+      "description": "Classic zig-zag with image and copy swapping sides on alternating tint bands."
     },
     {
       "id": "T284",
@@ -1254,7 +1254,7 @@
       "page": "index.html",
       "anchor": "#T311",
       "source": "pages/ecom-catalogue.html",
-      "description": "The shop landing grid: one tile per collection on a wash background, with a label and an item count."
+      "description": "The shop landing grid: one tile per collection on a wash background, with a label, an item count and one solid accent anchor tile."
     },
     {
       "id": "T320",
@@ -1544,7 +1544,7 @@
       "page": "index.html",
       "anchor": "#T361",
       "source": "pages/ecom-merch.html",
-      "description": "A larger dismissible in-page banner: headline, supporting line and one call to action on a wash background."
+      "description": "A larger dismissible in-page banner: headline, supporting line and one call to action, composed as a full accent band."
     },
     {
       "id": "T362",

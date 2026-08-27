@@ -27,7 +27,7 @@
     "page": "index.html",
     "anchor": "#T122",
     "source": "pages/devtools.html",
-    "description": "Month pill, card line, details table, and Front/Back tabs that switch on click."
+    "description": "Moon-disc month marker, card line, details table, and Front/Back tabs that switch on click."
   },
   {
     "id": "T123",
@@ -37,7 +37,7 @@
     "page": "index.html",
     "anchor": "#T123",
     "source": "pages/devtools.html",
-    "description": "Filter chips above twelve month tiles, shown or hidden live by data-category."
+    "description": "Filter chips above twelve miniature moon-card tiles, shown or hidden live by data-category."
   },
   {
     "id": "T124",

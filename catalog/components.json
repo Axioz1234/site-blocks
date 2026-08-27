@@ -17,6 +17,6 @@
     "page": "index.html",
     "anchor": "#T031",
     "source": "pages/components.html",
-    "description": "Pulsing loader dots in the success and accent colours, for loading and live states."
+    "description": "Loader dots that wax and wane in sequence, in the success and accent colours, for loading and live states."
   }
 ]

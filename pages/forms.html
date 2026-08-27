@@ -187,10 +187,11 @@
           <p class="frm-drop-title">Add a photo to your review: drag it here or <span>browse</span></p>
           <p class="frm-drop-sub">PNG or JPG up to 5MB</p>
         </div>
-        <div class="frm-filelist">
-          <div class="frm-fileitem"><span class="frm-file-ico">JPG</span><span class="frm-file-name">july-remarkable-rocks.jpg</span><span class="frm-file-meta">1.2 MB</span><button class="frm-file-x" aria-label="Remove">✕</button></div>
-          <div class="frm-fileitem"><span class="frm-file-ico">JPG</span><span class="frm-file-name">release-night.jpg</span><span class="frm-file-meta">840 KB</span><button class="frm-file-x" aria-label="Remove">✕</button></div>
+        <div class="frm-filelist" id="frm-filelist">
+          <div class="frm-fileitem"><span class="frm-file-ico">JPG</span><span class="frm-file-name">july-remarkable-rocks.jpg</span><span class="frm-file-meta">1.2 MB</span><button type="button" class="frm-file-x" aria-label="Remove july-remarkable-rocks.jpg">✕</button></div>
+          <div class="frm-fileitem"><span class="frm-file-ico">JPG</span><span class="frm-file-name">release-night.jpg</span><span class="frm-file-meta">840 KB</span><button type="button" class="frm-file-x" aria-label="Remove release-night.jpg">✕</button></div>
         </div>
+        <button type="button" class="frm-file-restore" id="frm-file-restore" hidden>Files removed: restore the demo files</button>
       </div>
     </article>
 
@@ -236,103 +237,161 @@
     .sgx-preview { position:relative; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-3); padding:30px 24px 24px; overflow:hidden; }
     .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:var(--font-eyebrow); font-size:9px; letter-spacing:.1em; color:var(--border-3); }
 
-    /* Shared field atoms */
-    .frm-field { display:flex; flex-direction:column; gap:6px; }
-    .frm-field label { font-family:var(--font-ui); font-size:12px; letter-spacing:.04em; color:var(--text-3); display:flex; justify-content:space-between; gap:8px; }
+    /* Shared focus finish for the clickable chrome. Fields ring with a soft
+       accent halo instead (below); buttons and links use the ring token. */
+    .tb-demo button:focus-visible, .tb-demo a:focus-visible {
+      outline: var(--focus-ring); outline-offset: var(--focus-offset);
+    }
+
+    /* Shared field atoms: one height, one radius, one focus treatment. */
+    .frm-field { display:flex; flex-direction:column; gap:7px; }
+    .frm-field label { font-family:var(--font-eyebrow); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-3); display:flex; justify-content:space-between; align-items:baseline; gap:8px; }
     .frm-field input[type=text], .frm-field input[type=email], .frm-field textarea, .frm-select select {
-      width:100%; font-family:var(--font-body); font-size:14px; color:var(--text);
-      background:var(--bg-card); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-sm); padding:10px 12px;
+      width:100%; min-height:46px; font-family:var(--font-body); font-size:14px; color:var(--text);
+      background:var(--bg-card); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-sm); padding:11px 14px;
+      transition: border-color .2s ease, box-shadow .2s ease;
     }
     .frm-field textarea { resize:vertical; }
     .frm-field input::placeholder, .frm-field textarea::placeholder,
     .frm-ac-input input::placeholder, .frm-wiz-panel input::placeholder { color:var(--text-4); }
-    .frm-field input:focus, .frm-field textarea:focus, .frm-select select:focus { outline:none; border-color:var(--accent); }
+    .frm-field input:hover:not(:disabled), .frm-field textarea:hover, .frm-select select:hover { border-color:var(--border-3); }
+    .frm-field input:focus, .frm-field textarea:focus, .frm-select select:focus { outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-faint); }
     .frm-help { font-family:var(--font-body); font-size:12px; color:var(--text-4); }
-    .frm-err { font-family:var(--font-body); font-size:12px; color:var(--err); }
-    .frm-field.is-error input { border-color:var(--err); }
-    .frm-field.is-disabled { opacity:.55; }
+    .frm-err { font-family:var(--font-body); font-size:12px; font-weight:500; color:var(--err); display:flex; align-items:center; gap:6px; }
+    .frm-err::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--err); flex-shrink:0; }
+    .frm-field.is-error input { border-color:var(--err); background:color-mix(in srgb, var(--err-wash) 45%, var(--bg-card)); }
+    .frm-field.is-error input:focus { border-color:var(--err); box-shadow:0 0 0 3px var(--err-faint); }
+    .frm-field.is-disabled label, .frm-field.is-disabled .frm-help { color:var(--text-4); }
+    .frm-field input:disabled { background:var(--disabled-surface); color:var(--disabled-ink); border-color:var(--disabled-border); cursor:not-allowed; }
     .frm-select { position:relative; }
-    .frm-select select { appearance:none; padding-right:30px; cursor:pointer; }
-    .frm-select-caret { position:absolute; right:12px; top:50%; transform:translateY(-50%); color:var(--accent); font-size:10px; pointer-events:none; }
-    .frm-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .frm-select select { appearance:none; padding-right:34px; cursor:pointer; }
+    .frm-select-caret { position:absolute; right:14px; top:50%; transform:translateY(-50%); color:var(--accent); font-size:10px; pointer-events:none; }
+    .frm-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
     .frm-col-2 { grid-column:1 / -1; }
 
-    /* 02: Choices */
-    .frm-choices { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-    .frm-choice-col { display:flex; flex-direction:column; gap:12px; }
-    .frm-choice-label { font-family:var(--font-eyebrow); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--text-4); }
-    .frm-check { display:flex; align-items:center; gap:9px; font-family:var(--font-body); font-size:14px; color:var(--text-2); cursor:pointer; }
-    .frm-check input { accent-color:var(--accent); width:16px; height:16px; }
-    .frm-toggle { display:flex; align-items:center; gap:10px; cursor:pointer; font-family:var(--font-body); font-size:14px; color:var(--text-2); }
-    .frm-toggle input { position:absolute; opacity:0; pointer-events:none; }
-    .frm-toggle-track { position:relative; width:38px; height:22px; border-radius:var(--radius-pill); background:var(--border-2); transition:background .2s ease; flex-shrink:0; }
-    .frm-toggle-track::after { content:''; position:absolute; top:2px; left:2px; width:18px; height:18px; border-radius:50%; background:var(--accent-ink); transition:transform .2s ease; }
+    /* 02: Choices. The native controls are visually replaced with drawn,
+       token-coloured ones; the real inputs stay in the tree (hidden but
+       focusable) so keyboard, forms and the checked mechanics still work. */
+    .frm-choices { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .frm-choice-col { display:flex; flex-direction:column; gap:6px; }
+    .frm-choice-label { font-family:var(--font-eyebrow); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-4); margin-bottom:6px; }
+    .frm-check { position:relative; display:flex; align-items:center; gap:11px; font-family:var(--font-body); font-size:14px; color:var(--text-2); cursor:pointer; padding:6px 0; min-height:34px; box-sizing:border-box; }
+    .frm-check input { position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:pointer; }
+    .frm-check::before { content:''; width:20px; height:20px; flex-shrink:0; border-radius:var(--radius-sm); border:var(--line-weight) solid var(--border-2); background:var(--bg-card); transition:background .2s ease, border-color .2s ease; }
+    .frm-check::after { content:'✓'; position:absolute; left:0; top:50%; width:20px; margin-top:-8px; text-align:center; font-size:12px; font-weight:700; line-height:16px; color:var(--accent-ink); transform:scale(0); transition:transform .18s ease; }
+    .frm-check:hover::before { border-color:var(--accent); }
+    .frm-check:has(input:checked)::before { background:var(--accent); border-color:var(--accent); }
+    .frm-check:has(input:checked)::after { transform:scale(1); }
+    .frm-check:has(input:focus-visible)::before { outline:var(--focus-ring); outline-offset:var(--focus-offset); }
+    .frm-check:has(input[type=radio])::before { border-radius:50%; }
+    .frm-check:has(input[type=radio])::after { content:''; left:6px; width:8px; height:8px; margin-top:-4px; border-radius:50%; background:var(--accent-ink); }
+    .frm-toggle { position:relative; display:flex; align-items:center; gap:12px; cursor:pointer; font-family:var(--font-body); font-size:14px; color:var(--text-2); padding:6px 0; min-height:34px; box-sizing:border-box; }
+    .frm-toggle input { position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:pointer; }
+    .frm-toggle-track { position:relative; width:44px; height:24px; border-radius:var(--radius-pill); background:var(--border-2); transition:background .2s ease; flex-shrink:0; }
+    .frm-toggle-track::after { content:''; position:absolute; top:3px; left:3px; width:18px; height:18px; border-radius:50%; background:var(--text); transition:transform .2s ease, background .2s ease; }
+    .frm-toggle:hover .frm-toggle-track { background:color-mix(in srgb, var(--border-2) 75%, var(--text-3)); }
     .frm-toggle input:checked + .frm-toggle-track { background:var(--accent); }
-    .frm-toggle input:checked + .frm-toggle-track::after { transform:translateX(16px); }
+    .frm-toggle:hover input:checked + .frm-toggle-track { background:var(--accent-hover); }
+    .frm-toggle input:checked + .frm-toggle-track::after { transform:translateX(20px); background:var(--accent-ink); }
+    .frm-toggle:has(input:focus-visible) .frm-toggle-track { outline:var(--focus-ring); outline-offset:var(--focus-offset); }
 
     /* 03: Range & number */
     .frm-ranges { display:grid; grid-template-columns:2fr 1fr; gap:24px; align-items:start; }
-    .frm-range-out { color:var(--accent); }
-    .frm-range { width:100%; accent-color:var(--accent); }
-    .frm-stepper { display:flex; align-items:center; }
-    .frm-stepper button { width:38px; height:38px; cursor:pointer; font-size:16px; background:var(--bg-card); border:var(--line-weight) solid var(--border-2); color:var(--text-2); }
-    .frm-stepper button:first-child { border-radius:var(--radius-sm) 0 0 var(--radius-sm); }
-    .frm-stepper button:last-child { border-radius:0 var(--radius-sm) var(--radius-sm) 0; }
-    .frm-stepper button:hover { border-color:var(--accent); color:var(--accent); }
-    .frm-stepper input { width:52px; height:38px; text-align:center; font-family:var(--font-ui); font-size:14px; color:var(--text); background:var(--bg-card); border:var(--line-weight) solid var(--border-2); border-left:none; border-right:none; }
+    .frm-range-out { font-family:var(--font-ui); font-size:11px; letter-spacing:.03em; text-transform:none; color:var(--accent); background:var(--accent-faint); padding:4px 12px; border-radius:var(--radius-pill); }
+    /* A custom track: the filled part rides --fill (default matches value 3
+       of 7), and the thumb is a full moon in the accent. */
+    .frm-range { -webkit-appearance:none; appearance:none; width:100%; height:24px; margin:8px 0 0; background:transparent; cursor:pointer; --fill:43%; }
+    .frm-range:focus { outline:none; }
+    .frm-range::-webkit-slider-runnable-track { height:6px; border-radius:var(--radius-pill); background:linear-gradient(to right, var(--accent) var(--fill), var(--track) var(--fill)); }
+    .frm-range::-webkit-slider-thumb { -webkit-appearance:none; width:20px; height:20px; margin-top:-7px; border-radius:50%; border:none; background:var(--accent); box-shadow:0 0 0 3px var(--bg-2); transition:box-shadow .2s ease; }
+    .frm-range:hover::-webkit-slider-thumb { box-shadow:0 0 0 3px var(--bg-2), 0 0 0 7px var(--accent-faint); }
+    .frm-range:focus-visible::-webkit-slider-thumb { box-shadow:0 0 0 3px var(--bg-2), 0 0 0 8px var(--accent-faint); }
+    .frm-range::-moz-range-track { height:6px; border-radius:var(--radius-pill); background:var(--track); }
+    .frm-range::-moz-range-progress { height:6px; border-radius:var(--radius-pill); background:var(--accent); }
+    .frm-range::-moz-range-thumb { width:20px; height:20px; border:none; border-radius:50%; background:var(--accent); box-shadow:0 0 0 3px var(--bg-2); }
+    .frm-stepper { display:inline-flex; align-items:center; background:var(--bg-card); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-btn); overflow:hidden; transition:border-color .2s ease; }
+    .frm-stepper:hover { border-color:var(--border-3); }
+    .frm-stepper button { width:46px; height:46px; cursor:pointer; font-size:17px; line-height:1; background:transparent; border:none; color:var(--text-2); transition:background .15s ease, color .15s ease; }
+    .frm-stepper button:hover { background:var(--accent-faint); color:var(--accent); }
+    .frm-field .frm-stepper input[type=text] { width:48px; min-height:46px; height:46px; text-align:center; font-family:var(--font-ui); font-size:15px; color:var(--text); background:transparent; border:none; border-radius:0; padding:0; box-shadow:none; }
 
     /* 04: Autocomplete */
-    .frm-ac { max-width:380px; }
+    .frm-ac { max-width:400px; }
     .frm-ac-input { position:relative; }
-    .frm-ac-icon { position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--text-4); }
-    .frm-ac-input input { width:100%; font-family:var(--font-body); font-size:14px; color:var(--text); background:var(--bg-card); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-sm); padding:10px 12px 10px 32px; }
-    .frm-ac-input input:focus { outline:none; border-color:var(--accent); }
-    .frm-ac-list { list-style:none; margin:8px 0 0; padding:6px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); }
-    .frm-ac-list li { font-family:var(--font-body); font-size:14px; color:var(--text-2); padding:8px 10px; border-radius:var(--radius-sm); cursor:pointer; }
-    .frm-ac-list li:hover { background:var(--bg-3); color:var(--accent); }
+    .frm-ac-icon { position:absolute; left:15px; top:50%; transform:translateY(-50%); color:var(--text-4); font-size:15px; pointer-events:none; }
+    .frm-ac-input input { width:100%; min-height:46px; font-family:var(--font-body); font-size:14px; color:var(--text); background:var(--bg-card); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-btn); padding:11px 16px 11px 38px; transition:border-color .2s ease, box-shadow .2s ease; }
+    .frm-ac-input input:hover { border-color:var(--border-3); }
+    .frm-ac-input input:focus { outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-faint); }
+    .frm-ac-list { list-style:none; margin:10px 0 0; padding:8px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); box-shadow:var(--shadow-overlay); }
+    .frm-ac-list li { font-family:var(--font-body); font-size:14px; color:var(--text-2); padding:11px 12px; border-radius:var(--radius-sm); cursor:pointer; transition:background .15s ease, color .15s ease; }
+    .frm-ac-list li + li { margin-top:2px; }
+    .frm-ac-list li:hover { background:var(--accent-wash); color:var(--text); }
+    .frm-ac-list li:active { background:var(--accent-wash-2); }
 
-    /* 05: Wizard */
-    .frm-wizard { max-width:460px; }
-    .frm-wiz-bar { height:4px; background:var(--border); border-radius:var(--radius-pill); overflow:hidden; }
-    .frm-wiz-fill { display:block; height:100%; background:var(--accent); transition:width .25s ease; }
-    .frm-wiz-count { display:block; font-family:var(--font-ui); font-size:12px; color:var(--text-4); margin:10px 0 16px; }
-    .frm-wiz-panel { display:flex; flex-direction:column; gap:8px; margin-bottom:18px; }
-    .frm-wiz-panel label { font-family:var(--font-display); font-size:16px; font-weight:600; color:var(--text); }
-    .frm-wiz-panel input { font-family:var(--font-body); font-size:14px; color:var(--text); background:var(--bg-card); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-sm); padding:10px 12px; }
-    .frm-wiz-panel input:focus { outline:none; border-color:var(--accent); }
-    .frm-wiz-done { font-family:var(--font-body); font-size:14px; color:var(--text-3); margin:0; }
+    /* 05: Wizard. The progress fill carries a small moon that rides the
+       line as the steps advance. */
+    .frm-wizard { max-width:480px; background:var(--bg-card); border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); padding:26px 28px 28px; }
+    .frm-wiz-bar { height:6px; background:var(--track); border-radius:var(--radius-pill); position:relative; margin:8px 0 0; }
+    .frm-wiz-fill { display:block; height:100%; background:var(--accent); border-radius:var(--radius-pill); transition:width .3s ease; position:relative; }
+    .frm-wiz-fill::after { content:''; position:absolute; right:0; top:50%; transform:translate(50%,-50%); width:16px; height:16px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--accent-faint); }
+    .frm-wiz-count { display:block; font-family:var(--font-eyebrow); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-4); margin:16px 0 18px; }
+    .frm-wiz-panel { display:flex; flex-direction:column; gap:10px; margin-bottom:20px; }
+    .frm-wiz-panel:not([hidden]) { animation:frm-in .25s ease both; }
+    .frm-wiz-panel label { font-family:var(--font-display); font-size:20px; font-weight:var(--heading-weight); letter-spacing:var(--heading-tracking); color:var(--text); }
+    .frm-wiz-panel input { min-height:46px; font-family:var(--font-body); font-size:14px; color:var(--text); background:var(--bg-card); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-sm); padding:11px 14px; transition:border-color .2s ease, box-shadow .2s ease; }
+    .frm-wiz-panel input:hover { border-color:var(--border-3); }
+    .frm-wiz-panel input:focus { outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-faint); }
+    .frm-wiz-done { font-family:var(--font-body); font-size:14px; line-height:1.6; color:var(--text-3); margin:0; }
     .frm-wiz-actions { display:flex; justify-content:space-between; gap:12px; }
+    @keyframes frm-in { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
 
     /* shared buttons */
-    .frm-btn-pri { font-family:var(--font-ui); font-size:13px; font-weight:600; cursor:pointer; color:var(--accent-ink); background:var(--accent); border:none; border-radius:var(--radius-btn); padding:10px 20px; }
-    .frm-btn-sec { font-family:var(--font-ui); font-size:13px; cursor:pointer; color:var(--text-2); background:transparent; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-btn); padding:10px 20px; }
+    .frm-btn-pri { font-family:var(--font-ui); font-size:13px; font-weight:var(--button-weight); letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; color:var(--accent-ink); background:var(--accent); border:var(--line-weight) solid var(--accent); border-radius:var(--radius-btn); padding:12px 24px; min-height:46px; transition:background .2s ease, border-color .2s ease; }
+    .frm-btn-pri:hover { background:var(--accent-hover); border-color:var(--accent-hover); }
+    .frm-btn-sec { font-family:var(--font-ui); font-size:13px; letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; color:var(--text-2); background:transparent; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-btn); padding:12px 24px; min-height:46px; transition:border-color .2s ease, color .2s ease; }
     .frm-btn-sec:hover:not(:disabled) { border-color:var(--accent); color:var(--accent); }
-    .frm-btn-sec:disabled { opacity:.4; cursor:default; }
+    .frm-btn-sec:disabled { background:var(--disabled-surface); color:var(--disabled-ink); border-color:var(--disabled-border); cursor:not-allowed; }
 
     /* 06: Dropzone */
-    .frm-drop { display:flex; flex-direction:column; align-items:center; gap:6px; text-align:center; padding:30px; border:1.5px dashed var(--border-3); border-radius:var(--radius-card); background:var(--bg-card); }
-    .frm-drop-icon { font-size:26px; color:var(--accent); }
-    .frm-drop-title { font-family:var(--font-body); font-size:15px; color:var(--text); margin:0; }
-    .frm-drop-title span { color:var(--accent); text-decoration:underline; cursor:pointer; }
+    .frm-drop { display:flex; flex-direction:column; align-items:center; gap:8px; text-align:center; padding:36px 30px; border:var(--line-weight) dashed var(--accent-line); border-radius:var(--radius-card); background:var(--accent-wash); transition:border-color .2s ease, background .2s ease; }
+    .frm-drop:hover { border-color:var(--accent); background:color-mix(in srgb, var(--accent-wash-2) 40%, var(--accent-wash)); }
+    .frm-drop-icon { width:48px; height:48px; display:grid; place-items:center; border-radius:50%; background:var(--accent-faint); color:var(--accent); font-size:20px; transition:transform .25s ease; }
+    .frm-drop:hover .frm-drop-icon { transform:translateY(-3px); }
+    .frm-drop-title { font-family:var(--font-body); font-size:15px; color:var(--text); margin:4px 0 0; }
+    .frm-drop-title span { color:var(--accent); font-weight:500; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
     .frm-drop-sub { font-family:var(--font-ui); font-size:12px; color:var(--text-4); margin:0; }
     .frm-filelist { display:flex; flex-direction:column; gap:8px; margin-top:14px; }
-    .frm-fileitem { display:flex; align-items:center; gap:12px; padding:10px 12px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-sm); background:var(--bg-card); }
-    .frm-file-ico { font-family:var(--font-ui); font-size:10px; color:var(--accent); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-sm); padding:3px 6px; }
+    .frm-fileitem { display:flex; align-items:center; gap:12px; padding:9px 10px 9px 14px; border:var(--line-weight) solid var(--border); border-radius:var(--radius); background:var(--bg-card); transition:border-color .2s ease; }
+    .frm-fileitem:hover { border-color:var(--accent-line); }
+    .frm-file-ico { font-family:var(--font-ui); font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--accent); background:var(--accent-faint); border-radius:var(--radius-sm); padding:4px 7px; }
     .frm-file-name { font-family:var(--font-body); font-size:14px; color:var(--text-2); flex:1; min-width:0; }
     .frm-file-meta { font-family:var(--font-ui); font-size:11px; color:var(--text-4); }
-    .frm-file-x { background:none; border:none; color:var(--text-4); cursor:pointer; font-size:13px; }
-    .frm-file-x:hover { color:var(--err); }
+    .frm-file-x { width:36px; height:36px; display:grid; place-items:center; background:none; border:none; border-radius:50%; color:var(--text-4); cursor:pointer; font-size:13px; line-height:1; transition:background .15s ease, color .15s ease; }
+    .frm-file-x:hover { background:var(--err-faint); color:var(--err); }
+    .frm-file-restore { background:none; border:none; font-family:var(--font-ui); font-size:12px; color:var(--accent); cursor:pointer; text-decoration:underline; text-underline-offset:3px; padding:8px 0; margin-top:8px; transition:color .15s ease; }
+    .frm-file-restore:hover { color:var(--accent-hover); }
 
-    /* 07: Cookie */
-    .frm-cookie { display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; padding:16px 18px; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg-2); }
-    .frm-cookie-text { font-family:var(--font-body); font-size:13px; color:var(--text-3); margin:0; }
-    .frm-cookie-text a { color:var(--accent); }
+    /* 07: Cookie. A floating card that slides in once, with a small
+       crescent standing in for the cookie. */
+    .frm-cookie { position:relative; max-width:660px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; padding:18px 22px; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg-card); box-shadow:var(--shadow-overlay); animation:cookie-in .45s ease both; }
+    .frm-cookie::before { content:''; width:34px; height:34px; flex-shrink:0; border-radius:50%; background:radial-gradient(circle at 70% 28%, var(--bg-card) 0 52%, var(--accent-light) 53%); }
+    .frm-cookie-text { flex:1 1 240px; font-family:var(--font-body); font-size:13.5px; line-height:1.55; color:var(--text-2); margin:0; }
+    .frm-cookie-text a { color:var(--accent); text-decoration:underline; text-underline-offset:3px; transition:color .15s ease; }
+    .frm-cookie-text a:hover { color:var(--accent-hover); }
     .frm-cookie-actions { display:flex; gap:10px; }
     .frm-cookie-reset { font-family:var(--font-ui); font-size:12px; color:var(--text-4); margin:12px 0 0; }
-    .frm-cookie-reset button { background:none; border:none; color:var(--accent); cursor:pointer; font:inherit; text-decoration:underline; }
+    .frm-cookie-reset button { background:none; border:none; color:var(--accent); cursor:pointer; font:inherit; text-decoration:underline; text-underline-offset:3px; padding:8px 4px; }
+    @keyframes cookie-in { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
 
     @media (max-width: 768px) {
       .frm-grid, .frm-choices, .frm-ranges { grid-template-columns:1fr; }
+    }
+
+    /* Motion is a finish, never a requirement. */
+    @media (prefers-reduced-motion: reduce) {
+      .tb-demo *, .tb-demo *::before, .tb-demo *::after {
+        animation:none !important; transition:none !important;
+      }
     }
   </style>
   <script>
@@ -344,6 +403,7 @@
         range.addEventListener('input', function () {
           const v = parseInt(range.value, 10);
           out.textContent = v === 0 ? 'On the day' : v === 1 ? '1 day before' : v + ' days before';
+          range.style.setProperty('--fill', (v / 7) * 100 + '%');
         });
       }
       const num = document.querySelector('#frm-num');
@@ -362,6 +422,14 @@
           const q = ac.value.trim().toLowerCase();
           acList.querySelectorAll('li').forEach(function (li) {
             li.hidden = q !== '' && li.getAttribute('data-name').indexOf(q) === -1;
+          });
+        });
+        // Clicking a suggestion fills the field and collapses the list to it.
+        acList.querySelectorAll('li').forEach(function (li) {
+          li.addEventListener('click', function () {
+            ac.value = li.textContent.trim();
+            acList.querySelectorAll('li').forEach(function (other) { other.hidden = other !== li; });
+            ac.focus();
           });
         });
       }
@@ -383,6 +451,27 @@
         };
         next.addEventListener('click', function () { if (step < total - 1) { step++; render(); } });
         back.addEventListener('click', function () { if (step > 0) { step--; render(); } });
+      }
+
+      // T205: File list removal, with a restore so the demo repeats
+      const fileList = document.querySelector('#frm-filelist');
+      const fileRestore = document.querySelector('#frm-file-restore');
+      if (fileList) {
+        const syncRestore = function () {
+          const left = fileList.querySelectorAll('.frm-fileitem:not([hidden])').length;
+          if (fileRestore) fileRestore.hidden = left !== 0;
+        };
+        fileList.querySelectorAll('.frm-file-x').forEach(function (x) {
+          x.addEventListener('click', function () {
+            const item = x.closest('.frm-fileitem');
+            if (item) item.hidden = true;
+            syncRestore();
+          });
+        });
+        fileRestore?.addEventListener('click', function () {
+          fileList.querySelectorAll('.frm-fileitem').forEach(function (item) { item.hidden = false; });
+          syncRestore();
+        });
       }
 
       // T206: Cookie consent

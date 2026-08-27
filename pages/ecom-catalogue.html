@@ -29,6 +29,7 @@
       </header>
       <div class="tb-demo">
         <section class="plp-hero">
+          <span class="plp-hero-moon" aria-hidden="true"></span>
           <nav class="plp-crumbs" aria-label="Breadcrumb">
             <ol>
               <li><a href="#T311">Home</a></li>
@@ -112,7 +113,7 @@
           </li>
           <li>
             <article class="plp-card">
-              <a class="plp-thumb" href="#T308" style="background:linear-gradient(135deg,var(--wash-1b),var(--wash-3b))" aria-label="April card: full moon over Uluru">
+              <a class="plp-thumb plp-thumb-night" href="#T308" aria-label="April card: full moon over Uluru">
                 <span class="plp-mark" aria-hidden="true">Apr</span>
               </a>
               <div class="plp-card-body">
@@ -738,9 +739,7 @@
       </header>
       <div class="tb-demo">
         <section class="plp-empty">
-          <span class="plp-empty-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 10.5h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </span>
+          <span class="plp-empty-moon" aria-hidden="true"></span>
           <h3 class="plp-empty-title">No cards match those filters</h3>
           <p class="plp-empty-copy">There's no summer full moon over the Tasmanian coast in the 2027 deck. Cradle Mountain's card falls in June. Try fewer filters and the cards come back.</p>
           <ul class="plp-chips plp-chips-suggest" id="plp-empty-chips" aria-label="Filters you can remove">
@@ -764,7 +763,7 @@
         <span class="tb-tid">T311</span>
         <div>
           <h2>Category tiles</h2>
-          <p>The shop landing grid: one tile per collection on a wash background, with a label and an item count.</p>
+          <p>The shop landing grid: one tile per collection on a wash background, with a label, an item count and one solid accent anchor tile.</p>
         </div>
       </header>
       <div class="tb-demo">
@@ -818,8 +817,8 @@
             </a>
           </li>
           <li>
-            <a class="plp-tile" href="#T300" style="background:linear-gradient(135deg,var(--wash-2b),var(--wash-2a))">
-              <span class="plp-tile-scrim"></span>
+            <a class="plp-tile plp-tile-night" href="#T300">
+              <span class="plp-tile-moon" aria-hidden="true"></span>
               <span class="plp-tile-text">
                 <span class="plp-tile-name">The boxed set</span>
                 <span class="plp-tile-count">12 cards</span>
@@ -952,16 +951,19 @@
       border-radius: var(--radius-btn, var(--radius-sm));
       cursor: pointer;
       text-decoration: none;
+      transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
     }
     .plp-btn:hover,
     .plp-add:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+    .plp-btn:active,
+    .plp-add:active { transform: translateY(1px); }
     .plp-btn:focus-visible,
     .plp-add:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
     .plp-add { width: 100%; }
     .plp-add[disabled] {
-      background: var(--bg-3);
-      border-color: var(--border-2);
-      color: var(--text-4);
+      background: var(--disabled-surface);
+      border-color: var(--disabled-border);
+      color: var(--disabled-ink);
       cursor: not-allowed;
     }
     .plp-add.is-added { background: var(--ok); border-color: var(--ok); color: var(--status-ink); }
@@ -984,8 +986,10 @@
       border: var(--line-weight) solid var(--border-2);
       border-radius: var(--radius-btn, var(--radius-sm));
       cursor: pointer;
+      transition: color .2s ease, border-color .2s ease, background .2s ease;
     }
-    .plp-btn-ghost:hover { color: var(--text); border-color: var(--border-3); }
+    .plp-btn-ghost:hover { color: var(--text); border-color: var(--border-3); background: var(--bg-3); }
+    .plp-btn-ghost:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
     .plp-linkbtn {
       min-height: 44px;
       padding: 0;
@@ -998,6 +1002,7 @@
       cursor: pointer;
       text-decoration: underline;
       text-underline-offset: 3px;
+      transition: color .15s ease;
     }
     .plp-linkbtn:hover { color: var(--text); }
     .plp-linkbtn:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
@@ -1011,34 +1016,92 @@
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-btn, var(--radius-sm));
       cursor: pointer;
+      transition: color .2s ease, border-color .2s ease, background .2s ease;
     }
-    .plp-iconbtn:hover { color: var(--text); border-color: var(--border-3); }
+    .plp-iconbtn:hover { color: var(--text); border-color: var(--border-3); background: var(--bg-3); }
     .plp-iconbtn:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
 
-    /* placeholder imagery */
+    /* placeholder imagery: each thumb reads as a miniature Moonrite card.
+       A small glowing moon disc sits high, a soft landmark arc rises from the
+       foot, and the month sits in the display face. All from tokens, so the
+       art re-inks per theme. */
     .plp-thumb,
     .plp-row-thumb,
     .plp-modal-media {
+      --plp-moonsz: 30px;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
     }
+    .plp-row-thumb { --plp-moonsz: 18px; }
+    .plp-modal-media { --plp-moonsz: 46px; }
+    .plp-thumb::before,
+    .plp-row-thumb::before,
+    .plp-modal-media::before {
+      content: "";
+      position: absolute;
+      top: 11%;
+      right: 12%;
+      width: var(--plp-moonsz);
+      height: var(--plp-moonsz);
+      border-radius: var(--radius-pill);
+      background: radial-gradient(circle at 35% 35%, var(--accent-light), color-mix(in srgb, var(--accent-light) 72%, var(--accent)));
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-light) 16%, transparent),
+                  0 0 14px color-mix(in srgb, var(--accent-light) 30%, transparent);
+      pointer-events: none;
+      transition: box-shadow .25s ease;
+    }
+    .plp-thumb::after,
+    .plp-row-thumb::after,
+    .plp-modal-media::after {
+      content: "";
+      position: absolute;
+      left: -28%;
+      top: 76%;
+      width: 156%;
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-pill);
+      background: color-mix(in srgb, var(--accent) 16%, transparent);
+      pointer-events: none;
+    }
     .plp-mark {
       font-family: var(--font-display);
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: color-mix(in srgb, var(--text) 28%, transparent);
+      font-size: 30px;
+      font-weight: var(--heading-weight);
+      letter-spacing: var(--heading-tracking);
+      color: color-mix(in srgb, var(--text) 62%, transparent);
+      transform: translateY(-8%);
     }
+    /* the anchor card: the accent night ground with the gold moon, echoing
+       the deck tiles elsewhere in the library */
+    .plp-thumb-night {
+      background: radial-gradient(120% 90% at 50% -10%, color-mix(in srgb, var(--accent-light) 14%, transparent), transparent 55%), var(--accent);
+    }
+    .plp-thumb-night .plp-mark { color: color-mix(in srgb, var(--accent-ink) 90%, transparent); }
+    .plp-thumb-night::after { background: color-mix(in srgb, var(--accent-ink) 12%, transparent); }
 
     /* ---- T300 Collection hero ---- */
     .plp-hero {
-      background: var(--accent-wash);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(150deg, var(--accent-wash) 0%, var(--bg-2) 70%);
       border: var(--line-weight) solid var(--accent-line);
       border-radius: var(--radius-card);
-      padding: 32px 30px;
+      padding: 36px 40px 44px;
+    }
+    .plp-hero-moon {
+      position: absolute;
+      top: 38px;
+      right: 44px;
+      width: 74px;
+      height: 74px;
+      border-radius: var(--radius-pill);
+      background: radial-gradient(circle at 35% 35%, var(--accent-light), color-mix(in srgb, var(--accent-light) 70%, var(--accent)));
+      box-shadow: 0 0 0 14px color-mix(in srgb, var(--accent-light) 12%, transparent),
+                  0 0 40px color-mix(in srgb, var(--accent-light) 30%, transparent);
+      pointer-events: none;
     }
     .plp-crumbs ol {
       display: flex;
@@ -1046,44 +1109,75 @@
       align-items: center;
       gap: 8px;
       list-style: none;
-      margin: 0 0 18px;
+      margin: 0 0 26px;
       padding: 0;
       font-family: var(--font-ui);
       font-size: 12px;
+      letter-spacing: 0.03em;
       color: var(--text-3);
     }
-    .plp-crumbs a { color: var(--text-3); text-decoration: none; }
-    .plp-crumbs a:hover { color: var(--accent); text-decoration: underline; }
-    .plp-crumbs [aria-current="page"] { color: var(--text); }
+    .plp-crumbs a {
+      color: var(--text-3);
+      text-decoration: none;
+      transition: color .15s ease;
+    }
+    .plp-crumbs a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    .plp-crumbs a:focus-visible { outline: var(--focus-ring); outline-offset: 3px; }
+    .plp-crumbs [aria-current="page"] { color: var(--text); font-weight: 600; }
     .plp-crumb-sep { display: inline-flex; color: var(--text-4); }
-    .plp-hero .eyebrow { margin-bottom: 8px; }
+    .plp-hero .eyebrow { position: relative; margin-bottom: 10px; }
     .plp-hero-title {
+      position: relative;
       font-family: var(--font-display);
-      font-size: clamp(28px, 4vw, 40px);
-      line-height: 1.1;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.05;
       color: var(--text);
-      margin: 0 0 12px;
+      margin: 0 0 14px;
     }
     .plp-hero-copy {
+      position: relative;
       font-family: var(--font-body);
       font-size: 15px;
       line-height: 1.65;
       color: var(--text-2);
-      max-width: 58ch;
-      margin: 0 0 18px;
+      max-width: 52ch;
+      margin: 0 0 22px;
     }
     .plp-hero-meta {
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-family: var(--font-ui);
       font-size: 12px;
       letter-spacing: 0.04em;
       color: var(--text-3);
       margin: 0;
     }
-    .plp-hero-count { color: var(--text); font-weight: 600; }
+    .plp-hero-count {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 13px;
+      color: var(--text);
+      font-weight: 600;
+      background: var(--accent-faint);
+      border: var(--line-weight) solid var(--accent-line);
+      border-radius: var(--radius-pill);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .plp-hero .eyebrow,
+      .plp-hero-title,
+      .plp-hero-copy,
+      .plp-hero-meta { animation: plp-rise .55s ease backwards; }
+      .plp-hero-title { animation-delay: .06s; }
+      .plp-hero-copy { animation-delay: .12s; }
+      .plp-hero-meta { animation-delay: .18s; }
+    }
+    @keyframes plp-rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
     /* ---- T301 / T302 / T308 product grid + cards ---- */
     .plp-grid {
@@ -1103,15 +1197,23 @@
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-card);
       overflow: hidden;
-      transition: border-color .2s ease, transform .2s ease;
+      transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
     }
-    .plp-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .plp-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-overlay);
+    }
+    .plp-card:hover .plp-thumb::before {
+      box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent-light) 24%, transparent),
+                  0 0 22px color-mix(in srgb, var(--accent-light) 45%, transparent);
+    }
     .plp-card .plp-thumb { aspect-ratio: 4 / 5; }
     .plp-card-body {
       display: flex;
       flex-direction: column;
       gap: 8px;
-      padding: 14px;
+      padding: 16px 16px 14px;
       flex: 1;
     }
     .plp-card-body .plp-add { margin-top: auto; }
@@ -1122,9 +1224,9 @@
       font-family: var(--font-ui);
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 5px 9px;
+      padding: 6px 11px;
       border-radius: var(--radius-pill);
       z-index: 2;
     }
@@ -1142,10 +1244,12 @@
       border-bottom: var(--line-weight) solid var(--border);
       padding: 8px 12px;
     }
-    .plp-card-out .plp-thumb { opacity: .6; }
+    .plp-card-out .plp-thumb { opacity: .55; filter: saturate(.25); }
+    .plp-card-out:hover { transform: none; box-shadow: none; border-color: var(--border-2); }
     .plp-out-veil {
       position: absolute;
       inset: 0;
+      z-index: 2;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1195,8 +1299,11 @@
       border: var(--line-weight) solid var(--border-2);
       border-radius: var(--radius-pill);
       cursor: pointer;
-      transition: opacity .18s ease, transform .18s ease;
+      z-index: 2;
+      box-shadow: var(--shadow-overlay);
+      transition: opacity .18s ease, transform .18s ease, border-color .18s ease;
     }
+    .plp-qv-open:hover { border-color: var(--accent); }
     .plp-card-hoverqv:hover .plp-qv-open,
     .plp-qv-open:focus-visible {
       opacity: 1;
@@ -1215,8 +1322,13 @@
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-card);
       padding: 16px;
+      transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
     }
-    .plp-row:hover { border-color: var(--accent); }
+    .plp-row:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-overlay);
+    }
     .plp-row-thumb {
       aspect-ratio: 1 / 1;
       border-radius: var(--radius);
@@ -1264,10 +1376,10 @@
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      background: var(--bg-card);
+      background: var(--bg-2);
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-card);
-      padding: 12px 16px;
+      padding: 12px 18px;
     }
     .plp-bar-count {
       font-family: var(--font-ui);
@@ -1294,11 +1406,13 @@
       font-family: var(--font-ui);
       font-size: 13px;
       color: var(--text);
-      background: var(--bg-3);
+      background: var(--bg-card);
       border: var(--line-weight) solid var(--border-2);
-      border-radius: var(--radius-sm);
+      border-radius: var(--radius-btn, var(--radius-sm));
       cursor: pointer;
+      transition: border-color .2s ease;
     }
+    .plp-select:hover { border-color: var(--accent); }
     .plp-select:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
     .plp-select-chev {
       position: absolute;
@@ -1308,6 +1422,7 @@
     }
     .plp-viewtoggle {
       display: inline-flex;
+      background: var(--bg-card);
       border: var(--line-weight) solid var(--border-2);
       border-radius: var(--radius-btn, var(--radius-sm));
       overflow: hidden;
@@ -1322,9 +1437,10 @@
       background: transparent;
       border: 0;
       cursor: pointer;
+      transition: color .2s ease, background .2s ease;
     }
     .plp-viewbtn + .plp-viewbtn { border-left: var(--line-weight) solid var(--border-2); }
-    .plp-viewbtn:hover { color: var(--text); }
+    .plp-viewbtn:hover { color: var(--text); background: var(--accent-faint); }
     .plp-viewbtn[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
     .plp-viewbtn:focus-visible { outline: var(--focus-ring); outline-offset: -2px; }
 
@@ -1350,7 +1466,7 @@
       background: var(--bg-card);
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-card);
-      padding: 6px 16px 16px;
+      padding: 8px 18px 18px;
     }
     .plp-rail-head {
       display: flex;
@@ -1361,7 +1477,8 @@
     }
     .plp-rail-title {
       font-family: var(--font-display);
-      font-size: 16px;
+      font-size: 21px;
+      font-weight: var(--heading-weight);
       color: var(--text);
       margin: 0;
     }
@@ -1388,10 +1505,13 @@
       color: var(--text);
       cursor: pointer;
       list-style: none;
+      transition: color .15s ease;
     }
+    .plp-facet > summary:hover { color: var(--accent); }
+    .plp-facet > summary:hover .plp-chev { color: var(--accent); }
     .plp-facet > summary::-webkit-details-marker { display: none; }
     .plp-facet > summary:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
-    .plp-chev { color: var(--text-3); transition: transform .18s ease; flex: none; }
+    .plp-chev { color: var(--text-3); transition: transform .18s ease, color .15s ease; flex: none; }
     .plp-facet[open] > summary .plp-chev { transform: rotate(180deg); }
     .plp-facet-body { display: flex; flex-direction: column; gap: 2px; padding: 2px 0 14px; }
     .plp-facet-hint {
@@ -1405,12 +1525,16 @@
       align-items: center;
       gap: 10px;
       min-height: 44px;
+      padding: 0 8px;
+      margin: 0 -8px;
+      border-radius: var(--radius-sm);
       font-family: var(--font-body);
       font-size: 14px;
       color: var(--text-2);
       cursor: pointer;
+      transition: color .15s ease, background .15s ease;
     }
-    .plp-check:hover { color: var(--text); }
+    .plp-check:hover { color: var(--text); background: var(--bg-2); }
     .plp-check input {
       width: 18px; height: 18px;
       accent-color: var(--accent);
@@ -1419,7 +1543,16 @@
     }
     .plp-check input:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
     .plp-check-name { flex: 1; min-width: 0; }
-    .plp-count { font-family: var(--font-ui); font-size: 12px; color: var(--text-4); }
+    .plp-count {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      color: var(--text-4);
+      background: var(--bg-2);
+      border-radius: var(--radius-pill);
+      padding: 2px 9px;
+      font-variant-numeric: tabular-nums;
+    }
+    .plp-check:hover .plp-count { background: var(--bg-3); }
     .plp-swatches { flex-direction: row; flex-wrap: wrap; gap: 8px; }
     .plp-swatch {
       display: inline-flex;
@@ -1434,6 +1567,7 @@
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-pill);
       cursor: pointer;
+      transition: color .15s ease, border-color .15s ease, background .15s ease;
     }
     .plp-swatch:hover { border-color: var(--border-3); color: var(--text); }
     .plp-swatch-dot {
@@ -1469,7 +1603,9 @@
       font-family: var(--font-ui);
       font-size: 13px;
       color: var(--text-3);
+      transition: border-color .2s ease;
     }
+    .plp-money-field:hover { border-color: var(--border-3); }
     .plp-money-field:focus-within { border-color: var(--accent); }
     .plp-money-field input {
       width: 100%;
@@ -1503,8 +1639,9 @@
       border: var(--line-weight) solid var(--border-2);
       border-radius: var(--radius-btn, var(--radius-sm));
       cursor: pointer;
+      transition: border-color .2s ease, background .2s ease;
     }
-    .plp-filterbtn:hover { border-color: var(--accent); }
+    .plp-filterbtn:hover { border-color: var(--accent); background: var(--accent-faint); }
     .plp-filterbtn:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
     .plp-filterbtn-count {
       display: inline-flex;
@@ -1530,9 +1667,11 @@
       border: 0;
       border-left: var(--line-weight) solid var(--border-2);
       color: var(--text);
+      box-shadow: var(--shadow-overlay);
     }
     .plp-drawer::backdrop { background: var(--scrim); }
-    .plp-drawer[open] { animation: plp-slide-in .22s ease-out; }
+    .plp-drawer[open] { animation: plp-slide-in .24s ease-out; }
+    .plp-drawer[open]::backdrop { animation: plp-fade-in .24s ease-out; }
     .plp-drawer-form { display: flex; flex-direction: column; height: 100%; }
     .plp-drawer-head {
       display: flex;
@@ -1557,6 +1696,10 @@
     @keyframes plp-slide-in {
       from { transform: translateX(100%); }
       to { transform: translateX(0); }
+    }
+    @keyframes plp-fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     /* ---- T307 Active filter chips ---- */
@@ -1584,12 +1727,15 @@
       gap: 2px;
       font-family: var(--font-ui);
       font-size: 12px;
+      font-weight: 500;
       color: var(--text);
       background: var(--accent-faint);
       border: var(--line-weight) solid var(--accent-line);
       border-radius: var(--radius-pill);
-      padding-left: 12px;
+      padding-left: 13px;
+      transition: border-color .2s ease, background .2s ease;
     }
+    .plp-chip:hover { border-color: var(--accent); }
     .plp-chip-x {
       display: inline-flex;
       align-items: center;
@@ -1603,8 +1749,9 @@
       border: 0;
       border-radius: var(--radius-pill);
       cursor: pointer;
+      transition: color .15s ease, background .15s ease;
     }
-    .plp-chip-x:hover { color: var(--err); }
+    .plp-chip-x:hover { color: var(--err); background: var(--err-faint); }
     .plp-chip-x:focus-visible { outline: var(--focus-ring); outline-offset: 1px; }
     .plp-chips-restore { margin-top: 10px; }
 
@@ -1618,17 +1765,26 @@
       border-radius: var(--radius-card);
       color: var(--text);
       overflow: visible;
+      box-shadow: var(--shadow-overlay);
     }
     .plp-modal::backdrop { background: var(--scrim); }
+    @media (prefers-reduced-motion: no-preference) {
+      .plp-modal[open] { animation: plp-pop-in .24s ease-out; }
+      .plp-modal[open]::backdrop { animation: plp-fade-in .24s ease-out; }
+    }
+    @keyframes plp-pop-in {
+      from { opacity: 0; transform: translateY(10px) scale(.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
     .plp-modal-x { position: absolute; top: 10px; right: 10px; background: var(--bg-2); z-index: 3; }
     .plp-modal-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
     .plp-modal-media {
-      aspect-ratio: 4 / 5;
+      min-height: 100%;
       border-radius: var(--radius-card) 0 0 var(--radius-card);
     }
     .plp-modal-media .plp-mark { font-size: 40px; }
-    .plp-modal-detail { display: flex; flex-direction: column; gap: 12px; padding: 26px 24px; }
-    .plp-modal-title { font-family: var(--font-display); font-size: 22px; color: var(--text); margin: 0; }
+    .plp-modal-detail { display: flex; flex-direction: column; gap: 12px; padding: 28px 26px; }
+    .plp-modal-title { font-family: var(--font-display); font-size: 27px; line-height: 1.1; color: var(--text); margin: 0; }
     .plp-modal-copy {
       font-family: var(--font-body);
       font-size: 14px;
@@ -1671,6 +1827,7 @@
       border: var(--line-weight) solid var(--border-2);
       border-radius: var(--radius-pill);
       cursor: pointer;
+      transition: color .15s ease, border-color .15s ease, background .15s ease;
     }
     .plp-variant:hover { border-color: var(--border-3); color: var(--text); }
     .plp-variant:has(input:checked) {
@@ -1680,10 +1837,13 @@
     }
     .plp-variant:has(input:focus-visible) { outline: var(--focus-ring); outline-offset: 2px; }
     .plp-variant-out {
-      color: var(--text-4);
+      color: var(--disabled-ink);
+      background: var(--disabled-surface);
+      border-color: var(--disabled-border);
       cursor: not-allowed;
       text-decoration: line-through;
     }
+    .plp-variant-out:hover { color: var(--disabled-ink); border-color: var(--disabled-border); }
     .plp-qty { display: flex; align-items: center; gap: 14px; }
     .plp-qty-label {
       font-family: var(--font-eyebrow);
@@ -1710,8 +1870,9 @@
       background: transparent;
       border: 0;
       cursor: pointer;
+      transition: color .15s ease, background .15s ease;
     }
-    .plp-qty-btn:hover { color: var(--accent); }
+    .plp-qty-btn:hover { color: var(--accent); background: var(--accent-faint); }
     .plp-qty-btn:focus-visible { outline: var(--focus-ring); outline-offset: -2px; }
     .plp-qty-input {
       width: 46px;
@@ -1735,38 +1896,66 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       text-align: center;
-      padding: 8px 0 24px;
-      border-bottom: var(--line-weight) solid var(--border);
+      background: var(--bg-2);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 26px 20px 28px;
     }
     .plp-loadmore-line {
-      font-family: var(--font-ui);
-      font-size: 12px;
-      letter-spacing: 0.04em;
+      font-family: var(--font-eyebrow);
+      font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking);
+      text-transform: var(--eyebrow-transform);
       color: var(--text-3);
       margin: 0;
     }
     .plp-progress {
+      position: relative;
       width: min(280px, 100%);
-      height: 4px;
-      background: var(--bg-3);
+      height: 6px;
+      background: var(--track);
       border-radius: var(--radius-pill);
-      overflow: hidden;
     }
+    /* the fill ends in a small moon: a glowing accent-light dot riding the
+       leading edge of the progress line */
     .plp-progress-fill {
+      position: relative;
       display: block;
       height: 100%;
-      background: var(--accent);
-      transition: width .25s ease;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 55%, var(--accent-light)));
+      transition: width .3s ease;
+    }
+    .plp-progress-fill::after {
+      content: "";
+      position: absolute;
+      right: -2px;
+      top: 50%;
+      width: 12px;
+      height: 12px;
+      transform: translateY(-50%);
+      border-radius: var(--radius-pill);
+      background: radial-gradient(circle at 35% 35%, var(--accent-light), color-mix(in srgb, var(--accent-light) 72%, var(--accent)));
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-light) 22%, transparent),
+                  0 0 10px color-mix(in srgb, var(--accent-light) 40%, transparent);
+    }
+    .plp-loadmore .plp-btn-outline { background: var(--bg-card); }
+    .plp-loadmore .plp-btn-outline[disabled] {
+      background: var(--disabled-surface);
+      border-color: var(--disabled-border);
+      color: var(--disabled-ink);
+      cursor: not-allowed;
+      transform: none;
     }
     .plp-pager {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      padding: 22px 0 0;
+      gap: 8px;
+      padding: 24px 0 0;
     }
     .plp-page {
       display: inline-flex;
@@ -1782,8 +1971,14 @@
       border: var(--line-weight) solid var(--border);
       border-radius: var(--radius-btn, var(--radius-sm));
       cursor: pointer;
+      transition: color .2s ease, border-color .2s ease, background .2s ease, transform .2s ease;
     }
-    .plp-page:hover:not([disabled]) { border-color: var(--accent); color: var(--text); }
+    .plp-page:hover:not([disabled]):not([aria-current="page"]) {
+      border-color: var(--accent);
+      color: var(--text);
+      background: var(--accent-faint);
+      transform: translateY(-1px);
+    }
     .plp-page:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
     .plp-page[aria-current="page"] {
       background: var(--accent);
@@ -1791,7 +1986,12 @@
       color: var(--accent-ink);
       font-weight: 700;
     }
-    .plp-page[disabled] { color: var(--text-4); cursor: not-allowed; }
+    .plp-page[disabled] {
+      color: var(--disabled-ink);
+      background: var(--disabled-surface);
+      border-color: var(--disabled-border);
+      cursor: not-allowed;
+    }
     .plp-page-gap { font-family: var(--font-ui); font-size: 13px; color: var(--text-4); padding: 0 4px; }
 
     /* ---- T310 Empty results ---- */
@@ -1800,23 +2000,41 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 14px;
-      background: var(--bg-card);
-      border: var(--line-weight) dashed var(--border-2);
-      border-radius: var(--radius-card);
-      padding: 44px 24px;
-    }
-    .plp-empty-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 64px; height: 64px;
-      color: var(--accent);
-      background: var(--accent-wash);
+      gap: 16px;
+      background: linear-gradient(170deg, var(--accent-wash), var(--bg-2) 65%);
       border: var(--line-weight) solid var(--accent-line);
-      border-radius: var(--radius-pill);
+      border-radius: var(--radius-card);
+      padding: 56px 24px 52px;
     }
-    .plp-empty-title { font-family: var(--font-display); font-size: 20px; color: var(--text); margin: 0; }
+    /* a quiet crescent: the accent-light disc with the page tint cutting the
+       shadowed side, a soft halo holding it in place */
+    .plp-empty-moon {
+      position: relative;
+      width: 64px;
+      height: 64px;
+      margin-bottom: 6px;
+      border-radius: var(--radius-pill);
+      background: radial-gradient(circle at 35% 35%, var(--accent-light), color-mix(in srgb, var(--accent-light) 70%, var(--accent)));
+      box-shadow: 0 0 0 13px color-mix(in srgb, var(--accent-light) 12%, transparent),
+                  0 0 34px color-mix(in srgb, var(--accent-light) 26%, transparent);
+      overflow: hidden;
+    }
+    .plp-empty-moon::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-pill);
+      background: var(--bg-2);
+      transform: translate(32%, -18%);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .plp-empty-moon { animation: plp-moon-drift 9s ease-in-out infinite; }
+    }
+    @keyframes plp-moon-drift {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-6px); }
+    }
+    .plp-empty-title { font-family: var(--font-display); font-size: 27px; font-weight: var(--heading-weight); color: var(--text); margin: 0; }
     .plp-empty-copy {
       font-family: var(--font-body);
       font-size: 14px;
@@ -1845,20 +2063,38 @@
       border-radius: var(--radius-card);
       overflow: hidden;
       border: var(--line-weight) solid var(--border);
-      padding: 16px;
+      padding: 18px;
+      transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
     }
-    .plp-tile:hover { border-color: var(--accent); }
+    .plp-tile:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-overlay);
+    }
     .plp-tile:focus-visible { outline: var(--focus-ring); outline-offset: 3px; }
+    /* every wash tile carries the landmark arc from the card language */
+    .plp-tile::before {
+      content: "";
+      position: absolute;
+      left: -28%;
+      top: 74%;
+      width: 156%;
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-pill);
+      background: color-mix(in srgb, var(--accent) 14%, transparent);
+      pointer-events: none;
+    }
     .plp-tile-scrim {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, color-mix(in srgb, var(--bg-black) 92%, transparent) 0%, color-mix(in srgb, var(--bg-black) 60%, transparent) 46%, transparent 82%);
+      background: linear-gradient(to top, color-mix(in srgb, var(--bg) 90%, transparent) 0%, color-mix(in srgb, var(--bg) 45%, transparent) 42%, transparent 74%);
     }
-    .plp-tile-text { position: relative; display: flex; flex-direction: column; gap: 3px; }
+    .plp-tile-text { position: relative; display: flex; flex-direction: column; gap: 4px; }
     .plp-tile-name {
       font-family: var(--font-display);
-      font-size: 17px;
+      font-size: 23px;
       font-weight: var(--heading-weight);
+      line-height: 1.1;
       color: var(--text);
     }
     .plp-tile-count {
@@ -1869,13 +2105,61 @@
     }
     .plp-tile-arrow {
       position: absolute;
-      right: 16px;
-      bottom: 18px;
+      right: 14px;
+      bottom: 14px;
       display: inline-flex;
-      color: var(--text-3);
-      transition: transform .18s ease, color .18s ease;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-pill);
+      color: var(--text-2);
+      background: color-mix(in srgb, var(--bg) 75%, transparent);
+      border: var(--line-weight) solid var(--border);
+      transition: transform .2s ease, color .2s ease, background .2s ease, border-color .2s ease;
     }
-    .plp-tile:hover .plp-tile-arrow { color: var(--accent); transform: translateX(3px); }
+    .plp-tile:hover .plp-tile-arrow {
+      color: var(--accent-ink);
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateX(3px);
+    }
+    /* the anchor tile: the boxed set on the solid accent night ground with
+       the gold moon, matching the anchor card in the grid */
+    .plp-tile-night {
+      background: radial-gradient(120% 90% at 50% -10%, color-mix(in srgb, var(--accent-light) 14%, transparent), transparent 55%), var(--accent);
+      border-color: var(--accent-deep);
+    }
+    .plp-tile-night::before { background: color-mix(in srgb, var(--accent-ink) 10%, transparent); }
+    .plp-tile-moon {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 34px;
+      height: 34px;
+      border-radius: var(--radius-pill);
+      border: var(--line-weight) solid color-mix(in srgb, var(--accent-ink) 35%, transparent);
+      background: radial-gradient(circle at 35% 35%, var(--accent-light), color-mix(in srgb, var(--accent-light) 72%, var(--accent)));
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-light) 16%, transparent),
+                  0 0 14px color-mix(in srgb, var(--accent-light) 30%, transparent);
+      transition: box-shadow .25s ease;
+    }
+    .plp-tile-night:hover .plp-tile-moon {
+      box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent-light) 24%, transparent),
+                  0 0 20px color-mix(in srgb, var(--accent-light) 45%, transparent);
+    }
+    .plp-tile-night .plp-tile-name { color: var(--accent-ink); }
+    .plp-tile-night .plp-tile-count { color: color-mix(in srgb, var(--accent-ink) 92%, transparent); }
+    .plp-tile-night .plp-tile-arrow {
+      color: var(--accent-ink);
+      background: color-mix(in srgb, var(--accent-ink) 12%, transparent);
+      border-color: color-mix(in srgb, var(--accent-ink) 35%, transparent);
+    }
+    .plp-tile-night:hover .plp-tile-arrow {
+      color: var(--accent);
+      background: var(--accent-ink);
+      border-color: var(--accent-ink);
+    }
 
     /* ---- responsive ---- */
     @media (max-width: 900px) {
@@ -1894,18 +2178,40 @@
       .plp-grid-4 { grid-template-columns: minmax(0, 1fr); }
       .plp-grid-qv { grid-template-columns: minmax(0, 1fr); }
       .plp-tiles { grid-template-columns: minmax(0, 1fr); }
-      .plp-hero { padding: 24px 18px; }
+      .plp-hero { padding: 26px 20px 32px; }
+      .plp-hero-moon {
+        top: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        box-shadow: 0 0 0 9px color-mix(in srgb, var(--accent-light) 12%, transparent),
+                    0 0 24px color-mix(in srgb, var(--accent-light) 30%, transparent);
+      }
+      .plp-hero-title { padding-right: 56px; }
       .plp-bar { flex-direction: column; align-items: stretch; }
       .plp-bar-tools { justify-content: space-between; }
     }
     @media (prefers-reduced-motion: reduce) {
       .plp-card,
+      .plp-row,
+      .plp-tile,
+      .plp-tile-arrow,
+      .plp-tile-moon,
       .plp-qv-open,
       .plp-progress-fill,
-      .plp-tile-arrow,
+      .plp-btn,
+      .plp-add,
+      .plp-page,
+      .plp-thumb::before,
+      .plp-row-thumb::before,
+      .plp-modal-media::before,
       .plp-chev { transition: none; }
-      .plp-drawer[open] { animation: none; }
-      .plp-card:hover { transform: none; }
+      .plp-drawer[open],
+      .plp-drawer[open]::backdrop { animation: none; }
+      .plp-card:hover,
+      .plp-row:hover,
+      .plp-tile:hover,
+      .plp-page:hover:not([disabled]):not([aria-current="page"]) { transform: none; }
     }
   </style>
   <script>

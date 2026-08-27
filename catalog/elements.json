@@ -7,7 +7,7 @@
     "page": "index.html",
     "anchor": "#T010",
     "source": "pages/elements.html",
-    "description": "Primary (accent fill), secondary (outline), and the nav CTA pill."
+    "description": "Primary (accent fill), secondary (outline), the nav CTA pill, and the disabled state."
   },
   {
     "id": "T011",

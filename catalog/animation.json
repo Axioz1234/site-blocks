@@ -7,7 +7,7 @@
     "page": "index.html",
     "anchor": "#T100",
     "source": "pages/animation.html",
-    "description": "Asymmetric mosaic of feature tiles with varying spans, subtle gradients, and a hover lift, in pure CSS."
+    "description": "Asymmetric mosaic of feature tiles anchored by one solid accent panel with a moon-disc motif, tint variation across the rest, and a hover lift, in pure CSS."
   },
   {
     "id": "T101",

@@ -156,7 +156,7 @@
         <span class="tb-tid">T122</span>
         <div>
           <h2>Card reference</h2>
-          <p>A month pill plus the card's line, a description, a details table, and a Front / Back area with tabs that switch on click.</p>
+          <p>A moon-disc month marker with the card's line, a description, a details table, and a Front / Back area with tabs that switch on click.</p>
         </div>
       </header>
       <div class="tb-demo">
@@ -164,8 +164,11 @@
           <span class="sgx-preview-tag">INTERACTIVE</span>
           <div class="dev-api">
             <div class="dev-api-endpoint">
-              <span class="dev-method">January</span>
-              <span class="dev-path">January · Byron Bay Lighthouse, NSW</span>
+              <span class="dev-api-moon" aria-hidden="true"></span>
+              <div class="dev-api-title">
+                <span class="dev-method">January</span>
+                <span class="dev-path">Byron Bay Lighthouse, NSW</span>
+              </div>
             </div>
             <p class="dev-api-desc">January's card: the full moon over Byron Bay Lighthouse, with room on the back for one intention.</p>
 
@@ -205,14 +208,15 @@
                 <button class="dev-api-tab" data-dev-apitab="back">Back</button>
               </div>
               <div class="dev-api-panel is-on" data-dev-apipanel="front">
-                <div class="dev-face">
+                <div class="dev-face dev-face-front">
+                  <span class="dev-face-moon" aria-hidden="true"></span>
                   <span class="dev-face-eyebrow">Full Moon · 22 January 2027</span>
                   <p class="dev-face-title">Byron Bay Lighthouse</p>
                   <p class="dev-face-body">The illustrated face: the full moon rising over the lighthouse, warm gold line-work in the deck's vintage travel-poster style.</p>
                 </div>
               </div>
               <div class="dev-api-panel" data-dev-apipanel="back">
-                <div class="dev-face">
+                <div class="dev-face dev-face-back">
                   <span class="dev-face-eyebrow">The writable side</span>
                   <p class="dev-face-body">Room to write one intention.</p>
                   <div class="dev-face-rule"></div>
@@ -252,62 +256,74 @@
             </div>
             <div class="dev-integ-grid">
               <div class="dev-tile" data-dev-category="NSW">
-                <span class="dev-tile-mark" aria-hidden="true">Jan</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">January</span>
                 <span class="dev-tile-name">Byron Bay Lighthouse</span>
                 <span class="dev-tile-cat">January · NSW</span>
               </div>
               <div class="dev-tile" data-dev-category="QLD">
-                <span class="dev-tile-mark" aria-hidden="true">Feb</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">February</span>
                 <span class="dev-tile-name">Whitehaven Beach</span>
                 <span class="dev-tile-cat">February · QLD</span>
               </div>
               <div class="dev-tile" data-dev-category="NSW">
-                <span class="dev-tile-mark" aria-hidden="true">Mar</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">March</span>
                 <span class="dev-tile-name">Sydney Harbour Bridge</span>
                 <span class="dev-tile-cat">March · NSW</span>
               </div>
               <div class="dev-tile" data-dev-category="NT">
-                <span class="dev-tile-mark" aria-hidden="true">Apr</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">April</span>
                 <span class="dev-tile-name">Uluru</span>
                 <span class="dev-tile-cat">April · NT</span>
               </div>
               <div class="dev-tile" data-dev-category="VIC">
-                <span class="dev-tile-mark" aria-hidden="true">May</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">May</span>
                 <span class="dev-tile-name">Flinders Street Station</span>
                 <span class="dev-tile-cat">May · VIC</span>
               </div>
               <div class="dev-tile" data-dev-category="TAS">
-                <span class="dev-tile-mark" aria-hidden="true">Jun</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">June</span>
                 <span class="dev-tile-name">Cradle Mountain</span>
                 <span class="dev-tile-cat">June · TAS</span>
               </div>
               <div class="dev-tile" data-dev-category="SA">
-                <span class="dev-tile-mark" aria-hidden="true">Jul</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">July</span>
                 <span class="dev-tile-name">Remarkable Rocks</span>
                 <span class="dev-tile-cat">July · SA</span>
               </div>
               <div class="dev-tile" data-dev-category="WA">
-                <span class="dev-tile-mark" aria-hidden="true">Aug</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">August</span>
                 <span class="dev-tile-name">The Pinnacles</span>
                 <span class="dev-tile-cat">August · WA</span>
               </div>
               <div class="dev-tile" data-dev-category="ACT">
-                <span class="dev-tile-mark" aria-hidden="true">Sep</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">September</span>
                 <span class="dev-tile-name">National Carillon</span>
                 <span class="dev-tile-cat">September · ACT</span>
               </div>
               <div class="dev-tile" data-dev-category="QLD">
-                <span class="dev-tile-mark" aria-hidden="true">Oct</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">October</span>
                 <span class="dev-tile-name">Story Bridge</span>
                 <span class="dev-tile-cat">October · QLD</span>
               </div>
               <div class="dev-tile" data-dev-category="WA">
-                <span class="dev-tile-mark" aria-hidden="true">Nov</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">November</span>
                 <span class="dev-tile-name">Wave Rock</span>
                 <span class="dev-tile-cat">November · WA</span>
               </div>
               <div class="dev-tile" data-dev-category="VIC">
-                <span class="dev-tile-mark" aria-hidden="true">Dec</span>
+                <span class="dev-tile-moon" aria-hidden="true"></span>
+                <span class="dev-tile-month">December</span>
                 <span class="dev-tile-name">Twelve Apostles</span>
                 <span class="dev-tile-cat">December · VIC</span>
               </div>
@@ -436,15 +452,25 @@
     }
     .dev-kbd-sm { font-size: 10px; padding: 2px 5px; color: var(--text-3); }
 
+    /* One focus treatment for every interactive element on the page. */
+    .dev-kbtn:focus-visible, .dev-cmdk-row:focus-visible, .dev-api-tab:focus-visible,
+    .dev-chip:focus-visible, .dev-announce-x:focus-visible, .dev-announce-link:focus-visible,
+    .dev-announce-reset:focus-visible, .dev-seg-btn:focus-visible, .dev-helpful-btn:focus-visible {
+      outline: var(--focus-ring); outline-offset: var(--focus-offset);
+    }
+
     /* ===== 01 QUICK SEARCH ===== */
     .dev-kbtn {
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex; align-items: center; gap: 9px; min-height: 48px;
       font-family: var(--font-body); font-size: 14px; color: var(--text-3);
       background: var(--bg-card); border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-btn);
-      padding: 10px 14px; cursor: pointer;
-      transition: border-color .2s ease, color .2s ease;
+      padding: 10px 18px; cursor: pointer;
+      transition: border-color .2s ease, color .2s ease, box-shadow .2s ease;
     }
-    .dev-kbtn:hover { border-color: var(--accent); color: var(--text); }
+    .dev-kbtn:hover {
+      border-color: var(--accent); color: var(--text);
+      box-shadow: 0 0 0 4px var(--accent-faint);
+    }
     .dev-kbtn-icon { color: var(--accent); font-size: 15px; }
 
     .dev-cmdk {
@@ -457,13 +483,14 @@
       overflow: hidden; box-shadow: var(--shadow-overlay);
     }
     .dev-cmdk-search {
-      display: flex; align-items: center; gap: 10px;
-      padding: 14px 16px; border-bottom: var(--line-weight) solid var(--border);
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px 18px; border-bottom: var(--line-weight) solid var(--border);
     }
-    .dev-cmdk-glass { color: var(--text-4); font-size: 16px; }
+    .dev-cmdk-glass { color: var(--accent); font-size: 17px; }
     .dev-cmdk-search input {
       flex: 1; min-width: 0; background: transparent; border: none; outline: none;
       font-family: var(--font-body); font-size: 15px; color: var(--text);
+      caret-color: var(--accent);
     }
     .dev-cmdk-search input::placeholder { color: var(--text-4); }
     .dev-cmdk-results { max-height: 320px; overflow-y: auto; padding: 8px; }
@@ -476,99 +503,163 @@
     .dev-cmdk-row {
       display: flex; align-items: center; gap: 12px; width: 100%; text-align: left;
       background: transparent; border: none; border-radius: var(--radius-sm); cursor: pointer;
-      padding: 9px 10px; transition: background .15s ease;
+      padding: 10px; min-height: 44px;
+      transition: background .15s ease;
     }
-    .dev-cmdk-row:hover, .dev-cmdk-row:focus-visible {
-      background: var(--bg-3); outline: none;
-    }
+    .dev-cmdk-row:hover, .dev-cmdk-row:focus-visible { background: var(--accent-wash); }
+    .dev-cmdk-row:active { background: var(--accent-faint); }
     .dev-cmdk-rowicon {
-      width: 22px; height: 22px; flex-shrink: 0; display: grid; place-items: center;
-      font-size: 11px; color: var(--accent); background: var(--bg-card);
-      border: var(--line-weight) solid var(--border); border-radius: var(--radius-sm);
+      width: 26px; height: 26px; flex-shrink: 0; display: grid; place-items: center;
+      font-size: 11px; color: var(--accent); background: var(--accent-faint);
+      border: var(--line-weight) solid transparent; border-radius: var(--radius-pill);
+      transition: border-color .15s ease;
     }
+    .dev-cmdk-row:hover .dev-cmdk-rowicon,
+    .dev-cmdk-row:focus-visible .dev-cmdk-rowicon { border-color: var(--accent-line); }
     .dev-cmdk-rowlabel { flex: 1; font-family: var(--font-body); font-size: 14px; color: var(--text); }
     .dev-cmdk-rowhint { font-family: var(--font-ui); font-size: 11px; color: var(--text-4); }
     .dev-cmdk-empty { font-family: var(--font-body); font-size: 14px; color: var(--text-4); text-align: center; padding: 24px; margin: 0; }
     .dev-cmdk-foot {
-      display: flex; gap: 18px; padding: 10px 16px; border-top: var(--line-weight) solid var(--border);
+      display: flex; gap: 18px; padding: 10px 18px; border-top: var(--line-weight) solid var(--border);
       background: var(--bg-card); font-family: var(--font-body); font-size: 11px; color: var(--text-4);
     }
     .dev-cmdk-foot kbd { margin-right: 2px; }
+    @media (prefers-reduced-motion: no-preference) {
+      .dev-cmdk[open] .dev-cmdk-card { animation: dev-pop .22s ease; }
+      .dev-cmdk[open]::backdrop { animation: dev-fade-in .22s ease; }
+    }
+    @keyframes dev-pop { from { opacity: 0; transform: translateY(10px) scale(.985); } }
+    @keyframes dev-fade-in { from { opacity: 0; } }
 
-    /* ===== 02 CALLOUTS ===== */
+    /* ===== 02 CALLOUTS =====
+       Each variant runs its wash surface with a solid rail, a circled icon,
+       and a small tracked label in the variant colour over a quiet body line.
+       Note is the brand-accent variant; Tip / Warning / Danger carry status. */
     .dev-callouts { display: flex; flex-direction: column; gap: 14px; }
     .dev-callout {
-      display: flex; gap: 12px; align-items: flex-start;
-      border: var(--line-weight) solid var(--border); border-left-width: 3px;
-      border-radius: var(--radius-card); padding: 14px 16px;
+      display: flex; gap: 14px; align-items: flex-start;
+      border-left: calc(var(--line-weight) * 3) solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 15px 18px 15px 16px;
     }
     .dev-callout-icon {
-      flex-shrink: 0; width: 22px; height: 22px; display: grid; place-items: center;
-      border-radius: 50%; font-size: 12px; margin-top: 1px;
+      flex-shrink: 0; width: 26px; height: 26px; display: grid; place-items: center;
+      border-radius: var(--radius-pill); font-size: 12px; margin-top: 1px;
     }
     .dev-callout strong {
-      display: block; font-family: var(--font-display); font-size: 14px;
-      font-weight: 600; color: var(--text); margin-bottom: 3px;
+      display: block; font-family: var(--font-eyebrow); font-size: 11px;
+      font-weight: 600; letter-spacing: var(--eyebrow-tracking);
+      text-transform: var(--eyebrow-transform); margin: 3px 0 4px;
     }
     .dev-callout p { font-family: var(--font-body); font-size: 13.5px; line-height: 1.55; color: var(--text-2); margin: 0; }
-    .dev-note   { border-left-color: var(--text-3); background: color-mix(in srgb, var(--text-3) 8%, transparent); }
-    .dev-note   .dev-callout-icon { color: var(--text-2); background: color-mix(in srgb, var(--text-3) 18%, transparent); }
-    .dev-tip    { border-left-color: var(--ok); background: color-mix(in srgb, var(--ok) 8%, transparent); }
-    .dev-tip    .dev-callout-icon { color: var(--ok); background: color-mix(in srgb, var(--ok) 16%, transparent); }
-    .dev-warn   { border-left-color: var(--warn); background: color-mix(in srgb, var(--warn) 8%, transparent); }
-    .dev-warn   .dev-callout-icon { color: var(--warn); background: color-mix(in srgb, var(--warn) 16%, transparent); }
-    .dev-danger { border-left-color: var(--err-deep); background: color-mix(in srgb, var(--err-deep) 8%, transparent); }
-    .dev-danger .dev-callout-icon { color: var(--err-deep); background: color-mix(in srgb, var(--err-deep) 16%, transparent); }
+    .dev-note   { border-left-color: var(--accent); background: var(--accent-wash); }
+    .dev-note   strong { color: var(--accent); }
+    .dev-note   .dev-callout-icon { color: var(--accent); background: var(--accent-faint); }
+    .dev-tip    { border-left-color: var(--ok); background: var(--ok-wash); }
+    .dev-tip    strong { color: var(--ok); }
+    .dev-tip    .dev-callout-icon { color: var(--ok); background: var(--ok-faint); }
+    .dev-warn   { border-left-color: var(--warn); background: var(--warn-wash); }
+    .dev-warn   strong { color: var(--warn); }
+    .dev-warn   .dev-callout-icon { color: var(--warn); background: var(--warn-faint); }
+    .dev-danger { border-left-color: var(--err); background: var(--err-wash); }
+    .dev-danger strong { color: var(--err); }
+    .dev-danger .dev-callout-icon { color: var(--err); background: var(--err-faint); }
 
-    /* ===== 03 CARD REFERENCE ===== */
-    .dev-api-endpoint { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+    /* ===== 03 CARD REFERENCE =====
+       The header is a moon-disc marker beside the month in the display face;
+       the details table sits in a tinted panel; the Front face renders as a
+       miniature card on the accent ground, matching the deck tiles below. */
+    .dev-api-endpoint { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+    .dev-api-moon {
+      width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%;
+      background: var(--accent); display: grid; place-items: center;
+    }
+    .dev-api-moon::before {
+      content: ""; width: 18px; height: 18px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, var(--accent-light), color-mix(in srgb, var(--accent-light) 72%, var(--accent)));
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-light) 22%, transparent),
+                  0 0 10px color-mix(in srgb, var(--accent-light) 35%, transparent);
+    }
+    .dev-api-title { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
     .dev-method {
-      font-family: var(--font-ui); font-size: 12px; font-weight: 600;
-      letter-spacing: .05em; color: var(--cat-5); background: color-mix(in srgb, var(--cat-5) 12%, transparent);
-      border: var(--line-weight) solid color-mix(in srgb, var(--cat-5) 35%, transparent); border-radius: var(--radius-sm); padding: 4px 10px;
+      font-family: var(--font-display); font-size: 24px; line-height: 1.1;
+      font-weight: var(--heading-weight); letter-spacing: var(--heading-tracking);
+      color: var(--text);
     }
     .dev-path {
-      font-family: var(--font-ui); font-size: 13px; color: var(--text-2);
-      background: var(--bg-card); border: var(--line-weight) solid var(--border);
-      border-radius: var(--radius-sm); padding: 4px 10px;
+      font-family: var(--font-eyebrow); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
+      color: var(--text-3);
     }
-    .dev-api-desc { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0 0 18px; }
-    .dev-table-wrap { border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); overflow-x: auto; margin-bottom: 20px; }
+    .dev-path::before { content: var(--eyebrow-prefix); }
+    .dev-api-desc { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0 0 18px; max-width: 62ch; }
+    .dev-table-wrap {
+      border: var(--line-weight) solid var(--border); border-radius: var(--radius-card);
+      background: var(--bg-2); overflow-x: auto; margin-bottom: 20px;
+    }
     .dev-table { width: 100%; border-collapse: collapse; min-width: 460px; }
     .dev-table th {
       font-family: var(--font-ui); font-size: 11px; letter-spacing: .06em;
       text-transform: uppercase; color: var(--text-4); text-align: left; font-weight: 500;
-      padding: 10px 14px; border-bottom: var(--line-weight) solid var(--border); background: var(--bg-card);
+      padding: 11px 16px; border-bottom: var(--line-weight) solid var(--border);
     }
     .dev-table td {
       font-family: var(--font-body); font-size: 13px; color: var(--text-2);
-      padding: 11px 14px; border-bottom: var(--line-weight) solid var(--border); vertical-align: top;
+      padding: 12px 16px; border-bottom: var(--line-weight) solid color-mix(in srgb, var(--border) 55%, transparent);
+      vertical-align: top;
     }
     .dev-table tr:last-child td { border-bottom: none; }
-    .dev-val { font-family: var(--font-ui); font-size: 12px; color: var(--cat-1); }
+    .dev-table td:last-child { color: var(--text-3); }
+    .dev-val { font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--accent); }
 
     .dev-api-io { border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); overflow: hidden; }
-    .dev-api-tabs { display: flex; border-bottom: var(--line-weight) solid var(--border); background: var(--bg-card); }
+    .dev-api-tabs { display: flex; gap: 4px; padding: 0 10px; border-bottom: var(--line-weight) solid var(--border); background: var(--bg-2); }
     .dev-api-tab {
-      font-family: var(--font-ui); font-size: 12px; color: var(--text-3);
-      background: transparent; border: none; border-bottom: 2px solid transparent;
-      padding: 10px 16px; cursor: pointer; transition: color .2s ease, border-color .2s ease;
+      font-family: var(--font-ui); font-size: 12px; font-weight: 500;
+      letter-spacing: var(--button-tracking); text-transform: var(--button-transform);
+      color: var(--text-3);
+      background: transparent; border: none;
+      border-bottom: calc(var(--line-weight) * 2) solid transparent;
+      padding: 14px 16px; min-height: 44px; cursor: pointer;
+      transition: color .2s ease, border-color .2s ease, background .2s ease;
     }
-    .dev-api-tab:hover { color: var(--text); }
-    .dev-api-tab.is-on { color: var(--accent); border-bottom-color: var(--accent); }
+    .dev-api-tab:hover { color: var(--text); background: var(--accent-faint); }
+    .dev-api-tab.is-on { color: var(--accent); font-weight: 600; border-bottom-color: var(--accent); }
     .dev-api-panel { display: none; }
     .dev-api-panel.is-on { display: block; }
-    .dev-face { padding: 18px; background: var(--bg-card); }
+    @media (prefers-reduced-motion: no-preference) {
+      .dev-api-panel.is-on .dev-face { animation: dev-fade-in .25s ease; }
+    }
+    .dev-face { padding: 22px 20px; background: var(--bg-card); }
     .dev-face-eyebrow {
       display: block; font-family: var(--font-eyebrow); font-size: 11px;
       letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
       color: var(--accent); margin-bottom: 8px;
     }
     .dev-face-eyebrow::before { content: var(--eyebrow-prefix); }
-    .dev-face-title { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--text); margin: 0 0 6px; }
-    .dev-face-body { font-family: var(--font-body); font-size: 13.5px; line-height: 1.55; color: var(--text-3); margin: 0; }
-    .dev-face-rule { height: 24px; max-width: 340px; border-bottom: var(--line-weight) solid var(--border-2); }
-    .dev-face-tag { font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--text-2); margin: 16px 0 0; }
+    .dev-face-title { font-family: var(--font-display); font-size: 20px; font-weight: 600; margin: 0 0 6px; }
+    .dev-face-body { font-family: var(--font-body); font-size: 13.5px; line-height: 1.55; margin: 0; max-width: 52ch; }
+    /* The illustrated front: the accent ground with a glowing moon disc,
+       everything inked in --accent-ink, echoing the T123 deck tiles. */
+    .dev-face-front {
+      background: radial-gradient(120% 90% at 50% -10%, color-mix(in srgb, var(--accent-light) 14%, transparent), transparent 55%), var(--accent);
+    }
+    .dev-face-moon {
+      display: block; width: 28px; height: 28px; border-radius: 50%; margin-bottom: 14px;
+      border: var(--line-weight) solid color-mix(in srgb, var(--accent-ink) 35%, transparent);
+      background: radial-gradient(circle at 35% 35%, var(--accent-light), color-mix(in srgb, var(--accent-light) 72%, var(--accent)));
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-light) 16%, transparent),
+                  0 0 14px color-mix(in srgb, var(--accent-light) 30%, transparent);
+    }
+    .dev-face-front .dev-face-eyebrow,
+    .dev-face-front .dev-face-title,
+    .dev-face-front .dev-face-body { color: var(--accent-ink); }
+    /* The writable back: a quiet paper tint with ruled lines and the tagline. */
+    .dev-face-back { background: var(--bg-2); }
+    .dev-face-back .dev-face-eyebrow { color: var(--text-3); }
+    .dev-face-back .dev-face-body { color: var(--text-2); }
+    .dev-face-rule { height: 26px; max-width: 340px; border-bottom: var(--line-weight) solid var(--border-2); }
+    .dev-face-tag { font-family: var(--font-display); font-style: italic; font-size: 14px; font-weight: 500; color: var(--text-2); margin: 18px 0 0; }
 
     /* ===== 04 DECK BY STATE ===== */
     .dev-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
@@ -580,62 +671,118 @@
     .dev-chip:hover { color: var(--text); border-color: var(--border-3); }
     .dev-chip.is-on { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
     .dev-integ-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    /* Each tile reads as a miniature Moonrite card: the accent ground (deep
+       navy in Moonrite, orange in Dark), a full-moon disc in the accent-light
+       gold, and the month set in the display face. Tokens only, so both
+       themes stay legible. */
     .dev-tile {
-      display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
-      border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); background: var(--bg-card);
-      padding: 16px; transition: border-color .2s ease, transform .2s ease;
+      position: relative;
+      display: flex; flex-direction: column; align-items: flex-start;
+      border: var(--line-weight) solid var(--accent-deep);
+      border-radius: var(--radius-card);
+      background: radial-gradient(120% 90% at 50% -10%, color-mix(in srgb, var(--accent-light) 14%, transparent), transparent 55%), var(--accent);
+      color: var(--accent-ink);
+      padding: 18px 16px 14px;
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .dev-tile:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .dev-tile-mark {
-      width: 34px; height: 34px; display: grid; place-items: center;
-      font-family: var(--font-display); font-size: 14px; font-weight: 600;
-      color: var(--accent); background: var(--bg-3); border: var(--line-weight) solid var(--border); border-radius: var(--radius-sm);
+    .dev-tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-overlay); }
+    .dev-tile-moon {
+      width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+      border: var(--line-weight) solid color-mix(in srgb, var(--accent-ink) 35%, transparent);
+      background: radial-gradient(circle at 35% 35%, var(--accent-light), color-mix(in srgb, var(--accent-light) 72%, var(--accent)));
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-light) 16%, transparent),
+                  0 0 14px color-mix(in srgb, var(--accent-light) 30%, transparent);
+      margin-bottom: 14px;
+      transition: box-shadow .2s ease;
     }
-    .dev-tile-name { font-family: var(--font-display); font-size: 15px; font-weight: 600; color: var(--text); }
-    .dev-tile-cat { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-4); }
+    .dev-tile:hover .dev-tile-moon {
+      box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent-light) 24%, transparent),
+                  0 0 20px color-mix(in srgb, var(--accent-light) 45%, transparent);
+    }
+    .dev-tile-month { font-family: var(--font-display); font-size: 19px; font-weight: 600; line-height: 1.15; color: var(--accent-ink); }
+    .dev-tile-name { font-family: var(--font-body); font-size: 12px; line-height: 1.4; color: var(--accent-ink); margin-top: 2px; }
+    .dev-tile-cat { font-family: var(--font-eyebrow); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, var(--accent-ink) 85%, transparent); margin-top: 12px; }
 
-    /* ===== 05 ANNOUNCEMENT BAR ===== */
+    /* ===== 05 ANNOUNCEMENT BAR =====
+       A real top-of-page band: solid accent ground, contrast ink, a glowing
+       moon dot on the left. It slides in once on first render, collapses
+       smoothly on dismiss, and the demo reset replays the entrance. */
     .dev-announce-frame {
-      border: var(--line-weight) dashed var(--border-2); border-radius: var(--radius-card); padding: 14px;
-      min-height: 70px; display: flex; align-items: center; justify-content: center;
+      min-height: 86px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 12px;
     }
     .dev-announce {
       display: flex; align-items: center; gap: 12px; width: 100%;
-      background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--accent) 3%, transparent));
-      border: var(--line-weight) solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: var(--radius-card);
-      padding: 10px 14px; font-family: var(--font-body); font-size: 13.5px; color: var(--text-2);
+      background: radial-gradient(150% 300% at 0% 50%, color-mix(in srgb, var(--accent-light) 10%, transparent), transparent 70%), var(--accent);
+      border-radius: var(--radius-sm);
+      padding: 12px 12px 12px 18px; min-height: 48px;
+      font-family: var(--font-body); font-size: 13.5px; color: var(--accent-ink);
     }
     .dev-announce-dot {
-      width: 8px; height: 8px; flex-shrink: 0; border-radius: 50%;
-      background: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+      /* Dark's --accent-light sits too close to its --accent for the moon dot
+         to read on the band, so the glow colour is a per-theme variable:
+         Dark renders a pale moon in --text, Moonrite keeps the gold. Gated
+         the way base.css gates the star-field. */
+      --dev-dot-moon: var(--text);
+      width: 12px; height: 12px; flex-shrink: 0; border-radius: 50%;
+      border: var(--line-weight) solid color-mix(in srgb, var(--accent-ink) 40%, transparent);
+      background: radial-gradient(circle at 35% 35%, var(--dev-dot-moon), color-mix(in srgb, var(--dev-dot-moon) 60%, var(--accent)));
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--dev-dot-moon) 22%, transparent),
+                  0 0 10px color-mix(in srgb, var(--dev-dot-moon) 40%, transparent);
     }
-    .dev-announce-link { color: var(--accent); text-decoration: none; font-weight: 500; white-space: nowrap; }
-    .dev-announce-link:hover { text-decoration: underline; }
+    :root[data-theme="moonrite"] .dev-announce-dot { --dev-dot-moon: var(--accent-light); }
+    .dev-announce-link {
+      color: var(--accent-ink); font-weight: 500; white-space: nowrap;
+      text-decoration: underline; text-underline-offset: 3px;
+      text-decoration-color: color-mix(in srgb, var(--accent-ink) 45%, transparent);
+      transition: text-decoration-color .2s ease;
+    }
+    .dev-announce-link:hover { text-decoration-color: var(--accent-ink); }
     .dev-announce-x {
-      margin-left: auto; flex-shrink: 0; background: transparent; border: none;
-      color: var(--text-3); font-size: 14px; cursor: pointer; padding: 4px 6px; line-height: 1;
-      border-radius: var(--radius-sm); transition: color .2s ease, background .2s ease;
+      margin-left: auto; flex-shrink: 0; width: 34px; height: 34px;
+      display: grid; place-items: center;
+      background: transparent; border: none;
+      color: var(--accent-ink); font-size: 14px; cursor: pointer; line-height: 1;
+      border-radius: var(--radius-sm); transition: background .2s ease;
     }
-    .dev-announce-x:hover { color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+    .dev-announce-x:hover { background: color-mix(in srgb, var(--accent-ink) 16%, transparent); }
     .dev-announce-reset {
       background: transparent; border: none; cursor: pointer;
-      font-family: var(--font-ui); font-size: 12px; color: var(--text-4);
-      text-decoration: underline; padding: 4px;
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-3);
+      text-decoration: underline; text-underline-offset: 3px; padding: 4px;
+      transition: color .2s ease;
     }
-    .dev-announce-reset:hover { color: var(--accent); }
+    .dev-announce-reset:hover { color: var(--accent-hover); }
+    @media (prefers-reduced-motion: no-preference) {
+      .dev-announce {
+        animation: dev-announce-in .45s ease backwards;
+        transition: opacity .2s ease, transform .2s ease;
+      }
+      .dev-announce-dot { animation: dev-dot-pulse 3.4s ease-in-out infinite; }
+    }
+    .dev-announce.is-out { opacity: 0; transform: translateY(-10px); }
+    @keyframes dev-announce-in { from { opacity: 0; transform: translateY(-100%); } }
+    @keyframes dev-dot-pulse {
+      0%, 100% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--dev-dot-moon) 22%, transparent),
+                             0 0 10px color-mix(in srgb, var(--dev-dot-moon) 40%, transparent); }
+      50%      { box-shadow: 0 0 0 7px color-mix(in srgb, var(--dev-dot-moon) 12%, transparent),
+                             0 0 16px color-mix(in srgb, var(--dev-dot-moon) 26%, transparent); }
+    }
 
     /* ===== 06 THEME SWITCHER ===== */
     .dev-seg {
-      display: inline-flex; gap: 2px; background: var(--bg-card);
-      border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-sm); padding: 3px; margin-bottom: 20px;
+      display: inline-flex; gap: 3px; background: var(--bg-card);
+      border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-btn); padding: 3px; margin-bottom: 20px;
     }
     .dev-seg-btn {
-      font-family: var(--font-body); font-size: 13px; color: var(--text-3);
-      background: transparent; border: none; border-radius: var(--radius-sm);
-      padding: 7px 16px; cursor: pointer; transition: all .2s ease;
+      font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--text-3);
+      background: transparent; border: none; border-radius: var(--radius-btn);
+      padding: 9px 18px; min-height: 40px; cursor: pointer;
+      transition: color .2s ease, background .2s ease;
     }
-    .dev-seg-btn:hover { color: var(--text); }
-    .dev-seg-btn.is-on { color: var(--text); background: var(--border); }
+    .dev-seg-btn:hover { color: var(--text); background: var(--accent-faint); }
+    .dev-seg-btn.is-on { color: var(--accent-ink); background: var(--accent); }
     .dev-sample {
       border-radius: var(--radius-card); padding: 22px; max-width: 380px;
       border: var(--line-weight) solid; transition: background .2s ease, border-color .2s ease, color .2s ease;
@@ -658,29 +805,40 @@
        --bg-3 made the "Light" card render dark whenever Moonrite was on. */
     .dev-sample-dark { background: var(--preview-dark); border-color: var(--border-2); }
     .dev-sample-dark .dev-sample-title { color: var(--preview-dark-ink); }
-    .dev-sample-dark .dev-sample-body { color: color-mix(in srgb, var(--preview-dark-ink) 65%, transparent); }
+    .dev-sample-dark .dev-sample-body { color: color-mix(in srgb, var(--preview-dark-ink) 78%, var(--preview-dark)); }
+    .dev-sample-dark .dev-sample-eyebrow { color: var(--preview-dark-ink); }
     .dev-sample-light { background: var(--preview-light); border-color: var(--border-2); }
     .dev-sample-light .dev-sample-title { color: var(--preview-light-ink); }
-    .dev-sample-light .dev-sample-body { color: color-mix(in srgb, var(--preview-light-ink) 65%, transparent); }
+    .dev-sample-light .dev-sample-body { color: color-mix(in srgb, var(--preview-light-ink) 78%, var(--preview-light)); }
+    .dev-sample-light .dev-sample-eyebrow { color: var(--preview-light-ink); }
 
     /* ===== 07 WAS THIS HELPFUL ===== */
     .dev-helpful {
-      border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); background: var(--bg-card);
-      padding: 18px 20px; max-width: 420px;
+      border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); background: var(--bg-2);
+      padding: 20px 22px; max-width: 440px; min-height: 88px;
+      display: flex; align-items: center;
     }
-    .dev-helpful-ask { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    .dev-helpful-prompt { font-family: var(--font-display); font-size: 15px; font-weight: 600; color: var(--text); }
+    .dev-helpful-ask { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; width: 100%; }
+    .dev-helpful-prompt { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--text); }
     .dev-helpful-btns { display: flex; gap: 8px; }
     .dev-helpful-btn {
       font-family: var(--font-body); font-size: 13px; color: var(--text-2);
-      background: var(--bg-3); border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-btn);
-      padding: 7px 14px; cursor: pointer; transition: border-color .2s ease, color .2s ease;
+      background: var(--bg-card); border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-btn);
+      padding: 10px 18px; min-height: 48px; cursor: pointer;
+      transition: border-color .2s ease, color .2s ease, box-shadow .2s ease;
     }
-    .dev-helpful-btn:hover { border-color: var(--accent); color: var(--text); }
-    .dev-helpful-done { display: flex; align-items: center; gap: 10px; font-family: var(--font-body); font-size: 14px; color: var(--text-2); }
+    .dev-helpful-btn:hover {
+      border-color: var(--accent); color: var(--text);
+      box-shadow: 0 0 0 4px var(--accent-faint);
+    }
+    .dev-helpful-done { display: flex; align-items: center; gap: 12px; font-family: var(--font-body); font-size: 14px; color: var(--text-2); }
+    @media (prefers-reduced-motion: no-preference) {
+      .dev-helpful-done:not([hidden]) { animation: dev-fade-in .3s ease; }
+    }
     .dev-helpful-check {
-      width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%;
-      background: color-mix(in srgb, var(--ok) 16%, transparent); color: var(--ok); font-size: 13px;
+      width: 28px; height: 28px; flex-shrink: 0; display: grid; place-items: center; border-radius: 50%;
+      background: var(--ok-wash); border: var(--line-weight) solid var(--ok-line);
+      color: var(--ok); font-size: 13px;
     }
 
     /* ===== RESPONSIVE ===== */
@@ -758,12 +916,19 @@
         });
       }
 
-      // T124: Announcement bar
+      // T124: Announcement bar. The dismiss fades/lifts the bar (CSS .is-out,
+      // disabled under prefers-reduced-motion), then hides it and reveals the
+      // reset link. Removing [hidden] on reset replays the entrance animation.
       const announce = $('dev-announce');
       const announceReset = $('dev-announce-reset');
       $('dev-announce-x')?.addEventListener('click', () => {
-        if (announce) announce.hidden = true;
-        if (announceReset) announceReset.hidden = false;
+        if (!announce) { if (announceReset) announceReset.hidden = false; return; }
+        announce.classList.add('is-out');
+        window.setTimeout(() => {
+          announce.hidden = true;
+          announce.classList.remove('is-out');
+          if (announceReset) announceReset.hidden = false;
+        }, 210);
       });
       announceReset?.addEventListener('click', () => {
         if (announce) announce.hidden = false;

@@ -774,28 +774,37 @@
     .pdp-vh:focus-visible { outline:none; }
 
     .pdp-eyebrow { font-family:var(--font-eyebrow); font-size:12px; letter-spacing:var(--eyebrow-tracking); text-transform:var(--eyebrow-transform); color:var(--accent); margin:0 0 8px; }
-    .pdp-case-label { display:block; font-family:var(--font-eyebrow); font-size:11px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-4); margin-bottom:10px; }
+    .pdp-case-label { display:block; font-family:var(--font-eyebrow); font-size:11px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-4); margin-bottom:12px; }
+    /* A short accent-light tick under each case label: the one small accent
+       moment the presentational cases get. */
+    .pdp-case-label::after { content:""; display:block; width:22px; height:3px; margin-top:6px; border-radius:var(--radius-pill); background:var(--accent-light); }
     .pdp-hint { font-family:var(--font-body); font-size:13px; line-height:1.5; color:var(--text-3); }
     .pdp-inline-link { color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
 
-    .pdp-btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:48px; padding:0 22px; background:var(--accent); color:var(--accent-ink); border:var(--line-weight) solid var(--accent); border-radius:var(--radius-btn); font-family:var(--font-ui); font-size:15px; font-weight:var(--button-weight); letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; }
-    .pdp-btn:hover { background:var(--accent-deep); border-color:var(--accent-deep); }
+    .pdp-btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:48px; padding:0 22px; background:var(--accent); color:var(--accent-ink); border:var(--line-weight) solid var(--accent); border-radius:var(--radius-btn); font-family:var(--font-ui); font-size:15px; font-weight:var(--button-weight); letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; transition:background .18s ease, border-color .18s ease, color .18s ease, transform .18s ease, box-shadow .18s ease; }
+    .pdp-btn:hover { background:var(--accent-deep); border-color:var(--accent-deep); transform:translateY(-1px); box-shadow:0 10px 22px color-mix(in srgb, var(--accent) 28%, transparent); }
+    .pdp-btn:active { transform:translateY(0); box-shadow:0 3px 8px color-mix(in srgb, var(--accent) 22%, transparent); }
     .pdp-btn.is-done { background:var(--ok); border-color:var(--ok); color:var(--status-ink); }
     .pdp-btn-static { cursor:default; }
-    .pdp-btn-ghost { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:48px; padding:0 20px; background:transparent; color:var(--text); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-btn); font-family:var(--font-ui); font-size:14px; letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; }
-    .pdp-btn-ghost:hover { border-color:var(--accent); color:var(--accent); }
+    .pdp-btn-ghost { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:48px; padding:0 20px; background:transparent; color:var(--text); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-btn); font-family:var(--font-ui); font-size:14px; letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; transition:background .18s ease, border-color .18s ease, color .18s ease, transform .18s ease, box-shadow .18s ease; }
+    .pdp-btn-ghost:hover { border-color:var(--accent); color:var(--accent); background:var(--accent-faint); }
+    .pdp-btn-ghost:active { transform:translateY(1px); }
     .pdp-btn-ghost[aria-pressed="true"] { border-color:var(--accent); color:var(--accent); background:var(--accent-faint); }
+    .pdp-btn-wish[aria-pressed="true"] svg path { fill:currentColor; }
     .pdp-btn-sm { min-height:48px; padding:0 16px; font-size:13px; }
-    .pdp-btn:disabled, .pdp-btn-ghost:disabled { opacity:.45; cursor:not-allowed; }
+    .pdp-btn:disabled, .pdp-btn-ghost:disabled { background:var(--disabled-surface); border-color:var(--disabled-border); color:var(--disabled-ink); cursor:not-allowed; transform:none; box-shadow:none; }
+    /* The notify action disables itself as confirmation, so it reads as a
+       done state rather than an unavailable one. */
+    .pdp-btn-ghost[data-pdp-notify]:disabled { background:var(--ok-wash); border-color:var(--ok-line); color:var(--ok); cursor:default; }
 
     .pdp-price-row { display:flex; flex-wrap:wrap; align-items:baseline; gap:10px; margin:0 0 6px; }
-    .pdp-price { font-family:var(--font-ui); font-size:28px; font-weight:600; color:var(--text); font-variant-numeric:tabular-nums; }
+    .pdp-price { font-family:var(--font-display); font-size:29px; font-weight:600; letter-spacing:-0.01em; color:var(--text); font-variant-numeric:tabular-nums; }
     .pdp-price-rrp { font-family:var(--font-ui); font-size:15px; color:var(--text-4); text-decoration:line-through; }
     .pdp-price-unit { font-family:var(--font-ui); font-size:13px; color:var(--text-3); }
     .pdp-price-from { font-family:var(--font-ui); font-size:14px; color:var(--text-3); }
     .pdp-price-note { font-family:var(--font-body); font-size:13px; color:var(--text-3); margin:0 0 14px; }
     .pdp-save { display:inline-block; font-family:var(--font-ui); font-size:13px; color:var(--ok); background:var(--ok-wash); border-radius:var(--radius-pill); padding:4px 12px; margin:0; }
-    .pdp-badge-accent { font-family:var(--font-ui); font-size:12px; letter-spacing:.04em; color:var(--sale-ink); background:var(--sale); border-radius:var(--radius-pill); padding:4px 11px; }
+    .pdp-badge-accent { font-family:var(--font-ui); font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--sale-ink); background:var(--sale); border-radius:var(--radius-pill); padding:4px 10px; }
 
     .pdp-stars { position:relative; display:inline-block; line-height:0; color:var(--rating-empty); }
     .pdp-stars-bg, .pdp-stars-fg { display:flex; gap:2px; }
@@ -804,28 +813,45 @@
     /* ---- T320 gallery ---- */
     .pdp-gallery { display:grid; grid-template-columns:1fr; gap:12px; max-width:460px; }
     .pdp-gal-stage { position:relative; aspect-ratio:4/5; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); overflow:hidden; background:var(--bg-3); }
+    /* A thin inner line inset from the edge, so the artwork reads as a card
+       sitting in a mat rather than a raw gradient panel. */
+    .pdp-gal-stage::after { content:""; position:absolute; inset:10px; border:var(--line-weight) solid color-mix(in srgb, var(--text) 22%, transparent); border-radius:calc(var(--radius-card) - 8px); pointer-events:none; }
     .pdp-gal-img { position:absolute; inset:0; transition:transform .35s ease; transform-origin:60% 40%; }
+    /* Crossfade on thumb switch: the stage keeps the previous art as its own
+       ground while the incoming image fades over it. */
+    .pdp-gal-img.is-swap { animation:pdp-fade .32s ease; }
     .pdp-gal-stage.is-zoomed .pdp-gal-img { transform:scale(1.7); }
     .pdp-gal-caption { position:absolute; left:12px; bottom:12px; font-family:var(--font-ui); font-size:12px; color:var(--text); background:var(--bg-2); border:var(--line-weight) solid var(--border); border-radius:var(--radius-pill); padding:6px 12px; }
     .pdp-gal-count { position:absolute; left:12px; top:12px; font-family:var(--font-mono); font-size:11px; color:var(--text-2); background:var(--bg-2); border:var(--line-weight) solid var(--border); border-radius:var(--radius-pill); padding:5px 10px; }
     .pdp-gal-zoom { position:absolute; right:12px; top:12px; display:inline-flex; align-items:center; gap:8px; min-height:48px; padding:0 14px; font-family:var(--font-ui); font-size:12px; letter-spacing:var(--button-tracking); text-transform:var(--button-transform); color:var(--text); background:var(--bg-2); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-pill); cursor:pointer; }
+    .pdp-gal-zoom { transition:background .18s ease, border-color .18s ease, color .18s ease; }
     .pdp-gal-zoom:hover { border-color:var(--accent); color:var(--accent); }
     .pdp-gal-zoom[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
     .pdp-gal-rail { display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; }
-    .pdp-gal-thumb { padding:0; background:none; border:var(--line-weight) solid var(--border); border-radius:var(--radius); overflow:hidden; cursor:pointer; aspect-ratio:1/1; min-height:64px; }
-    .pdp-gal-thumb:hover { border-color:var(--border-3); }
-    .pdp-gal-thumb[aria-pressed="true"] { border-color:var(--accent); box-shadow:0 0 0 2px var(--accent-faint); }
-    .pdp-gal-chip { display:block; width:100%; height:100%; }
+    .pdp-gal-thumb { padding:0; background:none; border:var(--line-weight) solid var(--border); border-radius:var(--radius); overflow:hidden; cursor:pointer; aspect-ratio:1/1; min-height:64px; transition:border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+    .pdp-gal-thumb:hover { border-color:var(--border-3); transform:translateY(-2px); }
+    .pdp-gal-thumb[aria-pressed="true"] { border-color:var(--accent); box-shadow:0 0 0 2px var(--bg), 0 0 0 4px var(--accent); }
+    .pdp-gal-chip { display:block; width:100%; height:100%; transition:transform .3s ease; }
+    .pdp-gal-thumb:hover .pdp-gal-chip { transform:scale(1.05); }
 
     /* ---- T321 buy box ---- */
-    .pdp-buy-layout { display:grid; grid-template-columns:minmax(220px, 340px) 1fr; gap:28px; align-items:start; }
-    .pdp-buy-media { aspect-ratio:4/5; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); }
-    .pdp-title { font-family:var(--font-display); font-size:26px; color:var(--text); margin:0 0 12px; }
-    .pdp-rating { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+    .pdp-buy-layout { display:grid; grid-template-columns:minmax(220px, 340px) 1fr; gap:32px; align-items:start; }
+    .pdp-buy-media { position:relative; aspect-ratio:4/5; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); overflow:hidden; }
+    .pdp-buy-media::before { content:""; position:absolute; inset:10px; border:var(--line-weight) solid color-mix(in srgb, var(--text) 22%, transparent); border-radius:calc(var(--radius-card) - 8px); }
+    /* The moon over the landmark: a small disc in the accent-light token with
+       a slow breathing glow. Decorative only; the media div is aria-hidden. */
+    .pdp-buy-media::after { content:""; position:absolute; top:13%; right:16%; width:52px; height:52px; border-radius:var(--radius-pill); background:var(--accent-light); box-shadow:0 0 22px color-mix(in srgb, var(--accent-light) 50%, transparent); animation:pdp-moon-glow 7s ease-in-out infinite; }
+    .pdp-title { font-family:var(--font-display); font-size:34px; font-weight:var(--heading-weight); line-height:1.12; color:var(--text); margin:0 0 14px; }
+    .pdp-rating { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
     .pdp-rating-num { font-family:var(--font-ui); font-size:14px; color:var(--text-2); }
     .pdp-rating-link { font-family:var(--font-ui); font-size:14px; color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
-    .pdp-lede { font-family:var(--font-body); font-size:15px; line-height:1.65; color:var(--text-2); margin:14px 0 12px; max-width:56ch; }
-    .pdp-lede-list { margin:0 0 20px; padding-left:20px; font-family:var(--font-body); font-size:14px; line-height:1.7; color:var(--text-3); }
+    .pdp-buy .pdp-price-row { border-top:var(--line-weight) solid var(--border); padding-top:18px; margin-top:2px; }
+    .pdp-buy .pdp-price { font-size:32px; }
+    .pdp-lede { font-family:var(--font-body); font-size:15px; line-height:1.65; color:var(--text-2); margin:16px 0 14px; max-width:56ch; }
+    .pdp-lede-list { list-style:none; margin:0 0 22px; padding:0; font-family:var(--font-body); font-size:14px; line-height:1.7; color:var(--text-3); }
+    .pdp-lede-list li { position:relative; padding-left:18px; }
+    /* Tiny moon-phase dots as list markers, in the accent-light token. */
+    .pdp-lede-list li::before { content:""; position:absolute; left:0; top:.55em; width:7px; height:7px; border-radius:var(--radius-pill); background:var(--accent-light); }
     .pdp-buy-actions { display:flex; flex-wrap:wrap; gap:12px; }
     .pdp-buy-actions .pdp-btn { flex:1 1 200px; }
 
@@ -836,10 +862,10 @@
     .pdp-legend-value { font-family:var(--font-ui); font-size:14px; letter-spacing:normal; text-transform:none; color:var(--text); }
     .pdp-swatches { display:flex; flex-wrap:wrap; gap:16px; }
     .pdp-swatch { display:flex; flex-direction:column; align-items:center; gap:7px; width:76px; cursor:pointer; }
-    .pdp-swatch-dot { width:46px; height:46px; border-radius:var(--radius-pill); background:var(--pdp-sw); border:var(--line-weight) solid var(--border-2); box-shadow:inset 0 0 0 3px var(--bg-2); }
-    .pdp-swatch:hover .pdp-swatch-dot { border-color:var(--text-3); }
-    .pdp-swatch:has(input:checked) .pdp-swatch-dot { border-color:var(--accent); border-width:3px; }
-    .pdp-swatch-name { font-family:var(--font-ui); font-size:12px; color:var(--text-2); text-align:center; }
+    .pdp-swatch-dot { width:46px; height:46px; border-radius:var(--radius-pill); background:var(--pdp-sw); border:var(--line-weight) solid var(--border-2); box-shadow:inset 0 0 0 3px var(--bg-2); transition:border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+    .pdp-swatch:hover .pdp-swatch-dot { border-color:var(--text-3); transform:scale(1.05); }
+    .pdp-swatch:has(input:checked) .pdp-swatch-dot { border-color:var(--accent); box-shadow:inset 0 0 0 3px var(--bg-2), 0 0 0 3px var(--accent-faint); }
+    .pdp-swatch-name { font-family:var(--font-ui); font-size:12px; color:var(--text-2); text-align:center; transition:color .18s ease; }
     .pdp-swatch:has(input:checked) .pdp-swatch-name { color:var(--text); }
     .pdp-swatch.is-soldout { cursor:not-allowed; }
     .pdp-swatch.is-soldout .pdp-swatch-dot { opacity:.4; position:relative; }
@@ -849,9 +875,9 @@
     .pdp-swatch input:focus-visible + .pdp-swatch-dot { outline: var(--focus-ring); outline-offset:3px; }
 
     .pdp-sizes { display:flex; flex-wrap:wrap; gap:10px; }
-    .pdp-size { position:relative; display:inline-flex; align-items:center; justify-content:center; min-width:56px; min-height:48px; padding:0 14px; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius); font-family:var(--font-ui); font-size:14px; color:var(--text-2); background:var(--bg-card); cursor:pointer; }
+    .pdp-size { position:relative; display:inline-flex; align-items:center; justify-content:center; min-width:56px; min-height:48px; padding:0 14px; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius); font-family:var(--font-ui); font-size:14px; color:var(--text-2); background:var(--bg-card); cursor:pointer; transition:background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease; }
     .pdp-size:hover { border-color:var(--text-3); color:var(--text); }
-    .pdp-size:has(input:checked) { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
+    .pdp-size:has(input:checked) { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); box-shadow:0 6px 16px color-mix(in srgb, var(--accent) 22%, transparent); }
     .pdp-size.is-unavailable, .pdp-size.is-soldout { cursor:not-allowed; color:var(--text-4); background:var(--bg-3); border-style:dashed; }
     .pdp-size.is-soldout { border-style:solid; }
     .pdp-size.is-soldout::after { content:""; position:absolute; left:6px; right:6px; top:50%; height:var(--line-weight); background:var(--text-4); transform:rotate(-18deg); }
@@ -863,14 +889,22 @@
     .pdp-key-una { background:var(--bg-3); border-style:dashed; }
     .pdp-key-out { background:var(--bg-3); position:relative; overflow:hidden; }
     .pdp-key-out::after { content:""; position:absolute; left:-2px; right:-2px; top:50%; height:var(--line-weight); background:var(--text-4); transform:rotate(-38deg); }
-    .pdp-variant-live { font-family:var(--font-ui); font-size:13px; color:var(--text-2); background:var(--bg-3); border:var(--line-weight) solid var(--border); border-radius:var(--radius); padding:10px 14px; margin:0; }
+    /* The live selection line, presented as a designed status pill rather
+       than a plain grey strip: accent wash, hairline in the accent, and a
+       small accent disc standing in for the moon. */
+    .pdp-variant-live { display:flex; align-items:center; gap:10px; font-family:var(--font-ui); font-size:13px; color:var(--text-2); background:var(--accent-wash); border:var(--line-weight) solid var(--accent-line); border-radius:var(--radius-btn); padding:12px 18px; margin:0; }
+    .pdp-variant-live::before { content:""; flex:none; width:8px; height:8px; border-radius:var(--radius-pill); background:var(--accent); }
 
     /* ---- T323 quantity ---- */
     .pdp-qty-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:24px; }
-    .pdp-qty { display:inline-flex; align-items:center; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius); background:var(--bg-card); overflow:hidden; }
-    .pdp-qty-btn { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; background:transparent; border:0; color:var(--text); cursor:pointer; }
+    /* The stepper takes the button radius, so it reads as a pill control in
+       the theme where buttons are pills and stays square where they are. */
+    .pdp-qty { display:inline-flex; align-items:center; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-btn); background:var(--bg-card); overflow:hidden; }
+    .pdp-qty-btn { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; background:transparent; border:0; color:var(--text); cursor:pointer; transition:background .15s ease, color .15s ease; }
+    .pdp-qty-btn svg { transition:transform .15s ease; }
     .pdp-qty-btn:hover:not(:disabled) { background:var(--accent-faint); color:var(--accent); }
-    .pdp-qty-btn:disabled { color:var(--text-4); cursor:not-allowed; }
+    .pdp-qty-btn:active:not(:disabled) svg { transform:scale(.82); }
+    .pdp-qty-btn:disabled { color:var(--disabled-ink); background:var(--disabled-surface); cursor:not-allowed; }
     .pdp-qty-input { width:64px; height:48px; text-align:center; border:0; border-left:var(--line-weight) solid var(--border); border-right:var(--line-weight) solid var(--border); background:var(--bg-card); color:var(--text); font-family:var(--font-ui); font-size:16px; font-variant-numeric:tabular-nums; -moz-appearance:textfield; }
     .pdp-qty-input::-webkit-outer-spin-button, .pdp-qty-input::-webkit-inner-spin-button { -webkit-appearance:none; margin:0; }
     .pdp-qty-input:focus-visible { outline: var(--focus-ring); outline-offset:-2px; }
@@ -879,7 +913,7 @@
 
     /* ---- T324 price block ---- */
     .pdp-price-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:18px; }
-    .pdp-price-case { border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:18px; }
+    .pdp-price-case { border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:20px 22px; }
     .pdp-price-case .pdp-price-note { margin-bottom:0; }
     .pdp-price-case-wide { grid-column:1 / -1; }
     .pdp-instal { display:flex; align-items:center; gap:14px; }
@@ -895,7 +929,7 @@
     .pdp-stock-sub { font-family:var(--font-body); font-size:13px; line-height:1.55; color:var(--text-3); margin:0; }
     .pdp-stock-icon { flex:none; color:var(--accent); margin-top:2px; }
     .pdp-dot { flex:none; width:10px; height:10px; border-radius:var(--radius-pill); margin-top:6px; }
-    .pdp-dot-ok { background:var(--ok); }
+    .pdp-dot-ok { background:var(--ok); animation:pdp-pulse 2.8s ease-out infinite; }
     .pdp-dot-warn { background:var(--warn); }
     .pdp-dot-err { background:var(--err); }
     .pdp-stock-low { background:var(--warn-wash); border-color:var(--warn); }
@@ -903,8 +937,8 @@
     .pdp-stock-out { background:var(--err-wash); border-color:var(--err); }
     .pdp-stock-out .pdp-stock-title { color:var(--err); }
     .pdp-stock-live { background:var(--accent-wash); }
-    .pdp-bar { height:8px; border-radius:var(--radius-pill); background:var(--bg-3); overflow:hidden; margin:8px 0; }
-    .pdp-bar-fill { display:block; height:100%; background:var(--warn); }
+    .pdp-bar { height:8px; border-radius:var(--radius-pill); background:var(--track); overflow:hidden; margin:10px 0; }
+    .pdp-bar-fill { display:block; height:100%; border-radius:var(--radius-pill); background:var(--warn); transform-origin:left center; animation:pdp-bar-grow 1s ease .15s backwards; }
     .pdp-stock-out .pdp-btn-ghost { margin-top:12px; }
 
     /* ---- T326 delivery ---- */
@@ -916,16 +950,20 @@
     .pdp-ship-row { display:flex; align-items:flex-end; gap:10px; flex-wrap:wrap; }
     .pdp-field { flex:1 1 160px; }
     .pdp-label { display:block; font-family:var(--font-eyebrow); font-size:11px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-4); margin-bottom:6px; }
-    .pdp-input { width:100%; height:48px; padding:0 14px; background:var(--bg-3); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius); color:var(--text); font-family:var(--font-ui); font-size:15px; }
+    .pdp-input { width:100%; height:48px; padding:0 14px; background:var(--bg-3); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius); color:var(--text); font-family:var(--font-ui); font-size:15px; transition:border-color .18s ease, background .18s ease; }
     .pdp-input::placeholder { color:var(--text-4); }
     .pdp-input:focus-visible { outline: var(--focus-ring); outline-offset:1px; }
     .pdp-input.is-error { border-color:var(--err); }
     .pdp-ship-out { margin-top:14px; }
     .pdp-ship-hint { font-family:var(--font-body); font-size:13px; color:var(--text-4); margin:0; }
-    .pdp-ship-result { border:var(--line-weight) solid var(--ok); background:var(--ok-wash); border-radius:var(--radius); padding:12px 14px; }
+    /* The result presented as a designed line: soft wash, hairline in the
+       status colour, the delivery window led by a status disc, and a gentle
+       rise-in on arrival. */
+    .pdp-ship-result { border:var(--line-weight) solid var(--ok-line); background:var(--ok-wash); border-radius:var(--radius); padding:14px 16px; animation:pdp-rise .25s ease; }
     .pdp-ship-result p { margin:0; font-family:var(--font-body); font-size:13px; color:var(--text-2); }
-    .pdp-ship-result .pdp-ship-window { font-family:var(--font-ui); font-size:14px; color:var(--ok); margin-bottom:4px; }
-    .pdp-ship-error { display:flex; align-items:flex-start; gap:9px; border:var(--line-weight) solid var(--err); background:var(--err-wash); border-radius:var(--radius); padding:12px 14px; font-family:var(--font-body); font-size:13px; color:var(--err); }
+    .pdp-ship-result .pdp-ship-window { display:flex; align-items:center; gap:9px; font-family:var(--font-ui); font-size:15px; font-weight:600; color:var(--ok); margin-bottom:5px; }
+    .pdp-ship-result .pdp-ship-window::before { content:""; flex:none; width:8px; height:8px; border-radius:var(--radius-pill); background:var(--ok); }
+    .pdp-ship-error { display:flex; align-items:flex-start; gap:9px; border:var(--line-weight) solid var(--err-line); background:var(--err-wash); border-radius:var(--radius); padding:14px 16px; font-family:var(--font-body); font-size:13px; color:var(--err); animation:pdp-rise .25s ease; }
 
     /* ---- T327 sticky bar ---- */
     .pdp-sticky-demo { display:flex; flex-direction:column; gap:14px; }
@@ -939,24 +977,25 @@
     .pdp-sticky-h { font-family:var(--font-display); font-size:20px; color:var(--text); margin:0 0 10px; }
     .pdp-sticky-buybox .pdp-btn { margin-top:10px; }
     .pdp-sticky-copy { font-family:var(--font-body); font-size:14px; line-height:1.7; color:var(--text-3); margin:0 0 14px; max-width:62ch; }
-    .pdp-sticky-bar { position:absolute; left:0; right:0; bottom:0; display:flex; align-items:center; gap:14px; padding:12px 16px; background:var(--bg-2); border-top:var(--line-weight) solid var(--border-2); transform:translateY(110%); transition:transform .28s ease; }
+    .pdp-sticky-bar { position:absolute; left:0; right:0; bottom:0; display:flex; align-items:center; gap:14px; padding:12px 16px; background:var(--bg-2); border-top:var(--line-weight) solid var(--border-2); box-shadow:var(--shadow-overlay); transform:translateY(110%); transition:transform .3s cubic-bezier(.22,.85,.35,1); }
     .pdp-sticky-bar.is-visible { transform:translateY(0); }
     .pdp-sticky-thumb { flex:none; width:44px; height:44px; border-radius:var(--radius-sm); border:var(--line-weight) solid var(--border); }
     .pdp-sticky-meta { flex:1; min-width:0; display:flex; flex-direction:column; gap:2px; }
     .pdp-sticky-name { font-family:var(--font-ui); font-size:14px; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
     .pdp-sticky-variant { font-family:var(--font-body); font-size:12px; color:var(--text-3); }
     .pdp-sticky-price { font-family:var(--font-ui); font-size:16px; font-weight:600; color:var(--text); font-variant-numeric:tabular-nums; }
-    @media (prefers-reduced-motion: reduce) { .pdp-sticky-bar, .pdp-gal-img, .pdp-acc-mark { transition:none; } }
 
     /* ---- T328 accordion ---- */
     .pdp-acc { border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); overflow:hidden; max-width:760px; }
     .pdp-acc-item + .pdp-acc-item { border-top:var(--line-weight) solid var(--border); }
-    .pdp-acc-sum { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:56px; padding:14px 18px; cursor:pointer; list-style:none; font-family:var(--font-ui); font-size:15px; color:var(--text); }
+    .pdp-acc-sum { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:56px; padding:16px 20px; cursor:pointer; list-style:none; font-family:var(--font-ui); font-size:15px; color:var(--text); transition:background .18s ease, color .18s ease; }
     .pdp-acc-sum::-webkit-details-marker { display:none; }
-    .pdp-acc-sum:hover { color:var(--accent); }
-    .pdp-acc-mark { flex:none; color:var(--text-3); transition:transform .25s ease; }
+    .pdp-acc-sum:hover { color:var(--accent); background:var(--bg-2); }
+    .pdp-acc-item[open] > .pdp-acc-sum { color:var(--accent); }
+    .pdp-acc-mark { flex:none; color:var(--text-3); transition:transform .25s ease, color .18s ease; }
     .pdp-acc-item[open] .pdp-acc-mark { transform:rotate(180deg); color:var(--accent); }
-    .pdp-acc-body { padding:0 18px 18px; }
+    .pdp-acc-body { padding:2px 20px 20px; }
+    .pdp-acc-item[open] .pdp-acc-body { animation:pdp-acc-open .28s ease; }
     .pdp-acc-body p { font-family:var(--font-body); font-size:14px; line-height:1.7; color:var(--text-2); margin:0 0 12px; max-width:66ch; }
     .pdp-acc-body p:last-child { margin-bottom:0; }
     .pdp-dl { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:10px 24px; margin:0; }
@@ -974,8 +1013,10 @@
     /* ---- T330 bundle ---- */
     .pdp-bundle { border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:20px; }
     .pdp-bundle-items { display:flex; align-items:stretch; gap:12px; flex-wrap:wrap; }
-    .pdp-bundle-item { flex:1 1 220px; display:flex; align-items:center; gap:12px; border:var(--line-weight) solid var(--border); border-radius:var(--radius); background:var(--bg-2); padding:12px; cursor:pointer; }
-    .pdp-bundle-item:has(input:checked) { border-color:var(--accent); }
+    .pdp-bundle-item { flex:1 1 220px; display:flex; align-items:center; gap:12px; border:var(--line-weight) solid var(--border); border-radius:var(--radius); background:var(--bg-2); padding:12px; cursor:pointer; transition:border-color .18s ease, box-shadow .18s ease; }
+    .pdp-bundle-item:hover { border-color:var(--border-3); }
+    .pdp-bundle-item:has(input:checked) { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent-line); }
+    .pdp-bundle-thumb, .pdp-bundle-info { transition:opacity .2s ease; }
     .pdp-bundle-item:has(input:not(:checked)) .pdp-bundle-thumb, .pdp-bundle-item:has(input:not(:checked)) .pdp-bundle-info { opacity:.5; }
     .pdp-bundle-thumb { flex:none; width:56px; height:56px; border-radius:var(--radius-sm); border:var(--line-weight) solid var(--border); }
     .pdp-bundle-info { display:flex; flex-direction:column; gap:2px; min-width:0; flex:1; }
@@ -993,12 +1034,13 @@
     .pdp-rail-head { display:flex; align-items:center; justify-content:space-between; gap:16px; }
     .pdp-rail-title { font-family:var(--font-display); font-size:19px; color:var(--text); margin:0; }
     .pdp-rail-nav { display:flex; gap:8px; }
-    .pdp-rail-btn { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; background:transparent; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-pill); color:var(--text-2); cursor:pointer; }
-    .pdp-rail-btn:hover { border-color:var(--accent); color:var(--accent); }
-    .pdp-rail { display:flex; gap:14px; list-style:none; margin:0; padding:2px 2px 12px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:thin; }
-    .pdp-rail-card { flex:0 0 194px; scroll-snap-align:start; display:flex; flex-direction:column; gap:6px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:12px; }
-    .pdp-rail-card:hover { border-color:var(--border-3); }
-    .pdp-rail-thumb { display:block; aspect-ratio:1/1; border-radius:var(--radius); border:var(--line-weight) solid var(--border); margin-bottom:4px; }
+    .pdp-rail-btn { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; background:transparent; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-pill); color:var(--text-2); cursor:pointer; transition:border-color .18s ease, color .18s ease, background .18s ease; }
+    .pdp-rail-btn:hover { border-color:var(--accent); color:var(--accent); background:var(--accent-faint); }
+    .pdp-rail { display:flex; gap:14px; list-style:none; margin:0; padding:6px 2px 14px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:thin; }
+    .pdp-rail-card { flex:0 0 194px; scroll-snap-align:start; display:flex; flex-direction:column; gap:6px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:12px; transition:border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+    .pdp-rail-card:hover { border-color:var(--border-3); transform:translateY(-3px); box-shadow:0 12px 26px color-mix(in srgb, var(--text) 10%, transparent); }
+    .pdp-rail-thumb { position:relative; display:block; aspect-ratio:1/1; border-radius:var(--radius); border:var(--line-weight) solid var(--border); margin-bottom:4px; overflow:hidden; }
+    .pdp-rail-thumb::after { content:""; position:absolute; inset:7px; border:var(--line-weight) solid color-mix(in srgb, var(--text) 20%, transparent); border-radius:calc(var(--radius) - 5px); }
     .pdp-rail-name { font-family:var(--font-ui); font-size:14px; color:var(--text); }
     .pdp-rail-meta { font-family:var(--font-body); font-size:12px; color:var(--text-3); }
     .pdp-rail-price { font-family:var(--font-ui); font-size:15px; font-weight:600; color:var(--text); font-variant-numeric:tabular-nums; }
@@ -1007,8 +1049,11 @@
 
     /* ---- T332 spec table ---- */
     .pdp-spec { border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:20px; max-width:760px; }
-    .pdp-spec-head { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:14px; }
-    .pdp-spec-title { font-family:var(--font-display); font-size:19px; color:var(--text); margin:0; }
+    .pdp-spec-head { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:16px; }
+    .pdp-spec-title { font-family:var(--font-display); font-size:22px; color:var(--text); margin:0; }
+    /* The one accent moment on the spec card: a short accent-light strip
+       under the display title. */
+    .pdp-spec-title::after { content:""; display:block; width:44px; height:4px; margin-top:8px; border-radius:var(--radius-pill); background:var(--accent-light); }
     .pdp-table { width:100%; border-collapse:collapse; }
     .pdp-table th, .pdp-table td { text-align:left; padding:11px 12px 11px 0; border-top:var(--line-weight) solid var(--border); font-size:14px; vertical-align:top; }
     .pdp-table tbody tr:first-child th, .pdp-table tbody tr:first-child td { border-top:0; }
@@ -1016,19 +1061,49 @@
     .pdp-table td { font-family:var(--font-body); color:var(--text); }
     .pdp-sku { font-family:var(--font-mono); }
     .pdp-table-grid th, .pdp-table-grid td { padding:10px 12px; border:var(--line-weight) solid var(--border); font-family:var(--font-ui); }
-    .pdp-table-grid thead th { background:var(--bg-3); color:var(--text-2); font-size:12px; letter-spacing:.04em; text-transform:uppercase; }
+    /* Branded header row: the stronger accent wash carrying the heading ink. */
+    .pdp-table-grid thead th { background:var(--accent-wash-2); color:var(--text-2); font-size:12px; letter-spacing:.06em; text-transform:uppercase; border-color:var(--accent-wash-2); }
     .pdp-table-grid th[scope="row"] { width:auto; color:var(--text); }
     .pdp-table-grid tbody tr:first-child th, .pdp-table-grid tbody tr:first-child td { border-top:var(--line-weight) solid var(--border); }
 
-    .pdp-dialog { width:min(520px, 92vw); padding:0; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg-2); color:var(--text); }
+    .pdp-dialog { width:min(520px, 92vw); padding:0; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg-2); color:var(--text); overflow:hidden; box-shadow:var(--shadow-overlay); }
+    .pdp-dialog[open] { animation:pdp-dialog-in .28s ease; }
     .pdp-dialog::backdrop { background: var(--scrim); }
-    .pdp-dialog-head { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 18px; border-bottom:var(--line-weight) solid var(--border); }
-    .pdp-dialog-title { font-family:var(--font-display); font-size:19px; margin:0; }
-    .pdp-dialog-close { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; background:transparent; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-pill); color:var(--text-2); cursor:pointer; }
-    .pdp-dialog-close:hover { border-color:var(--accent); color:var(--accent); }
+    .pdp-dialog[open]::backdrop { animation:pdp-fade .3s ease; }
+    /* The dialog opens with a solid accent band carrying the title, the one
+       strong colour moment of the block. */
+    .pdp-dialog-head { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 18px; background:var(--accent); }
+    .pdp-dialog-title { font-family:var(--font-display); font-size:20px; margin:0; color:var(--accent-ink); }
+    .pdp-dialog-close { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; background:transparent; border:var(--line-weight) solid color-mix(in srgb, var(--accent-ink) 45%, transparent); border-radius:var(--radius-pill); color:var(--accent-ink); cursor:pointer; transition:background .18s ease, border-color .18s ease; }
+    .pdp-dialog-close:hover { border-color:var(--accent-ink); background:color-mix(in srgb, var(--accent-ink) 14%, transparent); }
+    .pdp-dialog-close:focus-visible { outline:var(--line-weight) solid var(--accent-ink); outline-offset:2px; }
     .pdp-dialog-body { padding:18px; }
     .pdp-dialog-sub, .pdp-dialog-note { font-family:var(--font-body); font-size:13px; line-height:1.6; color:var(--text-3); margin:0 0 14px; }
     .pdp-dialog-note { margin:14px 0 0; }
+
+    /* ---- motion ----
+       All entrances are one-time and slow; everything is switched off
+       wholesale under prefers-reduced-motion and each block reads the
+       same with motion off. */
+    @keyframes pdp-fade { from { opacity:0; } }
+    @keyframes pdp-rise { from { opacity:0; transform:translateY(6px); } }
+    @keyframes pdp-bar-grow { from { transform:scaleX(0); } }
+    @keyframes pdp-acc-open { from { opacity:0; transform:translateY(-6px); } }
+    @keyframes pdp-dialog-in { from { opacity:0; transform:translateY(12px) scale(.98); } }
+    @keyframes pdp-moon-glow {
+      0%, 100% { box-shadow:0 0 18px color-mix(in srgb, var(--accent-light) 45%, transparent); }
+      50% { box-shadow:0 0 34px color-mix(in srgb, var(--accent-light) 75%, transparent); }
+    }
+    @keyframes pdp-pulse {
+      0% { box-shadow:0 0 0 0 color-mix(in srgb, var(--ok) 35%, transparent); }
+      70%, 100% { box-shadow:0 0 0 8px transparent; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      [class^="pdp-"], [class*=" pdp-"],
+      [class^="pdp-"]::before, [class*=" pdp-"]::before,
+      [class^="pdp-"]::after, [class*=" pdp-"]::after,
+      .pdp-dialog::backdrop { transition:none !important; animation:none !important; }
+    }
 
     /* ---- responsive ---- */
     @media (max-width: 720px) {
@@ -1063,7 +1138,15 @@
             thumbs.forEach(function (t) { t.setAttribute('aria-pressed', 'false'); });
             thumb.setAttribute('aria-pressed', 'true');
             var chip = $('.pdp-gal-chip', thumb);
-            if (galImg && chip) { galImg.style.background = chip.style.background; }
+            if (galImg && chip) {
+              /* Crossfade: park the outgoing art on the stage itself, then
+                 fade the incoming art in over it. */
+              if (stage) { stage.style.background = galImg.style.background || ''; }
+              galImg.style.background = chip.style.background;
+              galImg.classList.remove('is-swap');
+              void galImg.offsetWidth;
+              galImg.classList.add('is-swap');
+            }
             if (galCap) { galCap.textContent = thumb.getAttribute('data-pdp-caption') || ''; }
             if (galCount) { galCount.textContent = (i + 1) + ' of ' + thumbs.length; }
           });

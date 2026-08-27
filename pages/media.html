@@ -56,12 +56,14 @@
         <span class="tb-tid">T281</span>
         <div>
           <h2>Figure with caption</h2>
-          <p>An image block with a number tag and a typeset caption, for docs, articles, and case studies.</p>
+          <p>An image block in an art frame with a number tag and a typeset caption, for docs, articles, and case studies.</p>
         </div>
       </header>
       <div class="tb-demo">
         <figure class="med-figure">
-          <div class="med-fig-img" style="background:linear-gradient(135deg,var(--bg-3),var(--ok-wash))"><span>01/</span></div>
+          <div class="med-fig-frame">
+            <div class="med-fig-img" style="background:linear-gradient(135deg,var(--bg-3),var(--ok-wash))"><span>01/</span></div>
+          </div>
           <figcaption class="med-fig-cap"><span class="med-fig-tag">Fig 1</span> January. Byron Bay Lighthouse under a full moon, the first card in the deck.</figcaption>
         </figure>
       </div>
@@ -72,13 +74,13 @@
         <span class="tb-tid">T282</span>
         <div>
           <h2>Video background hero</h2>
-          <p>A full-bleed hero with a looping video (or gradient) behind a darkening scrim and the headline.</p>
+          <p>A full-bleed hero with a looping video (or gradient) behind a scrim, display type, and a play affordance.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="med-vhero">
           <div class="med-vhero-bg" aria-hidden="true"></div>
-          <span class="med-vhero-play">▶</span>
+          <span class="med-vhero-play" aria-hidden="true">▶</span>
           <div class="med-vhero-content">
             <span class="med-vhero-eyebrow">Short film</span>
             <p class="med-vhero-h1">The ritual, filmed slow</p>
@@ -93,7 +95,7 @@
         <span class="tb-tid">T283</span>
         <div>
           <h2>Alternating feature row</h2>
-          <p>The classic zig-zag: image and copy swapping sides down the page to keep a rhythm.</p>
+          <p>The classic zig-zag: image and copy swapping sides on alternating tint bands to keep a rhythm.</p>
         </div>
       </header>
       <div class="tb-demo">
@@ -129,13 +131,13 @@
       <div class="tb-demo">
         <div class="med-team">
           <div class="med-person">
-            <span class="med-person-av" style="background:linear-gradient(135deg,var(--cat-1),color-mix(in srgb, var(--cat-1) 55%, var(--bg-black)))">AR</span>
+            <span class="med-person-av" style="background:var(--cat-1)">AR</span>
             <span class="med-person-name">Amy Rush</span>
             <span class="med-person-role">Makes Moonrite</span>
             <div class="med-person-links"><a href="#">IG</a></div>
           </div>
           <div class="med-person">
-            <span class="med-person-av" style="background:linear-gradient(135deg,var(--cat-2),color-mix(in srgb, var(--cat-2) 55%, var(--bg-black)))">PS</span>
+            <span class="med-person-av" style="background:var(--cat-2)">PS</span>
             <span class="med-person-name">Paul Smith</span>
             <span class="med-person-role">Friend of Moonrite</span>
             <div class="med-person-links"><a href="#">Web</a></div>
@@ -164,68 +166,98 @@
 
   </main>
   <style>
-    /* 01 Carousel */
+    /* 01 Carousel. Polished controls: solid-surface arrow buttons with a
+       hover halo, pill-growing dot indicators, a smooth slide ease, and a
+       chip-backed caption so the label reads over any slide wash. */
     .med-carousel { position:relative; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); overflow:hidden; }
-    .med-track { display:flex; transition:transform .35s ease; }
-    .med-slide { position:relative; flex:0 0 100%; aspect-ratio:21/9; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
-    .med-slide-mark { font-family:var(--font-display); font-size:40px; font-weight:700; color:color-mix(in srgb, var(--text) 20%, transparent); }
-    .med-slide-cap { font-family:var(--font-ui); font-size:13px; color:color-mix(in srgb, var(--text) 70%, transparent); }
-    .med-arrow { position:absolute; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; cursor:pointer; background: var(--scrim); color:var(--text); border:var(--line-weight) solid color-mix(in srgb, var(--text) 20%, transparent); font-size:18px; line-height:1; }
-    .med-arrow.prev { left:10px; } .med-arrow.next { right:10px; }
-    .med-arrow:hover { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
-    .med-dots { position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:7px; }
-    .med-dot { width:8px; height:8px; border-radius:50%; border:none; cursor:pointer; background:color-mix(in srgb, var(--text) 35%, transparent); padding:0; }
-    .med-dot.is-active { background:var(--accent); }
+    .med-track { display:flex; }
+    @media (prefers-reduced-motion: no-preference) {
+      .med-track { transition:transform .5s cubic-bezier(.22,.61,.36,1); }
+    }
+    .med-slide { position:relative; flex:0 0 100%; aspect-ratio:21/9; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+    .med-slide-mark { font-family:var(--font-display); font-size:clamp(36px,5vw,52px); font-weight:var(--heading-weight); letter-spacing:var(--heading-tracking); color:color-mix(in srgb, var(--text) 22%, transparent); }
+    .med-slide-cap { font-family:var(--font-ui); font-size:12px; letter-spacing:.04em; color:var(--text); background:color-mix(in srgb, var(--bg) 82%, transparent); padding:5px 14px; border-radius:var(--radius-pill); }
+    .med-arrow { position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; cursor:pointer; background:var(--bg-card); color:var(--text); border:var(--line-weight) solid var(--border); font-size:18px; line-height:1; display:grid; place-items:center; transition:background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .med-arrow.prev { left:12px; } .med-arrow.next { right:12px; }
+    .med-arrow:hover { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); box-shadow:0 0 0 6px var(--accent-faint); }
+    .med-arrow:focus-visible, .med-dot:focus-visible { outline:var(--focus-ring); outline-offset:var(--focus-offset); }
+    .med-dots { position:absolute; bottom:8px; left:50%; transform:translateX(-50%); display:flex; gap:2px; background:color-mix(in srgb, var(--bg) 82%, transparent); border-radius:var(--radius-pill); padding:0 4px; }
+    .med-dot { width:26px; height:26px; border:none; cursor:pointer; background:transparent; padding:0; display:grid; place-items:center; }
+    .med-dot::before { content:''; width:8px; height:8px; border-radius:var(--radius-pill); background:color-mix(in srgb, var(--text) 45%, transparent); transition:width .25s ease, background .25s ease; }
+    .med-dot:hover::before { background:color-mix(in srgb, var(--text) 60%, transparent); }
+    .med-dot.is-active::before { width:22px; background:var(--accent); }
 
-    /* 02 Figure */
+    /* 02 Figure. An art-frame mount: bordered mat around the plate, and a
+       ruled, tagged caption beneath. */
     .med-figure { margin:0; max-width:520px; }
-    .med-fig-img { aspect-ratio:16/9; border-radius:var(--radius-card); display:flex; align-items:center; justify-content:center; }
-    .med-fig-img span { font-family:var(--font-display); font-size:32px; font-weight:700; color:color-mix(in srgb, var(--text) 20%, transparent); }
-    .med-fig-cap { font-family:var(--font-body); font-size:13px; line-height:1.5; color:var(--text-3); margin-top:10px; }
-    .med-fig-tag { font-family:var(--font-ui); font-size:11px; color:var(--accent); margin-right:6px; }
+    .med-fig-frame { padding:10px; background:var(--bg-card); border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); }
+    .med-fig-img { aspect-ratio:16/9; border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center; }
+    .med-fig-img span { font-family:var(--font-display); font-size:32px; font-weight:var(--heading-weight); color:color-mix(in srgb, var(--text) 22%, transparent); }
+    .med-fig-cap { font-family:var(--font-body); font-size:13px; line-height:1.55; color:var(--text-3); margin-top:12px; padding-top:10px; border-top:var(--line-weight) solid var(--border); }
+    .med-fig-tag { font-family:var(--font-eyebrow); font-size:10px; font-weight:600; letter-spacing:var(--eyebrow-tracking); text-transform:var(--eyebrow-transform); color:var(--accent); margin-right:8px; }
+    .med-fig-tag::before { content:var(--eyebrow-prefix); }
 
-    /* 03 Video hero */
-    .med-vhero { position:relative; border-radius:var(--radius-card); overflow:hidden; min-height:240px; display:flex; align-items:center; }
-    .med-vhero-bg { position:absolute; inset:0; background:linear-gradient(135deg,var(--warn-wash),var(--bg-2) 70%); }
-    .med-vhero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,color-mix(in srgb, var(--bg-black) 70%, transparent),color-mix(in srgb, var(--bg-black) 20%, transparent)); }
-    .med-vhero-play { position:absolute; top:14px; right:18px; width:40px; height:40px; border-radius:50%; background:color-mix(in srgb, var(--text) 12%, transparent); border:var(--line-weight) solid color-mix(in srgb, var(--text) 25%, transparent); display:flex; align-items:center; justify-content:center; color:var(--text); font-size:14px; }
-    .med-vhero-content { position:relative; z-index:1; padding:28px; }
-    .med-vhero-eyebrow { font-family:var(--font-eyebrow); font-size:12px; letter-spacing:.08em; text-transform:var(--eyebrow-transform); color:var(--accent); }
+    /* 03 Video hero. Composed like a real hero: deep wash ground, a scrim
+       that darkens the text side and leaves the image side clear, display
+       type at scale, and a centred-right play affordance with a slow halo. */
+    .med-vhero { position:relative; border-radius:var(--radius-card); overflow:hidden; min-height:340px; display:flex; align-items:center; }
+    .med-vhero-bg { position:absolute; inset:0; background:linear-gradient(135deg,var(--wash-1b),var(--wash-2b)); }
+    .med-vhero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(80deg,color-mix(in srgb, var(--bg-black) 82%, transparent) 20%,color-mix(in srgb, var(--bg-black) 45%, transparent) 55%,color-mix(in srgb, var(--bg-black) 10%, transparent)); }
+    .med-vhero-play { position:absolute; z-index:1; top:50%; right:9%; transform:translateY(-50%); width:64px; height:64px; border-radius:50%; background:color-mix(in srgb, var(--bg) 22%, transparent); border:var(--line-weight) solid color-mix(in srgb, var(--text) 35%, transparent); display:flex; align-items:center; justify-content:center; color:var(--text); font-size:18px; padding-left:4px; }
+    @media (prefers-reduced-motion: no-preference) {
+      .med-vhero-play::after { content:''; position:absolute; inset:calc(var(--line-weight) * -1); border-radius:50%; border:var(--line-weight) solid color-mix(in srgb, var(--text) 35%, transparent); animation:med-halo 3.2s ease-out infinite; }
+    }
+    @keyframes med-halo { 0% { transform:scale(1); opacity:.8; } 70%, 100% { transform:scale(1.55); opacity:0; } }
+    .med-vhero-content { position:relative; z-index:1; padding:44px 40px; max-width:60%; }
+    .med-vhero-eyebrow { font-family:var(--font-eyebrow); font-size:12px; letter-spacing:var(--eyebrow-tracking); text-transform:var(--eyebrow-transform); color:var(--accent); }
     .med-vhero-eyebrow::before { content:var(--eyebrow-prefix); }
-    .med-vhero-h1 { font-family:var(--font-display); font-size:clamp(22px,3vw,30px); font-weight:600; color:var(--text); margin:10px 0 16px; }
-    .med-vhero-cta { font-family:var(--font-ui); font-size:13px; font-weight:600; cursor:pointer; color:var(--accent-ink); background:var(--accent); border:none; border-radius:var(--radius-btn); padding:11px 20px; }
+    .med-vhero-h1 { font-family:var(--font-display); font-size:clamp(30px,4.5vw,46px); font-weight:var(--heading-weight); letter-spacing:var(--heading-tracking); line-height:1.1; color:var(--text); margin:14px 0 22px; }
+    .med-vhero-cta { display:inline-flex; align-items:center; min-height:48px; font-family:var(--font-ui); font-size:13px; font-weight:var(--button-weight); letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; color:var(--accent-ink); background:var(--accent); border:none; border-radius:var(--radius-btn); padding:0 26px; transition:background .2s ease, transform .15s ease; }
+    .med-vhero-cta:hover { background:var(--accent-hover); }
+    .med-vhero-cta:active { transform:translateY(1px); }
+    .med-vhero-cta:focus-visible { outline:var(--focus-ring); outline-offset:var(--focus-offset); }
 
-    /* 04 Zig-zag */
-    .med-zig { display:flex; flex-direction:column; gap:18px; }
-    .med-zig-row { display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:center; }
+    /* 04 Zig-zag. Each row sits on its own tint band, alternating washes
+       down the page; plates carry a soft keyline frame. */
+    .med-zig { display:flex; flex-direction:column; gap:16px; }
+    .med-zig-row { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; padding:26px; border-radius:var(--radius-card); background:var(--accent-wash); }
+    .med-zig-row.reverse { background:var(--bg-3); }
+    /* Dark's --bg-3 sits within a whisker of the page ground, so the
+       alternating band disappears; the neutral wash keeps the rhythm
+       legible there. Moonrite keeps its warm cream band. */
+    html:not([data-theme="moonrite"]) .med-zig-row.reverse { background:var(--muted-wash); }
     .med-zig-row.reverse .med-zig-img { order:2; }
-    .med-zig-img { aspect-ratio:16/10; border-radius:var(--radius-card); display:flex; align-items:center; justify-content:center; }
-    .med-zig-img span { font-family:var(--font-display); font-size:30px; font-weight:700; color:color-mix(in srgb, var(--text) 20%, transparent); }
-    .med-zig-eyebrow { font-family:var(--font-eyebrow); font-size:12px; letter-spacing:.08em; text-transform:var(--eyebrow-transform); color:var(--accent); }
+    .med-zig-img { aspect-ratio:16/10; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; box-shadow:inset 0 0 0 var(--line-weight) color-mix(in srgb, var(--text) 14%, transparent); }
+    .med-zig-img span { font-family:var(--font-display); font-size:30px; font-weight:var(--heading-weight); color:color-mix(in srgb, var(--text) 22%, transparent); }
+    .med-zig-eyebrow { font-family:var(--font-eyebrow); font-size:12px; letter-spacing:var(--eyebrow-tracking); text-transform:var(--eyebrow-transform); color:var(--accent); }
     .med-zig-eyebrow::before { content:var(--eyebrow-prefix); }
-    .med-zig-text h4 { font-family:var(--font-display); font-size:19px; font-weight:600; color:var(--text); margin:8px 0 8px; }
+    .med-zig-text h4 { font-family:var(--font-display); font-size:24px; font-weight:var(--heading-weight); letter-spacing:var(--heading-tracking); color:var(--text); margin:10px 0 10px; }
     .med-zig-text p { font-family:var(--font-body); font-size:14px; line-height:1.6; color:var(--text-3); margin:0; }
 
-    /* 05 Team */
-    .med-team { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; max-width:440px; }
-    .med-person { display:flex; flex-direction:column; align-items:center; text-align:center; gap:5px; padding:18px 12px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); }
-    .med-person-av { width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:18px; font-weight:600; color:var(--accent-ink); margin-bottom:4px; }
-    .med-person-name { font-family:var(--font-display); font-size:15px; font-weight:600; color:var(--text); }
-    .med-person-role { font-family:var(--font-ui); font-size:11px; color:var(--text-4); }
-    .med-person-links { display:flex; gap:10px; margin-top:6px; }
-    .med-person-links a { font-family:var(--font-ui); font-size:11px; color:var(--text-3); text-decoration:none; }
-    .med-person-links a:hover { color:var(--accent); }
+    /* 05 Team. Tint-ring avatars over considered cards: display-face name,
+       tracked role, and chip links with real hover and focus states. */
+    .med-team { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; max-width:480px; }
+    .med-person { display:flex; flex-direction:column; align-items:center; text-align:center; gap:5px; padding:28px 18px 24px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); transition:border-color .25s ease; }
+    .med-person:hover { border-color:var(--border-2); }
+    .med-person-av { width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:19px; font-weight:600; color:var(--accent-ink); margin-bottom:10px; box-shadow:0 0 0 calc(var(--line-weight) * 2) var(--bg-card), 0 0 0 calc(var(--line-weight) * 3.5) var(--accent-line); }
+    .med-person-name { font-family:var(--font-display); font-size:17px; font-weight:var(--heading-weight); letter-spacing:var(--heading-tracking); color:var(--text); }
+    .med-person-role { font-family:var(--font-ui); font-size:11px; letter-spacing:var(--eyebrow-tracking); text-transform:var(--eyebrow-transform); color:var(--text-4); }
+    .med-person-links { display:flex; gap:8px; margin-top:12px; }
+    .med-person-links a { display:inline-flex; align-items:center; min-height:32px; font-family:var(--font-ui); font-size:11px; letter-spacing:.04em; color:var(--text-3); text-decoration:none; border:var(--line-weight) solid var(--border); border-radius:var(--radius-pill); padding:0 14px; transition:color .2s ease, border-color .2s ease, background .2s ease; }
+    .med-person-links a:hover { color:var(--accent); border-color:var(--accent-line); background:var(--accent-faint); }
+    .med-person-links a:focus-visible { outline:var(--focus-ring); outline-offset:var(--focus-offset); }
 
     /* 06 Embed */
     .med-embed { max-width:520px; }
-    .med-embed-frame { position:relative; aspect-ratio:16/9; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg-card); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
-    .med-embed-icon { width:48px; height:48px; border-radius:50%; background:var(--bg-2); border:var(--line-weight) solid var(--border-2); display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:16px; }
-    .med-embed-ratio { font-family:var(--font-ui); font-size:12px; color:var(--text-4); }
+    .med-embed-frame { position:relative; aspect-ratio:16/9; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg-2); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; }
+    .med-embed-icon { width:52px; height:52px; border-radius:50%; background:var(--accent-faint); border:var(--line-weight) solid var(--accent-line); display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:16px; padding-left:3px; }
+    .med-embed-ratio { font-family:var(--font-ui); font-size:12px; letter-spacing:.04em; color:var(--text-4); }
 
     @media (max-width: 1024px) { .med-team { grid-template-columns:repeat(2,1fr); } }
     @media (max-width: 768px) {
       .med-zig-row { grid-template-columns:1fr; }
       .med-zig-row.reverse .med-zig-img { order:0; }
+      .med-vhero-content { max-width:100%; }
     }
   </style>
   <script>
