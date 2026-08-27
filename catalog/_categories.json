@@ -9,7 +9,7 @@
 
   { "slug": "components", "anchor": "components", "title": "Library components", "set": "core",
     "file": "pages/components.html",
-    "description": "Static equivalents of the animation-library components used on the source site." },
+    "description": "Static equivalents of the source design's scripted components: typewriter card and loader." },
 
   { "slug": "sections", "anchor": "sections", "title": "Sections", "set": "core",
     "file": "pages/sections.html",
@@ -23,9 +23,9 @@
     "file": "pages/animation.html",
     "description": "Motion demos: reveals, marquees, counters, transitions." },
 
-  { "slug": "devtools", "anchor": "devtools", "title": "Dev tools", "set": "core",
+  { "slug": "devtools", "anchor": "devtools", "title": "Site tools", "set": "core",
     "file": "pages/devtools.html",
-    "description": "Terminal, code, diff, and log-style UI." },
+    "description": "Search, callouts, reference and utility UI." },
 
   { "slug": "social", "anchor": "social", "title": "Social proof", "set": "core",
     "file": "pages/social.html",

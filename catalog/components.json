@@ -1,13 +1,13 @@
 [
   {
     "id": "T030",
-    "name": "TypewriterText + copy card",
+    "name": "Typewriter share-link card",
     "category": "Library components",
     "set": "core",
     "page": "index.html",
     "anchor": "#T030",
     "source": "pages/components.html",
-    "description": "Terminal-style code card with an accent bar, an npm command, and a copy-to-clipboard button."
+    "description": "Card with an accent bar, a typewriter line that types out the shop link, and a copy-to-clipboard button."
   },
   {
     "id": "T031",
@@ -17,6 +17,6 @@
     "page": "index.html",
     "anchor": "#T031",
     "source": "pages/components.html",
-    "description": "Pulsing loader dots in the success and accent colours, a static equivalent of @astroanimate/core/Loader."
+    "description": "Pulsing loader dots in the success and accent colours, for loading and live states."
   }
 ]

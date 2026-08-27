@@ -7,7 +7,7 @@
     "page": "index.html",
     "anchor": "#T040",
     "source": "pages/sections.html",
-    "description": "Top navigation with logo, version dropdown, links, social icons, INSTALL button, and a mobile hamburger."
+    "description": "Top navigation with logo, year dropdown, links, social icons, a nav CTA button, and a mobile hamburger."
   },
   {
     "id": "T041",
@@ -17,7 +17,7 @@
     "page": "index.html",
     "anchor": "#T041",
     "source": "pages/sections.html",
-    "description": "Two-column homepage hero: status pill, headline, feature list, CTAs on the left; badges + code card on the right; glow video behind."
+    "description": "Two-column homepage hero: status pill, headline, feature list, CTAs on the left; badges + a this-month card panel on the right; glow video behind."
   },
   {
     "id": "T042",
@@ -37,17 +37,17 @@
     "page": "index.html",
     "anchor": "#T043",
     "source": "pages/sections.html",
-    "description": "\"// SYSTEM ONLINE\" label with a pulsing green Loader. Signals a live state."
+    "description": "\"Shipping now\" label with a pulsing green Loader. Signals a live state."
   },
   {
     "id": "T044",
-    "name": "Code Block Card",
+    "name": "A Card, Being Written",
     "category": "Sections",
     "set": "core",
     "page": "index.html",
     "anchor": "#T044",
     "source": "pages/sections.html",
-    "description": "Terminal-style card with an accent bar, a typewriter command, and a copy button."
+    "description": "Card with an accent bar, a typewriter line writing a sample intention, and a copy button."
   },
   {
     "id": "T045",
@@ -67,11 +67,11 @@
     "page": "index.html",
     "anchor": "#T046",
     "source": "pages/sections.html",
-    "description": "Feature-by-feature table contrasting AstroAnimate with alternatives, using check / cross / warn icons."
+    "description": "Feature-by-feature table contrasting the deck with alternatives, using check / cross / warn icons."
   },
   {
     "id": "T047",
-    "name": "Performance / Architecture Grids",
+    "name": "Deck at a Glance Grid",
     "category": "Sections",
     "set": "core",
     "page": "index.html",
@@ -81,7 +81,7 @@
   },
   {
     "id": "T048",
-    "name": "Use-case & Doc-structure Tabs",
+    "name": "Ways-to-Use Tabs",
     "category": "Sections",
     "set": "core",
     "page": "index.html",
@@ -91,13 +91,13 @@
   },
   {
     "id": "T049",
-    "name": "Open-source Panel",
+    "name": "About the Deck Panel",
     "category": "Sections",
     "set": "core",
     "page": "index.html",
     "anchor": "#T049",
     "source": "pages/sections.html",
-    "description": "Two-column block: prose on the left, a stacked key/value badge column (LICENSE, SIZE, RUNTIME) on the right."
+    "description": "Two-column block: prose on the left, a stacked key/value badge column of deck facts on the right."
   },
   {
     "id": "T050",
@@ -111,13 +111,13 @@
   },
   {
     "id": "T051",
-    "name": "Docs Layout",
+    "name": "Guide Layout",
     "category": "Sections",
     "set": "core",
     "page": "index.html",
     "anchor": "#T051",
     "source": "pages/sections.html",
-    "description": "Three-column app shell: collapsible grouped sidebar, centered reading column, right \"in this page\" TOC."
+    "description": "Three-column guide shell: collapsible grouped sidebar, centered reading column, right \"on this page\" TOC."
   },
   {
     "id": "T052",
@@ -127,17 +127,17 @@
     "page": "index.html",
     "anchor": "#T052",
     "source": "pages/sections.html",
-    "description": "\"IN THIS PAGE\" rail that highlights the active heading as you scroll."
+    "description": "\"On this page\" rail that highlights the active heading as you scroll."
   },
   {
     "id": "T053",
-    "name": "Component Card Grid",
+    "name": "Monthly Card Grid",
     "category": "Sections",
     "set": "core",
     "page": "index.html",
     "anchor": "#T053",
     "source": "pages/sections.html",
-    "description": "Catalog of components grouped by category, each card with name, NEW badge, description, and subpath import."
+    "description": "Catalog of the monthly cards, each with a month name, a highlight badge, and a landmark line."
   },
   {
     "id": "T054",
@@ -157,7 +157,7 @@
     "page": "index.html",
     "anchor": "#T055",
     "source": "pages/sections.html",
-    "description": "Article header with cover image and author, a sticky table of contents, and a prose body with code blocks, callouts, and comparison tables."
+    "description": "Article header with cover image and author, a sticky table of contents, and a prose body with pull quotes, callouts, and written-card excerpts."
   },
   {
     "id": "T056",
@@ -171,7 +171,7 @@
   },
   {
     "id": "T057",
-    "name": "Showcase Grid",
+    "name": "Landmark Showcase Grid",
     "category": "Sections",
     "set": "core",
     "page": "index.html",
@@ -181,23 +181,23 @@
   },
   {
     "id": "T058",
-    "name": "Changelog Timeline",
+    "name": "Year in Moons Timeline",
     "category": "Sections",
     "set": "core",
     "page": "index.html",
     "anchor": "#T058",
     "source": "pages/sections.html",
-    "description": "Vertical timeline with version dots and Added / Changed / Fixed change tags per release."
+    "description": "Vertical timeline of the year's full moons, with moon dots and a season tag per entry."
   },
   {
     "id": "T059",
-    "name": "Roadmap Columns",
+    "name": "Moon Calendar Columns",
     "category": "Sections",
     "set": "core",
     "page": "index.html",
     "anchor": "#T059",
     "source": "pages/sections.html",
-    "description": "Status-grouped columns (Shipped, In Progress, Planned, Exploring) of feature cards with status pills."
+    "description": "Season-grouped columns (Summer, Autumn, Winter, Spring) of month cards with season pills."
   },
   {
     "id": "T060",
@@ -207,7 +207,7 @@
     "page": "index.html",
     "anchor": "#T060",
     "source": "pages/sections.html",
-    "description": "Grid of channel cards plus a numbered \"good bug report\" checklist and quick links."
+    "description": "Grid of channel cards plus a numbered \"before you email\" checklist and quick links."
   },
   {
     "id": "T061",
@@ -237,6 +237,6 @@
     "page": "index.html",
     "anchor": "#T063",
     "source": "pages/sections.html",
-    "description": "Five-column footer with newsletter signup and a bottom bar showing a live UTC clock."
+    "description": "Five-column footer with newsletter signup and a bottom bar showing the next full moon date."
   }
 ]

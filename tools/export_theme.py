@@ -72,7 +72,7 @@ def export(theme, out_dir, title, back_href, back_label, noindex=True):
     header = (
         '  <header class="tb-header">\n'
         '%s'
-        '    <p class="eyebrow">// BLOCK LIBRARY</p>\n'
+        '    <p class="eyebrow">Block library</p>\n'
         '    <h1>%s <span class="tb-range" data-tb-count>0 blocks</span></h1>\n'
         '    <p class="tb-sub">Every block has a T-number. The list comes first, then '
         'every block in full below it: scroll, or use a T-number to jump straight to '

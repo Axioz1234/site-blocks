@@ -7,7 +7,7 @@
     "page": "index.html",
     "anchor": "#T340",
     "source": "pages/ecom-checkout.html",
-    "description": "A slide-over cart panel with a close button, line items, subtotal, free-shipping progress, and the view-cart and checkout actions."
+    "description": "A slide-over cart with a close button, line items, subtotal, a delivery reassurance line, and the two exit actions."
   },
   {
     "id": "T341",
@@ -17,7 +17,7 @@
     "page": "index.html",
     "anchor": "#T341",
     "source": "pages/ecom-checkout.html",
-    "description": "One cart row: thumb, title, variant summary, quantity stepper, line total, remove, plus the saved-for-later variant."
+    "description": "One row: thumb, title, variant summary, quantity stepper, line total, remove, plus the saved-for-later variant."
   },
   {
     "id": "T342",
@@ -27,7 +27,7 @@
     "page": "index.html",
     "anchor": "#T342",
     "source": "pages/ecom-checkout.html",
-    "description": "The zero state with icon, headline, a line of copy, a browse CTA, and a recently-viewed suggestion row."
+    "description": "The zero state: icon, headline, a line of reassurance, a browse CTA, and a suggestion row to restart the shop."
   },
   {
     "id": "T343",
@@ -47,17 +47,17 @@
     "page": "index.html",
     "anchor": "#T344",
     "source": "pages/ecom-checkout.html",
-    "description": "A code field with an apply button in three states: idle, applied as a removable chip with the saving shown, and rejected with an inline error."
+    "description": "The code field with an apply button in three states: idle, an inactive code with its inline error, and the empty submit."
   },
   {
     "id": "T345",
-    "name": "Free shipping progress",
+    "name": "Delivery reassurance strip",
     "category": "Cart & checkout",
     "set": "ecommerce",
     "page": "index.html",
     "anchor": "#T345",
     "source": "pages/ecom-checkout.html",
-    "description": "A progress bar counting a subtotal toward the free-shipping threshold, with its unlocked state."
+    "description": "Two quiet cards stating each delivery option and its window, in place of any spend-threshold nudge."
   },
   {
     "id": "T346",
@@ -67,7 +67,7 @@
     "page": "index.html",
     "anchor": "#T346",
     "source": "pages/ecom-checkout.html",
-    "description": "A four-step progress indicator for cart, details, shipping and payment, with complete, current and upcoming states."
+    "description": "Details, delivery, payment and review, with complete, current and upcoming states. The current step carries aria-current=\"step\"."
   },
   {
     "id": "T347",
@@ -77,7 +77,7 @@
     "page": "index.html",
     "anchor": "#T347",
     "source": "pages/ecom-checkout.html",
-    "description": "Email, phone and a full Australian address block with a state select and four-digit postcode, showing the valid and invalid states."
+    "description": "Email, phone, and a full Australian address block with a state select and a four-digit postcode, showing the valid and invalid states."
   },
   {
     "id": "T348",
@@ -87,7 +87,7 @@
     "page": "index.html",
     "anchor": "#T348",
     "source": "pages/ecom-checkout.html",
-    "description": "Radio cards carrying method name, delivery window and price, including a free option, a selected state and a disabled one."
+    "description": "Radio cards carrying the method name, the delivery window, and the price, with a free standard option and a flat-rate express."
   },
   {
     "id": "T349",
@@ -97,7 +97,7 @@
     "page": "index.html",
     "anchor": "#T349",
     "source": "pages/ecom-checkout.html",
-    "description": "A payment method radio group for card, PayPal and Afterpay, where the card fields reveal for the card option, with a security note."
+    "description": "A payment method radio group for card and PayPal, where the card fields reveal for the card option in CSS alone, with a security note underneath."
   },
   {
     "id": "T350",
@@ -107,7 +107,7 @@
     "page": "index.html",
     "anchor": "#T350",
     "source": "pages/ecom-checkout.html",
-    "description": "A row of express wallet buttons above the divider that hands off to the full checkout form."
+    "description": "The one-tap wallet row that sits above the form, with the divider that hands off to the long way round."
   },
   {
     "id": "T351",
@@ -117,7 +117,7 @@
     "page": "index.html",
     "anchor": "#T351",
     "source": "pages/ecom-checkout.html",
-    "description": "The final confirm panel: every earlier step collapsed with edit links, the totals breakdown, terms consent, and the place-order button."
+    "description": "The last panel before the money moves: every earlier step collapsed with an edit link, the totals, consent, and the place-order button."
   },
   {
     "id": "T352",
@@ -127,7 +127,7 @@
     "page": "index.html",
     "anchor": "#T352",
     "source": "pages/ecom-checkout.html",
-    "description": "The success state with order number, itemised recap, delivery address, estimated arrival, and next-step actions."
+    "description": "The thank-you screen: order number, itemised recap, delivery address, estimated arrival, and where to go next."
   },
   {
     "id": "T353",
@@ -137,6 +137,6 @@
     "page": "index.html",
     "anchor": "#T353",
     "source": "pages/ecom-checkout.html",
-    "description": "A vertical timeline from placed to delivered, carrying the tracking number and marking the parcel's current position."
+    "description": "A vertical timeline from ordered to delivered, carrying the tracking number and marking where the parcel is right now."
   }
 ]

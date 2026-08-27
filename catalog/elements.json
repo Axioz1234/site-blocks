@@ -7,7 +7,7 @@
     "page": "index.html",
     "anchor": "#T010",
     "source": "pages/elements.html",
-    "description": "Primary (accent fill), secondary (outline), and the nav install pill."
+    "description": "Primary (accent fill), secondary (outline), and the nav CTA pill."
   },
   {
     "id": "T011",
@@ -17,7 +17,7 @@
     "page": "index.html",
     "anchor": "#T011",
     "source": "pages/elements.html",
-    "description": "Tracked, uppercase, accent-coloured section label prefixed with //."
+    "description": "The tracked, uppercase section label in the accent colour. Opens nearly every section."
   },
   {
     "id": "T012",
@@ -27,7 +27,7 @@
     "page": "index.html",
     "anchor": "#T012",
     "source": "pages/elements.html",
-    "description": "NEW badge, rounded pill tag chips, and the bordered numbered index box."
+    "description": "New badge, rounded pill tag chips, and the bordered numbered index box."
   },
   {
     "id": "T013",
@@ -37,7 +37,7 @@
     "page": "index.html",
     "anchor": "#T013",
     "source": "pages/elements.html",
-    "description": "Colour-coded state pills (Added, Changed, Fixed, Shipped, In Progress) for changelog and roadmap."
+    "description": "Colour-coded order states (Ordered, Packed, Shipped, Delivered, On hold) for account and order pages."
   },
   {
     "id": "T014",
@@ -47,7 +47,7 @@
     "page": "index.html",
     "anchor": "#T014",
     "source": "pages/elements.html",
-    "description": "// SYSTEM ONLINE label with a pulsing green indicator dot."
+    "description": "Live status label with a pulsing indicator dot."
   },
   {
     "id": "T015",

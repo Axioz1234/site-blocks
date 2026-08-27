@@ -1,8 +1,8 @@
 [
   {
     "id": "T120",
-    "name": "Command palette (⌘K)",
-    "category": "Dev tools",
+    "name": "Quick search (⌘K)",
+    "category": "Site tools",
     "set": "core",
     "page": "index.html",
     "anchor": "#T120",
@@ -11,8 +11,8 @@
   },
   {
     "id": "T121",
-    "name": "Callout / admonition boxes",
-    "category": "Dev tools",
+    "name": "Callout boxes",
+    "category": "Site tools",
     "set": "core",
     "page": "index.html",
     "anchor": "#T121",
@@ -21,28 +21,28 @@
   },
   {
     "id": "T122",
-    "name": "API reference block",
-    "category": "Dev tools",
+    "name": "Card reference",
+    "category": "Site tools",
     "set": "core",
     "page": "index.html",
     "anchor": "#T122",
     "source": "pages/devtools.html",
-    "description": "Method pill, monospace path, params table, and cURL/JSON tabs that switch on click."
+    "description": "Month pill, card line, details table, and Front/Back tabs that switch on click."
   },
   {
     "id": "T123",
-    "name": "Integration grid",
-    "category": "Dev tools",
+    "name": "The deck by state",
+    "category": "Site tools",
     "set": "core",
     "page": "index.html",
     "anchor": "#T123",
     "source": "pages/devtools.html",
-    "description": "Filter chips above a grid of integration tiles, shown or hidden live by data-category."
+    "description": "Filter chips above twelve month tiles, shown or hidden live by data-category."
   },
   {
     "id": "T124",
     "name": "Announcement bar",
-    "category": "Dev tools",
+    "category": "Site tools",
     "set": "core",
     "page": "index.html",
     "anchor": "#T124",
@@ -52,7 +52,7 @@
   {
     "id": "T125",
     "name": "Theme switcher",
-    "category": "Dev tools",
+    "category": "Site tools",
     "set": "core",
     "page": "index.html",
     "anchor": "#T125",
@@ -62,11 +62,11 @@
   {
     "id": "T126",
     "name": "“Was this helpful?”",
-    "category": "Dev tools",
+    "category": "Site tools",
     "set": "core",
     "page": "index.html",
     "anchor": "#T126",
     "source": "pages/devtools.html",
-    "description": "Small docs-footer feedback card that swaps to a thank-you state on vote."
+    "description": "Small help-page footer feedback card that swaps to a thank-you state on vote."
   }
 ]

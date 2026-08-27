@@ -12,7 +12,7 @@
   <header class="tb-header">
     <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
     <h1>Patterns <span class="tb-range">T070&ndash;T078</span></h1>
-    <p class="tb-sub">Interactive components &amp; patterns: pricing, dialogs, gallery lightbox, tabs, file tree, toggles, FAQ, contact form, breadcrumbs.</p>
+    <p class="tb-sub">Interactive components &amp; patterns: pricing, dialogs, gallery lightbox, tabs, box contents, toggles, FAQ, contact form, breadcrumbs.</p>
   </header>
   <main class="tb-main">
 
@@ -21,32 +21,32 @@
         <span class="tb-tid">T070</span>
         <div>
           <h2>Pricing</h2>
-          <p>Three-tier pricing with a highlighted recommended plan, feature lists, and CTAs.</p>
+          <p>Three pricing cards built on quantities of a single product, with a highlighted option, feature lists, and CTAs.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="pr-grid">
           <div class="pr-card">
-            <span class="pr-name">Core</span>
-            <div class="pr-amt">$0<span>/forever</span></div>
-            <p class="pr-desc">Open source, MIT licensed.</p>
-            <ul class="pr-feats"><li>All CSS-first components</li><li>TypeScript types</li><li>Community support</li></ul>
-            <span class="pr-cta sec">Get started</span>
+            <span class="pr-name">For you</span>
+            <div class="pr-amt">$99<span>/one deck</span></div>
+            <p class="pr-desc">One box, twelve full moons.</p>
+            <ul class="pr-feats"><li>12 monthly cards for 2027</li><li>Australian made</li><li>Free standard delivery</li></ul>
+            <span class="pr-cta sec">Add to cart</span>
           </div>
           <div class="pr-card feat">
-            <span class="pr-badge">POPULAR</span>
-            <span class="pr-name">Pro</span>
-            <div class="pr-amt">$12<span>/mo</span></div>
-            <p class="pr-desc">For production sites &amp; teams.</p>
-            <ul class="pr-feats"><li>Everything in Core</li><li>Premium UI components</li><li>Priority support</li><li>Figma kit</li></ul>
-            <span class="pr-cta pri">Choose Pro</span>
+            <span class="pr-badge">Most gifted</span>
+            <span class="pr-name">For a friend</span>
+            <div class="pr-amt">$99<span>/one deck</span></div>
+            <p class="pr-desc">Same deck, sent to their door.</p>
+            <ul class="pr-feats"><li>12 monthly cards for 2027</li><li>Gift wrap at checkout</li><li>Posted anywhere in Australia</li><li>Free standard delivery</li></ul>
+            <span class="pr-cta pri">Add to cart</span>
           </div>
           <div class="pr-card">
-            <span class="pr-name">Team</span>
-            <div class="pr-amt">$49<span>/mo</span></div>
-            <p class="pr-desc">For agencies &amp; studios.</p>
-            <ul class="pr-feats"><li>Everything in Pro</li><li>Up to 10 seats</li><li>Shared license</li></ul>
-            <span class="pr-cta sec">Contact sales</span>
+            <span class="pr-name">For both of you</span>
+            <div class="pr-amt">$198<span>/two decks</span></div>
+            <p class="pr-desc">Two decks, one order. No discount, just maths.</p>
+            <ul class="pr-feats"><li>Two of everything</li><li>Same moon, different couches</li><li>Free standard delivery</li></ul>
+            <span class="pr-cta sec">Add two to cart</span>
           </div>
         </div>
       </div>
@@ -56,19 +56,19 @@
       <header class="tb-pattern-head">
         <span class="tb-tid">T071</span>
         <div>
-          <h2>Popup promo</h2>
-          <p>A modal promotion built on the native <code>&lt;dialog&gt;</code> element: opens over a dimmed backdrop, closes on the ✕ or a backdrop click.</p>
+          <h2>Newsletter popup</h2>
+          <p>A modal signup built on the native <code>&lt;dialog&gt;</code> element: opens over a dimmed backdrop, closes on the ✕ or a backdrop click.</p>
         </div>
       </header>
       <div class="tb-demo">
-        <button class="demo-trigger" id="sg-promo-open">Show promo popup</button>
+        <button class="demo-trigger" id="sg-promo-open">Show newsletter popup</button>
         <dialog class="promo-dialog" id="sg-promo">
           <div class="promo-card">
             <button class="promo-close" id="sg-promo-close" aria-label="Close">✕</button>
-            <span class="pv-eyebrow">// LIMITED TIME</span>
-            <h4>Get 30% off Pro</h4>
-            <p>Upgrade this week and lock in launch pricing, forever.</p>
-            <button class="demo-trigger" id="sg-promo-cta">Claim the offer</button>
+            <span class="pv-eyebrow">Moon mail</span>
+            <h4>One email a month, near the full moon</h4>
+            <p>A short note when the next card is up. No streak to keep, unsubscribe whenever.</p>
+            <button class="demo-trigger" id="sg-promo-cta">Sign me up</button>
           </div>
         </dialog>
       </div>
@@ -79,17 +79,17 @@
         <span class="tb-tid">T072</span>
         <div>
           <h2>Gallery</h2>
-          <p>A responsive thumbnail grid with hover captions. Click any tile to open it in a lightbox.</p>
+          <p>A responsive thumbnail grid with hover captions. Click any card to open it in a lightbox.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="gal-grid">
-          <button class="gal-item" style="--g:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))" data-label="Hero reveal"><span class="gal-cap">Hero reveal</span></button>
-          <button class="gal-item" style="--g:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))" data-label="Scroll fade"><span class="gal-cap">Scroll fade</span></button>
-          <button class="gal-item" style="--g:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))" data-label="Typewriter"><span class="gal-cap">Typewriter</span></button>
-          <button class="gal-item" style="--g:linear-gradient(135deg,color-mix(in srgb, var(--ok-wash) 60%, var(--bg)),var(--ok-wash))" data-label="Count up"><span class="gal-cap">Count up</span></button>
-          <button class="gal-item" style="--g:linear-gradient(135deg,var(--err-wash),var(--warn-wash))" data-label="Parallax"><span class="gal-cap">Parallax</span></button>
-          <button class="gal-item" style="--g:linear-gradient(135deg,color-mix(in srgb, var(--cat-3) 6%, var(--bg)),color-mix(in srgb, var(--cat-3) 14%, var(--bg)))" data-label="Glass card"><span class="gal-cap">Glass card</span></button>
+          <button class="gal-item" style="--g:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))" data-label="January · Byron Bay Lighthouse"><span class="gal-cap">January · Byron Bay Lighthouse</span></button>
+          <button class="gal-item" style="--g:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))" data-label="February · Whitehaven Beach"><span class="gal-cap">February · Whitehaven Beach</span></button>
+          <button class="gal-item" style="--g:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))" data-label="April · Uluru"><span class="gal-cap">April · Uluru</span></button>
+          <button class="gal-item" style="--g:linear-gradient(135deg,color-mix(in srgb, var(--ok-wash) 60%, var(--bg)),var(--ok-wash))" data-label="June · Cradle Mountain"><span class="gal-cap">June · Cradle Mountain</span></button>
+          <button class="gal-item" style="--g:linear-gradient(135deg,var(--err-wash),var(--warn-wash))" data-label="August · The Pinnacles"><span class="gal-cap">August · The Pinnacles</span></button>
+          <button class="gal-item" style="--g:linear-gradient(135deg,color-mix(in srgb, var(--cat-3) 6%, var(--bg)),color-mix(in srgb, var(--cat-3) 14%, var(--bg)))" data-label="December · Twelve Apostles"><span class="gal-cap">December · Twelve Apostles</span></button>
         </div>
         <dialog class="lb" id="sg-lb">
           <button class="lb-close" id="sg-lb-close" aria-label="Close">✕</button>
@@ -110,13 +110,13 @@
       <div class="tb-demo">
         <div class="tabs-demo" data-tabs>
           <div class="tabs-bar" role="tablist">
-            <button class="tab on" data-tab="0">Overview</button>
-            <button class="tab" data-tab="1">Install</button>
-            <button class="tab" data-tab="2">API</button>
+            <button class="tab on" data-tab="0">The ritual</button>
+            <button class="tab" data-tab="1">What's inside</button>
+            <button class="tab" data-tab="2">Delivery</button>
           </div>
-          <div class="tab-panel on" data-panel="0">AstroAnimate adds CSS-first motion to Astro components: no runtime JS unless you opt in.</div>
-          <div class="tab-panel" data-panel="1">Run <code>npm install @astroanimate/core</code>, then import a component by its subpath.</div>
-          <div class="tab-panel" data-panel="2">Every component is fully typed. Props control timing, easing, delay, and direction.</div>
+          <div class="tab-panel on" data-panel="0">Write an intention on the card's writable side, then release it. Burning is the signature ritual and it's optional: tearing the card up is an equally complete release.</div>
+          <div class="tab-panel" data-panel="1">Twelve monthly cards, one per full moon of 2027, plus welcome, how-to, fire safety, locations index and next-year signup cards, and spares.</div>
+          <div class="tab-panel" data-panel="2">Standard delivery is free Australia-wide. Express is $16.95. We ship within Australia only.</div>
         </div>
       </div>
     </article>
@@ -125,31 +125,35 @@
       <header class="tb-pattern-head">
         <span class="tb-tid">T074</span>
         <div>
-          <h2>Folders</h2>
-          <p>A collapsible file tree built from nested <code>&lt;details&gt;</code>: folders expand and collapse, no JavaScript.</p>
+          <h2>What's in the box</h2>
+          <p>A collapsible contents tree built from nested <code>&lt;details&gt;</code>: sections expand and collapse, no JavaScript.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="folders">
           <details open>
-            <summary>src</summary>
+            <summary>Moonrite Cards 2027</summary>
             <div class="folder-children">
               <details open>
-                <summary>components</summary>
+                <summary>Monthly cards</summary>
                 <div class="folder-children">
-                  <div class="file">NavBar.astro</div>
-                  <div class="file">Footer.astro</div>
-                  <div class="file">DocsLayout.astro</div>
+                  <div class="file">January · Byron Bay Lighthouse</div>
+                  <div class="file">February · Whitehaven Beach</div>
+                  <div class="file">March · Sydney Harbour Bridge</div>
+                  <div class="file">…and nine more, through December</div>
                 </div>
               </details>
               <details>
-                <summary>pages</summary>
+                <summary>Supporting cards</summary>
                 <div class="folder-children">
-                  <div class="file">index.astro</div>
-                  <div class="file">styleguide.astro</div>
+                  <div class="file">Welcome card</div>
+                  <div class="file">How-to card</div>
+                  <div class="file">Fire safety card</div>
+                  <div class="file">Locations index</div>
+                  <div class="file">Next-year signup</div>
                 </div>
               </details>
-              <div class="file">global.css</div>
+              <div class="file">Spares, in case one gets away</div>
             </div>
           </details>
         </div>
@@ -169,11 +173,11 @@
           <label class="tg-switch">
             <input type="checkbox" />
             <span class="tg-track"></span>
-            <span class="tg-text">Show advanced details</span>
+            <span class="tg-text">Sending it as a gift?</span>
           </label>
           <div class="tg-content">
-            Advanced options are only shown when the toggle is on, handy for progressive
-            disclosure in settings, filters, or long forms.
+            Pop their delivery address in at checkout and the box goes straight to them.
+            There's room for a short gift note, and gift wrap is an optional extra.
           </div>
         </div>
       </div>
@@ -190,16 +194,16 @@
       <div class="tb-demo">
         <div class="pv-narrow">
           <details class="demo-acc" open>
-            <summary><span>Does AstroAnimate ship JavaScript?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
-            <p>Not by default: CSS-first components add zero runtime JS. Only opt-in components load JavaScript.</p>
+            <summary><span>Do I have to burn the card?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
+            <p>No. Burning is optional and for adults only. Tearing the card up is an equally complete release, and the better choice if you're unsure or open flames aren't permitted where you are.</p>
           </details>
           <details class="demo-acc" open style="margin-top:10px;">
-            <summary><span>Is it free to use?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
-            <p>Yes. MIT licensed and free for commercial and open-source projects.</p>
+            <summary><span>What if I miss a month?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
+            <p>Nothing happens. There's no streak to keep. The next full moon comes around either way, and the card will still be in the box.</p>
           </details>
           <details class="demo-acc" open style="margin-top:10px;">
-            <summary><span>Does it respect reduced motion?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
-            <p>Yes, automatically. Animations are minimised when prefers-reduced-motion is set.</p>
+            <summary><span>Do you ship outside Australia?</span><span class="demo-acc-mark" aria-hidden="true"></span></summary>
+            <p>Not yet. We deliver Australia-wide, and standard delivery is free.</p>
           </details>
         </div>
       </div>
@@ -215,11 +219,11 @@
       </header>
       <div class="tb-demo">
         <form class="sg-form" data-sg-form>
-          <div class="sg-field"><label for="sg-name">Name</label><input id="sg-name" type="text" placeholder="Ada Lovelace" required /></div>
+          <div class="sg-field"><label for="sg-name">Name</label><input id="sg-name" type="text" placeholder="Jess Walker" required /></div>
           <div class="sg-field"><label for="sg-email">Email</label><input id="sg-email" type="email" placeholder="you@example.com" required /></div>
-          <div class="sg-field"><label for="sg-msg">Message</label><textarea id="sg-msg" rows="3" placeholder="Tell us what's on your mind…" required></textarea></div>
-          <button type="submit">SEND MESSAGE</button>
-          <p class="sg-form-note" hidden>Demo only, no backend attached.</p>
+          <div class="sg-field"><label for="sg-msg">Message</label><textarea id="sg-msg" rows="3" placeholder="Ask us anything: your order, the ritual, the moon…" required></textarea></div>
+          <button type="submit">Send message</button>
+          <p class="sg-form-note" hidden>Thanks, we'll write back soon. (Demo only, no backend attached.)</p>
         </form>
       </div>
     </article>
@@ -235,9 +239,8 @@
       <div class="tb-demo">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
           <a href="/">Home</a><span class="sep">/</span>
-          <a href="/docs">Docs</a><span class="sep">/</span>
-          <a href="/docs/all-components/">Components</a><span class="sep">/</span>
-          <span class="current" aria-current="page">TypewriterText</span>
+          <a href="/product/moonrite-cards-2027">Shop</a><span class="sep">/</span>
+          <span class="current" aria-current="page">Moonrite Cards 2027</span>
         </nav>
       </div>
     </article>
@@ -254,7 +257,8 @@
       color: var(--accent-light);
     }
 
-    .pv-eyebrow { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 0.08em; color: var(--accent); display: block; margin-bottom: 8px; }
+    .pv-eyebrow { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 0.08em; color: var(--accent); text-transform: var(--eyebrow-transform); display: block; margin-bottom: 8px; }
+    .pv-eyebrow::before { content: var(--eyebrow-prefix); }
     .pv-narrow { max-width: 380px; }
 
     .demo-acc { border: var(--line-weight) solid var(--border); background: var(--bg-2); max-width: 560px; }
@@ -269,14 +273,14 @@
     .demo-acc p { font-family: var(--font-body); font-size: 14.5px; line-height: 1.7; color: var(--text-3); margin: 0; padding: 0 18px 18px; }
 
     /* ===== COMPONENTS & PATTERNS ===== */
-    .demo-trigger { font-family: var(--font-ui); font-size: 12px; background: var(--accent); color: var(--bg); font-weight: 600; border: none; padding: 11px 18px; cursor: pointer; transition: background 0.2s ease; }
+    .demo-trigger { font-family: var(--font-ui); font-size: 12px; background: var(--accent); color: var(--accent-ink); font-weight: 600; border: none; border-radius: var(--radius-btn); padding: 11px 18px; cursor: pointer; transition: background 0.2s ease; }
     .demo-trigger:hover { background: var(--accent-hover); }
 
     /* Pricing */
     .pr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
     .pr-card { border: var(--line-weight) solid var(--border); background: var(--bg); padding: 24px; position: relative; }
     .pr-card.feat { border-color: var(--accent); }
-    .pr-badge { position: absolute; top: -10px; right: 16px; font-family: var(--font-ui); font-size: 9px; font-weight: 600; letter-spacing: 0.06em; color: var(--bg); background: var(--accent); padding: 3px 8px; border-radius: var(--radius-sm); }
+    .pr-badge { position: absolute; top: -10px; right: 16px; font-family: var(--font-ui); font-size: 9px; font-weight: 600; letter-spacing: 0.06em; text-transform: var(--eyebrow-transform); color: var(--accent-ink); background: var(--accent); padding: 3px 8px; border-radius: var(--radius-sm); }
     .pr-name { font-family: var(--font-eyebrow); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); }
     .pr-amt { font-family: var(--font-display); font-size: 34px; font-weight: 600; color: var(--text); margin: 8px 0 4px; }
     .pr-amt span { font-family: var(--font-body); font-size: 13px; font-weight: 400; color: var(--text-4); }
@@ -284,8 +288,8 @@
     .pr-feats { list-style: none; margin: 0 0 20px; padding: 0; }
     .pr-feats li { font-family: var(--font-body); font-size: 13.5px; color: var(--text-2); padding: 6px 0 6px 22px; position: relative; }
     .pr-feats li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-size: 12px; }
-    .pr-cta { display: block; text-align: center; font-family: var(--font-ui); font-size: 12px; padding: 11px; cursor: pointer; }
-    .pr-cta.pri { background: var(--accent); color: var(--bg); font-weight: 600; }
+    .pr-cta { display: block; text-align: center; font-family: var(--font-ui); font-size: 12px; padding: 11px; border-radius: var(--radius-btn); cursor: pointer; }
+    .pr-cta.pri { background: var(--accent); color: var(--accent-ink); font-weight: 600; }
     .pr-cta.sec { border: var(--line-weight) solid var(--border-2); color: var(--text); }
 
     /* Popup promo */
@@ -320,7 +324,7 @@
     .tabs-demo .tab-panel.on { display: block; }
 
     /* Folders */
-    .folders { font-family: var(--font-mono); font-size: 13px; }
+    .folders { font-family: var(--font-body); font-size: 14px; }
     .folders summary { display: flex; align-items: center; gap: 8px; cursor: pointer; list-style: none; padding: 5px 0; color: var(--text-2); }
     .folders summary::-webkit-details-marker { display: none; }
     .folders summary::before { content: '▸'; color: var(--accent); font-size: 10px; transition: transform 0.15s ease; }
@@ -348,7 +352,7 @@
     .sg-form input::placeholder, .sg-form textarea::placeholder { color: var(--text-4); }
     .sg-form input:focus, .sg-form textarea:focus { outline: none; border-color: var(--accent); }
     .sg-form textarea { resize: vertical; min-height: 80px; }
-    .sg-form button { background: var(--accent); color: var(--bg); border: none; padding: 12px 20px; font-family: var(--font-ui); font-weight: 600; font-size: 13px; letter-spacing: 0.04em; cursor: pointer; width: fit-content; transition: opacity 0.2s ease; }
+    .sg-form button { background: var(--accent); color: var(--accent-ink); border: none; border-radius: var(--radius-btn); padding: 12px 20px; font-family: var(--font-ui); font-weight: 600; font-size: 13px; letter-spacing: 0.04em; text-transform: var(--button-transform); cursor: pointer; width: fit-content; transition: opacity 0.2s ease; }
     .sg-form button:hover { opacity: 0.88; }
     .sg-form button:disabled { background: var(--border); color: var(--ok); cursor: default; opacity: 1; }
     .sg-form-note { font-family: var(--font-body); font-size: 13px; color: var(--text-3); margin: 0; padding: 10px 12px; border: var(--line-weight) solid var(--border-2); border-left: 2px solid var(--ok); background: var(--bg); }
@@ -377,7 +381,7 @@
           const button = form.querySelector('button');
           if (note) note.hidden = false;
           if (button) {
-            button.textContent = 'SENT ✓';
+            button.textContent = 'Sent ✓';
             button.disabled = true;
           }
         });

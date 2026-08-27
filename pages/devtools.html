@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dev tools &middot; Site Blocks</title>
+  <title>Site tools &middot; Site Blocks</title>
   <link rel="stylesheet" href="../assets/base.css">
   <link rel="stylesheet" href="../assets/viewer.css">
   <script src="../assets/viewer.js"></script>
@@ -11,8 +11,8 @@
 <body data-page-set="core">
   <header class="tb-header">
     <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
-    <h1>Dev tools <span class="tb-range">T120&ndash;T126</span></h1>
-    <p class="tb-sub">Command palette, callouts, API reference, integrations, and the small feedback affordances that make docs feel alive.</p>
+    <h1>Site tools <span class="tb-range">T120&ndash;T126</span></h1>
+    <p class="tb-sub">Quick search, callouts, the card reference, the deck by state, and the small feedback affordances that make a help page feel alive.</p>
   </header>
   <main class="tb-main">
 
@@ -20,7 +20,7 @@
       <header class="tb-pattern-head">
         <span class="tb-tid">T120</span>
         <div>
-          <h2>Command palette (⌘K)</h2>
+          <h2>Quick search (⌘K)</h2>
           <p>A native <code>&lt;dialog&gt;</code> overlay opened by button or ⌘K / Ctrl+K. Typing filters the grouped result list live; Escape or a backdrop click closes it.</p>
         </div>
       </header>
@@ -38,71 +38,71 @@
             <div class="dev-cmdk-card">
               <div class="dev-cmdk-search">
                 <span class="dev-cmdk-glass" aria-hidden="true">⌕</span>
-                <input id="dev-cmdk-input" type="text" placeholder="Search pages, components, actions…" autocomplete="off" />
+                <input id="dev-cmdk-input" type="text" placeholder="Search pages, months, help…" autocomplete="off" />
                 <kbd class="dev-kbd dev-kbd-sm">ESC</kbd>
               </div>
               <div class="dev-cmdk-results" id="dev-cmdk-results">
                 <div class="dev-cmdk-group" data-dev-group>
                   <span class="dev-cmdk-grouplabel">Pages</span>
-                  <button class="dev-cmdk-row" data-dev-row data-dev-label="installation">
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="shop">
                     <span class="dev-cmdk-rowicon" aria-hidden="true">◉</span>
-                    <span class="dev-cmdk-rowlabel">Installation</span>
-                    <span class="dev-cmdk-rowhint">docs</span>
-                    <kbd class="dev-kbd dev-kbd-sm">G I</kbd>
-                  </button>
-                  <button class="dev-cmdk-row" data-dev-row data-dev-label="all components">
-                    <span class="dev-cmdk-rowicon" aria-hidden="true">◉</span>
-                    <span class="dev-cmdk-rowlabel">All Components</span>
-                    <span class="dev-cmdk-rowhint">docs</span>
-                    <kbd class="dev-kbd dev-kbd-sm">G C</kbd>
-                  </button>
-                  <button class="dev-cmdk-row" data-dev-row data-dev-label="changelog">
-                    <span class="dev-cmdk-rowicon" aria-hidden="true">◉</span>
-                    <span class="dev-cmdk-rowlabel">Changelog</span>
+                    <span class="dev-cmdk-rowlabel">Shop</span>
                     <span class="dev-cmdk-rowhint">page</span>
-                    <kbd class="dev-kbd dev-kbd-sm">G L</kbd>
+                    <kbd class="dev-kbd dev-kbd-sm">G S</kbd>
+                  </button>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="how it works">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">◉</span>
+                    <span class="dev-cmdk-rowlabel">How it works</span>
+                    <span class="dev-cmdk-rowhint">page</span>
+                    <kbd class="dev-kbd dev-kbd-sm">G H</kbd>
+                  </button>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="moon dates">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">◉</span>
+                    <span class="dev-cmdk-rowlabel">Moon dates</span>
+                    <span class="dev-cmdk-rowhint">page</span>
+                    <kbd class="dev-kbd dev-kbd-sm">G M</kbd>
                   </button>
                 </div>
                 <div class="dev-cmdk-group" data-dev-group>
-                  <span class="dev-cmdk-grouplabel">Components</span>
-                  <button class="dev-cmdk-row" data-dev-row data-dev-label="typewritertext">
+                  <span class="dev-cmdk-grouplabel">Months</span>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="january byron bay lighthouse">
                     <span class="dev-cmdk-rowicon" aria-hidden="true">◆</span>
-                    <span class="dev-cmdk-rowlabel">TypewriterText</span>
-                    <span class="dev-cmdk-rowhint">core</span>
+                    <span class="dev-cmdk-rowlabel">January · Byron Bay Lighthouse</span>
+                    <span class="dev-cmdk-rowhint">card</span>
                     <kbd class="dev-kbd dev-kbd-sm">↵</kbd>
                   </button>
-                  <button class="dev-cmdk-row" data-dev-row data-dev-label="fadeintext">
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="february whitehaven beach">
                     <span class="dev-cmdk-rowicon" aria-hidden="true">◆</span>
-                    <span class="dev-cmdk-rowlabel">FadeInText</span>
-                    <span class="dev-cmdk-rowhint">core</span>
+                    <span class="dev-cmdk-rowlabel">February · Whitehaven Beach</span>
+                    <span class="dev-cmdk-rowhint">card</span>
                     <kbd class="dev-kbd dev-kbd-sm">↵</kbd>
                   </button>
-                  <button class="dev-cmdk-row" data-dev-row data-dev-label="countup">
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="march sydney harbour bridge">
                     <span class="dev-cmdk-rowicon" aria-hidden="true">◆</span>
-                    <span class="dev-cmdk-rowlabel">CountUp</span>
-                    <span class="dev-cmdk-rowhint">core</span>
+                    <span class="dev-cmdk-rowlabel">March · Sydney Harbour Bridge</span>
+                    <span class="dev-cmdk-rowhint">card</span>
                     <kbd class="dev-kbd dev-kbd-sm">↵</kbd>
                   </button>
-                  <button class="dev-cmdk-row" data-dev-row data-dev-label="loader">
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="april uluru">
                     <span class="dev-cmdk-rowicon" aria-hidden="true">◆</span>
-                    <span class="dev-cmdk-rowlabel">Loader</span>
-                    <span class="dev-cmdk-rowhint">core</span>
+                    <span class="dev-cmdk-rowlabel">April · Uluru</span>
+                    <span class="dev-cmdk-rowhint">card</span>
                     <kbd class="dev-kbd dev-kbd-sm">↵</kbd>
                   </button>
                 </div>
                 <div class="dev-cmdk-group" data-dev-group>
-                  <span class="dev-cmdk-grouplabel">Actions</span>
-                  <button class="dev-cmdk-row" data-dev-row data-dev-label="copy install command">
-                    <span class="dev-cmdk-rowicon" aria-hidden="true">⚡</span>
-                    <span class="dev-cmdk-rowlabel">Copy install command</span>
-                    <span class="dev-cmdk-rowhint">action</span>
-                    <kbd class="dev-kbd dev-kbd-sm">⌘ C</kbd>
+                  <span class="dev-cmdk-grouplabel">Help</span>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="do i have to burn my card">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">?</span>
+                    <span class="dev-cmdk-rowlabel">Do I have to burn my card?</span>
+                    <span class="dev-cmdk-rowhint">faq</span>
+                    <kbd class="dev-kbd dev-kbd-sm">↵</kbd>
                   </button>
-                  <button class="dev-cmdk-row" data-dev-row data-dev-label="toggle theme">
-                    <span class="dev-cmdk-rowicon" aria-hidden="true">⚡</span>
-                    <span class="dev-cmdk-rowlabel">Toggle theme</span>
-                    <span class="dev-cmdk-rowhint">action</span>
-                    <kbd class="dev-kbd dev-kbd-sm">T</kbd>
+                  <button class="dev-cmdk-row" data-dev-row data-dev-label="do you deliver outside australia">
+                    <span class="dev-cmdk-rowicon" aria-hidden="true">?</span>
+                    <span class="dev-cmdk-rowlabel">Do you deliver outside Australia?</span>
+                    <span class="dev-cmdk-rowhint">faq</span>
+                    <kbd class="dev-kbd dev-kbd-sm">↵</kbd>
                   </button>
                 </div>
                 <p class="dev-cmdk-empty" id="dev-cmdk-empty" hidden>No results.</p>
@@ -122,7 +122,7 @@
       <header class="tb-pattern-head">
         <span class="tb-tid">T121</span>
         <div>
-          <h2>Callout / admonition boxes</h2>
+          <h2>Callout boxes</h2>
           <p>Four tinted variants: Note, Tip, Warning, and Danger. Each has a left accent rail, an icon, a bold label, and a single body line. Pure CSS.</p>
         </div>
       </header>
@@ -132,19 +132,19 @@
           <div class="dev-callouts">
             <div class="dev-callout dev-note">
               <span class="dev-callout-icon" aria-hidden="true">ℹ</span>
-              <div><strong>Note</strong><p>Components are imported by subpath: one import per component.</p></div>
+              <div><strong>Note</strong><p>Standard delivery is free Australia-wide. Express is $16.95 if the moon won't wait.</p></div>
             </div>
             <div class="dev-callout dev-tip">
               <span class="dev-callout-icon" aria-hidden="true">✓</span>
-              <div><strong>Tip</strong><p>CSS-first components ship zero runtime JS, so they render on static markup.</p></div>
+              <div><strong>Tip</strong><p>One card a month is the whole practice. There's no streak to keep.</p></div>
             </div>
             <div class="dev-callout dev-warn">
               <span class="dev-callout-icon" aria-hidden="true">▲</span>
-              <div><strong>Warning</strong><p>Named (barrel) imports from the package root are not supported.</p></div>
+              <div><strong>Warning</strong><p>We deliver within Australia only. The checkout won't accept an overseas address.</p></div>
             </div>
             <div class="dev-callout dev-danger">
               <span class="dev-callout-icon" aria-hidden="true">✕</span>
-              <div><strong>Danger</strong><p>Removing a client directive from an opt-in island disables its motion entirely.</p></div>
+              <div><strong>Danger</strong><p>If unsure, or if burning paper is not permitted, do not light it. Tear the card instead.</p></div>
             </div>
           </div>
         </div>
@@ -155,8 +155,8 @@
       <header class="tb-pattern-head">
         <span class="tb-tid">T122</span>
         <div>
-          <h2>API reference block</h2>
-          <p>A method pill plus monospace path, a description, a params table, and a request/response area with cURL / JSON tabs that switch on click.</p>
+          <h2>Card reference</h2>
+          <p>A month pill plus the card's line, a description, a details table, and a Front / Back area with tabs that switch on click.</p>
         </div>
       </header>
       <div class="tb-demo">
@@ -164,40 +164,36 @@
           <span class="sgx-preview-tag">INTERACTIVE</span>
           <div class="dev-api">
             <div class="dev-api-endpoint">
-              <span class="dev-method">GET</span>
-              <code class="dev-path">/api/v1/components/typewriter-text</code>
+              <span class="dev-method">January</span>
+              <span class="dev-path">January · Byron Bay Lighthouse, NSW</span>
             </div>
-            <p class="dev-api-desc">Returns the prop schema and defaults for the <code>TypewriterText</code> component.</p>
+            <p class="dev-api-desc">January's card: the full moon over Byron Bay Lighthouse, with room on the back for one intention.</p>
 
             <div class="dev-table-wrap">
               <table class="dev-table">
                 <thead>
-                  <tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr>
+                  <tr><th>Detail</th><th>Value</th><th>Notes</th></tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><code>text</code></td>
-                    <td><span class="dev-type">string</span></td>
-                    <td><span class="dev-req-yes">yes</span></td>
-                    <td>The string to animate in.</td>
+                    <td>Full moon</td>
+                    <td><span class="dev-val">22 January 2027</span></td>
+                    <td>The first full moon of the year.</td>
                   </tr>
                   <tr>
-                    <td><code>speed</code></td>
-                    <td><span class="dev-type">number</span></td>
-                    <td><span class="dev-req-no">no</span></td>
-                    <td>Characters per second. Defaults to 30.</td>
+                    <td>Time</td>
+                    <td><span class="dev-val">10:17 pm AEDT</span></td>
+                    <td>Local time on the east coast.</td>
                   </tr>
                   <tr>
-                    <td><code>delay</code></td>
-                    <td><span class="dev-type">number</span></td>
-                    <td><span class="dev-req-no">no</span></td>
-                    <td>Milliseconds before the animation starts.</td>
+                    <td>Landmark</td>
+                    <td><span class="dev-val">Byron Bay Lighthouse</span></td>
+                    <td>The most easterly point of the mainland.</td>
                   </tr>
                   <tr>
-                    <td><code>cursor</code></td>
-                    <td><span class="dev-type">boolean</span></td>
-                    <td><span class="dev-req-no">no</span></td>
-                    <td>Show the blinking caret. Defaults to true.</td>
+                    <td>State</td>
+                    <td><span class="dev-val">New South Wales</span></td>
+                    <td>Every state and territory gets a card across the deck.</td>
                   </tr>
                 </tbody>
               </table>
@@ -205,22 +201,25 @@
 
             <div class="dev-api-io" data-dev-apitabs>
               <div class="dev-api-tabs" role="tablist">
-                <button class="dev-api-tab is-on" data-dev-apitab="curl">cURL</button>
-                <button class="dev-api-tab" data-dev-apitab="json">JSON response</button>
+                <button class="dev-api-tab is-on" data-dev-apitab="front">Front</button>
+                <button class="dev-api-tab" data-dev-apitab="back">Back</button>
               </div>
-              <div class="dev-api-panel is-on" data-dev-apipanel="curl">
-<pre><code>curl https://api.astroanimate.dev/v1/components/typewriter-text \
-  -H "Authorization: Bearer $AA_TOKEN"</code></pre>
+              <div class="dev-api-panel is-on" data-dev-apipanel="front">
+                <div class="dev-face">
+                  <span class="dev-face-eyebrow">Full Moon · 22 January 2027</span>
+                  <p class="dev-face-title">Byron Bay Lighthouse</p>
+                  <p class="dev-face-body">The illustrated face: the full moon rising over the lighthouse, warm gold line-work in the deck's vintage travel-poster style.</p>
+                </div>
               </div>
-              <div class="dev-api-panel" data-dev-apipanel="json">
-<pre><code>{
-  "name": "TypewriterText",
-  "props": {
-    "text":   { "type": "string",  "required": true },
-    "speed":  { "type": "number",  "default": 30 },
-    "cursor": { "type": "boolean", "default": true }
-  }
-}</code></pre>
+              <div class="dev-api-panel" data-dev-apipanel="back">
+                <div class="dev-face">
+                  <span class="dev-face-eyebrow">The writable side</span>
+                  <p class="dev-face-body">Room to write one intention.</p>
+                  <div class="dev-face-rule"></div>
+                  <div class="dev-face-rule"></div>
+                  <div class="dev-face-rule"></div>
+                  <p class="dev-face-tag">Write it. Burn it. Release it.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -232,8 +231,8 @@
       <header class="tb-pattern-head">
         <span class="tb-tid">T123</span>
         <div>
-          <h2>Integration grid</h2>
-          <p>Filter chips above a grid of integration tiles. Selecting a chip shows or hides tiles live by <code>data-category</code>.</p>
+          <h2>The deck by state</h2>
+          <p>Filter chips above the twelve month tiles. Selecting a chip shows or hides tiles live by <code>data-category</code>.</p>
         </div>
       </header>
       <div class="tb-demo">
@@ -242,50 +241,75 @@
           <div class="dev-integ" data-dev-integ>
             <div class="dev-chips" role="tablist">
               <button class="dev-chip is-on" data-dev-filter="All">All</button>
-              <button class="dev-chip" data-dev-filter="Frameworks">Frameworks</button>
-              <button class="dev-chip" data-dev-filter="Tooling">Tooling</button>
-              <button class="dev-chip" data-dev-filter="Platform">Platform</button>
+              <button class="dev-chip" data-dev-filter="NSW">NSW</button>
+              <button class="dev-chip" data-dev-filter="QLD">QLD</button>
+              <button class="dev-chip" data-dev-filter="VIC">VIC</button>
+              <button class="dev-chip" data-dev-filter="WA">WA</button>
+              <button class="dev-chip" data-dev-filter="SA">SA</button>
+              <button class="dev-chip" data-dev-filter="TAS">TAS</button>
+              <button class="dev-chip" data-dev-filter="NT">NT</button>
+              <button class="dev-chip" data-dev-filter="ACT">ACT</button>
             </div>
             <div class="dev-integ-grid">
-              <div class="dev-tile" data-dev-category="Frameworks">
-                <span class="dev-tile-mark" aria-hidden="true">R</span>
-                <span class="dev-tile-name">React</span>
-                <span class="dev-tile-cat">Frameworks</span>
+              <div class="dev-tile" data-dev-category="NSW">
+                <span class="dev-tile-mark" aria-hidden="true">Jan</span>
+                <span class="dev-tile-name">Byron Bay Lighthouse</span>
+                <span class="dev-tile-cat">January · NSW</span>
               </div>
-              <div class="dev-tile" data-dev-category="Frameworks">
-                <span class="dev-tile-mark" aria-hidden="true">V</span>
-                <span class="dev-tile-name">Vue</span>
-                <span class="dev-tile-cat">Frameworks</span>
+              <div class="dev-tile" data-dev-category="QLD">
+                <span class="dev-tile-mark" aria-hidden="true">Feb</span>
+                <span class="dev-tile-name">Whitehaven Beach</span>
+                <span class="dev-tile-cat">February · QLD</span>
               </div>
-              <div class="dev-tile" data-dev-category="Frameworks">
-                <span class="dev-tile-mark" aria-hidden="true">S</span>
-                <span class="dev-tile-name">Svelte</span>
-                <span class="dev-tile-cat">Frameworks</span>
+              <div class="dev-tile" data-dev-category="NSW">
+                <span class="dev-tile-mark" aria-hidden="true">Mar</span>
+                <span class="dev-tile-name">Sydney Harbour Bridge</span>
+                <span class="dev-tile-cat">March · NSW</span>
               </div>
-              <div class="dev-tile" data-dev-category="Frameworks">
-                <span class="dev-tile-mark" aria-hidden="true">N</span>
-                <span class="dev-tile-name">Next.js</span>
-                <span class="dev-tile-cat">Frameworks</span>
+              <div class="dev-tile" data-dev-category="NT">
+                <span class="dev-tile-mark" aria-hidden="true">Apr</span>
+                <span class="dev-tile-name">Uluru</span>
+                <span class="dev-tile-cat">April · NT</span>
               </div>
-              <div class="dev-tile" data-dev-category="Tooling">
-                <span class="dev-tile-mark" aria-hidden="true">Vi</span>
-                <span class="dev-tile-name">Vite</span>
-                <span class="dev-tile-cat">Tooling</span>
+              <div class="dev-tile" data-dev-category="VIC">
+                <span class="dev-tile-mark" aria-hidden="true">May</span>
+                <span class="dev-tile-name">Flinders Street Station</span>
+                <span class="dev-tile-cat">May · VIC</span>
               </div>
-              <div class="dev-tile" data-dev-category="Tooling">
-                <span class="dev-tile-mark" aria-hidden="true">No</span>
-                <span class="dev-tile-name">Node</span>
-                <span class="dev-tile-cat">Tooling</span>
+              <div class="dev-tile" data-dev-category="TAS">
+                <span class="dev-tile-mark" aria-hidden="true">Jun</span>
+                <span class="dev-tile-name">Cradle Mountain</span>
+                <span class="dev-tile-cat">June · TAS</span>
               </div>
-              <div class="dev-tile" data-dev-category="Tooling">
-                <span class="dev-tile-mark" aria-hidden="true">Tw</span>
-                <span class="dev-tile-name">Tailwind</span>
-                <span class="dev-tile-cat">Tooling</span>
+              <div class="dev-tile" data-dev-category="SA">
+                <span class="dev-tile-mark" aria-hidden="true">Jul</span>
+                <span class="dev-tile-name">Remarkable Rocks</span>
+                <span class="dev-tile-cat">July · SA</span>
               </div>
-              <div class="dev-tile" data-dev-category="Platform">
-                <span class="dev-tile-mark" aria-hidden="true">Gh</span>
-                <span class="dev-tile-name">GitHub</span>
-                <span class="dev-tile-cat">Platform</span>
+              <div class="dev-tile" data-dev-category="WA">
+                <span class="dev-tile-mark" aria-hidden="true">Aug</span>
+                <span class="dev-tile-name">The Pinnacles</span>
+                <span class="dev-tile-cat">August · WA</span>
+              </div>
+              <div class="dev-tile" data-dev-category="ACT">
+                <span class="dev-tile-mark" aria-hidden="true">Sep</span>
+                <span class="dev-tile-name">National Carillon</span>
+                <span class="dev-tile-cat">September · ACT</span>
+              </div>
+              <div class="dev-tile" data-dev-category="QLD">
+                <span class="dev-tile-mark" aria-hidden="true">Oct</span>
+                <span class="dev-tile-name">Story Bridge</span>
+                <span class="dev-tile-cat">October · QLD</span>
+              </div>
+              <div class="dev-tile" data-dev-category="WA">
+                <span class="dev-tile-mark" aria-hidden="true">Nov</span>
+                <span class="dev-tile-name">Wave Rock</span>
+                <span class="dev-tile-cat">November · WA</span>
+              </div>
+              <div class="dev-tile" data-dev-category="VIC">
+                <span class="dev-tile-mark" aria-hidden="true">Dec</span>
+                <span class="dev-tile-name">Twelve Apostles</span>
+                <span class="dev-tile-cat">December · VIC</span>
               </div>
             </div>
           </div>
@@ -307,8 +331,8 @@
           <div class="dev-announce-frame">
             <div class="dev-announce" id="dev-announce">
               <span class="dev-announce-dot" aria-hidden="true"></span>
-              <span>v0.1.2 is out. CountUp and scroll triggers have landed.</span>
-              <a href="/changelog" class="dev-announce-link">Read the changelog →</a>
+              <span>Free standard delivery Australia-wide.</span>
+              <a href="/shipping-returns" class="dev-announce-link">Delivery details →</a>
               <button class="dev-announce-x" id="dev-announce-x" aria-label="Dismiss announcement">✕</button>
             </div>
             <button class="dev-announce-reset" id="dev-announce-reset" hidden>dismissed: reset</button>
@@ -335,10 +359,10 @@
               <button class="dev-seg-btn is-on" data-dev-themeval="dark">Dark</button>
             </div>
             <div class="dev-sample dev-sample-dark" id="dev-sample">
-              <span class="dev-sample-eyebrow">// PREVIEW</span>
-              <p class="dev-sample-title">Animate Astro fast</p>
+              <span class="dev-sample-eyebrow">Preview</span>
+              <p class="dev-sample-title">One card a month</p>
               <p class="dev-sample-body">This card previews the selected theme. The rest of the site stays untouched.</p>
-              <span class="dev-sample-btn">Get started</span>
+              <span class="dev-sample-btn">Shop the deck</span>
             </div>
           </div>
         </div>
@@ -350,7 +374,7 @@
         <span class="tb-tid">T126</span>
         <div>
           <h2>&ldquo;Was this helpful?&rdquo;</h2>
-          <p>A small docs-footer card. Clicking 👍 or 👎 swaps the card to a thank-you state.</p>
+          <p>A small help-page footer card. Clicking 👍 or 👎 swaps the card to a thank-you state.</p>
         </div>
       </header>
       <div class="tb-demo">
@@ -366,7 +390,7 @@
             </div>
             <div class="dev-helpful-done" id="dev-helpful-done" hidden>
               <span class="dev-helpful-check" aria-hidden="true">✓</span>
-              <span>Thanks for the feedback.</span>
+              <span>Thanks for letting us know.</span>
             </div>
           </div>
         </div>
@@ -412,11 +436,11 @@
     }
     .dev-kbd-sm { font-size: 10px; padding: 2px 5px; color: var(--text-3); }
 
-    /* ===== 01 COMMAND PALETTE ===== */
+    /* ===== 01 QUICK SEARCH ===== */
     .dev-kbtn {
       display: inline-flex; align-items: center; gap: 8px;
       font-family: var(--font-body); font-size: 14px; color: var(--text-3);
-      background: var(--bg-card); border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-sm);
+      background: var(--bg-card); border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-btn);
       padding: 10px 14px; cursor: pointer;
       transition: border-color .2s ease, color .2s ease;
     }
@@ -496,14 +520,18 @@
     .dev-danger { border-left-color: var(--err-deep); background: color-mix(in srgb, var(--err-deep) 8%, transparent); }
     .dev-danger .dev-callout-icon { color: var(--err-deep); background: color-mix(in srgb, var(--err-deep) 16%, transparent); }
 
-    /* ===== 03 API REFERENCE ===== */
+    /* ===== 03 CARD REFERENCE ===== */
     .dev-api-endpoint { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
     .dev-method {
-      font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+      font-family: var(--font-ui); font-size: 12px; font-weight: 600;
       letter-spacing: .05em; color: var(--cat-5); background: color-mix(in srgb, var(--cat-5) 12%, transparent);
       border: var(--line-weight) solid color-mix(in srgb, var(--cat-5) 35%, transparent); border-radius: var(--radius-sm); padding: 4px 10px;
     }
-    .dev-path { font-size: 14px; background: var(--bg-card); border-color: var(--border); color: var(--text-2); }
+    .dev-path {
+      font-family: var(--font-ui); font-size: 13px; color: var(--text-2);
+      background: var(--bg-card); border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-sm); padding: 4px 10px;
+    }
     .dev-api-desc { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0 0 18px; }
     .dev-table-wrap { border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); overflow-x: auto; margin-bottom: 20px; }
     .dev-table { width: 100%; border-collapse: collapse; min-width: 460px; }
@@ -517,9 +545,7 @@
       padding: 11px 14px; border-bottom: var(--line-weight) solid var(--border); vertical-align: top;
     }
     .dev-table tr:last-child td { border-bottom: none; }
-    .dev-type { font-family: var(--font-mono); font-size: 12px; color: var(--cat-1); }
-    .dev-req-yes { font-family: var(--font-ui); font-size: 11px; color: var(--ok); }
-    .dev-req-no  { font-family: var(--font-ui); font-size: 11px; color: var(--text-4); }
+    .dev-val { font-family: var(--font-ui); font-size: 12px; color: var(--cat-1); }
 
     .dev-api-io { border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); overflow: hidden; }
     .dev-api-tabs { display: flex; border-bottom: var(--line-weight) solid var(--border); background: var(--bg-card); }
@@ -532,15 +558,19 @@
     .dev-api-tab.is-on { color: var(--accent); border-bottom-color: var(--accent); }
     .dev-api-panel { display: none; }
     .dev-api-panel.is-on { display: block; }
-    .dev-api-panel pre {
-      margin: 0; padding: 16px; overflow-x: auto; background: var(--bg-card);
+    .dev-face { padding: 18px; background: var(--bg-card); }
+    .dev-face-eyebrow {
+      display: block; font-family: var(--font-eyebrow); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
+      color: var(--accent); margin-bottom: 8px;
     }
-    .dev-api-panel pre code {
-      background: none; border: none; padding: 0; color: var(--text-2);
-      font-family: var(--font-mono); font-size: 12.5px; line-height: 1.6;
-    }
+    .dev-face-eyebrow::before { content: var(--eyebrow-prefix); }
+    .dev-face-title { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--text); margin: 0 0 6px; }
+    .dev-face-body { font-family: var(--font-body); font-size: 13.5px; line-height: 1.55; color: var(--text-3); margin: 0; }
+    .dev-face-rule { height: 24px; max-width: 340px; border-bottom: var(--line-weight) solid var(--border-2); }
+    .dev-face-tag { font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--text-2); margin: 16px 0 0; }
 
-    /* ===== 04 INTEGRATION GRID ===== */
+    /* ===== 04 DECK BY STATE ===== */
     .dev-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
     .dev-chip {
       font-family: var(--font-ui); font-size: 12px; color: var(--text-3);
@@ -548,7 +578,7 @@
       padding: 6px 14px; cursor: pointer; transition: all .2s ease;
     }
     .dev-chip:hover { color: var(--text); border-color: var(--border-3); }
-    .dev-chip.is-on { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+    .dev-chip.is-on { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
     .dev-integ-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
     .dev-tile {
       display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
@@ -610,12 +640,18 @@
       border-radius: var(--radius-card); padding: 22px; max-width: 380px;
       border: var(--line-weight) solid; transition: background .2s ease, border-color .2s ease, color .2s ease;
     }
-    .dev-sample-eyebrow { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: .08em; color: var(--accent); display: block; margin-bottom: 10px; }
+    .dev-sample-eyebrow {
+      font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: var(--eyebrow-tracking);
+      text-transform: var(--eyebrow-transform); color: var(--accent); display: block; margin-bottom: 10px;
+    }
+    .dev-sample-eyebrow::before { content: var(--eyebrow-prefix); }
     .dev-sample-title { font-family: var(--font-display); font-size: 20px; font-weight: 600; margin: 0 0 8px; }
     .dev-sample-body { font-family: var(--font-body); font-size: 14px; line-height: 1.55; margin: 0 0 16px; }
     .dev-sample-btn {
       display: inline-block; font-family: var(--font-ui); font-size: 12px;
-      color: var(--bg); background: var(--accent); border-radius: var(--radius-sm); padding: 8px 16px;
+      font-weight: var(--button-weight); letter-spacing: var(--button-tracking);
+      text-transform: var(--button-transform);
+      color: var(--accent-ink); background: var(--accent); border-radius: var(--radius-btn); padding: 8px 16px;
     }
     /* These two depict a dark and a light theme, so they use the fixed preview
        grounds rather than the active theme's surfaces. Following --text and
@@ -637,7 +673,7 @@
     .dev-helpful-btns { display: flex; gap: 8px; }
     .dev-helpful-btn {
       font-family: var(--font-body); font-size: 13px; color: var(--text-2);
-      background: var(--bg-3); border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-sm);
+      background: var(--bg-3); border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-btn);
       padding: 7px 14px; cursor: pointer; transition: border-color .2s ease, color .2s ease;
     }
     .dev-helpful-btn:hover { border-color: var(--accent); color: var(--text); }
@@ -661,7 +697,7 @@
     (function () {
       const $ = (id) => document.getElementById(id);
 
-      // T120: Command palette
+      // T120: Quick search palette
       const cmdk = $('dev-cmdk');
       const cmdkInput = $('dev-cmdk-input');
       const cmdkEmpty = $('dev-cmdk-empty');
@@ -697,7 +733,7 @@
         }
       });
 
-      // T122: API tabs
+      // T122: Front / Back tabs
       document.querySelectorAll('[data-dev-apitabs]').forEach((wrap) => {
         wrap.querySelectorAll('[data-dev-apitab]').forEach((btn) => {
           btn.addEventListener('click', () => {
@@ -709,7 +745,7 @@
         });
       });
 
-      // T123: Integration filter
+      // T123: Deck-by-state filter
       const integ = document.querySelector('[data-dev-integ]');
       if (integ) {
         const tiles = integ.querySelectorAll('[data-dev-category]');

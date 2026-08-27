@@ -132,9 +132,15 @@
     --heading-transform: none;
     --eyebrow-tracking: 0.08em;
     --eyebrow-transform: uppercase;
+    /* The code-comment prefix on eyebrow labels is a Dark brand trait, so it
+       is painted by CSS (see .eyebrow::before), never typed into the copy.
+       Moonrite sets it to the empty string and gets clean labels. */
+    --eyebrow-prefix: '// ';
     --button-weight: 700;
     --button-tracking: normal;
-    --button-transform: none;
+    /* Dark's buttons read uppercase. That case lives here, not in the copy,
+       so button labels are authored in natural case in every block. */
+    --button-transform: uppercase;
 
     /* Shape. Dark is a hard-edged design: everything is square
        except pills. Moonrite softens all four. */
@@ -292,6 +298,7 @@
     --heading-transform: none;
     --eyebrow-tracking: 0.1em;
     --eyebrow-transform: uppercase;
+    --eyebrow-prefix: '';
     --button-weight: 500;
     --button-tracking: 0.05em;
     --button-transform: uppercase;
@@ -388,6 +395,13 @@ code {
     color: var(--accent);
     text-transform: var(--eyebrow-transform);
     margin: 0 0 16px;
+}
+
+/* The Dark theme opens its eyebrows with a code-comment prefix. It is theme
+   chrome, not copy: blocks author the label text alone and the active theme
+   decides whether the prefix appears. */
+.eyebrow::before {
+    content: var(--eyebrow-prefix);
 }
 
 /* Buttons (global.css; the dark hex values match the minified bundle) */

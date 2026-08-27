@@ -6,7 +6,7 @@
     "moonrite"
   ],
   "sets": {
-    "core": "The original AstroAnimate-derived library.",
+    "core": "The general-purpose set: foundations, sections, patterns and UI.",
     "ecommerce": "The retail set: catalogue, product, checkout, merchandising, account."
   },
   "page": "index.html",
@@ -54,7 +54,7 @@
       "page": "index.html",
       "anchor": "#T010",
       "source": "pages/elements.html",
-      "description": "Primary (accent fill), secondary (outline), and the nav install pill."
+      "description": "Primary (accent fill), secondary (outline), and the nav CTA pill."
     },
     {
       "id": "T011",
@@ -64,7 +64,7 @@
       "page": "index.html",
       "anchor": "#T011",
       "source": "pages/elements.html",
-      "description": "Tracked, uppercase, accent-coloured section label prefixed with //."
+      "description": "The tracked, uppercase section label in the accent colour. Opens nearly every section."
     },
     {
       "id": "T012",
@@ -74,7 +74,7 @@
       "page": "index.html",
       "anchor": "#T012",
       "source": "pages/elements.html",
-      "description": "NEW badge, rounded pill tag chips, and the bordered numbered index box."
+      "description": "New badge, rounded pill tag chips, and the bordered numbered index box."
     },
     {
       "id": "T013",
@@ -84,7 +84,7 @@
       "page": "index.html",
       "anchor": "#T013",
       "source": "pages/elements.html",
-      "description": "Colour-coded state pills (Added, Changed, Fixed, Shipped, In Progress) for changelog and roadmap."
+      "description": "Colour-coded order states (Ordered, Packed, Shipped, Delivered, On hold) for account and order pages."
     },
     {
       "id": "T014",
@@ -94,7 +94,7 @@
       "page": "index.html",
       "anchor": "#T014",
       "source": "pages/elements.html",
-      "description": "// SYSTEM ONLINE label with a pulsing green indicator dot."
+      "description": "Live status label with a pulsing indicator dot."
     },
     {
       "id": "T015",
@@ -118,13 +118,13 @@
     },
     {
       "id": "T030",
-      "name": "TypewriterText + copy card",
+      "name": "Typewriter share-link card",
       "category": "Library components",
       "set": "core",
       "page": "index.html",
       "anchor": "#T030",
       "source": "pages/components.html",
-      "description": "Terminal-style code card with an accent bar, an npm command, and a copy-to-clipboard button."
+      "description": "Card with an accent bar, a typewriter line that types out the shop link, and a copy-to-clipboard button."
     },
     {
       "id": "T031",
@@ -134,7 +134,7 @@
       "page": "index.html",
       "anchor": "#T031",
       "source": "pages/components.html",
-      "description": "Pulsing loader dots in the success and accent colours, a static equivalent of @astroanimate/core/Loader."
+      "description": "Pulsing loader dots in the success and accent colours, for loading and live states."
     },
     {
       "id": "T040",
@@ -144,7 +144,7 @@
       "page": "index.html",
       "anchor": "#T040",
       "source": "pages/sections.html",
-      "description": "Top navigation with logo, version dropdown, links, social icons, INSTALL button, and a mobile hamburger."
+      "description": "Top navigation with logo, year dropdown, links, social icons, a nav CTA button, and a mobile hamburger."
     },
     {
       "id": "T041",
@@ -154,7 +154,7 @@
       "page": "index.html",
       "anchor": "#T041",
       "source": "pages/sections.html",
-      "description": "Two-column homepage hero: status pill, headline, feature list, CTAs on the left; badges + code card on the right; glow video behind."
+      "description": "Two-column homepage hero: status pill, headline, feature list, CTAs on the left; badges + a this-month card panel on the right; glow video behind."
     },
     {
       "id": "T042",
@@ -174,17 +174,17 @@
       "page": "index.html",
       "anchor": "#T043",
       "source": "pages/sections.html",
-      "description": "\"// SYSTEM ONLINE\" label with a pulsing green Loader. Signals a live state."
+      "description": "\"Shipping now\" label with a pulsing green Loader. Signals a live state."
     },
     {
       "id": "T044",
-      "name": "Code Block Card",
+      "name": "A Card, Being Written",
       "category": "Sections",
       "set": "core",
       "page": "index.html",
       "anchor": "#T044",
       "source": "pages/sections.html",
-      "description": "Terminal-style card with an accent bar, a typewriter command, and a copy button."
+      "description": "Card with an accent bar, a typewriter line writing a sample intention, and a copy button."
     },
     {
       "id": "T045",
@@ -204,11 +204,11 @@
       "page": "index.html",
       "anchor": "#T046",
       "source": "pages/sections.html",
-      "description": "Feature-by-feature table contrasting AstroAnimate with alternatives, using check / cross / warn icons."
+      "description": "Feature-by-feature table contrasting the deck with alternatives, using check / cross / warn icons."
     },
     {
       "id": "T047",
-      "name": "Performance / Architecture Grids",
+      "name": "Deck at a Glance Grid",
       "category": "Sections",
       "set": "core",
       "page": "index.html",
@@ -218,7 +218,7 @@
     },
     {
       "id": "T048",
-      "name": "Use-case & Doc-structure Tabs",
+      "name": "Ways-to-Use Tabs",
       "category": "Sections",
       "set": "core",
       "page": "index.html",
@@ -228,13 +228,13 @@
     },
     {
       "id": "T049",
-      "name": "Open-source Panel",
+      "name": "About the Deck Panel",
       "category": "Sections",
       "set": "core",
       "page": "index.html",
       "anchor": "#T049",
       "source": "pages/sections.html",
-      "description": "Two-column block: prose on the left, a stacked key/value badge column (LICENSE, SIZE, RUNTIME) on the right."
+      "description": "Two-column block: prose on the left, a stacked key/value badge column of deck facts on the right."
     },
     {
       "id": "T050",
@@ -248,13 +248,13 @@
     },
     {
       "id": "T051",
-      "name": "Docs Layout",
+      "name": "Guide Layout",
       "category": "Sections",
       "set": "core",
       "page": "index.html",
       "anchor": "#T051",
       "source": "pages/sections.html",
-      "description": "Three-column app shell: collapsible grouped sidebar, centered reading column, right \"in this page\" TOC."
+      "description": "Three-column guide shell: collapsible grouped sidebar, centered reading column, right \"on this page\" TOC."
     },
     {
       "id": "T052",
@@ -264,17 +264,17 @@
       "page": "index.html",
       "anchor": "#T052",
       "source": "pages/sections.html",
-      "description": "\"IN THIS PAGE\" rail that highlights the active heading as you scroll."
+      "description": "\"On this page\" rail that highlights the active heading as you scroll."
     },
     {
       "id": "T053",
-      "name": "Component Card Grid",
+      "name": "Monthly Card Grid",
       "category": "Sections",
       "set": "core",
       "page": "index.html",
       "anchor": "#T053",
       "source": "pages/sections.html",
-      "description": "Catalog of components grouped by category, each card with name, NEW badge, description, and subpath import."
+      "description": "Catalog of the monthly cards, each with a month name, a highlight badge, and a landmark line."
     },
     {
       "id": "T054",
@@ -294,7 +294,7 @@
       "page": "index.html",
       "anchor": "#T055",
       "source": "pages/sections.html",
-      "description": "Article header with cover image and author, a sticky table of contents, and a prose body with code blocks, callouts, and comparison tables."
+      "description": "Article header with cover image and author, a sticky table of contents, and a prose body with pull quotes, callouts, and written-card excerpts."
     },
     {
       "id": "T056",
@@ -308,7 +308,7 @@
     },
     {
       "id": "T057",
-      "name": "Showcase Grid",
+      "name": "Landmark Showcase Grid",
       "category": "Sections",
       "set": "core",
       "page": "index.html",
@@ -318,23 +318,23 @@
     },
     {
       "id": "T058",
-      "name": "Changelog Timeline",
+      "name": "Year in Moons Timeline",
       "category": "Sections",
       "set": "core",
       "page": "index.html",
       "anchor": "#T058",
       "source": "pages/sections.html",
-      "description": "Vertical timeline with version dots and Added / Changed / Fixed change tags per release."
+      "description": "Vertical timeline of the year's full moons, with moon dots and a season tag per entry."
     },
     {
       "id": "T059",
-      "name": "Roadmap Columns",
+      "name": "Moon Calendar Columns",
       "category": "Sections",
       "set": "core",
       "page": "index.html",
       "anchor": "#T059",
       "source": "pages/sections.html",
-      "description": "Status-grouped columns (Shipped, In Progress, Planned, Exploring) of feature cards with status pills."
+      "description": "Season-grouped columns (Summer, Autumn, Winter, Spring) of month cards with season pills."
     },
     {
       "id": "T060",
@@ -344,7 +344,7 @@
       "page": "index.html",
       "anchor": "#T060",
       "source": "pages/sections.html",
-      "description": "Grid of channel cards plus a numbered \"good bug report\" checklist and quick links."
+      "description": "Grid of channel cards plus a numbered \"before you email\" checklist and quick links."
     },
     {
       "id": "T061",
@@ -374,7 +374,7 @@
       "page": "index.html",
       "anchor": "#T063",
       "source": "pages/sections.html",
-      "description": "Five-column footer with newsletter signup and a bottom bar showing a live UTC clock."
+      "description": "Five-column footer with newsletter signup and a bottom bar showing the next full moon date."
     },
     {
       "id": "T070",
@@ -384,17 +384,17 @@
       "page": "index.html",
       "anchor": "#T070",
       "source": "pages/patterns.html",
-      "description": "Three-tier pricing with a highlighted recommended plan, feature lists, and CTAs."
+      "description": "Three pricing cards built on quantities of a single product, with a highlighted option, feature lists, and CTAs."
     },
     {
       "id": "T071",
-      "name": "Popup promo",
+      "name": "Newsletter popup",
       "category": "Patterns",
       "set": "core",
       "page": "index.html",
       "anchor": "#T071",
       "source": "pages/patterns.html",
-      "description": "A modal promotion built on the native <dialog> element. It opens over a dimmed backdrop and closes on the ✕ or a backdrop click."
+      "description": "A modal signup built on the native <dialog> element: opens over a dimmed backdrop, closes on the ✕ or a backdrop click."
     },
     {
       "id": "T072",
@@ -404,7 +404,7 @@
       "page": "index.html",
       "anchor": "#T072",
       "source": "pages/patterns.html",
-      "description": "A responsive thumbnail grid with hover captions. Click any tile to open it in a lightbox."
+      "description": "A responsive thumbnail grid with hover captions. Click any card to open it in a lightbox."
     },
     {
       "id": "T073",
@@ -418,13 +418,13 @@
     },
     {
       "id": "T074",
-      "name": "Folders",
+      "name": "What's in the box",
       "category": "Patterns",
       "set": "core",
       "page": "index.html",
       "anchor": "#T074",
       "source": "pages/patterns.html",
-      "description": "A collapsible file tree built from nested <details>. Folders expand and collapse with no JavaScript."
+      "description": "A collapsible contents tree built from nested <details>: sections expand and collapse, no JavaScript."
     },
     {
       "id": "T075",
@@ -444,7 +444,7 @@
       "page": "index.html",
       "anchor": "#T076",
       "source": "pages/patterns.html",
-      "description": "The accordion pattern with every item open on load (open attribute set). Collapse any you don't need."
+      "description": "The accordion pattern with every item open on load (set the open attribute). Collapse any you don't need."
     },
     {
       "id": "T077",
@@ -484,7 +484,7 @@
       "page": "index.html",
       "anchor": "#T101",
       "source": "pages/animation.html",
-      "description": "Seamlessly looping chip track from a duplicated row and one CSS keyframe; pauses on hover, frozen for reduced-motion."
+      "description": "Continuously looping chip track from a duplicated row and one CSS keyframe; pauses on hover, frozen for reduced-motion."
     },
     {
       "id": "T102",
@@ -534,12 +534,12 @@
       "page": "index.html",
       "anchor": "#T106",
       "source": "pages/animation.html",
-      "description": "Large project rows that highlight on hover while a gradient thumbnail follows the cursor; degrades without JS."
+      "description": "Large rows that highlight on hover while a gradient thumbnail follows the cursor; degrades without JS."
     },
     {
       "id": "T120",
-      "name": "Command palette (⌘K)",
-      "category": "Dev tools",
+      "name": "Quick search (⌘K)",
+      "category": "Site tools",
       "set": "core",
       "page": "index.html",
       "anchor": "#T120",
@@ -548,8 +548,8 @@
     },
     {
       "id": "T121",
-      "name": "Callout / admonition boxes",
-      "category": "Dev tools",
+      "name": "Callout boxes",
+      "category": "Site tools",
       "set": "core",
       "page": "index.html",
       "anchor": "#T121",
@@ -558,28 +558,28 @@
     },
     {
       "id": "T122",
-      "name": "API reference block",
-      "category": "Dev tools",
+      "name": "Card reference",
+      "category": "Site tools",
       "set": "core",
       "page": "index.html",
       "anchor": "#T122",
       "source": "pages/devtools.html",
-      "description": "Method pill, monospace path, params table, and cURL/JSON tabs that switch on click."
+      "description": "Month pill, card line, details table, and Front/Back tabs that switch on click."
     },
     {
       "id": "T123",
-      "name": "Integration grid",
-      "category": "Dev tools",
+      "name": "The deck by state",
+      "category": "Site tools",
       "set": "core",
       "page": "index.html",
       "anchor": "#T123",
       "source": "pages/devtools.html",
-      "description": "Filter chips above a grid of integration tiles, shown or hidden live by data-category."
+      "description": "Filter chips above twelve month tiles, shown or hidden live by data-category."
     },
     {
       "id": "T124",
       "name": "Announcement bar",
-      "category": "Dev tools",
+      "category": "Site tools",
       "set": "core",
       "page": "index.html",
       "anchor": "#T124",
@@ -589,7 +589,7 @@
     {
       "id": "T125",
       "name": "Theme switcher",
-      "category": "Dev tools",
+      "category": "Site tools",
       "set": "core",
       "page": "index.html",
       "anchor": "#T125",
@@ -599,22 +599,22 @@
     {
       "id": "T126",
       "name": "“Was this helpful?”",
-      "category": "Dev tools",
+      "category": "Site tools",
       "set": "core",
       "page": "index.html",
       "anchor": "#T126",
       "source": "pages/devtools.html",
-      "description": "Small docs-footer feedback card that swaps to a thank-you state on vote."
+      "description": "Small help-page footer feedback card that swaps to a thank-you state on vote."
     },
     {
       "id": "T140",
-      "name": "Logo cloud / \"trusted by\" strip",
+      "name": "Logo cloud / \"featured in\" strip",
       "category": "Social proof",
       "set": "core",
       "page": "index.html",
       "anchor": "#T140",
       "source": "pages/social.html",
-      "description": "A muted row of company wordmarks under a small label. Marquees slowly and pauses on hover."
+      "description": "A muted row of wordmarks under a small label. Marquees slowly and pauses on hover."
     },
     {
       "id": "T141",
@@ -624,7 +624,7 @@
       "page": "index.html",
       "anchor": "#T141",
       "source": "pages/social.html",
-      "description": "A multi-column masonry of quote cards: quote, initials avatar, name and role. Static."
+      "description": "A multi-column masonry of quote cards: quote, initials avatar, name and town. Static."
     },
     {
       "id": "T142",
@@ -658,13 +658,13 @@
     },
     {
       "id": "T145",
-      "name": "Customer case-study cards",
+      "name": "Customer stories",
       "category": "Social proof",
       "set": "core",
       "page": "index.html",
       "anchor": "#T145",
       "source": "pages/social.html",
-      "description": "A three-up grid: wordmark, a headline metric, a one-line summary, an industry chip, and a read-story link."
+      "description": "A three-up grid: a name and month, an honest headline figure, a one-line summary, a chip, and a read-story link."
     },
     {
       "id": "T146",
@@ -734,7 +734,7 @@
       "page": "index.html",
       "anchor": "#T165",
       "source": "pages/content.html",
-      "description": "A \"Part 2 of 5\" bar with titled previous/next arrows and a thin progress indicator."
+      "description": "A \"Part 2 of 12\" bar with titled previous/next arrows and a thin progress indicator."
     },
     {
       "id": "T166",
@@ -754,7 +754,7 @@
       "page": "index.html",
       "anchor": "#T180",
       "source": "pages/navigation.html",
-      "description": "A wide multi-column dropdown for sites with deep navigation, with a CountUp featured card."
+      "description": "A wide multi-column dropdown for sites with deep navigation, with an animated count-up featured card."
     },
     {
       "id": "T181",
@@ -834,7 +834,7 @@
       "page": "index.html",
       "anchor": "#T201",
       "source": "pages/forms.html",
-      "description": "Checkboxes, a radio group, and an on/off switch: the three ways to capture a boolean or a pick."
+      "description": "Checkboxes, radio group, and an on/off switch: the three ways to capture a boolean or a pick."
     },
     {
       "id": "T202",
@@ -854,7 +854,7 @@
       "page": "index.html",
       "anchor": "#T203",
       "source": "pages/forms.html",
-      "description": "A search input that filters a suggestion list as you type."
+      "description": "A search input that filters a suggestion list as you type. Try typing “rock” or “june”."
     },
     {
       "id": "T204",
@@ -864,7 +864,7 @@
       "page": "index.html",
       "anchor": "#T204",
       "source": "pages/forms.html",
-      "description": "A wizard that advances through panels with Back / Next, keeping the rest hidden."
+      "description": "A checkout-shaped wizard (details, delivery, payment) that advances with Back / Next, keeping the rest hidden. Click Next."
     },
     {
       "id": "T205",
@@ -874,7 +874,7 @@
       "page": "index.html",
       "anchor": "#T205",
       "source": "pages/forms.html",
-      "description": "A drag-and-drop target with a browse fallback and a list of selected files."
+      "description": "A drag-and-drop target with a browse fallback and a list of selected files, framed as adding a photo to a review."
     },
     {
       "id": "T206",
@@ -884,7 +884,7 @@
       "page": "index.html",
       "anchor": "#T206",
       "source": "pages/forms.html",
-      "description": "A consent banner with accept / reject and a link to preferences."
+      "description": "A consent banner with accept / reject and a link to preferences. Click a button to dismiss it."
     },
     {
       "id": "T220",
@@ -974,17 +974,17 @@
       "page": "index.html",
       "anchor": "#T241",
       "source": "pages/data.html",
-      "description": "A zebra-striped table with sortable headers. Click a column header to re-sort."
+      "description": "A zebra-striped table with sortable headers, here the 2027 moon calendar. Click a column header to re-sort."
     },
     {
       "id": "T242",
-      "name": "Pricing billing toggle",
+      "name": "Pricing option toggle",
       "category": "Data",
       "set": "core",
       "page": "index.html",
       "anchor": "#T242",
       "source": "pages/data.html",
-      "description": "A monthly / annual switch that swaps the displayed prices in place."
+      "description": "A two-option switch that swaps the displayed prices in place, here standard / express delivery. Toggle it."
     },
     {
       "id": "T243",
@@ -994,7 +994,7 @@
       "page": "index.html",
       "anchor": "#T243",
       "source": "pages/data.html",
-      "description": "A two-column key/value sheet for technical specs, metadata, or property tables."
+      "description": "A two-column key/value sheet for product specs, metadata, or property tables."
     },
     {
       "id": "T244",
@@ -1004,7 +1004,7 @@
       "page": "index.html",
       "anchor": "#T244",
       "source": "pages/data.html",
-      "description": "A lightweight, CSS-only comparison chart: labelled rows with proportional fills."
+      "description": "A lightweight, CSS-only comparison chart: labelled rows with proportional fills, here how the cards were released."
     },
     {
       "id": "T245",
@@ -1114,7 +1114,7 @@
       "page": "index.html",
       "anchor": "#T263",
       "source": "pages/commerce.html",
-      "description": "A faceted filter rail: category checkboxes, a price range, and active filter chips you can clear."
+      "description": "A faceted filter rail: facet checkboxes, a range control, and active filter chips you can clear."
     },
     {
       "id": "T264",
@@ -1124,7 +1124,7 @@
       "page": "index.html",
       "anchor": "#T264",
       "source": "pages/commerce.html",
-      "description": "An urgency timer for sales and launches, ticking down in days / hours / minutes / seconds."
+      "description": "A timer ticking down in days / hours / minutes / seconds, here to the next full moon."
     },
     {
       "id": "T265",
@@ -1134,7 +1134,7 @@
       "page": "index.html",
       "anchor": "#T265",
       "source": "pages/commerce.html",
-      "description": "Stacked, overlapping avatars with an overflow count, the \"join 2,000+ others\" cue."
+      "description": "Stacked, overlapping avatars with an overflow count and a short social-proof line."
     },
     {
       "id": "T300",
@@ -1154,7 +1154,7 @@
       "page": "index.html",
       "anchor": "#T301",
       "source": "pages/ecom-catalogue.html",
-      "description": "A responsive 4-up grid of product cards that drops to 2-up on a tablet and 1-up on a phone."
+      "description": "The catalogue body: a 4-up grid of product cards that drops to 2-up on a tablet and 1-up on a phone."
     },
     {
       "id": "T302",
@@ -1164,7 +1164,7 @@
       "page": "index.html",
       "anchor": "#T302",
       "source": "pages/ecom-catalogue.html",
-      "description": "The four states one card has to cover side by side: default, on sale with a strike-through RRP and discount badge, sold out, and low stock. T260 on pages/commerce.html is the original single product card."
+      "description": "The four states one card has to cover: default, on sale with a strike-through RRP, sold out, and low stock. T260 on pages/commerce.html is the original single product card."
     },
     {
       "id": "T303",
@@ -1184,7 +1184,7 @@
       "page": "index.html",
       "anchor": "#T304",
       "source": "pages/ecom-catalogue.html",
-      "description": "The strip above the grid: result count, a sort select, and a grid or list view toggle."
+      "description": "The strip above the grid: how many results, how they are ordered, and whether they show as cards or rows."
     },
     {
       "id": "T305",
@@ -1194,7 +1194,7 @@
       "page": "index.html",
       "anchor": "#T305",
       "source": "pages/ecom-catalogue.html",
-      "description": "The desktop faceted sidebar: collapsible details groups, checkbox facets with counts, colour swatches, a price min and max pair, and a clear-all."
+      "description": "The desktop faceted sidebar: collapsible groups, checkbox facets with counts, swatch chips, a price pair and a clear-all."
     },
     {
       "id": "T306",
@@ -1204,7 +1204,7 @@
       "page": "index.html",
       "anchor": "#T306",
       "source": "pages/ecom-catalogue.html",
-      "description": "The mobile equivalent of the rail on a native dialog: a trigger with a count, a slide-in panel, then apply or clear."
+      "description": "The phone equivalent of the rail, on a native dialog: a trigger with a count, a slide-in panel, then apply or clear."
     },
     {
       "id": "T307",
@@ -1214,7 +1214,7 @@
       "page": "index.html",
       "anchor": "#T307",
       "source": "pages/ecom-catalogue.html",
-      "description": "A row of removable chips showing what is narrowing the results, each with its own remove control, plus a clear-all."
+      "description": "What is currently narrowing the results, each one removable on its own, with a clear-all beside them."
     },
     {
       "id": "T308",
@@ -1224,7 +1224,7 @@
       "page": "index.html",
       "anchor": "#T308",
       "source": "pages/ecom-catalogue.html",
-      "description": "A dialog with product image, title, price, variant row, quantity stepper and add-to-cart, opened from a card overlay button."
+      "description": "Buy from the grid without leaving it: a dialog with the image, price, variants, quantity and add-to-cart, opened from a card overlay button."
     },
     {
       "id": "T309",
@@ -1234,7 +1234,7 @@
       "page": "index.html",
       "anchor": "#T309",
       "source": "pages/ecom-catalogue.html",
-      "description": "Both ways to reach page two: a load-more button with a showing 24 of 96 progress line, and a numbered pagination row beneath it."
+      "description": "Both ways to get to page two: a load-more button with a progress line, and a numbered pagination row for crawlable pages."
     },
     {
       "id": "T310",
@@ -1244,7 +1244,7 @@
       "page": "index.html",
       "anchor": "#T310",
       "source": "pages/ecom-catalogue.html",
-      "description": "The no-results panel: icon, headline, explanation, the filters worth removing, and a browse-all CTA."
+      "description": "What the grid says when the facets return nothing: name the cause, offer the filters worth dropping, and keep a way out."
     },
     {
       "id": "T311",
@@ -1254,7 +1254,7 @@
       "page": "index.html",
       "anchor": "#T311",
       "source": "pages/ecom-catalogue.html",
-      "description": "A grid of collection tiles on a wash background with a label and an item count, for a shop landing page."
+      "description": "The shop landing grid: one tile per collection on a wash background, with a label and an item count."
     },
     {
       "id": "T320",
@@ -1284,7 +1284,7 @@
       "page": "index.html",
       "anchor": "#T322",
       "source": "pages/ecom-product.html",
-      "description": "Colour swatches and size pills as keyboard operable radio groups, with selected, unavailable and sold out states kept distinct."
+      "description": "Edition pills and gift wrap swatches as radio groups, with selected, not yet released and sold out states kept visually distinct."
     },
     {
       "id": "T323",
@@ -1304,7 +1304,7 @@
       "page": "index.html",
       "anchor": "#T324",
       "source": "pages/ecom-product.html",
-      "description": "Every price presentation in one block: single, sale against RRP with a percent off badge, per unit, from price, and instalments."
+      "description": "Every price presentation in one place: single, sale against RRP, per unit, from price with an add-on, and instalments."
     },
     {
       "id": "T325",
@@ -1314,7 +1314,7 @@
       "page": "index.html",
       "anchor": "#T325",
       "source": "pages/ecom-product.html",
-      "description": "The availability cues: in stock, low stock with a count and a bar, sold out with a notify action, and a live viewing count."
+      "description": "The availability cues: in stock, low stock with a level bar, sold out with a notify action, and a live viewing count."
     },
     {
       "id": "T326",
@@ -1324,7 +1324,7 @@
       "page": "index.html",
       "anchor": "#T326",
       "source": "pages/ecom-product.html",
-      "description": "A postcode check that returns a delivery window and a shipping cost, with both a result state and an error state."
+      "description": "A postcode check that returns a delivery window and a shipping cost, with a result state and an error state."
     },
     {
       "id": "T327",
@@ -1334,7 +1334,7 @@
       "page": "index.html",
       "anchor": "#T327",
       "source": "pages/ecom-product.html",
-      "description": "The bar that slides in once the buy box scrolls away, carrying thumb, title, variant summary, price and an add button."
+      "description": "The bar that slides in once the buy box scrolls away, carrying a thumb, the title, the price and an add button."
     },
     {
       "id": "T328",
@@ -1344,7 +1344,7 @@
       "page": "index.html",
       "anchor": "#T328",
       "source": "pages/ecom-product.html",
-      "description": "Description, specifications, shipping and returns as native details disclosures with an animated chevron marker."
+      "description": "What's in the box, the details, the ritual, and delivery and returns as native disclosures with an animated chevron marker."
     },
     {
       "id": "T329",
@@ -1354,17 +1354,17 @@
       "page": "index.html",
       "anchor": "#T329",
       "source": "pages/ecom-product.html",
-      "description": "A four up row of icon, label and one line of reassurance for shipping, returns, warranty and secure payment."
+      "description": "A four up row of icon, label and one line of reassurance for delivery, origin, coverage and secure checkout."
     },
     {
       "id": "T330",
-      "name": "Bundle and save",
+      "name": "Buy together",
       "category": "Product page",
       "set": "ecommerce",
       "page": "index.html",
       "anchor": "#T330",
       "source": "pages/ecom-product.html",
-      "description": "Three products bought together at a combined price, with a checkbox per item that recalculates the total, the saving and the button."
+      "description": "The deck and its gift add-ons bought together at a combined price, with a checkbox per item that recalculates the total and the button."
     },
     {
       "id": "T331",
@@ -1374,7 +1374,7 @@
       "page": "index.html",
       "anchor": "#T331",
       "source": "pages/ecom-product.html",
-      "description": "A horizontally scrollable goes well with rail of compact product cards, each carrying a quick add button."
+      "description": "A horizontally scrollable goes well with rail of compact cards, each carrying a quick add button and snap alignment."
     },
     {
       "id": "T332",
@@ -1384,7 +1384,7 @@
       "page": "index.html",
       "anchor": "#T332",
       "source": "pages/ecom-product.html",
-      "description": "A two column specification table with a size guide link that opens a dialog holding the measurements table."
+      "description": "A two column spec table with a locations index link that opens a native dialog holding the twelve landmarks."
     },
     {
       "id": "T340",
@@ -1394,7 +1394,7 @@
       "page": "index.html",
       "anchor": "#T340",
       "source": "pages/ecom-checkout.html",
-      "description": "A slide-over cart panel with a close button, line items, subtotal, free-shipping progress, and the view-cart and checkout actions."
+      "description": "A slide-over cart with a close button, line items, subtotal, a delivery reassurance line, and the two exit actions."
     },
     {
       "id": "T341",
@@ -1404,7 +1404,7 @@
       "page": "index.html",
       "anchor": "#T341",
       "source": "pages/ecom-checkout.html",
-      "description": "One cart row: thumb, title, variant summary, quantity stepper, line total, remove, plus the saved-for-later variant."
+      "description": "One row: thumb, title, variant summary, quantity stepper, line total, remove, plus the saved-for-later variant."
     },
     {
       "id": "T342",
@@ -1414,7 +1414,7 @@
       "page": "index.html",
       "anchor": "#T342",
       "source": "pages/ecom-checkout.html",
-      "description": "The zero state with icon, headline, a line of copy, a browse CTA, and a recently-viewed suggestion row."
+      "description": "The zero state: icon, headline, a line of reassurance, a browse CTA, and a suggestion row to restart the shop."
     },
     {
       "id": "T343",
@@ -1434,17 +1434,17 @@
       "page": "index.html",
       "anchor": "#T344",
       "source": "pages/ecom-checkout.html",
-      "description": "A code field with an apply button in three states: idle, applied as a removable chip with the saving shown, and rejected with an inline error."
+      "description": "The code field with an apply button in three states: idle, an inactive code with its inline error, and the empty submit."
     },
     {
       "id": "T345",
-      "name": "Free shipping progress",
+      "name": "Delivery reassurance strip",
       "category": "Cart & checkout",
       "set": "ecommerce",
       "page": "index.html",
       "anchor": "#T345",
       "source": "pages/ecom-checkout.html",
-      "description": "A progress bar counting a subtotal toward the free-shipping threshold, with its unlocked state."
+      "description": "Two quiet cards stating each delivery option and its window, in place of any spend-threshold nudge."
     },
     {
       "id": "T346",
@@ -1454,7 +1454,7 @@
       "page": "index.html",
       "anchor": "#T346",
       "source": "pages/ecom-checkout.html",
-      "description": "A four-step progress indicator for cart, details, shipping and payment, with complete, current and upcoming states."
+      "description": "Details, delivery, payment and review, with complete, current and upcoming states. The current step carries aria-current=\"step\"."
     },
     {
       "id": "T347",
@@ -1464,7 +1464,7 @@
       "page": "index.html",
       "anchor": "#T347",
       "source": "pages/ecom-checkout.html",
-      "description": "Email, phone and a full Australian address block with a state select and four-digit postcode, showing the valid and invalid states."
+      "description": "Email, phone, and a full Australian address block with a state select and a four-digit postcode, showing the valid and invalid states."
     },
     {
       "id": "T348",
@@ -1474,7 +1474,7 @@
       "page": "index.html",
       "anchor": "#T348",
       "source": "pages/ecom-checkout.html",
-      "description": "Radio cards carrying method name, delivery window and price, including a free option, a selected state and a disabled one."
+      "description": "Radio cards carrying the method name, the delivery window, and the price, with a free standard option and a flat-rate express."
     },
     {
       "id": "T349",
@@ -1484,7 +1484,7 @@
       "page": "index.html",
       "anchor": "#T349",
       "source": "pages/ecom-checkout.html",
-      "description": "A payment method radio group for card, PayPal and Afterpay, where the card fields reveal for the card option, with a security note."
+      "description": "A payment method radio group for card and PayPal, where the card fields reveal for the card option in CSS alone, with a security note underneath."
     },
     {
       "id": "T350",
@@ -1494,7 +1494,7 @@
       "page": "index.html",
       "anchor": "#T350",
       "source": "pages/ecom-checkout.html",
-      "description": "A row of express wallet buttons above the divider that hands off to the full checkout form."
+      "description": "The one-tap wallet row that sits above the form, with the divider that hands off to the long way round."
     },
     {
       "id": "T351",
@@ -1504,7 +1504,7 @@
       "page": "index.html",
       "anchor": "#T351",
       "source": "pages/ecom-checkout.html",
-      "description": "The final confirm panel: every earlier step collapsed with edit links, the totals breakdown, terms consent, and the place-order button."
+      "description": "The last panel before the money moves: every earlier step collapsed with an edit link, the totals, consent, and the place-order button."
     },
     {
       "id": "T352",
@@ -1514,7 +1514,7 @@
       "page": "index.html",
       "anchor": "#T352",
       "source": "pages/ecom-checkout.html",
-      "description": "The success state with order number, itemised recap, delivery address, estimated arrival, and next-step actions."
+      "description": "The thank-you screen: order number, itemised recap, delivery address, estimated arrival, and where to go next."
     },
     {
       "id": "T353",
@@ -1524,7 +1524,7 @@
       "page": "index.html",
       "anchor": "#T353",
       "source": "pages/ecom-checkout.html",
-      "description": "A vertical timeline from placed to delivered, carrying the tracking number and marking the parcel's current position."
+      "description": "A vertical timeline from ordered to delivered, carrying the tracking number and marking where the parcel is right now."
     },
     {
       "id": "T360",
@@ -1548,13 +1548,13 @@
     },
     {
       "id": "T362",
-      "name": "Countdown offer strip",
+      "name": "Full moon countdown",
       "category": "Merchandising & trust",
       "set": "ecommerce",
       "page": "index.html",
       "anchor": "#T362",
       "source": "pages/ecom-merch.html",
-      "description": "An offer message wired to a live ticking countdown in days, hours, minutes and seconds, plus its expired state."
+      "description": "A message wired to a live ticking countdown in days, hours, minutes and seconds, plus the state it falls back to once the moment passes."
     },
     {
       "id": "T363",
@@ -1564,7 +1564,7 @@
       "page": "index.html",
       "anchor": "#T363",
       "source": "pages/ecom-merch.html",
-      "description": "A four-up icon row for the promises a store repeats sitewide: delivery, returns, payment and support."
+      "description": "A four-up icon row for the promises a store repeats sitewide."
     },
     {
       "id": "T364",
@@ -1604,7 +1604,7 @@
       "page": "index.html",
       "anchor": "#T367",
       "source": "pages/ecom-merch.html",
-      "description": "A user-generated photo grid where each tile shows a customer handle and a shop-this-look tag, opening in a dialog lightbox."
+      "description": "A user-generated photo grid where each tile shows a customer handle and a shop tag, opening in a dialog lightbox."
     },
     {
       "id": "T368",
@@ -1638,13 +1638,13 @@
     },
     {
       "id": "T371",
-      "name": "Newsletter capture with incentive",
+      "name": "Newsletter capture",
       "category": "Merchandising & trust",
       "set": "ecommerce",
       "page": "index.html",
       "anchor": "#T371",
       "source": "pages/ecom-merch.html",
-      "description": "An offer headline, email field and consent line, swapping to a success state that reveals a discount code with a copy button."
+      "description": "A signup headline, email field and consent line, swapping to a success state that reveals a key line with a copy button."
     },
     {
       "id": "T372",
@@ -1654,7 +1654,7 @@
       "page": "index.html",
       "anchor": "#T372",
       "source": "pages/ecom-merch.html",
-      "description": "A compact horizontally scrollable rail of previously viewed products, with a clear-history action and an empty state."
+      "description": "A compact horizontally scrollable rail of previously viewed items, with a clear-history action and an empty state."
     },
     {
       "id": "T373",
@@ -1704,7 +1704,7 @@
       "page": "index.html",
       "anchor": "#T383",
       "source": "pages/ecom-account.html",
-      "description": "A returns flow with per-item reasons, a refund or exchange choice, a comments field and a live summary of the refund."
+      "description": "A returns flow with per-item reasons, a refund or replacement choice, a comments field and a live summary of the refund."
     },
     {
       "id": "T384",
@@ -1734,17 +1734,17 @@
       "page": "index.html",
       "anchor": "#T386",
       "source": "pages/ecom-account.html",
-      "description": "Saved card rows showing brand, masked last four, expiry, a default badge and an expired state, with an add-card form."
+      "description": "Saved payment method rows showing card brand, masked last four, expiry, a default badge, a linked wallet account and an expired state, with an add-card form."
     },
     {
       "id": "T387",
-      "name": "Subscription manager",
+      "name": "Next-year reservation",
       "category": "Account & post-purchase",
       "set": "ecommerce",
       "page": "index.html",
       "anchor": "#T387",
       "source": "pages/ecom-account.html",
-      "description": "An active subscription with a frequency select that moves the next delivery date, plus skip, pause and cancel."
+      "description": "A reserved future order: the item held, a shipping-window select that moves the date, and delay, hold and cancel on an inline confirm."
     },
     {
       "id": "T388",
@@ -1754,7 +1754,7 @@
       "page": "index.html",
       "anchor": "#T388",
       "source": "pages/ecom-account.html",
-      "description": "A points balance, a progress bar to the next tier, a redeem row that spends the balance, and a short points ledger."
+      "description": "A points balance, a progress bar to the next tier, a redeem row and a short ledger, for stores that run a points program."
     },
     {
       "id": "T389",

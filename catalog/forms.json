@@ -17,7 +17,7 @@
     "page": "index.html",
     "anchor": "#T201",
     "source": "pages/forms.html",
-    "description": "Checkboxes, a radio group, and an on/off switch: the three ways to capture a boolean or a pick."
+    "description": "Checkboxes, radio group, and an on/off switch: the three ways to capture a boolean or a pick."
   },
   {
     "id": "T202",
@@ -37,7 +37,7 @@
     "page": "index.html",
     "anchor": "#T203",
     "source": "pages/forms.html",
-    "description": "A search input that filters a suggestion list as you type."
+    "description": "A search input that filters a suggestion list as you type. Try typing “rock” or “june”."
   },
   {
     "id": "T204",
@@ -47,7 +47,7 @@
     "page": "index.html",
     "anchor": "#T204",
     "source": "pages/forms.html",
-    "description": "A wizard that advances through panels with Back / Next, keeping the rest hidden."
+    "description": "A checkout-shaped wizard (details, delivery, payment) that advances with Back / Next, keeping the rest hidden. Click Next."
   },
   {
     "id": "T205",
@@ -57,7 +57,7 @@
     "page": "index.html",
     "anchor": "#T205",
     "source": "pages/forms.html",
-    "description": "A drag-and-drop target with a browse fallback and a list of selected files."
+    "description": "A drag-and-drop target with a browse fallback and a list of selected files, framed as adding a photo to a review."
   },
   {
     "id": "T206",
@@ -67,6 +67,6 @@
     "page": "index.html",
     "anchor": "#T206",
     "source": "pages/forms.html",
-    "description": "A consent banner with accept / reject and a link to preferences."
+    "description": "A consent banner with accept / reject and a link to preferences. Click a button to dismiss it."
   }
 ]

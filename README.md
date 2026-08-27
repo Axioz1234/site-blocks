@@ -100,7 +100,7 @@ See [`tools/compile_page.py`](tools/compile_page.py).
 | T040–T063 | Named sections | `pages/sections.html` |
 | T070–T078 | Patterns | `pages/patterns.html` |
 | T100–T106 | Animation | `pages/animation.html` |
-| T120–T126 | Dev tools | `pages/devtools.html` |
+| T120–T126 | Site tools | `pages/devtools.html` |
 | T140–T146 | Social proof | `pages/social.html` |
 | T160–T166 | Content | `pages/content.html` |
 | T180–T186 | Navigation | `pages/navigation.html` |
@@ -140,6 +140,26 @@ someone else's pass.
 
 Run `build.py` after editing anything under `pages/` or `catalog/`, then `check.py`
 before committing.
+
+## Demo content
+
+The demo copy inside the blocks is written for **Moonrite**, the e-commerce brand
+the library currently serves: a boxed set of twelve full-moon ritual cards, $99,
+Australia-only. The original extraction carried the source site's developer
+copy (npm installs, terminals, API docs), which made every block read as a
+coding product; re-theming the copy to the active brand is what makes the
+library usable as a page-building reference. The patterns themselves stay
+brand-neutral and token-driven, so pointing the library at a new client means
+re-pointing tokens and, where it matters, re-voicing demo copy.
+
+Two casing rules keep copy portable between themes:
+
+- Labels and buttons are authored in natural sentence case. The rendered case
+  comes from `--button-transform` / `--eyebrow-transform`, so an ALL-CAPS
+  literal in copy is a bug.
+- The `// ` code-comment prefix on eyebrow labels is Dark-theme chrome, painted
+  by `.eyebrow::before { content: var(--eyebrow-prefix) }`. It is never typed
+  into the label text, so Moonrite renders the same labels clean.
 
 ## Notes
 

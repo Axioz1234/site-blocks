@@ -106,8 +106,15 @@ posters and avatar tiles:
 ### Type
 `--font-display` · `--font-body` · `--font-mono` · `--font-eyebrow` · `--font-ui`,
 plus `--heading-weight` `--heading-tracking` `--heading-transform`
-`--eyebrow-tracking` `--eyebrow-transform` `--button-weight` `--button-tracking`
-`--button-transform`.
+`--eyebrow-tracking` `--eyebrow-transform` `--eyebrow-prefix` `--button-weight`
+`--button-tracking` `--button-transform`.
+
+Case and prefixes live in these tokens, never in the copy. Author labels and
+button text in natural sentence case; the theme's `*-transform` tokens decide
+the rendered case. `--eyebrow-prefix` is the Dark theme's `// ` code-comment
+opener, painted via `.eyebrow::before` (add the same `::before` to a page-local
+label class that needs it); Moonrite sets it to the empty string. Never type
+`//` into a label.
 
 `--font-ui` for buttons, labels, meta, prices, badges and table headers.
 `--font-mono` only for genuine code, SKUs, order numbers and tracking IDs.

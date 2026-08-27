@@ -17,7 +17,7 @@
     "page": "index.html",
     "anchor": "#T301",
     "source": "pages/ecom-catalogue.html",
-    "description": "A responsive 4-up grid of product cards that drops to 2-up on a tablet and 1-up on a phone."
+    "description": "The catalogue body: a 4-up grid of product cards that drops to 2-up on a tablet and 1-up on a phone."
   },
   {
     "id": "T302",
@@ -27,7 +27,7 @@
     "page": "index.html",
     "anchor": "#T302",
     "source": "pages/ecom-catalogue.html",
-    "description": "The four states one card has to cover side by side: default, on sale with a strike-through RRP and discount badge, sold out, and low stock. T260 on pages/commerce.html is the original single product card."
+    "description": "The four states one card has to cover: default, on sale with a strike-through RRP, sold out, and low stock. T260 on pages/commerce.html is the original single product card."
   },
   {
     "id": "T303",
@@ -47,7 +47,7 @@
     "page": "index.html",
     "anchor": "#T304",
     "source": "pages/ecom-catalogue.html",
-    "description": "The strip above the grid: result count, a sort select, and a grid or list view toggle."
+    "description": "The strip above the grid: how many results, how they are ordered, and whether they show as cards or rows."
   },
   {
     "id": "T305",
@@ -57,7 +57,7 @@
     "page": "index.html",
     "anchor": "#T305",
     "source": "pages/ecom-catalogue.html",
-    "description": "The desktop faceted sidebar: collapsible details groups, checkbox facets with counts, colour swatches, a price min and max pair, and a clear-all."
+    "description": "The desktop faceted sidebar: collapsible groups, checkbox facets with counts, swatch chips, a price pair and a clear-all."
   },
   {
     "id": "T306",
@@ -67,7 +67,7 @@
     "page": "index.html",
     "anchor": "#T306",
     "source": "pages/ecom-catalogue.html",
-    "description": "The mobile equivalent of the rail on a native dialog: a trigger with a count, a slide-in panel, then apply or clear."
+    "description": "The phone equivalent of the rail, on a native dialog: a trigger with a count, a slide-in panel, then apply or clear."
   },
   {
     "id": "T307",
@@ -77,7 +77,7 @@
     "page": "index.html",
     "anchor": "#T307",
     "source": "pages/ecom-catalogue.html",
-    "description": "A row of removable chips showing what is narrowing the results, each with its own remove control, plus a clear-all."
+    "description": "What is currently narrowing the results, each one removable on its own, with a clear-all beside them."
   },
   {
     "id": "T308",
@@ -87,7 +87,7 @@
     "page": "index.html",
     "anchor": "#T308",
     "source": "pages/ecom-catalogue.html",
-    "description": "A dialog with product image, title, price, variant row, quantity stepper and add-to-cart, opened from a card overlay button."
+    "description": "Buy from the grid without leaving it: a dialog with the image, price, variants, quantity and add-to-cart, opened from a card overlay button."
   },
   {
     "id": "T309",
@@ -97,7 +97,7 @@
     "page": "index.html",
     "anchor": "#T309",
     "source": "pages/ecom-catalogue.html",
-    "description": "Both ways to reach page two: a load-more button with a showing 24 of 96 progress line, and a numbered pagination row beneath it."
+    "description": "Both ways to get to page two: a load-more button with a progress line, and a numbered pagination row for crawlable pages."
   },
   {
     "id": "T310",
@@ -107,7 +107,7 @@
     "page": "index.html",
     "anchor": "#T310",
     "source": "pages/ecom-catalogue.html",
-    "description": "The no-results panel: icon, headline, explanation, the filters worth removing, and a browse-all CTA."
+    "description": "What the grid says when the facets return nothing: name the cause, offer the filters worth dropping, and keep a way out."
   },
   {
     "id": "T311",
@@ -117,6 +117,6 @@
     "page": "index.html",
     "anchor": "#T311",
     "source": "pages/ecom-catalogue.html",
-    "description": "A grid of collection tiles on a wash background with a label and an item count, for a shop landing page."
+    "description": "The shop landing grid: one tile per collection on a wash background, with a label and an item count."
   }
 ]

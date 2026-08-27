@@ -21,13 +21,13 @@
   },
   {
     "id": "T362",
-    "name": "Countdown offer strip",
+    "name": "Full moon countdown",
     "category": "Merchandising & trust",
     "set": "ecommerce",
     "page": "index.html",
     "anchor": "#T362",
     "source": "pages/ecom-merch.html",
-    "description": "An offer message wired to a live ticking countdown in days, hours, minutes and seconds, plus its expired state."
+    "description": "A message wired to a live ticking countdown in days, hours, minutes and seconds, plus the state it falls back to once the moment passes."
   },
   {
     "id": "T363",
@@ -37,7 +37,7 @@
     "page": "index.html",
     "anchor": "#T363",
     "source": "pages/ecom-merch.html",
-    "description": "A four-up icon row for the promises a store repeats sitewide: delivery, returns, payment and support."
+    "description": "A four-up icon row for the promises a store repeats sitewide."
   },
   {
     "id": "T364",
@@ -77,7 +77,7 @@
     "page": "index.html",
     "anchor": "#T367",
     "source": "pages/ecom-merch.html",
-    "description": "A user-generated photo grid where each tile shows a customer handle and a shop-this-look tag, opening in a dialog lightbox."
+    "description": "A user-generated photo grid where each tile shows a customer handle and a shop tag, opening in a dialog lightbox."
   },
   {
     "id": "T368",
@@ -111,13 +111,13 @@
   },
   {
     "id": "T371",
-    "name": "Newsletter capture with incentive",
+    "name": "Newsletter capture",
     "category": "Merchandising & trust",
     "set": "ecommerce",
     "page": "index.html",
     "anchor": "#T371",
     "source": "pages/ecom-merch.html",
-    "description": "An offer headline, email field and consent line, swapping to a success state that reveals a discount code with a copy button."
+    "description": "A signup headline, email field and consent line, swapping to a success state that reveals a key line with a copy button."
   },
   {
     "id": "T372",
@@ -127,7 +127,7 @@
     "page": "index.html",
     "anchor": "#T372",
     "source": "pages/ecom-merch.html",
-    "description": "A compact horizontally scrollable rail of previously viewed products, with a clear-history action and an empty state."
+    "description": "A compact horizontally scrollable rail of previously viewed items, with a clear-history action and an empty state."
   },
   {
     "id": "T373",

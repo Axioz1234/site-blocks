@@ -39,9 +39,8 @@ END = '<!-- BUILD:END -->'
 
 SET_LABELS = [
     ('core', 'Core library',
-     'The original library extracted from the AstroAnimate site design: '
-     'foundations, sections, patterns and UI. Every one is token-driven, so '
-     'the theme switch above reskins the lot.'),
+     'The general-purpose set: foundations, sections, patterns and UI. '
+     'Every one is token-driven, so the theme switch above reskins the lot.'),
     ('ecommerce', 'E-commerce',
      'The retail set. Catalogue, product page, cart and checkout, '
      'merchandising and trust, account and post-purchase. Built for '
@@ -152,7 +151,7 @@ def main():
                         'unscoped and is the easier one to lift from.'),
         'themes': ['dark', 'moonrite'],
         'sets': {
-            'core': 'The original AstroAnimate-derived library.',
+            'core': 'The general-purpose set: foundations, sections, patterns and UI.',
             'ecommerce': ('The retail set: catalogue, product, checkout, '
                           'merchandising, account.'),
         },

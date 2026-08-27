@@ -27,7 +27,7 @@
     "page": "index.html",
     "anchor": "#T322",
     "source": "pages/ecom-product.html",
-    "description": "Colour swatches and size pills as keyboard operable radio groups, with selected, unavailable and sold out states kept distinct."
+    "description": "Edition pills and gift wrap swatches as radio groups, with selected, not yet released and sold out states kept visually distinct."
   },
   {
     "id": "T323",
@@ -47,7 +47,7 @@
     "page": "index.html",
     "anchor": "#T324",
     "source": "pages/ecom-product.html",
-    "description": "Every price presentation in one block: single, sale against RRP with a percent off badge, per unit, from price, and instalments."
+    "description": "Every price presentation in one place: single, sale against RRP, per unit, from price with an add-on, and instalments."
   },
   {
     "id": "T325",
@@ -57,7 +57,7 @@
     "page": "index.html",
     "anchor": "#T325",
     "source": "pages/ecom-product.html",
-    "description": "The availability cues: in stock, low stock with a count and a bar, sold out with a notify action, and a live viewing count."
+    "description": "The availability cues: in stock, low stock with a level bar, sold out with a notify action, and a live viewing count."
   },
   {
     "id": "T326",
@@ -67,7 +67,7 @@
     "page": "index.html",
     "anchor": "#T326",
     "source": "pages/ecom-product.html",
-    "description": "A postcode check that returns a delivery window and a shipping cost, with both a result state and an error state."
+    "description": "A postcode check that returns a delivery window and a shipping cost, with a result state and an error state."
   },
   {
     "id": "T327",
@@ -77,7 +77,7 @@
     "page": "index.html",
     "anchor": "#T327",
     "source": "pages/ecom-product.html",
-    "description": "The bar that slides in once the buy box scrolls away, carrying thumb, title, variant summary, price and an add button."
+    "description": "The bar that slides in once the buy box scrolls away, carrying a thumb, the title, the price and an add button."
   },
   {
     "id": "T328",
@@ -87,7 +87,7 @@
     "page": "index.html",
     "anchor": "#T328",
     "source": "pages/ecom-product.html",
-    "description": "Description, specifications, shipping and returns as native details disclosures with an animated chevron marker."
+    "description": "What's in the box, the details, the ritual, and delivery and returns as native disclosures with an animated chevron marker."
   },
   {
     "id": "T329",
@@ -97,17 +97,17 @@
     "page": "index.html",
     "anchor": "#T329",
     "source": "pages/ecom-product.html",
-    "description": "A four up row of icon, label and one line of reassurance for shipping, returns, warranty and secure payment."
+    "description": "A four up row of icon, label and one line of reassurance for delivery, origin, coverage and secure checkout."
   },
   {
     "id": "T330",
-    "name": "Bundle and save",
+    "name": "Buy together",
     "category": "Product page",
     "set": "ecommerce",
     "page": "index.html",
     "anchor": "#T330",
     "source": "pages/ecom-product.html",
-    "description": "Three products bought together at a combined price, with a checkbox per item that recalculates the total, the saving and the button."
+    "description": "The deck and its gift add-ons bought together at a combined price, with a checkbox per item that recalculates the total and the button."
   },
   {
     "id": "T331",
@@ -117,7 +117,7 @@
     "page": "index.html",
     "anchor": "#T331",
     "source": "pages/ecom-product.html",
-    "description": "A horizontally scrollable goes well with rail of compact product cards, each carrying a quick add button."
+    "description": "A horizontally scrollable goes well with rail of compact cards, each carrying a quick add button and snap alignment."
   },
   {
     "id": "T332",
@@ -127,6 +127,6 @@
     "page": "index.html",
     "anchor": "#T332",
     "source": "pages/ecom-product.html",
-    "description": "A two column specification table with a size guide link that opens a dialog holding the measurements table."
+    "description": "A two column spec table with a locations index link that opens a native dialog holding the twelve landmarks."
   }
 ]

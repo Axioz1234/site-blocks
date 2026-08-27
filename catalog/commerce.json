@@ -37,7 +37,7 @@
     "page": "index.html",
     "anchor": "#T263",
     "source": "pages/commerce.html",
-    "description": "A faceted filter rail: category checkboxes, a price range, and active filter chips you can clear."
+    "description": "A faceted filter rail: facet checkboxes, a range control, and active filter chips you can clear."
   },
   {
     "id": "T264",
@@ -47,7 +47,7 @@
     "page": "index.html",
     "anchor": "#T264",
     "source": "pages/commerce.html",
-    "description": "An urgency timer for sales and launches, ticking down in days / hours / minutes / seconds."
+    "description": "A timer ticking down in days / hours / minutes / seconds, here to the next full moon."
   },
   {
     "id": "T265",
@@ -57,6 +57,6 @@
     "page": "index.html",
     "anchor": "#T265",
     "source": "pages/commerce.html",
-    "description": "Stacked, overlapping avatars with an overflow count, the \"join 2,000+ others\" cue."
+    "description": "Stacked, overlapping avatars with an overflow count and a short social-proof line."
   }
 ]

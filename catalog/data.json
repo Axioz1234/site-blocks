@@ -17,17 +17,17 @@
     "page": "index.html",
     "anchor": "#T241",
     "source": "pages/data.html",
-    "description": "A zebra-striped table with sortable headers. Click a column header to re-sort."
+    "description": "A zebra-striped table with sortable headers, here the 2027 moon calendar. Click a column header to re-sort."
   },
   {
     "id": "T242",
-    "name": "Pricing billing toggle",
+    "name": "Pricing option toggle",
     "category": "Data",
     "set": "core",
     "page": "index.html",
     "anchor": "#T242",
     "source": "pages/data.html",
-    "description": "A monthly / annual switch that swaps the displayed prices in place."
+    "description": "A two-option switch that swaps the displayed prices in place, here standard / express delivery. Toggle it."
   },
   {
     "id": "T243",
@@ -37,7 +37,7 @@
     "page": "index.html",
     "anchor": "#T243",
     "source": "pages/data.html",
-    "description": "A two-column key/value sheet for technical specs, metadata, or property tables."
+    "description": "A two-column key/value sheet for product specs, metadata, or property tables."
   },
   {
     "id": "T244",
@@ -47,7 +47,7 @@
     "page": "index.html",
     "anchor": "#T244",
     "source": "pages/data.html",
-    "description": "A lightweight, CSS-only comparison chart: labelled rows with proportional fills."
+    "description": "A lightweight, CSS-only comparison chart: labelled rows with proportional fills, here how the cards were released."
   },
   {
     "id": "T245",

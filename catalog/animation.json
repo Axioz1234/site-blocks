@@ -17,7 +17,7 @@
     "page": "index.html",
     "anchor": "#T101",
     "source": "pages/animation.html",
-    "description": "Seamlessly looping chip track from a duplicated row and one CSS keyframe; pauses on hover, frozen for reduced-motion."
+    "description": "Continuously looping chip track from a duplicated row and one CSS keyframe; pauses on hover, frozen for reduced-motion."
   },
   {
     "id": "T102",
@@ -67,6 +67,6 @@
     "page": "index.html",
     "anchor": "#T106",
     "source": "pages/animation.html",
-    "description": "Large project rows that highlight on hover while a gradient thumbnail follows the cursor; degrades without JS."
+    "description": "Large rows that highlight on hover while a gradient thumbnail follows the cursor; degrades without JS."
   }
 ]

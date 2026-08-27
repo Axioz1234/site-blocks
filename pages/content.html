@@ -26,33 +26,32 @@
       </header>
       <div class="tb-demo">
         <div class="con-byline">
-          <span class="con-avatar" aria-hidden="true">AT</span>
+          <span class="con-avatar" aria-hidden="true">AR</span>
           <div class="con-byline-meta">
-            <span class="con-byline-name">AstroAnimate Team</span>
+            <span class="con-byline-name">Amy Rush</span>
             <span class="con-byline-sub">
-              <span>Jun 18, 2026</span>
+              <span>18 June 2026</span>
               <span class="con-dot">·</span>
               <span>7 min read</span>
               <span class="con-dot">·</span>
-              <span class="con-chip">PERFORMANCE</span>
+              <span class="con-chip">Ritual</span>
             </span>
           </div>
         </div>
 
         <div class="con-bio">
-          <span class="con-avatar con-avatar-lg" aria-hidden="true">AT</span>
+          <span class="con-avatar con-avatar-lg" aria-hidden="true">AR</span>
           <div class="con-bio-body">
-            <span class="con-bio-name">AstroAnimate Team</span>
-            <span class="con-bio-role">Core maintainers · Animation &amp; DX</span>
+            <span class="con-bio-name">Amy Rush</span>
+            <span class="con-bio-role">Founder, Moonrite · Maroochydore QLD</span>
             <p class="con-bio-text">
-              We build the CSS-first animation toolkit for Astro and write about keeping motion cheap,
-              accessible, and out of the hydration budget.
+              I make Moonrite from Maroochydore and write the Moon journal: the twelve cards, the
+              landmarks behind them, and keeping the ritual simple enough that you actually do it.
             </p>
             <div class="con-bio-actions">
               <span class="con-follow">Follow</span>
-              <a href="#" class="con-social">GitHub</a>
-              <a href="#" class="con-social">X</a>
-              <a href="#" class="con-social">RSS</a>
+              <a href="#" class="con-social">Instagram</a>
+              <a href="#" class="con-social">Email</a>
             </div>
           </div>
         </div>
@@ -71,19 +70,19 @@
         <p class="con-readnext-label">Read next</p>
         <div class="con-related-grid">
           <a href="#" class="con-related-card">
-            <span class="con-chip">PERFORMANCE</span>
-            <span class="con-related-title">Why we built AstroAnimate CSS-first</span>
+            <span class="con-chip">Ritual</span>
+            <span class="con-related-title">Why one card a month is enough</span>
+            <span class="con-related-read">5 min read</span>
+          </a>
+          <a href="#" class="con-related-card">
+            <span class="con-chip">Landmarks</span>
+            <span class="con-related-title">Byron Bay Lighthouse: the story behind January&rsquo;s card</span>
             <span class="con-related-read">6 min read</span>
           </a>
           <a href="#" class="con-related-card">
-            <span class="con-chip">GUIDE</span>
-            <span class="con-related-title">View Transitions + AstroAnimate: smoother page changes</span>
-            <span class="con-related-read">8 min read</span>
-          </a>
-          <a href="#" class="con-related-card">
-            <span class="con-chip">ACCESSIBILITY</span>
-            <span class="con-related-title">Designing micro-interactions that respect reduced motion</span>
-            <span class="con-related-read">5 min read</span>
+            <span class="con-chip">Moon dates</span>
+            <span class="con-related-title">Every 2027 full moon date, in one place</span>
+            <span class="con-related-read">4 min read</span>
           </a>
         </div>
       </div>
@@ -104,13 +103,13 @@
           </div>
           <div class="con-scrollbox" id="con-scrollbox">
             <p>Scroll this box to watch the bar fill. The progress is measured against this container&rsquo;s scroll position, not the window&rsquo;s.</p>
-            <p>Astro&rsquo;s whole pitch is shipping less JavaScript. So the moment you reach for animation, there&rsquo;s a tension: most motion libraries assume a hydrated, client-rendered tree.</p>
-            <p>The fix is to express the common cases, entry, reveal, and transition animations, in CSS and the Web Animations API, which run on statically rendered markup. No directive, no island, no runtime.</p>
-            <p>A typewriter heading or a fade-up on a hero doesn&rsquo;t need a framework. With AstroAnimate it&rsquo;s a single subpath import and a component, and it renders in a fully static build.</p>
-            <p>Some effects really do need a runtime: spring physics, gesture tracking, timeline orchestration. Those belong on an island, and only there.</p>
-            <p>The mental model: CSS-first for presentation motion, islands for interaction. Most sites are 90% the former.</p>
-            <p>Whatever approach you choose, honour prefers-reduced-motion. AstroAnimate does this automatically. When a visitor opts out, motion is minimised.</p>
-            <p>Motion and Astro&rsquo;s performance goals aren&rsquo;t at odds, as long as you let CSS do the ordinary work and save hydration for the parts that are genuinely interactive.</p>
+            <p>Most of us are good at deciding things and not so good at closing them out. Intentions pile up in notes apps and on the backs of receipts, half-remembered and never finished.</p>
+            <p>Moonrite is built around one small move: write the thing down properly, on a card that exists just for it. One card a month, on the full moon, and that&rsquo;s the whole practice.</p>
+            <p>Each card carries that month&rsquo;s full moon over an Australian landmark. January is Byron Bay Lighthouse. By December you&rsquo;ve crossed the country without leaving the kitchen table.</p>
+            <p>When you&rsquo;re ready to let it go, you choose the ending. Burning is the signature ritual, it&rsquo;s optional, and it&rsquo;s for adults. If you&rsquo;d rather not light anything, tear the card up instead. Both count.</p>
+            <p>There&rsquo;s no streak to keep and no app to check. Miss a month and the next full moon simply comes around again.</p>
+            <p>You don&rsquo;t have to believe anything in particular for this to be worth doing. Writing something down and deciding to be done with it is a very old, very human trick.</p>
+            <p>That&rsquo;s the whole idea. Twelve cards, twelve full moons, and a bit of room each month to put something down and leave it there.</p>
           </div>
         </div>
       </div>
@@ -127,45 +126,45 @@
       <div class="tb-demo">
         <div class="con-filter-chips" id="con-filter-chips">
           <button class="con-fchip is-active" data-con-filter="all">All</button>
-          <button class="con-fchip" data-con-filter="performance">Performance</button>
-          <button class="con-fchip" data-con-filter="guide">Guide</button>
-          <button class="con-fchip" data-con-filter="release">Release</button>
-          <button class="con-fchip" data-con-filter="accessibility">Accessibility</button>
+          <button class="con-fchip" data-con-filter="ritual">Ritual</button>
+          <button class="con-fchip" data-con-filter="landmarks">Landmarks</button>
+          <button class="con-fchip" data-con-filter="moon-dates">Moon dates</button>
+          <button class="con-fchip" data-con-filter="months">Months</button>
         </div>
         <ul class="con-filter-list" id="con-filter-list">
-          <li class="con-filter-row" data-con-tag="performance">
-            <span class="con-frow-title">Animating Astro Islands without hurting hydration</span>
+          <li class="con-filter-row" data-con-tag="ritual">
+            <span class="con-frow-title">What to write on your card (and what to skip)</span>
             <span class="con-frow-meta">
-              <span class="con-chip">PERFORMANCE</span>
-              <span class="con-frow-read">7 min</span>
+              <span class="con-chip">Ritual</span>
+              <span class="con-frow-read">6 min</span>
             </span>
           </li>
-          <li class="con-filter-row" data-con-tag="guide">
-            <span class="con-frow-title">A field guide to scroll-triggered reveals</span>
+          <li class="con-filter-row" data-con-tag="landmarks">
+            <span class="con-frow-title">Twelve landmarks, every state and territory</span>
             <span class="con-frow-meta">
-              <span class="con-chip">GUIDE</span>
+              <span class="con-chip">Landmarks</span>
               <span class="con-frow-read">9 min</span>
             </span>
           </li>
-          <li class="con-filter-row" data-con-tag="release">
-            <span class="con-frow-title">AstroAnimate 0.1.2: CountUp &amp; easing presets</span>
+          <li class="con-filter-row" data-con-tag="moon-dates">
+            <span class="con-frow-title">When is the full moon in 2027? Every date</span>
             <span class="con-frow-meta">
-              <span class="con-chip">RELEASE</span>
+              <span class="con-chip">Moon dates</span>
               <span class="con-frow-read">3 min</span>
             </span>
           </li>
-          <li class="con-filter-row" data-con-tag="accessibility">
-            <span class="con-frow-title">prefers-reduced-motion, done properly</span>
+          <li class="con-filter-row" data-con-tag="months">
+            <span class="con-frow-title">January: starting the year at Byron Bay Lighthouse</span>
             <span class="con-frow-meta">
-              <span class="con-chip">ACCESSIBILITY</span>
+              <span class="con-chip">Months</span>
               <span class="con-frow-read">5 min</span>
             </span>
           </li>
-          <li class="con-filter-row" data-con-tag="performance">
-            <span class="con-frow-title">Measuring animation cost in a static build</span>
+          <li class="con-filter-row" data-con-tag="ritual">
+            <span class="con-frow-title">No flame? Tearing the card is a complete release</span>
             <span class="con-frow-meta">
-              <span class="con-chip">PERFORMANCE</span>
-              <span class="con-frow-read">6 min</span>
+              <span class="con-chip">Ritual</span>
+              <span class="con-frow-read">4 min</span>
             </span>
           </li>
         </ul>
@@ -185,35 +184,35 @@
           <li class="con-trend-row">
             <span class="con-rank">01</span>
             <span class="con-trend-body">
-              <a href="#" class="con-trend-title">Why CSS-first beats a runtime for 90% of motion</a>
+              <a href="#" class="con-trend-title">Why one card a month is enough</a>
               <span class="con-trend-views">12.4k views</span>
             </span>
           </li>
           <li class="con-trend-row">
             <span class="con-rank">02</span>
             <span class="con-trend-body">
-              <a href="#" class="con-trend-title">The hydration tax nobody talks about</a>
+              <a href="#" class="con-trend-title">What to write when you don&rsquo;t know what to write</a>
               <span class="con-trend-views">9.1k views</span>
             </span>
           </li>
           <li class="con-trend-row">
             <span class="con-rank">03</span>
             <span class="con-trend-body">
-              <a href="#" class="con-trend-title">Building a typewriter heading with zero JS</a>
+              <a href="#" class="con-trend-title">Every 2027 full moon date, in one place</a>
               <span class="con-trend-views">7.8k views</span>
             </span>
           </li>
           <li class="con-trend-row">
             <span class="con-rank">04</span>
             <span class="con-trend-body">
-              <a href="#" class="con-trend-title">Easing curves that actually feel good</a>
+              <a href="#" class="con-trend-title">Burn it or tear it: choosing your release</a>
               <span class="con-trend-views">6.2k views</span>
             </span>
           </li>
           <li class="con-trend-row">
             <span class="con-rank">05</span>
             <span class="con-trend-body">
-              <a href="#" class="con-trend-title">Page transitions without a framework</a>
+              <a href="#" class="con-trend-title">What&rsquo;s inside the box, card by card</a>
               <span class="con-trend-views">5.5k views</span>
             </span>
           </li>
@@ -226,24 +225,24 @@
         <span class="tb-tid">T165</span>
         <div>
           <h2>Series / chapter nav</h2>
-          <p>A &ldquo;Part 2 of 5&rdquo; bar with titled previous/next arrows and a thin progress indicator.</p>
+          <p>A &ldquo;Part 2 of 12&rdquo; bar with titled previous/next arrows and a thin progress indicator.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="con-series">
           <div class="con-series-top">
-            <span class="con-series-label">Series · Motion in Astro</span>
-            <span class="con-series-count">Part 2 of 5</span>
+            <span class="con-series-label">Series · The twelve months</span>
+            <span class="con-series-count">Part 2 of 12</span>
           </div>
-          <div class="con-series-prog" aria-hidden="true"><span style="width:40%"></span></div>
+          <div class="con-series-prog" aria-hidden="true"><span style="width:17%"></span></div>
           <div class="con-series-nav">
             <a href="#" class="con-series-link prev">
               <span class="con-series-dir">&larr; Previous</span>
-              <span class="con-series-title">Why we built AstroAnimate CSS-first</span>
+              <span class="con-series-title">January: Byron Bay Lighthouse</span>
             </a>
             <a href="#" class="con-series-link next">
               <span class="con-series-dir">Next &rarr;</span>
-              <span class="con-series-title">Scroll-triggered reveals, step by step</span>
+              <span class="con-series-title">March: Sydney Harbour Bridge</span>
             </a>
           </div>
         </div>
@@ -262,9 +261,9 @@
         <figure class="con-pullquote">
           <span class="con-pq-mark" aria-hidden="true">&ldquo;</span>
           <blockquote class="con-pq-text">
-            If an animation can be expressed in CSS, expressing it in JavaScript is a tax you pay on every page load.
+            You write it down, you let it go, and you get on with your month. That&rsquo;s the whole ritual, and it&rsquo;s enough.
           </blockquote>
-          <figcaption class="con-pq-attr">AstroAnimate Team · Animating Astro Islands</figcaption>
+          <figcaption class="con-pq-attr">Amy Rush · Why one card a month is enough</figcaption>
         </figure>
       </div>
     </article>
@@ -320,8 +319,8 @@
     .con-bio-actions { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
     .con-follow {
       font-family:var(--font-ui); font-size:12px; font-weight:600;
-      color:var(--bg); background:var(--accent); border-radius:var(--radius-sm); padding:6px 14px;
-      text-transform:uppercase; letter-spacing:.04em;
+      color:var(--accent-ink); background:var(--accent); border-radius:var(--radius-btn); padding:6px 14px;
+      text-transform:var(--button-transform); letter-spacing:.04em;
     }
     .con-social {
       font-family:var(--font-ui); font-size:12px; color:var(--text-3);
@@ -366,7 +365,7 @@
       padding:6px 14px; cursor:pointer; transition:border-color .2s ease, color .2s ease, background .2s ease;
     }
     .con-fchip:hover { border-color:var(--accent); color:var(--accent); }
-    .con-fchip.is-active { background:var(--accent); border-color:var(--accent); color:var(--bg); font-weight:600; }
+    .con-fchip.is-active { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:600; }
     .con-filter-list { list-style:none; margin:0; padding:0; }
     .con-filter-row {
       display:flex; align-items:center; justify-content:space-between; gap:14px;

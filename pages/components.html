@@ -12,7 +12,7 @@
   <header class="tb-header">
     <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
     <h1>Library components <span class="tb-range">T030&ndash;T031</span></h1>
-    <p class="tb-sub">Real @astroanimate/core components in use: the typewriter copy card and the pulse loader, as static equivalents.</p>
+    <p class="tb-sub">The interactive flourishes as static equivalents: the typewriter share-link card and the pulse loader.</p>
   </header>
   <main class="tb-main">
 
@@ -20,15 +20,15 @@
       <header class="tb-pattern-head">
         <span class="tb-tid">T030</span>
         <div>
-          <h2>TypewriterText + copy card</h2>
-          <p>Terminal-style card with an orange accent bar, a typewriter command, and a copy button.</p>
+          <h2>Typewriter share-link card</h2>
+          <p>Card with an accent bar, a typewriter line that types out the shop link, and a copy-to-clipboard button.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="sg-lib">
           <div class="sg-lib-item">
-            <span class="sg-lib-name">TypewriterText + copy card</span>
-            <div class="tb-codecard"><span class="tb-codecard-label">NPM</span><code>npm install @astroanimate/core</code><button class="tb-codecard-copy" onclick="navigator.clipboard.writeText('npm install @astroanimate/core')">COPY</button></div>
+            <span class="sg-lib-name">Typewriter share-link card</span>
+            <div class="tb-codecard"><span class="tb-codecard-label">Share</span><code>moonritecards.com.au</code><button class="tb-codecard-copy" onclick="navigator.clipboard.writeText('moonritecards.com.au')">Copy</button></div>
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@
         <span class="tb-tid">T031</span>
         <div>
           <h2>Loader (pulse)</h2>
-          <p>The pulsing loader from <code>@astroanimate/core/Loader</code>, shown in green and orange.</p>
+          <p>Pulsing loader dots in the success and accent colours, for loading and live states.</p>
         </div>
       </header>
       <div class="tb-demo">
@@ -75,8 +75,8 @@
 
     /* CodeBlockCard replacement */
     .tb-codecard{display:flex;align-items:center;gap:14px;border:var(--line-weight) solid var(--border-2);border-left:3px solid var(--accent);background:var(--bg-3);padding:14px 18px;font-family:var(--font-mono);font-size:14px;color:var(--text);}
-    .tb-codecard-label{font-family:var(--font-eyebrow);font-size:11px;letter-spacing:.1em;color:var(--text-4);}
-    .tb-codecard-copy{margin-left:auto;background:none;border:var(--line-weight) solid var(--border-2);color:var(--text-3);font-family:var(--font-ui);font-size:11px;padding:4px 10px;cursor:pointer;}
+    .tb-codecard-label{font-family:var(--font-eyebrow);font-size:11px;letter-spacing:.1em;text-transform:var(--eyebrow-transform);color:var(--text-4);}
+    .tb-codecard-copy{margin-left:auto;background:none;border:var(--line-weight) solid var(--border-2);color:var(--text-3);font-family:var(--font-ui);font-size:11px;text-transform:var(--button-transform);border-radius:var(--radius-btn);padding:4px 10px;cursor:pointer;}
     .tb-codecard code{background:none;border:none;padding:0;color:inherit;font-size:inherit;}
 
     /* Loader replacement */

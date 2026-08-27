@@ -37,7 +37,7 @@
     "page": "index.html",
     "anchor": "#T383",
     "source": "pages/ecom-account.html",
-    "description": "A returns flow with per-item reasons, a refund or exchange choice, a comments field and a live summary of the refund."
+    "description": "A returns flow with per-item reasons, a refund or replacement choice, a comments field and a live summary of the refund."
   },
   {
     "id": "T384",
@@ -67,17 +67,17 @@
     "page": "index.html",
     "anchor": "#T386",
     "source": "pages/ecom-account.html",
-    "description": "Saved card rows showing brand, masked last four, expiry, a default badge and an expired state, with an add-card form."
+    "description": "Saved payment method rows showing card brand, masked last four, expiry, a default badge, a linked wallet account and an expired state, with an add-card form."
   },
   {
     "id": "T387",
-    "name": "Subscription manager",
+    "name": "Next-year reservation",
     "category": "Account & post-purchase",
     "set": "ecommerce",
     "page": "index.html",
     "anchor": "#T387",
     "source": "pages/ecom-account.html",
-    "description": "An active subscription with a frequency select that moves the next delivery date, plus skip, pause and cancel."
+    "description": "A reserved future order: the item held, a shipping-window select that moves the date, and delay, hold and cancel on an inline confirm."
   },
   {
     "id": "T388",
@@ -87,7 +87,7 @@
     "page": "index.html",
     "anchor": "#T388",
     "source": "pages/ecom-account.html",
-    "description": "A points balance, a progress bar to the next tier, a redeem row that spends the balance, and a short points ledger."
+    "description": "A points balance, a progress bar to the next tier, a redeem row and a short ledger, for stores that run a points program."
   },
   {
     "id": "T389",

@@ -28,26 +28,35 @@
         <div class="frm-grid">
           <div class="frm-field">
             <label>Full name</label>
-            <input type="text" value="Ada Lovelace" />
-            <span class="frm-help">As it appears on your account.</span>
+            <input type="text" value="Grace Miller" />
+            <span class="frm-help">As you'd like it on the parcel.</span>
           </div>
           <div class="frm-field">
-            <label>Plan</label>
-            <div class="frm-select"><select><option>Core (free)</option><option>Pro</option><option>Team</option></select><span class="frm-select-caret">▾</span></div>
+            <label>Phone</label>
+            <input type="text" value="0400 123 456" />
+            <span class="frm-help">Only for delivery updates.</span>
+          </div>
+          <div class="frm-field">
+            <label>Street address</label>
+            <input type="text" value="12 Ocean St" />
+          </div>
+          <div class="frm-field">
+            <label>State</label>
+            <div class="frm-select"><select><option>QLD</option><option>NSW</option><option>VIC</option><option>TAS</option><option>SA</option><option>WA</option><option>ACT</option><option>NT</option></select><span class="frm-select-caret">▾</span></div>
           </div>
           <div class="frm-field is-error">
             <label>Email</label>
-            <input type="email" value="ada@" />
+            <input type="email" value="grace@" />
             <span class="frm-err">Enter a valid email address.</span>
           </div>
           <div class="frm-field is-disabled">
-            <label>Workspace ID</label>
-            <input type="text" value="ws_4920" disabled />
-            <span class="frm-help">Read-only.</span>
+            <label>Country</label>
+            <input type="text" value="Australia" disabled />
+            <span class="frm-help">We deliver within Australia only.</span>
           </div>
           <div class="frm-field frm-col-2">
-            <label>Message</label>
-            <textarea rows="2" placeholder="Tell us what you're building…"></textarea>
+            <label>Delivery notes</label>
+            <textarea rows="2" placeholder="Gate codes, safe spots, a dog we should know about…"></textarea>
           </div>
         </div>
       </div>
@@ -65,20 +74,19 @@
         <div class="frm-choices">
           <div class="frm-choice-col">
             <span class="frm-choice-label">Checkboxes</span>
-            <label class="frm-check"><input type="checkbox" checked /> <span>Email updates</span></label>
-            <label class="frm-check"><input type="checkbox" /> <span>Product news</span></label>
-            <label class="frm-check"><input type="checkbox" checked /> <span>Security alerts</span></label>
+            <label class="frm-check"><input type="checkbox" checked /> <span>Gift wrap</span></label>
+            <label class="frm-check"><input type="checkbox" /> <span>Handwritten gift note</span></label>
+            <label class="frm-check"><input type="checkbox" checked /> <span>Moon mail, one email a month</span></label>
           </div>
           <div class="frm-choice-col">
             <span class="frm-choice-label">Radio group</span>
-            <label class="frm-check"><input type="radio" name="frm-r" checked /> <span>Monthly</span></label>
-            <label class="frm-check"><input type="radio" name="frm-r" /> <span>Annual</span></label>
-            <label class="frm-check"><input type="radio" name="frm-r" /> <span>Lifetime</span></label>
+            <label class="frm-check"><input type="radio" name="frm-r" checked /> <span>Standard delivery, free</span></label>
+            <label class="frm-check"><input type="radio" name="frm-r" /> <span>Express delivery, $16.95</span></label>
           </div>
           <div class="frm-choice-col">
             <span class="frm-choice-label">Switch</span>
-            <label class="frm-toggle"><input type="checkbox" checked /><span class="frm-toggle-track"></span><span class="frm-toggle-txt">Reduced motion</span></label>
-            <label class="frm-toggle"><input type="checkbox" /><span class="frm-toggle-track"></span><span class="frm-toggle-txt">Beta features</span></label>
+            <label class="frm-toggle"><input type="checkbox" checked /><span class="frm-toggle-track"></span><span class="frm-toggle-txt">This is a gift</span></label>
+            <label class="frm-toggle"><input type="checkbox" /><span class="frm-toggle-track"></span><span class="frm-toggle-txt">Leave at the door</span></label>
           </div>
         </div>
       </div>
@@ -95,14 +103,14 @@
       <div class="tb-demo">
         <div class="frm-ranges">
           <div class="frm-field">
-            <label>Animation duration <span class="frm-range-out" id="frm-range-out">600ms</span></label>
-            <input type="range" min="0" max="2000" value="600" step="50" id="frm-range" class="frm-range" />
+            <label>Full moon reminder <span class="frm-range-out" id="frm-range-out">3 days before</span></label>
+            <input type="range" min="0" max="7" value="3" step="1" id="frm-range" class="frm-range" />
           </div>
           <div class="frm-field">
-            <label>Seats</label>
+            <label>Decks</label>
             <div class="frm-stepper">
               <button type="button" data-step="-1">−</button>
-              <input type="text" value="3" id="frm-num" readonly />
+              <input type="text" value="1" id="frm-num" readonly />
               <button type="button" data-step="1">+</button>
             </div>
           </div>
@@ -115,19 +123,19 @@
         <span class="tb-tid">T203</span>
         <div>
           <h2>Search with autocomplete</h2>
-          <p>A search input that filters a suggestion list as you type. Try typing &ldquo;text&rdquo; or &ldquo;scroll&rdquo;.</p>
+          <p>A search input that filters a suggestion list as you type. Try typing &ldquo;rock&rdquo; or &ldquo;june&rdquo;.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="frm-ac">
-          <div class="frm-ac-input"><span class="frm-ac-icon">⌕</span><input type="text" id="frm-ac" placeholder="Search components…" autocomplete="off" /></div>
+          <div class="frm-ac-input"><span class="frm-ac-icon">⌕</span><input type="text" id="frm-ac" placeholder="Search months or landmarks…" autocomplete="off" /></div>
           <ul class="frm-ac-list" id="frm-ac-list">
-            <li data-name="typewritertext">TypewriterText</li>
-            <li data-name="fadeintext">FadeInText</li>
-            <li data-name="countup">CountUp</li>
-            <li data-name="scrollreveal">ScrollReveal</li>
-            <li data-name="parallaximage">ParallaxImage</li>
-            <li data-name="glasscard">GlassCard</li>
+            <li data-name="january byron bay lighthouse">January · Byron Bay Lighthouse</li>
+            <li data-name="april uluru">April · Uluru</li>
+            <li data-name="june cradle mountain">June · Cradle Mountain</li>
+            <li data-name="july remarkable rocks">July · Remarkable Rocks</li>
+            <li data-name="november wave rock">November · Wave Rock</li>
+            <li data-name="december twelve apostles">December · Twelve Apostles</li>
           </ul>
         </div>
       </div>
@@ -138,7 +146,7 @@
         <span class="tb-tid">T204</span>
         <div>
           <h2>Multi-step form</h2>
-          <p>A wizard that advances through panels with Back / Next, keeping the rest hidden. Click Next.</p>
+          <p>A checkout-shaped wizard (details, delivery, payment) that advances with Back / Next, keeping the rest hidden. Click Next.</p>
         </div>
       </header>
       <div class="tb-demo">
@@ -146,16 +154,16 @@
           <div class="frm-wiz-bar"><span class="frm-wiz-fill" id="frm-wiz-fill" style="width:33%"></span></div>
           <span class="frm-wiz-count" id="frm-wiz-count">Step 1 of 3</span>
           <div class="frm-wiz-panel" data-wiz="0">
-            <label>What's your name?</label>
-            <input type="text" placeholder="Ada Lovelace" />
+            <label>First, your details</label>
+            <input type="text" placeholder="Full name" />
           </div>
           <div class="frm-wiz-panel" data-wiz="1" hidden>
-            <label>What are you building?</label>
-            <input type="text" placeholder="A marketing site" />
+            <label>Where are we sending it?</label>
+            <input type="text" placeholder="Street address" />
           </div>
           <div class="frm-wiz-panel" data-wiz="2" hidden>
-            <label>All set 🎉</label>
-            <p class="frm-wiz-done">Review your details and submit.</p>
+            <label>Last step: payment</label>
+            <p class="frm-wiz-done">Check it all looks right, then submit. Standard delivery is free.</p>
           </div>
           <div class="frm-wiz-actions">
             <button type="button" class="frm-btn-sec" id="frm-wiz-back" disabled>Back</button>
@@ -170,18 +178,18 @@
         <span class="tb-tid">T205</span>
         <div>
           <h2>File upload / dropzone</h2>
-          <p>A drag-and-drop target with a browse fallback and a list of selected files.</p>
+          <p>A drag-and-drop target with a browse fallback and a list of selected files, framed as adding a photo to a review.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="frm-drop">
           <span class="frm-drop-icon">⬆</span>
-          <p class="frm-drop-title">Drag files here or <span>browse</span></p>
-          <p class="frm-drop-sub">PNG, JPG, or SVG up to 5MB</p>
+          <p class="frm-drop-title">Add a photo to your review: drag it here or <span>browse</span></p>
+          <p class="frm-drop-sub">PNG or JPG up to 5MB</p>
         </div>
         <div class="frm-filelist">
-          <div class="frm-fileitem"><span class="frm-file-ico">IMG</span><span class="frm-file-name">hero-mockup.png</span><span class="frm-file-meta">1.2 MB</span><button class="frm-file-x" aria-label="Remove">✕</button></div>
-          <div class="frm-fileitem"><span class="frm-file-ico">SVG</span><span class="frm-file-name">logo.svg</span><span class="frm-file-meta">8 KB</span><button class="frm-file-x" aria-label="Remove">✕</button></div>
+          <div class="frm-fileitem"><span class="frm-file-ico">JPG</span><span class="frm-file-name">july-remarkable-rocks.jpg</span><span class="frm-file-meta">1.2 MB</span><button class="frm-file-x" aria-label="Remove">✕</button></div>
+          <div class="frm-fileitem"><span class="frm-file-ico">JPG</span><span class="frm-file-name">release-night.jpg</span><span class="frm-file-meta">840 KB</span><button class="frm-file-x" aria-label="Remove">✕</button></div>
         </div>
       </div>
     </article>
@@ -196,7 +204,7 @@
       </header>
       <div class="tb-demo">
         <div class="frm-cookie" id="frm-cookie">
-          <p class="frm-cookie-text">We use cookies to measure traffic and improve the docs. <a href="#">Preferences</a></p>
+          <p class="frm-cookie-text">We use a few cookies to keep your cart working and see which pages get read. <a href="#">Preferences</a></p>
           <div class="frm-cookie-actions">
             <button class="frm-btn-sec" data-cookie>Reject</button>
             <button class="frm-btn-pri" data-cookie>Accept all</button>
@@ -296,8 +304,8 @@
     .frm-wiz-actions { display:flex; justify-content:space-between; gap:12px; }
 
     /* shared buttons */
-    .frm-btn-pri { font-family:var(--font-ui); font-size:13px; font-weight:600; cursor:pointer; color:var(--bg); background:var(--accent); border:none; border-radius:var(--radius-sm); padding:10px 20px; }
-    .frm-btn-sec { font-family:var(--font-ui); font-size:13px; cursor:pointer; color:var(--text-2); background:transparent; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-sm); padding:10px 20px; }
+    .frm-btn-pri { font-family:var(--font-ui); font-size:13px; font-weight:600; cursor:pointer; color:var(--accent-ink); background:var(--accent); border:none; border-radius:var(--radius-btn); padding:10px 20px; }
+    .frm-btn-sec { font-family:var(--font-ui); font-size:13px; cursor:pointer; color:var(--text-2); background:transparent; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-btn); padding:10px 20px; }
     .frm-btn-sec:hover:not(:disabled) { border-color:var(--accent); color:var(--accent); }
     .frm-btn-sec:disabled { opacity:.4; cursor:default; }
 
@@ -332,7 +340,12 @@
       // T202: Range + stepper
       const range = document.querySelector('#frm-range');
       const out = document.querySelector('#frm-range-out');
-      if (range && out) range.addEventListener('input', function () { out.textContent = range.value + 'ms'; });
+      if (range && out) {
+        range.addEventListener('input', function () {
+          const v = parseInt(range.value, 10);
+          out.textContent = v === 0 ? 'On the day' : v === 1 ? '1 day before' : v + ' days before';
+        });
+      }
       const num = document.querySelector('#frm-num');
       document.querySelectorAll('[data-step]').forEach(function (b) {
         b.addEventListener('click', function () {
