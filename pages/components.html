@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Library components — Site Blocks</title>
+  <title>Library components &middot; Site Blocks</title>
   <link rel="stylesheet" href="../assets/base.css">
   <link rel="stylesheet" href="../assets/viewer.css">
+  <script src="../assets/viewer.js"></script>
 </head>
-<body>
+<body data-page-set="core">
   <header class="tb-header">
     <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
     <h1>Library components <span class="tb-range">T030&ndash;T031</span></h1>
-    <p class="tb-sub">Real @astroanimate/core components in use — the typewriter copy card and the pulse loader, as static equivalents.</p>
+    <p class="tb-sub">Real @astroanimate/core components in use: the typewriter copy card and the pulse loader, as static equivalents.</p>
   </header>
   <main class="tb-main">
 
@@ -46,8 +47,8 @@
           <div class="sg-lib-item">
             <span class="sg-lib-name">Loader (pulse)</span>
             <div class="sg-loader-demo">
-              <span class="tb-pulse" style="--pulse-color:#4ADE80; --pulse-size:32px;"></span>
-              <span class="tb-pulse" style="--pulse-color:#ff7f1f; --pulse-size:32px;"></span>
+              <span class="tb-pulse" style="--pulse-color:var(--ok); --pulse-size:32px;"></span>
+              <span class="tb-pulse" style="--pulse-color:var(--accent); --pulse-size:32px;"></span>
             </div>
           </div>
         </div>
@@ -57,29 +58,29 @@
   </main>
   <style>
     code {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: var(--font-mono);
       font-size: 0.88em;
       background: var(--bg-3);
-      border: 1px solid var(--border);
+      border: var(--line-weight) solid var(--border);
       padding: 2px 6px;
-      border-radius: 3px;
-      color: #ff9d52;
+      border-radius: var(--radius-sm);
+      color: var(--accent-light);
     }
 
     /* LIBRARY */
     .sg-lib { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
-    .sg-lib-item { border: 1px solid var(--border); background: var(--bg-2); padding: 24px; min-width: 0; }
-    .sg-lib-name { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-4); display: block; margin-bottom: 18px; }
+    .sg-lib-item { border: var(--line-weight) solid var(--border); background: var(--bg-2); padding: 24px; min-width: 0; }
+    .sg-lib-name { font-family: var(--font-ui); font-size: 12px; color: var(--text-4); display: block; margin-bottom: 18px; }
     .sg-loader-demo { display: flex; gap: 28px; align-items: center; padding: 8px 0; }
 
     /* CodeBlockCard replacement */
-    .tb-codecard{display:flex;align-items:center;gap:14px;border:1px solid var(--border-2);border-left:3px solid #ff7f1f;background:var(--bg-3);padding:14px 18px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text);}
-    .tb-codecard-label{font-size:11px;letter-spacing:.1em;color:var(--text-4);}
-    .tb-codecard-copy{margin-left:auto;background:none;border:1px solid var(--border-2);color:var(--text-3);font-family:inherit;font-size:11px;padding:4px 10px;cursor:pointer;}
+    .tb-codecard{display:flex;align-items:center;gap:14px;border:var(--line-weight) solid var(--border-2);border-left:3px solid var(--accent);background:var(--bg-3);padding:14px 18px;font-family:var(--font-mono);font-size:14px;color:var(--text);}
+    .tb-codecard-label{font-family:var(--font-eyebrow);font-size:11px;letter-spacing:.1em;color:var(--text-4);}
+    .tb-codecard-copy{margin-left:auto;background:none;border:var(--line-weight) solid var(--border-2);color:var(--text-3);font-family:var(--font-ui);font-size:11px;padding:4px 10px;cursor:pointer;}
     .tb-codecard code{background:none;border:none;padding:0;color:inherit;font-size:inherit;}
 
     /* Loader replacement */
-    .tb-pulse{display:inline-block;width:var(--pulse-size,24px);height:var(--pulse-size,24px);border-radius:50%;background:var(--pulse-color,#4ADE80);animation:tbPulse 1.6s ease-in-out infinite;}
+    .tb-pulse{display:inline-block;width:var(--pulse-size,24px);height:var(--pulse-size,24px);border-radius:50%;background:var(--pulse-color,var(--ok));animation:tbPulse 1.6s ease-in-out infinite;}
     @keyframes tbPulse{0%,100%{transform:scale(.7);opacity:.5}50%{transform:scale(1);opacity:1}}
 
     @media (max-width: 1024px) {

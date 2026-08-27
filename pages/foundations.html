@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Foundations — Site Blocks</title>
+  <title>Foundations · Site Blocks</title>
   <link rel="stylesheet" href="../assets/base.css">
   <link rel="stylesheet" href="../assets/viewer.css">
+  <script src="../assets/viewer.js"></script>
 </head>
-<body>
+<body data-page-set="core">
   <header class="tb-header">
     <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
     <h1>Foundations <span class="tb-range">T001&ndash;T003</span></h1>
-    <p class="tb-sub">Colour and type foundations — the palette, font families, and type scale behind every pattern.</p>
+    <p class="tb-sub">Colour and type foundations: the token palette, the font families, and the type scale behind every pattern.</p>
   </header>
   <main class="tb-main">
 
@@ -20,135 +21,1069 @@
         <span class="tb-tid">T001</span>
         <div>
           <h2>Colour palette</h2>
-          <p>Orange is a structural accent only. Surfaces stay near-black; text steps down through four greys.</p>
+          <p>The token layer every block paints from. One attribute on the html element swaps the whole set.</p>
         </div>
       </header>
       <div class="tb-demo">
-        <div class="sg-pal-group">
-          <span class="sg-pal-label">Accent</span>
-          <div class="sg-swatches">
-            <div class="sg-swatch">
-              <div class="sg-chip" style="background:#ff7f1f"></div>
-              <div class="sg-chip-meta">
-                <span class="sg-chip-name">Orange</span>
-                <span class="sg-chip-hex">#ff7f1f</span>
-                <span class="sg-chip-note">Primary accent — CTAs, links, highlights</span>
-              </div>
-            </div>
-            <div class="sg-swatch">
-              <div class="sg-chip" style="background:#ff924a"></div>
-              <div class="sg-chip-meta">
-                <span class="sg-chip-name">Orange Hover</span>
-                <span class="sg-chip-hex">#ff924a</span>
-                <span class="sg-chip-note">Button hover</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="sg-lead">This library is token driven. A block must never hardcode a colour: it names a token, and the active theme decides the value. Every chip below is filled with <code>var(--token)</code>, so flipping Theme in the toolbar repaints this page live. The pair under each name is what that token resolves to in each theme, read back from the stylesheet rather than typed in.</p>
         <div class="sg-pal-group">
           <span class="sg-pal-label">Surfaces</span>
+          <p class="sg-pal-note">Grounds, from the page backdrop up to the cleanest card fill.</p>
           <div class="sg-swatches">
-            <div class="sg-swatch">
+            <div class="sg-swatch" data-token="--bg-black">
+              <div class="sg-chip" style="background:var(--bg-black)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--bg-black</span>
+                <span class="sg-chip-note">Page ground</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#000000</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#ffffff</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--bg">
               <div class="sg-chip" style="background:var(--bg)"></div>
               <div class="sg-chip-meta">
-                <span class="sg-chip-name">Page</span>
-                <span class="sg-chip-hex">var(--bg)</span>
-                <span class="sg-chip-note">Base background / heroes</span>
+                <span class="sg-chip-name">--bg</span>
+                <span class="sg-chip-note">Section ground</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#050505</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#ffffff</span></span>
+                </span>
               </div>
             </div>
-            <div class="sg-swatch">
+            <div class="sg-swatch" data-token="--bg-2">
               <div class="sg-chip" style="background:var(--bg-2)"></div>
               <div class="sg-chip-meta">
-                <span class="sg-chip-name">Section</span>
-                <span class="sg-chip-hex">var(--bg-2)</span>
-                <span class="sg-chip-note">Alternating sections</span>
+                <span class="sg-chip-name">--bg-2</span>
+                <span class="sg-chip-note">Raised panel, card fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#0a0a0a</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#f6f2ec</span></span>
+                </span>
               </div>
             </div>
-            <div class="sg-swatch">
+            <div class="sg-swatch" data-token="--bg-3">
               <div class="sg-chip" style="background:var(--bg-3)"></div>
               <div class="sg-chip-meta">
-                <span class="sg-chip-name">Card</span>
-                <span class="sg-chip-hex">var(--bg-3)</span>
-                <span class="sg-chip-note">Card / hover surface</span>
+                <span class="sg-chip-name">--bg-3</span>
+                <span class="sg-chip-note">Inset well, input fill, code block</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#0b0d10</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#ded6c9</span></span>
+                </span>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="sg-pal-group">
-          <span class="sg-pal-label">Borders</span>
-          <div class="sg-swatches">
-            <div class="sg-swatch">
-              <div class="sg-chip" style="background:var(--border)"></div>
+            <div class="sg-swatch" data-token="--bg-card">
+              <div class="sg-chip" style="background:var(--bg-card)"></div>
               <div class="sg-chip-meta">
-                <span class="sg-chip-name">Hairline</span>
-                <span class="sg-chip-hex">var(--border)</span>
-                <span class="sg-chip-note">Subtle dividers / guide lines</span>
-              </div>
-            </div>
-            <div class="sg-swatch">
-              <div class="sg-chip" style="background:var(--border-2)"></div>
-              <div class="sg-chip-meta">
-                <span class="sg-chip-name">Border</span>
-                <span class="sg-chip-hex">var(--border-2)</span>
-                <span class="sg-chip-note">Default borders</span>
-              </div>
-            </div>
-            <div class="sg-swatch">
-              <div class="sg-chip" style="background:var(--border-3)"></div>
-              <div class="sg-chip-meta">
-                <span class="sg-chip-name">Muted</span>
-                <span class="sg-chip-hex">var(--border-3)</span>
-                <span class="sg-chip-note">Circle nodes / num boxes</span>
+                <span class="sg-chip-name">--bg-card</span>
+                <span class="sg-chip-note">The cleanest card fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#060606</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#ffffff</span></span>
+                </span>
               </div>
             </div>
           </div>
         </div>
         <div class="sg-pal-group">
           <span class="sg-pal-label">Text</span>
+          <p class="sg-pal-note">Four steps down. All four clear AA on every surface token above.</p>
           <div class="sg-swatches">
-            <div class="sg-swatch">
+            <div class="sg-swatch" data-token="--text">
               <div class="sg-chip" style="background:var(--text)"></div>
               <div class="sg-chip-meta">
-                <span class="sg-chip-name">Heading</span>
-                <span class="sg-chip-hex">var(--text)</span>
-                <span class="sg-chip-note">Headings / strong</span>
+                <span class="sg-chip-name">--text</span>
+                <span class="sg-chip-note">Headings and strong text</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#f9fafb</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#000000</span></span>
+                </span>
               </div>
             </div>
-            <div class="sg-swatch">
+            <div class="sg-swatch" data-token="--text-2">
               <div class="sg-chip" style="background:var(--text-2)"></div>
               <div class="sg-chip-meta">
-                <span class="sg-chip-name">Body</span>
-                <span class="sg-chip-hex">var(--text-2)</span>
+                <span class="sg-chip-name">--text-2</span>
                 <span class="sg-chip-note">Body copy</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#cbd5e1</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#1d2437</span></span>
+                </span>
               </div>
             </div>
-            <div class="sg-swatch">
+            <div class="sg-swatch" data-token="--text-3">
               <div class="sg-chip" style="background:var(--text-3)"></div>
               <div class="sg-chip-meta">
-                <span class="sg-chip-name">Muted</span>
-                <span class="sg-chip-hex">var(--text-3)</span>
-                <span class="sg-chip-note">Secondary text</span>
+                <span class="sg-chip-name">--text-3</span>
+                <span class="sg-chip-note">Secondary and muted text</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#9ca3af</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#4a4a4a</span></span>
+                </span>
               </div>
             </div>
-            <div class="sg-swatch">
+            <div class="sg-swatch" data-token="--text-4">
               <div class="sg-chip" style="background:var(--text-4)"></div>
               <div class="sg-chip-meta">
-                <span class="sg-chip-name">Faint</span>
-                <span class="sg-chip-hex">var(--text-4)</span>
-                <span class="sg-chip-note">Meta / placeholders</span>
+                <span class="sg-chip-name">--text-4</span>
+                <span class="sg-chip-note">Meta, captions and placeholders</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#7b828f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#565656</span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Borders</span>
+          <p class="sg-pal-note">Three weights of line, from a hairline divider to a strong edge.</p>
+          <div class="sg-swatches">
+            <div class="sg-swatch" data-token="--border">
+              <div class="sg-chip" style="background:var(--border)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--border</span>
+                <span class="sg-chip-note">Hairline dividers and guide lines</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#1f2937</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#c6cdd8</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--border-2">
+              <div class="sg-chip" style="background:var(--border-2)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--border-2</span>
+                <span class="sg-chip-note">Default visible border</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#374151</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#9aa4b8</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--border-3">
+              <div class="sg-chip" style="background:var(--border-3)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--border-3</span>
+                <span class="sg-chip-note">Strong border, circle nodes, number boxes</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#4b5563</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#2a344e</span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Accent</span>
+          <p class="sg-pal-note">One signature colour per theme. Text on an accent fill always takes --accent-ink, never --text: the accent is bright in one theme and dark in the other, so a fixed ink fails in one of them.</p>
+          <div class="sg-swatches">
+            <div class="sg-swatch" data-token="--accent">
+              <div class="sg-chip" style="background:var(--accent)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--accent</span>
+                <span class="sg-chip-note">The signature colour: CTAs, eyebrows, active states</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#ff7f1f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#2a344e</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--accent-hover">
+              <div class="sg-chip" style="background:var(--accent-hover)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--accent-hover</span>
+                <span class="sg-chip-note">Hover on an accent fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#e66a15</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#000000</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--accent-deep">
+              <div class="sg-chip" style="background:var(--accent-deep)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--accent-deep</span>
+                <span class="sg-chip-note">Pressed or deeper fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#e85d04</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#1d2437</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--accent-light">
+              <div class="sg-chip" style="background:var(--accent-light)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--accent-light</span>
+                <span class="sg-chip-note">Highlight band, secondary accent fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#ff9d52</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#e1ac5a</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--accent-ink">
+              <div class="sg-chip" style="background:var(--accent-ink)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--accent-ink</span>
+                <span class="sg-chip-note">Text that sits on an accent fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#0a0a0a</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#ded6c9</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--accent-wash">
+              <div class="sg-chip" style="background:var(--accent-wash)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--accent-wash</span>
+                <span class="sg-chip-note">Accent-tinted surface, subtle</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#1a1206</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#eceef2</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--accent-wash-2">
+              <div class="sg-chip" style="background:var(--accent-wash-2)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--accent-wash-2</span>
+                <span class="sg-chip-note">Accent-tinted surface, stronger</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#3a1e05</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#c6cdd8</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--accent-line">
+              <div class="sg-chip" style="background:var(--accent-line)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--accent-line</span>
+                <span class="sg-chip-note">Accent at low alpha: rules, glows, focus rings</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#ff7f1f55</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#2a344e55</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--accent-faint">
+              <div class="sg-chip" style="background:var(--accent-faint)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--accent-faint</span>
+                <span class="sg-chip-note">Accent at very low alpha</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#ff7f1f1f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#2a344e1f</span></span>
+                </span>
               </div>
             </div>
           </div>
         </div>
         <div class="sg-pal-group">
           <span class="sg-pal-label">Status</span>
+          <p class="sg-pal-note">Meaning, not identity. A status colour on its own wash is the safe pairing, and --status-ink is the ink on a solid status fill.</p>
           <div class="sg-swatches">
-            <div class="sg-swatch">
-              <div class="sg-chip" style="background:#4ade80"></div>
+            <div class="sg-swatch" data-token="--ok">
+              <div class="sg-chip" style="background:var(--ok)"></div>
               <div class="sg-chip-meta">
-                <span class="sg-chip-name">Green</span>
-                <span class="sg-chip-hex">#4ade80</span>
-                <span class="sg-chip-note">System online / success / "Added"</span>
+                <span class="sg-chip-name">--ok</span>
+                <span class="sg-chip-note">Success, online, confirmed</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#4ade80</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#0b5626</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--ok-wash">
+              <div class="sg-chip" style="background:var(--ok-wash)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--ok-wash</span>
+                <span class="sg-chip-note">Ground behind success text</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#11261b</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#e8f5ee</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--ok-deep">
+              <div class="sg-chip" style="background:var(--ok-deep)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--ok-deep</span>
+                <span class="sg-chip-note">Solid success fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#10b981</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#084019</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--ok-line">
+              <div class="sg-chip" style="background:var(--ok-line)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--ok-line</span>
+                <span class="sg-chip-note">Success at low alpha</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#4ade8055</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#0b562655</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--ok-faint">
+              <div class="sg-chip" style="background:var(--ok-faint)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--ok-faint</span>
+                <span class="sg-chip-note">Success at very low alpha</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#4ade801f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#0b56261f</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--warn">
+              <div class="sg-chip" style="background:var(--warn)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--warn</span>
+                <span class="sg-chip-note">Caution, degraded, pending</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#fbbf24</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#7a4a05</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--warn-wash">
+              <div class="sg-chip" style="background:var(--warn-wash)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--warn-wash</span>
+                <span class="sg-chip-note">Ground behind caution text</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#2a1505</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#fdf3e2</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--warn-deep">
+              <div class="sg-chip" style="background:var(--warn-deep)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--warn-deep</span>
+                <span class="sg-chip-note">Solid caution fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#b8480a</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#5c3804</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--warn-line">
+              <div class="sg-chip" style="background:var(--warn-line)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--warn-line</span>
+                <span class="sg-chip-note">Caution at low alpha</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#fbbf2455</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#7a4a0555</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--warn-faint">
+              <div class="sg-chip" style="background:var(--warn-faint)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--warn-faint</span>
+                <span class="sg-chip-note">Caution at very low alpha</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#fbbf241f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#7a4a051f</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--err">
+              <div class="sg-chip" style="background:var(--err)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--err</span>
+                <span class="sg-chip-note">Error, failed, destructive</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#f87171</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#9f1717</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--err-wash">
+              <div class="sg-chip" style="background:var(--err-wash)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--err-wash</span>
+                <span class="sg-chip-note">Ground behind error text</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#2a0f1e</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#fdeaea</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--err-deep">
+              <div class="sg-chip" style="background:var(--err-deep)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--err-deep</span>
+                <span class="sg-chip-note">Solid error fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#ef4444</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#7d1212</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--err-line">
+              <div class="sg-chip" style="background:var(--err-line)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--err-line</span>
+                <span class="sg-chip-note">Error at low alpha</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#f8717155</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#9f171755</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--err-faint">
+              <div class="sg-chip" style="background:var(--err-faint)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--err-faint</span>
+                <span class="sg-chip-note">Error at very low alpha</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#f871711f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#9f17171f</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--info">
+              <div class="sg-chip" style="background:var(--info)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--info</span>
+                <span class="sg-chip-note">Notice, neutral information</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#60a5fa</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#1a3fa8</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--info-wash">
+              <div class="sg-chip" style="background:var(--info-wash)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--info-wash</span>
+                <span class="sg-chip-note">Ground behind notice text</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#0a0f1a</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#e8eefc</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--info-deep">
+              <div class="sg-chip" style="background:var(--info-deep)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--info-deep</span>
+                <span class="sg-chip-note">Solid notice fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#3b82f6</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#143186</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--info-line">
+              <div class="sg-chip" style="background:var(--info-line)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--info-line</span>
+                <span class="sg-chip-note">Notice at low alpha</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#60a5fa55</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#1a3fa855</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--info-faint">
+              <div class="sg-chip" style="background:var(--info-faint)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--info-faint</span>
+                <span class="sg-chip-note">Notice at very low alpha</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#60a5fa1f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#1a3fa81f</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--status-ink">
+              <div class="sg-chip" style="background:var(--status-ink)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--status-ink</span>
+                <span class="sg-chip-note">Ink on a solid status fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#050505</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#ffffff</span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Placeholder washes</span>
+          <p class="sg-pal-note">Three gradient pairs for image, thumb, poster and avatar placeholders. Reach for a pair, never a single one.</p>
+          <div class="sg-swatches">
+            <div class="sg-swatch" data-token="--wash-1a">
+              <div class="sg-chip" style="background:var(--wash-1a)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--wash-1a</span>
+                <span class="sg-chip-note">Warm pair, start</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#1a1206</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#ded6c9</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--wash-1b">
+              <div class="sg-chip" style="background:var(--wash-1b)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--wash-1b</span>
+                <span class="sg-chip-note">Warm pair, end</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#3a1e05</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#e1ac5a</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--wash-2a">
+              <div class="sg-chip" style="background:var(--wash-2a)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--wash-2a</span>
+                <span class="sg-chip-note">Cool pair, start</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#0a0f1a</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#c6cdd8</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--wash-2b">
+              <div class="sg-chip" style="background:var(--wash-2b)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--wash-2b</span>
+                <span class="sg-chip-note">Cool pair, end</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#131a2a</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#2a344e</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--wash-3a">
+              <div class="sg-chip" style="background:var(--wash-3a)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--wash-3a</span>
+                <span class="sg-chip-note">Neutral pair, start</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#1a0a14</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#f6f2ec</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--wash-3b">
+              <div class="sg-chip" style="background:var(--wash-3b)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--wash-3b</span>
+                <span class="sg-chip-note">Neutral pair, end</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#2a0f1e</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#c6cdd8</span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Categorical hues</span>
+          <p class="sg-pal-note">For charts, tag groups, legends and avatar tints, where the colour carries identity rather than meaning. Never use a status colour here: green on a chart should not read as success.</p>
+          <div class="sg-swatches">
+            <div class="sg-swatch" data-token="--cat-1">
+              <div class="sg-chip" style="background:var(--cat-1)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--cat-1</span>
+                <span class="sg-chip-note">Series one</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#ff7f1f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#2a344e</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--cat-2">
+              <div class="sg-chip" style="background:var(--cat-2)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--cat-2</span>
+                <span class="sg-chip-note">Series two</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#60a5fa</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#1a3fa8</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--cat-3">
+              <div class="sg-chip" style="background:var(--cat-3)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--cat-3</span>
+                <span class="sg-chip-note">Series three</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#a78bfa</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#5b21b6</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--cat-4">
+              <div class="sg-chip" style="background:var(--cat-4)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--cat-4</span>
+                <span class="sg-chip-note">Series four</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#f472b6</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#86255f</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--cat-5">
+              <div class="sg-chip" style="background:var(--cat-5)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--cat-5</span>
+                <span class="sg-chip-note">Series five</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#2dd4bf</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#0b5952</span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Commerce and neutral</span>
+          <p class="sg-pal-note">Colours that must not borrow a status hue. A saving is not an error, a five-star review is not a warning, and an overflow count means nothing at all.</p>
+          <div class="sg-swatches">
+            <div class="sg-swatch" data-token="--sale">
+              <div class="sg-chip" style="background:var(--sale)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--sale</span>
+                <span class="sg-chip-note">Discount and saving fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#f43f5e</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#9f1239</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--sale-ink">
+              <div class="sg-chip" style="background:var(--sale-ink)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--sale-ink</span>
+                <span class="sg-chip-note">Text on a sale fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#050505</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#ffffff</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--sale-wash">
+              <div class="sg-chip" style="background:var(--sale-wash)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--sale-wash</span>
+                <span class="sg-chip-note">Sale-tinted surface</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#2a0f18</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#fdeaef</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--rating">
+              <div class="sg-chip" style="background:var(--rating)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--rating</span>
+                <span class="sg-chip-note">Filled star</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#ff7f1f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#6e5109</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--rating-empty">
+              <div class="sg-chip" style="background:var(--rating-empty)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--rating-empty</span>
+                <span class="sg-chip-note">Empty star</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#4b5563</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#9aa4b8</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--muted">
+              <div class="sg-chip" style="background:var(--muted)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--muted</span>
+                <span class="sg-chip-note">Meaning-free pill text</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#9ca3af</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#4a4a4a</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--muted-wash">
+              <div class="sg-chip" style="background:var(--muted-wash)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--muted-wash</span>
+                <span class="sg-chip-note">Meaning-free pill fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#14171c</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#f0ede8</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--track">
+              <div class="sg-chip" style="background:var(--track)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--track</span>
+                <span class="sg-chip-note">Unfilled bar track</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#1a1d24</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#e9e5dd</span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Overlays and state</span>
+          <p class="sg-pal-note">Chrome that sits above the page, and the look of a control that cannot be used.</p>
+          <div class="sg-swatches">
+            <div class="sg-swatch" data-token="--scrim">
+              <div class="sg-chip" style="background:var(--scrim)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--scrim</span>
+                <span class="sg-chip-note">Veil behind a dialog or slide-over</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#000000a6</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#2a344ea6</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--accent-light-ink">
+              <div class="sg-chip" style="background:var(--accent-light-ink)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--accent-light-ink</span>
+                <span class="sg-chip-note">Text on an accent-light fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#050505</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#000000</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--disabled-surface">
+              <div class="sg-chip" style="background:var(--disabled-surface)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--disabled-surface</span>
+                <span class="sg-chip-note">Disabled control fill</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#0b0d10</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#f6f2ec</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--disabled-ink">
+              <div class="sg-chip" style="background:var(--disabled-ink)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--disabled-ink</span>
+                <span class="sg-chip-note">Disabled control text</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#5b616b</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#8a8a8a</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--disabled-border">
+              <div class="sg-chip" style="background:var(--disabled-border)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--disabled-border</span>
+                <span class="sg-chip-note">Disabled control border</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#1f2937</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#c6cdd8</span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Status at low alpha</span>
+          <p class="sg-pal-note">The same four meanings as above, at border and rule strength. Use these instead of mixing a status colour down by hand.</p>
+          <div class="sg-swatches">
+            <div class="sg-swatch" data-token="--ok-line">
+              <div class="sg-chip" style="background:var(--ok-line)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--ok-line</span>
+                <span class="sg-chip-note">Success border</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#4ade8055</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#0b562655</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--ok-faint">
+              <div class="sg-chip" style="background:var(--ok-faint)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--ok-faint</span>
+                <span class="sg-chip-note">Success tint</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#4ade801f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#0b56261f</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--warn-line">
+              <div class="sg-chip" style="background:var(--warn-line)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--warn-line</span>
+                <span class="sg-chip-note">Warning border</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#fbbf2455</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#7a4a0555</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--warn-faint">
+              <div class="sg-chip" style="background:var(--warn-faint)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--warn-faint</span>
+                <span class="sg-chip-note">Warning tint</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#fbbf241f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#7a4a051f</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--err-line">
+              <div class="sg-chip" style="background:var(--err-line)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--err-line</span>
+                <span class="sg-chip-note">Error border</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#f8717155</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#9f171755</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--err-faint">
+              <div class="sg-chip" style="background:var(--err-faint)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--err-faint</span>
+                <span class="sg-chip-note">Error tint</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#f871711f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#9f17171f</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--info-line">
+              <div class="sg-chip" style="background:var(--info-line)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--info-line</span>
+                <span class="sg-chip-note">Info border</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#60a5fa55</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#1a3fa855</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--info-faint">
+              <div class="sg-chip" style="background:var(--info-faint)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--info-faint</span>
+                <span class="sg-chip-note">Info tint</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#60a5fa1f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#1a3fa81f</span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Product swatches</span>
+          <p class="sg-pal-note">These depict an actual product colour, so unlike every other token here they are identical in both themes. Use them for colour facets and variant swatches, never the categorical hues.</p>
+          <div class="sg-swatches">
+            <div class="sg-swatch" data-token="--swatch-blush">
+              <div class="sg-chip" style="background:var(--swatch-blush)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-blush</span>
+                <span class="sg-chip-note">Blush</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#dbb2ab</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#dbb2ab</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--swatch-charcoal">
+              <div class="sg-chip" style="background:var(--swatch-charcoal)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-charcoal</span>
+                <span class="sg-chip-note">Charcoal</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#3d4046</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#3d4046</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--swatch-clay">
+              <div class="sg-chip" style="background:var(--swatch-clay)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-clay</span>
+                <span class="sg-chip-note">Clay</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#b87159</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#b87159</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--swatch-cream">
+              <div class="sg-chip" style="background:var(--swatch-cream)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-cream</span>
+                <span class="sg-chip-note">Cream</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#e8e0d2</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#e8e0d2</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--swatch-ironbark">
+              <div class="sg-chip" style="background:var(--swatch-ironbark)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-ironbark</span>
+                <span class="sg-chip-note">Ironbark</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#4a4540</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#4a4540</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--swatch-navy">
+              <div class="sg-chip" style="background:var(--swatch-navy)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-navy</span>
+                <span class="sg-chip-note">Navy</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#2f3d56</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#2f3d56</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--swatch-ochre">
+              <div class="sg-chip" style="background:var(--swatch-ochre)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-ochre</span>
+                <span class="sg-chip-note">Ochre</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#cf9b4e</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#cf9b4e</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--swatch-plum">
+              <div class="sg-chip" style="background:var(--swatch-plum)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-plum</span>
+                <span class="sg-chip-note">Plum</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#6c4664</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#6c4664</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--swatch-rust">
+              <div class="sg-chip" style="background:var(--swatch-rust)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-rust</span>
+                <span class="sg-chip-note">Rust</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#a4502c</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#a4502c</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--swatch-sage">
+              <div class="sg-chip" style="background:var(--swatch-sage)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-sage</span>
+                <span class="sg-chip-note">Sage</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#8a9a7b</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#8a9a7b</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--swatch-saltbush">
+              <div class="sg-chip" style="background:var(--swatch-saltbush)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-saltbush</span>
+                <span class="sg-chip-note">Saltbush</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#9aa88f</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#9aa88f</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--swatch-slate">
+              <div class="sg-chip" style="background:var(--swatch-slate)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--swatch-slate</span>
+                <span class="sg-chip-note">Slate</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#5a6570</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#5a6570</span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sg-pal-group">
+          <span class="sg-pal-label">Theme previews</span>
+          <p class="sg-pal-note">For UI that depicts a light or a dark theme, such as a theme-picker card. Also fixed in both themes: a light-mode preview built from --bg and --text inverts when the theme flips and stops demonstrating anything.</p>
+          <div class="sg-swatches">
+            <div class="sg-swatch" data-token="--preview-light">
+              <div class="sg-chip" style="background:var(--preview-light)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--preview-light</span>
+                <span class="sg-chip-note">Light-theme preview ground</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#f4f4f5</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#f4f4f5</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--preview-light-ink">
+              <div class="sg-chip" style="background:var(--preview-light-ink)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--preview-light-ink</span>
+                <span class="sg-chip-note">Light-theme preview text</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#18181b</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#18181b</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--preview-dark">
+              <div class="sg-chip" style="background:var(--preview-dark)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--preview-dark</span>
+                <span class="sg-chip-note">Dark-theme preview ground</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#131316</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#131316</span></span>
+                </span>
+              </div>
+            </div>
+            <div class="sg-swatch" data-token="--preview-dark-ink">
+              <div class="sg-chip" style="background:var(--preview-dark-ink)"></div>
+              <div class="sg-chip-meta">
+                <span class="sg-chip-name">--preview-dark-ink</span>
+                <span class="sg-chip-note">Dark-theme preview text</span>
+                <span class="sg-chip-vals">
+                  <span class="sg-val"><span class="sg-val-theme">Dark</span><span class="sg-chip-hex sg-hex-dark">#f4f4f5</span></span>
+                  <span class="sg-val"><span class="sg-val-theme">Moonrite</span><span class="sg-chip-hex sg-hex-moon">#f4f4f5</span></span>
+                </span>
               </div>
             </div>
           </div>
@@ -161,27 +1096,31 @@
         <span class="tb-tid">T002</span>
         <div>
           <h2>Font families</h2>
-          <p>Three families with fixed roles: Bai Jamjuree for headings, Inter for body copy, JetBrains Mono for eyebrows, code, and meta.</p>
+          <p>Three families with fixed roles, each behind a token. The specimens render in whichever theme is active.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="sg-type-families">
           <div class="sg-type-fam">
-            <span class="sg-type-tag">Bai Jamjuree</span>
+            <span class="sg-type-tag">--font-display</span>
             <p class="sg-type-role">Headings</p>
-            <p style="font-family:'Bai Jamjuree',sans-serif;font-size:34px;font-weight:600;color:var(--text);margin:0;">Animate Astro fast</p>
+            <p style="font-family:var(--font-display);font-size:34px;font-weight:var(--heading-weight);letter-spacing:var(--heading-tracking);color:var(--text);margin:0;">Animate Astro fast</p>
+            <p class="sg-type-themes">Dark: Bai Jamjuree. Moonrite: Fraunces.</p>
           </div>
           <div class="sg-type-fam">
-            <span class="sg-type-tag">Inter</span>
+            <span class="sg-type-tag">--font-body</span>
             <p class="sg-type-role">Body</p>
-            <p style="font-family:'Inter',sans-serif;font-size:17px;line-height:1.7;color:var(--text-2);margin:0;">The quick brown fox jumps over the lazy dog.</p>
+            <p style="font-family:var(--font-body);font-size:17px;line-height:1.7;color:var(--text-2);margin:0;">The quick brown fox jumps over the lazy dog.</p>
+            <p class="sg-type-themes">Dark: Inter. Moonrite: Instrument Sans.</p>
           </div>
           <div class="sg-type-fam">
-            <span class="sg-type-tag">JetBrains Mono</span>
-            <p class="sg-type-role">Eyebrows / code / meta</p>
-            <p style="font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--text-3);margin:0;">npm install @astroanimate/core</p>
+            <span class="sg-type-tag">--font-mono</span>
+            <p class="sg-type-role">Code, SKUs and IDs</p>
+            <p style="font-family:var(--font-mono);font-size:15px;color:var(--text-3);margin:0;">npm install @astroanimate/core</p>
+            <p class="sg-type-themes">Dark: JetBrains Mono. Moonrite: JetBrains Mono, kept for genuine code only.</p>
           </div>
         </div>
+        <p class="sg-lead">Two more tokens pick a face by role: <code>--font-eyebrow</code> for tracked labels and <code>--font-ui</code> for buttons, meta, prices and table headers. Dark points both at the mono face. Moonrite points both at the body face, because a serif page carries its labels in the sans rather than the monospace.</p>
       </div>
     </article>
 
@@ -190,15 +1129,15 @@
         <span class="tb-tid">T003</span>
         <div>
           <h2>Type scale</h2>
-          <p>Heading sizes H1&ndash;H3, 17px/1.7 body copy, and the monospace eyebrow label.</p>
+          <p>Heading sizes H1&ndash;H3, 17px/1.7 body copy, and the tracked eyebrow label. The sizes are fixed. The faces, weights and tracking come from tokens, so the scale re-renders in the active theme.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="sg-type-scale">
-          <div class="sg-scale-row"><span class="sg-scale-key">H1</span><span style="font-family:'Bai Jamjuree';font-size:48px;font-weight:600;color:var(--text);">Heading one</span></div>
-          <div class="sg-scale-row"><span class="sg-scale-key">H2</span><span style="font-family:'Bai Jamjuree';font-size:32px;font-weight:600;color:var(--text);">Heading two</span></div>
-          <div class="sg-scale-row"><span class="sg-scale-key">H3</span><span style="font-family:'Bai Jamjuree';font-size:21px;font-weight:600;color:var(--text);">Heading three</span></div>
-          <div class="sg-scale-row"><span class="sg-scale-key">Body</span><span style="font-family:'Inter';font-size:17px;color:var(--text-2);">Body copy at 17px / 1.7 line-height.</span></div>
+          <div class="sg-scale-row"><span class="sg-scale-key">H1</span><span style="font-family:var(--font-display);font-size:48px;font-weight:var(--heading-weight);letter-spacing:var(--heading-tracking);color:var(--text);">Heading one</span></div>
+          <div class="sg-scale-row"><span class="sg-scale-key">H2</span><span style="font-family:var(--font-display);font-size:32px;font-weight:var(--heading-weight);letter-spacing:var(--heading-tracking);color:var(--text);">Heading two</span></div>
+          <div class="sg-scale-row"><span class="sg-scale-key">H3</span><span style="font-family:var(--font-display);font-size:21px;font-weight:var(--heading-weight);letter-spacing:var(--heading-tracking);color:var(--text);">Heading three</span></div>
+          <div class="sg-scale-row"><span class="sg-scale-key">Body</span><span style="font-family:var(--font-body);font-size:17px;color:var(--text-2);">Body copy at 17px / 1.7 line-height.</span></div>
           <div class="sg-scale-row"><span class="sg-scale-key">Eyebrow</span><span class="eyebrow" style="margin:0;">// SECTION LABEL</span></div>
         </div>
       </div>
@@ -207,56 +1146,117 @@
   </main>
   <style>
     .eyebrow {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: var(--font-eyebrow);
       font-size: 13px;
-      letter-spacing: 0.08em;
-      color: #ff7f1f;
-      text-transform: uppercase;
+      letter-spacing: var(--eyebrow-tracking);
+      color: var(--accent);
+      text-transform: var(--eyebrow-transform);
       margin: 0 0 16px;
     }
+
+    .sg-lead {
+      font-family: var(--font-body);
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text-3);
+      max-width: 82ch;
+      margin: 0 0 26px;
+    }
+    .sg-type-families + .sg-lead { margin: 0; }
 
     /* PALETTE */
     .sg-pal-group { margin-bottom: 28px; }
     .sg-pal-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: var(--font-eyebrow);
       font-size: 12px;
-      letter-spacing: 0.06em;
-      color: var(--text-4);
+      letter-spacing: var(--eyebrow-tracking);
+      text-transform: var(--eyebrow-transform);
+      color: var(--accent);
       display: block;
-      margin-bottom: 12px;
+      margin-bottom: 6px;
     }
-    .sg-swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .sg-pal-note {
+      font-family: var(--font-body);
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--text-4);
+      max-width: 82ch;
+      margin: 0 0 12px;
+    }
+    .sg-swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(248px, 1fr)); gap: 14px; }
     .sg-swatch {
       display: flex;
       gap: 12px;
-      align-items: center;
-      border: 1px solid var(--border);
+      align-items: flex-start;
+      border: var(--line-weight) solid var(--border);
       background: var(--bg);
+      border-radius: var(--radius-card);
       padding: 12px;
+      min-width: 0;
     }
-    .sg-chip { width: 44px; height: 44px; flex-shrink: 0; border: 1px solid var(--border); border-radius: 3px; }
+    .sg-chip { width: 44px; height: 44px; flex-shrink: 0; border: var(--line-weight) solid var(--border); border-radius: var(--radius-sm); }
     .sg-chip-meta { display: flex; flex-direction: column; min-width: 0; }
-    .sg-chip-name { font-family: 'Bai Jamjuree', sans-serif; font-size: 14px; color: var(--text); }
-    .sg-chip-hex { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #ff7f1f; }
-    .sg-chip-note { font-family: 'Inter', sans-serif; font-size: 11.5px; color: var(--text-4); line-height: 1.4; margin-top: 2px; }
+    .sg-chip-name { font-family: var(--font-mono); font-size: 13px; color: var(--text); word-break: break-all; }
+    .sg-chip-note { font-family: var(--font-body); font-size: 11.5px; color: var(--text-4); line-height: 1.4; margin-top: 2px; }
+    .sg-chip-vals { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; margin-top: 8px; }
+    .sg-val { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+    .sg-val-theme {
+      font-family: var(--font-eyebrow);
+      font-size: 9px;
+      letter-spacing: var(--eyebrow-tracking);
+      text-transform: var(--eyebrow-transform);
+      color: var(--text-4);
+    }
+    .sg-chip-hex { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-3); }
 
     /* TYPE */
-    .sg-type-families { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 36px; }
-    .sg-type-fam { border: 1px solid var(--border); background: var(--bg-2); padding: 24px; }
-    .sg-type-tag { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #ff7f1f; }
-    .sg-type-role { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-4); margin: 4px 0 18px; }
-    .sg-type-scale { border: 1px solid var(--border); }
-    .sg-scale-row { display: flex; align-items: baseline; gap: 24px; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+    .sg-type-families { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+    .sg-type-fam { border: var(--line-weight) solid var(--border); background: var(--bg-2); border-radius: var(--radius-card); padding: 24px; min-width: 0; }
+    .sg-type-tag { font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+    .sg-type-role { font-family: var(--font-body); font-size: 13px; color: var(--text-4); margin: 4px 0 18px; }
+    .sg-type-themes { font-family: var(--font-body); font-size: 11.5px; line-height: 1.5; color: var(--text-4); margin: 16px 0 0; }
+    .sg-type-scale { border: var(--line-weight) solid var(--border); border-radius: var(--radius-card); overflow: hidden; }
+    .sg-scale-row { display: flex; align-items: baseline; gap: 24px; padding: 16px 20px; border-bottom: var(--line-weight) solid var(--border); }
     .sg-scale-row:last-child { border-bottom: none; }
-    .sg-scale-key { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-4); width: 64px; flex-shrink: 0; }
+    .sg-scale-key { font-family: var(--font-ui); font-size: 12px; color: var(--text-4); width: 64px; flex-shrink: 0; }
 
     @media (max-width: 1024px) {
-      .sg-swatches { grid-template-columns: repeat(2, 1fr); }
       .sg-type-families { grid-template-columns: 1fr; }
     }
-    @media (max-width: 768px) {
-      .sg-swatches { grid-template-columns: 1fr; }
-    }
   </style>
+  <script>
+    /* The printed values are a snapshot of base.css taken when this page was
+       written. Read them back from the live stylesheet so the table can never
+       drift from the tokens. Both themes are sampled in one synchronous pass,
+       so nothing repaints in between, and with JS off the snapshot stands. */
+    (function () {
+      var root = document.documentElement;
+      var rows = document.querySelectorAll('.sg-swatch[data-token]');
+      if (!rows.length || !window.getComputedStyle) { return; }
+      var was = root.getAttribute('data-theme');
+      function apply(theme) {
+        if (theme) { root.setAttribute('data-theme', theme); }
+        else { root.removeAttribute('data-theme'); }
+      }
+      function sample() {
+        var cs = getComputedStyle(root), out = [], i;
+        for (i = 0; i < rows.length; i++) {
+          out.push(cs.getPropertyValue(rows[i].getAttribute('data-token')).trim());
+        }
+        return out;
+      }
+      apply(null);
+      var dark = sample();
+      apply('moonrite');
+      var moon = sample();
+      apply(was);
+      for (var i = 0; i < rows.length; i++) {
+        var d = rows[i].querySelector('.sg-hex-dark');
+        var m = rows[i].querySelector('.sg-hex-moon');
+        if (d && dark[i]) { d.textContent = dark[i]; }
+        if (m && moon[i]) { m.textContent = moon[i]; }
+      }
+    })();
+  </script>
 </body>
 </html>

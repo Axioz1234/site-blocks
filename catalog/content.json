@@ -1,23 +1,65 @@
 [
-  { "id": "T160", "name": "Author byline + bio card", "category": "Content",
-    "file": "pages/content.html", "anchor": "#T160",
-    "description": "A compact byline strip at the top of a post and a fuller author bio card to close it out." },
-  { "id": "T161", "name": "Related articles", "category": "Content",
-    "file": "pages/content.html", "anchor": "#T161",
-    "description": "A \"Read next\" grid surfacing three more posts by category, title, and read time." },
-  { "id": "T162", "name": "Reading-progress bar", "category": "Content",
-    "file": "pages/content.html", "anchor": "#T162",
-    "description": "A progress bar pinned to the top of a scroll container that fills as you read inside the box." },
-  { "id": "T163", "name": "Tag / category filter", "category": "Content",
-    "file": "pages/content.html", "anchor": "#T163",
-    "description": "A chip row that live-filters the post list below by category." },
-  { "id": "T164", "name": "Trending / most-popular list", "category": "Content",
-    "file": "pages/content.html", "anchor": "#T164",
-    "description": "A ranked list with oversized numerals and an optional view-count meta line." },
-  { "id": "T165", "name": "Series / chapter nav", "category": "Content",
-    "file": "pages/content.html", "anchor": "#T165",
-    "description": "A \"Part 2 of 5\" bar with titled previous/next arrows and a thin progress indicator." },
-  { "id": "T166", "name": "Pull quote", "category": "Content",
-    "file": "pages/content.html", "anchor": "#T166",
-    "description": "An oversized, offset quote block with a large quotation mark, accent rule, and attribution." }
+  {
+    "id": "T160",
+    "name": "Author byline + bio card",
+    "category": "Content",
+    "set": "core",
+    "file": "pages/content.html",
+    "anchor": "#T160",
+    "description": "A compact byline strip at the top of a post and a fuller author bio card to close it out."
+  },
+  {
+    "id": "T161",
+    "name": "Related articles",
+    "category": "Content",
+    "set": "core",
+    "file": "pages/content.html",
+    "anchor": "#T161",
+    "description": "A \"Read next\" grid surfacing three more posts by category, title, and read time."
+  },
+  {
+    "id": "T162",
+    "name": "Reading-progress bar",
+    "category": "Content",
+    "set": "core",
+    "file": "pages/content.html",
+    "anchor": "#T162",
+    "description": "A progress bar pinned to the top of a scroll container that fills as you read inside the box."
+  },
+  {
+    "id": "T163",
+    "name": "Tag / category filter",
+    "category": "Content",
+    "set": "core",
+    "file": "pages/content.html",
+    "anchor": "#T163",
+    "description": "A chip row that live-filters the post list below by category."
+  },
+  {
+    "id": "T164",
+    "name": "Trending / most-popular list",
+    "category": "Content",
+    "set": "core",
+    "file": "pages/content.html",
+    "anchor": "#T164",
+    "description": "A ranked list with oversized numerals and an optional view-count meta line."
+  },
+  {
+    "id": "T165",
+    "name": "Series / chapter nav",
+    "category": "Content",
+    "set": "core",
+    "file": "pages/content.html",
+    "anchor": "#T165",
+    "description": "A \"Part 2 of 5\" bar with titled previous/next arrows and a thin progress indicator."
+  },
+  {
+    "id": "T166",
+    "name": "Pull quote",
+    "category": "Content",
+    "set": "core",
+    "file": "pages/content.html",
+    "anchor": "#T166",
+    "description": "An oversized, offset quote block with a large quotation mark, accent rule, and attribution."
+  }
 ]

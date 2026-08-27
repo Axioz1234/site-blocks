@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account &amp; post-purchase &middot; Site Blocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+  <script src="../assets/viewer.js"></script>
+</head>
+<body data-page-set="ecommerce">
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
+    <h1>Account &amp; post-purchase <span class="tb-range">T380&ndash;T391</span></h1>
+    <p class="tb-sub">Everything that happens after the checkout: the signed-in account area, order history and detail, returns, wishlist, saved addresses and cards, subscriptions, rewards, and the sign-in, reset and guest-lookup screens that get a customer back in.</p>
+  </header>
+  <main class="tb-main">
+
+    <!-- ============================================================
+         T380 Account shell
+         ============================================================ -->
+    <article class="tb-pattern" id="T380" data-tid="T380">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T380</span>
+        <div>
+          <h2>Account shell</h2>
+          <p>The frame every signed-in screen sits in: a section nav, a greeting header, and a content pane. The nav becomes a horizontal scroller on narrow widths.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="acc-shell">
+          <nav class="acc-nav" aria-label="Account sections">
+            <button type="button" class="acc-navlink is-active" data-acc-pane="orders" aria-current="page">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg>
+              <span>Orders</span>
+            </button>
+            <button type="button" class="acc-navlink" data-acc-pane="details">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>
+              <span>Details</span>
+            </button>
+            <button type="button" class="acc-navlink" data-acc-pane="addresses">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+              <span>Addresses</span>
+            </button>
+            <button type="button" class="acc-navlink" data-acc-pane="payment">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>
+              <span>Payment</span>
+            </button>
+            <button type="button" class="acc-navlink" data-acc-pane="wishlist">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.7-7.5-9.6A4.4 4.4 0 0 1 12 7.2a4.4 4.4 0 0 1 7.5 3.2C19.5 15.3 12 20 12 20Z"/></svg>
+              <span>Wishlist</span>
+            </button>
+            <button type="button" class="acc-navlink" data-acc-pane="subs">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h12a4 4 0 0 1 4 4"/><path d="m14 5 3 3-3 3"/><path d="M20 16H8a4 4 0 0 1-4-4"/><path d="m10 19-3-3 3-3"/></svg>
+              <span>Subscriptions</span>
+            </button>
+          </nav>
+
+          <div class="acc-pane">
+            <header class="acc-greet">
+              <div>
+                <p class="acc-eyebrow">My account</p>
+                <h3 class="acc-h acc-greet-name">Good afternoon, Amelia</h3>
+                <p class="acc-greet-sub">Member since March 2024 <span class="acc-dot">&bull;</span> Gold tier <span class="acc-dot">&bull;</span> 1,240 points</p>
+              </div>
+              <button type="button" class="acc-btn acc-btn--ghost">Sign out</button>
+            </header>
+
+            <div class="acc-pane-body">
+              <section class="acc-paneview" data-acc-view="orders">
+                <h4 class="acc-h acc-pane-title">Orders</h4>
+                <p class="acc-pane-copy">Two orders are on their way. Standard delivery to Victoria is running three to five business days.</p>
+                <div class="acc-stats">
+                  <div class="acc-stat"><span class="acc-stat-label">Open orders</span><span class="acc-stat-value">2</span></div>
+                  <div class="acc-stat"><span class="acc-stat-label">Delivered this year</span><span class="acc-stat-value">11</span></div>
+                  <div class="acc-stat"><span class="acc-stat-label">Spent this year</span><span class="acc-stat-value">$2,486</span></div>
+                </div>
+              </section>
+              <section class="acc-paneview" data-acc-view="details" hidden>
+                <h4 class="acc-h acc-pane-title">Details</h4>
+                <p class="acc-pane-copy">Your name, email and phone. Changing your email signs you out of other devices.</p>
+                <dl class="acc-dl">
+                  <div class="acc-dl-row"><dt>Name</dt><dd>Amelia Brooks</dd></div>
+                  <div class="acc-dl-row"><dt>Email</dt><dd>amelia.brooks@example.com</dd></div>
+                  <div class="acc-dl-row"><dt>Phone</dt><dd>0412 884 019</dd></div>
+                </dl>
+              </section>
+              <section class="acc-paneview" data-acc-view="addresses" hidden>
+                <h4 class="acc-h acc-pane-title">Addresses</h4>
+                <p class="acc-pane-copy">Three saved addresses. The default is used for delivery unless you pick another at checkout.</p>
+                <div class="acc-stats">
+                  <div class="acc-stat"><span class="acc-stat-label">Saved</span><span class="acc-stat-value">3</span></div>
+                  <div class="acc-stat"><span class="acc-stat-label">Default</span><span class="acc-stat-value">Home, VIC</span></div>
+                </div>
+              </section>
+              <section class="acc-paneview" data-acc-view="payment" hidden>
+                <h4 class="acc-h acc-pane-title">Payment</h4>
+                <p class="acc-pane-copy">Cards are stored with our payment provider. We only ever see the last four digits.</p>
+                <div class="acc-stats">
+                  <div class="acc-stat"><span class="acc-stat-label">Saved cards</span><span class="acc-stat-value">2</span></div>
+                  <div class="acc-stat"><span class="acc-stat-label">Needs attention</span><span class="acc-stat-value">1</span></div>
+                </div>
+              </section>
+              <section class="acc-paneview" data-acc-view="wishlist" hidden>
+                <h4 class="acc-h acc-pane-title">Wishlist</h4>
+                <p class="acc-pane-copy">Four saved items. We will let you know if something you saved goes back in stock.</p>
+                <div class="acc-stats">
+                  <div class="acc-stat"><span class="acc-stat-label">Saved items</span><span class="acc-stat-value">4</span></div>
+                  <div class="acc-stat"><span class="acc-stat-label">Back in stock</span><span class="acc-stat-value">1</span></div>
+                </div>
+              </section>
+              <section class="acc-paneview" data-acc-view="subs" hidden>
+                <h4 class="acc-h acc-pane-title">Subscriptions</h4>
+                <p class="acc-pane-copy">One active subscription. You can skip, pause or cancel any time before the cut-off.</p>
+                <div class="acc-stats">
+                  <div class="acc-stat"><span class="acc-stat-label">Active</span><span class="acc-stat-value">1</span></div>
+                  <div class="acc-stat"><span class="acc-stat-label">Next delivery</span><span class="acc-stat-value">9 Sep</span></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T381 Order history
+         ============================================================ -->
+    <article class="tb-pattern" id="T381" data-tid="T381">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T381</span>
+        <div>
+          <h2>Order history</h2>
+          <p>Past orders as scannable rows: number, date, item thumbs, a status pill, the total, and the two or three actions a customer actually wants.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <ul class="acc-orders">
+          <li class="acc-order">
+            <div class="acc-order-head">
+              <div class="acc-order-ident">
+                <span class="acc-num">SS-24817</span>
+                <span class="acc-meta">Placed 12 Aug 2026</span>
+              </div>
+              <span class="acc-pill acc-pill--info">In transit</span>
+            </div>
+            <div class="acc-order-mid">
+              <div class="acc-thumbs">
+                <span class="acc-thumb acc-w1" aria-hidden="true"></span>
+                <span class="acc-thumb acc-w2" aria-hidden="true"></span>
+                <span class="acc-thumb acc-w3" aria-hidden="true"></span>
+                <span class="acc-thumb-more">+2</span>
+              </div>
+              <div class="acc-order-sum">
+                <span class="acc-meta">5 items</span>
+                <span class="acc-money">$412.00 AUD</span>
+              </div>
+            </div>
+            <div class="acc-order-actions">
+              <button type="button" class="acc-btn acc-btn--sm">View order</button>
+              <button type="button" class="acc-btn acc-btn--sm">Track parcel</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">Buy again</button>
+            </div>
+          </li>
+
+          <li class="acc-order">
+            <div class="acc-order-head">
+              <div class="acc-order-ident">
+                <span class="acc-num">SS-24603</span>
+                <span class="acc-meta">Placed 28 Jul 2026</span>
+              </div>
+              <span class="acc-pill acc-pill--ok">Delivered</span>
+            </div>
+            <div class="acc-order-mid">
+              <div class="acc-thumbs">
+                <span class="acc-thumb acc-w3" aria-hidden="true"></span>
+                <span class="acc-thumb acc-w1" aria-hidden="true"></span>
+              </div>
+              <div class="acc-order-sum">
+                <span class="acc-meta">2 items</span>
+                <span class="acc-money">$245.00 AUD</span>
+              </div>
+            </div>
+            <div class="acc-order-actions">
+              <button type="button" class="acc-btn acc-btn--sm">View order</button>
+              <button type="button" class="acc-btn acc-btn--sm">Return an item</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">Buy again</button>
+            </div>
+          </li>
+
+          <li class="acc-order">
+            <div class="acc-order-head">
+              <div class="acc-order-ident">
+                <span class="acc-num">SS-24488</span>
+                <span class="acc-meta">Placed 9 Jul 2026</span>
+              </div>
+              <span class="acc-pill acc-pill--warn">Packing</span>
+            </div>
+            <div class="acc-order-mid">
+              <div class="acc-thumbs">
+                <span class="acc-thumb acc-w2" aria-hidden="true"></span>
+              </div>
+              <div class="acc-order-sum">
+                <span class="acc-meta">1 item</span>
+                <span class="acc-money">$58.00 AUD</span>
+              </div>
+            </div>
+            <div class="acc-order-actions">
+              <button type="button" class="acc-btn acc-btn--sm">View order</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">Contact support</button>
+            </div>
+          </li>
+
+          <li class="acc-order">
+            <div class="acc-order-head">
+              <div class="acc-order-ident">
+                <span class="acc-num">SS-24190</span>
+                <span class="acc-meta">Placed 3 Jun 2026</span>
+              </div>
+              <span class="acc-pill acc-pill--err">Refunded</span>
+            </div>
+            <div class="acc-order-mid">
+              <div class="acc-thumbs">
+                <span class="acc-thumb acc-w1" aria-hidden="true"></span>
+                <span class="acc-thumb acc-w3" aria-hidden="true"></span>
+              </div>
+              <div class="acc-order-sum">
+                <span class="acc-meta">2 items</span>
+                <span class="acc-money">$168.00 AUD</span>
+              </div>
+            </div>
+            <div class="acc-order-actions">
+              <button type="button" class="acc-btn acc-btn--sm">View order</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">Refund receipt</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T382 Order detail
+         ============================================================ -->
+    <article class="tb-pattern" id="T382" data-tid="T382">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T382</span>
+        <div>
+          <h2>Order detail</h2>
+          <p>One order opened out: status, the lines that were shipped, where it went, how it was paid, the totals, and the invoice, reorder and support actions.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="acc-detail acc-card">
+          <header class="acc-detail-head">
+            <div>
+              <p class="acc-eyebrow">Order</p>
+              <h3 class="acc-h acc-detail-num">SS-24817</h3>
+              <p class="acc-meta">Placed 12 Aug 2026 <span class="acc-dot">&bull;</span> Paid 12 Aug 2026</p>
+            </div>
+            <div class="acc-detail-status">
+              <span class="acc-pill acc-pill--info">In transit</span>
+              <span class="acc-meta">Arriving 19 Aug &ndash; 21 Aug</span>
+            </div>
+          </header>
+
+          <ul class="acc-lines">
+            <li class="acc-line">
+              <span class="acc-thumb acc-thumb--lg acc-w1" aria-hidden="true"></span>
+              <div class="acc-line-body">
+                <span class="acc-line-name">Highland Merino Crew</span>
+                <span class="acc-meta">Charcoal <span class="acc-dot">&bull;</span> Size M</span>
+              </div>
+              <span class="acc-meta acc-line-qty">Qty 1</span>
+              <span class="acc-money">$189.00</span>
+            </li>
+            <li class="acc-line">
+              <span class="acc-thumb acc-thumb--lg acc-w2" aria-hidden="true"></span>
+              <div class="acc-line-body">
+                <span class="acc-line-name">Copper Pour-Over Kettle</span>
+                <span class="acc-meta">1.2L <span class="acc-dot">&bull;</span> Brushed</span>
+              </div>
+              <span class="acc-meta acc-line-qty">Qty 1</span>
+              <span class="acc-money">$149.00</span>
+            </li>
+            <li class="acc-line">
+              <span class="acc-thumb acc-thumb--lg acc-w3" aria-hidden="true"></span>
+              <div class="acc-line-body">
+                <span class="acc-line-name">Single Origin Beans, 1kg</span>
+                <span class="acc-meta">Whole bean <span class="acc-dot">&bull;</span> Yirgacheffe</span>
+              </div>
+              <span class="acc-meta acc-line-qty">Qty 3</span>
+              <span class="acc-money">$174.00</span>
+            </li>
+          </ul>
+
+          <div class="acc-detail-grid">
+            <section class="acc-subcard">
+              <h4 class="acc-subcard-title">Delivery address</h4>
+              <address class="acc-address">
+                Amelia Brooks<br>
+                14 Rosslyn Street<br>
+                West Melbourne VIC 3003<br>
+                Australia<br>
+                0412 884 019
+              </address>
+              <p class="acc-meta">Australia Post parcel post, tracking AP4471 9928 003</p>
+            </section>
+
+            <section class="acc-subcard">
+              <h4 class="acc-subcard-title">Payment</h4>
+              <div class="acc-paid">
+                <span class="acc-cardbrand">Visa</span>
+                <span class="acc-mask">&bull;&bull;&bull;&bull; 4291</span>
+              </div>
+              <p class="acc-meta">Charged 12 Aug 2026 at 4:12 pm AEST</p>
+              <p class="acc-meta">Billing address same as delivery</p>
+            </section>
+
+            <section class="acc-subcard">
+              <h4 class="acc-subcard-title">Totals</h4>
+              <dl class="acc-totals">
+                <div class="acc-total-row"><dt>Subtotal</dt><dd>$512.00</dd></div>
+                <div class="acc-total-row"><dt>Delivery</dt><dd>$0.00</dd></div>
+                <div class="acc-total-row"><dt>Gold tier discount</dt><dd>&minus;$100.00</dd></div>
+                <div class="acc-total-row acc-total-row--grand"><dt>Total paid</dt><dd>$412.00 AUD</dd></div>
+                <div class="acc-total-row acc-total-row--note"><dt>Includes GST</dt><dd>$37.45</dd></div>
+              </dl>
+            </section>
+          </div>
+
+          <footer class="acc-detail-actions">
+            <button type="button" class="acc-btn acc-btn--pri">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v10"/><path d="m8 11 4 4 4-4"/><path d="M4 19h16"/></svg>
+              Download invoice
+            </button>
+            <button type="button" class="acc-btn">Reorder these items</button>
+            <button type="button" class="acc-btn acc-btn--ghost">Get help with this order</button>
+          </footer>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T383 Return request
+         ============================================================ -->
+    <article class="tb-pattern" id="T383" data-tid="T383">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T383</span>
+        <div>
+          <h2>Return request</h2>
+          <p>Pick the lines to send back, give each one a reason, choose a refund or an exchange, and see what the refund comes to before you commit. Tick an item to watch the summary update.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <form class="acc-return" id="acc-return-form" novalidate>
+          <div class="acc-return-main">
+            <fieldset class="acc-fieldset">
+              <legend class="acc-legend">Which items are coming back?</legend>
+              <ul class="acc-return-items">
+                <li class="acc-return-item">
+                  <label class="acc-check">
+                    <input type="checkbox" class="acc-return-tick" data-acc-amount="189" data-acc-name="Highland Merino Crew">
+                    <span class="acc-thumb acc-w1" aria-hidden="true"></span>
+                    <span class="acc-return-info">
+                      <span class="acc-line-name">Highland Merino Crew</span>
+                      <span class="acc-meta">Charcoal, size M <span class="acc-dot">&bull;</span> $189.00</span>
+                    </span>
+                  </label>
+                  <div class="acc-field acc-field--inline">
+                    <label for="acc-reason-1">Reason</label>
+                    <div class="acc-select">
+                      <select id="acc-reason-1" name="acc-reason-1">
+                        <option>Too small</option>
+                        <option>Too large</option>
+                        <option>Not as described</option>
+                        <option>Arrived damaged</option>
+                        <option>Changed my mind</option>
+                      </select>
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="acc-return-item">
+                  <label class="acc-check">
+                    <input type="checkbox" class="acc-return-tick" data-acc-amount="149" data-acc-name="Copper Pour-Over Kettle">
+                    <span class="acc-thumb acc-w2" aria-hidden="true"></span>
+                    <span class="acc-return-info">
+                      <span class="acc-line-name">Copper Pour-Over Kettle</span>
+                      <span class="acc-meta">1.2L, brushed <span class="acc-dot">&bull;</span> $149.00</span>
+                    </span>
+                  </label>
+                  <div class="acc-field acc-field--inline">
+                    <label for="acc-reason-2">Reason</label>
+                    <div class="acc-select">
+                      <select id="acc-reason-2" name="acc-reason-2">
+                        <option>Arrived damaged</option>
+                        <option>Not as described</option>
+                        <option>Missing parts</option>
+                        <option>Changed my mind</option>
+                      </select>
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="acc-return-item">
+                  <label class="acc-check">
+                    <input type="checkbox" class="acc-return-tick" data-acc-amount="58" data-acc-name="Single Origin Beans, 1kg">
+                    <span class="acc-thumb acc-w3" aria-hidden="true"></span>
+                    <span class="acc-return-info">
+                      <span class="acc-line-name">Single Origin Beans, 1kg</span>
+                      <span class="acc-meta">Whole bean <span class="acc-dot">&bull;</span> $58.00</span>
+                    </span>
+                  </label>
+                  <div class="acc-field acc-field--inline">
+                    <label for="acc-reason-3">Reason</label>
+                    <div class="acc-select">
+                      <select id="acc-reason-3" name="acc-reason-3">
+                        <option>Wrong item sent</option>
+                        <option>Arrived damaged</option>
+                        <option>Changed my mind</option>
+                      </select>
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="acc-fieldset">
+              <legend class="acc-legend">What would you like instead?</legend>
+              <div class="acc-radios">
+                <label class="acc-radio">
+                  <input type="radio" name="acc-return-outcome" value="refund" checked>
+                  <span>
+                    <strong>Refund to my card</strong>
+                    <span class="acc-meta">Back on the Visa ending 4291, five to seven business days after we receive the parcel.</span>
+                  </span>
+                </label>
+                <label class="acc-radio">
+                  <input type="radio" name="acc-return-outcome" value="exchange">
+                  <span>
+                    <strong>Exchange for another size or colour</strong>
+                    <span class="acc-meta">We hold the replacement for you and ship it as soon as the return is scanned.</span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="acc-field">
+              <label for="acc-return-notes">Anything we should know? (optional)</label>
+              <textarea id="acc-return-notes" name="acc-return-notes" rows="3" placeholder="The knit is lovely, the sleeves are just a bit short on me."></textarea>
+            </div>
+          </div>
+
+          <aside class="acc-return-side acc-subcard">
+            <h4 class="acc-subcard-title">Return summary</h4>
+            <p class="acc-meta" id="acc-return-count">No items selected yet.</p>
+            <ul class="acc-return-list" id="acc-return-list"></ul>
+            <dl class="acc-totals">
+              <div class="acc-total-row"><dt>Items</dt><dd id="acc-return-items-total">$0.00</dd></div>
+              <div class="acc-total-row"><dt>Return postage</dt><dd>Free</dd></div>
+              <div class="acc-total-row acc-total-row--grand"><dt>Estimated refund</dt><dd id="acc-return-refund">$0.00 AUD</dd></div>
+            </dl>
+            <button type="submit" class="acc-btn acc-btn--pri acc-btn--full">Request return</button>
+            <p class="acc-note acc-note--ok" id="acc-return-done" hidden>Return requested. Your prepaid label is on its way by email.</p>
+            <p class="acc-meta">Returns are open for 30 days from delivery. Items come back unworn with tags on.</p>
+          </aside>
+        </form>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T384 Wishlist
+         ============================================================ -->
+    <article class="tb-pattern" id="T384" data-tid="T384">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T384</span>
+        <div>
+          <h2>Wishlist</h2>
+          <p>Saved products with price, an availability line, a move-to-cart button and a remove action. Remove all four to see the empty state.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="acc-wishlist" id="acc-wishlist">
+          <article class="acc-wish acc-card">
+            <span class="acc-thumb acc-thumb--wide acc-w1" aria-hidden="true"></span>
+            <div class="acc-wish-body">
+              <h4 class="acc-wish-name">Stonewash Linen Sheet Set, Queen</h4>
+              <span class="acc-money">$329.00 AUD</span>
+              <span class="acc-pill acc-pill--ok">In stock</span>
+            </div>
+            <div class="acc-wish-actions">
+              <button type="button" class="acc-btn acc-btn--pri acc-btn--sm">Move to cart</button>
+              <button type="button" class="acc-iconbtn acc-wish-remove" aria-label="Remove Stonewash Linen Sheet Set from wishlist">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M9 7V5h6v2"/><path d="M6.5 7 7.5 19h9L17.5 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="acc-wish acc-card">
+            <span class="acc-thumb acc-thumb--wide acc-w2" aria-hidden="true"></span>
+            <div class="acc-wish-body">
+              <h4 class="acc-wish-name">Wool Throw, Charcoal</h4>
+              <span class="acc-money">$215.00 AUD</span>
+              <span class="acc-pill acc-pill--warn">Out of stock, back late September</span>
+            </div>
+            <div class="acc-wish-actions">
+              <button type="button" class="acc-btn acc-btn--sm" disabled>Move to cart</button>
+              <button type="button" class="acc-iconbtn acc-wish-remove" aria-label="Remove Wool Throw from wishlist">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M9 7V5h6v2"/><path d="M6.5 7 7.5 19h9L17.5 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="acc-wish acc-card">
+            <span class="acc-thumb acc-thumb--wide acc-w3" aria-hidden="true"></span>
+            <div class="acc-wish-body">
+              <h4 class="acc-wish-name">Ceramic Mug Set of 4</h4>
+              <span class="acc-money">$96.00 AUD</span>
+              <span class="acc-pill acc-pill--ok">In stock</span>
+            </div>
+            <div class="acc-wish-actions">
+              <button type="button" class="acc-btn acc-btn--pri acc-btn--sm">Move to cart</button>
+              <button type="button" class="acc-iconbtn acc-wish-remove" aria-label="Remove Ceramic Mug Set from wishlist">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M9 7V5h6v2"/><path d="M6.5 7 7.5 19h9L17.5 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="acc-wish acc-card">
+            <span class="acc-thumb acc-thumb--wide acc-w1" aria-hidden="true"></span>
+            <div class="acc-wish-body">
+              <h4 class="acc-wish-name">Copper Pour-Over Kettle</h4>
+              <span class="acc-money">$149.00 AUD</span>
+              <span class="acc-pill acc-pill--ok">In stock, 3 left</span>
+            </div>
+            <div class="acc-wish-actions">
+              <button type="button" class="acc-btn acc-btn--pri acc-btn--sm">Move to cart</button>
+              <button type="button" class="acc-iconbtn acc-wish-remove" aria-label="Remove Copper Pour-Over Kettle from wishlist">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M9 7V5h6v2"/><path d="M6.5 7 7.5 19h9L17.5 7"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="acc-empty acc-card" id="acc-wishlist-empty" hidden>
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.7-7.5-9.6A4.4 4.4 0 0 1 12 7.2a4.4 4.4 0 0 1 7.5 3.2C19.5 15.3 12 20 12 20Z"/></svg>
+          <h4 class="acc-h acc-empty-title">Nothing saved yet</h4>
+          <p class="acc-empty-copy">Tap the heart on any product and it will wait for you here. We will tell you if the price drops or it comes back in stock.</p>
+          <div class="acc-empty-actions">
+            <button type="button" class="acc-btn acc-btn--pri">Browse the shop</button>
+            <button type="button" class="acc-btn acc-btn--ghost" id="acc-wishlist-restore">Restore the demo items</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T385 Address book
+         ============================================================ -->
+    <article class="tb-pattern" id="T385" data-tid="T385">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T385</span>
+        <div>
+          <h2>Address book</h2>
+          <p>Saved addresses as cards with a default badge, edit and delete. Delete asks in an inline confirm row rather than a browser dialog.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="acc-addresses" id="acc-addresses">
+          <article class="acc-addr acc-card">
+            <header class="acc-addr-head">
+              <h4 class="acc-addr-label">Home</h4>
+              <span class="acc-badge">Default</span>
+            </header>
+            <address class="acc-address">
+              Amelia Brooks<br>
+              14 Rosslyn Street<br>
+              West Melbourne VIC 3003<br>
+              0412 884 019
+            </address>
+            <div class="acc-addr-actions">
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 20 4-1 11-11-3-3L5 16Z"/></svg>
+                Edit
+              </button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-addr-del">Delete</button>
+            </div>
+            <div class="acc-confirm" hidden>
+              <span class="acc-confirm-text">Delete this address?</span>
+              <div class="acc-confirm-actions">
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--danger acc-confirm-yes">Yes, delete</button>
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-confirm-no">Keep it</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="acc-addr acc-card">
+            <header class="acc-addr-head">
+              <h4 class="acc-addr-label">Work</h4>
+            </header>
+            <address class="acc-address">
+              Amelia Brooks, Level 6<br>
+              271 Collins Street<br>
+              Melbourne VIC 3000<br>
+              03 9042 7781
+            </address>
+            <div class="acc-addr-actions">
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 20 4-1 11-11-3-3L5 16Z"/></svg>
+                Edit
+              </button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-addr-del">Delete</button>
+            </div>
+            <div class="acc-confirm" hidden>
+              <span class="acc-confirm-text">Delete this address?</span>
+              <div class="acc-confirm-actions">
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--danger acc-confirm-yes">Yes, delete</button>
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-confirm-no">Keep it</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="acc-addr acc-card">
+            <header class="acc-addr-head">
+              <h4 class="acc-addr-label">Mum and Dad</h4>
+            </header>
+            <address class="acc-address">
+              Robert Brooks<br>
+              Unit 3, 82 Ferry Road<br>
+              Southport QLD 4215<br>
+              0407 226 118
+            </address>
+            <div class="acc-addr-actions">
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 20 4-1 11-11-3-3L5 16Z"/></svg>
+                Edit
+              </button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-addr-del">Delete</button>
+            </div>
+            <div class="acc-confirm" hidden>
+              <span class="acc-confirm-text">Delete this address?</span>
+              <div class="acc-confirm-actions">
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--danger acc-confirm-yes">Yes, delete</button>
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-confirm-no">Keep it</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <button type="button" class="acc-btn acc-add-toggle" id="acc-addr-toggle" aria-expanded="false" aria-controls="acc-addr-form">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+          Add an address
+        </button>
+
+        <form class="acc-addr-form acc-card" id="acc-addr-form" novalidate hidden>
+          <h4 class="acc-subcard-title">New address</h4>
+          <div class="acc-form-grid">
+            <div class="acc-field acc-span-2">
+              <label for="acc-addr-name">Full name</label>
+              <input type="text" id="acc-addr-name" name="acc-addr-name" autocomplete="name" placeholder="Amelia Brooks">
+            </div>
+            <div class="acc-field acc-span-2">
+              <label for="acc-addr-street">Street address</label>
+              <input type="text" id="acc-addr-street" name="acc-addr-street" autocomplete="address-line1" placeholder="14 Rosslyn Street">
+            </div>
+            <div class="acc-field acc-span-2">
+              <label for="acc-addr-street2">Apartment, unit or level (optional)</label>
+              <input type="text" id="acc-addr-street2" name="acc-addr-street2" autocomplete="address-line2" placeholder="Unit 3">
+            </div>
+            <div class="acc-field">
+              <label for="acc-addr-suburb">Suburb</label>
+              <input type="text" id="acc-addr-suburb" name="acc-addr-suburb" autocomplete="address-level2" placeholder="West Melbourne">
+            </div>
+            <div class="acc-field">
+              <label for="acc-addr-state">State or territory</label>
+              <div class="acc-select">
+                <select id="acc-addr-state" name="acc-addr-state" autocomplete="address-level1">
+                  <option>ACT</option>
+                  <option>NSW</option>
+                  <option>NT</option>
+                  <option>QLD</option>
+                  <option>SA</option>
+                  <option>TAS</option>
+                  <option selected>VIC</option>
+                  <option>WA</option>
+                </select>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+            <div class="acc-field">
+              <label for="acc-addr-post">Postcode</label>
+              <input type="text" id="acc-addr-post" name="acc-addr-post" autocomplete="postal-code" inputmode="numeric" maxlength="4" placeholder="3003">
+            </div>
+            <div class="acc-field">
+              <label for="acc-addr-phone">Phone</label>
+              <input type="tel" id="acc-addr-phone" name="acc-addr-phone" autocomplete="tel" placeholder="0412 884 019">
+            </div>
+            <label class="acc-check acc-span-2">
+              <input type="checkbox" name="acc-addr-default">
+              <span class="acc-return-info"><span class="acc-line-name">Make this my default delivery address</span></span>
+            </label>
+          </div>
+          <div class="acc-form-actions">
+            <button type="submit" class="acc-btn acc-btn--pri">Save address</button>
+            <button type="button" class="acc-btn acc-btn--ghost" id="acc-addr-cancel">Cancel</button>
+          </div>
+          <p class="acc-note acc-note--ok" id="acc-addr-saved" hidden>Address saved to your book.</p>
+        </form>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T386 Payment methods
+         ============================================================ -->
+    <article class="tb-pattern" id="T386" data-tid="T386">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T386</span>
+        <div>
+          <h2>Payment methods</h2>
+          <p>Saved cards as rows: brand, the last four digits, expiry, a default badge and an expired state. Only masked digits are ever shown.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <ul class="acc-cards" id="acc-cards">
+          <li class="acc-cardrow acc-card">
+            <span class="acc-cardicon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>
+            </span>
+            <div class="acc-cardrow-body">
+              <span class="acc-cardrow-top">
+                <span class="acc-cardbrand">Visa</span>
+                <span class="acc-mask">&bull;&bull;&bull;&bull; 4291</span>
+                <span class="acc-badge">Default</span>
+              </span>
+              <span class="acc-meta">Expires 08/29 <span class="acc-dot">&bull;</span> Amelia Brooks</span>
+            </div>
+            <div class="acc-cardrow-actions">
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost" disabled>Default</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-card-del">Remove</button>
+            </div>
+            <div class="acc-confirm" hidden>
+              <span class="acc-confirm-text">Remove the Visa ending 4291?</span>
+              <div class="acc-confirm-actions">
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--danger acc-confirm-yes">Yes, remove</button>
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-confirm-no">Keep it</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="acc-cardrow acc-card">
+            <span class="acc-cardicon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>
+            </span>
+            <div class="acc-cardrow-body">
+              <span class="acc-cardrow-top">
+                <span class="acc-cardbrand">Mastercard</span>
+                <span class="acc-mask">&bull;&bull;&bull;&bull; 7714</span>
+              </span>
+              <span class="acc-meta">Expires 02/28 <span class="acc-dot">&bull;</span> Amelia Brooks</span>
+            </div>
+            <div class="acc-cardrow-actions">
+              <button type="button" class="acc-btn acc-btn--sm">Set as default</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-card-del">Remove</button>
+            </div>
+            <div class="acc-confirm" hidden>
+              <span class="acc-confirm-text">Remove the Mastercard ending 7714?</span>
+              <div class="acc-confirm-actions">
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--danger acc-confirm-yes">Yes, remove</button>
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-confirm-no">Keep it</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="acc-cardrow acc-card is-expired">
+            <span class="acc-cardicon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>
+            </span>
+            <div class="acc-cardrow-body">
+              <span class="acc-cardrow-top">
+                <span class="acc-cardbrand">American Express</span>
+                <span class="acc-mask">&bull;&bull;&bull;&bull; 1008</span>
+                <span class="acc-pill acc-pill--err">Expired</span>
+              </span>
+              <span class="acc-meta">Expired 04/26 <span class="acc-dot">&bull;</span> Update it before your next subscription delivery</span>
+            </div>
+            <div class="acc-cardrow-actions">
+              <button type="button" class="acc-btn acc-btn--sm">Update card</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-card-del">Remove</button>
+            </div>
+            <div class="acc-confirm" hidden>
+              <span class="acc-confirm-text">Remove the American Express ending 1008?</span>
+              <div class="acc-confirm-actions">
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--danger acc-confirm-yes">Yes, remove</button>
+                <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost acc-confirm-no">Keep it</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <button type="button" class="acc-btn acc-add-toggle" id="acc-card-toggle" aria-expanded="false" aria-controls="acc-card-form">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+          Add a card
+        </button>
+
+        <form class="acc-addr-form acc-card" id="acc-card-form" novalidate hidden>
+          <h4 class="acc-subcard-title">Add a card</h4>
+          <div class="acc-form-grid">
+            <div class="acc-field acc-span-2">
+              <label for="acc-cc-name">Name on card</label>
+              <input type="text" id="acc-cc-name" name="acc-cc-name" autocomplete="cc-name" placeholder="A Brooks">
+            </div>
+            <div class="acc-field acc-span-2">
+              <label for="acc-cc-number">Card number</label>
+              <input type="text" id="acc-cc-number" name="acc-cc-number" autocomplete="cc-number" inputmode="numeric" placeholder="Card number">
+            </div>
+            <div class="acc-field">
+              <label for="acc-cc-exp">Expiry</label>
+              <input type="text" id="acc-cc-exp" name="acc-cc-exp" autocomplete="cc-exp" inputmode="numeric" placeholder="MM/YY">
+            </div>
+            <div class="acc-field">
+              <label for="acc-cc-post">Billing postcode</label>
+              <input type="text" id="acc-cc-post" name="acc-cc-post" autocomplete="postal-code" inputmode="numeric" maxlength="4" placeholder="3003">
+            </div>
+          </div>
+          <p class="acc-note acc-note--info">The security code is collected by our payment provider in its own hosted field and is never stored on this site. We keep the brand and the last four digits so you can tell your cards apart.</p>
+          <div class="acc-form-actions">
+            <button type="submit" class="acc-btn acc-btn--pri">Save card</button>
+            <button type="button" class="acc-btn acc-btn--ghost" id="acc-card-cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T387 Subscription manager
+         ============================================================ -->
+    <article class="tb-pattern" id="T387" data-tid="T387">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T387</span>
+        <div>
+          <h2>Subscription manager</h2>
+          <p>An active repeat order: the product, a frequency select that moves the next delivery date, and skip, pause and cancel. Cancel confirms inline.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <article class="acc-sub acc-card">
+          <header class="acc-sub-head">
+            <div class="acc-sub-ident">
+              <span class="acc-thumb acc-thumb--lg acc-w3" aria-hidden="true"></span>
+              <div>
+                <h4 class="acc-h acc-sub-name">Single Origin Beans, 1kg</h4>
+                <p class="acc-meta">Whole bean, Yirgacheffe <span class="acc-dot">&bull;</span> $58.00 per delivery, save 10 per cent</p>
+                <p class="acc-num">SUB-3092</p>
+              </div>
+            </div>
+            <span class="acc-pill acc-pill--ok" id="acc-sub-status">Active</span>
+          </header>
+
+          <div class="acc-sub-grid">
+            <div class="acc-field">
+              <label for="acc-sub-freq">Delivery frequency</label>
+              <div class="acc-select">
+                <select id="acc-sub-freq" name="acc-sub-freq">
+                  <option value="14">Every 2 weeks</option>
+                  <option value="28" selected>Every 4 weeks</option>
+                  <option value="56">Every 8 weeks</option>
+                  <option value="84">Every 12 weeks</option>
+                </select>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+            <div class="acc-subcard acc-sub-next">
+              <span class="acc-eyebrow">Next delivery</span>
+              <span class="acc-sub-date" id="acc-sub-date">9 September 2026</span>
+              <span class="acc-meta" id="acc-sub-note">Changes made before 2 September apply to this delivery.</span>
+            </div>
+            <div class="acc-subcard acc-sub-next">
+              <span class="acc-eyebrow">Delivering to</span>
+              <address class="acc-address">14 Rosslyn Street<br>West Melbourne VIC 3003</address>
+              <span class="acc-meta">Paid with Visa <span class="acc-mask">&bull;&bull;&bull;&bull; 4291</span></span>
+            </div>
+          </div>
+
+          <footer class="acc-sub-actions">
+            <button type="button" class="acc-btn" id="acc-sub-skip">Skip next delivery</button>
+            <button type="button" class="acc-btn" id="acc-sub-pause">Pause subscription</button>
+            <button type="button" class="acc-btn acc-btn--ghost" id="acc-sub-cancel">Cancel subscription</button>
+          </footer>
+
+          <div class="acc-confirm" id="acc-sub-confirm" hidden>
+            <span class="acc-confirm-text">Cancel this subscription? Your 10 per cent repeat discount stops straight away.</span>
+            <div class="acc-confirm-actions">
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--danger" id="acc-sub-confirm-yes">Yes, cancel it</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost" id="acc-sub-confirm-no">Keep my subscription</button>
+            </div>
+          </div>
+
+          <p class="acc-note acc-note--info" id="acc-sub-msg" hidden></p>
+        </article>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T388 Rewards panel
+         ============================================================ -->
+    <article class="tb-pattern" id="T388" data-tid="T388">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T388</span>
+        <div>
+          <h2>Rewards panel</h2>
+          <p>Points balance, a progress bar to the next tier, a redeem row, and the last few points movements so the balance is never a mystery.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="acc-rewards">
+          <section class="acc-card acc-reward-main">
+            <p class="acc-eyebrow">Points balance</p>
+            <p class="acc-points"><span id="acc-points-value">1,240</span> <span class="acc-points-unit">points</span></p>
+            <p class="acc-meta">Worth $62.00 in store credit. Points expire 24 months after they are earned.</p>
+
+            <div class="acc-progress">
+              <div class="acc-progress-top">
+                <span class="acc-progress-label">Gold tier</span>
+                <span class="acc-progress-label">Platinum at 2,000</span>
+              </div>
+              <div class="acc-progress-track">
+                <span class="acc-progress-fill" style="width:62%"></span>
+              </div>
+              <p class="acc-meta">760 points to go. Platinum adds free express delivery and early access to new drops.</p>
+            </div>
+
+            <div class="acc-redeem">
+              <div class="acc-field">
+                <label for="acc-redeem-pick">Redeem points</label>
+                <div class="acc-select">
+                  <select id="acc-redeem-pick" name="acc-redeem-pick">
+                    <option value="200">200 points: $10 store credit</option>
+                    <option value="500">500 points: $25 store credit</option>
+                    <option value="300">300 points: free express delivery</option>
+                    <option value="1000">1,000 points: $50 store credit</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </div>
+              </div>
+              <button type="button" class="acc-btn acc-btn--pri" id="acc-redeem-btn">Redeem</button>
+            </div>
+            <p class="acc-note acc-note--ok" id="acc-redeem-msg" hidden></p>
+          </section>
+
+          <section class="acc-card acc-reward-ledger">
+            <h4 class="acc-subcard-title">Recent activity</h4>
+            <ul class="acc-ledger">
+              <li class="acc-ledger-row">
+                <span class="acc-ledger-body">
+                  <span class="acc-ledger-text">Order SS-24817</span>
+                  <span class="acc-meta">12 Aug 2026</span>
+                </span>
+                <span class="acc-ledger-amt acc-ledger-amt--up">+412</span>
+              </li>
+              <li class="acc-ledger-row">
+                <span class="acc-ledger-body">
+                  <span class="acc-ledger-text">Photo review, Merino Crew</span>
+                  <span class="acc-meta">6 Aug 2026</span>
+                </span>
+                <span class="acc-ledger-amt acc-ledger-amt--up">+50</span>
+              </li>
+              <li class="acc-ledger-row">
+                <span class="acc-ledger-body">
+                  <span class="acc-ledger-text">Redeemed $25 store credit</span>
+                  <span class="acc-meta">30 Jul 2026</span>
+                </span>
+                <span class="acc-ledger-amt acc-ledger-amt--down">&minus;500</span>
+              </li>
+              <li class="acc-ledger-row">
+                <span class="acc-ledger-body">
+                  <span class="acc-ledger-text">Order SS-24603</span>
+                  <span class="acc-meta">28 Jul 2026</span>
+                </span>
+                <span class="acc-ledger-amt acc-ledger-amt--up">+245</span>
+              </li>
+              <li class="acc-ledger-row">
+                <span class="acc-ledger-body">
+                  <span class="acc-ledger-text">Birthday bonus</span>
+                  <span class="acc-meta">14 Jul 2026</span>
+                </span>
+                <span class="acc-ledger-amt acc-ledger-amt--up">+250</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T389 Sign in and register
+         ============================================================ -->
+    <article class="tb-pattern" id="T389" data-tid="T389">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T389</span>
+        <div>
+          <h2>Sign in and register</h2>
+          <p>One panel, two tabs. Sign in on the left tab, create an account on the right, with a forgot-password link and a guest path out the bottom.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="acc-auth acc-card">
+          <div class="acc-tabs" role="tablist" aria-label="Sign in or create an account">
+            <button type="button" class="acc-tab is-active" role="tab" id="acc-tab-signin" aria-selected="true" aria-controls="acc-panel-signin">Sign in</button>
+            <button type="button" class="acc-tab" role="tab" id="acc-tab-register" aria-selected="false" aria-controls="acc-panel-register" tabindex="-1">Create account</button>
+          </div>
+
+          <form class="acc-authpanel" id="acc-panel-signin" role="tabpanel" aria-labelledby="acc-tab-signin" novalidate>
+            <div class="acc-field">
+              <label for="acc-si-email">Email</label>
+              <input type="email" id="acc-si-email" name="acc-si-email" autocomplete="email" placeholder="you@example.com">
+            </div>
+            <div class="acc-field">
+              <label for="acc-si-pass">Password</label>
+              <input type="password" id="acc-si-pass" name="acc-si-pass" autocomplete="current-password" placeholder="Your password">
+            </div>
+            <div class="acc-auth-row">
+              <label class="acc-check acc-check--inline">
+                <input type="checkbox" name="acc-si-remember" checked>
+                <span>Keep me signed in</span>
+              </label>
+              <a class="acc-link" href="#T390">Forgot your password?</a>
+            </div>
+            <button type="submit" class="acc-btn acc-btn--pri acc-btn--full">Sign in</button>
+            <p class="acc-note acc-note--info" id="acc-si-msg" hidden>This is a demo panel. Nothing was sent anywhere.</p>
+          </form>
+
+          <form class="acc-authpanel" id="acc-panel-register" role="tabpanel" aria-labelledby="acc-tab-register" novalidate hidden>
+            <div class="acc-field">
+              <label for="acc-rg-name">Full name</label>
+              <input type="text" id="acc-rg-name" name="acc-rg-name" autocomplete="name" placeholder="Amelia Brooks">
+            </div>
+            <div class="acc-field">
+              <label for="acc-rg-email">Email</label>
+              <input type="email" id="acc-rg-email" name="acc-rg-email" autocomplete="email" placeholder="you@example.com">
+            </div>
+            <div class="acc-field">
+              <label for="acc-rg-pass">Choose a password</label>
+              <input type="password" id="acc-rg-pass" name="acc-rg-pass" autocomplete="new-password" placeholder="At least 8 characters">
+            </div>
+            <label class="acc-check acc-check--inline">
+              <input type="checkbox" name="acc-rg-news">
+              <span>Send me new arrivals and the odd restock note. No more than twice a month.</span>
+            </label>
+            <button type="submit" class="acc-btn acc-btn--pri acc-btn--full">Create account</button>
+            <p class="acc-meta">Creating an account means you agree to our terms and privacy policy.</p>
+            <p class="acc-note acc-note--info" id="acc-rg-msg" hidden>This is a demo panel. Nothing was sent anywhere.</p>
+          </form>
+
+          <footer class="acc-auth-guest">
+            <span class="acc-meta">In a hurry?</span>
+            <button type="button" class="acc-btn acc-btn--ghost">Continue as a guest</button>
+          </footer>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T390 Password reset
+         ============================================================ -->
+    <article class="tb-pattern" id="T390" data-tid="T390">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T390</span>
+        <div>
+          <h2>Password reset</h2>
+          <p>Both halves of the reset: the request form with its check-your-email state, and the set-new-password form with a strength meter and a live match check.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="acc-reset">
+          <section class="acc-card acc-reset-col">
+            <h4 class="acc-subcard-title">Step 1: request a link</h4>
+
+            <form class="acc-reset-request" id="acc-reset-form" novalidate>
+              <p class="acc-pane-copy">Enter the email on your account and we will send a link that stays valid for 60 minutes.</p>
+              <div class="acc-field">
+                <label for="acc-reset-email">Email</label>
+                <input type="email" id="acc-reset-email" name="acc-reset-email" autocomplete="email" value="amelia.brooks@example.com">
+              </div>
+              <button type="submit" class="acc-btn acc-btn--pri acc-btn--full">Send reset link</button>
+            </form>
+
+            <div class="acc-reset-sent" id="acc-reset-sent" hidden>
+              <span class="acc-tick" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4 10-10"/></svg>
+              </span>
+              <h5 class="acc-h acc-reset-title">Check your email</h5>
+              <p class="acc-pane-copy">If an account uses that address, a reset link is on its way. It expires in 60 minutes, and it can only be used once.</p>
+              <p class="acc-meta">Nothing arrived? Look in spam, then try again in a couple of minutes.</p>
+              <button type="button" class="acc-btn acc-btn--ghost" id="acc-reset-again">Use a different email</button>
+            </div>
+          </section>
+
+          <section class="acc-card acc-reset-col">
+            <h4 class="acc-subcard-title">Step 2: set a new password</h4>
+            <form class="acc-reset-new" id="acc-newpass-form" novalidate>
+              <div class="acc-field">
+                <label for="acc-np-pass">New password</label>
+                <input type="password" id="acc-np-pass" name="acc-np-pass" autocomplete="new-password" placeholder="At least 8 characters">
+              </div>
+
+              <div class="acc-strength" aria-live="polite">
+                <div class="acc-strength-bars">
+                  <span class="acc-strength-bar" data-acc-seg="1"></span>
+                  <span class="acc-strength-bar" data-acc-seg="2"></span>
+                  <span class="acc-strength-bar" data-acc-seg="3"></span>
+                  <span class="acc-strength-bar" data-acc-seg="4"></span>
+                </div>
+                <p class="acc-strength-label" id="acc-strength-label">Start typing to see how strong it is.</p>
+              </div>
+
+              <div class="acc-field">
+                <label for="acc-np-confirm">Confirm new password</label>
+                <input type="password" id="acc-np-confirm" name="acc-np-confirm" autocomplete="new-password" placeholder="Type it once more">
+              </div>
+              <p class="acc-match" id="acc-match" aria-live="polite"></p>
+
+              <button type="submit" class="acc-btn acc-btn--pri acc-btn--full">Save new password</button>
+              <p class="acc-note acc-note--ok" id="acc-np-msg" hidden>Password updated. You are signed in on this device only.</p>
+              <p class="acc-meta">Use eight characters or more, mixing letters, numbers and a symbol. A passphrase of three unrelated words works well.</p>
+            </form>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T391 Guest order lookup
+         ============================================================ -->
+    <article class="tb-pattern" id="T391" data-tid="T391">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T391</span>
+        <div>
+          <h2>Guest order lookup</h2>
+          <p>Order number plus email for people who checked out without an account. Submit as-is to find the order, or change a field to see the not-found state.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="acc-lookup acc-card">
+          <div class="acc-lookup-intro">
+            <span class="acc-lookup-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg>
+            </span>
+            <div>
+              <h4 class="acc-h acc-lookup-title">Track a guest order</h4>
+              <p class="acc-pane-copy">No account needed. Your order number is at the top of the confirmation email, in the form SS-00000.</p>
+            </div>
+          </div>
+
+          <form class="acc-lookup-form" id="acc-lookup-form" novalidate>
+            <div class="acc-field">
+              <label for="acc-lookup-order">Order number</label>
+              <input type="text" id="acc-lookup-order" name="acc-lookup-order" autocomplete="off" spellcheck="false" value="SS-24603">
+            </div>
+            <div class="acc-field">
+              <label for="acc-lookup-email">Email used at checkout</label>
+              <input type="email" id="acc-lookup-email" name="acc-lookup-email" autocomplete="email" value="amelia.brooks@example.com">
+            </div>
+            <button type="submit" class="acc-btn acc-btn--pri">Find my order</button>
+          </form>
+
+          <div class="acc-lookup-err" id="acc-lookup-err" hidden>
+            <span class="acc-lookup-erricon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>
+            </span>
+            <div>
+              <p class="acc-lookup-errtitle">We could not match that order</p>
+              <p class="acc-meta">Check the number and the email against your confirmation. Orders older than 24 months are archived, and our team can pull those up for you.</p>
+            </div>
+          </div>
+
+          <div class="acc-lookup-hit" id="acc-lookup-hit" hidden>
+            <div class="acc-order-head">
+              <div class="acc-order-ident">
+                <span class="acc-num">SS-24603</span>
+                <span class="acc-meta">Placed 28 Jul 2026 <span class="acc-dot">&bull;</span> 2 items <span class="acc-dot">&bull;</span> $245.00 AUD</span>
+              </div>
+              <span class="acc-pill acc-pill--ok">Delivered</span>
+            </div>
+            <p class="acc-meta">Left with the resident at 11:42 am on 31 Jul 2026, West Melbourne VIC 3003.</p>
+            <div class="acc-order-actions">
+              <button type="button" class="acc-btn acc-btn--sm">View full detail</button>
+              <button type="button" class="acc-btn acc-btn--sm acc-btn--ghost">Start a return</button>
+            </div>
+          </div>
+
+          <p class="acc-meta acc-lookup-help">Prefer an account? <a class="acc-link" href="#T389">Create one</a> and every guest order on this email is linked to it.</p>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <style>
+    /* ============================================================
+       Account and post-purchase, T380 to T391. Prefix: acc-
+       Every colour on this page is a token, so the whole set
+       reskins with the theme switch.
+       ============================================================ */
+
+    /* ---- shared atoms ---- */
+    .acc-card {
+      background: var(--bg-card);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
+    }
+    .acc-h { font-family: var(--font-display); font-weight: var(--heading-weight); color: var(--text); margin: 0; }
+    .acc-eyebrow {
+      font-family: var(--font-eyebrow); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
+      color: var(--text-4); margin: 0 0 6px;
+    }
+    .acc-meta { font-family: var(--font-ui); font-size: 12px; line-height: 1.5; color: var(--text-4); }
+    .acc-dot { color: var(--border-3); padding: 0 2px; }
+    .acc-num { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em; color: var(--text-2); }
+    .acc-money { font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
+    .acc-line-name { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--text); }
+    .acc-pane-copy { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0 0 14px; max-width: 62ch; }
+    .acc-link { color: var(--accent); font-family: var(--font-ui); font-size: 13px; text-decoration: underline; }
+
+    /* status pills: the status colour always sits on its own wash */
+    .acc-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--font-ui); font-size: 11px; font-weight: 600;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      padding: 5px 11px; border-radius: var(--radius-pill);
+      border: var(--line-weight) solid transparent; white-space: nowrap;
+    }
+    .acc-pill--ok   { background: var(--ok-wash);   color: var(--ok);   border-color: color-mix(in srgb, var(--ok) 38%, transparent); }
+    .acc-pill--warn { background: var(--warn-wash); color: var(--warn); border-color: color-mix(in srgb, var(--warn) 38%, transparent); }
+    .acc-pill--err  { background: var(--err-wash);  color: var(--err);  border-color: color-mix(in srgb, var(--err) 38%, transparent); }
+    .acc-pill--info { background: var(--info-wash); color: var(--info); border-color: color-mix(in srgb, var(--info) 38%, transparent); }
+
+    .acc-badge {
+      display: inline-flex; align-items: center;
+      font-family: var(--font-ui); font-size: 10px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 4px 9px; border-radius: var(--radius-pill);
+      background: var(--accent-wash); color: var(--accent);
+      border: var(--line-weight) solid var(--accent-line);
+    }
+
+    /* ---- buttons ---- */
+    .acc-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 0 18px;
+      font-family: var(--font-ui); font-size: 13px; font-weight: var(--button-weight);
+      letter-spacing: var(--button-tracking); text-transform: var(--button-transform);
+      border-radius: var(--radius-btn, var(--radius-sm));
+      border: var(--line-weight) solid var(--border-2);
+      background: var(--bg-2); color: var(--text);
+      cursor: pointer; text-align: center;
+    }
+    .acc-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+    .acc-btn:disabled { opacity: 0.45; cursor: default; }
+    .acc-btn--pri { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+    .acc-btn--pri:hover:not(:disabled) { background: var(--accent-hover); border-color: var(--accent-hover); color: var(--accent-ink); }
+    .acc-btn--ghost { background: transparent; color: var(--text-2); }
+    .acc-btn--danger {
+      background: var(--err-wash); color: var(--err);
+      border-color: color-mix(in srgb, var(--err) 45%, transparent);
+    }
+    .acc-btn--danger:hover:not(:disabled) { border-color: var(--err); color: var(--err); }
+    .acc-btn--sm { padding: 0 14px; font-size: 12px; }
+    .acc-btn--full { width: 100%; }
+
+    .acc-iconbtn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 48px; height: 48px; flex: none;
+      background: transparent; color: var(--text-3);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-btn, var(--radius-sm));
+      cursor: pointer;
+    }
+    .acc-iconbtn:hover { color: var(--err); border-color: color-mix(in srgb, var(--err) 45%, transparent); }
+
+    .acc-btn:focus-visible,
+    .acc-iconbtn:focus-visible,
+    .acc-navlink:focus-visible,
+    .acc-tab:focus-visible,
+    .acc-link:focus-visible,
+    .acc-field input:focus-visible,
+    .acc-field select:focus-visible,
+    .acc-field textarea:focus-visible,
+    .acc-check input:focus-visible,
+    .acc-radio input:focus-visible {
+      outline: var(--focus-ring);
+      outline-offset: 2px;
+    }
+
+    /* ---- fields ---- */
+    .acc-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    .acc-field > label {
+      font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.03em; color: var(--text-3);
+    }
+    .acc-field input[type="text"],
+    .acc-field input[type="email"],
+    .acc-field input[type="tel"],
+    .acc-field input[type="password"],
+    .acc-field textarea,
+    .acc-field select {
+      width: 100%; min-height: 48px;
+      font-family: var(--font-body); font-size: 14px; color: var(--text);
+      background: var(--bg-3);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+    }
+    .acc-field textarea { min-height: 0; resize: vertical; line-height: 1.55; }
+    .acc-field input:focus, .acc-field textarea:focus, .acc-field select:focus { outline: none; border-color: var(--accent); }
+    .acc-field input::placeholder, .acc-field textarea::placeholder { color: var(--text-4); }
+    .acc-select { position: relative; }
+    .acc-select select { appearance: none; padding-right: 40px; cursor: pointer; }
+    .acc-select svg { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-3); pointer-events: none; }
+
+    .acc-fieldset { border: none; margin: 0 0 22px; padding: 0; }
+    .acc-legend {
+      font-family: var(--font-display); font-size: 15px; font-weight: var(--heading-weight);
+      color: var(--text); padding: 0; margin-bottom: 12px;
+    }
+    .acc-check {
+      display: flex; align-items: center; gap: 12px; cursor: pointer;
+      font-family: var(--font-body); font-size: 14px; color: var(--text-2); min-height: 48px;
+    }
+    .acc-check--inline { min-height: 44px; }
+    .acc-check input, .acc-radio input { accent-color: var(--accent); width: 18px; height: 18px; flex: none; cursor: pointer; }
+    .acc-radios { display: flex; flex-direction: column; gap: 10px; }
+    .acc-radio {
+      display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
+      padding: 14px; border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius); background: var(--bg-2);
+    }
+    .acc-radio > span { display: flex; flex-direction: column; gap: 4px; }
+    .acc-radio strong { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--text); }
+    .acc-radio input { margin-top: 3px; }
+    .acc-radio:has(input:checked) { border-color: var(--accent); background: var(--accent-wash); }
+
+    .acc-note {
+      font-family: var(--font-ui); font-size: 12px; line-height: 1.55;
+      border-radius: var(--radius); padding: 10px 12px; margin: 12px 0 0;
+      border: var(--line-weight) solid transparent;
+    }
+    .acc-note--ok   { background: var(--ok-wash);   color: var(--ok);   border-color: color-mix(in srgb, var(--ok) 30%, transparent); }
+    .acc-note--info { background: var(--info-wash); color: var(--info); border-color: color-mix(in srgb, var(--info) 30%, transparent); }
+
+    /* ---- placeholder washes ---- */
+    .acc-thumb {
+      display: block; width: 46px; height: 46px; flex: none;
+      border-radius: var(--radius-sm);
+      border: var(--line-weight) solid var(--border);
+    }
+    .acc-thumb--lg { width: 64px; height: 64px; }
+    .acc-thumb--wide { width: 100%; height: 132px; border-radius: 0; border: none; border-bottom: var(--line-weight) solid var(--border); }
+    .acc-w1 { background: linear-gradient(135deg, var(--wash-1a), var(--wash-1b)); }
+    .acc-w2 { background: linear-gradient(135deg, var(--wash-2a), var(--wash-2b)); }
+    .acc-w3 { background: linear-gradient(135deg, var(--wash-3a), var(--wash-3b)); }
+
+    /* ---- inline confirm row, used instead of a browser dialog ---- */
+    .acc-confirm {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+      margin-top: 12px; padding: 12px 14px;
+      background: var(--err-wash);
+      border: var(--line-weight) solid color-mix(in srgb, var(--err) 35%, transparent);
+      border-radius: var(--radius);
+    }
+    .acc-confirm-text { font-family: var(--font-ui); font-size: 12.5px; line-height: 1.5; color: var(--err); }
+    .acc-confirm-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    /* ============================================================
+       T380 Account shell
+       ============================================================ */
+    .acc-shell { display: grid; grid-template-columns: 220px 1fr; gap: 20px; align-items: start; }
+    .acc-nav {
+      display: flex; flex-direction: column; gap: 4px;
+      background: var(--bg-card);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 10px;
+    }
+    .acc-navlink {
+      display: flex; align-items: center; gap: 10px;
+      min-height: 48px; padding: 0 14px; width: 100%;
+      font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.02em;
+      color: var(--text-3); background: transparent;
+      border: var(--line-weight) solid transparent;
+      border-radius: var(--radius); cursor: pointer; text-align: left;
+      white-space: nowrap;
+    }
+    .acc-navlink:hover { color: var(--text); background: var(--bg-2); }
+    .acc-navlink.is-active {
+      color: var(--accent); background: var(--accent-wash);
+      border-color: var(--accent-line); font-weight: 600;
+    }
+    .acc-navlink svg { flex: none; }
+
+    .acc-pane {
+      background: var(--bg-card);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+    }
+    .acc-greet {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding: 20px 22px;
+      border-bottom: var(--line-weight) solid var(--border);
+      background: var(--bg-2);
+    }
+    .acc-greet-name { font-size: 22px; margin: 0 0 4px; }
+    .acc-greet-sub { font-family: var(--font-ui); font-size: 12.5px; color: var(--text-3); margin: 0; }
+    .acc-pane-body { padding: 22px; }
+    .acc-pane-title { font-size: 17px; margin: 0 0 8px; }
+    .acc-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+    .acc-stat {
+      display: flex; flex-direction: column; gap: 6px;
+      padding: 14px; background: var(--bg-2);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius);
+    }
+    .acc-stat-label { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-4); }
+    .acc-stat-value { font-family: var(--font-display); font-size: 22px; font-weight: var(--heading-weight); color: var(--text); line-height: 1.1; }
+    .acc-dl { margin: 0; }
+    .acc-dl-row {
+      display: grid; grid-template-columns: 130px 1fr; gap: 12px;
+      padding: 11px 2px; border-bottom: var(--line-weight) solid var(--border);
+    }
+    .acc-dl-row:last-child { border-bottom: none; }
+    .acc-dl-row dt { font-family: var(--font-ui); font-size: 12.5px; color: var(--text-4); margin: 0; }
+    .acc-dl-row dd { font-family: var(--font-body); font-size: 14px; color: var(--text); margin: 0; }
+
+    /* ============================================================
+       T381 Order history
+       ============================================================ */
+    .acc-orders { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+    .acc-order {
+      background: var(--bg-card);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 16px 18px;
+    }
+    .acc-order-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .acc-order-ident { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .acc-order-mid {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      margin: 14px 0; padding: 14px 0;
+      border-top: var(--line-weight) solid var(--border);
+      border-bottom: var(--line-weight) solid var(--border);
+    }
+    .acc-thumbs { display: flex; align-items: center; gap: 8px; }
+    .acc-thumb-more {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 46px; height: 46px; border-radius: var(--radius-sm);
+      background: var(--bg-3); border: var(--line-weight) solid var(--border);
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-3);
+    }
+    .acc-order-sum { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+    .acc-order-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    /* ============================================================
+       T382 Order detail
+       ============================================================ */
+    .acc-detail { padding: 20px 22px; }
+    .acc-detail-head {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding-bottom: 18px; border-bottom: var(--line-weight) solid var(--border);
+    }
+    .acc-detail-num { font-family: var(--font-mono); font-size: 20px; letter-spacing: 0.04em; margin: 0 0 4px; }
+    .acc-detail-status { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .acc-lines { list-style: none; margin: 0; padding: 0; }
+    .acc-line {
+      display: grid; grid-template-columns: 64px 1fr auto auto;
+      align-items: center; gap: 14px;
+      padding: 14px 0; border-bottom: var(--line-weight) solid var(--border);
+    }
+    .acc-line-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+    .acc-line-qty { white-space: nowrap; }
+    .acc-detail-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px; margin: 18px 0;
+    }
+    .acc-subcard {
+      background: var(--bg-2);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius); padding: 16px;
+    }
+    .acc-subcard-title {
+      font-family: var(--font-display); font-size: 14px; font-weight: var(--heading-weight);
+      color: var(--text); margin: 0 0 12px;
+    }
+    .acc-address { font-family: var(--font-body); font-size: 14px; font-style: normal; line-height: 1.6; color: var(--text-2); margin: 0 0 10px; }
+    .acc-paid { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+    .acc-cardbrand { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text); }
+    .acc-mask { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.08em; color: var(--text-2); }
+    .acc-totals { margin: 0; }
+    .acc-total-row { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; }
+    .acc-total-row dt { font-family: var(--font-ui); font-size: 13px; color: var(--text-3); margin: 0; }
+    .acc-total-row dd { font-family: var(--font-ui); font-size: 13px; color: var(--text-2); margin: 0; font-variant-numeric: tabular-nums; }
+    .acc-total-row--grand { border-top: var(--line-weight) solid var(--border-2); margin-top: 6px; padding-top: 10px; }
+    .acc-total-row--grand dt, .acc-total-row--grand dd { font-size: 15px; font-weight: 600; color: var(--text); }
+    .acc-total-row--note dt, .acc-total-row--note dd { font-size: 11.5px; color: var(--text-4); }
+    .acc-detail-actions { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 16px; border-top: var(--line-weight) solid var(--border); }
+
+    /* ============================================================
+       T383 Return request
+       ============================================================ */
+    .acc-return { display: grid; grid-template-columns: 1fr 300px; gap: 20px; align-items: start; }
+    .acc-return-main { min-width: 0; }
+    .acc-return-items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+    .acc-return-item {
+      display: grid; grid-template-columns: 1fr 190px; gap: 14px; align-items: center;
+      padding: 12px 14px; background: var(--bg-card);
+      border: var(--line-weight) solid var(--border); border-radius: var(--radius);
+    }
+    .acc-return-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .acc-field--inline > label { font-size: 11px; }
+    .acc-return-side { position: sticky; top: 80px; }
+    .acc-return-list { list-style: none; margin: 0 0 10px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+    .acc-return-list li {
+      display: flex; justify-content: space-between; gap: 10px;
+      font-family: var(--font-ui); font-size: 12.5px; color: var(--text-2);
+    }
+    .acc-return-side .acc-btn { margin-top: 14px; }
+    .acc-return-side .acc-meta { display: block; margin-top: 12px; }
+
+    /* ============================================================
+       T384 Wishlist
+       ============================================================ */
+    .acc-wishlist { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+    .acc-wish { display: flex; flex-direction: column; overflow: hidden; }
+    .acc-wish-body { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px 14px 10px; flex: 1; }
+    .acc-wish-name { font-family: var(--font-display); font-size: 15px; font-weight: var(--heading-weight); color: var(--text); margin: 0; }
+    .acc-wish-actions { display: flex; align-items: center; gap: 8px; padding: 0 14px 14px; }
+    .acc-wish-actions .acc-btn { flex: 1; }
+    .acc-empty {
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      gap: 10px; padding: 40px 24px; color: var(--text-3);
+    }
+    .acc-empty svg { color: var(--text-4); }
+    .acc-empty-title { font-size: 18px; margin: 0; }
+    .acc-empty-copy { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0; max-width: 46ch; }
+    .acc-empty-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 6px; }
+
+    /* ============================================================
+       T385 Address book
+       ============================================================ */
+    .acc-addresses { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+    .acc-addr { padding: 16px 18px; display: flex; flex-direction: column; }
+    .acc-addr-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+    .acc-addr-label { font-family: var(--font-display); font-size: 15px; font-weight: var(--heading-weight); color: var(--text); margin: 0; }
+    .acc-addr-actions { display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap; }
+    .acc-add-toggle { margin-top: 16px; }
+    .acc-addr-form { padding: 18px; margin-top: 14px; }
+    .acc-form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .acc-span-2 { grid-column: 1 / -1; }
+    .acc-form-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+    /* ============================================================
+       T386 Payment methods
+       ============================================================ */
+    .acc-cards { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+    .acc-cardrow {
+      display: grid; grid-template-columns: 44px 1fr auto;
+      align-items: center; gap: 14px; padding: 14px 16px;
+    }
+    .acc-cardrow .acc-confirm { grid-column: 1 / -1; }
+    .acc-cardicon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px; border-radius: var(--radius-sm);
+      background: var(--bg-3); border: var(--line-weight) solid var(--border);
+      color: var(--text-3);
+    }
+    .acc-cardrow.is-expired .acc-cardicon { color: var(--err); border-color: color-mix(in srgb, var(--err) 40%, transparent); }
+    .acc-cardrow-body { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+    .acc-cardrow-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .acc-cardrow-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+
+    /* ============================================================
+       T387 Subscription manager
+       ============================================================ */
+    .acc-sub { padding: 18px 20px; }
+    .acc-sub-head {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding-bottom: 16px; border-bottom: var(--line-weight) solid var(--border);
+    }
+    .acc-sub-ident { display: flex; gap: 14px; align-items: flex-start; min-width: 0; }
+    .acc-sub-ident p { margin: 0 0 4px; }
+    .acc-sub-name { font-size: 17px; margin: 0 0 5px; }
+    .acc-sub-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px; margin: 18px 0;
+    }
+    .acc-sub-next { display: flex; flex-direction: column; gap: 4px; }
+    .acc-sub-date { font-family: var(--font-display); font-size: 18px; font-weight: var(--heading-weight); color: var(--text); }
+    .acc-sub-next .acc-address { margin: 0 0 4px; }
+    .acc-sub-actions { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 16px; border-top: var(--line-weight) solid var(--border); }
+    .acc-sub.is-paused .acc-sub-date { color: var(--text-4); }
+
+    /* ============================================================
+       T388 Rewards panel
+       ============================================================ */
+    .acc-rewards { display: grid; grid-template-columns: 1.35fr 1fr; gap: 16px; align-items: start; }
+    .acc-reward-main { padding: 20px; }
+    .acc-points { font-family: var(--font-display); font-size: 42px; font-weight: var(--heading-weight); color: var(--accent); line-height: 1; margin: 0 0 8px; }
+    .acc-points-unit { font-family: var(--font-ui); font-size: 14px; font-weight: 500; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; }
+    .acc-progress { margin: 20px 0; }
+    .acc-progress-top { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+    .acc-progress-label { font-family: var(--font-ui); font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-3); }
+    .acc-progress-track {
+      height: 10px; border-radius: var(--radius-pill); overflow: hidden;
+      background: var(--bg-3); border: var(--line-weight) solid var(--border);
+      margin-bottom: 8px;
+    }
+    .acc-progress-fill { display: block; height: 100%; background: var(--accent); border-radius: var(--radius-pill); transition: width 0.3s ease; }
+    .acc-redeem { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: end; }
+    .acc-reward-ledger { padding: 20px; }
+    .acc-ledger { list-style: none; margin: 0; padding: 0; }
+    .acc-ledger-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 11px 0; border-bottom: var(--line-weight) solid var(--border);
+    }
+    .acc-ledger-row:last-child { border-bottom: none; }
+    .acc-ledger-body { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .acc-ledger-text { font-family: var(--font-body); font-size: 13.5px; color: var(--text-2); }
+    .acc-ledger-amt { font-family: var(--font-ui); font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .acc-ledger-amt--up { color: var(--ok); }
+    .acc-ledger-amt--down { color: var(--text-4); }
+
+    /* ============================================================
+       T389 Sign in and register
+       ============================================================ */
+    .acc-auth { max-width: 460px; margin: 0 auto; overflow: hidden; }
+    .acc-tabs { display: grid; grid-template-columns: 1fr 1fr; border-bottom: var(--line-weight) solid var(--border); }
+    .acc-tab {
+      min-height: 52px; padding: 0 16px;
+      font-family: var(--font-ui); font-size: 13px; font-weight: var(--button-weight);
+      letter-spacing: var(--button-tracking); text-transform: var(--button-transform);
+      color: var(--text-3); background: var(--bg-2);
+      border: none; border-bottom: 2px solid transparent; cursor: pointer;
+    }
+    .acc-tab.is-active { color: var(--accent); background: var(--bg-card); border-bottom-color: var(--accent); }
+    .acc-authpanel { display: flex; flex-direction: column; gap: 14px; padding: 22px; }
+    .acc-auth-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .acc-auth-guest {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      padding: 16px 22px; background: var(--bg-2);
+      border-top: var(--line-weight) solid var(--border);
+    }
+
+    /* ============================================================
+       T390 Password reset
+       ============================================================ */
+    .acc-reset { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; align-items: start; }
+    .acc-reset-col { padding: 20px; }
+    .acc-reset-request, .acc-reset-new { display: flex; flex-direction: column; gap: 14px; }
+    .acc-reset-sent { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+    .acc-reset-title { font-size: 17px; margin: 0; }
+    .acc-tick {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 42px; height: 42px; border-radius: var(--radius-pill);
+      background: var(--ok-wash); color: var(--ok);
+      border: var(--line-weight) solid color-mix(in srgb, var(--ok) 40%, transparent);
+    }
+    .acc-strength { display: flex; flex-direction: column; gap: 8px; }
+    .acc-strength-bars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .acc-strength-bar {
+      height: 6px; border-radius: var(--radius-pill);
+      background: var(--bg-3); border: var(--line-weight) solid var(--border);
+    }
+    .acc-strength-bar.is-1 { background: var(--err); border-color: var(--err); }
+    .acc-strength-bar.is-2 { background: var(--warn); border-color: var(--warn); }
+    .acc-strength-bar.is-3 { background: var(--info); border-color: var(--info); }
+    .acc-strength-bar.is-4 { background: var(--ok); border-color: var(--ok); }
+    .acc-strength-label { font-family: var(--font-ui); font-size: 12px; color: var(--text-3); margin: 0; }
+    .acc-match { font-family: var(--font-ui); font-size: 12px; margin: 0; min-height: 18px; color: var(--text-4); }
+    .acc-match.is-ok { color: var(--ok); }
+    .acc-match.is-bad { color: var(--err); }
+
+    /* ============================================================
+       T391 Guest order lookup
+       ============================================================ */
+    .acc-lookup { padding: 22px; max-width: 620px; margin: 0 auto; }
+    .acc-lookup-intro { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 18px; }
+    .acc-lookup-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px; flex: none; border-radius: var(--radius-pill);
+      background: var(--accent-wash); color: var(--accent);
+      border: var(--line-weight) solid var(--accent-line);
+    }
+    .acc-lookup-title { font-size: 18px; margin: 0 0 6px; }
+    .acc-lookup-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: end; }
+    .acc-lookup-form .acc-btn { grid-column: 1 / -1; }
+    .acc-lookup-err {
+      display: flex; gap: 12px; align-items: flex-start; margin-top: 16px; padding: 14px;
+      background: var(--err-wash); border-radius: var(--radius);
+      border: var(--line-weight) solid color-mix(in srgb, var(--err) 35%, transparent);
+    }
+    .acc-lookup-erricon { color: var(--err); flex: none; display: inline-flex; margin-top: 1px; }
+    .acc-lookup-errtitle { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--err); margin: 0 0 4px; }
+    .acc-lookup-err .acc-meta { color: var(--err); }
+    .acc-lookup-hit {
+      margin-top: 16px; padding: 16px;
+      background: var(--bg-2); border-radius: var(--radius);
+      border: var(--line-weight) solid var(--border);
+    }
+    .acc-lookup-hit .acc-order-actions { margin-top: 12px; }
+    .acc-lookup-hit .acc-meta { display: block; margin-top: 8px; }
+    .acc-lookup-help { display: block; margin-top: 16px; }
+
+    /* ============================================================
+       Responsive
+       ============================================================ */
+    @media (max-width: 860px) {
+      .acc-return { grid-template-columns: 1fr; }
+      .acc-return-side { position: static; }
+      .acc-rewards { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .acc-shell { grid-template-columns: 1fr; }
+      .acc-nav { flex-direction: row; overflow-x: auto; gap: 6px; padding: 8px; }
+      .acc-navlink { width: auto; flex: none; }
+      .acc-return-item { grid-template-columns: 1fr; }
+      .acc-line { grid-template-columns: 46px 1fr auto; row-gap: 4px; }
+      .acc-line-qty { grid-column: 2 / 3; }
+      .acc-cardrow { grid-template-columns: 44px 1fr; }
+      .acc-cardrow-actions { grid-column: 1 / -1; justify-content: flex-start; }
+      .acc-form-grid { grid-template-columns: 1fr; }
+      .acc-lookup-form { grid-template-columns: 1fr; }
+      .acc-redeem { grid-template-columns: 1fr; align-items: stretch; }
+      .acc-dl-row { grid-template-columns: 1fr; gap: 2px; }
+    }
+    @media (max-width: 480px) {
+      .acc-order-sum { align-items: flex-start; }
+      .acc-detail-status { align-items: flex-start; }
+      .acc-order-actions .acc-btn, .acc-detail-actions .acc-btn, .acc-sub-actions .acc-btn { flex: 1 1 100%; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var $ = function (sel, root) { return (root || document).querySelector(sel); };
+      var byId = function (id) { return id ? document.getElementById(id) : null; };
+      var $$ = function (sel, root) {
+        return Array.prototype.slice.call((root || document).querySelectorAll(sel));
+      };
+
+      /* Every form on this page is a demo. Nothing is ever sent. */
+      $$('form[novalidate]').forEach(function (f) {
+        f.addEventListener('submit', function (e) { e.preventDefault(); });
+      });
+
+      var money = function (n) {
+        return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      };
+
+      /* ---- T380 Account shell ---- */
+      var navLinks = $$('.acc-navlink');
+      if (navLinks.length) {
+        navLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            var key = link.getAttribute('data-acc-pane');
+            navLinks.forEach(function (other) {
+              var on = other === link;
+              other.classList.toggle('is-active', on);
+              if (on) other.setAttribute('aria-current', 'page');
+              else other.removeAttribute('aria-current');
+            });
+            $$('.acc-paneview').forEach(function (view) {
+              view.hidden = view.getAttribute('data-acc-view') !== key;
+            });
+          });
+        });
+      }
+
+      /* ---- T383 Return request ---- */
+      var returnForm = byId('acc-return-form');
+      if (returnForm) {
+        var ticks = $$('.acc-return-tick', returnForm);
+        var countEl = byId('acc-return-count');
+        var listEl = byId('acc-return-list');
+        var itemsEl = byId('acc-return-items-total');
+        var refundEl = byId('acc-return-refund');
+        var doneEl = byId('acc-return-done');
+
+        var renderReturn = function () {
+          var total = 0;
+          var picked = [];
+          ticks.forEach(function (t) {
+            if (!t.checked) return;
+            var amount = parseFloat(t.getAttribute('data-acc-amount')) || 0;
+            total += amount;
+            picked.push({ name: t.getAttribute('data-acc-name'), amount: amount });
+          });
+          if (listEl) {
+            listEl.innerHTML = '';
+            picked.forEach(function (p) {
+              var li = document.createElement('li');
+              var name = document.createElement('span');
+              name.textContent = p.name;
+              var amt = document.createElement('span');
+              amt.textContent = money(p.amount);
+              li.appendChild(name);
+              li.appendChild(amt);
+              listEl.appendChild(li);
+            });
+          }
+          if (countEl) {
+            countEl.textContent = picked.length === 0
+              ? 'No items selected yet.'
+              : picked.length + (picked.length === 1 ? ' item selected.' : ' items selected.');
+          }
+          if (itemsEl) itemsEl.textContent = money(total);
+          if (refundEl) refundEl.textContent = money(total) + ' AUD';
+        };
+
+        ticks.forEach(function (t) { t.addEventListener('change', renderReturn); });
+        renderReturn();
+
+        returnForm.addEventListener('submit', function () {
+          if (doneEl) doneEl.hidden = false;
+        });
+      }
+
+      /* ---- T384 Wishlist ---- */
+      var wishGrid = byId('acc-wishlist');
+      var wishEmpty = byId('acc-wishlist-empty');
+      if (wishGrid && wishEmpty) {
+        var wishCards = $$('.acc-wish', wishGrid);
+        var syncWishlist = function () {
+          var left = wishCards.filter(function (c) { return !c.hidden; }).length;
+          wishGrid.hidden = left === 0;
+          wishEmpty.hidden = left !== 0;
+        };
+        wishCards.forEach(function (card) {
+          var remove = $('.acc-wish-remove', card);
+          if (!remove) return;
+          remove.addEventListener('click', function () {
+            card.hidden = true;
+            syncWishlist();
+          });
+        });
+        var restore = byId('acc-wishlist-restore');
+        if (restore) {
+          restore.addEventListener('click', function () {
+            wishCards.forEach(function (c) { c.hidden = false; });
+            syncWishlist();
+          });
+        }
+      }
+
+      /* ---- T385 and T386 inline confirm rows.
+             A browser dialog is never used for a destructive action here. ---- */
+      $$('.acc-addr-del, .acc-card-del').forEach(function (trigger) {
+        var host = trigger.closest('.acc-addr') || trigger.closest('.acc-cardrow');
+        if (!host) return;
+        var confirmRow = $('.acc-confirm', host);
+        if (!confirmRow) return;
+        var yes = $('.acc-confirm-yes', confirmRow);
+        var no = $('.acc-confirm-no', confirmRow);
+        trigger.addEventListener('click', function () {
+          confirmRow.hidden = false;
+          if (yes) yes.focus();
+        });
+        if (no) {
+          no.addEventListener('click', function () {
+            confirmRow.hidden = true;
+            trigger.focus();
+          });
+        }
+        if (yes) {
+          yes.addEventListener('click', function () { host.hidden = true; });
+        }
+      });
+
+      /* ---- T385 and T386 reveal forms ---- */
+      var revealPairs = [
+        { btn: 'acc-addr-toggle', form: 'acc-addr-form', cancel: 'acc-addr-cancel', done: 'acc-addr-saved' },
+        { btn: 'acc-card-toggle', form: 'acc-card-form', cancel: 'acc-card-cancel', done: null }
+      ];
+      revealPairs.forEach(function (pair) {
+        var btn = byId(pair.btn);
+        var form = byId(pair.form);
+        if (!btn || !form) return;
+        btn.addEventListener('click', function () {
+          var open = form.hidden;
+          form.hidden = !open;
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          if (open) {
+            var first = form.querySelector('input, select, textarea');
+            if (first) first.focus();
+          }
+        });
+        var cancel = byId(pair.cancel);
+        if (cancel) {
+          cancel.addEventListener('click', function () {
+            form.hidden = true;
+            btn.setAttribute('aria-expanded', 'false');
+            btn.focus();
+          });
+        }
+        if (pair.done) {
+          form.addEventListener('submit', function () {
+            var note = byId(pair.done);
+            if (note) note.hidden = false;
+          });
+        }
+      });
+
+      /* ---- T387 Subscription manager ---- */
+      var subFreq = byId('acc-sub-freq');
+      if (subFreq) {
+        var subDate = byId('acc-sub-date');
+        var subNote = byId('acc-sub-note');
+        var subMsg = byId('acc-sub-msg');
+        var subStatus = byId('acc-sub-status');
+        var subCard = subFreq.closest('.acc-sub');
+        var base = new Date(2026, 7, 12); /* 12 August 2026, the last delivery */
+        var months = ['January', 'February', 'March', 'April', 'May', 'June',
+          'July', 'August', 'September', 'October', 'November', 'December'];
+        var fmt = function (d) { return d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear(); };
+        var skipped = 0;
+
+        var renderSub = function () {
+          var days = parseInt(subFreq.value, 10) || 28;
+          var next = new Date(base.getTime());
+          next.setDate(next.getDate() + days * (1 + skipped));
+          if (subDate) subDate.textContent = fmt(next);
+          if (subNote) {
+            var cutoff = new Date(next.getTime());
+            cutoff.setDate(cutoff.getDate() - 7);
+            subNote.textContent = 'Changes made before ' + fmt(cutoff) + ' apply to this delivery.';
+          }
+        };
+        renderSub();
+        subFreq.addEventListener('change', function () {
+          skipped = 0;
+          renderSub();
+          if (subMsg) {
+            subMsg.hidden = false;
+            subMsg.textContent = 'Frequency updated. Your next delivery date has moved.';
+          }
+        });
+
+        var skip = byId('acc-sub-skip');
+        if (skip) {
+          skip.addEventListener('click', function () {
+            skipped += 1;
+            renderSub();
+            if (subMsg) {
+              subMsg.hidden = false;
+              subMsg.textContent = 'Next delivery skipped. The one after that is unchanged.';
+            }
+          });
+        }
+
+        var pause = byId('acc-sub-pause');
+        if (pause) {
+          var paused = false;
+          pause.addEventListener('click', function () {
+            paused = !paused;
+            if (subCard) subCard.classList.toggle('is-paused', paused);
+            pause.textContent = paused ? 'Resume subscription' : 'Pause subscription';
+            if (subStatus) {
+              subStatus.textContent = paused ? 'Paused' : 'Active';
+              subStatus.classList.toggle('acc-pill--warn', paused);
+              subStatus.classList.toggle('acc-pill--ok', !paused);
+            }
+            if (subMsg) {
+              subMsg.hidden = false;
+              subMsg.textContent = paused
+                ? 'Paused. Nothing ships until you resume, and your discount is held.'
+                : 'Resumed. Deliveries pick up from the next date shown above.';
+            }
+          });
+        }
+
+        var subCancel = byId('acc-sub-cancel');
+        var subConfirm = byId('acc-sub-confirm');
+        if (subCancel && subConfirm) {
+          subCancel.addEventListener('click', function () {
+            subConfirm.hidden = false;
+            var yesBtn = byId('acc-sub-confirm-yes');
+            if (yesBtn) yesBtn.focus();
+          });
+          var subNo = byId('acc-sub-confirm-no');
+          if (subNo) {
+            subNo.addEventListener('click', function () {
+              subConfirm.hidden = true;
+              subCancel.focus();
+            });
+          }
+          var subYes = byId('acc-sub-confirm-yes');
+          if (subYes) {
+            subYes.addEventListener('click', function () {
+              subConfirm.hidden = true;
+              if (subStatus) {
+                subStatus.textContent = 'Cancelled';
+                subStatus.classList.remove('acc-pill--ok', 'acc-pill--warn');
+                subStatus.classList.add('acc-pill--err');
+              }
+              if (subMsg) {
+                subMsg.hidden = false;
+                subMsg.textContent = 'Subscription cancelled. You can start it again any time from the product page.';
+              }
+            });
+          }
+        }
+      }
+
+      /* ---- T388 Rewards ---- */
+      var redeemBtn = byId('acc-redeem-btn');
+      if (redeemBtn) {
+        var balance = 1240;
+        var goal = 2000;
+        var valueEl = byId('acc-points-value');
+        var fillEl = $('.acc-progress-fill');
+        var redeemMsg = byId('acc-redeem-msg');
+        var redeemPick = byId('acc-redeem-pick');
+        redeemBtn.addEventListener('click', function () {
+          if (!redeemPick) return;
+          var cost = parseInt(redeemPick.value, 10) || 0;
+          var label = redeemPick.options[redeemPick.selectedIndex].textContent;
+          if (redeemMsg) redeemMsg.hidden = false;
+          if (cost > balance) {
+            if (redeemMsg) {
+              redeemMsg.classList.remove('acc-note--ok');
+              redeemMsg.classList.add('acc-note--info');
+              redeemMsg.textContent = 'That reward needs ' + (cost - balance) + ' more points. Keep going.';
+            }
+            return;
+          }
+          balance -= cost;
+          if (valueEl) valueEl.textContent = balance.toLocaleString('en-AU');
+          if (fillEl) fillEl.style.width = Math.min(100, Math.round((balance / goal) * 100)) + '%';
+          if (redeemMsg) {
+            redeemMsg.classList.remove('acc-note--info');
+            redeemMsg.classList.add('acc-note--ok');
+            redeemMsg.textContent = 'Redeemed: ' + label + '. The credit is on your account at checkout.';
+          }
+        });
+      }
+
+      /* ---- T389 Sign in and register tabs ---- */
+      var tabs = $$('.acc-tab');
+      if (tabs.length) {
+        var selectTab = function (tab) {
+          tabs.forEach(function (t) {
+            var on = t === tab;
+            t.classList.toggle('is-active', on);
+            t.setAttribute('aria-selected', on ? 'true' : 'false');
+            t.tabIndex = on ? 0 : -1;
+            var panel = document.getElementById(t.getAttribute('aria-controls'));
+            if (panel) panel.hidden = !on;
+          });
+          tab.focus();
+        };
+        tabs.forEach(function (tab, i) {
+          tab.addEventListener('click', function () { selectTab(tab); });
+          tab.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowRight') selectTab(tabs[(i + 1) % tabs.length]);
+            if (e.key === 'ArrowLeft') selectTab(tabs[(i - 1 + tabs.length) % tabs.length]);
+          });
+        });
+      }
+      [['acc-panel-signin', 'acc-si-msg'], ['acc-panel-register', 'acc-rg-msg']].forEach(function (pair) {
+        var form = byId(pair[0]);
+        var msg = byId(pair[1]);
+        if (!form || !msg) return;
+        form.addEventListener('submit', function () { msg.hidden = false; });
+      });
+
+      /* ---- T390 Password reset ---- */
+      var resetForm = byId('acc-reset-form');
+      var resetSent = byId('acc-reset-sent');
+      if (resetForm && resetSent) {
+        resetForm.addEventListener('submit', function () {
+          resetForm.hidden = true;
+          resetSent.hidden = false;
+        });
+        var again = byId('acc-reset-again');
+        if (again) {
+          again.addEventListener('click', function () {
+            resetSent.hidden = true;
+            resetForm.hidden = false;
+            var email = byId('acc-reset-email');
+            if (email) email.focus();
+          });
+        }
+      }
+
+      var newPass = byId('acc-np-pass');
+      var confirmPass = byId('acc-np-confirm');
+      if (newPass) {
+        var bars = $$('.acc-strength-bar');
+        var strengthLabel = byId('acc-strength-label');
+        var matchEl = byId('acc-match');
+        var labels = ['Start typing to see how strong it is.', 'Weak: add more characters.',
+          'Fair: mix in a number or a capital.', 'Good: one symbol away from strong.', 'Strong. That will do nicely.'];
+
+        var score = function (v) {
+          if (!v) return 0;
+          var s = 0;
+          if (v.length >= 8) s += 1;
+          if (/[a-z]/.test(v) && /[A-Z]/.test(v)) s += 1;
+          if (/[0-9]/.test(v)) s += 1;
+          if (/[^A-Za-z0-9]/.test(v)) s += 1;
+          if (v.length >= 16) s = Math.min(4, s + 1);
+          return Math.max(1, s);
+        };
+
+        var renderStrength = function () {
+          var s = score(newPass.value);
+          bars.forEach(function (bar, i) {
+            bar.className = 'acc-strength-bar' + (i < s ? ' is-' + s : '');
+          });
+          if (strengthLabel) strengthLabel.textContent = labels[s];
+        };
+
+        var renderMatch = function () {
+          if (!matchEl || !confirmPass) return;
+          matchEl.classList.remove('is-ok', 'is-bad');
+          if (!confirmPass.value) { matchEl.textContent = ''; return; }
+          if (confirmPass.value === newPass.value) {
+            matchEl.classList.add('is-ok');
+            matchEl.textContent = 'Both entries match.';
+          } else {
+            matchEl.classList.add('is-bad');
+            matchEl.textContent = 'The two passwords do not match yet.';
+          }
+        };
+
+        newPass.addEventListener('input', function () { renderStrength(); renderMatch(); });
+        if (confirmPass) confirmPass.addEventListener('input', renderMatch);
+        renderStrength();
+      }
+
+      var newPassForm = byId('acc-newpass-form');
+      if (newPassForm) {
+        newPassForm.addEventListener('submit', function () {
+          var note = byId('acc-np-msg');
+          if (note) note.hidden = false;
+        });
+      }
+
+      /* ---- T391 Guest order lookup ---- */
+      var lookupForm = byId('acc-lookup-form');
+      if (lookupForm) {
+        var lookupErr = byId('acc-lookup-err');
+        var lookupHit = byId('acc-lookup-hit');
+        var orderField = byId('acc-lookup-order');
+        var emailField = byId('acc-lookup-email');
+        lookupForm.addEventListener('submit', function () {
+          var order = orderField ? orderField.value.trim().toUpperCase() : '';
+          var email = emailField ? emailField.value.trim().toLowerCase() : '';
+          var found = order === 'SS-24603' && email === 'amelia.brooks@example.com';
+          if (lookupHit) lookupHit.hidden = !found;
+          if (lookupErr) lookupErr.hidden = found;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

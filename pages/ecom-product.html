@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product page &middot; Site Blocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+  <script src="../assets/viewer.js"></script>
+</head>
+<body data-page-set="ecommerce">
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
+    <h1>Product page <span class="tb-range">T320&ndash;T332</span></h1>
+    <p class="tb-sub">Everything the detail page needs: gallery, buy box, variants, price presentation, stock cues, delivery estimate, the sticky bar, and the specification table.</p>
+  </header>
+  <main class="tb-main">
+
+    <!-- ============================================================
+         T320 Product gallery
+         ============================================================ -->
+    <article class="tb-pattern" id="T320" data-tid="T320">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T320</span>
+        <div>
+          <h2>Product gallery</h2>
+          <p>A main image with a thumbnail rail, a zoom affordance and an image counter. Clicking a thumb swaps the main image.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pdp-gallery" data-pdp-gallery>
+          <div class="pdp-gal-stage">
+            <div class="pdp-gal-img" data-pdp-gal-img style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))"></div>
+            <span class="pdp-gal-caption" data-pdp-gal-caption>Front, Deep Navy</span>
+            <span class="pdp-gal-count" data-pdp-gal-count aria-live="polite">1 of 4</span>
+            <button type="button" class="pdp-gal-zoom" data-pdp-gal-zoom aria-pressed="false" aria-label="Zoom the main image">
+              <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.4 13.4L18 18M6.6 9h4.8M9 6.6v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <span class="pdp-gal-zoom-text">Zoom</span>
+            </button>
+          </div>
+          <div class="pdp-gal-rail" role="group" aria-label="Product images">
+            <button type="button" class="pdp-gal-thumb" aria-pressed="true" data-pdp-caption="Front, Deep Navy">
+              <span class="pdp-gal-chip" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))"></span>
+              <span class="pdp-vh">Front, Deep Navy</span>
+            </button>
+            <button type="button" class="pdp-gal-thumb" aria-pressed="false" data-pdp-caption="Back yoke detail">
+              <span class="pdp-gal-chip" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))"></span>
+              <span class="pdp-vh">Back yoke detail</span>
+            </button>
+            <button type="button" class="pdp-gal-thumb" aria-pressed="false" data-pdp-caption="Cuff and zip detail">
+              <span class="pdp-gal-chip" style="background:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))"></span>
+              <span class="pdp-vh">Cuff and zip detail</span>
+            </button>
+            <button type="button" class="pdp-gal-thumb" aria-pressed="false" data-pdp-caption="Worn on the Overland Track">
+              <span class="pdp-gal-chip" style="background:linear-gradient(135deg,var(--accent-wash),var(--accent-wash-2))"></span>
+              <span class="pdp-vh">Worn on the Overland Track</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T321 Buy box
+         ============================================================ -->
+    <article class="tb-pattern" id="T321" data-tid="T321">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T321</span>
+        <div>
+          <h2>Buy box</h2>
+          <p>The full right-hand column: eyebrow, title, rating, price, short description, add to cart, and a secondary save action.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pdp-buy-layout">
+          <div class="pdp-buy-media" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))" aria-hidden="true"></div>
+          <div class="pdp-buy">
+            <p class="pdp-eyebrow">Yarra Made</p>
+            <h3 class="pdp-title">Wanderer Merino Zip Hood</h3>
+            <div class="pdp-rating">
+              <span class="pdp-stars" role="img" aria-label="Rated 4.7 out of 5">
+                <span class="pdp-stars-bg">
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 4 4.4.6-3.2 3.1.8 4.4L8 11.6 4.1 13.7l.8-4.4L1.7 6.2l4.4-.6z" fill="currentColor"/></svg>
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 4 4.4.6-3.2 3.1.8 4.4L8 11.6 4.1 13.7l.8-4.4L1.7 6.2l4.4-.6z" fill="currentColor"/></svg>
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 4 4.4.6-3.2 3.1.8 4.4L8 11.6 4.1 13.7l.8-4.4L1.7 6.2l4.4-.6z" fill="currentColor"/></svg>
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 4 4.4.6-3.2 3.1.8 4.4L8 11.6 4.1 13.7l.8-4.4L1.7 6.2l4.4-.6z" fill="currentColor"/></svg>
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 4 4.4.6-3.2 3.1.8 4.4L8 11.6 4.1 13.7l.8-4.4L1.7 6.2l4.4-.6z" fill="currentColor"/></svg>
+                </span>
+                <span class="pdp-stars-fg" style="width:94%">
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 4 4.4.6-3.2 3.1.8 4.4L8 11.6 4.1 13.7l.8-4.4L1.7 6.2l4.4-.6z" fill="currentColor"/></svg>
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 4 4.4.6-3.2 3.1.8 4.4L8 11.6 4.1 13.7l.8-4.4L1.7 6.2l4.4-.6z" fill="currentColor"/></svg>
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 4 4.4.6-3.2 3.1.8 4.4L8 11.6 4.1 13.7l.8-4.4L1.7 6.2l4.4-.6z" fill="currentColor"/></svg>
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 4 4.4.6-3.2 3.1.8 4.4L8 11.6 4.1 13.7l.8-4.4L1.7 6.2l4.4-.6z" fill="currentColor"/></svg>
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 4 4.4.6-3.2 3.1.8 4.4L8 11.6 4.1 13.7l.8-4.4L1.7 6.2l4.4-.6z" fill="currentColor"/></svg>
+                </span>
+              </span>
+              <span class="pdp-rating-num">4.7</span>
+              <a class="pdp-rating-link" href="#reviews">218 reviews</a>
+            </div>
+            <div class="pdp-price-row">
+              <span class="pdp-price">$189.00</span>
+              <span class="pdp-price-rrp"><span class="pdp-vh">Recommended retail price </span>$249.00</span>
+              <span class="pdp-badge-accent">24% off</span>
+            </div>
+            <p class="pdp-price-note">AUD, GST included. Standard post is free on orders over $200.</p>
+            <p class="pdp-lede">Chunky 19.5 micron merino, knitted in Melbourne and finished with a two way zip. Warm enough for a winter dawn, light enough to stuff in a daypack.</p>
+            <ul class="pdp-lede-list">
+              <li>Relaxed fit through the body and shoulder</li>
+              <li>Deep hood with a soft jersey lining</li>
+              <li>Machine washable on a wool cycle</li>
+            </ul>
+            <div class="pdp-buy-actions">
+              <button type="button" class="pdp-btn" data-pdp-atc>
+                <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M3 4h2l1.8 8.4a1.6 1.6 0 001.6 1.3h6.2a1.6 1.6 0 001.6-1.3L17.5 7H6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="17" r="1.3" fill="currentColor"/><circle cx="15" cy="17" r="1.3" fill="currentColor"/></svg>
+                <span data-pdp-atc-text>Add to cart</span>
+              </button>
+              <button type="button" class="pdp-btn-ghost pdp-btn-wish" data-pdp-wish aria-pressed="false">
+                <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M10 16.5S3.5 12.7 3.5 8.4A3.4 3.4 0 0110 6.3a3.4 3.4 0 016.5 2.1c0 4.3-6.5 8.1-6.5 8.1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                <span data-pdp-wish-text>Save for later</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T322 Variant selector
+         ============================================================ -->
+    <article class="tb-pattern" id="T322" data-tid="T322">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T322</span>
+        <div>
+          <h2>Variant selector</h2>
+          <p>Colour swatches and size pills as radio groups, with selected, unavailable and sold out states kept visually distinct.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pdp-variants">
+          <fieldset class="pdp-fieldset">
+            <legend class="pdp-legend">Colour<span class="pdp-legend-value" data-pdp-colour-out>Deep Navy</span></legend>
+            <div class="pdp-swatches">
+              <label class="pdp-swatch" style="--pdp-sw:var(--swatch-navy)">
+                <input class="pdp-vh" type="radio" name="pdp-colour" value="Ironbark">
+                <span class="pdp-swatch-dot"></span>
+                <span class="pdp-swatch-name">Ironbark</span>
+              </label>
+              <label class="pdp-swatch" style="--pdp-sw:var(--swatch-ironbark)">
+                <input class="pdp-vh" type="radio" name="pdp-colour" value="Deep Navy" checked>
+                <span class="pdp-swatch-dot"></span>
+                <span class="pdp-swatch-name">Deep Navy</span>
+              </label>
+              <label class="pdp-swatch" style="--pdp-sw:var(--swatch-slate)">
+                <input class="pdp-vh" type="radio" name="pdp-colour" value="Saltbush">
+                <span class="pdp-swatch-dot"></span>
+                <span class="pdp-swatch-name">Saltbush</span>
+              </label>
+              <label class="pdp-swatch" style="--pdp-sw:var(--swatch-saltbush)">
+                <input class="pdp-vh" type="radio" name="pdp-colour" value="Clay">
+                <span class="pdp-swatch-dot"></span>
+                <span class="pdp-swatch-name">Clay</span>
+              </label>
+              <label class="pdp-swatch is-soldout" style="--pdp-sw:var(--swatch-clay)">
+                <input class="pdp-vh" type="radio" name="pdp-colour" value="Moss" disabled>
+                <span class="pdp-swatch-dot"></span>
+                <span class="pdp-swatch-name">Moss<span class="pdp-swatch-flag">Sold out</span></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="pdp-fieldset">
+            <legend class="pdp-legend">Size<span class="pdp-legend-value" data-pdp-size-out>M</span></legend>
+            <div class="pdp-sizes">
+              <label class="pdp-size is-unavailable">
+                <input class="pdp-vh" type="radio" name="pdp-size" value="XS" disabled>
+                <span>XS</span>
+                <span class="pdp-vh">not made in Deep Navy</span>
+              </label>
+              <label class="pdp-size">
+                <input class="pdp-vh" type="radio" name="pdp-size" value="S">
+                <span>S</span>
+              </label>
+              <label class="pdp-size">
+                <input class="pdp-vh" type="radio" name="pdp-size" value="M" checked>
+                <span>M</span>
+              </label>
+              <label class="pdp-size">
+                <input class="pdp-vh" type="radio" name="pdp-size" value="L">
+                <span>L</span>
+              </label>
+              <label class="pdp-size is-soldout">
+                <input class="pdp-vh" type="radio" name="pdp-size" value="XL" disabled>
+                <span>XL</span>
+                <span class="pdp-vh">sold out</span>
+              </label>
+            </div>
+            <ul class="pdp-key">
+              <li><span class="pdp-key-dot pdp-key-sel"></span>Selected</li>
+              <li><span class="pdp-key-dot pdp-key-una"></span>Not made in this colour</li>
+              <li><span class="pdp-key-dot pdp-key-out"></span>Sold out</li>
+            </ul>
+          </fieldset>
+
+          <p class="pdp-variant-live" data-pdp-variant-live aria-live="polite">Deep Navy, size M. In stock.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T323 Quantity stepper
+         ============================================================ -->
+    <article class="tb-pattern" id="T323" data-tid="T323">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T323</span>
+        <div>
+          <h2>Quantity stepper</h2>
+          <p>Minus and plus either side of a number input, floored at 1 and capped at the order limit, with both ends disabling at the bound.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pdp-qty-grid">
+          <div class="pdp-qty-case">
+            <span class="pdp-case-label">Default</span>
+            <div class="pdp-qty" data-pdp-qty data-pdp-max="6">
+              <button type="button" class="pdp-qty-btn" data-pdp-qty-down aria-label="Decrease quantity" disabled>
+                <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><path d="M4 10h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+              <label class="pdp-vh" for="pdp-qty-a">Quantity</label>
+              <input class="pdp-qty-input" id="pdp-qty-a" type="number" inputmode="numeric" min="1" max="6" step="1" value="1" data-pdp-qty-input>
+              <button type="button" class="pdp-qty-btn" data-pdp-qty-up aria-label="Increase quantity">
+                <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <p class="pdp-qty-note" data-pdp-qty-note aria-live="polite">Limit 6 per order.</p>
+          </div>
+
+          <div class="pdp-qty-case">
+            <span class="pdp-case-label">Max reached</span>
+            <div class="pdp-qty" data-pdp-qty data-pdp-max="6">
+              <button type="button" class="pdp-qty-btn" data-pdp-qty-down aria-label="Decrease quantity">
+                <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><path d="M4 10h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+              <label class="pdp-vh" for="pdp-qty-b">Quantity</label>
+              <input class="pdp-qty-input" id="pdp-qty-b" type="number" inputmode="numeric" min="1" max="6" step="1" value="6" data-pdp-qty-input>
+              <button type="button" class="pdp-qty-btn" data-pdp-qty-up aria-label="Increase quantity" disabled>
+                <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <p class="pdp-qty-note is-max" data-pdp-qty-note aria-live="polite">You have reached the limit of 6 per order.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T324 Price block
+         ============================================================ -->
+    <article class="tb-pattern" id="T324" data-tid="T324">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T324</span>
+        <div>
+          <h2>Price block</h2>
+          <p>Every price presentation in one place: single, sale against RRP, per unit, from price for a variant range, and instalments.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pdp-price-grid">
+          <div class="pdp-price-case">
+            <span class="pdp-case-label">Single price</span>
+            <div class="pdp-price-row">
+              <span class="pdp-price">$189.00</span>
+            </div>
+            <p class="pdp-price-note">AUD, GST included.</p>
+          </div>
+
+          <div class="pdp-price-case">
+            <span class="pdp-case-label">Sale price</span>
+            <div class="pdp-price-row">
+              <span class="pdp-price">$189.00</span>
+              <span class="pdp-price-rrp"><span class="pdp-vh">Recommended retail price </span>$249.00</span>
+              <span class="pdp-badge-accent">24% off</span>
+            </div>
+            <p class="pdp-save">You save $60.00</p>
+          </div>
+
+          <div class="pdp-price-case">
+            <span class="pdp-case-label">Per unit</span>
+            <div class="pdp-price-row">
+              <span class="pdp-price">$29.00</span>
+              <span class="pdp-price-unit">2 pack</span>
+            </div>
+            <p class="pdp-price-note">$14.50 per pair.</p>
+          </div>
+
+          <div class="pdp-price-case">
+            <span class="pdp-case-label">From price</span>
+            <div class="pdp-price-row">
+              <span class="pdp-price-from">From</span>
+              <span class="pdp-price">$189.00</span>
+            </div>
+            <p class="pdp-price-note">Price varies by size: $189.00 to $209.00.</p>
+          </div>
+
+          <div class="pdp-price-case pdp-price-case-wide">
+            <span class="pdp-case-label">Instalments</span>
+            <div class="pdp-instal">
+              <span class="pdp-instal-mark" aria-hidden="true">4x</span>
+              <p class="pdp-instal-text">Or 4 interest free payments of <strong>$47.25</strong>, with the rest due fortnightly. <a class="pdp-inline-link" href="#T324">How it works</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T325 Stock and urgency
+         ============================================================ -->
+    <article class="tb-pattern" id="T325" data-tid="T325">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T325</span>
+        <div>
+          <h2>Stock and urgency</h2>
+          <p>The four availability cues: in stock, low stock with a count and a bar, out of stock with a notify action, and a live viewing count.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pdp-stock-grid">
+          <div class="pdp-stock pdp-stock-ok">
+            <span class="pdp-dot pdp-dot-ok" aria-hidden="true"></span>
+            <div>
+              <p class="pdp-stock-title">In stock</p>
+              <p class="pdp-stock-sub">Packed in Brunswick and posted today on orders placed before 2pm AEST.</p>
+            </div>
+          </div>
+
+          <div class="pdp-stock pdp-stock-low">
+            <span class="pdp-dot pdp-dot-warn" aria-hidden="true"></span>
+            <div class="pdp-stock-body">
+              <p class="pdp-stock-title">Only 4 left in Deep Navy, size M</p>
+              <div class="pdp-bar" role="img" aria-label="4 of 20 units remaining">
+                <span class="pdp-bar-fill" style="width:20%"></span>
+              </div>
+              <p class="pdp-stock-sub">The next knit run lands in late October.</p>
+            </div>
+          </div>
+
+          <div class="pdp-stock pdp-stock-out">
+            <span class="pdp-dot pdp-dot-err" aria-hidden="true"></span>
+            <div class="pdp-stock-body">
+              <p class="pdp-stock-title">Sold out in Moss</p>
+              <p class="pdp-stock-sub">Pick another colour, or we will email you the moment it is back.</p>
+              <button type="button" class="pdp-btn-ghost pdp-btn-sm" data-pdp-notify>
+                <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><path d="M10 3a4.5 4.5 0 00-4.5 4.5c0 3.4-1.5 4.6-1.5 4.6h12s-1.5-1.2-1.5-4.6A4.5 4.5 0 0010 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.4 15a1.8 1.8 0 003.2 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span data-pdp-notify-text>Notify me</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="pdp-stock pdp-stock-live">
+            <svg class="pdp-stock-icon" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false"><path d="M1.6 10S4.7 4.8 10 4.8 18.4 10 18.4 10 15.3 15.2 10 15.2 1.6 10 1.6 10z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="10" r="2.4" fill="currentColor"/></svg>
+            <div>
+              <p class="pdp-stock-title"><span data-pdp-viewers>12</span> people are viewing this right now</p>
+              <p class="pdp-stock-sub">7 sold in the last 24 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T326 Delivery estimator
+         ============================================================ -->
+    <article class="tb-pattern" id="T326" data-tid="T326">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T326</span>
+        <div>
+          <h2>Delivery estimator</h2>
+          <p>A postcode check that returns a delivery window and a shipping cost, with a result state and an error state below the field.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <form class="pdp-ship" data-pdp-ship novalidate>
+          <div class="pdp-ship-head">
+            <svg class="pdp-ship-icon" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false"><path d="M1.8 6.2h9.6v7.6H1.8zM11.4 8.6h3.4l2.6 2.6v2.6h-6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="5.4" cy="15" r="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="14.2" cy="15" r="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div>
+              <p class="pdp-ship-title">Estimate delivery</p>
+              <p class="pdp-ship-sub">Enter your postcode for a window and a cost on this item.</p>
+            </div>
+          </div>
+          <div class="pdp-ship-row">
+            <div class="pdp-field">
+              <label class="pdp-label" for="pdp-postcode">Postcode</label>
+              <input class="pdp-input" id="pdp-postcode" name="postcode" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="4" placeholder="3000" data-pdp-postcode aria-describedby="pdp-ship-out">
+            </div>
+            <button type="submit" class="pdp-btn pdp-btn-sm">Check</button>
+          </div>
+          <div class="pdp-ship-out" id="pdp-ship-out" data-pdp-ship-out aria-live="polite">
+            <p class="pdp-ship-hint">Try 3000, 6000 or 0800 to see a result. Anything that is not four digits shows the error state.</p>
+          </div>
+        </form>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T327 Sticky add to cart bar
+         ============================================================ -->
+    <article class="tb-pattern" id="T327" data-tid="T327">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T327</span>
+        <div>
+          <h2>Sticky add to cart bar</h2>
+          <p>The bar that slides in once the buy box scrolls away. Demoed inside a bounded panel: scroll the panel or use the toggle.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pdp-sticky-demo">
+          <div class="pdp-sticky-tools">
+            <button type="button" class="pdp-btn-ghost pdp-btn-sm" data-pdp-sticky-toggle aria-pressed="false" aria-controls="pdp-sticky-bar">
+              <span data-pdp-sticky-toggle-text>Show the bar</span>
+            </button>
+            <span class="pdp-hint">In production this bar is <code>position:fixed</code> at the bottom of the viewport. Here it is pinned to the preview panel instead.</span>
+          </div>
+          <div class="pdp-sticky-frame">
+            <div class="pdp-sticky-stage" data-pdp-sticky-stage tabindex="0" role="region" aria-label="Scrollable product page preview">
+              <div class="pdp-sticky-page">
+              <div class="pdp-sticky-buybox">
+                <p class="pdp-eyebrow">Yarra Made</p>
+                <h4 class="pdp-sticky-h">Wanderer Merino Zip Hood</h4>
+                <div class="pdp-price-row"><span class="pdp-price">$189.00</span><span class="pdp-price-rrp">$249.00</span></div>
+                <span class="pdp-btn pdp-btn-static" aria-hidden="true">Add to cart</span>
+              </div>
+              <p class="pdp-sticky-copy">Knitted from 19.5 micron Australian merino at a mill in Brunswick, the Wanderer is the piece we reach for between April and September.</p>
+              <p class="pdp-sticky-copy">The body is a relaxed cut with a dropped shoulder, so a flannel underneath does not pull at the seam. The hood is lined in soft jersey and sits close enough to stay up in wind.</p>
+              <p class="pdp-sticky-copy">Every hood is finished by hand, checked for stitch density, and packed in a paper mailer. Keep scrolling and the sticky bar appears.</p>
+              <p class="pdp-sticky-copy">Wash it cold on a wool cycle, dry it flat in the shade, and it will outlast anything else in the bag.</p>
+              </div>
+            </div>
+            <div class="pdp-sticky-bar" id="pdp-sticky-bar" data-pdp-sticky-bar aria-hidden="true" inert>
+              <span class="pdp-sticky-thumb" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))" aria-hidden="true"></span>
+              <div class="pdp-sticky-meta">
+                <span class="pdp-sticky-name">Wanderer Merino Zip Hood</span>
+                <span class="pdp-sticky-variant">Deep Navy, size M, qty 1</span>
+              </div>
+              <span class="pdp-sticky-price">$189.00</span>
+              <button type="button" class="pdp-btn pdp-btn-sm" data-pdp-atc>
+                <span data-pdp-atc-text>Add to cart</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T328 Product accordion
+         ============================================================ -->
+    <article class="tb-pattern" id="T328" data-tid="T328">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T328</span>
+        <div>
+          <h2>Product accordion</h2>
+          <p>Description, specifications, shipping and returns as native disclosures, so they open with JavaScript off and still animate the marker.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pdp-acc">
+          <details class="pdp-acc-item" open>
+            <summary class="pdp-acc-sum">
+              <span>Description</span>
+              <svg class="pdp-acc-mark" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="pdp-acc-body">
+              <p>The Wanderer is a heavyweight merino hood built for shoulder season: cold mornings, warm afternoons, and the drive in between. The yarn is spun from 19.5 micron Australian wool and knitted at a family mill in Brunswick.</p>
+              <p>A two way zip lets you open the hem while seated without losing the collar. The kangaroo pocket is deep enough for a phone and a set of keys, and the cuffs are ribbed tight so they hold a glove line.</p>
+            </div>
+          </details>
+          <details class="pdp-acc-item">
+            <summary class="pdp-acc-sum">
+              <span>Specifications</span>
+              <svg class="pdp-acc-mark" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="pdp-acc-body">
+              <dl class="pdp-dl">
+                <div><dt>Fabric</dt><dd>100% Australian merino, 19.5 micron</dd></div>
+                <div><dt>Weight</dt><dd>480 g in size M</dd></div>
+                <div><dt>Fit</dt><dd>Relaxed, dropped shoulder</dd></div>
+                <div><dt>Made in</dt><dd>Brunswick, Victoria</dd></div>
+              </dl>
+            </div>
+          </details>
+          <details class="pdp-acc-item">
+            <summary class="pdp-acc-sum">
+              <span>Shipping</span>
+              <svg class="pdp-acc-mark" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="pdp-acc-body">
+              <p>Standard post is $9.95 and free on orders over $200. Express is $14.95 and lands next business day across the east coast capitals.</p>
+              <p>Orders placed before 2pm AEST on a business day leave the same afternoon. Every parcel ships with tracking, and we email the number as soon as it scans.</p>
+            </div>
+          </details>
+          <details class="pdp-acc-item">
+            <summary class="pdp-acc-sum">
+              <span>Returns</span>
+              <svg class="pdp-acc-mark" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="pdp-acc-body">
+              <p>Send it back within 60 days, unworn and with the tag on, for a refund or an exchange. We cover return post on the first exchange of any order.</p>
+              <p>Faulty in the first three years? We repair it, and replace it if the repair will not hold. Nothing here limits your rights under Australian Consumer Law.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T329 Guarantee row
+         ============================================================ -->
+    <article class="tb-pattern" id="T329" data-tid="T329">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T329</span>
+        <div>
+          <h2>Guarantee row</h2>
+          <p>Four reassurance tiles under the buy box: shipping, returns, warranty and secure payment, each an icon with one line of proof.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <ul class="pdp-guarantees">
+          <li class="pdp-guarantee">
+            <span class="pdp-guarantee-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M2.5 7.5h11v9h-11zM13.5 10.5h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="18" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+            <div>
+              <p class="pdp-guarantee-label">Free post over $200</p>
+              <p class="pdp-guarantee-sub">Tracked standard post, Australia wide.</p>
+            </div>
+          </li>
+          <li class="pdp-guarantee">
+            <span class="pdp-guarantee-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M4 9.5a8 8 0 0113.6-3.3M20 14.5A8 8 0 016.4 17.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3.4 4.8v4.9h4.9M20.6 19.2v-4.9h-4.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <p class="pdp-guarantee-label">60 day returns</p>
+              <p class="pdp-guarantee-sub">Return post is on us for a first exchange.</p>
+            </div>
+          </li>
+          <li class="pdp-guarantee">
+            <span class="pdp-guarantee-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M12 3l7 2.6v6c0 4.4-3 7.6-7 9.4-4-1.8-7-5-7-9.4v-6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <p class="pdp-guarantee-label">3 year warranty</p>
+              <p class="pdp-guarantee-sub">We repair the fault, or replace the piece.</p>
+            </div>
+          </li>
+          <li class="pdp-guarantee">
+            <span class="pdp-guarantee-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><rect x="4" y="10" width="16" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7.6a4 4 0 018 0V10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="15" r="1.4" fill="currentColor"/></svg>
+            </span>
+            <div>
+              <p class="pdp-guarantee-label">Secure payment</p>
+              <p class="pdp-guarantee-sub">Card details go straight to the gateway.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T330 Bundle and save
+         ============================================================ -->
+    <article class="tb-pattern" id="T330" data-tid="T330">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T330</span>
+        <div>
+          <h2>Bundle and save</h2>
+          <p>Three products bought together at a combined price, with a checkbox per item that recalculates the total, the saving and the button.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pdp-bundle" data-pdp-bundle>
+          <div class="pdp-bundle-items">
+            <label class="pdp-bundle-item">
+              <span class="pdp-bundle-thumb" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))" aria-hidden="true"></span>
+              <span class="pdp-bundle-info">
+                <span class="pdp-bundle-name">Wanderer Merino Zip Hood</span>
+                <span class="pdp-bundle-variant">Deep Navy, size M</span>
+                <span class="pdp-bundle-price">$189.00</span>
+              </span>
+              <input class="pdp-check" type="checkbox" data-pdp-bundle-item data-pdp-price="189" checked>
+            </label>
+            <span class="pdp-bundle-plus" aria-hidden="true">
+              <svg viewBox="0 0 20 20" width="18" height="18" focusable="false"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <label class="pdp-bundle-item">
+              <span class="pdp-bundle-thumb" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))" aria-hidden="true"></span>
+              <span class="pdp-bundle-info">
+                <span class="pdp-bundle-name">Kelp Merino Beanie</span>
+                <span class="pdp-bundle-variant">One size</span>
+                <span class="pdp-bundle-price">$39.00</span>
+              </span>
+              <input class="pdp-check" type="checkbox" data-pdp-bundle-item data-pdp-price="39" checked>
+            </label>
+            <span class="pdp-bundle-plus" aria-hidden="true">
+              <svg viewBox="0 0 20 20" width="18" height="18" focusable="false"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <label class="pdp-bundle-item">
+              <span class="pdp-bundle-thumb" style="background:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))" aria-hidden="true"></span>
+              <span class="pdp-bundle-info">
+                <span class="pdp-bundle-name">Tussock Wool Socks</span>
+                <span class="pdp-bundle-variant">2 pack, size 8 to 11</span>
+                <span class="pdp-bundle-price">$29.00</span>
+              </span>
+              <input class="pdp-check" type="checkbox" data-pdp-bundle-item data-pdp-price="29" checked>
+            </label>
+          </div>
+          <div class="pdp-bundle-total">
+            <div>
+              <p class="pdp-bundle-total-label">Buy all three</p>
+              <p class="pdp-bundle-total-row">
+                <span class="pdp-price" data-pdp-bundle-price>$231.30</span>
+                <span class="pdp-price-rrp" data-pdp-bundle-rrp>$257.00</span>
+              </p>
+              <p class="pdp-save" data-pdp-bundle-save>You save $25.70</p>
+            </div>
+            <button type="button" class="pdp-btn" data-pdp-bundle-add>
+              <span data-pdp-bundle-add-text>Add 3 items to cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T331 Cross sell rail
+         ============================================================ -->
+    <article class="tb-pattern" id="T331" data-tid="T331">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T331</span>
+        <div>
+          <h2>Cross sell rail</h2>
+          <p>A horizontally scrollable goes well with rail of compact cards, each carrying a quick add button and snap alignment.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <section class="pdp-rail-wrap" aria-labelledby="pdp-rail-title">
+          <div class="pdp-rail-head">
+            <h4 class="pdp-rail-title" id="pdp-rail-title">Goes well with</h4>
+            <div class="pdp-rail-nav">
+              <button type="button" class="pdp-rail-btn" data-pdp-rail-prev aria-label="Scroll the rail left">
+                <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><path d="M12 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button type="button" class="pdp-rail-btn" data-pdp-rail-next aria-label="Scroll the rail right">
+                <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+          <ul class="pdp-rail" data-pdp-rail tabindex="0" role="list" aria-label="Recommended products">
+            <li class="pdp-rail-card">
+              <span class="pdp-rail-thumb" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))" aria-hidden="true"></span>
+              <span class="pdp-rail-name">Kelp Merino Beanie</span>
+              <span class="pdp-rail-meta">4.8 from 96 reviews</span>
+              <span class="pdp-rail-price">$39.00</span>
+              <button type="button" class="pdp-btn-ghost pdp-btn-sm pdp-rail-add" data-pdp-quickadd>
+                <span data-pdp-quickadd-text>Quick add</span>
+              </button>
+            </li>
+            <li class="pdp-rail-card">
+              <span class="pdp-rail-thumb" style="background:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))" aria-hidden="true"></span>
+              <span class="pdp-rail-name">Tussock Wool Socks</span>
+              <span class="pdp-rail-meta">4.6 from 212 reviews</span>
+              <span class="pdp-rail-price">$29.00</span>
+              <button type="button" class="pdp-btn-ghost pdp-btn-sm pdp-rail-add" data-pdp-quickadd>
+                <span data-pdp-quickadd-text>Quick add</span>
+              </button>
+            </li>
+            <li class="pdp-rail-card">
+              <span class="pdp-rail-thumb" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))" aria-hidden="true"></span>
+              <span class="pdp-rail-name">Roll Top Dry Bag 8L</span>
+              <span class="pdp-rail-meta">4.7 from 54 reviews</span>
+              <span class="pdp-rail-price">$34.00</span>
+              <button type="button" class="pdp-btn-ghost pdp-btn-sm pdp-rail-add" data-pdp-quickadd>
+                <span data-pdp-quickadd-text>Quick add</span>
+              </button>
+            </li>
+            <li class="pdp-rail-card">
+              <span class="pdp-rail-thumb" style="background:linear-gradient(135deg,var(--accent-wash),var(--accent-wash-2))" aria-hidden="true"></span>
+              <span class="pdp-rail-name">Enamel Camp Mug 350mL</span>
+              <span class="pdp-rail-meta">4.9 from 143 reviews</span>
+              <span class="pdp-rail-price">$22.00</span>
+              <button type="button" class="pdp-btn-ghost pdp-btn-sm pdp-rail-add" data-pdp-quickadd>
+                <span data-pdp-quickadd-text>Quick add</span>
+              </button>
+            </li>
+            <li class="pdp-rail-card">
+              <span class="pdp-rail-thumb" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))" aria-hidden="true"></span>
+              <span class="pdp-rail-name">Waxed Cotton Cap</span>
+              <span class="pdp-rail-meta">4.4 from 38 reviews</span>
+              <span class="pdp-rail-price">$45.00</span>
+              <button type="button" class="pdp-btn-ghost pdp-btn-sm pdp-rail-add" data-pdp-quickadd>
+                <span data-pdp-quickadd-text>Quick add</span>
+              </button>
+            </li>
+            <li class="pdp-rail-card">
+              <span class="pdp-rail-thumb" style="background:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))" aria-hidden="true"></span>
+              <span class="pdp-rail-name">Merino Neck Gaiter</span>
+              <span class="pdp-rail-meta">4.5 from 71 reviews</span>
+              <span class="pdp-rail-price">$32.00</span>
+              <button type="button" class="pdp-btn-ghost pdp-btn-sm pdp-rail-add" data-pdp-quickadd>
+                <span data-pdp-quickadd-text>Quick add</span>
+              </button>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T332 Specification table
+         ============================================================ -->
+    <article class="tb-pattern" id="T332" data-tid="T332">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T332</span>
+        <div>
+          <h2>Specification table</h2>
+          <p>A two column spec table with a size guide link that opens a native dialog holding the measurements table.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="pdp-spec">
+          <div class="pdp-spec-head">
+            <h4 class="pdp-spec-title">Specifications</h4>
+            <button type="button" class="pdp-btn-ghost pdp-btn-sm" data-pdp-sizeguide-open aria-haspopup="dialog">
+              <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2.5 7.5h15v5h-15zM6 7.5v2.6M10 7.5v3.4M14 7.5v2.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Size guide</span>
+            </button>
+          </div>
+          <table class="pdp-table">
+            <caption class="pdp-vh">Specifications for the Wanderer Merino Zip Hood</caption>
+            <tbody>
+              <tr><th scope="row">Fabric</th><td>100% Australian merino, 19.5 micron</td></tr>
+              <tr><th scope="row">Knit weight</th><td>380 gsm, double faced</td></tr>
+              <tr><th scope="row">Garment weight</th><td>480 g in size M</td></tr>
+              <tr><th scope="row">Fit</th><td>Relaxed with a dropped shoulder. Take one size down for a trim fit.</td></tr>
+              <tr><th scope="row">Hardware</th><td>Two way locking zip, matte antique finish</td></tr>
+              <tr><th scope="row">Care</th><td>Machine wash cold on a wool cycle. Dry flat in the shade.</td></tr>
+              <tr><th scope="row">Made in</th><td>Brunswick, Victoria</td></tr>
+              <tr><th scope="row">Product code</th><td><code class="pdp-sku">YM-WMZ-NVY</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <dialog class="pdp-dialog" data-pdp-sizeguide aria-labelledby="pdp-sizeguide-title">
+          <div class="pdp-dialog-head">
+            <h4 class="pdp-dialog-title" id="pdp-sizeguide-title">Size guide</h4>
+            <form method="dialog">
+              <button type="submit" class="pdp-dialog-close" aria-label="Close the size guide">
+                <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+            </form>
+          </div>
+          <div class="pdp-dialog-body">
+            <p class="pdp-dialog-sub">Garment measurements in centimetres, taken flat. Chest is measured 2 cm below the armhole and doubled.</p>
+            <table class="pdp-table pdp-table-grid">
+              <caption class="pdp-vh">Garment measurements by size, in centimetres</caption>
+              <thead>
+                <tr><th scope="col">Size</th><th scope="col">Chest</th><th scope="col">Body length</th><th scope="col">Sleeve</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">XS</th><td>96</td><td>64</td><td>60</td></tr>
+                <tr><th scope="row">S</th><td>102</td><td>66</td><td>61</td></tr>
+                <tr><th scope="row">M</th><td>108</td><td>68</td><td>62</td></tr>
+                <tr><th scope="row">L</th><td>114</td><td>70</td><td>63</td></tr>
+                <tr><th scope="row">XL</th><td>120</td><td>72</td><td>64</td></tr>
+              </tbody>
+            </table>
+            <p class="pdp-dialog-note">Between two sizes? The Wanderer is cut generously, so most people take the smaller one.</p>
+          </div>
+        </dialog>
+      </div>
+    </article>
+
+  </main>
+
+  <style>
+    /* ============================================================
+       Product page blocks. Every colour, font, radius and border
+       weight below is a token, so the page reskins with the theme
+       switch. Prefix on this page: pdp-
+       ============================================================ */
+
+    /* ---- shared primitives ---- */
+    .pdp-vh { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+    [class^="pdp-"]:focus-visible, [class*=" pdp-"]:focus-visible { outline: var(--focus-ring); outline-offset:2px; }
+    /* The hidden radios carry their focus ring on the swatch or pill instead. */
+    .pdp-vh:focus-visible { outline:none; }
+
+    .pdp-eyebrow { font-family:var(--font-eyebrow); font-size:12px; letter-spacing:var(--eyebrow-tracking); text-transform:var(--eyebrow-transform); color:var(--accent); margin:0 0 8px; }
+    .pdp-case-label { display:block; font-family:var(--font-eyebrow); font-size:11px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-4); margin-bottom:10px; }
+    .pdp-hint { font-family:var(--font-body); font-size:13px; line-height:1.5; color:var(--text-3); }
+    .pdp-inline-link { color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+
+    .pdp-btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:48px; padding:0 22px; background:var(--accent); color:var(--accent-ink); border:var(--line-weight) solid var(--accent); border-radius:var(--radius-btn); font-family:var(--font-ui); font-size:15px; font-weight:var(--button-weight); letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; }
+    .pdp-btn:hover { background:var(--accent-deep); border-color:var(--accent-deep); }
+    .pdp-btn.is-done { background:var(--ok); border-color:var(--ok); color:var(--status-ink); }
+    .pdp-btn-static { cursor:default; }
+    .pdp-btn-ghost { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:48px; padding:0 20px; background:transparent; color:var(--text); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-btn); font-family:var(--font-ui); font-size:14px; letter-spacing:var(--button-tracking); text-transform:var(--button-transform); cursor:pointer; }
+    .pdp-btn-ghost:hover { border-color:var(--accent); color:var(--accent); }
+    .pdp-btn-ghost[aria-pressed="true"] { border-color:var(--accent); color:var(--accent); background:var(--accent-faint); }
+    .pdp-btn-sm { min-height:48px; padding:0 16px; font-size:13px; }
+    .pdp-btn:disabled, .pdp-btn-ghost:disabled { opacity:.45; cursor:not-allowed; }
+
+    .pdp-price-row { display:flex; flex-wrap:wrap; align-items:baseline; gap:10px; margin:0 0 6px; }
+    .pdp-price { font-family:var(--font-ui); font-size:28px; font-weight:600; color:var(--text); font-variant-numeric:tabular-nums; }
+    .pdp-price-rrp { font-family:var(--font-ui); font-size:15px; color:var(--text-4); text-decoration:line-through; }
+    .pdp-price-unit { font-family:var(--font-ui); font-size:13px; color:var(--text-3); }
+    .pdp-price-from { font-family:var(--font-ui); font-size:14px; color:var(--text-3); }
+    .pdp-price-note { font-family:var(--font-body); font-size:13px; color:var(--text-3); margin:0 0 14px; }
+    .pdp-save { display:inline-block; font-family:var(--font-ui); font-size:13px; color:var(--ok); background:var(--ok-wash); border-radius:var(--radius-pill); padding:4px 12px; margin:0; }
+    .pdp-badge-accent { font-family:var(--font-ui); font-size:12px; letter-spacing:.04em; color:var(--sale-ink); background:var(--sale); border-radius:var(--radius-pill); padding:4px 11px; }
+
+    .pdp-stars { position:relative; display:inline-block; line-height:0; color:var(--rating-empty); }
+    .pdp-stars-bg, .pdp-stars-fg { display:flex; gap:2px; }
+    .pdp-stars-fg { position:absolute; inset:0; overflow:hidden; color:var(--rating); }
+
+    /* ---- T320 gallery ---- */
+    .pdp-gallery { display:grid; grid-template-columns:1fr; gap:12px; max-width:460px; }
+    .pdp-gal-stage { position:relative; aspect-ratio:4/5; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); overflow:hidden; background:var(--bg-3); }
+    .pdp-gal-img { position:absolute; inset:0; transition:transform .35s ease; transform-origin:60% 40%; }
+    .pdp-gal-stage.is-zoomed .pdp-gal-img { transform:scale(1.7); }
+    .pdp-gal-caption { position:absolute; left:12px; bottom:12px; font-family:var(--font-ui); font-size:12px; color:var(--text); background:var(--bg-2); border:var(--line-weight) solid var(--border); border-radius:var(--radius-pill); padding:6px 12px; }
+    .pdp-gal-count { position:absolute; left:12px; top:12px; font-family:var(--font-mono); font-size:11px; color:var(--text-2); background:var(--bg-2); border:var(--line-weight) solid var(--border); border-radius:var(--radius-pill); padding:5px 10px; }
+    .pdp-gal-zoom { position:absolute; right:12px; top:12px; display:inline-flex; align-items:center; gap:8px; min-height:48px; padding:0 14px; font-family:var(--font-ui); font-size:12px; letter-spacing:var(--button-tracking); text-transform:var(--button-transform); color:var(--text); background:var(--bg-2); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-pill); cursor:pointer; }
+    .pdp-gal-zoom:hover { border-color:var(--accent); color:var(--accent); }
+    .pdp-gal-zoom[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
+    .pdp-gal-rail { display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; }
+    .pdp-gal-thumb { padding:0; background:none; border:var(--line-weight) solid var(--border); border-radius:var(--radius); overflow:hidden; cursor:pointer; aspect-ratio:1/1; min-height:64px; }
+    .pdp-gal-thumb:hover { border-color:var(--border-3); }
+    .pdp-gal-thumb[aria-pressed="true"] { border-color:var(--accent); box-shadow:0 0 0 2px var(--accent-faint); }
+    .pdp-gal-chip { display:block; width:100%; height:100%; }
+
+    /* ---- T321 buy box ---- */
+    .pdp-buy-layout { display:grid; grid-template-columns:minmax(220px, 340px) 1fr; gap:28px; align-items:start; }
+    .pdp-buy-media { aspect-ratio:4/5; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); }
+    .pdp-title { font-family:var(--font-display); font-size:26px; color:var(--text); margin:0 0 12px; }
+    .pdp-rating { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+    .pdp-rating-num { font-family:var(--font-ui); font-size:14px; color:var(--text-2); }
+    .pdp-rating-link { font-family:var(--font-ui); font-size:14px; color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+    .pdp-lede { font-family:var(--font-body); font-size:15px; line-height:1.65; color:var(--text-2); margin:14px 0 12px; max-width:56ch; }
+    .pdp-lede-list { margin:0 0 20px; padding-left:20px; font-family:var(--font-body); font-size:14px; line-height:1.7; color:var(--text-3); }
+    .pdp-buy-actions { display:flex; flex-wrap:wrap; gap:12px; }
+    .pdp-buy-actions .pdp-btn { flex:1 1 200px; }
+
+    /* ---- T322 variants ---- */
+    .pdp-variants { display:flex; flex-direction:column; gap:26px; max-width:620px; }
+    .pdp-fieldset { border:0; margin:0; padding:0; }
+    .pdp-legend { display:flex; align-items:baseline; gap:10px; padding:0; margin-bottom:12px; font-family:var(--font-eyebrow); font-size:12px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-4); }
+    .pdp-legend-value { font-family:var(--font-ui); font-size:14px; letter-spacing:normal; text-transform:none; color:var(--text); }
+    .pdp-swatches { display:flex; flex-wrap:wrap; gap:16px; }
+    .pdp-swatch { display:flex; flex-direction:column; align-items:center; gap:7px; width:76px; cursor:pointer; }
+    .pdp-swatch-dot { width:46px; height:46px; border-radius:var(--radius-pill); background:var(--pdp-sw); border:var(--line-weight) solid var(--border-2); box-shadow:inset 0 0 0 3px var(--bg-2); }
+    .pdp-swatch:hover .pdp-swatch-dot { border-color:var(--text-3); }
+    .pdp-swatch:has(input:checked) .pdp-swatch-dot { border-color:var(--accent); border-width:3px; }
+    .pdp-swatch-name { font-family:var(--font-ui); font-size:12px; color:var(--text-2); text-align:center; }
+    .pdp-swatch:has(input:checked) .pdp-swatch-name { color:var(--text); }
+    .pdp-swatch.is-soldout { cursor:not-allowed; }
+    .pdp-swatch.is-soldout .pdp-swatch-dot { opacity:.4; position:relative; }
+    .pdp-swatch.is-soldout .pdp-swatch-dot::after { content:""; position:absolute; left:-2px; right:-2px; top:50%; height:var(--line-weight); background:var(--text-3); transform:rotate(-45deg); }
+    .pdp-swatch.is-soldout .pdp-swatch-name { color:var(--text-4); }
+    .pdp-swatch-flag { display:block; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--err); }
+    .pdp-swatch input:focus-visible + .pdp-swatch-dot { outline: var(--focus-ring); outline-offset:3px; }
+
+    .pdp-sizes { display:flex; flex-wrap:wrap; gap:10px; }
+    .pdp-size { position:relative; display:inline-flex; align-items:center; justify-content:center; min-width:56px; min-height:48px; padding:0 14px; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius); font-family:var(--font-ui); font-size:14px; color:var(--text-2); background:var(--bg-card); cursor:pointer; }
+    .pdp-size:hover { border-color:var(--text-3); color:var(--text); }
+    .pdp-size:has(input:checked) { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
+    .pdp-size.is-unavailable, .pdp-size.is-soldout { cursor:not-allowed; color:var(--text-4); background:var(--bg-3); border-style:dashed; }
+    .pdp-size.is-soldout { border-style:solid; }
+    .pdp-size.is-soldout::after { content:""; position:absolute; left:6px; right:6px; top:50%; height:var(--line-weight); background:var(--text-4); transform:rotate(-18deg); }
+    .pdp-size input:focus-visible + span { outline: var(--focus-ring); outline-offset:6px; }
+    .pdp-key { display:flex; flex-wrap:wrap; gap:16px; list-style:none; margin:14px 0 0; padding:0; font-family:var(--font-ui); font-size:12px; color:var(--text-3); }
+    .pdp-key li { display:flex; align-items:center; gap:7px; }
+    .pdp-key-dot { width:14px; height:14px; border-radius:var(--radius-sm); border:var(--line-weight) solid var(--border-2); }
+    .pdp-key-sel { background:var(--accent); border-color:var(--accent); }
+    .pdp-key-una { background:var(--bg-3); border-style:dashed; }
+    .pdp-key-out { background:var(--bg-3); position:relative; overflow:hidden; }
+    .pdp-key-out::after { content:""; position:absolute; left:-2px; right:-2px; top:50%; height:var(--line-weight); background:var(--text-4); transform:rotate(-38deg); }
+    .pdp-variant-live { font-family:var(--font-ui); font-size:13px; color:var(--text-2); background:var(--bg-3); border:var(--line-weight) solid var(--border); border-radius:var(--radius); padding:10px 14px; margin:0; }
+
+    /* ---- T323 quantity ---- */
+    .pdp-qty-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:24px; }
+    .pdp-qty { display:inline-flex; align-items:center; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius); background:var(--bg-card); overflow:hidden; }
+    .pdp-qty-btn { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; background:transparent; border:0; color:var(--text); cursor:pointer; }
+    .pdp-qty-btn:hover:not(:disabled) { background:var(--accent-faint); color:var(--accent); }
+    .pdp-qty-btn:disabled { color:var(--text-4); cursor:not-allowed; }
+    .pdp-qty-input { width:64px; height:48px; text-align:center; border:0; border-left:var(--line-weight) solid var(--border); border-right:var(--line-weight) solid var(--border); background:var(--bg-card); color:var(--text); font-family:var(--font-ui); font-size:16px; font-variant-numeric:tabular-nums; -moz-appearance:textfield; }
+    .pdp-qty-input::-webkit-outer-spin-button, .pdp-qty-input::-webkit-inner-spin-button { -webkit-appearance:none; margin:0; }
+    .pdp-qty-input:focus-visible { outline: var(--focus-ring); outline-offset:-2px; }
+    .pdp-qty-note { font-family:var(--font-body); font-size:13px; color:var(--text-3); margin:10px 0 0; }
+    .pdp-qty-note.is-max { color:var(--warn); }
+
+    /* ---- T324 price block ---- */
+    .pdp-price-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:18px; }
+    .pdp-price-case { border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:18px; }
+    .pdp-price-case .pdp-price-note { margin-bottom:0; }
+    .pdp-price-case-wide { grid-column:1 / -1; }
+    .pdp-instal { display:flex; align-items:center; gap:14px; }
+    .pdp-instal-mark { flex:none; display:inline-flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:var(--radius-pill); background:var(--accent); color:var(--accent-ink); font-family:var(--font-ui); font-size:15px; font-weight:600; }
+    .pdp-instal-text { font-family:var(--font-body); font-size:14px; line-height:1.6; color:var(--text-2); margin:0; }
+    .pdp-instal-text strong { color:var(--text); }
+
+    /* ---- T325 stock ---- */
+    .pdp-stock-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(330px, 1fr)); gap:16px; }
+    .pdp-stock { display:flex; align-items:flex-start; gap:12px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:16px; }
+    .pdp-stock-body { flex:1; min-width:0; }
+    .pdp-stock-title { font-family:var(--font-ui); font-size:14px; color:var(--text); margin:0 0 4px; }
+    .pdp-stock-sub { font-family:var(--font-body); font-size:13px; line-height:1.55; color:var(--text-3); margin:0; }
+    .pdp-stock-icon { flex:none; color:var(--accent); margin-top:2px; }
+    .pdp-dot { flex:none; width:10px; height:10px; border-radius:var(--radius-pill); margin-top:6px; }
+    .pdp-dot-ok { background:var(--ok); }
+    .pdp-dot-warn { background:var(--warn); }
+    .pdp-dot-err { background:var(--err); }
+    .pdp-stock-low { background:var(--warn-wash); border-color:var(--warn); }
+    .pdp-stock-low .pdp-stock-title { color:var(--warn); }
+    .pdp-stock-out { background:var(--err-wash); border-color:var(--err); }
+    .pdp-stock-out .pdp-stock-title { color:var(--err); }
+    .pdp-stock-live { background:var(--accent-wash); }
+    .pdp-bar { height:8px; border-radius:var(--radius-pill); background:var(--bg-3); overflow:hidden; margin:8px 0; }
+    .pdp-bar-fill { display:block; height:100%; background:var(--warn); }
+    .pdp-stock-out .pdp-btn-ghost { margin-top:12px; }
+
+    /* ---- T326 delivery ---- */
+    .pdp-ship { max-width:520px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:20px; }
+    .pdp-ship-head { display:flex; align-items:flex-start; gap:12px; margin-bottom:16px; }
+    .pdp-ship-icon { flex:none; color:var(--accent); margin-top:2px; }
+    .pdp-ship-title { font-family:var(--font-ui); font-size:15px; color:var(--text); margin:0 0 4px; }
+    .pdp-ship-sub { font-family:var(--font-body); font-size:13px; color:var(--text-3); margin:0; }
+    .pdp-ship-row { display:flex; align-items:flex-end; gap:10px; flex-wrap:wrap; }
+    .pdp-field { flex:1 1 160px; }
+    .pdp-label { display:block; font-family:var(--font-eyebrow); font-size:11px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-4); margin-bottom:6px; }
+    .pdp-input { width:100%; height:48px; padding:0 14px; background:var(--bg-3); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius); color:var(--text); font-family:var(--font-ui); font-size:15px; }
+    .pdp-input::placeholder { color:var(--text-4); }
+    .pdp-input:focus-visible { outline: var(--focus-ring); outline-offset:1px; }
+    .pdp-input.is-error { border-color:var(--err); }
+    .pdp-ship-out { margin-top:14px; }
+    .pdp-ship-hint { font-family:var(--font-body); font-size:13px; color:var(--text-4); margin:0; }
+    .pdp-ship-result { border:var(--line-weight) solid var(--ok); background:var(--ok-wash); border-radius:var(--radius); padding:12px 14px; }
+    .pdp-ship-result p { margin:0; font-family:var(--font-body); font-size:13px; color:var(--text-2); }
+    .pdp-ship-result .pdp-ship-window { font-family:var(--font-ui); font-size:14px; color:var(--ok); margin-bottom:4px; }
+    .pdp-ship-error { display:flex; align-items:flex-start; gap:9px; border:var(--line-weight) solid var(--err); background:var(--err-wash); border-radius:var(--radius); padding:12px 14px; font-family:var(--font-body); font-size:13px; color:var(--err); }
+
+    /* ---- T327 sticky bar ---- */
+    .pdp-sticky-demo { display:flex; flex-direction:column; gap:14px; }
+    .pdp-sticky-tools { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+    /* The frame is the bounded stand in for the viewport: the bar pins to its
+       bottom edge while the stage scrolls behind it. */
+    .pdp-sticky-frame { position:relative; overflow:hidden; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg); }
+    .pdp-sticky-stage { height:320px; overflow-y:auto; }
+    .pdp-sticky-page { padding:22px 22px 90px; }
+    .pdp-sticky-buybox { border:var(--line-weight) solid var(--border); border-radius:var(--radius); background:var(--bg-card); padding:18px; margin-bottom:18px; }
+    .pdp-sticky-h { font-family:var(--font-display); font-size:20px; color:var(--text); margin:0 0 10px; }
+    .pdp-sticky-buybox .pdp-btn { margin-top:10px; }
+    .pdp-sticky-copy { font-family:var(--font-body); font-size:14px; line-height:1.7; color:var(--text-3); margin:0 0 14px; max-width:62ch; }
+    .pdp-sticky-bar { position:absolute; left:0; right:0; bottom:0; display:flex; align-items:center; gap:14px; padding:12px 16px; background:var(--bg-2); border-top:var(--line-weight) solid var(--border-2); transform:translateY(110%); transition:transform .28s ease; }
+    .pdp-sticky-bar.is-visible { transform:translateY(0); }
+    .pdp-sticky-thumb { flex:none; width:44px; height:44px; border-radius:var(--radius-sm); border:var(--line-weight) solid var(--border); }
+    .pdp-sticky-meta { flex:1; min-width:0; display:flex; flex-direction:column; gap:2px; }
+    .pdp-sticky-name { font-family:var(--font-ui); font-size:14px; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .pdp-sticky-variant { font-family:var(--font-body); font-size:12px; color:var(--text-3); }
+    .pdp-sticky-price { font-family:var(--font-ui); font-size:16px; font-weight:600; color:var(--text); font-variant-numeric:tabular-nums; }
+    @media (prefers-reduced-motion: reduce) { .pdp-sticky-bar, .pdp-gal-img, .pdp-acc-mark { transition:none; } }
+
+    /* ---- T328 accordion ---- */
+    .pdp-acc { border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); overflow:hidden; max-width:760px; }
+    .pdp-acc-item + .pdp-acc-item { border-top:var(--line-weight) solid var(--border); }
+    .pdp-acc-sum { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:56px; padding:14px 18px; cursor:pointer; list-style:none; font-family:var(--font-ui); font-size:15px; color:var(--text); }
+    .pdp-acc-sum::-webkit-details-marker { display:none; }
+    .pdp-acc-sum:hover { color:var(--accent); }
+    .pdp-acc-mark { flex:none; color:var(--text-3); transition:transform .25s ease; }
+    .pdp-acc-item[open] .pdp-acc-mark { transform:rotate(180deg); color:var(--accent); }
+    .pdp-acc-body { padding:0 18px 18px; }
+    .pdp-acc-body p { font-family:var(--font-body); font-size:14px; line-height:1.7; color:var(--text-2); margin:0 0 12px; max-width:66ch; }
+    .pdp-acc-body p:last-child { margin-bottom:0; }
+    .pdp-dl { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:10px 24px; margin:0; }
+    .pdp-dl div { display:flex; justify-content:space-between; gap:16px; border-bottom:var(--line-weight) solid var(--border); padding-bottom:8px; }
+    .pdp-dl dt { font-family:var(--font-ui); font-size:13px; color:var(--text-3); }
+    .pdp-dl dd { font-family:var(--font-ui); font-size:13px; color:var(--text); margin:0; text-align:right; }
+
+    /* ---- T329 guarantees ---- */
+    .pdp-guarantees { display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:14px; list-style:none; margin:0; padding:0; }
+    .pdp-guarantee { display:flex; align-items:flex-start; gap:12px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:16px; }
+    .pdp-guarantee-icon { flex:none; display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:var(--radius-pill); background:var(--accent-wash); color:var(--accent); }
+    .pdp-guarantee-label { font-family:var(--font-ui); font-size:14px; color:var(--text); margin:0 0 4px; }
+    .pdp-guarantee-sub { font-family:var(--font-body); font-size:13px; line-height:1.5; color:var(--text-3); margin:0; }
+
+    /* ---- T330 bundle ---- */
+    .pdp-bundle { border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:20px; }
+    .pdp-bundle-items { display:flex; align-items:stretch; gap:12px; flex-wrap:wrap; }
+    .pdp-bundle-item { flex:1 1 220px; display:flex; align-items:center; gap:12px; border:var(--line-weight) solid var(--border); border-radius:var(--radius); background:var(--bg-2); padding:12px; cursor:pointer; }
+    .pdp-bundle-item:has(input:checked) { border-color:var(--accent); }
+    .pdp-bundle-item:has(input:not(:checked)) .pdp-bundle-thumb, .pdp-bundle-item:has(input:not(:checked)) .pdp-bundle-info { opacity:.5; }
+    .pdp-bundle-thumb { flex:none; width:56px; height:56px; border-radius:var(--radius-sm); border:var(--line-weight) solid var(--border); }
+    .pdp-bundle-info { display:flex; flex-direction:column; gap:2px; min-width:0; flex:1; }
+    .pdp-bundle-name { font-family:var(--font-ui); font-size:14px; color:var(--text); }
+    .pdp-bundle-variant { font-family:var(--font-body); font-size:12px; color:var(--text-3); }
+    .pdp-bundle-price { font-family:var(--font-ui); font-size:14px; color:var(--text-2); font-variant-numeric:tabular-nums; }
+    .pdp-check { flex:none; width:22px; height:22px; accent-color:var(--accent); cursor:pointer; }
+    .pdp-bundle-plus { display:flex; align-items:center; justify-content:center; color:var(--text-4); }
+    .pdp-bundle-total { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; border-top:var(--line-weight) solid var(--border); margin-top:18px; padding-top:18px; }
+    .pdp-bundle-total-label { font-family:var(--font-eyebrow); font-size:11px; letter-spacing:var(--eyebrow-tracking); text-transform:uppercase; color:var(--text-4); margin:0 0 6px; }
+    .pdp-bundle-total-row { display:flex; align-items:baseline; gap:10px; margin:0 0 8px; }
+
+    /* ---- T331 cross sell rail ---- */
+    .pdp-rail-wrap { display:flex; flex-direction:column; gap:14px; }
+    .pdp-rail-head { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .pdp-rail-title { font-family:var(--font-display); font-size:19px; color:var(--text); margin:0; }
+    .pdp-rail-nav { display:flex; gap:8px; }
+    .pdp-rail-btn { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; background:transparent; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-pill); color:var(--text-2); cursor:pointer; }
+    .pdp-rail-btn:hover { border-color:var(--accent); color:var(--accent); }
+    .pdp-rail { display:flex; gap:14px; list-style:none; margin:0; padding:2px 2px 12px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:thin; }
+    .pdp-rail-card { flex:0 0 194px; scroll-snap-align:start; display:flex; flex-direction:column; gap:6px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:12px; }
+    .pdp-rail-card:hover { border-color:var(--border-3); }
+    .pdp-rail-thumb { display:block; aspect-ratio:1/1; border-radius:var(--radius); border:var(--line-weight) solid var(--border); margin-bottom:4px; }
+    .pdp-rail-name { font-family:var(--font-ui); font-size:14px; color:var(--text); }
+    .pdp-rail-meta { font-family:var(--font-body); font-size:12px; color:var(--text-3); }
+    .pdp-rail-price { font-family:var(--font-ui); font-size:15px; font-weight:600; color:var(--text); font-variant-numeric:tabular-nums; }
+    .pdp-rail-add { width:100%; margin-top:8px; }
+    .pdp-rail-add.is-done { border-color:var(--ok); color:var(--ok); }
+
+    /* ---- T332 spec table ---- */
+    .pdp-spec { border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:20px; max-width:760px; }
+    .pdp-spec-head { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:14px; }
+    .pdp-spec-title { font-family:var(--font-display); font-size:19px; color:var(--text); margin:0; }
+    .pdp-table { width:100%; border-collapse:collapse; }
+    .pdp-table th, .pdp-table td { text-align:left; padding:11px 12px 11px 0; border-top:var(--line-weight) solid var(--border); font-size:14px; vertical-align:top; }
+    .pdp-table tbody tr:first-child th, .pdp-table tbody tr:first-child td { border-top:0; }
+    .pdp-table th[scope="row"] { font-family:var(--font-ui); font-weight:500; color:var(--text-3); width:38%; }
+    .pdp-table td { font-family:var(--font-body); color:var(--text); }
+    .pdp-sku { font-family:var(--font-mono); }
+    .pdp-table-grid th, .pdp-table-grid td { padding:10px 12px; border:var(--line-weight) solid var(--border); font-family:var(--font-ui); }
+    .pdp-table-grid thead th { background:var(--bg-3); color:var(--text-2); font-size:12px; letter-spacing:.04em; text-transform:uppercase; }
+    .pdp-table-grid th[scope="row"] { width:auto; color:var(--text); }
+    .pdp-table-grid tbody tr:first-child th, .pdp-table-grid tbody tr:first-child td { border-top:var(--line-weight) solid var(--border); }
+
+    .pdp-dialog { width:min(520px, 92vw); padding:0; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg-2); color:var(--text); }
+    .pdp-dialog::backdrop { background: var(--scrim); }
+    .pdp-dialog-head { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 18px; border-bottom:var(--line-weight) solid var(--border); }
+    .pdp-dialog-title { font-family:var(--font-display); font-size:19px; margin:0; }
+    .pdp-dialog-close { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; background:transparent; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-pill); color:var(--text-2); cursor:pointer; }
+    .pdp-dialog-close:hover { border-color:var(--accent); color:var(--accent); }
+    .pdp-dialog-body { padding:18px; }
+    .pdp-dialog-sub, .pdp-dialog-note { font-family:var(--font-body); font-size:13px; line-height:1.6; color:var(--text-3); margin:0 0 14px; }
+    .pdp-dialog-note { margin:14px 0 0; }
+
+    /* ---- responsive ---- */
+    @media (max-width: 720px) {
+      .pdp-buy-layout { grid-template-columns:1fr; }
+      .pdp-buy-media { max-width:280px; }
+      .pdp-bundle-plus { display:none; }
+      .pdp-bundle-item { flex:1 1 100%; }
+      .pdp-price { font-size:24px; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var $ = function (sel, root) { return (root || document).querySelector(sel); };
+      var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
+      var aud = function (n) { return '$' + n.toFixed(2); };
+
+      /* ---- T320 gallery: thumb swap, counter, zoom ---- */
+      var gal = $('[data-pdp-gallery]');
+      if (gal) {
+        var galImg = $('[data-pdp-gal-img]', gal);
+        var galCap = $('[data-pdp-gal-caption]', gal);
+        var galCount = $('[data-pdp-gal-count]', gal);
+        var thumbs = $$('.pdp-gal-thumb', gal);
+        var stage = $('.pdp-gal-stage', gal);
+        var zoom = $('[data-pdp-gal-zoom]', gal);
+
+        thumbs.forEach(function (thumb, i) {
+          thumb.addEventListener('click', function () {
+            thumbs.forEach(function (t) { t.setAttribute('aria-pressed', 'false'); });
+            thumb.setAttribute('aria-pressed', 'true');
+            var chip = $('.pdp-gal-chip', thumb);
+            if (galImg && chip) { galImg.style.background = chip.style.background; }
+            if (galCap) { galCap.textContent = thumb.getAttribute('data-pdp-caption') || ''; }
+            if (galCount) { galCount.textContent = (i + 1) + ' of ' + thumbs.length; }
+          });
+        });
+
+        if (zoom && stage) {
+          zoom.addEventListener('click', function () {
+            var on = zoom.getAttribute('aria-pressed') === 'true';
+            zoom.setAttribute('aria-pressed', on ? 'false' : 'true');
+            stage.classList.toggle('is-zoomed', !on);
+          });
+        }
+      }
+
+      /* ---- T321 and T327: add to cart feedback ---- */
+      $$('[data-pdp-atc]').forEach(function (btn) {
+        var label = $('[data-pdp-atc-text]', btn);
+        btn.addEventListener('click', function () {
+          if (btn.classList.contains('is-done') || !label) { return; }
+          var original = label.textContent;
+          label.textContent = 'Added to cart';
+          btn.classList.add('is-done');
+          window.setTimeout(function () {
+            label.textContent = original;
+            btn.classList.remove('is-done');
+          }, 1600);
+        });
+      });
+
+      /* ---- T321 wishlist toggle ---- */
+      $$('[data-pdp-wish]').forEach(function (btn) {
+        var label = $('[data-pdp-wish-text]', btn);
+        btn.addEventListener('click', function () {
+          var on = btn.getAttribute('aria-pressed') === 'true';
+          btn.setAttribute('aria-pressed', on ? 'false' : 'true');
+          if (label) { label.textContent = on ? 'Save for later' : 'Saved'; }
+        });
+      });
+
+      /* ---- T322 variants: mirror the selection into the legends and the live line ---- */
+      (function () {
+        var colourOut = $('[data-pdp-colour-out]');
+        var sizeOut = $('[data-pdp-size-out]');
+        var live = $('[data-pdp-variant-live]');
+        var colours = $$('input[name="pdp-colour"]');
+        var sizes = $$('input[name="pdp-size"]');
+        if (!colours.length && !sizes.length) { return; }
+
+        function checkedValue(list, fallback) {
+          for (var i = 0; i < list.length; i++) { if (list[i].checked) { return list[i].value; } }
+          return fallback;
+        }
+        function sync() {
+          var c = checkedValue(colours, 'Deep Navy');
+          var s = checkedValue(sizes, 'M');
+          if (colourOut) { colourOut.textContent = c; }
+          if (sizeOut) { sizeOut.textContent = s; }
+          if (live) { live.textContent = c + ', size ' + s + '. In stock.'; }
+        }
+        colours.concat(sizes).forEach(function (input) {
+          input.addEventListener('change', sync);
+        });
+        sync();
+      })();
+
+      /* ---- T323 quantity stepper ---- */
+      $$('[data-pdp-qty]').forEach(function (qty) {
+        var input = $('[data-pdp-qty-input]', qty);
+        var down = $('[data-pdp-qty-down]', qty);
+        var up = $('[data-pdp-qty-up]', qty);
+        var note = qty.parentNode ? $('[data-pdp-qty-note]', qty.parentNode) : null;
+        var max = parseInt(qty.getAttribute('data-pdp-max'), 10) || 6;
+        if (!input) { return; }
+
+        function render() {
+          var v = parseInt(input.value, 10);
+          if (isNaN(v) || v < 1) { v = 1; }
+          if (v > max) { v = max; }
+          input.value = String(v);
+          if (down) { down.disabled = v <= 1; }
+          if (up) { up.disabled = v >= max; }
+          if (note) {
+            var atMax = v >= max;
+            note.classList.toggle('is-max', atMax);
+            note.textContent = atMax
+              ? 'You have reached the limit of ' + max + ' per order.'
+              : 'Limit ' + max + ' per order.';
+          }
+        }
+        function step(delta) {
+          var v = parseInt(input.value, 10);
+          if (isNaN(v)) { v = 1; }
+          input.value = String(v + delta);
+          render();
+        }
+        if (down) { down.addEventListener('click', function () { step(-1); }); }
+        if (up) { up.addEventListener('click', function () { step(1); }); }
+        input.addEventListener('change', render);
+        input.addEventListener('blur', render);
+        render();
+      });
+
+      /* ---- T325 viewing count, drifting gently ---- */
+      (function () {
+        var viewers = $('[data-pdp-viewers]');
+        if (!viewers) { return; }
+        window.setInterval(function () {
+          var n = parseInt(viewers.textContent, 10);
+          if (isNaN(n)) { n = 12; }
+          n += Math.random() < 0.5 ? -1 : 1;
+          if (n < 8) { n = 8; }
+          if (n > 19) { n = 19; }
+          viewers.textContent = String(n);
+        }, 4200);
+      })();
+
+      /* ---- T326 delivery estimator ---- */
+      (function () {
+        var form = $('[data-pdp-ship]');
+        if (!form) { return; }
+        var input = $('[data-pdp-postcode]', form);
+        var out = $('[data-pdp-ship-out]', form);
+        if (!input || !out) { return; }
+
+        var ZONES = {
+          '3000': { place: 'Melbourne VIC', window: 'Mon 31 Aug to Tue 1 Sep', cost: 9.95 },
+          '2000': { place: 'Sydney NSW', window: 'Mon 31 Aug to Wed 2 Sep', cost: 9.95 },
+          '2600': { place: 'Canberra ACT', window: 'Tue 1 Sep to Wed 2 Sep', cost: 9.95 },
+          '4000': { place: 'Brisbane QLD', window: 'Tue 1 Sep to Thu 3 Sep', cost: 11.95 },
+          '5000': { place: 'Adelaide SA', window: 'Tue 1 Sep to Thu 3 Sep', cost: 11.95 },
+          '6000': { place: 'Perth WA', window: 'Thu 3 Sep to Mon 7 Sep', cost: 14.95 },
+          '7000': { place: 'Hobart TAS', window: 'Wed 2 Sep to Fri 4 Sep', cost: 12.95 },
+          '0800': { place: 'Darwin NT', window: 'Thu 3 Sep to Tue 8 Sep', cost: 14.95 }
+        };
+
+        function showError(message) {
+          input.classList.add('is-error');
+          input.setAttribute('aria-invalid', 'true');
+          out.innerHTML = '';
+          var box = document.createElement('p');
+          box.className = 'pdp-ship-error';
+          box.textContent = message;
+          out.appendChild(box);
+        }
+
+        function showResult(zone, code) {
+          input.classList.remove('is-error');
+          input.removeAttribute('aria-invalid');
+          out.innerHTML = '';
+          var box = document.createElement('div');
+          box.className = 'pdp-ship-result';
+          var line1 = document.createElement('p');
+          line1.className = 'pdp-ship-window';
+          line1.textContent = 'Arrives ' + zone.window;
+          var line2 = document.createElement('p');
+          line2.textContent = 'Standard post to ' + zone.place + ' ' + code + ', ' + aud(zone.cost) + '. Free on orders over $200.';
+          box.appendChild(line1);
+          box.appendChild(line2);
+          out.appendChild(box);
+        }
+
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          var code = (input.value || '').trim();
+          if (!/^\d{4}$/.test(code)) {
+            showError('Enter a four digit Australian postcode, for example 3000.');
+            return;
+          }
+          var zone = ZONES[code];
+          if (!zone) {
+            zone = { place: 'regional Australia', window: '5 to 8 business days', cost: 13.95 };
+            showResult(zone, code);
+            return;
+          }
+          showResult(zone, code);
+        });
+      })();
+
+      /* ---- T327 sticky bar demo, bounded to its own panel ---- */
+      (function () {
+        var stage = $('[data-pdp-sticky-stage]');
+        var bar = $('[data-pdp-sticky-bar]');
+        var toggle = $('[data-pdp-sticky-toggle]');
+        var toggleText = $('[data-pdp-sticky-toggle-text]');
+        if (!stage || !bar) { return; }
+
+        function setVisible(on) {
+          bar.classList.toggle('is-visible', on);
+          bar.setAttribute('aria-hidden', on ? 'false' : 'true');
+          if ('inert' in bar) { bar.inert = !on; }
+          else if (on) { bar.removeAttribute('inert'); }
+          else { bar.setAttribute('inert', ''); }
+          if (toggle) { toggle.setAttribute('aria-pressed', on ? 'true' : 'false'); }
+          if (toggleText) { toggleText.textContent = on ? 'Hide the bar' : 'Show the bar'; }
+        }
+
+        stage.addEventListener('scroll', function () {
+          setVisible(stage.scrollTop > 90);
+        });
+
+        if (toggle) {
+          toggle.addEventListener('click', function () {
+            setVisible(toggle.getAttribute('aria-pressed') !== 'true');
+          });
+        }
+
+        setVisible(false);
+      })();
+
+      /* ---- T330 bundle maths ---- */
+      (function () {
+        var bundle = $('[data-pdp-bundle]');
+        if (!bundle) { return; }
+        var items = $$('[data-pdp-bundle-item]', bundle);
+        var priceOut = $('[data-pdp-bundle-price]', bundle);
+        var rrpOut = $('[data-pdp-bundle-rrp]', bundle);
+        var saveOut = $('[data-pdp-bundle-save]', bundle);
+        var addBtn = $('[data-pdp-bundle-add]', bundle);
+        var addText = $('[data-pdp-bundle-add-text]', bundle);
+        if (!items.length) { return; }
+
+        function render() {
+          var sum = 0;
+          var count = 0;
+          items.forEach(function (item) {
+            if (item.checked) {
+              sum += parseFloat(item.getAttribute('data-pdp-price')) || 0;
+              count += 1;
+            }
+          });
+          var discount = count >= 2 ? 0.1 : 0;
+          var total = sum * (1 - discount);
+          var saved = sum - total;
+
+          if (priceOut) { priceOut.textContent = aud(total); }
+          if (rrpOut) {
+            rrpOut.textContent = aud(sum);
+            rrpOut.hidden = saved <= 0;
+          }
+          if (saveOut) {
+            saveOut.textContent = saved > 0 ? 'You save ' + aud(saved) : 'Add a second item to save 10%';
+          }
+          if (addText) {
+            addText.textContent = count === 0
+              ? 'Select an item'
+              : 'Add ' + count + (count === 1 ? ' item' : ' items') + ' to cart';
+          }
+          if (addBtn) { addBtn.disabled = count === 0; }
+        }
+
+        items.forEach(function (item) { item.addEventListener('change', render); });
+        if (addBtn && addText) {
+          addBtn.addEventListener('click', function () {
+            if (addBtn.classList.contains('is-done')) { return; }
+            var original = addText.textContent;
+            addText.textContent = 'Added to cart';
+            addBtn.classList.add('is-done');
+            window.setTimeout(function () {
+              addBtn.classList.remove('is-done');
+              addText.textContent = original;
+            }, 1600);
+          });
+        }
+        render();
+      })();
+
+      /* ---- T331 rail: arrows and quick add ---- */
+      (function () {
+        var rail = $('[data-pdp-rail]');
+        var prev = $('[data-pdp-rail-prev]');
+        var next = $('[data-pdp-rail-next]');
+        if (rail) {
+          var step = 208;
+          if (prev) { prev.addEventListener('click', function () { rail.scrollBy({ left: -step, behavior: 'smooth' }); }); }
+          if (next) { next.addEventListener('click', function () { rail.scrollBy({ left: step, behavior: 'smooth' }); }); }
+        }
+        $$('[data-pdp-quickadd]').forEach(function (btn) {
+          var label = $('[data-pdp-quickadd-text]', btn);
+          btn.addEventListener('click', function () {
+            if (btn.classList.contains('is-done') || !label) { return; }
+            var original = label.textContent;
+            label.textContent = 'Added';
+            btn.classList.add('is-done');
+            window.setTimeout(function () {
+              label.textContent = original;
+              btn.classList.remove('is-done');
+            }, 1400);
+          });
+        });
+      })();
+
+      /* ---- T325 notify me ---- */
+      $$('[data-pdp-notify]').forEach(function (btn) {
+        var label = $('[data-pdp-notify-text]', btn);
+        btn.addEventListener('click', function () {
+          if (!label) { return; }
+          btn.setAttribute('aria-pressed', 'true');
+          label.textContent = 'We will email you';
+          btn.disabled = true;
+        });
+      });
+
+      /* ---- T332 size guide dialog ---- */
+      (function () {
+        var dialog = $('[data-pdp-sizeguide]');
+        var open = $('[data-pdp-sizeguide-open]');
+        if (!dialog || !open) { return; }
+        open.addEventListener('click', function () {
+          if (typeof dialog.showModal === 'function') { dialog.showModal(); }
+          else { dialog.setAttribute('open', ''); }
+        });
+        dialog.addEventListener('close', function () { open.focus(); });
+      })();
+    })();
+  </script>
+</body>
+</html>

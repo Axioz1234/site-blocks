@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Data — Site Blocks</title>
+  <title>Data &middot; Site Blocks</title>
   <link rel="stylesheet" href="../assets/base.css">
   <link rel="stylesheet" href="../assets/viewer.css">
+  <script src="../assets/viewer.js"></script>
 </head>
-<body>
+<body data-page-set="core">
   <header class="tb-header">
     <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
     <h1>Data <span class="tb-range">T240&ndash;T245</span></h1>
-    <p class="tb-sub">Ways to show numbers and structured records — metric cards, sortable tables, spec sheets, billing toggles, simple charts, and activity feeds.</p>
+    <p class="tb-sub">Ways to show numbers and structured records: metric cards, sortable tables, spec sheets, billing toggles, simple charts, and activity feeds.</p>
   </header>
   <main class="tb-main">
 
@@ -154,7 +155,7 @@
         <span class="tb-tid">T244</span>
         <div>
           <h2>Horizontal bar chart</h2>
-          <p>A lightweight, CSS-only comparison chart — labelled rows with proportional fills.</p>
+          <p>A lightweight, CSS-only comparison chart: labelled rows with proportional fills.</p>
         </div>
       </header>
       <div class="tb-demo">
@@ -208,7 +209,7 @@
             <li class="dta-feed-row">
               <span class="dta-feed-dot"></span>
               <div class="dta-feed-body">
-                <span class="dta-feed-text">Merged easing-presets PR #142</span>
+                <span class="dta-feed-text">Merged easing-presets PR &num;142</span>
                 <span class="dta-feed-meta"><span class="dta-feed-tag">Merge</span><span class="dta-feed-time">Yesterday</span></span>
               </div>
             </li>
@@ -226,81 +227,81 @@
 
   </main>
   <style>
-    .sgx-section { padding: 64px var(--side-padding); border-bottom: 1px solid var(--border-2); background: var(--bg); }
-    .sgx-eyebrow { font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; color:#ff7f1f; text-transform:uppercase; margin:0 0 16px; }
-    .sgx-h2 { font-family:'Bai Jamjuree',sans-serif; font-size:clamp(26px,3.5vw,38px); font-weight:600; color:var(--text); margin:0 0 14px; }
-    .sgx-desc { font-family:'Inter',sans-serif; font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 36px; max-width:64ch; }
-    .sgx-block { padding:32px 0; border-top:1px solid var(--border); }
+    .sgx-section { padding: 64px var(--side-padding); border-bottom: var(--line-weight) solid var(--border-2); background: var(--bg); }
+    .sgx-eyebrow { font-family:var(--font-eyebrow); font-size:13px; letter-spacing:.08em; color:var(--accent); text-transform:uppercase; margin:0 0 16px; }
+    .sgx-h2 { font-family:var(--font-display); font-size:clamp(26px,3.5vw,38px); font-weight:600; color:var(--text); margin:0 0 14px; }
+    .sgx-desc { font-family:var(--font-body); font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 36px; max-width:64ch; }
+    .sgx-block { padding:32px 0; border-top:var(--line-weight) solid var(--border); }
     .sgx-block:first-of-type { border-top:none; padding-top:8px; }
     .sgx-block-head { display:flex; gap:16px; align-items:flex-start; margin-bottom:18px; }
-    .sgx-num { font-family:'JetBrains Mono',monospace; font-size:13px; color:#ff7f1f; flex-shrink:0; padding-top:3px; }
+    .sgx-num { font-family:var(--font-ui); font-size:13px; color:var(--accent); flex-shrink:0; padding-top:3px; }
     .sgx-meta { flex:1; min-width:0; }
-    .sgx-meta h3 { font-family:'Bai Jamjuree',sans-serif; font-size:19px; font-weight:600; color:var(--text); margin:0 0 6px; }
-    .sgx-meta p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:var(--text-3); margin:0; max-width:72ch; }
-    .sgx-preview { position:relative; border:1px solid var(--border); border-radius:4px; background:var(--bg-3); padding:30px 24px 24px; overflow:hidden; }
-    .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:var(--border-3); }
+    .sgx-meta h3 { font-family:var(--font-display); font-size:19px; font-weight:600; color:var(--text); margin:0 0 6px; }
+    .sgx-meta p { font-family:var(--font-body); font-size:14px; line-height:1.55; color:var(--text-3); margin:0; max-width:72ch; }
+    .sgx-preview { position:relative; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-3); padding:30px 24px 24px; overflow:hidden; }
+    .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:var(--font-eyebrow); font-size:9px; letter-spacing:.1em; color:var(--border-3); }
 
-    /* 01 — KPI */
+    /* 01. KPI */
     .dta-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
-    .dta-kpi { display:flex; flex-direction:column; gap:8px; padding:16px; border:1px solid var(--border); border-radius:6px; background:var(--bg-card); }
-    .dta-kpi-label { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--text-4); }
-    .dta-kpi-value { font-family:'Bai Jamjuree',sans-serif; font-size:28px; font-weight:600; color:var(--text); line-height:1; }
-    .dta-kpi-delta { font-family:'JetBrains Mono',monospace; font-size:12px; }
-    .dta-kpi-delta.up { color:#4ade80; } .dta-kpi-delta.down { color:#f87171; }
+    .dta-kpi { display:flex; flex-direction:column; gap:8px; padding:16px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); }
+    .dta-kpi-label { font-family:var(--font-eyebrow); font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--text-4); }
+    .dta-kpi-value { font-family:var(--font-display); font-size:28px; font-weight:600; color:var(--text); line-height:1; }
+    .dta-kpi-delta { font-family:var(--font-ui); font-size:12px; }
+    .dta-kpi-delta.up { color:var(--ok); } .dta-kpi-delta.down { color:var(--err); }
 
-    /* 02 — Table */
-    .dta-table { width:100%; min-width:0; border-collapse:collapse; font-family:'Inter',sans-serif; }
-    .dta-table th, .dta-table td { border:none; border-bottom:1px solid var(--border); background:none; }
-    .dta-table th { text-align:left; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--text-3); padding:10px 12px; border-bottom:1px solid var(--border-2); cursor:pointer; white-space:nowrap; }
-    .dta-table th:hover { color:#ff7f1f; }
+    /* 02. Table */
+    .dta-table { width:100%; min-width:0; border-collapse:collapse; font-family:var(--font-body); }
+    .dta-table th, .dta-table td { border:none; border-bottom:var(--line-weight) solid var(--border); background:none; }
+    .dta-table th { text-align:left; font-family:var(--font-ui); font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--text-3); padding:10px 12px; border-bottom:var(--line-weight) solid var(--border-2); cursor:pointer; white-space:nowrap; }
+    .dta-table th:hover { color:var(--accent); }
     .dta-sort { color:var(--border-3); font-size:10px; }
     .dta-table td { font-size:14px; color:var(--text-2); padding:11px 12px; }
     .dta-table tbody tr:nth-child(odd) td { background:var(--bg-card); }
     .dta-table th.num, .dta-table td.num { text-align:right; font-variant-numeric:tabular-nums; }
-    .dta-muted { color:var(--text-4); font-family:'JetBrains Mono',monospace; font-size:12px; }
+    .dta-muted { color:var(--text-4); font-family:var(--font-ui); font-size:12px; }
 
-    /* 03 — Billing */
+    /* 03. Billing */
     .dta-billing { display:flex; align-items:center; gap:14px; margin-bottom:18px; }
-    .dta-bill-opt { font-family:'Inter',sans-serif; font-size:14px; color:var(--text-4); display:flex; align-items:center; gap:6px; }
+    .dta-bill-opt { font-family:var(--font-body); font-size:14px; color:var(--text-4); display:flex; align-items:center; gap:6px; }
     .dta-bill-opt.is-active { color:var(--text); font-weight:600; }
-    .dta-bill-save { font-family:'JetBrains Mono',monospace; font-size:10px; color:#4ade80; border:1px solid #4ade80; border-radius:999px; padding:1px 6px; }
-    .dta-bill-switch { width:46px; height:26px; border-radius:999px; background:var(--border-2); border:none; cursor:pointer; position:relative; transition:background .2s ease; }
-    .dta-bill-switch.is-on { background:#ff7f1f; }
-    .dta-bill-knob { position:absolute; top:3px; left:3px; width:20px; height:20px; border-radius:50%; background:#fff; transition:transform .2s ease; }
+    .dta-bill-save { font-family:var(--font-ui); font-size:10px; color:var(--ok); border:var(--line-weight) solid var(--ok); border-radius:var(--radius-pill); padding:1px 6px; }
+    .dta-bill-switch { width:46px; height:26px; border-radius:var(--radius-pill); background:var(--border-2); border:none; cursor:pointer; position:relative; transition:background .2s ease; }
+    .dta-bill-switch.is-on { background:var(--accent); }
+    .dta-bill-knob { position:absolute; top:3px; left:3px; width:20px; height:20px; border-radius:50%; background:var(--accent-ink); transition:transform .2s ease; }
     .dta-bill-switch.is-on .dta-bill-knob { transform:translateX(20px); }
     .dta-bill-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; max-width:420px; }
-    .dta-bill-card { display:flex; flex-direction:column; gap:2px; padding:16px; border:1px solid var(--border); border-radius:6px; background:var(--bg-card); }
-    .dta-bill-name { font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; color:var(--text-4); }
-    .dta-bill-price { font-family:'Bai Jamjuree',sans-serif; font-size:30px; font-weight:600; color:var(--text); }
-    .dta-bill-per { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-4); }
+    .dta-bill-card { display:flex; flex-direction:column; gap:2px; padding:16px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); }
+    .dta-bill-name { font-family:var(--font-ui); font-size:11px; text-transform:uppercase; color:var(--text-4); }
+    .dta-bill-price { font-family:var(--font-display); font-size:30px; font-weight:600; color:var(--text); }
+    .dta-bill-per { font-family:var(--font-ui); font-size:12px; color:var(--text-4); }
 
-    /* 04 — Specs */
+    /* 04. Specs */
     .dta-specs { margin:0; }
-    .dta-spec-row { display:grid; grid-template-columns:200px 1fr; gap:16px; padding:11px 4px; border-bottom:1px solid var(--border); }
+    .dta-spec-row { display:grid; grid-template-columns:200px 1fr; gap:16px; padding:11px 4px; border-bottom:var(--line-weight) solid var(--border); }
     .dta-spec-row:last-child { border-bottom:none; }
-    .dta-spec-row dt { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--text-4); margin:0; }
-    .dta-spec-row dd { font-family:'Inter',sans-serif; font-size:14px; color:var(--text); margin:0; }
+    .dta-spec-row dt { font-family:var(--font-ui); font-size:13px; color:var(--text-4); margin:0; }
+    .dta-spec-row dd { font-family:var(--font-body); font-size:14px; color:var(--text); margin:0; }
 
-    /* 05 — Bars */
+    /* 05. Bars */
     .dta-bars { display:flex; flex-direction:column; gap:14px; }
     .dta-bar-row { display:grid; grid-template-columns:80px 1fr 44px; align-items:center; gap:14px; }
-    .dta-bar-label { font-family:'Inter',sans-serif; font-size:14px; color:var(--text-2); }
-    .dta-bar-track { height:10px; background:var(--border); border-radius:999px; overflow:hidden; }
-    .dta-bar-fill { display:block; height:100%; background:#ff7f1f; border-radius:999px; }
-    .dta-bar-val { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-3); text-align:right; }
+    .dta-bar-label { font-family:var(--font-body); font-size:14px; color:var(--text-2); }
+    .dta-bar-track { height:10px; background:var(--border); border-radius:var(--radius-pill); overflow:hidden; }
+    .dta-bar-fill { display:block; height:100%; background:var(--cat-1); border-radius:var(--radius-pill); }
+    .dta-bar-val { font-family:var(--font-ui); font-size:12px; color:var(--text-3); text-align:right; }
 
-    /* 06 — Feed */
+    /* 06. Feed */
     .dta-feed { list-style:none; margin:0; padding:0; }
     .dta-feed-row { position:relative; display:flex; gap:16px; padding:0 0 22px 4px; }
-    .dta-feed-row::before { content:''; position:absolute; left:8px; top:14px; bottom:-4px; width:1px; background:var(--border-2); }
+    .dta-feed-row::before { content:''; position:absolute; left:8px; top:14px; bottom:-4px; width:var(--line-weight); background:var(--border-2); }
     .dta-feed-row:last-child { padding-bottom:0; }
     .dta-feed-row:last-child::before { display:none; }
-    .dta-feed-dot { position:relative; z-index:1; flex-shrink:0; width:11px; height:11px; margin-top:4px; border-radius:50%; background:var(--bg-3); border:2px solid #ff7f1f; }
+    .dta-feed-dot { position:relative; z-index:1; flex-shrink:0; width:11px; height:11px; margin-top:4px; border-radius:50%; background:var(--bg-3); border:2px solid var(--accent); }
     .dta-feed-body { display:flex; flex-direction:column; gap:5px; }
-    .dta-feed-text { font-family:'Inter',sans-serif; font-size:14px; color:var(--text); }
+    .dta-feed-text { font-family:var(--font-body); font-size:14px; color:var(--text); }
     .dta-feed-meta { display:flex; align-items:center; gap:10px; }
-    .dta-feed-tag { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:#ff7f1f; border:1px solid var(--border-2); border-radius:999px; padding:2px 8px; }
-    .dta-feed-time { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-4); }
+    .dta-feed-tag { font-family:var(--font-eyebrow); font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-pill); padding:2px 8px; }
+    .dta-feed-time { font-family:var(--font-ui); font-size:11px; color:var(--text-4); }
 
     @media (max-width: 1024px) { .dta-kpis { grid-template-columns:repeat(2,1fr); } }
     @media (max-width: 768px) {
@@ -311,7 +312,7 @@
   </style>
   <script>
     (function () {
-      // T241 — Sortable table
+      // T241. Sortable table
       const table = document.getElementById('dta-table');
       if (table) {
         const tbody = table.querySelector('tbody');
@@ -332,7 +333,7 @@
         });
       }
 
-      // T242 — Billing toggle
+      // T242. Billing toggle
       const sw = document.getElementById('dta-bill-switch');
       if (sw) {
         let annual = false;

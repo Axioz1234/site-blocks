@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Media — Site Blocks</title>
+  <title>Media &middot; Site Blocks</title>
   <link rel="stylesheet" href="../assets/base.css">
   <link rel="stylesheet" href="../assets/viewer.css">
+  <script src="../assets/viewer.js"></script>
 </head>
-<body>
+<body data-page-set="core">
   <header class="tb-header">
     <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
     <h1>Media <span class="tb-range">T280&ndash;T285</span></h1>
-    <p class="tb-sub">Blocks built around imagery and arrangement — carousels, captioned figures, video heroes, alternating feature rows, team grids, and responsive embeds.</p>
+    <p class="tb-sub">Blocks built around imagery and arrangement: carousels, captioned figures, video heroes, alternating feature rows, team grids, and responsive embeds.</p>
   </header>
   <main class="tb-main">
 
@@ -26,15 +27,15 @@
       <div class="tb-demo">
         <div class="med-carousel" id="med-carousel">
           <div class="med-track" id="med-track">
-            <div class="med-slide" style="background:linear-gradient(135deg,#1a1206,#3a1e05)">
+            <div class="med-slide" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))">
               <span class="med-slide-mark">A/</span>
               <span class="med-slide-cap">Entrance reveal</span>
             </div>
-            <div class="med-slide" style="background:linear-gradient(135deg,#0a0f1a,#131a2a)">
+            <div class="med-slide" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))">
               <span class="med-slide-mark">B/</span>
               <span class="med-slide-cap">Scroll parallax</span>
             </div>
-            <div class="med-slide" style="background:linear-gradient(135deg,#1a0a14,#2a0f1e)">
+            <div class="med-slide" style="background:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))">
               <span class="med-slide-mark">C/</span>
               <span class="med-slide-cap">Typewriter hero</span>
             </div>
@@ -55,12 +56,12 @@
         <span class="tb-tid">T281</span>
         <div>
           <h2>Figure with caption</h2>
-          <p>An image block with a number tag and a typeset caption — for docs, articles, and case studies.</p>
+          <p>An image block with a number tag and a typeset caption, for docs, articles, and case studies.</p>
         </div>
       </header>
       <div class="tb-demo">
         <figure class="med-figure">
-          <div class="med-fig-img" style="background:linear-gradient(135deg,#0b1410,#11261b)"><span>A/</span></div>
+          <div class="med-fig-img" style="background:linear-gradient(135deg,var(--bg-3),var(--ok-wash))"><span>A/</span></div>
           <figcaption class="med-fig-cap"><span class="med-fig-tag">Fig 1</span> A fade-up reveal sequenced across a three-card grid, staggered by 80ms.</figcaption>
         </figure>
       </div>
@@ -92,25 +93,25 @@
         <span class="tb-tid">T283</span>
         <div>
           <h2>Alternating feature row</h2>
-          <p>The classic zig-zag — image and copy swapping sides down the page to keep a rhythm.</p>
+          <p>The classic zig-zag: image and copy swapping sides down the page to keep a rhythm.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="med-zig">
           <div class="med-zig-row">
-            <div class="med-zig-img" style="background:linear-gradient(135deg,#1a1206,#3a1e05)"><span>A/</span></div>
+            <div class="med-zig-img" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))"><span>A/</span></div>
             <div class="med-zig-text">
               <span class="med-zig-eyebrow">// CSS-FIRST</span>
               <h4>No runtime unless you ask</h4>
-              <p>Entry, reveal, and transition motion renders from CSS — shipped in a static build with zero hydration cost.</p>
+              <p>Entry, reveal, and transition motion renders from CSS, shipped in a static build with zero hydration cost.</p>
             </div>
           </div>
           <div class="med-zig-row reverse">
-            <div class="med-zig-img" style="background:linear-gradient(135deg,#0a0f1a,#131a2a)"><span>B/</span></div>
+            <div class="med-zig-img" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))"><span>B/</span></div>
             <div class="med-zig-text">
               <span class="med-zig-eyebrow">// ISLANDS-AWARE</span>
               <h4>Opt in where it matters</h4>
-              <p>Gesture and physics-driven effects load only on the island that needs them — never site-wide.</p>
+              <p>Gesture and physics-driven effects load only on the island that needs them, never site-wide.</p>
             </div>
           </div>
         </div>
@@ -122,31 +123,31 @@
         <span class="tb-tid">T284</span>
         <div>
           <h2>Team / people grid</h2>
-          <p>A grid of people cards with avatar, name, role, and social links — for about and careers pages.</p>
+          <p>A grid of people cards with avatar, name, role, and social links, for about and careers pages.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="med-team">
           <div class="med-person">
-            <span class="med-person-av" style="background:linear-gradient(135deg,#ff7f1f,#b8480a)">AT</span>
+            <span class="med-person-av" style="background:linear-gradient(135deg,var(--cat-1),color-mix(in srgb, var(--cat-1) 55%, var(--bg-black)))">AT</span>
             <span class="med-person-name">Ada Turner</span>
             <span class="med-person-role">Maintainer</span>
             <div class="med-person-links"><a href="#">GH</a><a href="#">X</a></div>
           </div>
           <div class="med-person">
-            <span class="med-person-av" style="background:linear-gradient(135deg,#3b82f6,#1e40af)">JM</span>
+            <span class="med-person-av" style="background:linear-gradient(135deg,var(--cat-2),color-mix(in srgb, var(--cat-2) 55%, var(--bg-black)))">JM</span>
             <span class="med-person-name">Jules Moreau</span>
             <span class="med-person-role">DX &amp; docs</span>
             <div class="med-person-links"><a href="#">GH</a><a href="#">X</a></div>
           </div>
           <div class="med-person">
-            <span class="med-person-av" style="background:linear-gradient(135deg,#a855f7,#6b21a8)">SD</span>
+            <span class="med-person-av" style="background:linear-gradient(135deg,var(--cat-3),color-mix(in srgb, var(--cat-3) 55%, var(--bg-black)))">SD</span>
             <span class="med-person-name">Sam Diaz</span>
             <span class="med-person-role">Motion design</span>
             <div class="med-person-links"><a href="#">GH</a><a href="#">X</a></div>
           </div>
           <div class="med-person">
-            <span class="med-person-av" style="background:linear-gradient(135deg,#10b981,#065f46)">RK</span>
+            <span class="med-person-av" style="background:linear-gradient(135deg,var(--cat-5),color-mix(in srgb, var(--cat-5) 55%, var(--bg-black)))">RK</span>
             <span class="med-person-name">Rae Kim</span>
             <span class="med-person-role">Performance</span>
             <div class="med-person-links"><a href="#">GH</a><a href="#">X</a></div>
@@ -167,7 +168,7 @@
         <div class="med-embed">
           <div class="med-embed-frame">
             <span class="med-embed-icon">▶</span>
-            <span class="med-embed-ratio">16 : 9 — embed placeholder</span>
+            <span class="med-embed-ratio">16 : 9 embed placeholder</span>
           </div>
         </div>
       </div>
@@ -175,61 +176,61 @@
 
   </main>
   <style>
-    /* 01 — Carousel */
-    .med-carousel { position:relative; border:1px solid var(--border); border-radius:6px; overflow:hidden; }
+    /* 01 Carousel */
+    .med-carousel { position:relative; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); overflow:hidden; }
     .med-track { display:flex; transition:transform .35s ease; }
     .med-slide { position:relative; flex:0 0 100%; aspect-ratio:21/9; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
-    .med-slide-mark { font-family:'Bai Jamjuree',sans-serif; font-size:40px; font-weight:700; color:rgba(255,255,255,.2); }
-    .med-slide-cap { font-family:'JetBrains Mono',monospace; font-size:13px; color:rgba(255,255,255,.7); }
-    .med-arrow { position:absolute; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; cursor:pointer; background:rgba(0,0,0,.5); color:#fff; border:1px solid rgba(255,255,255,.2); font-size:18px; line-height:1; }
+    .med-slide-mark { font-family:var(--font-display); font-size:40px; font-weight:700; color:color-mix(in srgb, var(--text) 20%, transparent); }
+    .med-slide-cap { font-family:var(--font-ui); font-size:13px; color:color-mix(in srgb, var(--text) 70%, transparent); }
+    .med-arrow { position:absolute; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; cursor:pointer; background: var(--scrim); color:var(--text); border:var(--line-weight) solid color-mix(in srgb, var(--text) 20%, transparent); font-size:18px; line-height:1; }
     .med-arrow.prev { left:10px; } .med-arrow.next { right:10px; }
-    .med-arrow:hover { background:#ff7f1f; border-color:#ff7f1f; }
+    .med-arrow:hover { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
     .med-dots { position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:7px; }
-    .med-dot { width:8px; height:8px; border-radius:50%; border:none; cursor:pointer; background:rgba(255,255,255,.35); padding:0; }
-    .med-dot.is-active { background:#ff7f1f; }
+    .med-dot { width:8px; height:8px; border-radius:50%; border:none; cursor:pointer; background:color-mix(in srgb, var(--text) 35%, transparent); padding:0; }
+    .med-dot.is-active { background:var(--accent); }
 
-    /* 02 — Figure */
+    /* 02 Figure */
     .med-figure { margin:0; max-width:520px; }
-    .med-fig-img { aspect-ratio:16/9; border-radius:6px; display:flex; align-items:center; justify-content:center; }
-    .med-fig-img span { font-family:'Bai Jamjuree',sans-serif; font-size:32px; font-weight:700; color:rgba(255,255,255,.2); }
-    .med-fig-cap { font-family:'Inter',sans-serif; font-size:13px; line-height:1.5; color:var(--text-3); margin-top:10px; }
-    .med-fig-tag { font-family:'JetBrains Mono',monospace; font-size:11px; color:#ff7f1f; margin-right:6px; }
+    .med-fig-img { aspect-ratio:16/9; border-radius:var(--radius-card); display:flex; align-items:center; justify-content:center; }
+    .med-fig-img span { font-family:var(--font-display); font-size:32px; font-weight:700; color:color-mix(in srgb, var(--text) 20%, transparent); }
+    .med-fig-cap { font-family:var(--font-body); font-size:13px; line-height:1.5; color:var(--text-3); margin-top:10px; }
+    .med-fig-tag { font-family:var(--font-ui); font-size:11px; color:var(--accent); margin-right:6px; }
 
-    /* 03 — Video hero */
-    .med-vhero { position:relative; border-radius:6px; overflow:hidden; min-height:240px; display:flex; align-items:center; }
-    .med-vhero-bg { position:absolute; inset:0; background:linear-gradient(135deg,#2a1505,#0a0a0a 70%); }
-    .med-vhero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.7),rgba(0,0,0,.2)); }
-    .med-vhero-play { position:absolute; top:14px; right:18px; width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); display:flex; align-items:center; justify-content:center; color:#fff; font-size:14px; }
+    /* 03 Video hero */
+    .med-vhero { position:relative; border-radius:var(--radius-card); overflow:hidden; min-height:240px; display:flex; align-items:center; }
+    .med-vhero-bg { position:absolute; inset:0; background:linear-gradient(135deg,var(--warn-wash),var(--bg-2) 70%); }
+    .med-vhero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,color-mix(in srgb, var(--bg-black) 70%, transparent),color-mix(in srgb, var(--bg-black) 20%, transparent)); }
+    .med-vhero-play { position:absolute; top:14px; right:18px; width:40px; height:40px; border-radius:50%; background:color-mix(in srgb, var(--text) 12%, transparent); border:var(--line-weight) solid color-mix(in srgb, var(--text) 25%, transparent); display:flex; align-items:center; justify-content:center; color:var(--text); font-size:14px; }
     .med-vhero-content { position:relative; z-index:1; padding:28px; }
-    .med-vhero-eyebrow { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.08em; color:#ff7f1f; }
-    .med-vhero-h1 { font-family:'Bai Jamjuree',sans-serif; font-size:clamp(22px,3vw,30px); font-weight:600; color:#fff; margin:10px 0 16px; }
-    .med-vhero-cta { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; cursor:pointer; color:var(--bg); background:#ff7f1f; border:none; border-radius:4px; padding:11px 20px; }
+    .med-vhero-eyebrow { font-family:var(--font-eyebrow); font-size:12px; letter-spacing:.08em; color:var(--accent); }
+    .med-vhero-h1 { font-family:var(--font-display); font-size:clamp(22px,3vw,30px); font-weight:600; color:var(--text); margin:10px 0 16px; }
+    .med-vhero-cta { font-family:var(--font-ui); font-size:13px; font-weight:600; cursor:pointer; color:var(--accent-ink); background:var(--accent); border:none; border-radius:var(--radius-sm); padding:11px 20px; }
 
-    /* 04 — Zig-zag */
+    /* 04 Zig-zag */
     .med-zig { display:flex; flex-direction:column; gap:18px; }
     .med-zig-row { display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:center; }
     .med-zig-row.reverse .med-zig-img { order:2; }
-    .med-zig-img { aspect-ratio:16/10; border-radius:6px; display:flex; align-items:center; justify-content:center; }
-    .med-zig-img span { font-family:'Bai Jamjuree',sans-serif; font-size:30px; font-weight:700; color:rgba(255,255,255,.2); }
-    .med-zig-eyebrow { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.08em; color:#ff7f1f; }
-    .med-zig-text h4 { font-family:'Bai Jamjuree',sans-serif; font-size:19px; font-weight:600; color:var(--text); margin:8px 0 8px; }
-    .med-zig-text p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.6; color:var(--text-3); margin:0; }
+    .med-zig-img { aspect-ratio:16/10; border-radius:var(--radius-card); display:flex; align-items:center; justify-content:center; }
+    .med-zig-img span { font-family:var(--font-display); font-size:30px; font-weight:700; color:color-mix(in srgb, var(--text) 20%, transparent); }
+    .med-zig-eyebrow { font-family:var(--font-eyebrow); font-size:12px; letter-spacing:.08em; color:var(--accent); }
+    .med-zig-text h4 { font-family:var(--font-display); font-size:19px; font-weight:600; color:var(--text); margin:8px 0 8px; }
+    .med-zig-text p { font-family:var(--font-body); font-size:14px; line-height:1.6; color:var(--text-3); margin:0; }
 
-    /* 05 — Team */
+    /* 05 Team */
     .med-team { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
-    .med-person { display:flex; flex-direction:column; align-items:center; text-align:center; gap:5px; padding:18px 12px; border:1px solid var(--border); border-radius:6px; background:var(--bg-card); }
-    .med-person-av { width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Bai Jamjuree',sans-serif; font-size:18px; font-weight:600; color:#fff; margin-bottom:4px; }
-    .med-person-name { font-family:'Bai Jamjuree',sans-serif; font-size:15px; font-weight:600; color:var(--text); }
-    .med-person-role { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-4); }
+    .med-person { display:flex; flex-direction:column; align-items:center; text-align:center; gap:5px; padding:18px 12px; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); }
+    .med-person-av { width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:18px; font-weight:600; color:var(--accent-ink); margin-bottom:4px; }
+    .med-person-name { font-family:var(--font-display); font-size:15px; font-weight:600; color:var(--text); }
+    .med-person-role { font-family:var(--font-ui); font-size:11px; color:var(--text-4); }
     .med-person-links { display:flex; gap:10px; margin-top:6px; }
-    .med-person-links a { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-3); text-decoration:none; }
-    .med-person-links a:hover { color:#ff7f1f; }
+    .med-person-links a { font-family:var(--font-ui); font-size:11px; color:var(--text-3); text-decoration:none; }
+    .med-person-links a:hover { color:var(--accent); }
 
-    /* 06 — Embed */
+    /* 06 Embed */
     .med-embed { max-width:520px; }
-    .med-embed-frame { position:relative; aspect-ratio:16/9; border:1px solid var(--border-2); border-radius:6px; background:var(--bg-card); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
-    .med-embed-icon { width:48px; height:48px; border-radius:50%; background:var(--bg-2); border:1px solid var(--border-2); display:flex; align-items:center; justify-content:center; color:#ff7f1f; font-size:16px; }
-    .med-embed-ratio { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-4); }
+    .med-embed-frame { position:relative; aspect-ratio:16/9; border:var(--line-weight) solid var(--border-2); border-radius:var(--radius-card); background:var(--bg-card); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+    .med-embed-icon { width:48px; height:48px; border-radius:50%; background:var(--bg-2); border:var(--line-weight) solid var(--border-2); display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:16px; }
+    .med-embed-ratio { font-family:var(--font-ui); font-size:12px; color:var(--text-4); }
 
     @media (max-width: 1024px) { .med-team { grid-template-columns:repeat(2,1fr); } }
     @media (max-width: 768px) {
@@ -239,7 +240,7 @@
   </style>
   <script>
     (function () {
-      // 01 — Carousel
+      // 01 Carousel
       const track = document.getElementById('med-track');
       if (track) {
         const total = track.children.length;

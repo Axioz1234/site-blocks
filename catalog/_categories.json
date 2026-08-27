@@ -1,0 +1,81 @@
+[
+  { "slug": "foundations", "anchor": "foundations", "title": "Foundations", "set": "core",
+    "file": "pages/foundations.html",
+    "description": "The token system itself: palette, type and the rules every other block obeys." },
+
+  { "slug": "elements", "anchor": "elements", "title": "Elements", "set": "core",
+    "file": "pages/elements.html",
+    "description": "Small UI atoms: buttons, badges, pills, accordions, cards." },
+
+  { "slug": "components", "anchor": "components", "title": "Library components", "set": "core",
+    "file": "pages/components.html",
+    "description": "Static equivalents of the animation-library components used on the source site." },
+
+  { "slug": "sections", "anchor": "sections", "title": "Sections", "set": "core",
+    "file": "pages/sections.html",
+    "description": "The 24 named page sections, from heroes and comparison tables to the footer, as mini previews." },
+
+  { "slug": "patterns", "anchor": "patterns", "title": "Patterns", "set": "core",
+    "file": "pages/patterns.html",
+    "description": "Composite components and interaction patterns." },
+
+  { "slug": "animation", "anchor": "animation", "title": "Animation", "set": "core",
+    "file": "pages/animation.html",
+    "description": "Motion demos: reveals, marquees, counters, transitions." },
+
+  { "slug": "devtools", "anchor": "devtools", "title": "Dev tools", "set": "core",
+    "file": "pages/devtools.html",
+    "description": "Terminal, code, diff, and log-style UI." },
+
+  { "slug": "social", "anchor": "social", "title": "Social proof", "set": "core",
+    "file": "pages/social.html",
+    "description": "Testimonials, logos, ratings, community blocks." },
+
+  { "slug": "content", "anchor": "content", "title": "Content", "set": "core",
+    "file": "pages/content.html",
+    "description": "Prose, callouts, article and editorial layouts." },
+
+  { "slug": "navigation", "anchor": "navigation", "title": "Navigation", "set": "core",
+    "file": "pages/navigation.html",
+    "description": "Navbars, sidebars, tabs, breadcrumbs, pagination." },
+
+  { "slug": "forms", "anchor": "forms", "title": "Forms", "set": "core",
+    "file": "pages/forms.html",
+    "description": "Inputs, choice controls, wizards, uploads, consent." },
+
+  { "slug": "feedback", "anchor": "feedback", "title": "Feedback", "set": "core",
+    "file": "pages/feedback.html",
+    "description": "Alerts, toasts, progress, empty states." },
+
+  { "slug": "data", "anchor": "data", "title": "Data", "set": "core",
+    "file": "pages/data.html",
+    "description": "Tables, stats, charts in CSS, key/value displays." },
+
+  { "slug": "media", "anchor": "media", "title": "Media", "set": "core",
+    "file": "pages/media.html",
+    "description": "Image, video, and gallery patterns." },
+
+  { "slug": "commerce", "anchor": "commerce", "title": "Commerce", "set": "ecommerce",
+    "file": "pages/commerce.html",
+    "description": "The original retail six: product card, rating, cart summary, filter rail, timer, avatar group." },
+
+  { "slug": "ecom-catalogue", "anchor": "ecom-catalogue", "title": "Catalogue", "set": "ecommerce",
+    "file": "pages/ecom-catalogue.html",
+    "description": "The listing page: collection heroes, product grids and card states, sorting, faceted filters, quick view, pagination." },
+
+  { "slug": "ecom-product", "anchor": "ecom-product", "title": "Product page", "set": "ecommerce",
+    "file": "pages/ecom-product.html",
+    "description": "Everything above and below the buy button: gallery, variants, price presentations, stock, delivery, bundles, specs." },
+
+  { "slug": "ecom-checkout", "anchor": "ecom-checkout", "title": "Cart & checkout", "set": "ecommerce",
+    "file": "pages/ecom-checkout.html",
+    "description": "Cart drawer through to confirmation: line items, discounts, address and payment forms, order review, tracking." },
+
+  { "slug": "ecom-merch", "anchor": "ecom-merch", "title": "Merchandising & trust", "set": "ecommerce",
+    "file": "pages/ecom-merch.html",
+    "description": "The persuasion layer: announcement bars, offers, reviews, customer photos, guarantees, capture forms." },
+
+  { "slug": "ecom-account", "anchor": "ecom-account", "title": "Account & post-purchase", "set": "ecommerce",
+    "file": "pages/ecom-account.html",
+    "description": "After the sale: order history, returns, wishlists, addresses, subscriptions, rewards, sign in." }
+]

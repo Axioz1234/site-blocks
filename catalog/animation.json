@@ -1,23 +1,65 @@
 [
-  { "id": "T100", "name": "Bento grid", "category": "Animation",
-    "file": "pages/animation.html", "anchor": "#T100",
-    "description": "Asymmetric mosaic of feature tiles with varying spans, subtle gradients, and a hover lift — pure CSS." },
-  { "id": "T101", "name": "Infinite marquee", "category": "Animation",
-    "file": "pages/animation.html", "anchor": "#T101",
-    "description": "Seamlessly looping chip track from a duplicated row and one CSS keyframe; pauses on hover, frozen for reduced-motion." },
-  { "id": "T102", "name": "Statement / word reveal", "category": "Animation",
-    "file": "pages/animation.html", "anchor": "#T102",
-    "description": "Display sentence whose words fade and rise in sequence via staggered CSS delays, with a JS replay button." },
-  { "id": "T103", "name": "Animated stat counters", "category": "Animation",
-    "file": "pages/animation.html", "anchor": "#T103",
-    "description": "Three figures that count up on first scroll into view via IntersectionObserver; final values live in the markup." },
-  { "id": "T104", "name": "Sticky scroll-story", "category": "Animation",
-    "file": "pages/animation.html", "anchor": "#T104",
-    "description": "Two-column block with a pinned visual card that crossfades as a scroll-spy highlights the active step." },
-  { "id": "T105", "name": "Before / after slider", "category": "Animation",
-    "file": "pages/animation.html", "anchor": "#T105",
-    "description": "Two stacked panels split by a draggable divider; a range input drives a CSS variable clip, keyboard-accessible." },
-  { "id": "T106", "name": "Hover-reveal work list", "category": "Animation",
-    "file": "pages/animation.html", "anchor": "#T106",
-    "description": "Large project rows that highlight on hover while a gradient thumbnail follows the cursor; degrades without JS." }
+  {
+    "id": "T100",
+    "name": "Bento grid",
+    "category": "Animation",
+    "set": "core",
+    "file": "pages/animation.html",
+    "anchor": "#T100",
+    "description": "Asymmetric mosaic of feature tiles with varying spans, subtle gradients, and a hover lift, in pure CSS."
+  },
+  {
+    "id": "T101",
+    "name": "Infinite marquee",
+    "category": "Animation",
+    "set": "core",
+    "file": "pages/animation.html",
+    "anchor": "#T101",
+    "description": "Seamlessly looping chip track from a duplicated row and one CSS keyframe; pauses on hover, frozen for reduced-motion."
+  },
+  {
+    "id": "T102",
+    "name": "Statement / word reveal",
+    "category": "Animation",
+    "set": "core",
+    "file": "pages/animation.html",
+    "anchor": "#T102",
+    "description": "Display sentence whose words fade and rise in sequence via staggered CSS delays, with a JS replay button."
+  },
+  {
+    "id": "T103",
+    "name": "Animated stat counters",
+    "category": "Animation",
+    "set": "core",
+    "file": "pages/animation.html",
+    "anchor": "#T103",
+    "description": "Three figures that count up on first scroll into view via IntersectionObserver; final values live in the markup."
+  },
+  {
+    "id": "T104",
+    "name": "Sticky scroll-story",
+    "category": "Animation",
+    "set": "core",
+    "file": "pages/animation.html",
+    "anchor": "#T104",
+    "description": "Two-column block with a pinned visual card that crossfades as a scroll-spy highlights the active step."
+  },
+  {
+    "id": "T105",
+    "name": "Before / after slider",
+    "category": "Animation",
+    "set": "core",
+    "file": "pages/animation.html",
+    "anchor": "#T105",
+    "description": "Two stacked panels split by a draggable divider; a range input drives a CSS variable clip, keyboard-accessible."
+  },
+  {
+    "id": "T106",
+    "name": "Hover-reveal work list",
+    "category": "Animation",
+    "set": "core",
+    "file": "pages/animation.html",
+    "anchor": "#T106",
+    "description": "Large project rows that highlight on hover while a gradient thumbnail follows the cursor; degrades without JS."
+  }
 ]

@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cart &amp; checkout &middot; Site Blocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+  <script src="../assets/viewer.js"></script>
+</head>
+<body data-page-set="ecommerce">
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
+    <h1>Cart &amp; checkout <span class="tb-range">T340&ndash;T353</span></h1>
+    <p class="tb-sub">Everything between the add-to-cart click and the tracking page: drawers, line items, the cart page, discounts, the checkout stepper, Australian address and payment forms, order review, confirmation, and delivery tracking.</p>
+  </header>
+  <main class="tb-main">
+
+    <!-- ============================================================
+         T340: Cart drawer
+         ============================================================ -->
+    <article class="tb-pattern" id="T340" data-tid="T340">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T340</span>
+        <div>
+          <h2>Cart drawer</h2>
+          <p>A slide-over cart with a close button, line items, subtotal, free-shipping progress, and the two exit actions.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="chk-stage" id="chk-stage">
+          <div class="chk-stage-page" aria-hidden="true">
+            <span class="chk-stage-note">Store page sits behind the panel</span>
+          </div>
+          <div class="chk-scrim" id="chk-scrim"></div>
+          <aside class="chk-drawer" id="chk-drawer" aria-label="Shopping cart">
+            <header class="chk-drawer-head">
+              <h3 class="chk-drawer-title">Your cart <span class="chk-count">2 items</span></h3>
+              <button type="button" class="chk-iconbtn" id="chk-drawer-close" aria-label="Close cart">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 3l10 10M13 3L3 13"/></svg>
+              </button>
+            </header>
+            <div class="chk-drawer-body">
+              <div class="chk-mini">
+                <span class="chk-thumb chk-thumb-sm" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))" aria-hidden="true"></span>
+                <div class="chk-mini-main">
+                  <span class="chk-mini-title">Coastal Linen Throw</span>
+                  <span class="chk-mini-variant">Sand / 130 x 180 cm</span>
+                  <span class="chk-mini-qty">Qty 1</span>
+                </div>
+                <span class="chk-money">$89.00</span>
+              </div>
+              <div class="chk-mini">
+                <span class="chk-thumb chk-thumb-sm" style="background:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))" aria-hidden="true"></span>
+                <div class="chk-mini-main">
+                  <span class="chk-mini-title">Terracotta Mug Set</span>
+                  <span class="chk-mini-variant">Two pack / Clay</span>
+                  <span class="chk-mini-qty">Qty 1</span>
+                </div>
+                <span class="chk-money">$43.00</span>
+              </div>
+            </div>
+            <footer class="chk-drawer-foot">
+              <div class="chk-progress">
+                <p class="chk-progress-line">Spend <strong>$18.00</strong> more for free standard shipping.</p>
+                <div class="chk-bar" role="progressbar" aria-valuemin="0" aria-valuemax="150" aria-valuenow="132" aria-label="Progress toward free standard shipping">
+                  <span class="chk-bar-fill" style="width:88%"></span>
+                </div>
+              </div>
+              <div class="chk-row chk-row-strong">
+                <span>Subtotal</span>
+                <span class="chk-money">$132.00</span>
+              </div>
+              <p class="chk-fine">Shipping and discounts are worked out at checkout. All prices are in AUD and include GST.</p>
+              <div class="chk-drawer-actions">
+                <a class="chk-btn chk-btn-sec" href="#T343">View cart</a>
+                <a class="chk-btn chk-btn-pri" href="#T347">Checkout</a>
+              </div>
+            </footer>
+          </aside>
+        </div>
+        <p class="chk-note">
+          <button type="button" class="chk-btn chk-btn-sec chk-btn-sm" id="chk-drawer-open">Reopen the drawer</button>
+        </p>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T341: Cart line item
+         ============================================================ -->
+    <article class="tb-pattern" id="T341" data-tid="T341">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T341</span>
+        <div>
+          <h2>Cart line item</h2>
+          <p>One row: thumb, title, variant summary, quantity stepper, line total, remove, plus the saved-for-later variant.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <ul class="chk-lines">
+          <li class="chk-line">
+            <span class="chk-thumb" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))" aria-hidden="true"></span>
+            <div class="chk-line-main">
+              <a class="chk-line-title" href="#T341">Ridgeline Merino Crew</a>
+              <p class="chk-line-variant">Ink / Size M &middot; <code>RMC-INK-M</code></p>
+              <p class="chk-line-stock">In stock, ships from Marrickville NSW</p>
+              <div class="chk-line-actions">
+                <button type="button" class="chk-linkbtn">Save for later</button>
+                <button type="button" class="chk-linkbtn chk-linkbtn-quiet">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M2.5 4h11M6 4V2.5h4V4M4 4l.7 9.5h6.6L12 4"/></svg>
+                  Remove
+                </button>
+              </div>
+            </div>
+            <div class="chk-qty">
+              <button type="button" class="chk-qty-btn" data-chk-step="-1" aria-label="Decrease quantity of Ridgeline Merino Crew">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 8h10"/></svg>
+              </button>
+              <label class="chk-sr" for="chk-q1">Quantity of Ridgeline Merino Crew</label>
+              <input class="chk-qty-input" id="chk-q1" type="text" inputmode="numeric" value="1" data-chk-unit="149" data-chk-total="chk-t1">
+              <button type="button" class="chk-qty-btn" data-chk-step="1" aria-label="Increase quantity of Ridgeline Merino Crew">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M8 3v10M3 8h10"/></svg>
+              </button>
+            </div>
+            <div class="chk-line-money">
+              <span class="chk-money" id="chk-t1">$149.00</span>
+              <span class="chk-line-each">$149.00 each</span>
+            </div>
+          </li>
+        </ul>
+
+        <h4 class="chk-subhead">Saved for later</h4>
+        <ul class="chk-lines">
+          <li class="chk-line is-saved">
+            <span class="chk-thumb" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))" aria-hidden="true"></span>
+            <div class="chk-line-main">
+              <a class="chk-line-title" href="#T341">Brass Pour-Over Kettle</a>
+              <p class="chk-line-variant">1 L / Unlacquered brass &middot; <code>BPK-1L</code></p>
+              <p class="chk-line-stock chk-line-stock-warn">Only 3 left</p>
+              <div class="chk-line-actions">
+                <button type="button" class="chk-linkbtn">Move to cart</button>
+                <button type="button" class="chk-linkbtn chk-linkbtn-quiet">Remove</button>
+              </div>
+            </div>
+            <div class="chk-line-money">
+              <span class="chk-money">$129.00</span>
+              <span class="chk-line-each">Saved 12 August</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T342: Empty cart
+         ============================================================ -->
+    <article class="tb-pattern" id="T342" data-tid="T342">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T342</span>
+        <div>
+          <h2>Empty cart</h2>
+          <p>The zero state: icon, headline, a line of reassurance, a browse CTA, and a recently-viewed row to restart the shop.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="chk-empty">
+          <span class="chk-empty-icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" focusable="false"><path d="M4 7h16l-1.3 12.2a1 1 0 0 1-1 .8H6.3a1 1 0 0 1-1-.8L4 7z"/><path d="M8.6 7V5.4a3.4 3.4 0 0 1 6.8 0V7"/></svg>
+          </span>
+          <h3 class="chk-empty-title">Your cart is empty</h3>
+          <p class="chk-empty-copy">Nothing here yet. Anything you add is held for 30 days, and standard delivery is free on orders over $150.</p>
+          <a class="chk-btn chk-btn-pri" href="#T340">Browse the collection</a>
+        </div>
+        <div class="chk-recent">
+          <h4 class="chk-subhead">Recently viewed</h4>
+          <ul class="chk-recent-row">
+            <li class="chk-recent-card">
+              <span class="chk-thumb chk-thumb-wide" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))" aria-hidden="true"></span>
+              <span class="chk-recent-name">Ridgeline Merino Crew</span>
+              <span class="chk-money">$149.00</span>
+            </li>
+            <li class="chk-recent-card">
+              <span class="chk-thumb chk-thumb-wide" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))" aria-hidden="true"></span>
+              <span class="chk-recent-name">Brass Pour-Over Kettle</span>
+              <span class="chk-money">$129.00</span>
+            </li>
+            <li class="chk-recent-card">
+              <span class="chk-thumb chk-thumb-wide" style="background:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))" aria-hidden="true"></span>
+              <span class="chk-recent-name">Terracotta Mug Set</span>
+              <span class="chk-money">$43.00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T343: Cart page
+         ============================================================ -->
+    <article class="tb-pattern" id="T343" data-tid="T343">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T343</span>
+        <div>
+          <h2>Cart page</h2>
+          <p>The full two-column cart: editable line items on the left, a sticky order summary card on the right.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="chk-cart" data-chk-cart>
+          <div class="chk-cart-main">
+            <div class="chk-cart-head">
+              <h3 class="chk-subhead chk-subhead-flush">Cart <span class="chk-count">3 items</span></h3>
+              <button type="button" class="chk-linkbtn chk-linkbtn-quiet">Clear cart</button>
+            </div>
+            <ul class="chk-lines">
+              <li class="chk-line">
+                <span class="chk-thumb" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))" aria-hidden="true"></span>
+                <div class="chk-line-main">
+                  <a class="chk-line-title" href="#T343">Ridgeline Merino Crew</a>
+                  <p class="chk-line-variant">Ink / Size M</p>
+                  <div class="chk-line-actions">
+                    <button type="button" class="chk-linkbtn chk-linkbtn-quiet">Remove</button>
+                  </div>
+                </div>
+                <div class="chk-qty">
+                  <button type="button" class="chk-qty-btn" data-chk-step="-1" aria-label="Decrease quantity of Ridgeline Merino Crew">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 8h10"/></svg>
+                  </button>
+                  <label class="chk-sr" for="chk-q2">Quantity of Ridgeline Merino Crew</label>
+                  <input class="chk-qty-input" id="chk-q2" type="text" inputmode="numeric" value="1" data-chk-unit="149" data-chk-total="chk-t2">
+                  <button type="button" class="chk-qty-btn" data-chk-step="1" aria-label="Increase quantity of Ridgeline Merino Crew">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M8 3v10M3 8h10"/></svg>
+                  </button>
+                </div>
+                <div class="chk-line-money"><span class="chk-money" id="chk-t2">$149.00</span></div>
+              </li>
+              <li class="chk-line">
+                <span class="chk-thumb" style="background:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))" aria-hidden="true"></span>
+                <div class="chk-line-main">
+                  <a class="chk-line-title" href="#T343">Coastal Linen Throw</a>
+                  <p class="chk-line-variant">Sand / 130 x 180 cm</p>
+                  <div class="chk-line-actions">
+                    <button type="button" class="chk-linkbtn chk-linkbtn-quiet">Remove</button>
+                  </div>
+                </div>
+                <div class="chk-qty">
+                  <button type="button" class="chk-qty-btn" data-chk-step="-1" aria-label="Decrease quantity of Coastal Linen Throw">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 8h10"/></svg>
+                  </button>
+                  <label class="chk-sr" for="chk-q3">Quantity of Coastal Linen Throw</label>
+                  <input class="chk-qty-input" id="chk-q3" type="text" inputmode="numeric" value="1" data-chk-unit="89" data-chk-total="chk-t3">
+                  <button type="button" class="chk-qty-btn" data-chk-step="1" aria-label="Increase quantity of Coastal Linen Throw">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M8 3v10M3 8h10"/></svg>
+                  </button>
+                </div>
+                <div class="chk-line-money"><span class="chk-money" id="chk-t3">$89.00</span></div>
+              </li>
+              <li class="chk-line">
+                <span class="chk-thumb" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))" aria-hidden="true"></span>
+                <div class="chk-line-main">
+                  <a class="chk-line-title" href="#T343">Brass Pour-Over Kettle</a>
+                  <p class="chk-line-variant">1 L / Unlacquered brass</p>
+                  <div class="chk-line-actions">
+                    <button type="button" class="chk-linkbtn chk-linkbtn-quiet">Remove</button>
+                  </div>
+                </div>
+                <div class="chk-qty">
+                  <button type="button" class="chk-qty-btn" data-chk-step="-1" aria-label="Decrease quantity of Brass Pour-Over Kettle">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 8h10"/></svg>
+                  </button>
+                  <label class="chk-sr" for="chk-q4">Quantity of Brass Pour-Over Kettle</label>
+                  <input class="chk-qty-input" id="chk-q4" type="text" inputmode="numeric" value="1" data-chk-unit="129" data-chk-total="chk-t4">
+                  <button type="button" class="chk-qty-btn" data-chk-step="1" aria-label="Increase quantity of Brass Pour-Over Kettle">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M8 3v10M3 8h10"/></svg>
+                  </button>
+                </div>
+                <div class="chk-line-money"><span class="chk-money" id="chk-t4">$129.00</span></div>
+              </li>
+            </ul>
+            <a class="chk-linkbtn chk-cart-back" href="#T342">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M9.5 3.5L5 8l4.5 4.5"/></svg>
+              Continue shopping
+            </a>
+          </div>
+
+          <aside class="chk-summary" aria-label="Order summary">
+            <h3 class="chk-summary-title">Order summary</h3>
+            <div class="chk-row"><span>Subtotal</span><span class="chk-money" data-chk-subtotal>$367.00</span></div>
+            <div class="chk-row"><span>Standard shipping</span><span class="chk-money chk-free">Free</span></div>
+            <div class="chk-row chk-row-quiet"><span>Includes GST</span><span class="chk-money" data-chk-gst>$33.36</span></div>
+            <div class="chk-row chk-row-total"><span>Total</span><span class="chk-money" data-chk-total>$367.00</span></div>
+            <a class="chk-btn chk-btn-pri chk-btn-block" href="#T347">Checkout</a>
+            <p class="chk-fine">Prices are in AUD and include GST. Delivery within Australia only.</p>
+            <ul class="chk-summary-perks">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 8.5l3 3 7-7"/></svg>
+                Free standard delivery over $150
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 8.5l3 3 7-7"/></svg>
+                30 day returns, no questions
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T344: Discount code
+         ============================================================ -->
+    <article class="tb-pattern" id="T344" data-tid="T344">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T344</span>
+        <div>
+          <h2>Discount code</h2>
+          <p>Apply a code, in all three states: idle, applied as a removable chip with the saving on the summary, and rejected with an inline error.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="chk-states">
+          <div class="chk-state">
+            <span class="chk-state-tag">Idle</span>
+            <form class="chk-promo" id="chk-promo-form" novalidate>
+              <div class="chk-field">
+                <label class="chk-label" for="chk-promo">Discount code</label>
+                <div class="chk-promo-row">
+                  <input class="chk-input" id="chk-promo" name="promo" type="text" autocomplete="off" placeholder="Enter a code" spellcheck="false">
+                  <button type="submit" class="chk-btn chk-btn-sec chk-btn-sm">Apply</button>
+                </div>
+                <p class="chk-help" id="chk-promo-help">Try <code>WINTER10</code> to see the applied state.</p>
+              </div>
+            </form>
+            <div class="chk-promo-out" id="chk-promo-out" role="status" aria-live="polite"></div>
+          </div>
+
+          <div class="chk-state">
+            <span class="chk-state-tag">Applied</span>
+            <div class="chk-field">
+              <span class="chk-label">Discount code</span>
+              <div class="chk-chips">
+                <span class="chk-chip">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 8.5l3 3 7-7"/></svg>
+                  WINTER10
+                  <button type="button" class="chk-chip-x" aria-label="Remove discount code WINTER10">
+                    <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 3l10 10M13 3L3 13"/></svg>
+                  </button>
+                </span>
+              </div>
+              <p class="chk-help">10% off, applied to the subtotal.</p>
+            </div>
+            <div class="chk-mini-summary">
+              <div class="chk-row"><span>Subtotal</span><span class="chk-money">$367.00</span></div>
+              <div class="chk-row chk-row-save"><span>Discount (WINTER10)</span><span class="chk-money">-$36.70</span></div>
+              <div class="chk-row chk-row-total"><span>New subtotal</span><span class="chk-money">$330.30</span></div>
+            </div>
+          </div>
+
+          <div class="chk-state">
+            <span class="chk-state-tag">Rejected</span>
+            <div class="chk-field is-error">
+              <label class="chk-label" for="chk-promo-bad">Discount code</label>
+              <div class="chk-promo-row">
+                <input class="chk-input" id="chk-promo-bad" type="text" value="SPRING22" autocomplete="off" aria-invalid="true" aria-describedby="chk-promo-bad-err" spellcheck="false">
+                <button type="button" class="chk-btn chk-btn-sec chk-btn-sm">Apply</button>
+              </div>
+              <p class="chk-err" id="chk-promo-bad-err">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6"/><path d="M8 5v4M8 11h.01"/></svg>
+                That code expired on 31 July. Codes are one per order.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T345: Free shipping progress
+         ============================================================ -->
+    <article class="tb-pattern" id="T345" data-tid="T345">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T345</span>
+        <div>
+          <h2>Free shipping progress</h2>
+          <p>The nudge bar that turns a subtotal into a target, with its unlocked state.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="chk-progress-set">
+          <div class="chk-progress chk-progress-card">
+            <div class="chk-progress-head">
+              <p class="chk-progress-line">Spend <strong>$18.00</strong> more for free standard shipping.</p>
+              <span class="chk-money chk-money-quiet">$132.00 of $150.00</span>
+            </div>
+            <div class="chk-bar" role="progressbar" aria-valuemin="0" aria-valuemax="150" aria-valuenow="132" aria-label="Progress toward free standard shipping">
+              <span class="chk-bar-fill" style="width:88%"></span>
+            </div>
+          </div>
+
+          <div class="chk-progress chk-progress-card is-complete">
+            <div class="chk-progress-head">
+              <p class="chk-progress-line">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 8.5l3 3 7-7"/></svg>
+                Free standard shipping unlocked.
+              </p>
+              <span class="chk-money chk-money-quiet">$167.00 of $150.00</span>
+            </div>
+            <div class="chk-bar" role="progressbar" aria-valuemin="0" aria-valuemax="150" aria-valuenow="150" aria-label="Free standard shipping unlocked">
+              <span class="chk-bar-fill" style="width:100%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T346: Checkout stepper
+         ============================================================ -->
+    <article class="tb-pattern" id="T346" data-tid="T346">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T346</span>
+        <div>
+          <h2>Checkout stepper</h2>
+          <p>Four steps with complete, current, and upcoming states. The current step carries <code>aria-current="step"</code>.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <nav aria-label="Checkout progress">
+          <ol class="chk-steps">
+            <li class="chk-step is-done">
+              <span class="chk-step-dot" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M3 8.5l3 3 7-7"/></svg>
+              </span>
+              <span class="chk-step-txt">
+                <span class="chk-step-n">Step 1</span>
+                <a class="chk-step-name" href="#T343">Cart<span class="chk-sr">, completed</span></a>
+              </span>
+            </li>
+            <li class="chk-step is-done">
+              <span class="chk-step-dot" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M3 8.5l3 3 7-7"/></svg>
+              </span>
+              <span class="chk-step-txt">
+                <span class="chk-step-n">Step 2</span>
+                <a class="chk-step-name" href="#T347">Details<span class="chk-sr">, completed</span></a>
+              </span>
+            </li>
+            <li class="chk-step is-current" aria-current="step">
+              <span class="chk-step-dot" aria-hidden="true">3</span>
+              <span class="chk-step-txt">
+                <span class="chk-step-n">Step 3</span>
+                <span class="chk-step-name">Shipping</span>
+              </span>
+            </li>
+            <li class="chk-step">
+              <span class="chk-step-dot" aria-hidden="true">4</span>
+              <span class="chk-step-txt">
+                <span class="chk-step-n">Step 4</span>
+                <span class="chk-step-name">Payment<span class="chk-sr">, not yet started</span></span>
+              </span>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T347: Contact and delivery form
+         ============================================================ -->
+    <article class="tb-pattern" id="T347" data-tid="T347">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T347</span>
+        <div>
+          <h2>Contact and delivery form</h2>
+          <p>Email, phone, and a full Australian address block with a state select and a four-digit postcode, showing the valid and invalid states.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <form class="chk-form" id="chk-address-form" novalidate>
+          <fieldset class="chk-fieldset">
+            <legend class="chk-legend">Contact</legend>
+            <div class="chk-grid">
+              <div class="chk-field chk-col-2 is-ok">
+                <label class="chk-label" for="chk-email">Email address</label>
+                <input class="chk-input" id="chk-email" name="email" type="email" autocomplete="email" value="priya.raman@example.com.au" aria-describedby="chk-email-help">
+                <p class="chk-help chk-help-ok" id="chk-email-help">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 8.5l3 3 7-7"/></svg>
+                  Order updates and your receipt go here.
+                </p>
+              </div>
+              <div class="chk-field chk-col-2">
+                <label class="chk-label" for="chk-phone">Mobile number</label>
+                <input class="chk-input" id="chk-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" value="0412 668 204" aria-describedby="chk-phone-help">
+                <p class="chk-help" id="chk-phone-help">The courier sends a delivery window by SMS.</p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="chk-fieldset">
+            <legend class="chk-legend">Delivery address</legend>
+            <div class="chk-grid">
+              <div class="chk-field">
+                <label class="chk-label" for="chk-given">First name</label>
+                <input class="chk-input" id="chk-given" name="given-name" type="text" autocomplete="given-name" value="Priya">
+              </div>
+              <div class="chk-field">
+                <label class="chk-label" for="chk-family">Last name</label>
+                <input class="chk-input" id="chk-family" name="family-name" type="text" autocomplete="family-name" value="Raman">
+              </div>
+              <div class="chk-field chk-col-2">
+                <label class="chk-label" for="chk-addr1">Street address</label>
+                <input class="chk-input" id="chk-addr1" name="address-line1" type="text" autocomplete="address-line1" value="14 Kurrajong Street">
+              </div>
+              <div class="chk-field chk-col-2">
+                <label class="chk-label" for="chk-addr2">Apartment, unit, or level <span class="chk-optional">optional</span></label>
+                <input class="chk-input" id="chk-addr2" name="address-line2" type="text" autocomplete="address-line2" placeholder="Unit 3">
+              </div>
+              <div class="chk-field chk-col-2">
+                <label class="chk-label" for="chk-suburb">Suburb</label>
+                <input class="chk-input" id="chk-suburb" name="address-level2" type="text" autocomplete="address-level2" value="Newtown">
+              </div>
+              <div class="chk-field">
+                <label class="chk-label" for="chk-state">State or territory</label>
+                <div class="chk-selectwrap">
+                  <select class="chk-input chk-select" id="chk-state" name="address-level1" autocomplete="address-level1">
+                    <option value="NSW" selected>NSW</option>
+                    <option value="VIC">VIC</option>
+                    <option value="QLD">QLD</option>
+                    <option value="WA">WA</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="ACT">ACT</option>
+                    <option value="NT">NT</option>
+                  </select>
+                  <span class="chk-select-caret" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" focusable="false"><path d="M4 6.5L8 10.5l4-4"/></svg>
+                  </span>
+                </div>
+              </div>
+              <div class="chk-field" id="chk-postcode-field">
+                <label class="chk-label" for="chk-postcode">Postcode</label>
+                <input class="chk-input" id="chk-postcode" name="postal-code" type="text" autocomplete="postal-code" inputmode="numeric" maxlength="4" value="20" aria-invalid="true" aria-describedby="chk-postcode-err">
+                <p class="chk-err" id="chk-postcode-err">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6"/><path d="M8 5v4M8 11h.01"/></svg>
+                  Enter a four digit Australian postcode.
+                </p>
+              </div>
+              <div class="chk-field chk-col-2">
+                <label class="chk-label" for="chk-country">Country</label>
+                <input class="chk-input" id="chk-country" name="country-name" type="text" autocomplete="country-name" value="Australia" readonly aria-describedby="chk-country-help">
+                <p class="chk-help" id="chk-country-help">We deliver within Australia only.</p>
+              </div>
+              <div class="chk-field chk-col-2">
+                <label class="chk-check">
+                  <input type="checkbox" checked>
+                  <span>Use this address for billing as well</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="chk-form-actions">
+            <a class="chk-linkbtn" href="#T343">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M9.5 3.5L5 8l4.5 4.5"/></svg>
+              Back to cart
+            </a>
+            <button type="submit" class="chk-btn chk-btn-pri">Continue to shipping</button>
+          </div>
+          <p class="chk-note" id="chk-address-out" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T348: Shipping method selector
+         ============================================================ -->
+    <article class="tb-pattern" id="T348" data-tid="T348">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T348</span>
+        <div>
+          <h2>Shipping method selector</h2>
+          <p>Radio cards carrying the method name, the delivery window, and the price, including a free option and the selected state.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <fieldset class="chk-fieldset chk-fieldset-flush">
+          <legend class="chk-legend">Shipping method</legend>
+          <div class="chk-radios">
+            <label class="chk-radiocard">
+              <input type="radio" name="chk-shipping" value="standard">
+              <span class="chk-radiocard-body">
+                <span class="chk-radiocard-main">
+                  <span class="chk-radiocard-name">Standard delivery</span>
+                  <span class="chk-radiocard-sub">3 to 6 business days, tracked</span>
+                </span>
+                <span class="chk-money">$9.95</span>
+              </span>
+            </label>
+            <label class="chk-radiocard">
+              <input type="radio" name="chk-shipping" value="express" checked>
+              <span class="chk-radiocard-body">
+                <span class="chk-radiocard-main">
+                  <span class="chk-radiocard-name">Express delivery</span>
+                  <span class="chk-radiocard-sub">1 to 2 business days to metro NSW, VIC, QLD and ACT</span>
+                </span>
+                <span class="chk-money">$14.95</span>
+              </span>
+            </label>
+            <label class="chk-radiocard">
+              <input type="radio" name="chk-shipping" value="free">
+              <span class="chk-radiocard-body">
+                <span class="chk-radiocard-main">
+                  <span class="chk-radiocard-name">Free standard delivery <span class="chk-badge">Order over $150</span></span>
+                  <span class="chk-radiocard-sub">3 to 6 business days, tracked</span>
+                </span>
+                <span class="chk-money chk-free">Free</span>
+              </span>
+            </label>
+            <label class="chk-radiocard is-disabled">
+              <input type="radio" name="chk-shipping" value="pickup" disabled>
+              <span class="chk-radiocard-body">
+                <span class="chk-radiocard-main">
+                  <span class="chk-radiocard-name">Click and collect</span>
+                  <span class="chk-radiocard-sub">Unavailable for WA, SA, TAS and NT addresses</span>
+                </span>
+                <span class="chk-money chk-free">Free</span>
+              </span>
+            </label>
+          </div>
+          <p class="chk-fine">Delivery windows are business days from dispatch and exclude public holidays. Prices include GST.</p>
+        </fieldset>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T349: Payment section
+         ============================================================ -->
+    <article class="tb-pattern" id="T349" data-tid="T349">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T349</span>
+        <div>
+          <h2>Payment section</h2>
+          <p>A payment method radio group where the card fields reveal for the card option, in CSS alone, with a security note underneath.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <fieldset class="chk-fieldset chk-fieldset-flush chk-pay">
+          <legend class="chk-legend">Payment method</legend>
+          <div class="chk-radios">
+            <label class="chk-radiocard">
+              <input type="radio" name="chk-payment" value="card" id="chk-pay-card" checked>
+              <span class="chk-radiocard-body">
+                <span class="chk-radiocard-main">
+                  <span class="chk-radiocard-name">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19"/></svg>
+                    Card
+                  </span>
+                  <span class="chk-radiocard-sub">Visa, Mastercard, and American Express</span>
+                </span>
+              </span>
+            </label>
+
+            <div class="chk-pay-fields">
+              <div class="chk-grid">
+                <div class="chk-field chk-col-2">
+                  <label class="chk-label" for="chk-cc-number">Card number</label>
+                  <input class="chk-input" id="chk-cc-number" name="cc-number" type="text" autocomplete="cc-number" inputmode="numeric" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="chk-field chk-col-2">
+                  <label class="chk-label" for="chk-cc-name">Name on card</label>
+                  <input class="chk-input" id="chk-cc-name" name="cc-name" type="text" autocomplete="cc-name" placeholder="P Raman">
+                </div>
+                <div class="chk-field">
+                  <label class="chk-label" for="chk-cc-exp">Expiry</label>
+                  <input class="chk-input" id="chk-cc-exp" name="cc-exp" type="text" autocomplete="cc-exp" inputmode="numeric" placeholder="MM / YY">
+                </div>
+                <div class="chk-field">
+                  <label class="chk-label" for="chk-cc-csc">Security code</label>
+                  <input class="chk-input" id="chk-cc-csc" name="cc-csc" type="text" autocomplete="cc-csc" inputmode="numeric" maxlength="4" placeholder="123" aria-describedby="chk-cc-csc-help">
+                  <p class="chk-help" id="chk-cc-csc-help">Three digits on the back, four on the front for Amex.</p>
+                </div>
+              </div>
+            </div>
+
+            <label class="chk-radiocard">
+              <input type="radio" name="chk-payment" value="paypal">
+              <span class="chk-radiocard-body">
+                <span class="chk-radiocard-main">
+                  <span class="chk-radiocard-name">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M6 19l2.5-14h6a4 4 0 0 1 0 8H10"/></svg>
+                    PayPal
+                  </span>
+                  <span class="chk-radiocard-sub">You finish payment on PayPal, then come back here</span>
+                </span>
+              </span>
+            </label>
+            <label class="chk-radiocard">
+              <input type="radio" name="chk-payment" value="afterpay">
+              <span class="chk-radiocard-body">
+                <span class="chk-radiocard-main">
+                  <span class="chk-radiocard-name">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+                    Afterpay
+                  </span>
+                  <span class="chk-radiocard-sub">4 payments of $86.31, due every fortnight, no interest</span>
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <p class="chk-secure">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>
+            Card details are encrypted in transit and handled by our payment provider. We never store your full card number.
+          </p>
+        </fieldset>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T350: Express checkout row
+         ============================================================ -->
+    <article class="tb-pattern" id="T350" data-tid="T350">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T350</span>
+        <div>
+          <h2>Express checkout row</h2>
+          <p>The one-tap wallet row that sits above the form, with the divider that hands off to the long way round.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="chk-express-wrap">
+          <span class="chk-express-label">Express checkout</span>
+          <div class="chk-express-row">
+            <button type="button" class="chk-express" data-chk-express="Apple Pay" aria-label="Pay with Apple Pay">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="M8 15h8"/></svg>
+              <span class="chk-express-name">Apple&nbsp;Pay</span>
+            </button>
+            <button type="button" class="chk-express" data-chk-express="Google Pay" aria-label="Pay with Google Pay">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="7.5"/><path d="M12 12h5.5"/></svg>
+              <span class="chk-express-name">Google&nbsp;Pay</span>
+            </button>
+            <button type="button" class="chk-express" data-chk-express="PayPal" aria-label="Pay with PayPal">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M6 19l2.5-14h6a4 4 0 0 1 0 8H10"/></svg>
+              <span class="chk-express-name">PayPal</span>
+            </button>
+            <button type="button" class="chk-express" data-chk-express="Shop Pay" aria-label="Pay with Shop Pay">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M4.5 8h15l-1 11h-13z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+              <span class="chk-express-name">Shop&nbsp;Pay</span>
+            </button>
+          </div>
+          <div class="chk-divider"><span>or pay another way</span></div>
+          <p class="chk-fine">Shipping is confirmed inside the wallet sheet. Totals are in AUD and include GST.</p>
+          <p class="chk-note" id="chk-express-out" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T351: Order review
+         ============================================================ -->
+    <article class="tb-pattern" id="T351" data-tid="T351">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T351</span>
+        <div>
+          <h2>Order review</h2>
+          <p>The last panel before the money moves: every earlier step collapsed with an edit link, the totals, consent, and the place-order button.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="chk-review">
+          <div class="chk-review-main">
+            <h3 class="chk-subhead chk-subhead-flush">Review your order</h3>
+            <dl class="chk-review-list">
+              <div class="chk-review-row">
+                <dt>Contact</dt>
+                <dd><span class="chk-review-val">priya.raman@example.com.au<br>0412 668 204</span><a class="chk-linkbtn" href="#T347">Edit<span class="chk-sr"> contact details</span></a></dd>
+              </div>
+              <div class="chk-review-row">
+                <dt>Deliver to</dt>
+                <dd><span class="chk-review-val">Priya Raman<br>14 Kurrajong Street<br>Newtown NSW 2042</span><a class="chk-linkbtn" href="#T347">Edit<span class="chk-sr"> delivery address</span></a></dd>
+              </div>
+              <div class="chk-review-row">
+                <dt>Shipping</dt>
+                <dd><span class="chk-review-val">Express delivery, 1 to 2 business days<br><span class="chk-review-quiet">Dispatched from Marrickville NSW</span></span><a class="chk-linkbtn" href="#T348">Edit<span class="chk-sr"> shipping method</span></a></dd>
+              </div>
+              <div class="chk-review-row">
+                <dt>Payment</dt>
+                <dd><span class="chk-review-val">Card ending 4417<br><span class="chk-review-quiet">Expires 09 / 29</span></span><a class="chk-linkbtn" href="#T349">Edit<span class="chk-sr"> payment method</span></a></dd>
+              </div>
+              <div class="chk-review-row">
+                <dt>Items</dt>
+                <dd><span class="chk-review-val">Ridgeline Merino Crew, Ink / M<br>Coastal Linen Throw, Sand<br>Brass Pour-Over Kettle, 1 L</span><a class="chk-linkbtn" href="#T343">Edit<span class="chk-sr"> cart items</span></a></dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="chk-summary" aria-label="Order totals">
+            <h3 class="chk-summary-title">Totals</h3>
+            <div class="chk-row"><span>Subtotal</span><span class="chk-money">$367.00</span></div>
+            <div class="chk-row chk-row-save"><span>Discount (WINTER10)</span><span class="chk-money">-$36.70</span></div>
+            <div class="chk-row"><span>Express delivery</span><span class="chk-money">$14.95</span></div>
+            <div class="chk-row chk-row-quiet"><span>Includes GST</span><span class="chk-money">$31.39</span></div>
+            <div class="chk-row chk-row-total"><span>Total</span><span class="chk-money">$345.25</span></div>
+
+            <label class="chk-check chk-check-terms">
+              <input type="checkbox" id="chk-terms">
+              <span>I have read and accept the <a class="chk-link" href="#T351">terms of sale</a> and the <a class="chk-link" href="#T351">returns policy</a>.</span>
+            </label>
+            <button type="button" class="chk-btn chk-btn-pri chk-btn-block" id="chk-place" disabled>Place order, $345.25</button>
+            <p class="chk-fine" id="chk-place-help">Accept the terms to place the order. Your card is charged once the order is confirmed.</p>
+            <p class="chk-note" id="chk-place-out" role="status" aria-live="polite"></p>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T352: Order confirmation
+         ============================================================ -->
+    <article class="tb-pattern" id="T352" data-tid="T352">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T352</span>
+        <div>
+          <h2>Order confirmation</h2>
+          <p>The thank-you screen: order number, itemised recap, delivery address, estimated arrival, and where to go next.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="chk-confirm">
+          <div class="chk-confirm-head">
+            <span class="chk-confirm-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+            </span>
+            <h3 class="chk-confirm-title">Thanks Priya, your order is confirmed</h3>
+            <p class="chk-confirm-sub">A receipt is on the way to priya.raman@example.com.au. Order <code>AU-10428</code>, placed 27 August 2026.</p>
+          </div>
+
+          <div class="chk-confirm-grid">
+            <section class="chk-panel">
+              <h4 class="chk-panel-title">Your items</h4>
+              <ul class="chk-recap">
+                <li>
+                  <span class="chk-thumb chk-thumb-sm" style="background:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))" aria-hidden="true"></span>
+                  <span class="chk-recap-main"><span class="chk-recap-name">Ridgeline Merino Crew</span><span class="chk-recap-sub">Ink / Size M &middot; Qty 1</span></span>
+                  <span class="chk-money">$149.00</span>
+                </li>
+                <li>
+                  <span class="chk-thumb chk-thumb-sm" style="background:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))" aria-hidden="true"></span>
+                  <span class="chk-recap-main"><span class="chk-recap-name">Coastal Linen Throw</span><span class="chk-recap-sub">Sand / 130 x 180 cm &middot; Qty 1</span></span>
+                  <span class="chk-money">$89.00</span>
+                </li>
+                <li>
+                  <span class="chk-thumb chk-thumb-sm" style="background:linear-gradient(135deg,var(--wash-1a),var(--wash-1b))" aria-hidden="true"></span>
+                  <span class="chk-recap-main"><span class="chk-recap-name">Brass Pour-Over Kettle</span><span class="chk-recap-sub">1 L / Unlacquered brass &middot; Qty 1</span></span>
+                  <span class="chk-money">$129.00</span>
+                </li>
+              </ul>
+              <div class="chk-row"><span>Subtotal</span><span class="chk-money">$367.00</span></div>
+              <div class="chk-row chk-row-save"><span>Discount (WINTER10)</span><span class="chk-money">-$36.70</span></div>
+              <div class="chk-row"><span>Express delivery</span><span class="chk-money">$14.95</span></div>
+              <div class="chk-row chk-row-quiet"><span>Includes GST</span><span class="chk-money">$31.39</span></div>
+              <div class="chk-row chk-row-total"><span>Paid by card ending 4417</span><span class="chk-money">$345.25</span></div>
+            </section>
+
+            <div class="chk-confirm-side">
+              <section class="chk-panel">
+                <h4 class="chk-panel-title">Delivering to</h4>
+                <address class="chk-address">
+                  Priya Raman<br>
+                  14 Kurrajong Street<br>
+                  Newtown NSW 2042<br>
+                  Australia
+                </address>
+              </section>
+              <section class="chk-panel chk-panel-eta">
+                <h4 class="chk-panel-title">Estimated arrival</h4>
+                <p class="chk-eta">Monday 31 August to Tuesday 1 September</p>
+                <p class="chk-fine">We email a tracking number the moment the parcel is scanned by the carrier.</p>
+              </section>
+              <div class="chk-confirm-actions">
+                <a class="chk-btn chk-btn-pri chk-btn-block" href="#T353">Track this order</a>
+                <a class="chk-btn chk-btn-sec chk-btn-block" href="#T352">Download receipt</a>
+                <a class="chk-btn chk-btn-sec chk-btn-block" href="#T342">Continue shopping</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================
+         T353: Order tracking
+         ============================================================ -->
+    <article class="tb-pattern" id="T353" data-tid="T353">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T353</span>
+        <div>
+          <h2>Order tracking</h2>
+          <p>A vertical timeline from placed to delivered, carrying the tracking number and marking where the parcel is right now.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="chk-track">
+          <header class="chk-track-head">
+            <div>
+              <span class="chk-track-label">Order <code>AU-10428</code></span>
+              <h3 class="chk-track-status">Out for delivery</h3>
+              <p class="chk-fine">Australia Post, tracking <code>7ML29 4471 8830</code></p>
+            </div>
+            <a class="chk-btn chk-btn-sec chk-btn-sm" href="#T353">Copy tracking number</a>
+          </header>
+
+          <ol class="chk-timeline">
+            <li class="chk-tl is-done">
+              <span class="chk-tl-dot" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" focusable="false"><path d="M3 8.5l3 3 7-7"/></svg>
+              </span>
+              <div class="chk-tl-body">
+                <span class="chk-tl-name">Order placed<span class="chk-sr">, completed</span></span>
+                <span class="chk-tl-meta">Monday 24 August, 9:12 am</span>
+                <p class="chk-tl-copy">Payment authorised and the receipt emailed.</p>
+              </div>
+            </li>
+            <li class="chk-tl is-done">
+              <span class="chk-tl-dot" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" focusable="false"><path d="M3 8.5l3 3 7-7"/></svg>
+              </span>
+              <div class="chk-tl-body">
+                <span class="chk-tl-name">Packed<span class="chk-sr">, completed</span></span>
+                <span class="chk-tl-meta">Tuesday 25 August, 11:40 am</span>
+                <p class="chk-tl-copy">Picked and packed at the Marrickville NSW warehouse.</p>
+              </div>
+            </li>
+            <li class="chk-tl is-done">
+              <span class="chk-tl-dot" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" focusable="false"><path d="M3 8.5l3 3 7-7"/></svg>
+              </span>
+              <div class="chk-tl-body">
+                <span class="chk-tl-name">Shipped<span class="chk-sr">, completed</span></span>
+                <span class="chk-tl-meta">Tuesday 25 August, 6:10 pm</span>
+                <p class="chk-tl-copy">Accepted at Sydney parcel facility, NSW.</p>
+              </div>
+            </li>
+            <li class="chk-tl is-current" aria-current="step">
+              <span class="chk-tl-dot" aria-hidden="true"></span>
+              <div class="chk-tl-body">
+                <span class="chk-tl-name">Out for delivery <span class="chk-badge chk-badge-live">Now</span></span>
+                <span class="chk-tl-meta">Thursday 27 August, 7:02 am</span>
+                <p class="chk-tl-copy">On board with the driver from Alexandria NSW. Nobody needs to be home, the parcel is left in a safe place.</p>
+              </div>
+            </li>
+            <li class="chk-tl">
+              <span class="chk-tl-dot" aria-hidden="true"></span>
+              <div class="chk-tl-body">
+                <span class="chk-tl-name">Delivered<span class="chk-sr">, not yet reached</span></span>
+                <span class="chk-tl-meta">Expected today by 6:00 pm</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <style>
+    /* ============================================================
+       Cart and checkout blocks. Every colour, font, radius and
+       border weight below is a token from base.css, so the whole
+       page reskins with the theme switch.
+       ============================================================ */
+
+    /* ---- Shared atoms ---- */
+    .chk-sr {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    .chk-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 0 22px;
+      font-family: var(--font-ui); font-size: 14px;
+      font-weight: var(--button-weight); letter-spacing: var(--button-tracking);
+      text-transform: var(--button-transform);
+      border: var(--line-weight) solid transparent;
+      border-radius: var(--radius-btn, 0px);
+      cursor: pointer; text-decoration: none;
+    }
+    .chk-btn-sm { min-height: 44px; padding: 0 16px; font-size: 13px; }
+    .chk-btn-block { width: 100%; margin-top: 6px; }
+    .chk-btn-pri { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+    .chk-btn-pri:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+    .chk-btn-pri:disabled { opacity: 0.55; cursor: not-allowed; }
+    .chk-btn-sec { background: transparent; color: var(--text); border-color: var(--border-2); }
+    .chk-btn-sec:hover { border-color: var(--text-3); }
+
+    .chk-linkbtn {
+      display: inline-flex; align-items: center; gap: 6px;
+      min-height: 44px; padding: 0;
+      background: none; border: 0; cursor: pointer;
+      font-family: var(--font-ui); font-size: 13px;
+      color: var(--accent); text-decoration: none;
+    }
+    .chk-linkbtn:hover { text-decoration: underline; }
+    .chk-linkbtn-quiet { color: var(--text-3); }
+    .chk-linkbtn-quiet:hover { color: var(--text); }
+    .chk-link { color: var(--accent); text-decoration: underline; }
+
+    .chk-iconbtn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px; flex: none;
+      background: transparent; color: var(--text-2);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-sm); cursor: pointer;
+    }
+    .chk-iconbtn:hover { color: var(--text); border-color: var(--border-2); }
+
+    .chk-btn:focus-visible,
+    .chk-linkbtn:focus-visible,
+    .chk-link:focus-visible,
+    .chk-iconbtn:focus-visible,
+    .chk-input:focus-visible,
+    .chk-qty-btn:focus-visible,
+    .chk-qty-input:focus-visible,
+    .chk-chip-x:focus-visible,
+    .chk-express:focus-visible,
+    .chk-step-name:focus-visible,
+    .chk-radiocard input:focus-visible,
+    .chk-check input:focus-visible {
+      outline: var(--focus-ring);
+      outline-offset: 2px;
+    }
+
+    .chk-money {
+      font-family: var(--font-ui); font-size: 15px; font-weight: 600;
+      color: var(--text); white-space: nowrap;
+    }
+    .chk-money-quiet { font-size: 12px; font-weight: 400; color: var(--text-3); }
+    .chk-free { color: var(--ok); }
+
+    .chk-fine { font-family: var(--font-body); font-size: 12px; line-height: 1.5; color: var(--text-4); margin: 10px 0 0; }
+    .chk-note { font-family: var(--font-ui); font-size: 13px; color: var(--text-3); margin: 14px 0 0; }
+    .chk-note:empty { margin: 0; }
+
+    .chk-subhead {
+      font-family: var(--font-display); font-size: 15px;
+      color: var(--text); margin: 28px 0 12px;
+    }
+    .chk-subhead-flush { margin-top: 0; }
+    .chk-count {
+      font-family: var(--font-ui); font-size: 12px; font-weight: 400;
+      color: var(--text-3); letter-spacing: 0.02em; margin-left: 8px;
+    }
+
+    .chk-badge {
+      display: inline-block;
+      font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.04em;
+      padding: 2px 8px; border-radius: var(--radius-pill);
+      background: var(--accent-wash); color: var(--accent);
+      border: var(--line-weight) solid var(--accent-line);
+      margin-left: 6px; vertical-align: middle;
+    }
+    .chk-badge-live { background: var(--ok-wash); color: var(--ok); border-color: var(--ok); }
+
+    .chk-thumb {
+      display: block; width: 68px; height: 68px; flex: none;
+      border-radius: var(--radius-sm);
+      border: var(--line-weight) solid var(--border);
+    }
+    .chk-thumb-sm { width: 48px; height: 48px; }
+    .chk-thumb-wide { width: 100%; height: 76px; }
+
+    .chk-row {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+      font-family: var(--font-body); font-size: 14px; color: var(--text-2);
+      padding: 7px 0;
+    }
+    .chk-row-quiet { color: var(--text-4); font-size: 12px; }
+    .chk-row-quiet .chk-money { font-size: 12px; font-weight: 400; color: var(--text-4); }
+    .chk-row-save, .chk-row-save .chk-money { color: var(--ok); }
+    .chk-row-strong { font-size: 15px; color: var(--text); }
+    .chk-row-total {
+      margin-top: 6px; padding-top: 12px;
+      border-top: var(--line-weight) solid var(--border-2);
+      font-size: 15px; color: var(--text);
+    }
+    .chk-row-total .chk-money { font-size: 19px; }
+
+    /* ---- Fields ---- */
+    .chk-field { display: flex; flex-direction: column; gap: 6px; }
+    .chk-label {
+      font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.04em;
+      color: var(--text-3);
+    }
+    .chk-optional { color: var(--text-4); text-transform: none; letter-spacing: 0; }
+    .chk-input {
+      width: 100%; min-height: 48px;
+      font-family: var(--font-body); font-size: 15px; color: var(--text);
+      background: var(--bg-3);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+    }
+    .chk-input::placeholder { color: var(--text-4); }
+    .chk-input:focus { border-color: var(--accent); }
+    .chk-input[readonly] { color: var(--text-3); }
+    .chk-field.is-error .chk-input { border-color: var(--err); }
+    .chk-field.is-ok .chk-input { border-color: var(--ok); }
+    .chk-help {
+      display: flex; align-items: center; gap: 6px;
+      font-family: var(--font-body); font-size: 12px; color: var(--text-4); margin: 0;
+    }
+    .chk-help-ok { color: var(--ok); }
+    .chk-err {
+      display: flex; align-items: center; gap: 6px;
+      font-family: var(--font-body); font-size: 12px; color: var(--err); margin: 0;
+    }
+    .chk-err svg, .chk-help svg { flex: none; }
+
+    .chk-selectwrap { position: relative; }
+    .chk-select { appearance: none; padding-right: 38px; cursor: pointer; }
+    .chk-select-caret {
+      position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+      color: var(--text-3); pointer-events: none; display: inline-flex;
+    }
+
+    .chk-check {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-body); font-size: 14px; color: var(--text-2);
+      cursor: pointer; min-height: 44px;
+    }
+    .chk-check input { width: 18px; height: 18px; flex: none; accent-color: var(--accent); }
+    .chk-check-terms { align-items: flex-start; margin: 18px 0 12px; font-size: 13px; }
+    .chk-check-terms input { margin-top: 3px; }
+
+    .chk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .chk-col-2 { grid-column: 1 / -1; }
+
+    .chk-fieldset { border: 0; padding: 0; margin: 0 0 26px; }
+    .chk-fieldset-flush { margin-bottom: 0; }
+    .chk-legend {
+      font-family: var(--font-display); font-size: 15px; color: var(--text);
+      padding: 0; margin-bottom: 12px;
+    }
+
+    /* ---- T340 Cart drawer ---- */
+    .chk-stage {
+      position: relative; overflow: hidden;
+      height: 480px;
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
+      background: var(--bg);
+    }
+    .chk-stage-page {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: flex-start;
+      padding: 24px;
+      background: repeating-linear-gradient(135deg, var(--bg) 0 14px, var(--bg-2) 14px 28px);
+    }
+    .chk-stage-note {
+      font-family: var(--font-eyebrow); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
+      color: var(--text-4);
+    }
+    .chk-scrim {
+      position: absolute; inset: 0;
+      background: var(--scrim);
+      transition: opacity 0.22s ease;
+    }
+    .chk-drawer {
+      position: absolute; top: 0; right: 0; bottom: 0;
+      width: min(380px, 92%);
+      display: flex; flex-direction: column;
+      background: var(--bg-2);
+      border-left: var(--line-weight) solid var(--border-2);
+      transition: transform 0.24s ease;
+    }
+    .chk-stage.is-closed .chk-drawer { transform: translateX(103%); }
+    .chk-stage.is-closed .chk-scrim { opacity: 0; pointer-events: none; }
+    .chk-drawer-head {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 14px 16px;
+      border-bottom: var(--line-weight) solid var(--border);
+    }
+    .chk-drawer-title { font-family: var(--font-display); font-size: 16px; margin: 0; }
+    .chk-drawer-body { flex: 1; overflow-y: auto; padding: 6px 16px; }
+    .chk-drawer-foot {
+      padding: 14px 16px 16px;
+      border-top: var(--line-weight) solid var(--border);
+      background: var(--bg-card);
+    }
+    .chk-drawer-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+
+    .chk-mini { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: var(--line-weight) solid var(--border); }
+    .chk-mini:last-child { border-bottom: 0; }
+    .chk-mini-main { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+    .chk-mini-title { font-family: var(--font-body); font-size: 14px; color: var(--text); }
+    .chk-mini-variant { font-family: var(--font-body); font-size: 12px; color: var(--text-3); }
+    .chk-mini-qty { font-family: var(--font-ui); font-size: 11px; color: var(--text-4); }
+
+    /* ---- T345 progress (also used inside the drawer) ---- */
+    .chk-progress-set { display: grid; gap: 16px; }
+    .chk-progress-card {
+      padding: 16px;
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+    }
+    .chk-progress-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .chk-progress-line {
+      display: flex; align-items: center; gap: 7px;
+      font-family: var(--font-body); font-size: 13px; color: var(--text-2); margin: 0 0 8px;
+    }
+    .chk-progress-line strong { color: var(--text); }
+    .chk-bar {
+      height: 8px; border-radius: var(--radius-pill);
+      background: var(--bg-3);
+      border: var(--line-weight) solid var(--border);
+      overflow: hidden;
+    }
+    .chk-bar-fill { display: block; height: 100%; background: var(--accent); }
+    .chk-progress.is-complete .chk-progress-line { color: var(--ok); }
+    .chk-progress.is-complete .chk-bar-fill { background: var(--ok); }
+
+    /* ---- T341 / T343 line items ---- */
+    .chk-lines { list-style: none; margin: 0; padding: 0; }
+    .chk-line {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto auto;
+      align-items: start; gap: 16px;
+      padding: 16px 0;
+      border-top: var(--line-weight) solid var(--border);
+    }
+    .chk-line:first-child { border-top: 0; }
+    .chk-line.is-saved { opacity: 0.92; }
+    .chk-line-main { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+    .chk-line-title { font-family: var(--font-body); font-size: 15px; color: var(--text); }
+    .chk-line-title:hover { color: var(--accent); }
+    .chk-line-variant { font-family: var(--font-body); font-size: 13px; color: var(--text-3); margin: 0; }
+    .chk-line-stock { font-family: var(--font-ui); font-size: 11px; color: var(--ok); margin: 0; }
+    .chk-line-stock-warn { color: var(--warn); }
+    .chk-line-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .chk-line-money { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; text-align: right; }
+    .chk-line-each { font-family: var(--font-ui); font-size: 11px; color: var(--text-4); }
+
+    .chk-qty {
+      display: inline-flex; align-items: center;
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-sm);
+      background: var(--bg-card);
+      overflow: hidden;
+    }
+    .chk-qty-btn {
+      width: 44px; height: 44px; flex: none;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: transparent; border: 0; color: var(--text-2); cursor: pointer;
+    }
+    .chk-qty-btn:hover { color: var(--accent); }
+    .chk-qty-input {
+      width: 46px; height: 44px; text-align: center;
+      font-family: var(--font-ui); font-size: 14px; color: var(--text);
+      background: transparent; border: 0;
+      border-left: var(--line-weight) solid var(--border);
+      border-right: var(--line-weight) solid var(--border);
+    }
+
+    /* ---- T342 empty cart ---- */
+    .chk-empty {
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      gap: 10px; padding: 44px 22px;
+      border: var(--line-weight) dashed var(--border-2);
+      border-radius: var(--radius-card);
+      background: var(--bg-card);
+    }
+    .chk-empty-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 62px; height: 62px; border-radius: var(--radius-pill);
+      background: var(--accent-wash); color: var(--accent);
+      border: var(--line-weight) solid var(--accent-line);
+      margin-bottom: 4px;
+    }
+    .chk-empty-title { font-family: var(--font-display); font-size: 21px; margin: 0; }
+    .chk-empty-copy { font-family: var(--font-body); font-size: 14px; color: var(--text-3); margin: 0 0 8px; max-width: 46ch; }
+    .chk-recent-row {
+      list-style: none; margin: 0; padding: 0;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px;
+    }
+    .chk-recent-card {
+      display: flex; flex-direction: column; gap: 8px;
+      padding: 12px;
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+    }
+    .chk-recent-name { font-family: var(--font-body); font-size: 14px; color: var(--text); }
+
+    /* ---- T343 cart page ---- */
+    .chk-cart { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 28px; align-items: start; }
+    .chk-cart-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 4px; }
+    .chk-cart-back { margin-top: 10px; }
+    .chk-summary {
+      padding: 20px;
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-card);
+      background: var(--bg-card);
+      position: sticky; top: 84px;
+    }
+    .chk-summary-title { font-family: var(--font-display); font-size: 16px; margin: 0 0 10px; }
+    .chk-summary-perks { list-style: none; margin: 14px 0 0; padding: 14px 0 0; border-top: var(--line-weight) solid var(--border); display: grid; gap: 8px; }
+    .chk-summary-perks li { display: flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 12px; color: var(--text-3); }
+    .chk-summary-perks svg { color: var(--ok); flex: none; }
+
+    /* ---- T344 discount ---- */
+    .chk-states { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+    .chk-state {
+      padding: 16px;
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+    }
+    .chk-state-tag {
+      display: inline-block; margin-bottom: 12px;
+      font-family: var(--font-eyebrow); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
+      color: var(--text-4);
+    }
+    .chk-promo-row { display: flex; gap: 8px; }
+    .chk-promo-row .chk-input { flex: 1; min-width: 0; }
+    .chk-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chk-chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 6px 8px 6px 12px; border-radius: var(--radius-pill);
+      font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.04em;
+      background: var(--accent); color: var(--accent-ink);
+    }
+    .chk-chip-x {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; flex: none;
+      background: transparent; border: 0; border-radius: var(--radius-pill);
+      color: var(--accent-ink); cursor: pointer;
+    }
+    .chk-chip-x:hover { background: color-mix(in srgb, var(--accent-ink) 22%, transparent); }
+    .chk-mini-summary { margin-top: 14px; padding-top: 10px; border-top: var(--line-weight) solid var(--border); }
+    .chk-promo-out:empty { display: none; }
+
+    /* ---- T346 stepper ---- */
+    .chk-steps {
+      list-style: none; margin: 0; padding: 0;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    }
+    .chk-step { position: relative; display: flex; align-items: center; gap: 10px; padding: 0 12px 0 0; }
+    .chk-step::after {
+      content: ""; position: absolute; left: 34px; right: 8px; top: 16px; height: var(--line-weight);
+      background: var(--border-2);
+    }
+    .chk-step:last-child::after { display: none; }
+    .chk-step.is-done::after { background: var(--accent); }
+    .chk-step-dot {
+      position: relative; z-index: 1; flex: none;
+      width: 32px; height: 32px; border-radius: var(--radius-pill);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font-ui); font-size: 13px;
+      background: var(--bg-card); color: var(--text-4);
+      border: var(--line-weight) solid var(--border-2);
+    }
+    .chk-step.is-done .chk-step-dot { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+    .chk-step.is-current .chk-step-dot { background: var(--bg-card); color: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-faint); }
+    .chk-step-txt { display: flex; flex-direction: column; min-width: 0; }
+    .chk-step-n { font-family: var(--font-ui); font-size: 11px; color: var(--text-4); letter-spacing: 0.04em; }
+    .chk-step-name { font-family: var(--font-body); font-size: 14px; color: var(--text-3); }
+    .chk-step.is-done .chk-step-name { color: var(--text-2); }
+    .chk-step.is-current .chk-step-name { color: var(--text); font-weight: 600; }
+    a.chk-step-name:hover { color: var(--accent); }
+
+    /* ---- T347 form ---- */
+    .chk-form { max-width: 640px; }
+    .chk-form-actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+    /* ---- T348 / T349 radio cards ---- */
+    .chk-radios { display: grid; gap: 10px; }
+    .chk-radiocard {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 14px 16px; cursor: pointer;
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+    }
+    .chk-radiocard:hover { border-color: var(--border-3); }
+    .chk-radiocard input { width: 18px; height: 18px; flex: none; margin-top: 2px; accent-color: var(--accent); }
+    .chk-radiocard:has(input:checked) { border-color: var(--accent); background: var(--accent-wash); }
+    .chk-radiocard.is-disabled, .chk-radiocard:has(input:disabled) { opacity: 0.55; cursor: not-allowed; }
+    .chk-radiocard-body { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex: 1; min-width: 0; flex-wrap: wrap; }
+    .chk-radiocard-main { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .chk-radiocard-name { display: flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 15px; color: var(--text); }
+    .chk-radiocard-sub { font-family: var(--font-body); font-size: 13px; color: var(--text-3); }
+
+    .chk-pay-fields {
+      padding: 16px;
+      border: var(--line-weight) solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      background: var(--bg-2);
+    }
+    .chk-pay:has(#chk-pay-card:not(:checked)) .chk-pay-fields { display: none; }
+    .chk-secure {
+      display: flex; align-items: flex-start; gap: 8px;
+      margin: 14px 0 0;
+      font-family: var(--font-body); font-size: 12px; color: var(--text-3);
+    }
+    .chk-secure svg { flex: none; margin-top: 1px; color: var(--ok); }
+
+    /* ---- T350 express row ---- */
+    .chk-express-wrap { max-width: 560px; }
+    .chk-express-label {
+      display: block; margin-bottom: 10px;
+      font-family: var(--font-eyebrow); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
+      color: var(--text-4);
+    }
+    .chk-express-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
+    .chk-express {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 50px; padding: 0 14px; cursor: pointer;
+      background: var(--bg-3); color: var(--text);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-btn, 0px);
+    }
+    .chk-express:hover { border-color: var(--accent); color: var(--accent); }
+    .chk-express-name { font-family: var(--font-ui); font-size: 14px; font-weight: 600; letter-spacing: 0.01em; }
+    .chk-divider {
+      display: flex; align-items: center; gap: 14px;
+      margin: 20px 0 4px;
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-4);
+      letter-spacing: 0.04em;
+    }
+    .chk-divider::before, .chk-divider::after {
+      content: ""; flex: 1; height: var(--line-weight); background: var(--border-2);
+    }
+
+    /* ---- T351 order review ---- */
+    .chk-review { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 28px; align-items: start; }
+    .chk-review-list { margin: 0; }
+    .chk-review-row {
+      display: grid; grid-template-columns: 92px minmax(0, 1fr);
+      gap: 14px; align-items: start;
+      padding: 14px 0;
+      border-top: var(--line-weight) solid var(--border);
+    }
+    .chk-review-row:first-child { border-top: 0; }
+    .chk-review-row dt { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.04em; color: var(--text-4); }
+    .chk-review-row dd {
+      margin: 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+      font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--text-2);
+    }
+    .chk-review-val { min-width: 0; }
+    .chk-review-quiet { color: var(--text-4); font-size: 13px; }
+
+    /* ---- T352 confirmation ---- */
+    .chk-confirm-head { text-align: center; padding: 8px 12px 26px; }
+    .chk-confirm-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 58px; height: 58px; border-radius: var(--radius-pill);
+      background: var(--ok-wash); color: var(--ok);
+      border: var(--line-weight) solid var(--ok);
+      margin-bottom: 14px;
+    }
+    .chk-confirm-title { font-family: var(--font-display); font-size: 24px; margin: 0 0 8px; }
+    .chk-confirm-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-3); margin: 0; }
+    .chk-confirm-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 20px; align-items: start; }
+    .chk-confirm-side { display: grid; gap: 16px; }
+    .chk-panel {
+      padding: 18px;
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
+      background: var(--bg-card);
+    }
+    .chk-panel-eta { background: var(--accent-wash); border-color: var(--accent-line); }
+    .chk-panel-title { font-family: var(--font-display); font-size: 14px; margin: 0 0 12px; }
+    .chk-recap { list-style: none; margin: 0 0 14px; padding: 0 0 8px; border-bottom: var(--line-weight) solid var(--border); }
+    .chk-recap li { display: flex; align-items: center; gap: 12px; padding: 9px 0; }
+    .chk-recap-main { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+    .chk-recap-name { font-family: var(--font-body); font-size: 14px; color: var(--text); }
+    .chk-recap-sub { font-family: var(--font-body); font-size: 12px; color: var(--text-3); }
+    .chk-address { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-2); font-style: normal; }
+    .chk-eta { font-family: var(--font-display); font-size: 16px; color: var(--text); margin: 0; }
+    .chk-confirm-actions { display: grid; gap: 8px; }
+
+    /* ---- T353 tracking ---- */
+    .chk-track-head {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 18px;
+      flex-wrap: wrap; padding-bottom: 20px;
+      border-bottom: var(--line-weight) solid var(--border);
+    }
+    .chk-track-label { font-family: var(--font-ui); font-size: 12px; color: var(--text-3); }
+    .chk-track-status { font-family: var(--font-display); font-size: 22px; margin: 6px 0 4px; }
+    .chk-timeline { list-style: none; margin: 22px 0 0; padding: 0; }
+    .chk-tl { position: relative; display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 14px; padding-bottom: 24px; }
+    .chk-tl:last-child { padding-bottom: 0; }
+    .chk-tl::before {
+      content: ""; position: absolute; left: 13px; top: 26px; bottom: 0;
+      width: var(--line-weight); background: var(--border-2);
+    }
+    .chk-tl:last-child::before { display: none; }
+    .chk-tl.is-done::before { background: var(--accent); }
+    .chk-tl-dot {
+      width: 28px; height: 28px; flex: none; border-radius: var(--radius-pill);
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--bg-card); color: var(--text-4);
+      border: var(--line-weight) solid var(--border-2);
+    }
+    .chk-tl.is-done .chk-tl-dot { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+    .chk-tl.is-current .chk-tl-dot { background: var(--bg-card); border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-faint); }
+    .chk-tl.is-current .chk-tl-dot::after {
+      content: ""; width: 10px; height: 10px; border-radius: var(--radius-pill); background: var(--accent);
+    }
+    .chk-tl-body { display: flex; flex-direction: column; gap: 3px; padding-top: 2px; }
+    .chk-tl-name { font-family: var(--font-body); font-size: 15px; color: var(--text-3); }
+    .chk-tl.is-done .chk-tl-name, .chk-tl.is-current .chk-tl-name { color: var(--text); }
+    .chk-tl-meta { font-family: var(--font-ui); font-size: 12px; color: var(--text-4); }
+    .chk-tl-copy { font-family: var(--font-body); font-size: 13px; color: var(--text-3); margin: 4px 0 0; max-width: 62ch; }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 860px) {
+      .chk-cart, .chk-review, .chk-confirm-grid { grid-template-columns: minmax(0, 1fr); }
+      .chk-summary { position: static; }
+      .chk-steps { grid-template-columns: 1fr 1fr; row-gap: 18px; }
+      .chk-step::after { display: none; }
+    }
+    @media (max-width: 640px) {
+      .chk-grid { grid-template-columns: minmax(0, 1fr); }
+      .chk-line { grid-template-columns: auto minmax(0, 1fr); }
+      .chk-line .chk-qty { grid-column: 1 / -1; }
+      .chk-line-money { grid-column: 1 / -1; align-items: flex-start; text-align: left; }
+      .chk-drawer-actions { grid-template-columns: 1fr; }
+      .chk-review-row { grid-template-columns: minmax(0, 1fr); }
+      .chk-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      'use strict';
+
+      function money(n) {
+        return '$' + n.toFixed(2);
+      }
+
+      /* ---- T340 Cart drawer: open and close inside the stage ---- */
+      var stage = document.querySelector('#chk-stage');
+      var openBtn = document.querySelector('#chk-drawer-open');
+      var closeBtn = document.querySelector('#chk-drawer-close');
+      var scrim = document.querySelector('#chk-scrim');
+      function setDrawer(open) {
+        if (!stage) { return; }
+        stage.classList.toggle('is-closed', !open);
+        if (openBtn) { openBtn.hidden = open; }
+      }
+      if (openBtn) { openBtn.hidden = true; }
+      if (closeBtn) { closeBtn.addEventListener('click', function () { setDrawer(false); if (openBtn) { openBtn.focus(); } }); }
+      if (scrim) { scrim.addEventListener('click', function () { setDrawer(false); }); }
+      if (openBtn) { openBtn.addEventListener('click', function () { setDrawer(true); if (closeBtn) { closeBtn.focus(); } }); }
+
+      /* ---- T341 and T343 quantity steppers ---- */
+      function recalcCart(scope) {
+        if (!scope) { return; }
+        var total = 0;
+        var inputs = scope.querySelectorAll('.chk-qty-input');
+        for (var i = 0; i < inputs.length; i++) {
+          var unit = parseFloat(inputs[i].getAttribute('data-chk-unit')) || 0;
+          var qty = parseInt(inputs[i].value, 10) || 0;
+          total += unit * qty;
+        }
+        var sub = scope.querySelector('[data-chk-subtotal]');
+        var gst = scope.querySelector('[data-chk-gst]');
+        var grand = scope.querySelector('[data-chk-total]');
+        if (sub) { sub.textContent = money(total); }
+        if (gst) { gst.textContent = money(total / 11); }
+        if (grand) { grand.textContent = money(total); }
+      }
+
+      var steppers = document.querySelectorAll('[data-chk-step]');
+      for (var s = 0; s < steppers.length; s++) {
+        steppers[s].addEventListener('click', function (ev) {
+          var btn = ev.currentTarget;
+          var wrap = btn.closest ? btn.closest('.chk-qty') : null;
+          if (!wrap) { return; }
+          var input = wrap.querySelector('.chk-qty-input');
+          if (!input) { return; }
+          var delta = parseInt(btn.getAttribute('data-chk-step'), 10) || 0;
+          var next = Math.min(99, Math.max(1, (parseInt(input.value, 10) || 1) + delta));
+          input.value = String(next);
+          var unit = parseFloat(input.getAttribute('data-chk-unit')) || 0;
+          var totalId = input.getAttribute('data-chk-total');
+          var totalEl = totalId ? document.getElementById(totalId) : null;
+          if (totalEl) { totalEl.textContent = money(unit * next); }
+          recalcCart(input.closest ? input.closest('[data-chk-cart]') : null);
+        });
+      }
+
+      /* ---- T344 Discount code: the idle tile accepts one demo code ---- */
+      var promoForm = document.querySelector('#chk-promo-form');
+      var promoInput = document.querySelector('#chk-promo');
+      var promoOut = document.querySelector('#chk-promo-out');
+      if (promoForm) {
+        promoForm.addEventListener('submit', function (ev) {
+          ev.preventDefault();
+          if (!promoInput || !promoOut) { return; }
+          var code = promoInput.value.trim().toUpperCase();
+          var field = promoInput.closest ? promoInput.closest('.chk-field') : null;
+          if (code === 'WINTER10') {
+            if (field) { field.classList.remove('is-error'); }
+            promoInput.setAttribute('aria-invalid', 'false');
+            promoOut.innerHTML = '<p class="chk-help chk-help-ok">WINTER10 applied. You saved $36.70.</p>';
+          } else if (code === '') {
+            if (field) { field.classList.add('is-error'); }
+            promoInput.setAttribute('aria-invalid', 'true');
+            promoOut.innerHTML = '<p class="chk-err">Enter a code first.</p>';
+          } else {
+            if (field) { field.classList.add('is-error'); }
+            promoInput.setAttribute('aria-invalid', 'true');
+            promoOut.innerHTML = '<p class="chk-err">' + code.replace(/[<>&]/g, '') + ' is not a valid code.</p>';
+          }
+        });
+      }
+
+      var chipX = document.querySelectorAll('.chk-chip-x');
+      for (var c = 0; c < chipX.length; c++) {
+        chipX[c].addEventListener('click', function (ev) {
+          var chip = ev.currentTarget.closest ? ev.currentTarget.closest('.chk-chip') : null;
+          if (chip) { chip.hidden = true; }
+        });
+      }
+
+      /* ---- T347 Contact and delivery: demo only, nothing is sent ---- */
+      var addressForm = document.querySelector('#chk-address-form');
+      var addressOut = document.querySelector('#chk-address-out');
+      var postcode = document.querySelector('#chk-postcode');
+      var postcodeField = document.querySelector('#chk-postcode-field');
+      function checkPostcode() {
+        if (!postcode || !postcodeField) { return true; }
+        var valid = /^\d{4}$/.test(postcode.value.trim());
+        postcodeField.classList.toggle('is-error', !valid);
+        postcode.setAttribute('aria-invalid', valid ? 'false' : 'true');
+        var err = document.querySelector('#chk-postcode-err');
+        if (err) { err.hidden = valid; }
+        return valid;
+      }
+      if (postcode) {
+        postcode.addEventListener('blur', checkPostcode);
+        postcode.addEventListener('input', function () {
+          if (/^\d{4}$/.test(postcode.value.trim())) { checkPostcode(); }
+        });
+      }
+      if (addressForm) {
+        addressForm.addEventListener('submit', function (ev) {
+          ev.preventDefault();
+          var ok = checkPostcode();
+          if (!addressOut) { return; }
+          addressOut.textContent = ok
+            ? 'Demo only: details captured locally, nothing was sent.'
+            : 'Fix the postcode before continuing.';
+          if (!ok && postcode) { postcode.focus(); }
+        });
+      }
+
+      /* ---- T350 Express checkout: inline feedback, never a dialog ---- */
+      var expressOut = document.querySelector('#chk-express-out');
+      var expressBtns = document.querySelectorAll('[data-chk-express]');
+      for (var e = 0; e < expressBtns.length; e++) {
+        expressBtns[e].addEventListener('click', function (ev) {
+          if (!expressOut) { return; }
+          var name = ev.currentTarget.getAttribute('data-chk-express') || 'That wallet';
+          expressOut.textContent = name + ' would open its payment sheet here. This is a demo, so nothing is charged.';
+        });
+      }
+
+      /* ---- T351 Order review: terms gate the place-order button ---- */
+      var terms = document.querySelector('#chk-terms');
+      var place = document.querySelector('#chk-place');
+      var placeOut = document.querySelector('#chk-place-out');
+      if (terms && place) {
+        terms.addEventListener('change', function () { place.disabled = !terms.checked; });
+      }
+      if (place) {
+        place.addEventListener('click', function () {
+          if (placeOut) { placeOut.textContent = 'Demo only: no payment was taken. See T352 for the confirmation state.'; }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

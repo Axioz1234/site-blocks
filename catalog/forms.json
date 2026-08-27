@@ -1,23 +1,65 @@
 [
-  { "id": "T200", "name": "Input field library", "category": "Forms",
-    "file": "pages/forms.html", "anchor": "#T200",
-    "description": "Text, select, and textarea with label, helper text, and the default / focus / error / disabled states." },
-  { "id": "T201", "name": "Choice controls", "category": "Forms",
-    "file": "pages/forms.html", "anchor": "#T201",
-    "description": "Checkboxes, radio group, and an on/off switch — the three ways to capture a boolean or a pick." },
-  { "id": "T202", "name": "Range & number", "category": "Forms",
-    "file": "pages/forms.html", "anchor": "#T202",
-    "description": "A slider with a live value read-out and a stepper number input with − / + controls." },
-  { "id": "T203", "name": "Search with autocomplete", "category": "Forms",
-    "file": "pages/forms.html", "anchor": "#T203",
-    "description": "A search input that filters a suggestion list as you type." },
-  { "id": "T204", "name": "Multi-step form", "category": "Forms",
-    "file": "pages/forms.html", "anchor": "#T204",
-    "description": "A wizard that advances through panels with Back / Next, keeping the rest hidden." },
-  { "id": "T205", "name": "File upload / dropzone", "category": "Forms",
-    "file": "pages/forms.html", "anchor": "#T205",
-    "description": "A drag-and-drop target with a browse fallback and a list of selected files." },
-  { "id": "T206", "name": "Cookie consent", "category": "Forms",
-    "file": "pages/forms.html", "anchor": "#T206",
-    "description": "A consent banner with accept / reject and a link to preferences." }
+  {
+    "id": "T200",
+    "name": "Input field library",
+    "category": "Forms",
+    "set": "core",
+    "file": "pages/forms.html",
+    "anchor": "#T200",
+    "description": "Text, select, and textarea with label, helper text, and the default / focus / error / disabled states."
+  },
+  {
+    "id": "T201",
+    "name": "Choice controls",
+    "category": "Forms",
+    "set": "core",
+    "file": "pages/forms.html",
+    "anchor": "#T201",
+    "description": "Checkboxes, a radio group, and an on/off switch: the three ways to capture a boolean or a pick."
+  },
+  {
+    "id": "T202",
+    "name": "Range & number",
+    "category": "Forms",
+    "set": "core",
+    "file": "pages/forms.html",
+    "anchor": "#T202",
+    "description": "A slider with a live value read-out and a stepper number input with − / + controls."
+  },
+  {
+    "id": "T203",
+    "name": "Search with autocomplete",
+    "category": "Forms",
+    "set": "core",
+    "file": "pages/forms.html",
+    "anchor": "#T203",
+    "description": "A search input that filters a suggestion list as you type."
+  },
+  {
+    "id": "T204",
+    "name": "Multi-step form",
+    "category": "Forms",
+    "set": "core",
+    "file": "pages/forms.html",
+    "anchor": "#T204",
+    "description": "A wizard that advances through panels with Back / Next, keeping the rest hidden."
+  },
+  {
+    "id": "T205",
+    "name": "File upload / dropzone",
+    "category": "Forms",
+    "set": "core",
+    "file": "pages/forms.html",
+    "anchor": "#T205",
+    "description": "A drag-and-drop target with a browse fallback and a list of selected files."
+  },
+  {
+    "id": "T206",
+    "name": "Cookie consent",
+    "category": "Forms",
+    "set": "core",
+    "file": "pages/forms.html",
+    "anchor": "#T206",
+    "description": "A consent banner with accept / reject and a link to preferences."
+  }
 ]

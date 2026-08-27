@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merchandising &amp; trust &middot; Site Blocks</title>
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/viewer.css">
+  <script src="../assets/viewer.js"></script>
+</head>
+<body data-page-set="ecommerce">
+  <header class="tb-header">
+    <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
+    <h1>Merchandising &amp; trust <span class="tb-range">T360&ndash;T373</span></h1>
+    <p class="tb-sub">The persuasion layer a store repeats on every page: announcement bars, offer banners, reviews, trust signals, gift options, capture blocks and the editorial band.</p>
+  </header>
+  <main class="tb-main">
+
+    <!-- ==================================================
+         T360 Announcement bar
+         ================================================== -->
+    <article class="tb-pattern" id="T360" data-tid="T360">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T360</span>
+        <div>
+          <h2>Announcement bar</h2>
+          <p>The thin strip above the header carrying one shipping or offer message, with an optional link and a dismiss button.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="mch-annbar" id="mch-annbar" role="region" aria-label="Store announcement">
+          <span class="mch-annbar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg>
+          </span>
+          <p class="mch-annbar-msg">Free standard delivery on Australian orders over $99. <a class="mch-annbar-link" href="#T363">See delivery times</a></p>
+          <button type="button" class="mch-annbar-x" id="mch-annbar-x" aria-label="Dismiss this announcement">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+        <p class="mch-demo-note">
+          <span>In a real store the dismissal is remembered for the session.</span>
+          <button type="button" class="mch-demo-reset" id="mch-annbar-reset" hidden>Show the bar again</button>
+        </p>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T361 Promo banner
+         ================================================== -->
+    <article class="tb-pattern" id="T361" data-tid="T361">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T361</span>
+        <div>
+          <h2>Promo banner</h2>
+          <p>A larger dismissible banner that sits inside the page: headline, supporting line, one call to action, on a wash background.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <aside class="mch-promo" id="mch-promo" aria-label="Current promotion">
+          <span class="mch-promo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l9 9-8 8z"/><circle cx="7.5" cy="7.5" r="1.25"/></svg>
+          </span>
+          <div class="mch-promo-body">
+            <p class="mch-promo-eyebrow">End of season</p>
+            <h3 class="mch-promo-h">20% off every linen quilt cover</h3>
+            <p class="mch-promo-sub">Runs until Sunday 11:59pm AEST or while stock lasts. The discount applies in the cart, so there is no code to remember.</p>
+          </div>
+          <div class="mch-promo-side">
+            <a class="mch-btn mch-btn-primary" href="#T373">Shop linen</a>
+          </div>
+          <button type="button" class="mch-promo-x" id="mch-promo-x" aria-label="Dismiss this promotion">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+          </button>
+        </aside>
+        <p class="mch-demo-note">
+          <span>Dismiss it and the layout closes up behind it.</span>
+          <button type="button" class="mch-demo-reset" id="mch-promo-reset" hidden>Bring the banner back</button>
+        </p>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T362 Countdown offer strip
+         ================================================== -->
+    <article class="tb-pattern" id="T362" data-tid="T362">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T362</span>
+        <div>
+          <h2>Countdown offer strip</h2>
+          <p>An offer message wired to a live ticking countdown, plus the expired state it falls back to. See <code>T264</code> on <a href="commerce.html#T264">commerce.html</a> for the plain timer without the offer wrapper.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="mch-cd" id="mch-cd">
+          <div class="mch-cd-live" id="mch-cd-live">
+            <p class="mch-cd-msg">
+              <span class="mch-cd-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.4 2"/></svg>
+              </span>
+              <span><b>Candle and diffuser weekend:</b> 15% off the whole fragrance range.</span>
+            </p>
+            <div class="mch-cd-clock" role="timer" aria-label="Time left in this offer">
+              <span class="mch-cd-unit"><span class="mch-cd-num" data-mch-cd="d">02</span><span class="mch-cd-cap">days</span></span>
+              <span class="mch-cd-sep" aria-hidden="true">:</span>
+              <span class="mch-cd-unit"><span class="mch-cd-num" data-mch-cd="h">06</span><span class="mch-cd-cap">hrs</span></span>
+              <span class="mch-cd-sep" aria-hidden="true">:</span>
+              <span class="mch-cd-unit"><span class="mch-cd-num" data-mch-cd="m">45</span><span class="mch-cd-cap">min</span></span>
+              <span class="mch-cd-sep" aria-hidden="true">:</span>
+              <span class="mch-cd-unit"><span class="mch-cd-num" data-mch-cd="s">12</span><span class="mch-cd-cap">sec</span></span>
+            </div>
+            <a class="mch-btn mch-btn-primary" href="#T373">Shop the sale</a>
+          </div>
+          <div class="mch-cd-done" id="mch-cd-done" hidden>
+            <span class="mch-cd-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12h7"/></svg>
+            </span>
+            <p class="mch-cd-msg"><span><b>This offer has closed.</b> The fragrance range is back at its usual price. Join the list and you will hear about the next one first.</span></p>
+            <a class="mch-btn mch-btn-ghost" href="#T371">Join the list</a>
+          </div>
+        </div>
+        <p class="mch-demo-note">
+          <span>The end time is computed from a fixed offset when the page loads, so the demo never opens already expired.</span>
+          <button type="button" class="mch-demo-reset" id="mch-cd-toggle">Preview the expired state</button>
+        </p>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T363 Value proposition strip
+         ================================================== -->
+    <article class="tb-pattern" id="T363" data-tid="T363">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T363</span>
+        <div>
+          <h2>Value proposition strip</h2>
+          <p>The four promises a store repeats sitewide, as an icon row: delivery, returns, payment and support.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <ul class="mch-vps">
+          <li class="mch-vp">
+            <span class="mch-vp-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg>
+            </span>
+            <span class="mch-vp-title">Free delivery over $99</span>
+            <span class="mch-vp-line">Flat $9.95 anywhere in Australia, sent from our Marrickville warehouse.</span>
+          </li>
+          <li class="mch-vp">
+            <span class="mch-vp-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h11a4 4 0 0 1 0 8h-5"/><path d="M8 5 4 9l4 4"/></svg>
+            </span>
+            <span class="mch-vp-title">60 day returns</span>
+            <span class="mch-vp-line">Sleep on it for two months. Unused and unwashed comes back for a full refund.</span>
+          </li>
+          <li class="mch-vp">
+            <span class="mch-vp-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            </span>
+            <span class="mch-vp-title">Pay how you like</span>
+            <span class="mch-vp-line">Card, PayPal, Apple Pay, or four instalments with Afterpay.</span>
+          </li>
+          <li class="mch-vp">
+            <span class="mch-vp-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3z"/></svg>
+            </span>
+            <span class="mch-vp-title">A person, not a bot</span>
+            <span class="mch-vp-line">Monday to Friday, 9am to 5pm AEST. Most emails answered same day.</span>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T364 Review summary
+         ================================================== -->
+    <article class="tb-pattern" id="T364" data-tid="T364">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T364</span>
+        <div>
+          <h2>Review summary</h2>
+          <p>The header of a review section: average score, star row, total count and the five bar distribution, beside a write a review call to action. See <code>T261</code> on <a href="commerce.html#T261">commerce.html</a> for the compact version.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <section class="mch-rsum" aria-label="Review summary">
+          <div class="mch-rsum-score">
+            <span class="mch-rsum-num">4.7</span>
+            <span class="mch-stars mch-stars-lg" role="img" aria-label="Rated 4.7 out of 5" style="--mch-fill:94%">
+              <span class="mch-stars-bg" aria-hidden="true">★★★★★</span>
+              <span class="mch-stars-fg" aria-hidden="true">★★★★★</span>
+            </span>
+            <span class="mch-rsum-count">Based on 412 reviews</span>
+            <span class="mch-rsum-rec">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>
+              96% would buy it again
+            </span>
+          </div>
+
+          <ul class="mch-dist">
+            <li class="mch-dist-row">
+              <span class="mch-dist-key">5 star</span>
+              <span class="mch-dist-track"><span class="mch-dist-fill" style="width:78%"></span></span>
+              <span class="mch-dist-pct">78%</span>
+            </li>
+            <li class="mch-dist-row">
+              <span class="mch-dist-key">4 star</span>
+              <span class="mch-dist-track"><span class="mch-dist-fill" style="width:14%"></span></span>
+              <span class="mch-dist-pct">14%</span>
+            </li>
+            <li class="mch-dist-row">
+              <span class="mch-dist-key">3 star</span>
+              <span class="mch-dist-track"><span class="mch-dist-fill" style="width:4%"></span></span>
+              <span class="mch-dist-pct">4%</span>
+            </li>
+            <li class="mch-dist-row">
+              <span class="mch-dist-key">2 star</span>
+              <span class="mch-dist-track"><span class="mch-dist-fill" style="width:2%"></span></span>
+              <span class="mch-dist-pct">2%</span>
+            </li>
+            <li class="mch-dist-row">
+              <span class="mch-dist-key">1 star</span>
+              <span class="mch-dist-track"><span class="mch-dist-fill" style="width:2%"></span></span>
+              <span class="mch-dist-pct">2%</span>
+            </li>
+          </ul>
+
+          <div class="mch-rsum-cta">
+            <p class="mch-rsum-ask">Bought this one? Tell the next person how it went.</p>
+            <a class="mch-btn mch-btn-primary" href="#T366">Write a review</a>
+            <p class="mch-rsum-note">We email for a review 21 days after delivery, so every score here comes from a real order.</p>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T365 Review list
+         ================================================== -->
+    <article class="tb-pattern" id="T365" data-tid="T365">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T365</span>
+        <div>
+          <h2>Review list</h2>
+          <p>Individual reviews with author, verified buyer badge, date, rating, title, body, the variant that was purchased, customer photos and a helpful counter.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="mch-revs">
+
+          <article class="mch-rev">
+            <header class="mch-rev-head">
+              <span class="mch-rev-av" aria-hidden="true">SR</span>
+              <span class="mch-rev-who">
+                <span class="mch-rev-name">Steph R.</span>
+                <span class="mch-rev-meta">
+                  <span class="mch-rev-verified">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+                    Verified buyer
+                  </span>
+                  <span class="mch-rev-sep" aria-hidden="true">&middot;</span>
+                  <span>Ballarat, VIC</span>
+                </span>
+              </span>
+              <time class="mch-rev-date" datetime="2026-08-14">14 Aug 2026</time>
+            </header>
+            <span class="mch-stars" role="img" aria-label="Rated 5 out of 5" style="--mch-fill:100%">
+              <span class="mch-stars-bg" aria-hidden="true">★★★★★</span>
+              <span class="mch-stars-fg" aria-hidden="true">★★★★★</span>
+            </span>
+            <h4 class="mch-rev-title">Survived a Ballarat winter and two kelpies</h4>
+            <p class="mch-rev-body">Ordered on the Tuesday, on the bed by the Friday. The linen came out of the bag already soft, which I did not expect, and it has been through eight washes without pilling or fading. The oatmeal is warmer in real light than it looks on the site, closer to a milky beige than a grey.</p>
+            <p class="mch-rev-variant">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l9 9-8 8z"/><circle cx="7.5" cy="7.5" r="1.25"/></svg>
+              Cove Linen Quilt Cover &middot; Oatmeal &middot; Queen
+            </p>
+            <div class="mch-rev-photos">
+              <span class="mch-rev-photo mch-w1" role="img" aria-label="Customer photo: the quilt cover on a bed by a window"></span>
+              <span class="mch-rev-photo mch-w3" role="img" aria-label="Customer photo: a close crop of the linen weave"></span>
+            </div>
+            <footer class="mch-rev-foot">
+              <span class="mch-rev-q">Was this helpful?</span>
+              <button type="button" class="mch-help" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20V10l4-6 1.4 1-1.4 5h6a2 2 0 0 1 2 2.4l-1.4 6A2 2 0 0 1 15.6 20z"/><path d="M7 10H3.5v10H7"/></svg>
+                Yes <span class="mch-help-n">37</span>
+              </button>
+              <button type="button" class="mch-rev-report">Report</button>
+            </footer>
+          </article>
+
+          <article class="mch-rev">
+            <header class="mch-rev-head">
+              <span class="mch-rev-av" aria-hidden="true">NH</span>
+              <span class="mch-rev-who">
+                <span class="mch-rev-name">Nadia H.</span>
+                <span class="mch-rev-meta">
+                  <span class="mch-rev-verified">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+                    Verified buyer
+                  </span>
+                  <span class="mch-rev-sep" aria-hidden="true">&middot;</span>
+                  <span>Fremantle, WA</span>
+                </span>
+              </span>
+              <time class="mch-rev-date" datetime="2026-08-02">2 Aug 2026</time>
+            </header>
+            <span class="mch-stars" role="img" aria-label="Rated 4 out of 5" style="--mch-fill:80%">
+              <span class="mch-stars-bg" aria-hidden="true">★★★★★</span>
+              <span class="mch-stars-fg" aria-hidden="true">★★★★★</span>
+            </span>
+            <h4 class="mch-rev-title">Lovely mugs, size up if you drink long blacks</h4>
+            <p class="mch-rev-body">The glaze is genuinely beautiful and no two are quite the same, which is the point. Only mark against them is the volume: 240ml is a flat white, not a mug of tea. Packed properly for the trip west, every piece arrived intact.</p>
+            <p class="mch-rev-variant">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l9 9-8 8z"/><circle cx="7.5" cy="7.5" r="1.25"/></svg>
+              Marlo Stoneware Mugs &middot; Ash &middot; Set of 4
+            </p>
+            <div class="mch-rev-photos">
+              <span class="mch-rev-photo mch-w2" role="img" aria-label="Customer photo: four stoneware mugs on a benchtop"></span>
+            </div>
+            <footer class="mch-rev-foot">
+              <span class="mch-rev-q">Was this helpful?</span>
+              <button type="button" class="mch-help" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20V10l4-6 1.4 1-1.4 5h6a2 2 0 0 1 2 2.4l-1.4 6A2 2 0 0 1 15.6 20z"/><path d="M7 10H3.5v10H7"/></svg>
+                Yes <span class="mch-help-n">12</span>
+              </button>
+              <button type="button" class="mch-rev-report">Report</button>
+            </footer>
+          </article>
+
+          <article class="mch-rev">
+            <header class="mch-rev-head">
+              <span class="mch-rev-av" aria-hidden="true">TD</span>
+              <span class="mch-rev-who">
+                <span class="mch-rev-name">Tom D.</span>
+                <span class="mch-rev-meta">
+                  <span class="mch-rev-verified">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+                    Verified buyer
+                  </span>
+                  <span class="mch-rev-sep" aria-hidden="true">&middot;</span>
+                  <span>Toowoomba, QLD</span>
+                </span>
+              </span>
+              <time class="mch-rev-date" datetime="2026-07-21">21 Jul 2026</time>
+            </header>
+            <span class="mch-stars" role="img" aria-label="Rated 5 out of 5" style="--mch-fill:100%">
+              <span class="mch-stars-bg" aria-hidden="true">★★★★★</span>
+              <span class="mch-stars-fg" aria-hidden="true">★★★★★</span>
+            </span>
+            <h4 class="mch-rev-title">Bought it as a gift, kept it</h4>
+            <p class="mch-rev-body">Meant for my sister, still on my couch. The wool is heavy enough to be worth having on a Darling Downs night and the weave has not caught on anything yet. Gift wrapping was neat, and the packing slip left the prices off exactly as asked.</p>
+            <p class="mch-rev-variant">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l9 9-8 8z"/><circle cx="7.5" cy="7.5" r="1.25"/></svg>
+              Tallow Wool Throw &middot; Charcoal &middot; 130 x 180cm
+            </p>
+            <footer class="mch-rev-foot">
+              <span class="mch-rev-q">Was this helpful?</span>
+              <button type="button" class="mch-help" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20V10l4-6 1.4 1-1.4 5h6a2 2 0 0 1 2 2.4l-1.4 6A2 2 0 0 1 15.6 20z"/><path d="M7 10H3.5v10H7"/></svg>
+                Yes <span class="mch-help-n">8</span>
+              </button>
+              <button type="button" class="mch-rev-report">Report</button>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T366 Write a review form
+         ================================================== -->
+    <article class="tb-pattern" id="T366" data-tid="T366">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T366</span>
+        <div>
+          <h2>Write a review form</h2>
+          <p>A star input built from real radios so it is keyboard operable, then title, body, a photo upload control and a consent checkbox.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <form class="mch-wr" id="mch-wr" novalidate>
+          <p class="mch-wr-for">You are reviewing <b>Cove Linen Quilt Cover</b>, ordered 14 July 2026.</p>
+
+          <fieldset class="mch-wr-rate">
+            <legend>Your rating</legend>
+            <div class="mch-starin" id="mch-starin">
+              <input class="mch-sr-only" type="radio" name="mch-rating" id="mch-star1" value="1">
+              <label for="mch-star1"><span class="mch-sr-only">1 star, poor</span><span aria-hidden="true">★</span></label>
+              <input class="mch-sr-only" type="radio" name="mch-rating" id="mch-star2" value="2">
+              <label for="mch-star2"><span class="mch-sr-only">2 stars, not great</span><span aria-hidden="true">★</span></label>
+              <input class="mch-sr-only" type="radio" name="mch-rating" id="mch-star3" value="3">
+              <label for="mch-star3"><span class="mch-sr-only">3 stars, fine</span><span aria-hidden="true">★</span></label>
+              <input class="mch-sr-only" type="radio" name="mch-rating" id="mch-star4" value="4">
+              <label for="mch-star4"><span class="mch-sr-only">4 stars, good</span><span aria-hidden="true">★</span></label>
+              <input class="mch-sr-only" type="radio" name="mch-rating" id="mch-star5" value="5">
+              <label for="mch-star5"><span class="mch-sr-only">5 stars, excellent</span><span aria-hidden="true">★</span></label>
+              <span class="mch-wr-readout" id="mch-wr-readout" aria-live="polite">Tab to the stars, then use the arrow keys.</span>
+            </div>
+          </fieldset>
+
+          <div class="mch-field">
+            <label for="mch-wr-title">Give your review a title</label>
+            <input type="text" id="mch-wr-title" name="mch-wr-title" maxlength="70" placeholder="Softer than expected, and it stayed that way">
+          </div>
+
+          <div class="mch-field">
+            <label for="mch-wr-body">Your review</label>
+            <textarea id="mch-wr-body" name="mch-wr-body" rows="5" placeholder="What did you buy it for, and how has it held up? Sizing, colour and washing notes help the next person most."></textarea>
+          </div>
+
+          <div class="mch-field">
+            <label for="mch-wr-photos">Add photos</label>
+            <input type="file" id="mch-wr-photos" name="mch-wr-photos" accept="image/jpeg,image/png" multiple class="mch-filein">
+            <span class="mch-hint">Up to five photos, JPG or PNG, 8MB each. This demo reads the file names only and uploads nothing.</span>
+            <ul class="mch-filelist" id="mch-wr-filelist"></ul>
+          </div>
+
+          <label class="mch-check">
+            <input type="checkbox" id="mch-wr-consent" name="mch-wr-consent">
+            <span>Show my first name, last initial and suburb with this review. My email stays private either way.</span>
+          </label>
+
+          <div class="mch-wr-actions">
+            <button type="submit" class="mch-btn mch-btn-primary">Submit review</button>
+            <span class="mch-hint">Reviews are published within two business days.</span>
+          </div>
+        </form>
+
+        <div class="mch-wr-done" id="mch-wr-done" hidden>
+          <span class="mch-wr-done-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+          </span>
+          <p><b>Thanks, that is in the queue.</b> A moderator reads every review before it goes live, usually within two business days.</p>
+          <button type="button" class="mch-btn mch-btn-ghost" id="mch-wr-again">Write another</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T367 Customer photo gallery
+         ================================================== -->
+    <article class="tb-pattern" id="T367" data-tid="T367">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T367</span>
+        <div>
+          <h2>Customer photo gallery</h2>
+          <p>A grid of customer photos where each tile carries a handle and a shop this look tag. Clicking a tile opens it in a native <code>&lt;dialog&gt;</code> lightbox.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <div class="mch-ugc-head">
+          <h3 class="mch-ugc-h">#SaltbushAtHome</h3>
+          <p class="mch-ugc-sub">2,140 photos from customers around the country. Tag us and yours might land here.</p>
+        </div>
+        <ul class="mch-ugc">
+          <li>
+            <button type="button" class="mch-ugc-tile mch-w1" data-mch-ugc data-handle="@harriet.makes" data-place="Castlemaine, VIC" data-caption="Cove quilt cover in Oatmeal, with the Tallow throw folded at the foot." data-wash="1">
+              <span class="mch-ugc-handle">@harriet.makes</span>
+              <span class="mch-ugc-shop">Shop this look</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="mch-ugc-tile mch-w2" data-mch-ugc data-handle="@thehousebythebay" data-place="Sandy Bay, TAS" data-caption="Marlo mugs on a Sunday morning, before anyone else was up." data-wash="2">
+              <span class="mch-ugc-handle">@thehousebythebay</span>
+              <span class="mch-ugc-shop">Shop this look</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="mch-ugc-tile mch-w3" data-mch-ugc data-handle="@rowe.and.co" data-place="Fremantle, WA" data-caption="Banksia candle burning through a grey Freo afternoon." data-wash="3">
+              <span class="mch-ugc-handle">@rowe.and.co</span>
+              <span class="mch-ugc-shop">Shop this look</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="mch-ugc-tile mch-w4" data-mch-ugc data-handle="@nine.acres" data-place="Bangalow, NSW" data-caption="The whole Hinterland set on the verandah bed, two seasons in." data-wash="4">
+              <span class="mch-ugc-handle">@nine.acres</span>
+              <span class="mch-ugc-shop">Shop this look</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="mch-ugc-tile mch-w2" data-mch-ugc data-handle="@dulcie.at.home" data-place="Toowoomba, QLD" data-caption="Hinterland bath sheets, line dried, because the dryer ruins them." data-wash="2">
+              <span class="mch-ugc-handle">@dulcie.at.home</span>
+              <span class="mch-ugc-shop">Shop this look</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="mch-ugc-tile mch-w1" data-mch-ugc data-handle="@saltandsage.studio" data-place="Adelaide, SA" data-caption="Stoneware and linen, styled for a client shoot in the Hills." data-wash="1">
+              <span class="mch-ugc-handle">@saltandsage.studio</span>
+              <span class="mch-ugc-shop">Shop this look</span>
+            </button>
+          </li>
+        </ul>
+
+        <dialog class="mch-lb" id="mch-lb" aria-labelledby="mch-lb-handle">
+          <div class="mch-lb-card">
+            <button type="button" class="mch-lb-x" id="mch-lb-x" aria-label="Close this photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+            </button>
+            <div class="mch-lb-media mch-w1" id="mch-lb-media"></div>
+            <div class="mch-lb-body">
+              <p class="mch-lb-handle" id="mch-lb-handle">@harriet.makes</p>
+              <p class="mch-lb-place" id="mch-lb-place">Castlemaine, VIC</p>
+              <p class="mch-lb-caption" id="mch-lb-caption">Cove quilt cover in Oatmeal.</p>
+              <a class="mch-btn mch-btn-primary" href="#T373">Shop this look</a>
+            </div>
+          </div>
+        </dialog>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T368 Trust and payment row
+         ================================================== -->
+    <article class="tb-pattern" id="T368" data-tid="T368">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T368</span>
+        <div>
+          <h2>Trust and payment row</h2>
+          <p>Accepted payment methods beside the security reassurances, as one row above the footer or under the cart. The method labels are drawn as neutral wordmarks rather than any company&rsquo;s real logo artwork.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <section class="mch-trust" aria-label="Payment and security">
+          <div class="mch-trust-pay">
+            <span class="mch-trust-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
+              We accept
+            </span>
+            <ul class="mch-paylist">
+              <li class="mch-pay">Visa</li>
+              <li class="mch-pay">Mastercard</li>
+              <li class="mch-pay">Amex</li>
+              <li class="mch-pay">PayPal</li>
+              <li class="mch-pay">Apple Pay</li>
+              <li class="mch-pay">Google Pay</li>
+              <li class="mch-pay">Afterpay</li>
+              <li class="mch-pay">Zip</li>
+            </ul>
+          </div>
+          <ul class="mch-trust-points">
+            <li>
+              <span class="mch-trust-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              </span>
+              <span><b>Encrypted checkout</b><span class="mch-trust-line">Card details are tokenised by our payment provider and never touch our servers.</span></span>
+            </li>
+            <li>
+              <span class="mch-trust-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <span><b>PCI DSS Level 1</b><span class="mch-trust-line">Audited annually. Fraud screening runs on every order before it is picked.</span></span>
+            </li>
+            <li>
+              <span class="mch-trust-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9.5 8.5h5M9.5 12.5h5"/></svg>
+              </span>
+              <span><b>An Australian business</b><span class="mch-trust-line">ABN 41 623 887 104. Every price shown includes GST, in AUD.</span></span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T369 Gift options
+         ================================================== -->
+    <article class="tb-pattern" id="T369" data-tid="T369">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T369</span>
+        <div>
+          <h2>Gift options</h2>
+          <p>The cart-side gift block: a wrapping toggle with its price, a gift message with a character counter, and the option to hide prices on the packing slip.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <section class="mch-gift" aria-label="Gift options">
+          <h3 class="mch-gift-h">
+            <span class="mch-gift-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="11" rx="1.5"/><path d="M3 13h18M12 9v11"/><path d="M12 9S10.5 3.5 8 4.6 9.5 9 12 9zM12 9s1.5-5.5 4-4.4S14.5 9 12 9z"/></svg>
+            </span>
+            Sending this as a gift?
+          </h3>
+
+          <label class="mch-switch" for="mch-gift-wrap">
+            <input type="checkbox" id="mch-gift-wrap" class="mch-switch-input">
+            <span class="mch-switch-track" aria-hidden="true"><span class="mch-switch-thumb"></span></span>
+            <span class="mch-switch-copy">
+              <span class="mch-switch-title">Add gift wrapping <span class="mch-gift-price">$6.50</span></span>
+              <span class="mch-switch-line">Recycled kraft paper, cotton twine and a sprig of dried banksia, wrapped by hand in Marrickville.</span>
+            </span>
+          </label>
+
+          <div class="mch-field">
+            <label for="mch-gift-msg">Gift message</label>
+            <textarea id="mch-gift-msg" rows="3" maxlength="200" placeholder="Happy birthday Mum. Sorry it is late, again."></textarea>
+            <p class="mch-count"><span id="mch-gift-count">0</span> of 200 characters</p>
+            <span class="mch-hint">Hand written on a folded card and tucked inside the box. Leave it blank and we send it plain.</span>
+          </div>
+
+          <label class="mch-check">
+            <input type="checkbox" id="mch-gift-hide" checked>
+            <span>Hide prices on the packing slip. The tax invoice still goes to your email.</span>
+          </label>
+
+          <p class="mch-gift-total" id="mch-gift-total" aria-live="polite">No gift wrapping selected.</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T370 Back in stock
+         ================================================== -->
+    <article class="tb-pattern" id="T370" data-tid="T370">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T370</span>
+        <div>
+          <h2>Back in stock</h2>
+          <p>The out of stock state on a product page: an honest notice, an email capture, the success state, and a line about what the alert actually does.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <section class="mch-bis" aria-label="Back in stock alert">
+          <div class="mch-bis-media mch-w1">
+            <span class="mch-bis-oos">Sold out</span>
+          </div>
+          <div class="mch-bis-body">
+            <p class="mch-bis-name">Banksia Soy Candle, 400g</p>
+            <p class="mch-bis-price">$54.00 AUD</p>
+            <p class="mch-bis-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.2M12 16.2v.1"/></svg>
+              <span>This one sold out on 22 August. The next pour is curing now and ships in the week of 14 September.</span>
+            </p>
+
+            <form class="mch-bis-form" id="mch-bis-form" novalidate>
+              <div class="mch-field">
+                <label for="mch-bis-email">Email me when it is back</label>
+                <div class="mch-field-row">
+                  <input type="email" id="mch-bis-email" name="mch-bis-email" autocomplete="email" placeholder="you@example.com.au" required>
+                  <button type="submit" class="mch-btn mch-btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 19a2 2 0 0 0 4 0"/></svg>
+                    Notify me
+                  </button>
+                </div>
+                <span class="mch-hint">One email, sent the hour stock lands. The alert deletes itself once it fires, and it is not a newsletter signup.</span>
+              </div>
+            </form>
+
+            <div class="mch-bis-done" id="mch-bis-done" hidden>
+              <span class="mch-bis-done-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+              </span>
+              <p><b>You are on the list.</b> We will email <span class="mch-bis-shown" id="mch-bis-shown">you</span> as soon as the next pour is in the warehouse. Nothing else, ever.</p>
+            </div>
+          </div>
+        </section>
+        <p class="mch-demo-note">
+          <span>The form and the success state are the same block in two states.</span>
+          <button type="button" class="mch-demo-reset" id="mch-bis-reset" hidden>Reset the form</button>
+        </p>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T371 Newsletter capture with incentive
+         ================================================== -->
+    <article class="tb-pattern" id="T371" data-tid="T371">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T371</span>
+        <div>
+          <h2>Newsletter capture with incentive</h2>
+          <p>An offer headline, an email field and a consent line, swapping to a success state that reveals the discount code with a copy button.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <section class="mch-news" aria-label="Newsletter signup">
+          <div class="mch-news-body">
+            <p class="mch-news-eyebrow">First order</p>
+            <h3 class="mch-news-h">Take 10% off, then hear from us twice a month</h3>
+            <p class="mch-news-sub">New arrivals, restock dates and the occasional piece about the makers we work with. Two emails a month at most, and one click to leave.</p>
+
+            <form class="mch-news-form" id="mch-news-form" novalidate>
+              <div class="mch-field">
+                <label for="mch-news-email">Email address</label>
+                <div class="mch-field-row">
+                  <input type="email" id="mch-news-email" name="mch-news-email" autocomplete="email" placeholder="you@example.com.au" required>
+                  <button type="submit" class="mch-btn mch-btn-primary">Reveal my code</button>
+                </div>
+              </div>
+              <label class="mch-check">
+                <input type="checkbox" id="mch-news-consent" checked>
+                <span>Yes, send me Saltbush Home emails. I have read the <a class="mch-inline-link" href="#T368">privacy policy</a> and can unsubscribe at any time.</span>
+              </label>
+            </form>
+
+            <div class="mch-news-done" id="mch-news-done" hidden>
+              <p class="mch-news-donetop">
+                <span class="mch-news-mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+                </span>
+                <span><b>Here is your code.</b> It takes 10% off your first order and lasts 30 days. We have emailed a copy in case this tab disappears.</span>
+              </p>
+              <div class="mch-code">
+                <code id="mch-news-code">SALTBUSH10</code>
+                <button type="button" class="mch-btn mch-btn-ghost" id="mch-news-copy">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></svg>
+                  Copy code
+                </button>
+              </div>
+              <p class="mch-news-status" id="mch-news-status" role="status"></p>
+              <p class="mch-hint">One use per customer, on full priced items, not combinable with the linen sale.</p>
+            </div>
+          </div>
+
+          <div class="mch-news-art mch-w2" aria-hidden="true">
+            <span class="mch-news-badge">10% off</span>
+          </div>
+        </section>
+        <p class="mch-demo-note">
+          <span>Demo only: no address is stored and no email is sent.</span>
+          <button type="button" class="mch-demo-reset" id="mch-news-reset" hidden>Reset the form</button>
+        </p>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T372 Recently viewed rail
+         ================================================== -->
+    <article class="tb-pattern" id="T372" data-tid="T372">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T372</span>
+        <div>
+          <h2>Recently viewed rail</h2>
+          <p>A compact rail of the products this visitor already looked at, scrolling sideways, with a clear history action and an empty state.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <section class="mch-rv" aria-label="Recently viewed products">
+          <div class="mch-rv-head">
+            <h3 class="mch-rv-h">
+              <span class="mch-rv-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 12S6.2 6.2 12 6.2 21.4 12 21.4 12 17.8 17.8 12 17.8 2.6 12 2.6 12z"/><circle cx="12" cy="12" r="2.6"/></svg>
+              </span>
+              Recently viewed
+            </h3>
+            <button type="button" class="mch-rv-clear" id="mch-rv-clear">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M9.5 7V4.8h5V7M6.5 7l1 13h9l1-13"/></svg>
+              Clear history
+            </button>
+          </div>
+
+          <ul class="mch-rv-rail" id="mch-rv-rail">
+            <li class="mch-rv-item"><a class="mch-rv-link" href="#T372"><span class="mch-rv-thumb mch-w1"></span><span class="mch-rv-name">Cove Linen Quilt Cover</span><span class="mch-rv-price">$289.00</span></a></li>
+            <li class="mch-rv-item"><a class="mch-rv-link" href="#T372"><span class="mch-rv-thumb mch-w2"></span><span class="mch-rv-name">Marlo Stoneware Mugs, set of 4</span><span class="mch-rv-price">$72.00</span></a></li>
+            <li class="mch-rv-item"><a class="mch-rv-link" href="#T372"><span class="mch-rv-thumb mch-w3"></span><span class="mch-rv-name">Banksia Soy Candle, 400g</span><span class="mch-rv-price">$54.00</span></a></li>
+            <li class="mch-rv-item"><a class="mch-rv-link" href="#T372"><span class="mch-rv-thumb mch-w4"></span><span class="mch-rv-name">Tallow Wool Throw</span><span class="mch-rv-price">$189.00</span></a></li>
+            <li class="mch-rv-item"><a class="mch-rv-link" href="#T372"><span class="mch-rv-thumb mch-w2"></span><span class="mch-rv-name">Hinterland Bath Sheet</span><span class="mch-rv-price">$69.00</span></a></li>
+            <li class="mch-rv-item"><a class="mch-rv-link" href="#T372"><span class="mch-rv-thumb mch-w1"></span><span class="mch-rv-name">Yarra Cane Basket, large</span><span class="mch-rv-price">$115.00</span></a></li>
+            <li class="mch-rv-item"><a class="mch-rv-link" href="#T372"><span class="mch-rv-thumb mch-w3"></span><span class="mch-rv-name">Sturt Ceramic Vase</span><span class="mch-rv-price">$98.00</span></a></li>
+          </ul>
+
+          <p class="mch-rv-empty" id="mch-rv-empty" hidden>
+            Nothing here yet. Products you open are kept in this browser for 30 days, and never leave it.
+            <button type="button" class="mch-demo-reset" id="mch-rv-restore">Restore the demo history</button>
+          </p>
+        </section>
+      </div>
+    </article>
+
+    <!-- ==================================================
+         T373 Editorial band
+         ================================================== -->
+    <article class="tb-pattern" id="T373" data-tid="T373">
+      <header class="tb-pattern-head">
+        <span class="tb-tid">T373</span>
+        <div>
+          <h2>Editorial band</h2>
+          <p>The lookbook band a story-led store leans on: a large image wash, an eyebrow, a headline, one paragraph and a shop the story call to action.</p>
+        </div>
+      </header>
+      <div class="tb-demo">
+        <section class="mch-ed" aria-label="Lookbook feature">
+          <div class="mch-ed-media mch-w4">
+            <span class="mch-ed-tag">The Hinterland series</span>
+          </div>
+          <div class="mch-ed-body">
+            <p class="mch-ed-eyebrow">Lookbook, spring 2026</p>
+            <h3 class="mch-ed-h">Six weeks in the Byron hinterland</h3>
+            <p class="mch-ed-p">We took the new linen up to a 1930s farmhouse outside Bangalow and left it there for a season: rain on the tin, red dust through the flyscreens, three house guests and one determined border collie. What came back is the range we are shipping now, hemmed a little deeper, washed a lot softer, and finally the right shade of oatmeal.</p>
+            <ul class="mch-ed-facts">
+              <li><span class="mch-ed-fact-n">9</span><span class="mch-ed-fact-l">pieces</span></li>
+              <li><span class="mch-ed-fact-n">$69</span><span class="mch-ed-fact-l">from</span></li>
+              <li><span class="mch-ed-fact-n">100%</span><span class="mch-ed-fact-l">French flax</span></li>
+            </ul>
+            <div class="mch-ed-actions">
+              <a class="mch-btn mch-btn-primary" href="#T372">Shop the story</a>
+              <a class="mch-btn mch-btn-ghost" href="#T367">Read the full journal entry</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+  </main>
+
+  <style>
+    /* ============================================================
+       Merchandising and trust, T360 to T373. Prefix: mch-
+       Every colour is a token. Placeholder imagery uses the
+       --wash-* gradient pairs. Star fills use --warn.
+       ============================================================ */
+
+    /* ---- shared ---- */
+    .mch-sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    .mch-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 0 20px;
+      font-family: var(--font-ui); font-size: 13px;
+      font-weight: var(--button-weight); letter-spacing: var(--button-tracking);
+      text-transform: var(--button-transform);
+      border: var(--line-weight) solid transparent;
+      border-radius: var(--radius-btn, var(--radius-sm));
+      cursor: pointer; text-decoration: none; white-space: nowrap;
+    }
+    .mch-btn svg { width: 17px; height: 17px; flex: none; }
+    .mch-btn-primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+    .mch-btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+    .mch-btn-ghost { background: transparent; color: var(--text); border-color: var(--border-2); }
+    .mch-btn-ghost:hover { border-color: var(--text-3); }
+    .mch-btn:focus-visible,
+    .mch-demo-reset:focus-visible,
+    .mch-help:focus-visible,
+    .mch-rev-report:focus-visible,
+    .mch-rv-clear:focus-visible,
+    .mch-ugc-tile:focus-visible,
+    .mch-rv-link:focus-visible,
+    .mch-annbar-x:focus-visible,
+    .mch-promo-x:focus-visible,
+    .mch-lb-x:focus-visible {
+      outline: var(--focus-ring); outline-offset: 2px;
+    }
+
+    .mch-inline-link { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* Viewer aids, not part of a block */
+    .mch-demo-note {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px;
+      margin: 14px 0 0; font-family: var(--font-ui); font-size: 12px; color: var(--text-4);
+    }
+    .mch-demo-reset {
+      min-height: 48px; padding: 0 16px;
+      font-family: var(--font-ui); font-size: 12px; letter-spacing: var(--button-tracking);
+      color: var(--accent); background: transparent;
+      border: var(--line-weight) solid var(--border-2); border-radius: var(--radius-pill);
+      cursor: pointer;
+    }
+    .mch-demo-reset:hover { border-color: var(--accent); }
+
+    /* Placeholder washes */
+    .mch-w1 { background: linear-gradient(135deg, var(--wash-1a), var(--wash-1b)); }
+    .mch-w2 { background: linear-gradient(135deg, var(--wash-2a), var(--wash-2b)); }
+    .mch-w3 { background: linear-gradient(135deg, var(--wash-3a), var(--wash-3b)); }
+    .mch-w4 { background: linear-gradient(160deg, var(--wash-2a), var(--wash-1b)); }
+
+    /* Star row: an empty row with a clipped filled row over it */
+    .mch-stars {
+      position: relative; display: inline-block; line-height: 1;
+      font-size: 15px; letter-spacing: 2px; white-space: nowrap;
+    }
+    .mch-stars-bg { color: var(--rating-empty); }
+    .mch-stars-fg {
+      position: absolute; left: 0; top: 0; overflow: hidden; white-space: nowrap;
+      width: var(--mch-fill, 100%); color: var(--rating);
+    }
+    .mch-stars-lg { font-size: 22px; }
+
+    /* Shared field styling */
+    .mch-field { display: flex; flex-direction: column; gap: 7px; }
+    .mch-field > label,
+    .mch-wr-rate legend {
+      font-family: var(--font-ui); font-size: 12px; font-weight: 600;
+      letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
+      color: var(--text-2); padding: 0;
+    }
+    .mch-field input[type="text"],
+    .mch-field input[type="email"],
+    .mch-field textarea,
+    .mch-filein {
+      width: 100%; min-height: 48px; padding: 12px 14px;
+      font-family: var(--font-body); font-size: 15px; color: var(--text);
+      background: var(--bg-3);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius); resize: vertical;
+    }
+    .mch-field textarea { line-height: 1.55; }
+    .mch-field input::placeholder,
+    .mch-field textarea::placeholder { color: var(--text-4); }
+    .mch-field input:focus-visible,
+    .mch-field textarea:focus-visible,
+    .mch-filein:focus-visible {
+      outline: var(--focus-ring); outline-offset: 1px; border-color: var(--accent);
+    }
+    .mch-field-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .mch-field-row input { flex: 1 1 220px; width: auto; }
+    .mch-hint { font-family: var(--font-body); font-size: 12.5px; line-height: 1.5; color: var(--text-4); }
+
+    .mch-check {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-family: var(--font-body); font-size: 13.5px; line-height: 1.5;
+      color: var(--text-2); cursor: pointer; padding: 8px 0; min-height: 48px;
+    }
+    .mch-check input[type="checkbox"] {
+      width: 20px; height: 20px; margin: 1px 0 0; flex: none;
+      accent-color: var(--accent); cursor: pointer;
+    }
+    .mch-check input:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
+
+    /* ---- T360 Announcement bar ---- */
+    .mch-annbar {
+      display: flex; align-items: center; gap: 8px;
+      width: 100%; background: var(--accent); color: var(--accent-ink);
+      border-radius: var(--radius); overflow: hidden;
+    }
+    .mch-annbar-icon { flex: none; width: 48px; display: flex; justify-content: center; }
+    .mch-annbar-icon svg { width: 20px; height: 20px; }
+    .mch-annbar-msg {
+      flex: 1; min-width: 0; margin: 0; text-align: center;
+      font-family: var(--font-ui); font-size: 13px; line-height: 1.45;
+      letter-spacing: var(--button-tracking);
+    }
+    .mch-annbar-link { color: inherit; text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+    .mch-annbar-x {
+      flex: none; width: 48px; height: 48px;
+      display: flex; align-items: center; justify-content: center;
+      background: transparent; border: 0; color: inherit; cursor: pointer;
+    }
+    .mch-annbar-x svg { width: 17px; height: 17px; }
+    .mch-annbar-x:hover { background: color-mix(in srgb, var(--accent-ink) 18%, transparent); }
+
+    /* ---- T361 Promo banner ---- */
+    .mch-promo {
+      position: relative; display: flex; align-items: center; gap: 20px;
+      padding: 22px 60px 22px 22px;
+      background: var(--accent-wash);
+      border: var(--line-weight) solid var(--accent-line);
+      border-radius: var(--radius-card);
+    }
+    .mch-promo-mark {
+      flex: none; width: 46px; height: 46px; display: flex; align-items: center; justify-content: center;
+      color: var(--accent); background: var(--bg-2);
+      border: var(--line-weight) solid var(--accent-line); border-radius: var(--radius);
+    }
+    .mch-promo-mark svg { width: 22px; height: 22px; }
+    .mch-promo-body { flex: 1; min-width: 0; }
+    .mch-promo-eyebrow {
+      margin: 0 0 6px; font-family: var(--font-eyebrow); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
+      color: var(--accent);
+    }
+    .mch-promo-h { margin: 0 0 6px; font-size: 22px; color: var(--text); }
+    .mch-promo-sub { margin: 0; font-size: 14px; line-height: 1.55; color: var(--text-3); max-width: 56ch; }
+    .mch-promo-side { flex: none; }
+    .mch-promo-x {
+      position: absolute; top: 10px; right: 10px;
+      width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
+      background: transparent; border: 0; color: var(--text-3); cursor: pointer;
+      border-radius: var(--radius-sm);
+    }
+    .mch-promo-x svg { width: 17px; height: 17px; }
+    .mch-promo-x:hover { color: var(--text); background: var(--accent-faint); }
+
+    /* ---- T362 Countdown offer strip ---- */
+    .mch-cd {
+      background: var(--bg-card);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-card);
+    }
+    .mch-cd-live,
+    .mch-cd-done { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; padding: 18px 20px; }
+    .mch-cd-msg {
+      display: flex; align-items: center; gap: 10px; flex: 1 1 260px; margin: 0;
+      font-size: 14px; line-height: 1.5; color: var(--text-2);
+    }
+    .mch-cd-msg b { color: var(--text); }
+    .mch-cd-mark { flex: none; color: var(--accent); display: flex; }
+    .mch-cd-mark svg { width: 22px; height: 22px; }
+    .mch-cd-clock { display: flex; align-items: flex-start; gap: 4px; }
+    .mch-cd-unit {
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+      min-width: 56px; padding: 8px 6px;
+      background: var(--bg-3);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius);
+    }
+    .mch-cd-num {
+      font-family: var(--font-display); font-size: 24px; font-weight: var(--heading-weight);
+      line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums;
+    }
+    .mch-cd-cap {
+      font-family: var(--font-ui); font-size: 10px; letter-spacing: var(--eyebrow-tracking);
+      text-transform: uppercase; color: var(--text-4);
+    }
+    .mch-cd-sep { align-self: center; color: var(--border-3); font-family: var(--font-ui); }
+    .mch-cd-done { background: var(--bg-2); border-radius: var(--radius-card); }
+    .mch-cd-done .mch-cd-mark { color: var(--text-4); }
+
+    /* ---- T363 Value proposition strip ---- */
+    .mch-vps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1px; margin: 0; padding: 0; list-style: none;
+      background: var(--border);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card); overflow: hidden;
+    }
+    .mch-vp {
+      display: flex; flex-direction: column; gap: 8px;
+      padding: 22px 18px; background: var(--bg-card);
+    }
+    .mch-vp-icon {
+      width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;
+      color: var(--accent); background: var(--accent-faint); border-radius: var(--radius-pill);
+    }
+    .mch-vp-icon svg { width: 21px; height: 21px; }
+    .mch-vp-title { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--text); }
+    .mch-vp-line { font-size: 13px; line-height: 1.55; color: var(--text-3); }
+
+    /* ---- T364 Review summary ---- */
+    .mch-rsum {
+      display: grid; grid-template-columns: 200px minmax(220px, 1fr) 260px; gap: 28px;
+      align-items: start; padding: 24px;
+      background: var(--bg-card);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-card);
+    }
+    .mch-rsum-score { display: flex; flex-direction: column; gap: 8px; }
+    .mch-rsum-num {
+      font-family: var(--font-display); font-size: 52px; font-weight: var(--heading-weight);
+      line-height: 1; color: var(--text);
+    }
+    .mch-rsum-count { font-family: var(--font-ui); font-size: 12.5px; color: var(--text-3); }
+    .mch-rsum-rec {
+      display: inline-flex; align-items: center; gap: 7px; align-self: flex-start;
+      font-family: var(--font-ui); font-size: 12px; color: var(--ok);
+      background: var(--ok-wash); border-radius: var(--radius-pill); padding: 6px 12px;
+    }
+    .mch-rsum-rec svg { width: 14px; height: 14px; flex: none; }
+
+    .mch-dist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+    .mch-dist-row { display: flex; align-items: center; gap: 12px; }
+    .mch-dist-key {
+      flex: none; width: 48px; font-family: var(--font-ui); font-size: 12px; color: var(--text-3);
+    }
+    .mch-dist-track {
+      flex: 1; height: 9px; background: var(--bg-3);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-pill); overflow: hidden;
+    }
+    .mch-dist-fill { display: block; height: 100%; background: var(--warn); }
+    .mch-dist-pct {
+      flex: none; width: 40px; text-align: right;
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-2);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .mch-rsum-cta {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+      padding: 18px; background: var(--bg-2);
+      border: var(--line-weight) solid var(--border); border-radius: var(--radius);
+    }
+    .mch-rsum-ask { margin: 0; font-size: 14px; line-height: 1.5; color: var(--text-2); }
+    .mch-rsum-note { margin: 0; font-size: 12px; line-height: 1.5; color: var(--text-4); }
+
+    /* ---- T365 Review list ---- */
+    .mch-revs { display: flex; flex-direction: column; gap: 16px; }
+    .mch-rev {
+      padding: 20px; background: var(--bg-card);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
+    }
+    .mch-rev-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .mch-rev-av {
+      flex: none; width: 40px; height: 40px; border-radius: var(--radius-pill);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-ui); font-size: 13px; font-weight: 600;
+      color: var(--accent); background: var(--accent-faint);
+      border: var(--line-weight) solid var(--accent-line);
+    }
+    .mch-rev-who { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .mch-rev-name { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--text); }
+    .mch-rev-meta {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-3);
+    }
+    .mch-rev-verified { display: inline-flex; align-items: center; gap: 5px; color: var(--ok); }
+    .mch-rev-verified svg { width: 13px; height: 13px; }
+    .mch-rev-sep { color: var(--border-3); }
+    .mch-rev-date {
+      margin-left: auto; flex: none;
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-4);
+    }
+    .mch-rev-title { margin: 10px 0 6px; font-size: 16px; color: var(--text); }
+    .mch-rev-body { margin: 0 0 12px; font-size: 14px; line-height: 1.65; color: var(--text-2); max-width: 78ch; }
+    .mch-rev-variant {
+      display: inline-flex; align-items: center; gap: 8px; margin: 0;
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-3);
+      background: var(--bg-3); border-radius: var(--radius-pill); padding: 7px 14px;
+    }
+    .mch-rev-variant svg { width: 14px; height: 14px; flex: none; }
+    .mch-rev-photos { display: flex; gap: 8px; margin-top: 12px; }
+    .mch-rev-photo {
+      width: 68px; height: 68px; border-radius: var(--radius);
+      border: var(--line-weight) solid var(--border);
+    }
+    .mch-rev-foot {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+      margin-top: 12px; padding-top: 12px;
+      border-top: var(--line-weight) solid var(--border);
+    }
+    .mch-rev-q { font-family: var(--font-ui); font-size: 12px; color: var(--text-4); }
+    .mch-help {
+      display: inline-flex; align-items: center; gap: 8px;
+      min-height: 48px; padding: 0 16px;
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-2);
+      background: transparent;
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-pill); cursor: pointer;
+    }
+    .mch-help svg { width: 15px; height: 15px; }
+    .mch-help:hover { border-color: var(--text-3); color: var(--text); }
+    .mch-help[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); background: var(--accent-faint); }
+    .mch-help-n { font-variant-numeric: tabular-nums; }
+    .mch-rev-report {
+      margin-left: auto; min-height: 48px; padding: 0 8px;
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-4);
+      background: transparent; border: 0; cursor: pointer; text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .mch-rev-report:hover { color: var(--text-2); }
+
+    /* ---- T366 Write a review form ---- */
+    .mch-wr {
+      display: flex; flex-direction: column; gap: 18px; max-width: 640px;
+      padding: 24px; background: var(--bg-card);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-card);
+    }
+    .mch-wr-for { margin: 0; font-size: 13.5px; color: var(--text-3); }
+    .mch-wr-for b { color: var(--text); }
+    .mch-wr-rate { margin: 0; padding: 0; border: 0; }
+    .mch-starin { display: flex; align-items: center; flex-wrap: wrap; gap: 2px; margin-top: 6px; }
+    .mch-starin label {
+      width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
+      font-size: 30px; line-height: 1; color: var(--border-2); cursor: pointer;
+      border-radius: var(--radius-sm);
+    }
+    .mch-starin label:hover { color: var(--rating); }
+    .mch-starin input:focus-visible + label { outline: var(--focus-ring); outline-offset: -2px; }
+    .mch-starin:has(#mch-star1:checked) label[for="mch-star1"],
+    .mch-starin:has(#mch-star2:checked) :is(label[for="mch-star1"], label[for="mch-star2"]),
+    .mch-starin:has(#mch-star3:checked) :is(label[for="mch-star1"], label[for="mch-star2"], label[for="mch-star3"]),
+    .mch-starin:has(#mch-star4:checked) :is(label[for="mch-star1"], label[for="mch-star2"], label[for="mch-star3"], label[for="mch-star4"]),
+    .mch-starin:has(#mch-star5:checked) label { color: var(--rating); }
+    .mch-wr-readout {
+      margin-left: 12px; font-family: var(--font-ui); font-size: 12.5px; color: var(--text-3);
+    }
+    .mch-filein { padding: 10px 12px; font-family: var(--font-ui); font-size: 13px; cursor: pointer; }
+    .mch-filelist {
+      list-style: none; margin: 0; padding: 0;
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .mch-filelist:empty { display: none; }
+    .mch-filelist li {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-2);
+      background: var(--bg-3); border-radius: var(--radius-pill); padding: 6px 12px;
+    }
+    .mch-wr-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+    .mch-wr-done {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 14px; max-width: 640px;
+      padding: 22px; background: var(--ok-wash);
+      border: var(--line-weight) solid var(--ok);
+      border-radius: var(--radius-card);
+    }
+    .mch-wr-done p { margin: 0; flex: 1 1 260px; font-size: 14px; line-height: 1.55; color: var(--text-2); }
+    .mch-wr-done b { color: var(--text); }
+    .mch-wr-done-mark { flex: none; color: var(--ok); display: flex; }
+    .mch-wr-done-mark svg { width: 26px; height: 26px; }
+
+    /* ---- T367 Customer photo gallery ---- */
+    .mch-ugc-head { margin-bottom: 16px; }
+    .mch-ugc-h { margin: 0 0 4px; font-size: 20px; color: var(--text); }
+    .mch-ugc-sub { margin: 0; font-size: 13.5px; color: var(--text-3); }
+    .mch-ugc {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px; list-style: none; margin: 0; padding: 0;
+    }
+    .mch-ugc-tile {
+      position: relative; display: block; width: 100%; aspect-ratio: 1 / 1;
+      padding: 0; border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius); cursor: pointer; overflow: hidden;
+    }
+    .mch-ugc-handle,
+    .mch-ugc-shop {
+      position: absolute; left: 8px;
+      font-family: var(--font-ui); font-size: 11px; color: var(--text);
+      background: var(--scrim);
+      border-radius: var(--radius-pill); padding: 5px 10px;
+      max-width: calc(100% - 16px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .mch-ugc-handle { bottom: 8px; opacity: 0; transform: translateY(4px); transition: opacity .18s ease, transform .18s ease; }
+    .mch-ugc-shop {
+      top: 8px; left: auto; right: 8px;
+      color: var(--accent-ink); background: var(--accent);
+      opacity: 0; transform: translateY(-4px); transition: opacity .18s ease, transform .18s ease;
+    }
+    .mch-ugc-tile:hover .mch-ugc-handle,
+    .mch-ugc-tile:focus-visible .mch-ugc-handle,
+    .mch-ugc-tile:hover .mch-ugc-shop,
+    .mch-ugc-tile:focus-visible .mch-ugc-shop { opacity: 1; transform: translateY(0); }
+    @media (hover: none) {
+      .mch-ugc-handle, .mch-ugc-shop { opacity: 1; transform: none; }
+    }
+
+    .mch-lb {
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-card);
+      background: var(--bg-card); color: var(--text);
+      padding: 0; max-width: 560px; width: calc(100% - 32px);
+    }
+    .mch-lb::backdrop { background: var(--scrim); }
+    .mch-lb-card { position: relative; }
+    .mch-lb-media { aspect-ratio: 4 / 3; border-radius: var(--radius-card) var(--radius-card) 0 0; }
+    .mch-lb-body { padding: 20px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+    .mch-lb-handle { margin: 0; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--text); }
+    .mch-lb-place { margin: 0; font-family: var(--font-ui); font-size: 12px; color: var(--text-4); }
+    .mch-lb-caption { margin: 6px 0 10px; font-size: 14px; line-height: 1.55; color: var(--text-2); }
+    .mch-lb-x {
+      position: absolute; top: 8px; right: 8px; z-index: 2;
+      width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
+      color: var(--text); background: var(--scrim);
+      border: 0; border-radius: var(--radius-pill); cursor: pointer;
+    }
+    .mch-lb-x svg { width: 18px; height: 18px; }
+
+    /* ---- T368 Trust and payment row ---- */
+    .mch-trust {
+      display: grid; grid-template-columns: minmax(280px, 1fr) minmax(300px, 1.1fr);
+      gap: 28px; padding: 24px;
+      background: var(--bg-2);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
+    }
+    .mch-trust-label {
+      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px;
+      font-family: var(--font-ui); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
+      color: var(--text-4);
+    }
+    .mch-trust-label svg { width: 16px; height: 16px; }
+    .mch-paylist { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+    .mch-pay {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 66px; height: 34px; padding: 0 10px;
+      font-family: var(--font-ui); font-size: 11.5px; font-weight: 600; letter-spacing: 0.02em;
+      color: var(--text-2); background: var(--bg-card);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-sm);
+    }
+    .mch-trust-points { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+    .mch-trust-points > li { display: flex; gap: 12px; }
+    .mch-trust-points b { display: block; font-family: var(--font-ui); font-size: 13.5px; color: var(--text); margin-bottom: 2px; }
+    .mch-trust-line { display: block; font-size: 13px; line-height: 1.55; color: var(--text-3); }
+    .mch-trust-icon {
+      flex: none; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+      color: var(--accent); background: var(--accent-faint); border-radius: var(--radius-pill);
+    }
+    .mch-trust-icon svg { width: 19px; height: 19px; }
+
+    /* ---- T369 Gift options ---- */
+    .mch-gift {
+      display: flex; flex-direction: column; gap: 16px; max-width: 560px;
+      padding: 24px; background: var(--bg-card);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-card);
+    }
+    .mch-gift-h { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 18px; color: var(--text); }
+    .mch-gift-mark { color: var(--accent); display: flex; }
+    .mch-gift-mark svg { width: 22px; height: 22px; }
+    .mch-switch {
+      display: flex; align-items: flex-start; gap: 14px; cursor: pointer;
+      padding: 14px; background: var(--bg-2);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius);
+    }
+    .mch-switch-input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .mch-switch-track {
+      flex: none; width: 50px; height: 28px; margin-top: 2px;
+      background: var(--bg-3);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-pill);
+      display: flex; align-items: center; padding: 2px;
+      transition: background .16s ease, border-color .16s ease;
+    }
+    .mch-switch-thumb {
+      width: 20px; height: 20px; border-radius: var(--radius-pill);
+      background: var(--text-3); transition: transform .16s ease, background .16s ease;
+    }
+    .mch-switch-input:checked ~ .mch-switch-track { background: var(--accent); border-color: var(--accent); }
+    .mch-switch-input:checked ~ .mch-switch-track .mch-switch-thumb { transform: translateX(22px); background: var(--accent-ink); }
+    .mch-switch-input:focus-visible ~ .mch-switch-track { outline: var(--focus-ring); outline-offset: 2px; }
+    .mch-switch-copy { display: flex; flex-direction: column; gap: 4px; }
+    .mch-switch-title { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--text); }
+    .mch-gift-price {
+      display: inline-block; margin-left: 6px;
+      font-family: var(--font-ui); font-size: 12px; color: var(--accent);
+      background: var(--accent-faint); border-radius: var(--radius-pill); padding: 3px 9px;
+    }
+    .mch-switch-line { font-size: 13px; line-height: 1.55; color: var(--text-3); }
+    .mch-count {
+      margin: 0; text-align: right;
+      font-family: var(--font-ui); font-size: 11.5px; color: var(--text-4);
+      font-variant-numeric: tabular-nums;
+    }
+    .mch-gift-total {
+      margin: 0; padding: 12px 14px;
+      font-family: var(--font-ui); font-size: 13px; color: var(--text-2);
+      background: var(--bg-3); border-radius: var(--radius);
+    }
+
+    /* ---- T370 Back in stock ---- */
+    .mch-bis {
+      display: grid; grid-template-columns: 200px 1fr; gap: 24px; align-items: start;
+      padding: 24px; background: var(--bg-card);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-card);
+    }
+    .mch-bis-media {
+      position: relative; aspect-ratio: 4 / 5; border-radius: var(--radius);
+      border: var(--line-weight) solid var(--border);
+    }
+    .mch-bis-oos {
+      position: absolute; top: 10px; left: 10px;
+      font-family: var(--font-ui); font-size: 10.5px; font-weight: 600;
+      letter-spacing: var(--eyebrow-tracking); text-transform: uppercase;
+      color: var(--status-ink); background: var(--err);
+      border-radius: var(--radius-pill); padding: 5px 11px;
+    }
+    .mch-bis-body { display: flex; flex-direction: column; gap: 12px; }
+    .mch-bis-name { margin: 0; font-family: var(--font-display); font-size: 20px; color: var(--text); }
+    .mch-bis-price { margin: 0; font-family: var(--font-ui); font-size: 15px; color: var(--text-2); }
+    .mch-bis-note {
+      display: flex; gap: 10px; margin: 0; padding: 12px 14px;
+      font-size: 13.5px; line-height: 1.55; color: var(--warn);
+      background: var(--warn-wash); border-radius: var(--radius);
+    }
+    .mch-bis-note svg { width: 18px; height: 18px; flex: none; margin-top: 1px; }
+    .mch-bis-form { margin: 0; }
+    .mch-bis-done {
+      display: flex; gap: 12px; align-items: flex-start; padding: 16px;
+      background: var(--ok-wash); border: var(--line-weight) solid var(--ok);
+      border-radius: var(--radius);
+    }
+    .mch-bis-done p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--text-2); }
+    .mch-bis-done b { color: var(--text); }
+    .mch-bis-done-mark { flex: none; color: var(--ok); display: flex; }
+    .mch-bis-done-mark svg { width: 22px; height: 22px; }
+    .mch-bis-shown { font-family: var(--font-mono); font-size: 13px; color: var(--text); }
+
+    /* ---- T371 Newsletter capture with incentive ---- */
+    .mch-news {
+      display: grid; grid-template-columns: 1fr 240px; gap: 0;
+      background: var(--bg-card);
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-card); overflow: hidden;
+    }
+    .mch-news-body { padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+    .mch-news-eyebrow {
+      margin: 0; font-family: var(--font-eyebrow); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
+      color: var(--accent);
+    }
+    .mch-news-h { margin: 0; font-size: 24px; color: var(--text); max-width: 22ch; }
+    .mch-news-sub { margin: 0; font-size: 14px; line-height: 1.6; color: var(--text-3); max-width: 60ch; }
+    .mch-news-form { display: flex; flex-direction: column; gap: 6px; }
+    .mch-news-done { display: flex; flex-direction: column; gap: 12px; }
+    .mch-news-donetop { display: flex; gap: 10px; margin: 0; font-size: 14px; line-height: 1.6; color: var(--text-2); }
+    .mch-news-donetop b { color: var(--text); }
+    .mch-news-mark { flex: none; color: var(--ok); display: flex; }
+    .mch-news-mark svg { width: 22px; height: 22px; }
+    .mch-code {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+      padding: 14px; background: var(--accent-wash);
+      border: var(--line-weight) dashed var(--accent-line);
+      border-radius: var(--radius);
+    }
+    .mch-code code {
+      font-family: var(--font-mono); font-size: 20px; font-weight: 700; letter-spacing: 0.12em;
+      color: var(--text); background: transparent; border: 0; padding: 0;
+    }
+    .mch-news-status { margin: 0; min-height: 18px; font-family: var(--font-ui); font-size: 12px; color: var(--ok); }
+    .mch-news-art { position: relative; min-height: 220px; }
+    .mch-news-badge {
+      position: absolute; inset: auto 16px 16px auto;
+      font-family: var(--font-ui); font-size: 12px; font-weight: 600;
+      letter-spacing: var(--eyebrow-tracking); text-transform: uppercase;
+      color: var(--text); background: var(--scrim);
+      border-radius: var(--radius-pill); padding: 8px 14px;
+    }
+
+    /* ---- T372 Recently viewed rail ---- */
+    .mch-rv {
+      padding: 20px; background: var(--bg-2);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
+    }
+    .mch-rv-head { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .mch-rv-h { display: flex; align-items: center; gap: 9px; margin: 0; font-size: 16px; color: var(--text); }
+    .mch-rv-mark { color: var(--text-4); display: flex; }
+    .mch-rv-mark svg { width: 18px; height: 18px; }
+    .mch-rv-clear {
+      margin-left: auto; display: inline-flex; align-items: center; gap: 7px;
+      min-height: 48px; padding: 0 14px;
+      font-family: var(--font-ui); font-size: 12px; color: var(--text-3);
+      background: transparent; border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-pill); cursor: pointer;
+    }
+    .mch-rv-clear svg { width: 15px; height: 15px; }
+    .mch-rv-clear:hover { color: var(--err); border-color: var(--err); }
+    .mch-rv-rail {
+      display: flex; gap: 12px; list-style: none; margin: 0; padding: 0 0 10px;
+      overflow-x: auto; scroll-snap-type: x proximity;
+      scrollbar-width: thin;
+    }
+    .mch-rv-item { flex: none; width: 148px; scroll-snap-align: start; }
+    .mch-rv-link {
+      display: flex; flex-direction: column; gap: 7px;
+      padding: 8px; background: var(--bg-card);
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius);
+    }
+    .mch-rv-link:hover { border-color: var(--accent); }
+    .mch-rv-thumb {
+      display: block; aspect-ratio: 1 / 1; border-radius: var(--radius-sm);
+    }
+    .mch-rv-name {
+      font-family: var(--font-ui); font-size: 12.5px; line-height: 1.4; color: var(--text-2);
+      min-height: 2.8em;
+    }
+    .mch-rv-price { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text); }
+    .mch-rv-empty {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0;
+      font-size: 13.5px; color: var(--text-3);
+    }
+
+    /* ---- T373 Editorial band ---- */
+    .mch-ed {
+      display: grid; grid-template-columns: 1.05fr 1fr; gap: 0;
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-card); overflow: hidden;
+      background: var(--bg-card);
+    }
+    .mch-ed-media { position: relative; min-height: 360px; }
+    .mch-ed-tag {
+      position: absolute; left: 16px; bottom: 16px;
+      font-family: var(--font-ui); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: uppercase;
+      color: var(--text); background: var(--scrim);
+      border-radius: var(--radius-pill); padding: 7px 14px;
+    }
+    .mch-ed-body { padding: 34px 30px; display: flex; flex-direction: column; gap: 14px; justify-content: center; }
+    .mch-ed-eyebrow {
+      margin: 0; font-family: var(--font-eyebrow); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-transform);
+      color: var(--accent);
+    }
+    .mch-ed-h { margin: 0; font-size: clamp(24px, 3vw, 32px); color: var(--text); }
+    .mch-ed-p { margin: 0; font-size: 14.5px; line-height: 1.7; color: var(--text-2); }
+    .mch-ed-facts {
+      display: flex; flex-wrap: wrap; gap: 22px; list-style: none; margin: 4px 0; padding: 12px 0;
+      border-top: var(--line-weight) solid var(--border);
+      border-bottom: var(--line-weight) solid var(--border);
+    }
+    .mch-ed-facts li { display: flex; flex-direction: column; gap: 2px; }
+    .mch-ed-fact-n { font-family: var(--font-display); font-size: 20px; color: var(--text); }
+    .mch-ed-fact-l {
+      font-family: var(--font-ui); font-size: 11px;
+      letter-spacing: var(--eyebrow-tracking); text-transform: uppercase; color: var(--text-4);
+    }
+    .mch-ed-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    /* ---- responsive ---- */
+    @media (max-width: 900px) {
+      .mch-rsum { grid-template-columns: 1fr 1fr; }
+      .mch-rsum-cta { grid-column: 1 / -1; }
+      .mch-trust { grid-template-columns: 1fr; }
+      .mch-news { grid-template-columns: 1fr; }
+      .mch-news-art { min-height: 140px; order: -1; }
+      .mch-ed { grid-template-columns: 1fr; }
+      .mch-ed-media { min-height: 240px; }
+    }
+    @media (max-width: 620px) {
+      .mch-annbar-msg { text-align: left; font-size: 12.5px; }
+      .mch-promo { flex-wrap: wrap; padding-right: 22px; }
+      .mch-promo-x { top: 4px; right: 4px; }
+      .mch-rsum { grid-template-columns: 1fr; }
+      .mch-bis { grid-template-columns: 1fr; }
+      .mch-bis-media { max-width: 180px; }
+      .mch-rev-date { margin-left: 0; width: 100%; }
+      .mch-rev-head { flex-wrap: wrap; }
+      .mch-cd-clock { width: 100%; }
+      .mch-wr-readout { margin-left: 0; width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .mch-ugc-handle, .mch-ugc-shop, .mch-switch-track, .mch-switch-thumb { transition: none; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      'use strict';
+
+      function $(sel) { return document.querySelector(sel); }
+      function all(sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); }
+      function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+      /* ---- T360 Announcement bar ---- */
+      var annbar = $('#mch-annbar');
+      var annX = $('#mch-annbar-x');
+      var annReset = $('#mch-annbar-reset');
+      if (annbar && annX && annReset) {
+        annX.addEventListener('click', function () {
+          annbar.hidden = true;
+          annReset.hidden = false;
+          annReset.focus();
+        });
+        annReset.addEventListener('click', function () {
+          annbar.hidden = false;
+          annReset.hidden = true;
+          annX.focus();
+        });
+      }
+
+      /* ---- T361 Promo banner ---- */
+      var promo = $('#mch-promo');
+      var promoX = $('#mch-promo-x');
+      var promoReset = $('#mch-promo-reset');
+      if (promo && promoX && promoReset) {
+        promoX.addEventListener('click', function () {
+          promo.hidden = true;
+          promoReset.hidden = false;
+          promoReset.focus();
+        });
+        promoReset.addEventListener('click', function () {
+          promo.hidden = false;
+          promoReset.hidden = true;
+          promoX.focus();
+        });
+      }
+
+      /* ---- T362 Countdown offer strip ----
+         The end time is derived from a fixed offset applied at load,
+         so the demo never opens in an already expired state. */
+      var cdLive = $('#mch-cd-live');
+      var cdDone = $('#mch-cd-done');
+      var cdToggle = $('#mch-cd-toggle');
+      if (cdLive && cdDone) {
+        var CD_OFFSET = (2 * 24 + 6) * 3600000 + 45 * 60000 + 12000;
+        var cdEnd = Date.now() + CD_OFFSET;
+        var cdCells = {
+          d: cdLive.querySelector('[data-mch-cd="d"]'),
+          h: cdLive.querySelector('[data-mch-cd="h"]'),
+          m: cdLive.querySelector('[data-mch-cd="m"]'),
+          s: cdLive.querySelector('[data-mch-cd="s"]')
+        };
+        var cdTick = function () {
+          var left = cdEnd - Date.now();
+          if (left <= 0) {
+            cdLive.hidden = true;
+            cdDone.hidden = false;
+            if (cdToggle) { cdToggle.textContent = 'Restart the timer'; }
+            return;
+          }
+          cdLive.hidden = false;
+          cdDone.hidden = true;
+          if (cdToggle) { cdToggle.textContent = 'Preview the expired state'; }
+          var s = Math.floor(left / 1000);
+          if (cdCells.d) { cdCells.d.textContent = pad(Math.floor(s / 86400)); }
+          if (cdCells.h) { cdCells.h.textContent = pad(Math.floor(s / 3600) % 24); }
+          if (cdCells.m) { cdCells.m.textContent = pad(Math.floor(s / 60) % 60); }
+          if (cdCells.s) { cdCells.s.textContent = pad(s % 60); }
+        };
+        cdTick();
+        setInterval(cdTick, 1000);
+        if (cdToggle) {
+          cdToggle.addEventListener('click', function () {
+            cdEnd = cdDone.hidden ? Date.now() - 1000 : Date.now() + CD_OFFSET;
+            cdTick();
+          });
+        }
+      }
+
+      /* ---- T365 Helpful counters ---- */
+      all('.mch-help').forEach(function (btn) {
+        var n = btn.querySelector('.mch-help-n');
+        if (!n) { return; }
+        var base = parseInt(n.textContent, 10);
+        if (isNaN(base)) { base = 0; }
+        btn.addEventListener('click', function () {
+          var on = btn.getAttribute('aria-pressed') === 'true';
+          btn.setAttribute('aria-pressed', on ? 'false' : 'true');
+          n.textContent = String(on ? base : base + 1);
+        });
+      });
+
+      /* ---- T366 Write a review ---- */
+      var wr = $('#mch-wr');
+      var wrDone = $('#mch-wr-done');
+      var wrAgain = $('#mch-wr-again');
+      var readout = $('#mch-wr-readout');
+      var WORDS = { 1: 'Poor', 2: 'Not great', 3: 'Fine', 4: 'Good', 5: 'Excellent' };
+      all('input[name="mch-rating"]').forEach(function (radio) {
+        radio.addEventListener('change', function () {
+          if (readout) {
+            readout.textContent = radio.value + ' of 5: ' + WORDS[radio.value];
+          }
+        });
+      });
+
+      var wrFiles = $('#mch-wr-photos');
+      var wrList = $('#mch-wr-filelist');
+      if (wrFiles && wrList) {
+        wrFiles.addEventListener('change', function () {
+          wrList.textContent = '';
+          var files = wrFiles.files ? Array.prototype.slice.call(wrFiles.files, 0, 5) : [];
+          files.forEach(function (f) {
+            var li = document.createElement('li');
+            li.textContent = f.name;
+            wrList.appendChild(li);
+          });
+        });
+      }
+
+      if (wr && wrDone) {
+        wr.addEventListener('submit', function (e) {
+          e.preventDefault();
+          wr.hidden = true;
+          wrDone.hidden = false;
+          if (wrAgain) { wrAgain.focus(); }
+        });
+      }
+      if (wrAgain && wr && wrDone) {
+        wrAgain.addEventListener('click', function () {
+          wr.reset();
+          if (wrList) { wrList.textContent = ''; }
+          if (readout) { readout.textContent = 'Tab to the stars, then use the arrow keys.'; }
+          wrDone.hidden = true;
+          wr.hidden = false;
+        });
+      }
+
+      /* ---- T367 Photo lightbox ---- */
+      var lb = $('#mch-lb');
+      var lbMedia = $('#mch-lb-media');
+      var lbHandle = $('#mch-lb-handle');
+      var lbPlace = $('#mch-lb-place');
+      var lbCaption = $('#mch-lb-caption');
+      var lbX = $('#mch-lb-x');
+      if (lb && lbMedia) {
+        all('[data-mch-ugc]').forEach(function (tile) {
+          tile.addEventListener('click', function () {
+            if (lbHandle) { lbHandle.textContent = tile.getAttribute('data-handle') || ''; }
+            if (lbPlace) { lbPlace.textContent = tile.getAttribute('data-place') || ''; }
+            if (lbCaption) { lbCaption.textContent = tile.getAttribute('data-caption') || ''; }
+            lbMedia.className = 'mch-lb-media mch-w' + (tile.getAttribute('data-wash') || '1');
+            if (typeof lb.showModal === 'function') { lb.showModal(); }
+            else { lb.setAttribute('open', ''); }
+          });
+        });
+        if (lbX) {
+          lbX.addEventListener('click', function () {
+            if (typeof lb.close === 'function') { lb.close(); }
+            else { lb.removeAttribute('open'); }
+          });
+        }
+        /* Click the backdrop, which is the dialog element itself, to close */
+        lb.addEventListener('click', function (e) {
+          if (e.target === lb && typeof lb.close === 'function') { lb.close(); }
+        });
+      }
+
+      /* ---- T369 Gift options ---- */
+      var giftWrap = $('#mch-gift-wrap');
+      var giftTotal = $('#mch-gift-total');
+      if (giftWrap && giftTotal) {
+        var syncGift = function () {
+          giftTotal.textContent = giftWrap.checked
+            ? 'Gift wrapping added: $6.50 will appear as a line on your order.'
+            : 'No gift wrapping selected.';
+        };
+        giftWrap.addEventListener('change', syncGift);
+        syncGift();
+      }
+      var giftMsg = $('#mch-gift-msg');
+      var giftCount = $('#mch-gift-count');
+      if (giftMsg && giftCount) {
+        var syncCount = function () { giftCount.textContent = String(giftMsg.value.length); };
+        giftMsg.addEventListener('input', syncCount);
+        syncCount();
+      }
+
+      /* ---- T370 Back in stock ---- */
+      var bisForm = $('#mch-bis-form');
+      var bisDone = $('#mch-bis-done');
+      var bisShown = $('#mch-bis-shown');
+      var bisEmail = $('#mch-bis-email');
+      var bisReset = $('#mch-bis-reset');
+      if (bisForm && bisDone) {
+        bisForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (bisShown && bisEmail) {
+            bisShown.textContent = bisEmail.value.trim() || 'you';
+          }
+          bisForm.hidden = true;
+          bisDone.hidden = false;
+          if (bisReset) { bisReset.hidden = false; }
+        });
+      }
+      if (bisReset && bisForm && bisDone) {
+        bisReset.addEventListener('click', function () {
+          bisForm.reset();
+          bisDone.hidden = true;
+          bisForm.hidden = false;
+          bisReset.hidden = true;
+          if (bisEmail) { bisEmail.focus(); }
+        });
+      }
+
+      /* ---- T371 Newsletter with incentive ---- */
+      var newsForm = $('#mch-news-form');
+      var newsDone = $('#mch-news-done');
+      var newsReset = $('#mch-news-reset');
+      var newsCopy = $('#mch-news-copy');
+      var newsCode = $('#mch-news-code');
+      var newsStatus = $('#mch-news-status');
+      if (newsForm && newsDone) {
+        newsForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          newsForm.hidden = true;
+          newsDone.hidden = false;
+          if (newsReset) { newsReset.hidden = false; }
+          if (newsCopy) { newsCopy.focus(); }
+        });
+      }
+      if (newsReset && newsForm && newsDone) {
+        newsReset.addEventListener('click', function () {
+          newsForm.reset();
+          newsDone.hidden = true;
+          newsForm.hidden = false;
+          newsReset.hidden = true;
+          if (newsStatus) { newsStatus.textContent = ''; }
+        });
+      }
+      if (newsCopy && newsCode) {
+        newsCopy.addEventListener('click', function () {
+          var text = newsCode.textContent.trim();
+          var say = function (msg) { if (newsStatus) { newsStatus.textContent = msg; } };
+          var selectIt = function () {
+            try {
+              var range = document.createRange();
+              range.selectNodeContents(newsCode);
+              var sel = window.getSelection();
+              sel.removeAllRanges();
+              sel.addRange(range);
+              say('Code selected. Press Ctrl or Cmd plus C to copy.');
+            } catch (err) {
+              say('Copy the code above by hand: ' + text);
+            }
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function () {
+              say('Copied. Paste it in the cart at checkout.');
+            }, selectIt);
+          } else {
+            selectIt();
+          }
+        });
+      }
+
+      /* ---- T372 Recently viewed rail ---- */
+      var rvRail = $('#mch-rv-rail');
+      var rvEmpty = $('#mch-rv-empty');
+      var rvClear = $('#mch-rv-clear');
+      var rvRestore = $('#mch-rv-restore');
+      if (rvRail && rvEmpty && rvClear) {
+        rvClear.addEventListener('click', function () {
+          rvRail.hidden = true;
+          rvEmpty.hidden = false;
+          rvClear.hidden = true;
+          if (rvRestore) { rvRestore.focus(); }
+        });
+      }
+      if (rvRestore && rvRail && rvEmpty && rvClear) {
+        rvRestore.addEventListener('click', function () {
+          rvEmpty.hidden = true;
+          rvRail.hidden = false;
+          rvClear.hidden = false;
+          rvClear.focus();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

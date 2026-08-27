@@ -1,37 +1,320 @@
 /* ============================================================
-   Site Blocks — base.css
-   Design foundations extracted from the AstroAnimate clone
-   (src/styles/global.css + src/layouts/Layout.astro).
-   Values verified against the end-of-file minified override
-   bundle — the :root tokens below are NOT overridden there.
+   Site Blocks: base.css
+   Design foundations + the two-theme token layer.
+
+   THEMES
+   Every block in this library is token-driven, so the whole
+   library reskins from one attribute on <html>:
+
+     <html>                       -> Dark     (default, AstroAnimate)
+     <html data-theme="moonrite">  -> Moonrite (Moon Tint Kit)
+
+   assets/viewer.js sets that attribute from localStorage before
+   paint and renders the toolbar switch. With JavaScript off,
+   pages render in Dark.
+
+   ADDING A THEME
+   Copy the [data-theme="moonrite"] block, rename the attribute
+   value, and re-point every token in it. Never put a raw colour
+   in a page that is not one of these tokens, or that page will
+   only look right in one theme.
    ============================================================ */
 
-/* ---- 1. Web fonts (same families/weights as Layout.astro) ---- */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+/* ---- 1. Web fonts ----
+   Dark:     Bai Jamjuree / Inter / JetBrains Mono
+   Moonrite: Fraunces / Instrument Sans / JetBrains Mono (code only) */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 
-/* ---- 2. Design tokens (dark theme) ---- */
+/* ============================================================
+   2. THEME: DARK  (default)
+   Extracted from the AstroAnimate clone: near-black surfaces,
+   orange #ff7f1f accent, hard edges. Values verified against the
+   source's minified override bundle.
+   ============================================================ */
 :root {
+    /* Surfaces */
     --bg: #050505;
     --bg-black: #000000;
     --bg-2: #0a0a0a;
     --bg-3: #0b0d10;
     --bg-card: #060606;
 
+    /* Text */
     --text: #f9fafb;
     --text-2: #cbd5e1;
     --text-3: #9ca3af;
     --text-4: #7b828f; /* lifted from #6b7280 to clear WCAG AA 4.5:1 on dark bg */
 
+    /* Borders */
     --border: #1f2937;
     --border-2: #374151;
     --border-3: #4b5563;
 
-    /* Accent orange. The source hardcodes #ff7f1f (hover #e66a15,
-       deep #E85D04, light #ff9d52); token added for convenience. */
+    /* Accent. The source hardcodes #ff7f1f (hover #e66a15, deep
+       #E85D04, light #ff9d52); all four are tokenised here. */
     --accent: #ff7f1f;
+    --accent-hover: #e66a15;
+    --accent-deep: #e85d04;
+    --accent-light: #ff9d52;
+    /* The source design ran #f9fafb here, which is 2.42:1 on the orange and
+       fails AA on every primary CTA. Ink on orange is 7.8:1 and on
+       --accent-deep 5.7:1. This is the one place Dark departs from the
+       extraction: revert this single token to go back. */
+    --accent-ink: #0a0a0a;    /* text that sits ON an accent fill */
+    --accent-wash: #1a1206;   /* accent-tinted surface, subtle */
+    --accent-wash-2: #3a1e05; /* accent-tinted surface, stronger */
+    --accent-line: #ff7f1f55; /* accent at low alpha, for rules and glows */
+    --accent-faint: #ff7f1f1f;
+
+    /* Status. Used by badges, pills, toasts, log lines, charts. */
+    --ok:   #4ade80;  --ok-wash:   #11261b;  --ok-deep:   #10b981;
+    --warn: #fbbf24;  --warn-wash: #2a1505;  --warn-deep: #b8480a;
+    --err:  #f87171;  --err-wash:  #2a0f1e;  --err-deep:  #ef4444;
+    --info: #60a5fa;  --info-wash: #0a0f1a;  --info-deep: #3b82f6;
+    --status-ink: #050505;    /* text on a solid status fill */
+
+    /* Sale and discount. Not a status: a saving is neither an error nor a
+       success, and it must not compete with the primary CTA for attention. */
+    --sale: #f43f5e;  --sale-ink: #050505;  --sale-wash: #2a0f18;
+
+    /* The unfilled part of a progress, distribution or rating bar. Sits
+       between --bg-3 and --border: on Dark, --bg-3 is so close to the card
+       fill that an empty bar all but disappears. */
+    --track: #1a1d24;
+
+    /* Neutral, meaning-free pill. The status washes all carry a verdict, so a
+       points debit or an overflow count has nowhere safe to sit: --err on a
+       spend reads as a failure. */
+    --muted: #9ca3af;  --muted-wash: #14171c;
+
+    /* Text that is safe on an --accent-light fill. Near-black in both, because
+       --accent-light is bright orange in Dark and yellow in Moonrite. */
+    --accent-light-ink: #050505;
+
+    /* Status at low alpha, matching --accent-line / --accent-faint, for the
+       borders and tinted rules that a solid status colour is too loud for. */
+    --ok-line:   #4ade8055;  --ok-faint:   #4ade801f;
+    --warn-line: #fbbf2455;  --warn-faint: #fbbf241f;
+    --err-line:  #f8717155;  --err-faint:  #f871711f;
+    --info-line: #60a5fa55;  --info-faint: #60a5fa1f;
+
+    /* Placeholder washes, the gradient pairs used for product
+       thumbs, media posters and avatar tiles. */
+    --wash-1a: #1a1206;  --wash-1b: #3a1e05;
+    --wash-2a: #0a0f1a;  --wash-2b: #131a2a;
+    --wash-3a: #1a0a14;  --wash-3b: #2a0f1e;
+
+    /* Categorical hues. For charts, tag groups, legends and avatar
+       tints, where the colour carries identity rather than meaning.
+       Never use a status colour for this: green on a chart should
+       not read as "success". */
+    /* Star ratings. Their own token because a rating is neither brand
+       identity nor a status: navy stars read as a UI accent rather than a
+       score, and the brand yellow is too pale on a white ground. */
+    --rating: #ff7f1f;
+    --rating-empty: #4b5563;
+
+    --cat-1: #ff7f1f;
+    --cat-2: #60a5fa;
+    --cat-3: #a78bfa;
+    --cat-4: #f472b6;
+    --cat-5: #2dd4bf;
+
+    /* Type */
+    --font-display: 'Bai Jamjuree', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-eyebrow: 'JetBrains Mono', monospace;
+    --font-ui: 'JetBrains Mono', monospace;  /* buttons, meta, labels */
+
+    --heading-weight: 600;
+    --heading-tracking: normal;
+    --heading-transform: none;
+    --eyebrow-tracking: 0.08em;
+    --eyebrow-transform: uppercase;
+    --button-weight: 700;
+    --button-tracking: normal;
+    --button-transform: none;
+
+    /* Shape. Dark is a hard-edged design: everything is square
+       except pills. Moonrite softens all four. */
+    --radius-sm: 3px;
+    --radius: 0px;
+    --radius-card: 0px;
+    --radius-pill: 999px;
+    --line-weight: 1px;
+
+    --shadow-card: none;
+    --shadow-raised: none;
+    /* Overlays are the one thing that must lift off the page behind them, so
+       this stays real even in a flat theme. Cards keep --shadow-card: none. */
+    --shadow-overlay: 0 24px 60px #000000cc;
+
+    /* Scrim behind a dialog or a slide-over. Deliberately its own token
+       rather than a mix of the page ground, which is white in a light
+       theme and would veil the content rather than dim it. */
+    --scrim: #000000a6;
+
+    /* Disabled controls. An opacity drop washes out a bordered card, so
+       disabled state gets its own surface, ink and border. */
+    --disabled-surface: #0b0d10;
+    --disabled-ink: #5b616b;
+    --disabled-border: #1f2937;
+
+    /* Button radius. Declared per theme so a page reads a token rather than
+       copying base.css: square in Dark, pill in Moonrite. */
+    --radius-btn: 0px;
+
+    /* Focus ring. One token so every block rings identically. It resolves
+       against whichever --accent is in force, so it needs stating once. */
+    --focus-ring: 2px solid var(--accent);
+    --focus-offset: 2px;
+
+    /* Product swatches. These depict an actual product colour, so unlike
+       every other colour here they do NOT change with the theme: "Sage" is
+       sage in both. Use these for colour facets and variant swatches, never
+       --cat-*, which is chart and legend identity. */
+    --swatch-cream:    #e8e0d2;
+    --swatch-clay:     #b87159;
+    --swatch-sage:     #8a9a7b;
+    --swatch-charcoal: #3d4046;
+    --swatch-navy:     #2f3d56;
+    --swatch-rust:     #a4502c;
+    --swatch-ochre:    #cf9b4e;
+    --swatch-blush:    #dbb2ab;
+    --swatch-plum:     #6c4664;
+    --swatch-slate:    #5a6570;
+    --swatch-ironbark: #4a4540;
+    --swatch-saltbush: #9aa88f;
+
+    /* Grounds for UI that DEPICTS a light or a dark theme, such as a theme
+       preview card. Fixed in both themes: a "light mode" preview that follows
+       the active theme inverts and stops demonstrating anything. */
+    --preview-light: #f4f4f5;
+    --preview-light-ink: #18181b;
+    --preview-dark: #131316;
+    --preview-dark-ink: #f4f4f5;
 
     /* Horizontal page gutter used throughout the source components */
     --side-padding: 220px;
+}
+
+/* ============================================================
+   3. THEME: MOONRITE  (Moon Tint Kit, storefront direction H)
+   Ported from Moonrite/storefront/src/styles/tokens.css
+   [data-brand="tintkit"]. Paper-white ground, ink black text,
+   navy #2A344E as the one signature colour, cream #DED6C9 and
+   light blue #C6CDD8 as the tints, yellow #E1AC5A as the single
+   accent band. Soft corners, pill buttons, Fraunces over
+   Instrument Sans.
+
+   Contrast, verified for this theme rather than inherited:
+   navy on white 12.0:1, black on white 21:1, black on cream
+   14.6:1, black on light blue 13.0:1, black on yellow 10.2:1,
+   cream on navy 8.3:1, --text-3 #4a4a4a on white 9.0:1,
+   --text-4 #5f5f5f on white 6.5:1 and on cream #ded6c9 4.6:1.
+   ============================================================ */
+:root[data-theme="moonrite"] {
+    /* Surfaces. The kit's only warm light is cream #DED6C9, too
+       deep to carry a whole page, so the ground stays paper white
+       and the cream does the raising. --bg-2 is cream at 35%. */
+    --bg: #ffffff;
+    --bg-black: #ffffff;
+    --bg-2: #f6f2ec;
+    --bg-3: #ded6c9;
+    --bg-card: #ffffff;
+
+    --text: #000000;
+    --text-2: #1d2437;
+    --text-3: #4a4a4a;
+    --text-4: #565656;
+
+    --border: #c6cdd8;
+    --border-2: #9aa4b8;
+    --border-3: #2a344e;
+
+    /* Navy is the signature colour, so navy is the accent. Yellow
+       is the one bright band and reads as --accent-light. */
+    --accent: #2a344e;
+    --accent-hover: #000000;
+    --accent-deep: #1d2437;
+    --accent-light: #e1ac5a;
+    --accent-ink: #ded6c9;    /* cream on navy, 8.3:1 */
+    --accent-wash: #eceef2;
+    --accent-wash-2: #c6cdd8;
+    --accent-line: #2a344e55;
+    --accent-faint: #2a344e1f;
+
+    /* Status, darkened for AA on a white ground. */
+    /* Tuned to clear 4.5:1 on the cream --bg-3 as well as on white. A value
+       that only clears white erodes to about 3.5:1 once it sits in an inset
+       well, which is exactly where status text tends to land. */
+    --ok:   #0b5626;  --ok-wash:   #e8f5ee;  --ok-deep:   #084019;
+    --warn: #7a4a05;  --warn-wash: #fdf3e2;  --warn-deep: #5c3804;
+    --err:  #9f1717;  --err-wash:  #fdeaea;  --err-deep:  #7d1212;
+    --info: #1a3fa8;  --info-wash: #e8eefc;  --info-deep: #143186;
+    --status-ink: #ffffff;
+
+    --sale: #9f1239;  --sale-ink: #ffffff;  --sale-wash: #fdeaef;
+    --track: #e9e5dd;
+    --muted: #4a4a4a;  --muted-wash: #f0ede8;
+    --accent-light-ink: #000000;
+
+    --ok-line:   #0b562655;  --ok-faint:   #0b56261f;
+    --warn-line: #7a4a0555;  --warn-faint: #7a4a051f;
+    --err-line:  #9f171755;  --err-faint:  #9f17171f;
+    --info-line: #1a3fa855;  --info-faint: #1a3fa81f;
+
+    --wash-1a: #ded6c9;  --wash-1b: #e1ac5a;
+    --wash-2a: #c6cdd8;  --wash-2b: #2a344e;
+    --wash-3a: #f6f2ec;  --wash-3b: #c6cdd8;
+
+    /* Categorical hues: navy, blue, violet, magenta, teal. Deliberately
+       clear of the green and red that carry meaning, so a chart series is
+       never mistaken for a success or an error. */
+    --rating: #6e5109;
+    --rating-empty: #9aa4b8;
+
+    --cat-1: #2a344e;
+    --cat-2: #1a3fa8;
+    --cat-3: #5b21b6;
+    --cat-4: #86255f;
+    --cat-5: #0b5952;
+
+    --font-display: Fraunces, Georgia, 'Times New Roman', serif;
+    --font-body: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-eyebrow: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-ui: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+
+    --heading-weight: 400;
+    --heading-tracking: -0.01em;
+    --heading-transform: none;
+    --eyebrow-tracking: 0.1em;
+    --eyebrow-transform: uppercase;
+    --button-weight: 500;
+    --button-tracking: 0.05em;
+    --button-transform: uppercase;
+
+    --radius-sm: 8px;
+    --radius: 10px;
+    --radius-card: 16px;
+    --radius-pill: 999px;
+    --line-weight: 1.5px;
+
+    --shadow-card: none;
+    --shadow-raised: none;
+    --shadow-overlay: 0 24px 60px #2a344e33;
+
+    /* Navy at 65%, so the scrim dims toward the signature colour rather
+       than going muddy grey over a warm ground. */
+    --scrim: #2a344ea6;
+
+    --disabled-surface: #f6f2ec;
+    --disabled-ink: #8a8a8a;
+    --disabled-border: #c6cdd8;
+
+    --radius-btn: var(--radius-pill);
 }
 
 @media (max-width: 1400px) { :root { --side-padding: 120px; } }
@@ -40,7 +323,7 @@
 @media (max-width: 768px)  { :root { --side-padding: 24px; } }
 @media (max-width: 480px)  { :root { --side-padding: 16px; } }
 
-/* ---- 3. Reset + base element styles ---- */
+/* ---- 4. Reset + base element styles ---- */
 *,
 *::before,
 *::after {
@@ -62,14 +345,16 @@ body {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-weight: var(--heading-weight);
+    letter-spacing: var(--heading-tracking);
+    text-transform: var(--heading-transform);
     color: var(--text);
     margin: 0 0 16px;
 }
@@ -80,37 +365,44 @@ a {
 }
 
 code {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.88em;
     background: var(--bg-3);
     border: 1px solid var(--border);
     padding: 2px 6px;
-    border-radius: 3px;
-    color: #ff9d52;
+    border-radius: var(--radius-sm);
+    color: var(--accent-light);
 }
 
-/* ---- 4. Shared utility classes ---- */
+/* Moonrite's --accent-light is the yellow band colour, which does
+   not carry inline text on white. Inline code takes navy instead. */
+:root[data-theme="moonrite"] code { color: var(--accent); }
 
-/* Eyebrow label — mono, uppercase, accent orange (styleguide.astro) */
+/* ---- 5. Shared utility classes ---- */
+
+/* Eyebrow label: tracked, uppercase, accent (styleguide.astro) */
 .eyebrow {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-eyebrow);
     font-size: 13px;
-    letter-spacing: 0.08em;
-    color: #ff7f1f;
-    text-transform: uppercase;
+    letter-spacing: var(--eyebrow-tracking);
+    color: var(--accent);
+    text-transform: var(--eyebrow-transform);
     margin: 0 0 16px;
 }
 
-/* Buttons (global.css; hex values match the minified override bundle) */
+/* Buttons (global.css; the dark hex values match the minified bundle) */
 .btn-primary {
-    background: #ff7f1f;
+    background: var(--accent);
     border: none;
     padding: 0 28px;
     height: 54px;
-    color: var(--text);
-    font-weight: 700;
-    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-ink);
+    font-weight: var(--button-weight);
+    letter-spacing: var(--button-tracking);
+    text-transform: var(--button-transform);
+    font-family: var(--font-ui);
     font-size: 16px;
+    border-radius: var(--radius-btn);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -119,18 +411,21 @@ code {
 }
 
 .btn-primary:hover {
-    background: #e66a15;
+    background: var(--accent-hover);
 }
 
 .btn-secondary {
     background: transparent;
-    border: 1px solid var(--text);
+    border: var(--line-weight) solid var(--text);
     padding: 0 28px;
     height: 54px;
     color: var(--text);
     font-weight: 400;
-    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: var(--button-tracking);
+    text-transform: var(--button-transform);
+    font-family: var(--font-ui);
     font-size: 16px;
+    border-radius: var(--radius-btn);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -145,29 +440,36 @@ code {
 }
 
 .btn-primary-cta {
-    background: #ff7f1f;
-    border: 1px solid #ff7f1f;
-    color: var(--text);
+    background: var(--accent);
+    border: var(--line-weight) solid var(--accent);
+    color: var(--accent-ink);
     padding: 18px 32px;
     font-size: 16px;
-    font-weight: 700;
-    font-family: 'JetBrains Mono', monospace;
+    font-weight: var(--button-weight);
+    letter-spacing: var(--button-tracking);
+    text-transform: var(--button-transform);
+    font-family: var(--font-ui);
+    border-radius: var(--radius-btn);
     cursor: pointer;
     min-width: 0;
     text-decoration: none;
 }
 
 .btn-primary-cta:hover {
-    background: #e85d04;
+    background: var(--accent-deep);
+    border-color: var(--accent-deep);
 }
 
 .btn-secondary-cta {
     background: var(--bg-3);
-    border: 1px solid var(--border);
+    border: var(--line-weight) solid var(--border);
     color: var(--text-3);
     padding: 18px 32px;
     font-size: 16px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-ui);
+    letter-spacing: var(--button-tracking);
+    text-transform: var(--button-transform);
+    border-radius: var(--radius-btn);
     display: flex;
     align-items: center;
     gap: 12px;
@@ -181,7 +483,7 @@ code {
     color: var(--text);
 }
 
-/* ---- 5. Starfield background effect (from the minified bundle) ----
+/* ---- 6. Starfield background effect (from the minified bundle) ----
    Usage: <div class="star-field" aria-hidden="true"></div> inside a
    position:relative container. Optional .hero-stars / .footer-stars
    modifiers fade the field toward the bottom / top edge. */
@@ -232,3 +534,7 @@ code {
     0%  { transform: translateZ(0); }
     to  { transform: translate3d(8px, 6px, 0); }
 }
+
+/* Moonrite is a paper-white ground, and a field of pale stars does
+   not read on it. The effect is a Dark-theme trait. */
+:root[data-theme="moonrite"] .star-field { display: none; }

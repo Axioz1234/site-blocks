@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Animation — Site Blocks</title>
+  <title>Animation &middot; Site Blocks</title>
   <link rel="stylesheet" href="../assets/base.css">
   <link rel="stylesheet" href="../assets/viewer.css">
+  <script src="../assets/viewer.js"></script>
 </head>
-<body>
+<body data-page-set="core">
   <header class="tb-header">
     <a class="tb-back" href="../index.html">&larr; Site Blocks index</a>
     <h1>Animation <span class="tb-range">T100&ndash;T106</span></h1>
-    <p class="tb-sub">Seven motion patterns — CSS-first where possible, with JavaScript added only where it earns its place. Each respects reduced-motion and degrades cleanly without script.</p>
+    <p class="tb-sub">Seven motion patterns, CSS-first where possible, with JavaScript added only where it earns its place. Each respects reduced-motion and degrades cleanly without script.</p>
   </header>
   <main class="tb-main">
 
@@ -20,30 +21,30 @@
         <span class="tb-tid">T100</span>
         <div>
           <h2>Bento grid</h2>
-          <p>An asymmetric mosaic of feature tiles with varying column and row spans, each carrying a subtle gradient and a lift on hover. Pure CSS — no JavaScript.</p>
+          <p>An asymmetric mosaic of feature tiles with varying column and row spans, each carrying a subtle gradient and a lift on hover. Pure CSS, no JavaScript.</p>
         </div>
       </header>
       <div class="tb-demo">
         <div class="sgx-preview">
           <span class="sgx-preview-tag">CSS ONLY</span>
           <div class="ani-bento">
-            <div class="ani-tile ani-t-a" style="--g:linear-gradient(135deg,#1a1206,#2a1505)">
+            <div class="ani-tile ani-t-a" style="--g:linear-gradient(135deg,var(--wash-1a),var(--warn-wash))">
               <span class="ani-tile-k">CORE</span>
               <span class="ani-tile-l">CSS-first engine</span>
             </div>
-            <div class="ani-tile ani-t-b" style="--g:linear-gradient(135deg,#0a0f1a,#131a2a)">
+            <div class="ani-tile ani-t-b" style="--g:linear-gradient(135deg,var(--wash-2a),var(--wash-2b))">
               <span class="ani-tile-k">ISLANDS</span>
               <span class="ani-tile-l">Hydration-aware</span>
             </div>
-            <div class="ani-tile ani-t-c" style="--g:linear-gradient(135deg,#0b1410,#11261b)">
+            <div class="ani-tile ani-t-c" style="--g:linear-gradient(135deg,var(--bg-3),var(--ok-wash))">
               <span class="ani-tile-k">A11Y</span>
               <span class="ani-tile-l">Reduced-motion safe</span>
             </div>
-            <div class="ani-tile ani-t-d" style="--g:linear-gradient(135deg,#1a0a14,#2a0f1e)">
+            <div class="ani-tile ani-t-d" style="--g:linear-gradient(135deg,var(--wash-3a),var(--wash-3b))">
               <span class="ani-tile-k">TRANSITIONS</span>
               <span class="ani-tile-l">View Transitions ready</span>
             </div>
-            <div class="ani-tile ani-t-e" style="--g:linear-gradient(135deg,#160a0a,#2a1305)">
+            <div class="ani-tile ani-t-e" style="--g:linear-gradient(135deg,var(--err-wash),var(--warn-wash))">
               <span class="ani-tile-k">SIZE</span>
               <span class="ani-tile-l">~5KB, tree-shakable</span>
             </div>
@@ -180,7 +181,7 @@
               <div class="ani-story-step on" data-ani-step="0">
                 <span class="ani-step-n">01</span>
                 <h4>Install the core</h4>
-                <p>Add @astroanimate/core — zero runtime JS ships until you opt in to an engine.</p>
+                <p>Add @astroanimate/core. Zero runtime JS ships until you opt in to an engine.</p>
               </div>
               <div class="ani-story-step" data-ani-step="1">
                 <span class="ani-step-n">02</span>
@@ -236,7 +237,7 @@
         <span class="tb-tid">T106</span>
         <div>
           <h2>Hover-reveal work list</h2>
-          <p>A list of large project rows. Hovering a row scales and colours it, and floats a gradient thumbnail that follows the cursor. Without JavaScript the rows still highlight — the thumbnail simply stays hidden.</p>
+          <p>A list of large project rows. Hovering a row scales and colours it, and floats a gradient thumbnail that follows the cursor. Without JavaScript the rows still highlight. The thumbnail simply stays hidden.</p>
         </div>
       </header>
       <div class="tb-demo">
@@ -244,19 +245,19 @@
           <span class="sgx-preview-tag">CSS + JS</span>
           <div class="ani-work" id="ani-work">
             <ul class="ani-work-list">
-              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,#1a1206,#3a1e05)">
+              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,var(--wash-1a),var(--wash-1b))">
                 <span class="ani-work-name">Nova Portfolio</span>
                 <span class="ani-work-tag">Hero reveal</span>
               </li>
-              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,#0a0f1a,#131a2a)">
+              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,var(--wash-2a),var(--wash-2b))">
                 <span class="ani-work-name">Driftwave SaaS</span>
                 <span class="ani-work-tag">Scroll fade</span>
               </li>
-              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,#1a0a14,#2a0f1e)">
+              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,var(--wash-3a),var(--wash-3b))">
                 <span class="ani-work-name">Ember Docs</span>
                 <span class="ani-work-tag">Typewriter</span>
               </li>
-              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,#0b1410,#11261b)">
+              <li class="ani-work-row" data-ani-grad="linear-gradient(135deg,var(--bg-3),var(--ok-wash))">
                 <span class="ani-work-name">Verdant Store</span>
                 <span class="ani-work-tag">Count up</span>
               </li>
@@ -270,19 +271,19 @@
   </main>
   <style>
     /* ===== WRAPPER (verbatim per spec) ===== */
-    .sgx-section { padding: 64px var(--side-padding); border-bottom: 1px solid var(--border-2); background: var(--bg-2); }
-    .sgx-eyebrow { font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; color:#ff7f1f; text-transform:uppercase; margin:0 0 16px; }
-    .sgx-h2 { font-family:'Bai Jamjuree',sans-serif; font-size:clamp(26px,3.5vw,38px); font-weight:600; color:var(--text); margin:0 0 14px; }
-    .sgx-desc { font-family:'Inter',sans-serif; font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 36px; max-width:64ch; }
-    .sgx-block { padding:32px 0; border-top:1px solid var(--border); }
+    .sgx-section { padding: 64px var(--side-padding); border-bottom: var(--line-weight) solid var(--border-2); background: var(--bg-2); }
+    .sgx-eyebrow { font-family:var(--font-eyebrow); font-size:13px; letter-spacing:.08em; color:var(--accent); text-transform:uppercase; margin:0 0 16px; }
+    .sgx-h2 { font-family:var(--font-display); font-size:clamp(26px,3.5vw,38px); font-weight:600; color:var(--text); margin:0 0 14px; }
+    .sgx-desc { font-family:var(--font-body); font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 36px; max-width:64ch; }
+    .sgx-block { padding:32px 0; border-top:var(--line-weight) solid var(--border); }
     .sgx-block:first-of-type { border-top:none; padding-top:8px; }
     .sgx-block-head { display:flex; gap:16px; align-items:flex-start; margin-bottom:18px; }
-    .sgx-num { font-family:'JetBrains Mono',monospace; font-size:13px; color:#ff7f1f; flex-shrink:0; padding-top:3px; }
+    .sgx-num { font-family:var(--font-ui); font-size:13px; color:var(--accent); flex-shrink:0; padding-top:3px; }
     .sgx-meta { flex:1; min-width:0; }
-    .sgx-meta h3 { font-family:'Bai Jamjuree',sans-serif; font-size:19px; font-weight:600; color:var(--text); margin:0 0 6px; }
-    .sgx-meta p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:var(--text-3); margin:0; max-width:72ch; }
-    .sgx-preview { position:relative; border:1px solid var(--border); border-radius:4px; background:var(--bg-card); padding:30px 24px 24px; overflow:hidden; }
-    .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:var(--border-3); }
+    .sgx-meta h3 { font-family:var(--font-display); font-size:19px; font-weight:600; color:var(--text); margin:0 0 6px; }
+    .sgx-meta p { font-family:var(--font-body); font-size:14px; line-height:1.55; color:var(--text-3); margin:0; max-width:72ch; }
+    .sgx-preview { position:relative; border:var(--line-weight) solid var(--border); border-radius:var(--radius-card); background:var(--bg-card); padding:30px 24px 24px; overflow:hidden; }
+    .sgx-preview-tag { position:absolute; top:8px; right:10px; font-family:var(--font-eyebrow); font-size:9px; letter-spacing:.1em; color:var(--border-3); }
 
     /* ===== 01 BENTO GRID ===== */
     .ani-bento {
@@ -293,8 +294,8 @@
     }
     .ani-tile {
       position: relative;
-      border: 1px solid var(--border);
-      border-radius: 4px;
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
       background: var(--g), var(--bg);
       padding: 14px;
       display: flex;
@@ -308,12 +309,12 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(120% 120% at 80% 0%, rgba(255, 127, 31, 0.10), transparent 60%);
+      background: radial-gradient(120% 120% at 80% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 60%);
       pointer-events: none;
     }
-    .ani-tile:hover { border-color: #ff7f1f; transform: translateY(-4px); }
-    .ani-tile-k { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #ff7f1f; position: relative; z-index: 1; }
-    .ani-tile-l { font-family: 'Bai Jamjuree', sans-serif; font-size: 14px; font-weight: 600; color: var(--text); position: relative; z-index: 1; }
+    .ani-tile:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .ani-tile-k { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 0.1em; color: var(--accent); position: relative; z-index: 1; }
+    .ani-tile-l { font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--text); position: relative; z-index: 1; }
     .ani-t-a { grid-column: span 2; grid-row: span 2; }
     .ani-t-b { grid-column: span 2; }
     .ani-t-c { grid-column: span 1; grid-row: span 2; }
@@ -333,12 +334,12 @@
       width: max-content;
     }
     .ani-chip {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: var(--font-ui);
       font-size: 12px;
       letter-spacing: 0.04em;
       color: var(--text-2);
-      border: 1px solid var(--border-2);
-      border-radius: 999px;
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-pill);
       padding: 8px 16px;
       white-space: nowrap;
       background: var(--bg);
@@ -354,7 +355,7 @@
 
     /* ===== 03 STATEMENT / WORD REVEAL ===== */
     .ani-statement {
-      font-family: 'Bai Jamjuree', sans-serif;
+      font-family: var(--font-display);
       font-size: clamp(24px, 4vw, 40px);
       font-weight: 600;
       line-height: 1.2;
@@ -377,17 +378,17 @@
       }
     }
     .ani-replay {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: var(--font-ui);
       font-size: 12px;
-      color: #ff7f1f;
+      color: var(--accent);
       background: none;
-      border: 1px solid var(--border-2);
-      border-radius: 3px;
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-sm);
       padding: 8px 14px;
       cursor: pointer;
       transition: border-color 0.2s ease;
     }
-    .ani-replay:hover { border-color: #ff7f1f; }
+    .ani-replay:hover { border-color: var(--accent); }
 
     /* ===== 04 STAT COUNTERS ===== */
     .ani-stats {
@@ -395,22 +396,22 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 4px;
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
       overflow: hidden;
     }
     .ani-stat { background: var(--bg); padding: 24px 18px; text-align: center; }
     .ani-stat-num {
       display: block;
-      font-family: 'Bai Jamjuree', sans-serif;
+      font-family: var(--font-display);
       font-size: clamp(30px, 5vw, 46px);
       font-weight: 600;
-      color: #ff7f1f;
+      color: var(--accent);
       line-height: 1;
       margin-bottom: 10px;
       font-variant-numeric: tabular-nums;
     }
-    .ani-stat-label { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-3); }
+    .ani-stat-label { font-family: var(--font-body); font-size: 13px; color: var(--text-3); }
 
     /* ===== 05 STICKY SCROLL-STORY ===== */
     .ani-story {
@@ -424,13 +425,13 @@
       scrollbar-color: var(--border-2) transparent;
     }
     .ani-story::-webkit-scrollbar { width: 8px; }
-    .ani-story::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 4px; }
+    .ani-story::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: var(--radius-sm); }
     .ani-story-sticky { position: sticky; top: 0; align-self: start; height: 0; }
     .ani-story-card {
       position: relative;
       height: 220px;
-      border: 1px solid var(--border);
-      border-radius: 4px;
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
       background: var(--bg-3);
       overflow: hidden;
     }
@@ -445,11 +446,11 @@
       opacity: 0;
       transform: scale(1.04);
       transition: opacity 0.45s ease, transform 0.45s ease;
-      background: radial-gradient(120% 120% at 50% 0%, rgba(255, 127, 31, 0.12), transparent 60%), var(--bg);
+      background: radial-gradient(120% 120% at 50% 0%, var(--accent-faint), transparent 60%), var(--bg);
     }
     .ani-story-visual.on { opacity: 1; transform: none; }
-    .ani-visual-n { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ff7f1f; }
-    .ani-visual-t { font-family: 'Bai Jamjuree', sans-serif; font-size: 20px; font-weight: 600; color: var(--text); }
+    .ani-visual-n { font-family: var(--font-ui); font-size: 13px; color: var(--accent); }
+    .ani-visual-t { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text); }
     .ani-story-steps { display: flex; flex-direction: column; }
     .ani-story-step {
       min-height: 220px;
@@ -461,35 +462,35 @@
       opacity: 0.4;
       transition: opacity 0.3s ease, border-color 0.3s ease;
     }
-    .ani-story-step.on { opacity: 1; border-left-color: #ff7f1f; }
-    .ani-step-n { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #ff7f1f; }
-    .ani-story-step h4 { font-family: 'Bai Jamjuree', sans-serif; font-size: 18px; font-weight: 600; color: var(--text); margin: 8px 0 8px; }
-    .ani-story-step p { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0; }
+    .ani-story-step.on { opacity: 1; border-left-color: var(--accent); }
+    .ani-step-n { font-family: var(--font-ui); font-size: 12px; color: var(--accent); }
+    .ani-story-step h4 { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--text); margin: 8px 0 8px; }
+    .ani-story-step p { font-family: var(--font-body); font-size: 14px; line-height: 1.6; color: var(--text-3); margin: 0; }
 
     /* ===== 06 BEFORE / AFTER SLIDER ===== */
     .ani-ba {
       position: relative;
       height: 200px;
-      border: 1px solid var(--border);
-      border-radius: 4px;
+      border: var(--line-weight) solid var(--border);
+      border-radius: var(--radius-card);
       overflow: hidden;
       --pos: calc(var(--ani-ba) * 1%);
     }
     .ani-ba-panel { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
-    .ani-ba-after { background: radial-gradient(130% 130% at 80% 20%, rgba(255, 127, 31, 0.25), transparent 55%), linear-gradient(135deg, #1a1206, #2a1505); }
+    .ani-ba-after { background: radial-gradient(130% 130% at 80% 20%, color-mix(in srgb, var(--accent) 25%, transparent), transparent 55%), linear-gradient(135deg, var(--wash-1a), var(--warn-wash)); }
     .ani-ba-before {
       background: linear-gradient(135deg, var(--bg-3), var(--bg-3));
       clip-path: inset(0 calc(100% - var(--pos)) 0 0);
     }
     .ani-ba-tag {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: var(--font-eyebrow);
       font-size: 12px;
       letter-spacing: 0.12em;
       color: var(--text);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 999px;
+      border: var(--line-weight) solid color-mix(in srgb, var(--text) 20%, transparent);
+      border-radius: var(--radius-pill);
       padding: 6px 14px;
-      background: rgba(0, 0, 0, 0.35);
+      background: var(--scrim);
     }
     .ani-ba-divider {
       position: absolute;
@@ -497,7 +498,7 @@
       bottom: 0;
       left: var(--pos);
       width: 2px;
-      background: #ff7f1f;
+      background: var(--accent);
       transform: translateX(-1px);
       pointer-events: none;
     }
@@ -509,7 +510,7 @@
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background: #ff7f1f;
+      background: var(--accent);
       color: var(--bg);
       font-size: 13px;
       display: flex;
@@ -535,30 +536,30 @@
       justify-content: space-between;
       gap: 16px;
       padding: 16px 6px;
-      border-top: 1px solid var(--border);
+      border-top: var(--line-weight) solid var(--border);
       cursor: pointer;
       transition: padding-left 0.2s ease, color 0.2s ease;
     }
     .ani-work-row:first-child { border-top: none; }
     .ani-work-name {
-      font-family: 'Bai Jamjuree', sans-serif;
+      font-family: var(--font-display);
       font-size: clamp(20px, 3.5vw, 30px);
       font-weight: 600;
       color: var(--text-4);
       transition: color 0.2s ease;
     }
-    .ani-work-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: var(--border-3); transition: color 0.2s ease; }
+    .ani-work-tag { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.06em; color: var(--border-3); transition: color 0.2s ease; }
     .ani-work-row:hover { padding-left: 16px; }
     .ani-work-row:hover .ani-work-name { color: var(--text); }
-    .ani-work-row:hover .ani-work-tag { color: #ff7f1f; }
+    .ani-work-row:hover .ani-work-tag { color: var(--accent); }
     .ani-work-thumb {
       position: absolute;
       top: 0;
       left: 0;
       width: 150px;
       height: 96px;
-      border: 1px solid var(--border-2);
-      border-radius: 4px;
+      border: var(--line-weight) solid var(--border-2);
+      border-radius: var(--radius-card);
       transform: translate(-50%, -50%) scale(0.85);
       opacity: 0;
       pointer-events: none;
@@ -587,7 +588,7 @@
     (function () {
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      /* T102 — Word reveal replay */
+      /* T102: Word reveal replay */
       const statement = document.getElementById('ani-statement');
       const replay = document.getElementById('ani-replay');
       if (statement && replay) {
@@ -599,7 +600,7 @@
         });
       }
 
-      /* T103 — Stat counters (count up once in view) */
+      /* T103: Stat counters (count up once in view) */
       const statsWrap = document.getElementById('ani-stats');
       if (statsWrap) {
         const nums = Array.prototype.slice.call(statsWrap.querySelectorAll('.ani-stat-num'));
@@ -633,7 +634,7 @@
         }
       }
 
-      /* T104 — Sticky scroll-story spy */
+      /* T104: Sticky scroll-story spy */
       const story = document.getElementById('ani-story');
       if (story && 'IntersectionObserver' in window) {
         const stepEls = Array.prototype.slice.call(story.querySelectorAll('.ani-story-step'));
@@ -654,7 +655,7 @@
         stepEls.forEach(function (s) { io.observe(s); });
       }
 
-      /* T105 — Before/after slider */
+      /* T105: Before/after slider */
       const ba = document.getElementById('ani-ba');
       const baRange = document.getElementById('ani-ba-range');
       if (ba && baRange) {
@@ -663,7 +664,7 @@
         sync();
       }
 
-      /* T106 — Hover-reveal work list */
+      /* T106: Hover-reveal work list */
       const work = document.getElementById('ani-work');
       const thumb = document.getElementById('ani-work-thumb');
       if (work && thumb && !reduce) {

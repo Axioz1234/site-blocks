@@ -1,23 +1,65 @@
 [
-  { "id": "T010", "name": "Buttons", "category": "Elements",
-    "file": "pages/elements.html", "anchor": "#T010",
-    "description": "Primary (orange fill), secondary (outline), and the nav install pill." },
-  { "id": "T011", "name": "Eyebrow label", "category": "Elements",
-    "file": "pages/elements.html", "anchor": "#T011",
-    "description": "Monospace, uppercase, orange section label prefixed with //." },
-  { "id": "T012", "name": "Badges & tags", "category": "Elements",
-    "file": "pages/elements.html", "anchor": "#T012",
-    "description": "NEW badge, rounded pill tag chips, and the bordered numbered index box." },
-  { "id": "T013", "name": "Status pills", "category": "Elements",
-    "file": "pages/elements.html", "anchor": "#T013",
-    "description": "Colour-coded state pills (Added, Changed, Fixed, Shipped, In Progress) for changelog and roadmap." },
-  { "id": "T014", "name": "Status pulse", "category": "Elements",
-    "file": "pages/elements.html", "anchor": "#T014",
-    "description": "// SYSTEM ONLINE label with a pulsing green indicator dot." },
-  { "id": "T015", "name": "Accordion", "category": "Elements",
-    "file": "pages/elements.html", "anchor": "#T015",
-    "description": "Native details/summary disclosure with an animated +/- marker, as used on the FAQ." },
-  { "id": "T016", "name": "Card", "category": "Elements",
-    "file": "pages/elements.html", "anchor": "#T016",
-    "description": "Base card surface: hairline border, near-black fill, orange border and lift on hover." }
+  {
+    "id": "T010",
+    "name": "Buttons",
+    "category": "Elements",
+    "set": "core",
+    "file": "pages/elements.html",
+    "anchor": "#T010",
+    "description": "Primary (accent fill), secondary (outline), and the nav install pill."
+  },
+  {
+    "id": "T011",
+    "name": "Eyebrow label",
+    "category": "Elements",
+    "set": "core",
+    "file": "pages/elements.html",
+    "anchor": "#T011",
+    "description": "Tracked, uppercase, accent-coloured section label prefixed with //."
+  },
+  {
+    "id": "T012",
+    "name": "Badges & tags",
+    "category": "Elements",
+    "set": "core",
+    "file": "pages/elements.html",
+    "anchor": "#T012",
+    "description": "NEW badge, rounded pill tag chips, and the bordered numbered index box."
+  },
+  {
+    "id": "T013",
+    "name": "Status pills",
+    "category": "Elements",
+    "set": "core",
+    "file": "pages/elements.html",
+    "anchor": "#T013",
+    "description": "Colour-coded state pills (Added, Changed, Fixed, Shipped, In Progress) for changelog and roadmap."
+  },
+  {
+    "id": "T014",
+    "name": "Status pulse",
+    "category": "Elements",
+    "set": "core",
+    "file": "pages/elements.html",
+    "anchor": "#T014",
+    "description": "// SYSTEM ONLINE label with a pulsing green indicator dot."
+  },
+  {
+    "id": "T015",
+    "name": "Accordion",
+    "category": "Elements",
+    "set": "core",
+    "file": "pages/elements.html",
+    "anchor": "#T015",
+    "description": "Native details/summary disclosure with an animated +/- marker, as used on the FAQ."
+  },
+  {
+    "id": "T016",
+    "name": "Card",
+    "category": "Elements",
+    "set": "core",
+    "file": "pages/elements.html",
+    "anchor": "#T016",
+    "description": "Base card surface: hairline border, recessed fill, accent border and a lift on hover."
+  }
 ]
